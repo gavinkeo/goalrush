@@ -648,3 +648,97 @@ th:nth-child(5){width:7%}
   color:#f5e7b6;
   box-shadow:none;
 }
+
+
+
+/* =========================================================
+   v18 - stripped-back dashboard header
+   ========================================================= */
+
+.site-header{
+  min-height:62px;
+  padding-block:8px;
+}
+
+.brand{
+  gap:10px;
+}
+
+.brand-mark{
+  width:37px;
+  height:37px;
+  border-radius:11px;
+}
+
+.brand strong{
+  font-size:.84rem;
+  letter-spacing:.045em;
+}
+
+.podium-section{
+  padding-top:0 !important;
+}
+
+.compact-section-head{
+  min-height:20px;
+  align-items:center;
+  margin-bottom:5px !important;
+}
+
+.top-three-label{
+  margin:0;
+  font-size:.55rem;
+  letter-spacing:.17em;
+}
+
+.updated{
+  margin:0;
+}
+
+.podium-card{
+  padding-top:8px;
+  padding-bottom:8px;
+}
+
+.standings-card{
+  margin-top:7px !important;
+}
+
+.standings-head{
+  padding-top:10px;
+  padding-bottom:8px;
+}
+
+/* Slightly less visual weight in the standings heading block */
+.standings-head h2{
+  font-size:1.28rem;
+}
+
+.standings-head .eyebrow{
+  font-size:.53rem;
+}
+
+@media(max-width:700px){
+  .site-header{
+    min-height:56px;
+    padding-block:6px;
+  }
+
+  .brand-mark{
+    width:31px;
+    height:31px;
+  }
+
+  .brand strong{
+    font-size:.61rem;
+  }
+
+  .compact-section-head{
+    min-height:18px;
+    margin-bottom:4px !important;
+  }
+
+  .top-three-label{
+    font-size:.48rem;
+  }
+}

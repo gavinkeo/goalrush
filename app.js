@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=17";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=17";
+const DATA_URL = "competition.json?v=18";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=18";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
@@ -284,7 +284,7 @@ async function init() {
     const data = await response.json();
 
     entries = Array.isArray(data.entries) ? data.entries : [];
-    $("#brand-name").textContent = data.brandName || "EUROPEAN GOAL RUSH";
+    $("#brand-name").textContent = data.brandName || "EURO GOAL RUSH 26/27";
 
     setMatchday("ucl", data.matchdays?.ucl);
     setMatchday("uel", data.matchdays?.uel);

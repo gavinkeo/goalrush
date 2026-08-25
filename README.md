@@ -87,3 +87,13 @@ Desktop leaderboard headers are now:
 Replaced `FRONT RUNNERS / The podium` with the single heading:
 
 `AS IT STANDS`
+
+
+## v18 dashboard optimisation
+
+- Brand changed to `EURO GOAL RUSH 26/27`.
+- Removed `WORKPLACE EUROPEAN FOOTBALL`.
+- Removed the large `AS IT STANDS` heading.
+- Replaced it with a tiny `TOP 3` label.
+- Tightened the overall header and podium spacing.
+- Changed `72 CLUBS` to `72 TEAMS`.
