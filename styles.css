@@ -742,3 +742,80 @@ th:nth-child(5){width:7%}
     font-size:.48rem;
   }
 }
+
+
+
+/* =========================================================
+   v19 - cleaner dashboard + fuller rules
+   ========================================================= */
+
+.compact-section-head{
+  justify-content:flex-start;
+}
+
+.standings-head{
+  align-items:center;
+}
+
+.rules-grid-v19{
+  grid-template-columns:1.15fr 1.15fr .9fr !important;
+  gap:10px !important;
+}
+
+.rules-grid-v19 .rule-card-small{
+  min-height:118px;
+  padding:14px 15px !important;
+}
+
+.rule-kicker{
+  display:block;
+  margin-bottom:3px;
+  color:#7585a3;
+  font-size:.43rem;
+  font-weight:950;
+  letter-spacing:.14em;
+}
+
+.format-card{
+  border-color:rgba(73,228,255,.14) !important;
+}
+
+.format-card .rule-kicker{
+  color:#72e6fb;
+}
+
+.scoring-card{
+  border-color:rgba(85,241,162,.13) !important;
+}
+
+.scoring-card .rule-kicker{
+  color:#7aefb0;
+}
+
+.prize-card .rule-kicker{
+  color:#ffd565;
+}
+
+.rules-grid-v19 .rule-card-small h3{
+  margin:0 0 5px !important;
+  font-size:.75rem !important;
+}
+
+.rules-grid-v19 .rule-card-small p{
+  font-size:.58rem !important;
+  line-height:1.5 !important;
+}
+
+.prize-note{
+  margin-bottom:7px !important;
+}
+
+@media(max-width:700px){
+  .rules-grid-v19{
+    grid-template-columns:1fr !important;
+  }
+
+  .rules-grid-v19 .rule-card-small{
+    min-height:0;
+  }
+}

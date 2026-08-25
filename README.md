@@ -97,3 +97,13 @@ Replaced `FRONT RUNNERS / The podium` with the single heading:
 - Replaced it with a tiny `TOP 3` label.
 - Tightened the overall header and podium spacing.
 - Changed `72 CLUBS` to `72 TEAMS`.
+
+
+## v19 rules/footer cleanup
+
+- Removed the `Updated ...` timestamp completely.
+- Removed `36 ENTRANTS · 72 TEAMS` from above the standings.
+- Rebuilt the bottom explainer into three fuller cards:
+  - Format: 36 entrants, 72 teams, one UCL + one UEL team each, 16 fixtures total.
+  - Scoring: GF + GA for both teams; highest combined total wins.
+  - Prize pot: €720 total, split €400 / €200 / €120.

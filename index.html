@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.svg?v=18" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=18">
+  <link rel="icon" href="favicon.svg?v=19" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=19">
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -41,7 +41,6 @@
     <section class="podium-section">
       <div class="section-head compact-section-head">
         <p class="eyebrow top-three-label">TOP 3</p>
-        <p class="updated" id="updated-at">Loading…</p>
       </div>
       <div class="podium" id="podium"></div>
     </section>
@@ -49,7 +48,6 @@
     <section class="standings-card">
       <div class="standings-head">
         <div>
-          <p class="eyebrow">36 ENTRANTS · 72 TEAMS</p>
           <h2>Live standings</h2>
         </div>
         <label class="search">
@@ -76,27 +74,31 @@
       <div id="mobile-standings" class="mobile-standings"></div>
     </section>
 
-    <section class="rules-grid" aria-label="Competition rules">
-      <article class="rule-card-small">
+    <section class="rules-grid rules-grid-v19" aria-label="Competition rules">
+      <article class="rule-card-small format-card">
         <span class="rule-icon">⚽</span>
         <div>
-          <h3>Every goal counts</h3>
-          <p>Goals scored and goals conceded both count toward your total.</p>
+          <span class="rule-kicker">FORMAT</span>
+          <h3>36 entrants · 72 teams</h3>
+          <p>Each entrant is assigned one Champions League team and one Europa League team. Both teams play eight league-phase matches, giving every entrant 16 scoring fixtures.</p>
         </div>
       </article>
 
-      <article class="rule-card-small">
-        <span class="rule-icon">🏆</span>
+      <article class="rule-card-small scoring-card">
+        <span class="rule-icon">＋</span>
         <div>
-          <h3>16 matches each</h3>
-          <p>One UCL club + one UEL club. Eight league-phase fixtures from each.</p>
+          <span class="rule-kicker">SCORING</span>
+          <h3>Every goal counts</h3>
+          <p>For each team, goals scored and goals conceded are added together. Your UCL GF+GA and UEL GF+GA are then combined. Highest total after all 16 matches wins.</p>
         </div>
       </article>
 
       <article class="rule-card-small prize-card">
         <span class="rule-icon">💶</span>
         <div class="prize-content">
-          <h3>€720 Prize Pot</h3>
+          <span class="rule-kicker">PRIZE POT</span>
+          <h3>€720 total</h3>
+          <p class="prize-note">€20 entry × 36 entrants.</p>
           <div class="prize-split">
             <span><b>1st</b> €400</span>
             <span><b>2nd</b> €200</span>
@@ -112,6 +114,6 @@
     <span>Unofficial competition</span>
   </footer>
 
-  <script src="app.js?v=18" defer></script>
+  <script src="app.js?v=19" defer></script>
 </body>
 </html>

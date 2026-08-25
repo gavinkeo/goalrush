@@ -1,12 +1,11 @@
-const DATA_URL = "competition.json?v=18";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=18";
+const DATA_URL = "competition.json?v=19";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=19";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
 const bodyEl = $("#standings-body");
 const mobileEl = $("#mobile-standings");
 const searchEl = $("#search");
-const updatedEl = $("#updated-at");
 
 let entries = [];
 let currentMatchdayState = { ucl: null, uel: null };
@@ -289,18 +288,9 @@ async function init() {
     setMatchday("ucl", data.matchdays?.ucl);
     setMatchday("uel", data.matchdays?.uel);
 
-    const updated = data.lastUpdated ? new Date(data.lastUpdated) : new Date();
-    updatedEl.textContent = `Updated ${updated.toLocaleString("en-GB", {
-      day: "numeric",
-      month: "short",
-      hour: "2-digit",
-      minute: "2-digit"
-    })}`;
-
     render();
   } catch (err) {
     console.error(err);
-    updatedEl.textContent = "Data unavailable";
     podiumEl.innerHTML = "";
     bodyEl.innerHTML = `<tr><td colspan="5">Could not load competition.json. Make sure all v13 files were uploaded together.</td></tr>`;
     mobileEl.innerHTML = `<div class="mobile-card"><div class="mobile-head">Could not load competition data.</div></div>`;
