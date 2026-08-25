@@ -38,3 +38,13 @@ Restored three compact rule cards below the standings:
 ## v11 cache fix
 
 Bumped CSS/JS/data asset versions so GitHub Pages and browser caches cannot serve the pre-card stylesheet. Bottom rule cards are now explicitly styled as three polished panels on desktop and one-column cards on mobile.
+
+
+## v12 prize pot
+
+36 entrants × €20 = €720 total prize fund.
+
+Prize split:
+- 1st: €400
+- 2nd: €200
+- 3rd: €120
