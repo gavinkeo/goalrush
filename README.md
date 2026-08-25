@@ -107,3 +107,9 @@ Replaced `FRONT RUNNERS / The podium` with the single heading:
   - Format: 36 entrants, 72 teams, one UCL + one UEL team each, 16 fixtures total.
   - Scoring: GF + GA for both teams; highest combined total wins.
   - Prize pot: €720 total, split €400 / €200 / €120.
+
+
+## v20 heading refinement
+
+- Changed the small podium label from `TOP 3` to `LIVE STANDINGS`.
+- Simplified the main table heading from `Live standings` to `Standings`.
