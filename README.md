@@ -101,3 +101,13 @@ MANAGER        UCL TEAM    FIX1 FIX2 FIX3 FIX4 FIX5 FIX6 FIX7 FIX8    TOTAL
 ```
 
 The UCL row uses blue/cyan styling. The UEL row uses orange/gold styling.
+
+
+## v0.5 mobile layout
+
+On screens 700px wide or smaller, the desktop table is replaced by dedicated entrant cards:
+- manager + combined total in the header
+- UCL row with all 8 fixtures in a 4x2 grid
+- UEL row with all 8 fixtures in a 4x2 grid
+- no horizontal scrolling required
+- compact podium and hero

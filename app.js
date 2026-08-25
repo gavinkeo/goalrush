@@ -8,6 +8,7 @@ const state = {
 
 const podiumEl = document.querySelector("#podium");
 const bodyEl = document.querySelector("#standings-body");
+const mobileStandingsEl = document.querySelector("#mobile-standings");
 const searchEl = document.querySelector("#search");
 const updatedEl = document.querySelector("#updated-at");
 const livePillEl = document.querySelector("#live-pill");
@@ -141,6 +142,48 @@ function entryRows(entry, rank) {
   `;
 }
 
+
+function mobileEntryCard(entry, rank) {
+  const topClass = rank <= 3 ? "top" : "";
+  const combined = scoreOf(entry);
+
+  return `
+    <article class="mobile-entry-card">
+      <header class="mobile-entry-header">
+        <div class="mobile-rank ${topClass}">${rank}</div>
+        <div class="mobile-manager">
+          <span class="manager-label">MANAGER</span>
+          <strong>${escapeHtml(entry.entrant)}</strong>
+        </div>
+        <div class="mobile-combined">
+          <span>COMBINED</span>
+          <strong>${combined}</strong>
+        </div>
+      </header>
+
+      <div class="mobile-comp-row mobile-ucl-row">
+        <div class="mobile-team-line">
+          <span class="mobile-comp-badge ucl-badge">UCL</span>
+          <img class="mobile-crest" src="${getCrest(entry.ucl)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+          <strong>${escapeHtml(entry.ucl.club)}</strong>
+          <span class="mobile-line-total ucl-mobile-total">${clubScore(entry.ucl)}</span>
+        </div>
+        ${fixtureGrid(entry.ucl, "UCL")}
+      </div>
+
+      <div class="mobile-comp-row mobile-uel-row">
+        <div class="mobile-team-line">
+          <span class="mobile-comp-badge uel-badge">UEL</span>
+          <img class="mobile-crest" src="${getCrest(entry.uel)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+          <strong>${escapeHtml(entry.uel.club)}</strong>
+          <span class="mobile-line-total uel-mobile-total">${clubScore(entry.uel)}</span>
+        </div>
+        ${fixtureGrid(entry.uel, "UEL")}
+      </div>
+    </article>
+  `;
+}
+
 function render() {
   const ranked = rankEntries(state.entries);
   const query = searchEl.value.trim().toLowerCase();
@@ -158,11 +201,16 @@ function render() {
 
   if (!filtered.length) {
     bodyEl.innerHTML = `<tr class="no-results"><td colspan="4">No manager or club matches that search.</td></tr>`;
+    mobileStandingsEl.innerHTML = `<div class="mobile-no-results">No manager or club matches that search.</div>`;
     return;
   }
 
   bodyEl.innerHTML = filtered
     .map(entry => entryRows(entry, ranked.indexOf(entry) + 1))
+    .join("");
+
+  mobileStandingsEl.innerHTML = filtered
+    .map(entry => mobileEntryCard(entry, ranked.indexOf(entry) + 1))
     .join("");
 }
 
