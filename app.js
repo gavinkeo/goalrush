@@ -37,10 +37,9 @@ function getCrest(team) {
   return team?.crest || PLACEHOLDER_CREST;
 }
 
-function teamPair(entry, compact = false) {
-  const sizeClass = compact ? " compact" : "";
+function teamPair(entry) {
   return `
-    <div class="team-pair${sizeClass}">
+    <div class="team-pair">
       <div class="pair-crests" aria-hidden="true">
         <img class="pair-crest ucl-crest" src="${getCrest(entry.ucl)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
         <img class="pair-crest uel-crest" src="${getCrest(entry.uel)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
@@ -101,7 +100,7 @@ function fixtureGrid(team, competition) {
   `;
 }
 
-function clubCell(team, competition) {
+function teamCell(team, competition) {
   const className = competition.toLowerCase();
   return `
     <div class="team-cell ${className}-team">
@@ -114,22 +113,30 @@ function clubCell(team, competition) {
   `;
 }
 
-function row(entry, rank) {
+function entryRows(entry, rank) {
   const topClass = rank <= 3 ? "top" : "";
+  const combined = scoreOf(entry);
+
   return `
-    <tr>
-      <td><span class="rank ${topClass}">${rank}</span></td>
-      <td><span class="entrant-name">${escapeHtml(entry.entrant)}</span></td>
-
-      <td>${clubCell(entry.ucl, "UCL")}</td>
+    <tr class="entry-row ucl-row">
+      <td class="manager-cell" rowspan="2">
+        <div class="manager-wrap">
+          <span class="rank ${topClass}">${rank}</span>
+          <div>
+            <span class="manager-label">MANAGER</span>
+            <span class="entrant-name">${escapeHtml(entry.entrant)}</span>
+            <span class="combined-total">Combined: ${combined}</span>
+          </div>
+        </div>
+      </td>
+      <td>${teamCell(entry.ucl, "UCL")}</td>
       <td class="fixtures-col">${fixtureGrid(entry.ucl, "UCL")}</td>
-      <td class="number-col"><span class="subscore ucl-subscore">${clubScore(entry.ucl)}</span></td>
-
-      <td>${clubCell(entry.uel, "UEL")}</td>
+      <td class="number-col"><span class="line-total ucl-line-total">${clubScore(entry.ucl)}</span></td>
+    </tr>
+    <tr class="entry-row uel-row">
+      <td>${teamCell(entry.uel, "UEL")}</td>
       <td class="fixtures-col">${fixtureGrid(entry.uel, "UEL")}</td>
-      <td class="number-col"><span class="subscore uel-subscore">${clubScore(entry.uel)}</span></td>
-
-      <td class="number-col"><span class="score total-score">${scoreOf(entry)}</span></td>
+      <td class="number-col"><span class="line-total uel-line-total">${clubScore(entry.uel)}</span></td>
     </tr>
   `;
 }
@@ -150,12 +157,12 @@ function render() {
   });
 
   if (!filtered.length) {
-    bodyEl.innerHTML = `<tr class="no-results"><td colspan="9">No entrant or club matches that search.</td></tr>`;
+    bodyEl.innerHTML = `<tr class="no-results"><td colspan="4">No manager or club matches that search.</td></tr>`;
     return;
   }
 
   bodyEl.innerHTML = filtered
-    .map(entry => row(entry, ranked.indexOf(entry) + 1))
+    .map(entry => entryRows(entry, ranked.indexOf(entry) + 1))
     .join("");
 }
 
@@ -233,7 +240,7 @@ async function init() {
     updatedEl.textContent = "Could not load competition data";
     bodyEl.innerHTML = `
       <tr class="no-results">
-        <td colspan="9">
+        <td colspan="4">
           Data failed to load. If opening locally, run a small web server instead of double-clicking index.html.
         </td>
       </tr>`;

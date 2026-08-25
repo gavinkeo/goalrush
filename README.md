@@ -89,3 +89,15 @@ European Goal Rush leaderboard
 ```
 
 Keep API keys out of public front-end JavaScript.
+
+
+## Leaderboard layout
+
+Each entrant is displayed as a two-row block:
+
+```text
+MANAGER        UCL TEAM    FIX1 FIX2 FIX3 FIX4 FIX5 FIX6 FIX7 FIX8    TOTAL
+               UEL TEAM    FIX1 FIX2 FIX3 FIX4 FIX5 FIX6 FIX7 FIX8    TOTAL
+```
+
+The UCL row uses blue/cyan styling. The UEL row uses orange/gold styling.
