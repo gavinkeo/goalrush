@@ -239,3 +239,53 @@ td{padding:5px 11px;border-bottom:1px solid rgba(255,255,255,.055);font-size:.68
   .matchday-chip .state{display:none}
   .matchday-chip{grid-template-columns:1fr;grid-template-areas:"comp" "date"}
 }
+
+
+
+/* v10.1 bottom rule cards */
+.rules-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-top:12px;
+}
+.rule-card-small{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding:12px 13px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:rgba(8,17,37,.58);
+}
+.rule-icon{
+  width:34px;
+  height:34px;
+  flex:0 0 34px;
+  display:grid;
+  place-items:center;
+  border-radius:9px;
+  background:rgba(255,255,255,.045);
+  font-size:.9rem;
+}
+.rule-card-small h3{
+  margin:0 0 4px;
+  font-size:.72rem;
+}
+.rule-card-small p{
+  margin:0;
+  color:#8391ae;
+  font-size:.59rem;
+  line-height:1.45;
+}
+
+@media(max-width:700px){
+  .rules-grid{
+    grid-template-columns:1fr;
+    gap:7px;
+    margin-top:9px;
+  }
+  .rule-card-small{
+    padding:10px 11px;
+  }
+}

@@ -25,3 +25,11 @@ The HTML/CSS/JS URLs include `?v=10` cache-busting so GitHub Pages and browsers 
 
 ## Data
 Edit `competition.json` to add manager names, teams, crests, fixtures and scores.
+
+
+## v10.1 bottom explainer cards
+
+Restored three compact rule cards below the standings:
+- Every goal counts
+- 16 matches each
+- Live standings
