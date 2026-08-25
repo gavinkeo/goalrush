@@ -59,3 +59,24 @@ Prize split:
 - Fixtures support richer objects: `{"code":"RMA","venue":"H","status":""}`.
 - Fixture tiles automatically dim past matchdays and highlight the current/next matchday.
 - Optional `previousRank` supports ▲ / ▼ ranking movement indicators once historical rankings are supplied.
+
+
+## v14 polish
+
+- Renamed the team subtotal header to `TEAMS`.
+- Widened the far-right combined score column.
+- Removed the repeated `MANAGER` label from every entrant row.
+- Softened the upcoming-matchday gold fixture highlight.
+
+
+## v15 header correction
+
+Desktop leaderboard headers are now:
+
+`MANAGER | TEAMS | FIXTURES | GF+GA | COMBINED`
+
+
+## v16 total column cleanup
+
+- Renamed the far-right `COMBINED` header to `TOTAL`.
+- Removed the smaller repeated `TOTAL` label above each entrant's score.

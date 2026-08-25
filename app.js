@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=13";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=13";
+const DATA_URL = "competition.json?v=16";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=16";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
@@ -123,7 +123,6 @@ function desktopRows(entry, rank) {
             ${rankMovement(entry, rank)}
           </div>
           <div>
-            <span class="manager-label">MANAGER</span>
             <span class="manager-name">${esc(entry.entrant)}</span>
           </div>
         </div>
@@ -132,7 +131,6 @@ function desktopRows(entry, rank) {
       <td>${fixtureGrid(entry.ucl, "UCL")}</td>
       <td class="num"><span class="line-total ucl-total">${clubScore(entry.ucl)}</span></td>
       <td class="num combined-cell" rowspan="2">
-        <span class="combined-label">TOTAL</span>
         <strong class="combined-score">${totalScore(entry)}</strong>
       </td>
     </tr>
@@ -163,7 +161,6 @@ function mobileCard(entry, rank) {
           ${rankMovement(entry, rank)}
         </div>
         <div>
-          <span class="mobile-manager-label">MANAGER</span>
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
         </div>
         <div class="mobile-combined">

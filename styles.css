@@ -609,3 +609,42 @@ th:nth-child(5){width:5.5%}
     font-size:.33rem;
   }
 }
+
+
+
+/* =========================================================
+   v14 FINAL POLISH PASS
+   ========================================================= */
+
+/* Slightly more room for the headline combined total */
+th:nth-child(1){width:17%}
+th:nth-child(2){width:17%}
+th:nth-child(3){width:53.5%}
+th:nth-child(4){width:5.5%}
+th:nth-child(5){width:7%}
+
+.combined-cell{
+  min-width:76px;
+}
+
+.combined-score{
+  font-size:1.08rem;
+}
+
+/* Manager names can breathe now the repeated label is gone */
+.manager-name{
+  margin-top:0;
+  font-size:.72rem;
+}
+
+.mobile-manager-name{
+  font-size:.7rem;
+}
+
+/* More restrained next-matchday highlight */
+.fixture.next-md{
+  border-color:rgba(255,213,101,.22) !important;
+  background:rgba(255,213,101,.055) !important;
+  color:#f5e7b6;
+  box-shadow:none;
+}
