@@ -1,12 +1,7 @@
 {
   "brandName": "EUROPEAN GOAL RUSH",
-  "titleLine1": "European",
-  "titleLine2": "Goal Rush",
   "season": "2026/27",
-  "isLive": false,
-  "statusLabel": "PRE-SEASON",
-  "lastUpdated": "2026-08-25T23:30:00+01:00",
-  "scoring": "ucl.goalsFor + ucl.goalsAgainst + uel.goalsFor + uel.goalsAgainst",
+  "lastUpdated": "2026-08-26T00:15:00+01:00",
   "entries": [
     {
       "id": 1,

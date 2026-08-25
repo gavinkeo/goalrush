@@ -3,136 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07142b">
-  <meta name="description" content="Live Champions League workplace goal competition leaderboard.">
-  <title>European Goal Rush | Live Standings</title>
+  <meta name="theme-color" content="#061024">
+  <meta name="description" content="European Goal Rush live workplace leaderboard">
+  <title>European Goal Rush</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg?v=10" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
-  <div class="background" aria-hidden="true">
-    <div class="orb orb-one"></div>
-    <div class="orb orb-two"></div>
-    <div class="grid"></div>
-  </div>
+  <div class="bg" aria-hidden="true"></div>
 
-  <header class="hero shell">
-    <nav class="topbar">
-      <a class="brand" href="#">
-        <span class="brand-mark">★</span>
-        <span>
-          <strong id="brand-name">GOAL RUSH</strong>
-          <small>WORKPLACE EUROPEAN FOOTBALL</small>
-        </span>
-      </a>
+  <header class="site-header shell">
+    <a class="brand" href="#">
+      <span class="brand-mark">★</span>
+      <span>
+        <strong id="brand-name">EUROPEAN GOAL RUSH</strong>
+        <small>WORKPLACE EUROPEAN FOOTBALL</small>
+      </span>
+    </a>
 
-      <div class="matchday-strip" aria-label="European competition matchday dates">
-        <div class="matchday-chip ucl-matchday" id="ucl-matchday">
-          <span class="matchday-comp">UCL</span>
-          <span class="matchday-state" id="ucl-state">NEXT</span>
-          <strong id="ucl-date">MD1 · 8–10 SEP</strong>
-        </div>
-        <div class="matchday-chip uel-matchday" id="uel-matchday">
-          <span class="matchday-comp">UEL</span>
-          <span class="matchday-state" id="uel-state">NEXT</span>
-          <strong id="uel-date">MD1 · 16–17 SEP</strong>
-        </div>
+    <div class="matchday-strip">
+      <div class="matchday-chip ucl-chip" id="ucl-matchday">
+        <span class="comp">UCL</span>
+        <span class="state" id="ucl-state">NEXT</span>
+        <strong id="ucl-date">MD1 · 8–10 SEP</strong>
       </div>
-    </nav>
-
-
+      <div class="matchday-chip uel-chip" id="uel-matchday">
+        <span class="comp">UEL</span>
+        <span class="state" id="uel-state">NEXT</span>
+        <strong id="uel-date">MD1 · 16–17 SEP</strong>
+      </div>
+    </div>
   </header>
 
   <main class="shell">
-    <section class="podium-section" aria-labelledby="leaders-heading">
-      <div class="section-heading">
+    <section class="podium-section">
+      <div class="section-head">
         <div>
           <p class="eyebrow">FRONT RUNNERS</p>
-          <h2 id="leaders-heading">The podium</h2>
+          <h1>The podium</h1>
         </div>
-        <p id="updated-at" class="updated-at">Waiting for data…</p>
+        <p class="updated" id="updated-at">Loading…</p>
       </div>
       <div class="podium" id="podium"></div>
     </section>
 
-    <section class="leaderboard-card" aria-labelledby="table-heading">
-      <div class="leaderboard-header">
+    <section class="standings-card">
+      <div class="standings-head">
         <div>
           <p class="eyebrow">36 ENTRANTS · 72 CLUBS</p>
-          <h2 id="table-heading">Live standings</h2>
+          <h2>Live standings</h2>
         </div>
-
-        <label class="search-box">
-          <span aria-hidden="true">⌕</span>
-          <input id="search" type="search" placeholder="Search entrant or club" autocomplete="off">
+        <label class="search">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="Search manager or club" autocomplete="off">
         </label>
       </div>
 
-      <div id="mobile-standings" class="mobile-standings"></div>
-
-      <div class="table-wrap desktop-standings">
+      <div class="desktop-table">
         <table>
           <thead>
             <tr>
-              <th class="rank-col">#</th>
-              <th>Entrant</th>
-              <th>Club</th>
-              <th class="number-col">P</th>
-              <th class="number-col optional-col">GF</th>
-              <th class="number-col optional-col">GA</th>
-              <th class="number-col score-head">Score</th>
+              <th>Manager</th>
+              <th>Team</th>
+              <th>Fixtures</th>
+              <th class="num">Total</th>
             </tr>
           </thead>
           <tbody id="standings-body"></tbody>
         </table>
       </div>
+
+      <div id="mobile-standings" class="mobile-standings"></div>
     </section>
 
-    <section class="info-grid">
-      <article class="info-card">
-        <span class="info-icon">⚽</span>
-        <div>
-          <h3>Every goal counts</h3>
-          <p>A 4–3 defeat scores seven. A 1–0 win scores one. Goals at both ends are equally valuable.</p>
-        </div>
-      </article>
-      <article class="info-card">
-        <span class="info-icon">↻</span>
-        <div>
-          <h3>Live updates</h3>
-          <p>Once the data feed is connected, scores and positions can update automatically on match nights.</p>
-        </div>
-      </article>
-      <article class="info-card">
-        <span class="info-icon">🏆</span>
-        <div>
-          <h3>Sixteen games</h3>
-          <p>Each entrant has eight UCL fixtures and eight UEL fixtures. Both club totals are combined.</p>
-        </div>
-      </article>
+    <section class="how-it-works">
+      <p><strong>How it works:</strong> each entrant has one UCL club and one UEL club. All 16 league-phase matches count; score = every goal for + every goal against.</p>
     </section>
-
-    <section class="how-it-works" aria-labelledby="how-it-works-heading">
-      <div class="how-copy">
-        <p class="eyebrow">HOW IT WORKS</p>
-        <h2 id="how-it-works-heading">European Goal Rush</h2>
-        <p>
-          Each of the 36 entrants gets one Champions League club and one Europa League club.
-          All 16 league-phase matches count.
-        </p>
-      </div>
-    </section>
-
   </main>
 
   <footer class="shell footer">
-    <p>Built for the 2026/27 workplace European Goal Rush competition.</p>
-    <p class="footer-note">Unofficial competition · Club marks remain property of their respective owners.</p>
+    <span>2026/27 European Goal Rush</span>
+    <span>Unofficial competition</span>
   </footer>
 
-  <script src="app.js" defer></script>
+  <script src="app.js?v=10" defer></script>
 </body>
 </html>
