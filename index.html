@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07142b">
+  <meta name="description" content="Live Champions League workplace goal competition leaderboard.">
+  <title>Goal Rush | Live Standings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background" aria-hidden="true">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="grid"></div>
+  </div>
+
+  <header class="hero shell">
+    <nav class="topbar">
+      <a class="brand" href="#">
+        <span class="brand-mark">★</span>
+        <span>
+          <strong id="brand-name">GOAL RUSH</strong>
+          <small>WORKPLACE CHAMPIONS LEAGUE</small>
+        </span>
+      </a>
+
+      <div class="live-pill" id="live-pill">
+        <span class="live-dot"></span>
+        <span id="live-text">PRE-SEASON</span>
+      </div>
+    </nav>
+
+    <div class="hero-copy">
+      <p class="eyebrow">2026/27 COMPETITION</p>
+      <h1 id="competition-title">Champions League<br><span>Goal Rush</span></h1>
+      <p class="intro">
+        36 entrants. 36 clubs. Eight league-phase matches.
+        Every goal at either end counts.
+      </p>
+    </div>
+
+    <div class="rule-card">
+      <span class="rule-label">THE RULE</span>
+      <strong>GOALS FOR <b>+</b> GOALS AGAINST</strong>
+      <span>Highest combined total wins.</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="podium-section" aria-labelledby="leaders-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FRONT RUNNERS</p>
+          <h2 id="leaders-heading">The podium</h2>
+        </div>
+        <p id="updated-at" class="updated-at">Waiting for data…</p>
+      </div>
+      <div class="podium" id="podium"></div>
+    </section>
+
+    <section class="leaderboard-card" aria-labelledby="table-heading">
+      <div class="leaderboard-header">
+        <div>
+          <p class="eyebrow">ALL 36 ENTRANTS</p>
+          <h2 id="table-heading">Live standings</h2>
+        </div>
+
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Search entrant or club" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="rank-col">#</th>
+              <th>Entrant</th>
+              <th>Club</th>
+              <th class="number-col">P</th>
+              <th class="number-col optional-col">GF</th>
+              <th class="number-col optional-col">GA</th>
+              <th class="number-col score-head">Score</th>
+            </tr>
+          </thead>
+          <tbody id="standings-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <span class="info-icon">⚽</span>
+        <div>
+          <h3>Every goal counts</h3>
+          <p>A 4–3 defeat scores seven. A 1–0 win scores one. Chaos is rewarded.</p>
+        </div>
+      </article>
+      <article class="info-card">
+        <span class="info-icon">↻</span>
+        <div>
+          <h3>Live updates</h3>
+          <p>Once the data feed is connected, scores and positions can update automatically on match nights.</p>
+        </div>
+      </article>
+      <article class="info-card">
+        <span class="info-icon">🏆</span>
+        <div>
+          <h3>Eight games</h3>
+          <p>Only each club’s eight Champions League league-phase fixtures count toward the competition.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <p>Built for the 2026/27 workplace Champions League competition.</p>
+    <p class="footer-note">Unofficial competition · Club marks remain property of their respective owners.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
