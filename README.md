@@ -80,3 +80,10 @@ Desktop leaderboard headers are now:
 
 - Renamed the far-right `COMBINED` header to `TOTAL`.
 - Removed the smaller repeated `TOTAL` label above each entrant's score.
+
+
+## v17 heading cleanup
+
+Replaced `FRONT RUNNERS / The podium` with the single heading:
+
+`AS IT STANDS`
