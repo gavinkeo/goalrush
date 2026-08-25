@@ -11,8 +11,12 @@ const bodyEl = document.querySelector("#standings-body");
 const mobileStandingsEl = document.querySelector("#mobile-standings");
 const searchEl = document.querySelector("#search");
 const updatedEl = document.querySelector("#updated-at");
-const livePillEl = document.querySelector("#live-pill");
-const liveTextEl = document.querySelector("#live-text");
+const uclMatchdayEl = document.querySelector("#ucl-matchday");
+const uelMatchdayEl = document.querySelector("#uel-matchday");
+const uclStateEl = document.querySelector("#ucl-state");
+const uelStateEl = document.querySelector("#uel-state");
+const uclDateEl = document.querySelector("#ucl-date");
+const uelDateEl = document.querySelector("#uel-date");
 
 function clubScore(team) {
   return Number(team?.goalsFor || 0) + Number(team?.goalsAgainst || 0);
@@ -239,14 +243,76 @@ function applyDemoData(entries) {
   });
 }
 
+
+function localDateOnly(date = new Date()) {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
+
+function parseLocalDate(value) {
+  const [year, month, day] = value.split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
+
+function formatMatchdayRange(item) {
+  const start = parseLocalDate(item.start);
+  const end = parseLocalDate(item.end);
+  const month = end.toLocaleString("en-GB", { month: "short" }).toUpperCase();
+
+  if (item.start === item.end) {
+    return `MD${item.md} · ${start.getDate()} ${month}`;
+  }
+
+  const startMonth = start.toLocaleString("en-GB", { month: "short" }).toUpperCase();
+  if (startMonth === month) {
+    return `MD${item.md} · ${start.getDate()}–${end.getDate()} ${month}`;
+  }
+
+  return `MD${item.md} · ${start.getDate()} ${startMonth}–${end.getDate()} ${month}`;
+}
+
+function getRelevantMatchday(schedule, today = localDateOnly()) {
+  if (!Array.isArray(schedule) || !schedule.length) return null;
+
+  for (const item of schedule) {
+    const start = parseLocalDate(item.start);
+    const end = parseLocalDate(item.end);
+
+    if (today >= start && today <= end) {
+      return { item, state: "LIVE" };
+    }
+
+    if (today < start) {
+      return { item, state: "NEXT" };
+    }
+  }
+
+  return { item: schedule[schedule.length - 1], state: "COMPLETE" };
+}
+
+function renderMatchdayChip(schedule, chipEl, stateEl, dateEl) {
+  const relevant = getRelevantMatchday(schedule);
+  if (!relevant) {
+    chipEl.hidden = true;
+    return;
+  }
+
+  chipEl.classList.toggle("is-live", relevant.state === "LIVE");
+  chipEl.classList.toggle("is-complete", relevant.state === "COMPLETE");
+  stateEl.textContent = relevant.state;
+  dateEl.textContent = formatMatchdayRange(relevant.item);
+}
+
+function renderMatchdayStrip(data) {
+  renderMatchdayChip(data.matchdays?.ucl, uclMatchdayEl, uclStateEl, uclDateEl);
+  renderMatchdayChip(data.matchdays?.uel, uelMatchdayEl, uelStateEl, uelDateEl);
+}
+
 function setCompetitionMeta(data) {
   document.querySelector("#competition-title").innerHTML =
     `${escapeHtml(data.titleLine1)}<br><span>${escapeHtml(data.titleLine2)}</span>`;
   document.querySelector("#brand-name").textContent = data.brandName || "EUROPEAN GOAL RUSH";
 
-  const isLive = Boolean(data.isLive);
-  livePillEl.classList.toggle("is-live", isLive);
-  liveTextEl.textContent = isLive ? "LIVE NOW" : (data.statusLabel || "PRE-SEASON");
+  renderMatchdayStrip(data);
 
   const updated = data.lastUpdated ? new Date(data.lastUpdated) : new Date();
   updatedEl.textContent = `Last updated ${updated.toLocaleString([], {

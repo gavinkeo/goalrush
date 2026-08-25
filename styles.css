@@ -1620,3 +1620,312 @@ tbody tr:last-child td { border-bottom: 0; }
     padding-top: 16px;
   }
 }
+
+
+
+/* =========================================================
+   v0.7 STANDINGS-FIRST LAYOUT
+   The site now opens like a scoreboard, not a landing page.
+   ========================================================= */
+
+.hero {
+  padding-bottom: 0 !important;
+}
+
+.hero .topbar {
+  padding-bottom: 8px;
+}
+
+.hero::after {
+  display: none !important;
+}
+
+.podium-section {
+  padding-top: 10px !important;
+}
+
+.how-it-works {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  margin-top: 22px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(8, 17, 37, .72);
+}
+
+.how-copy h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: -.035em;
+}
+
+.how-copy p:last-child {
+  max-width: 700px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.bottom-rule-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 14px;
+  background: rgba(255,255,255,.035);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.bottom-rule-card strong {
+  color: white;
+  font-size: .76rem;
+}
+
+.bottom-rule-card strong b {
+  color: var(--electric);
+}
+
+.bottom-rule-card > span:last-child {
+  font-size: .69rem;
+}
+
+@media (min-width: 701px) {
+  .hero {
+    padding-top: 14px !important;
+  }
+
+  .topbar {
+    padding-bottom: 6px !important;
+  }
+
+  .podium-section {
+    padding-top: 8px !important;
+  }
+
+  .section-heading {
+    margin-bottom: 7px !important;
+  }
+
+  .leaderboard-card {
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 10px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .topbar {
+    padding-bottom: 6px !important;
+  }
+
+  .podium-section {
+    padding-top: 8px !important;
+  }
+
+  .how-it-works {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .how-copy h2 {
+    font-size: 1.25rem;
+  }
+
+  .how-copy p:last-child {
+    font-size: .7rem;
+  }
+
+  .bottom-rule-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 7px 9px;
+    white-space: normal;
+  }
+
+  .bottom-rule-card > span:last-child {
+    grid-column: 1 / -1;
+    line-height: 1.4;
+  }
+}
+
+
+/* v0.8 - remove standalone rule box */
+.how-it-works {
+  display: block;
+}
+
+.bottom-rule-card {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .how-it-works {
+    display: block;
+  }
+}
+
+
+
+/* =========================================================
+   v0.9 MATCHDAY STRIP
+   Automatically shows current live matchday or next matchday.
+   ========================================================= */
+
+.matchday-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.matchday-chip {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "comp state"
+    "date date";
+  align-items: center;
+  gap: 2px 7px;
+  min-width: 142px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  background: rgba(8,17,37,.72);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035);
+}
+
+.matchday-comp {
+  grid-area: comp;
+  font-size: .53rem;
+  font-weight: 950;
+  letter-spacing: .12em;
+}
+
+.matchday-state {
+  grid-area: state;
+  justify-self: end;
+  color: #71809f;
+  font-size: .48rem;
+  font-weight: 900;
+  letter-spacing: .11em;
+}
+
+.matchday-chip strong {
+  grid-area: date;
+  color: #e8edf9;
+  font-size: .66rem;
+  line-height: 1.1;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.ucl-matchday {
+  border-color: rgba(65,231,255,.13);
+  background:
+    linear-gradient(135deg, rgba(38,150,255,.07), rgba(65,231,255,.025)),
+    rgba(8,17,37,.76);
+}
+
+.ucl-matchday .matchday-comp {
+  color: #7eeaff;
+}
+
+.uel-matchday {
+  border-color: rgba(255,153,58,.14);
+  background:
+    linear-gradient(135deg, rgba(255,143,46,.07), rgba(255,180,69,.02)),
+    rgba(8,17,37,.76);
+}
+
+.uel-matchday .matchday-comp {
+  color: #ffb36d;
+}
+
+.matchday-chip.is-live {
+  border-color: rgba(81,242,162,.34);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 0 18px rgba(81,242,162,.06);
+}
+
+.matchday-chip.is-live .matchday-state {
+  color: #69f3aa;
+}
+
+.matchday-chip.is-live .matchday-state::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: #51f2a2;
+  box-shadow: 0 0 7px rgba(81,242,162,.7);
+  vertical-align: 1px;
+  animation: pulse 1.4s infinite;
+}
+
+.matchday-chip.is-complete {
+  opacity: .58;
+}
+
+@media (max-width: 700px) {
+  .matchday-strip {
+    gap: 5px;
+  }
+
+  .matchday-chip {
+    min-width: 0;
+    padding: 6px 7px;
+    border-radius: 9px;
+    gap: 1px 4px;
+  }
+
+  .matchday-comp {
+    font-size: .45rem;
+  }
+
+  .matchday-state {
+    font-size: .4rem;
+  }
+
+  .matchday-chip strong {
+    font-size: .53rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-mark {
+    display: none;
+  }
+
+  .brand strong {
+    font-size: .64rem;
+  }
+
+  .matchday-chip {
+    padding-inline: 6px;
+  }
+
+  .matchday-state {
+    display: none;
+  }
+
+  .matchday-chip {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "comp"
+      "date";
+  }
+}

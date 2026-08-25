@@ -121,3 +121,33 @@ Desktop/laptop view is now deliberately compact:
 - tighter leaderboard header
 - denser two-row manager entries
 - designed to surface the podium and several leading entrants without unnecessary scrolling
+
+
+## v0.7 standings-first layout
+
+The large hero title, format explanation and rule card have been removed from the top of the page.
+
+The page now opens:
+1. compact brand/status bar
+2. podium
+3. live standings
+
+The competition explanation and scoring rule are shown in a compact section at the bottom.
+
+
+## v0.8 cleanup
+
+Removed the standalone scoring rule box. The bottom section is now just a lightweight format reminder.
+
+
+## v0.9 automatic matchday dates
+
+The top bar now shows a UCL and UEL matchday chip.
+
+Each chip automatically:
+- shows `NEXT` and the next league-phase matchday before it begins
+- switches to `LIVE` when the current date falls within that matchday
+- advances to the following matchday after the window ends
+- shows `COMPLETE` after Matchday 8
+
+Official 2026/27 league-phase date windows are stored in `competition.json`.
