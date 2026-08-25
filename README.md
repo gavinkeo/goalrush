@@ -33,3 +33,8 @@ Restored three compact rule cards below the standings:
 - Every goal counts
 - 16 matches each
 - Live standings
+
+
+## v11 cache fix
+
+Bumped CSS/JS/data asset versions so GitHub Pages and browser caches cannot serve the pre-card stylesheet. Bottom rule cards are now explicitly styled as three polished panels on desktop and one-column cards on mobile.
