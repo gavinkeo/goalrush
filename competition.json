@@ -13,14 +13,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -30,16 +62,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 2,
@@ -51,14 +116,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -68,16 +165,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 3,
@@ -89,14 +219,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -106,16 +268,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 4,
@@ -127,14 +322,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -144,16 +371,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 5,
@@ -165,14 +425,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -182,16 +474,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 6,
@@ -203,14 +528,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -220,16 +577,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 7,
@@ -241,14 +631,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -258,16 +680,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 8,
@@ -279,14 +734,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -296,16 +783,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 9,
@@ -317,14 +837,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -334,16 +886,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 10,
@@ -355,14 +940,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -372,16 +989,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 11,
@@ -393,14 +1043,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -410,16 +1092,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 12,
@@ -431,14 +1146,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -448,16 +1195,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 13,
@@ -469,14 +1249,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -486,16 +1298,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 14,
@@ -507,14 +1352,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -524,16 +1401,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 15,
@@ -545,14 +1455,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -562,16 +1504,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 16,
@@ -583,14 +1558,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -600,16 +1607,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 17,
@@ -621,14 +1661,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -638,16 +1710,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 18,
@@ -659,14 +1764,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -676,16 +1813,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 19,
@@ -697,14 +1867,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -714,16 +1916,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 20,
@@ -735,14 +1970,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -752,16 +2019,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 21,
@@ -773,14 +2073,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -790,16 +2122,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 22,
@@ -811,14 +2176,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -828,16 +2225,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 23,
@@ -849,14 +2279,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -866,16 +2328,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 24,
@@ -887,14 +2382,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -904,16 +2431,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 25,
@@ -925,14 +2485,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -942,16 +2534,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 26,
@@ -963,14 +2588,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -980,16 +2637,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 27,
@@ -1001,14 +2691,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1018,16 +2740,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 28,
@@ -1039,14 +2794,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1056,16 +2843,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 29,
@@ -1077,14 +2897,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1094,16 +2946,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 30,
@@ -1115,14 +3000,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1132,16 +3049,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 31,
@@ -1153,14 +3103,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1170,16 +3152,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 32,
@@ -1191,14 +3206,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1208,16 +3255,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 33,
@@ -1229,14 +3309,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1246,16 +3358,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 34,
@@ -1267,14 +3412,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1284,16 +3461,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 35,
@@ -1305,14 +3515,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1322,16 +3564,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     },
     {
       "id": 36,
@@ -1343,14 +3618,46 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
       },
       "uel": {
@@ -1360,16 +3667,49 @@
         "goalsFor": 0,
         "goalsAgainst": 0,
         "fixtures": [
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD",
-          "TBD"
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          },
+          {
+            "code": "TBD",
+            "venue": "",
+            "status": ""
+          }
         ]
-      }
+      },
+      "previousRank": null
     }
   ],
   "matchdays": {

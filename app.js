@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=12";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=12";
+const DATA_URL = "competition.json?v=13";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=13";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
@@ -9,6 +9,7 @@ const searchEl = $("#search");
 const updatedEl = $("#updated-at");
 
 let entries = [];
+let currentMatchdayState = { ucl: null, uel: null };
 
 function esc(value) {
   return String(value ?? "")
@@ -31,6 +32,8 @@ function sortedEntries(list) {
   return [...list].sort((a, b) =>
     totalScore(b) - totalScore(a) ||
     clubScore(b.ucl) - clubScore(a.ucl) ||
+    (Number(b.ucl?.goalsFor || 0) + Number(b.uel?.goalsFor || 0)) -
+      (Number(a.ucl?.goalsFor || 0) + Number(a.uel?.goalsFor || 0)) ||
     String(a.entrant).localeCompare(String(b.entrant))
   );
 }
@@ -41,16 +44,49 @@ function crest(team) {
 
 function fixtureValues(team) {
   const source = Array.isArray(team?.fixtures) ? team.fixtures.slice(0, 8) : [];
-  while (source.length < 8) source.push("TBD");
-  return source;
+  const values = source.map(item => {
+    if (typeof item === "string") return { code: item, venue: "", status: "" };
+    return {
+      code: item?.code || "TBD",
+      venue: item?.venue || "",
+      status: item?.status || ""
+    };
+  });
+
+  while (values.length < 8) values.push({ code: "TBD", venue: "", status: "" });
+  return values;
 }
 
-function fixtureGrid(team) {
+function fixtureTemporalClass(index, comp) {
+  const state = currentMatchdayState[comp.toLowerCase()];
+  if (!state?.md) return "";
+
+  const mdIndex = Number(state.md.md) - 1;
+
+  if (index < mdIndex) return " past";
+  if (index === mdIndex) {
+    if (state.state === "LIVE") return " current live-md";
+    if (state.state === "NEXT") return " next-md";
+    return " past";
+  }
+  return "";
+}
+
+function fixtureGrid(team, comp) {
   return `<div class="fixture-grid">${
-    fixtureValues(team).map(item => {
-      const code = typeof item === "string" ? item : (item.code || "TBD");
-      const status = typeof item === "object" ? (item.status || "") : "";
-      return `<span class="fixture ${status === "live" ? "live" : status === "played" ? "played" : ""}">${esc(code)}</span>`;
+    fixtureValues(team).map((item, index) => {
+      const statusClass =
+        item.status === "live" ? " live" :
+        item.status === "played" ? " played" : "";
+
+      const venue = item.venue === "H" || item.venue === "A"
+        ? `<small class="venue ${item.venue.toLowerCase()}">${item.venue}</small>`
+        : "";
+
+      return `
+        <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" title="${comp} Matchday ${index + 1}">
+          <b>${esc(item.code)}</b>${venue}
+        </span>`;
     }).join("")
   }</div>`;
 }
@@ -67,26 +103,42 @@ function teamCell(team, comp) {
     </div>`;
 }
 
+function rankMovement(entry, rank) {
+  const prev = Number(entry.previousRank);
+  if (!Number.isFinite(prev) || prev <= 0) return "";
+
+  const delta = prev - rank;
+  if (delta > 0) return `<span class="rank-move up">▲${delta}</span>`;
+  if (delta < 0) return `<span class="rank-move down">▼${Math.abs(delta)}</span>`;
+  return `<span class="rank-move same">—</span>`;
+}
+
 function desktopRows(entry, rank) {
   return `
     <tr class="ucl-row">
       <td class="manager-cell" rowspan="2">
         <div class="manager-wrap">
-          <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
+          <div class="rank-stack">
+            <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
+            ${rankMovement(entry, rank)}
+          </div>
           <div>
             <span class="manager-label">MANAGER</span>
             <span class="manager-name">${esc(entry.entrant)}</span>
-            <span class="combined">Combined: ${totalScore(entry)}</span>
           </div>
         </div>
       </td>
       <td>${teamCell(entry.ucl, "UCL")}</td>
-      <td>${fixtureGrid(entry.ucl)}</td>
+      <td>${fixtureGrid(entry.ucl, "UCL")}</td>
       <td class="num"><span class="line-total ucl-total">${clubScore(entry.ucl)}</span></td>
+      <td class="num combined-cell" rowspan="2">
+        <span class="combined-label">TOTAL</span>
+        <strong class="combined-score">${totalScore(entry)}</strong>
+      </td>
     </tr>
     <tr class="uel-row">
       <td>${teamCell(entry.uel, "UEL")}</td>
-      <td>${fixtureGrid(entry.uel)}</td>
+      <td>${fixtureGrid(entry.uel, "UEL")}</td>
       <td class="num"><span class="line-total uel-total">${clubScore(entry.uel)}</span></td>
     </tr>`;
 }
@@ -100,13 +152,16 @@ function mobileCard(entry, rank) {
         <strong>${esc(team.club)}</strong>
         <span class="mobile-total">${clubScore(team)}</span>
       </div>
-      ${fixtureGrid(team)}
+      ${fixtureGrid(team, comp)}
     </div>`;
 
   return `
     <article class="mobile-card">
       <div class="mobile-head">
-        <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
+        <div class="rank-stack">
+          <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
+          ${rankMovement(entry, rank)}
+        </div>
         <div>
           <span class="mobile-manager-label">MANAGER</span>
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
@@ -123,11 +178,16 @@ function mobileCard(entry, rank) {
 
 function podiumCard(entry, rank) {
   const labels = ["LEADER", "2ND PLACE", "3RD PLACE"];
-  const klass = rank === 1 ? " first" : "";
+  const prizes = ["€400", "€200", "€120"];
+  const klass = rank === 1 ? " first" : rank === 2 ? " second" : " third";
+
   return `
     <article class="podium-card${klass}">
       <div class="podium-top">
-        <span class="medal">${labels[rank - 1]}</span>
+        <div class="podium-place">
+          <span class="medal">${labels[rank - 1]}</span>
+          <span class="podium-prize">${prizes[rank - 1]}</span>
+        </div>
         <span class="podium-rank">0${rank}</span>
       </div>
       <h3 class="podium-name">${esc(entry.entrant)}</h3>
@@ -162,7 +222,7 @@ function render() {
   );
 
   if (!filtered.length) {
-    bodyEl.innerHTML = `<tr><td colspan="4">No matches.</td></tr>`;
+    bodyEl.innerHTML = `<tr><td colspan="5">No matches.</td></tr>`;
     mobileEl.innerHTML = `<div class="mobile-card"><div class="mobile-head">No matches.</div></div>`;
     return;
   }
@@ -183,13 +243,18 @@ function dateOnly() {
 
 function relevantMatchday(schedule) {
   const today = dateOnly();
+
   for (const md of schedule || []) {
     const start = parseDate(md.start);
     const end = parseDate(md.end);
+
     if (today >= start && today <= end) return { md, state: "LIVE" };
     if (today < start) return { md, state: "NEXT" };
   }
-  return schedule?.length ? { md: schedule[schedule.length - 1], state: "COMPLETE" } : null;
+
+  return schedule?.length
+    ? { md: schedule[schedule.length - 1], state: "COMPLETE" }
+    : null;
 }
 
 function formatMD(md) {
@@ -197,6 +262,7 @@ function formatMD(md) {
   const b = parseDate(md.end);
   const am = a.toLocaleString("en-GB", { month: "short" }).toUpperCase();
   const bm = b.toLocaleString("en-GB", { month: "short" }).toUpperCase();
+
   if (md.start === md.end) return `MD${md.md} · ${a.getDate()} ${am}`;
   if (am === bm) return `MD${md.md} · ${a.getDate()}–${b.getDate()} ${am}`;
   return `MD${md.md} · ${a.getDate()} ${am}–${b.getDate()} ${bm}`;
@@ -204,7 +270,10 @@ function formatMD(md) {
 
 function setMatchday(kind, schedule) {
   const result = relevantMatchday(schedule);
+  currentMatchdayState[kind] = result;
+
   if (!result) return;
+
   const chip = $(`#${kind}-matchday`);
   $(`#${kind}-state`).textContent = result.state;
   $(`#${kind}-date`).textContent = formatMD(result.md);
@@ -219,12 +288,16 @@ async function init() {
 
     entries = Array.isArray(data.entries) ? data.entries : [];
     $("#brand-name").textContent = data.brandName || "EUROPEAN GOAL RUSH";
+
     setMatchday("ucl", data.matchdays?.ucl);
     setMatchday("uel", data.matchdays?.uel);
 
     const updated = data.lastUpdated ? new Date(data.lastUpdated) : new Date();
     updatedEl.textContent = `Updated ${updated.toLocaleString("en-GB", {
-      day: "numeric", month: "short", hour: "2-digit", minute: "2-digit"
+      day: "numeric",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit"
     })}`;
 
     render();
@@ -232,7 +305,7 @@ async function init() {
     console.error(err);
     updatedEl.textContent = "Data unavailable";
     podiumEl.innerHTML = "";
-    bodyEl.innerHTML = `<tr><td colspan="4">Could not load competition.json. Make sure all v10 files were uploaded together.</td></tr>`;
+    bodyEl.innerHTML = `<tr><td colspan="5">Could not load competition.json. Make sure all v13 files were uploaded together.</td></tr>`;
     mobileEl.innerHTML = `<div class="mobile-card"><div class="mobile-head">Could not load competition data.</div></div>`;
   }
 }

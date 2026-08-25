@@ -48,3 +48,14 @@ Prize split:
 - 1st: €400
 - 2nd: €200
 - 3rd: €120
+
+
+## v13 live-dashboard refinements
+
+- Combined entrant score is now a dedicated far-right column spanning both UCL and UEL rows.
+- UCL and UEL row totals remain as smaller team subtotals.
+- Prize money appears directly on the podium cards: €400 / €200 / €120.
+- Desktop column headings are sticky while scrolling.
+- Fixtures support richer objects: `{"code":"RMA","venue":"H","status":""}`.
+- Fixture tiles automatically dim past matchdays and highlight the current/next matchday.
+- Optional `previousRank` supports ▲ / ▼ ranking movement indicators once historical rankings are supplied.
