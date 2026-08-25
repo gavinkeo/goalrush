@@ -1327,3 +1327,296 @@ tbody tr:last-child td { border-bottom: 0; }
     padding-top: 18px;
   }
 }
+
+
+
+/* =========================================================
+   v0.6 DESKTOP ABOVE-THE-FOLD OPTIMISATION
+   Keep the competition data visible immediately.
+   ========================================================= */
+
+@media (min-width: 701px) {
+  .hero {
+    padding-top: 20px;
+    padding-bottom: 8px;
+  }
+
+  .topbar {
+    padding-bottom: 30px;
+  }
+
+  .hero::after {
+    width: 280px;
+    height: 280px;
+    top: 76px;
+    right: 7%;
+    opacity: .42;
+    box-shadow:
+      0 0 0 32px rgba(255,255,255,.015),
+      0 0 0 64px rgba(255,255,255,.01);
+  }
+
+  .hero-copy {
+    max-width: 860px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 4vw, 3.85rem);
+    line-height: .86;
+  }
+
+  .intro {
+    max-width: 900px;
+    margin-top: 14px;
+    font-size: .93rem;
+    line-height: 1.45;
+  }
+
+  .rule-card {
+    margin-top: 14px;
+    padding: 10px 14px;
+    gap: 10px 14px;
+  }
+
+  .rule-card strong {
+    font-size: .8rem;
+  }
+
+  .rule-card > span:last-child {
+    font-size: .73rem;
+  }
+
+  .podium-section {
+    padding-top: 14px;
+  }
+
+  .section-heading {
+    margin-bottom: 8px;
+  }
+
+  .section-heading .eyebrow {
+    margin-bottom: 4px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.55rem;
+  }
+
+  .updated-at {
+    font-size: .66rem;
+  }
+
+  .podium {
+    gap: 10px;
+  }
+
+  .podium-card {
+    min-height: 0;
+    padding: 11px 13px;
+    border-radius: 16px;
+  }
+
+  .podium-card::after {
+    width: 105px;
+    height: 105px;
+    right: -34px;
+    bottom: -44px;
+    filter: blur(30px);
+  }
+
+  .podium-topline {
+    align-items: center;
+  }
+
+  .medal {
+    font-size: .54rem;
+  }
+
+  .podium-rank {
+    font-size: 1.35rem;
+  }
+
+  .podium-entrant {
+    margin: 5px 0 6px;
+    font-size: .82rem;
+  }
+
+  .team-pair {
+    gap: 8px;
+  }
+
+  .pair-crests {
+    width: 50px;
+    height: 34px;
+    flex-basis: 50px;
+  }
+
+  .pair-crest {
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+    border-radius: 9px;
+  }
+
+  .uel-crest {
+    left: 17px;
+    top: 3px;
+  }
+
+  .pair-names {
+    gap: 2px;
+  }
+
+  .pair-names span {
+    font-size: .58rem;
+  }
+
+  .pair-ucl b,
+  .pair-uel b {
+    font-size: .48rem;
+  }
+
+  .podium-breakdown {
+    margin-top: 6px;
+    gap: 6px;
+    font-size: .52rem;
+  }
+
+  .podium-breakdown b {
+    font-size: .64rem;
+  }
+
+  .podium-score {
+    margin-top: 5px;
+  }
+
+  .podium-score strong {
+    font-size: 1.45rem;
+  }
+
+  .podium-score span {
+    font-size: .5rem;
+    line-height: 1.25;
+  }
+
+  .leaderboard-card {
+    margin-top: 10px;
+  }
+
+  .leaderboard-header {
+    padding: 12px 16px 10px;
+  }
+
+  .leaderboard-header .eyebrow {
+    margin-bottom: 3px;
+  }
+
+  .leaderboard-header h2 {
+    font-size: 1.45rem;
+  }
+
+  .search-box {
+    max-width: 250px;
+    padding: 8px 10px;
+  }
+
+  th {
+    padding: 7px 12px;
+    font-size: .58rem;
+  }
+
+  td {
+    padding: 6px 12px;
+    font-size: .75rem;
+  }
+
+  .manager-cell {
+    min-width: 185px;
+  }
+
+  .manager-wrap {
+    gap: 9px;
+  }
+
+  .manager-wrap .rank {
+    width: 29px;
+    height: 29px;
+    flex-basis: 29px;
+    border-radius: 8px;
+    font-size: .68rem;
+  }
+
+  .manager-label {
+    margin-bottom: 2px;
+    font-size: .43rem;
+  }
+
+  .manager-cell .entrant-name {
+    font-size: .76rem;
+  }
+
+  .combined-total {
+    margin-top: 2px;
+    font-size: .54rem;
+  }
+
+  .entry-row .team-cell {
+    min-width: 160px;
+    gap: 7px;
+  }
+
+  .entry-row .crest {
+    width: 27px;
+    height: 27px;
+    padding: 3px;
+    border-radius: 8px;
+  }
+
+  .club-stack {
+    gap: 2px;
+  }
+
+  .competition-tag {
+    padding: 1px 4px;
+    font-size: .44rem;
+  }
+
+  .team-name {
+    font-size: .7rem;
+  }
+
+  .entry-row .fixtures-col {
+    min-width: 370px;
+  }
+
+  .entry-row .fixture-grid {
+    min-width: 360px;
+    gap: 4px;
+  }
+
+  .entry-row .fixture-chip {
+    min-height: 22px;
+    padding: 3px 4px;
+    border-radius: 6px;
+    font-size: .55rem;
+  }
+
+  .line-total {
+    min-width: 38px;
+    min-height: 28px;
+    border-radius: 8px;
+    font-size: .75rem;
+  }
+
+  .info-grid {
+    margin-top: 12px;
+  }
+
+  .info-card {
+    padding: 12px 14px;
+  }
+
+  .footer {
+    padding-top: 16px;
+  }
+}

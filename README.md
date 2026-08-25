@@ -111,3 +111,13 @@ On screens 700px wide or smaller, the desktop table is replaced by dedicated ent
 - UEL row with all 8 fixtures in a 4x2 grid
 - no horizontal scrolling required
 - compact podium and hero
+
+
+## v0.6 desktop density
+
+Desktop/laptop view is now deliberately compact:
+- reduced hero height and decorative dead space
+- much smaller podium cards
+- tighter leaderboard header
+- denser two-row manager entries
+- designed to surface the podium and several leading entrants without unnecessary scrolling
