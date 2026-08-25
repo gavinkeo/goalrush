@@ -57,6 +57,23 @@ function podiumCard(entry, rank) {
   `;
 }
 
+
+function fixtureGrid(entry) {
+  const fixtures = Array.isArray(entry.fixtures) ? entry.fixtures.slice(0, 8) : [];
+  while (fixtures.length < 8) fixtures.push("TBD");
+
+  return `
+    <div class="fixture-grid">
+      ${fixtures.map((fixture, index) => {
+        const value = typeof fixture === "string" ? fixture : (fixture.code || "TBD");
+        const status = typeof fixture === "object" ? (fixture.status || "") : "";
+        const statusClass = status === "live" ? " live" : status === "played" ? " played" : "";
+        return `<span class="fixture-chip${statusClass}" title="Match ${index + 1}">${escapeHtml(value)}</span>`;
+      }).join("")}
+    </div>
+  `;
+}
+
 function row(entry, rank) {
   const topClass = rank <= 3 ? "top" : "";
   return `
@@ -69,6 +86,7 @@ function row(entry, rank) {
           <span class="team-name">${escapeHtml(entry.club)}</span>
         </div>
       </td>
+      <td class="fixtures-col">${fixtureGrid(entry)}</td>
       <td class="number-col"><span class="stat">${entry.played}</span></td>
       <td class="number-col optional-col"><span class="stat">${entry.goalsFor}</span></td>
       <td class="number-col optional-col"><span class="stat">${entry.goalsAgainst}</span></td>
@@ -92,7 +110,7 @@ function render() {
   });
 
   if (!filtered.length) {
-    bodyEl.innerHTML = `<tr class="no-results"><td colspan="7">No entrant or club matches that search.</td></tr>`;
+    bodyEl.innerHTML = `<tr class="no-results"><td colspan="8">No entrant or club matches that search.</td></tr>`;
     return;
   }
 
@@ -160,7 +178,7 @@ async function init() {
     updatedEl.textContent = "Could not load competition data";
     bodyEl.innerHTML = `
       <tr class="no-results">
-        <td colspan="7">
+        <td colspan="8">
           Data failed to load. If opening locally, run a small web server instead of double-clicking index.html.
         </td>
       </tr>`;

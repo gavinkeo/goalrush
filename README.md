@@ -66,6 +66,7 @@ Each row looks like:
   "entrant": "Person Name",
   "club": "Arsenal",
   "crest": "https://example.com/arsenal.png",
+  "fixtures": ["RMA", "PSG", "INT", "BAY", "ATM", "BVB", "JUV", "BEN"],
   "played": 2,
   "goalsFor": 5,
   "goalsAgainst": 3
