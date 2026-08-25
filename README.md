@@ -1,103 +1,91 @@
-# Champions League Goal Rush
+# European Goal Rush
 
-A responsive leaderboard for a 36-person workplace competition based on the UEFA Champions League league phase.
+A responsive live leaderboard for a 36-person workplace European football competition.
 
-## Competition rule
+## Format
 
-Each entrant is assigned one Champions League club.
+Each of the 36 entrants is assigned:
 
-**Score = Goals For + Goals Against** across that club's eight league-phase fixtures.
+- 1 Champions League club
+- 1 Europa League club
 
-Highest total score wins.
+Each club plays eight league-phase fixtures, so every entrant has **16 matches** contributing to their score.
 
-## Files
+## Scoring
 
-- `index.html` — page structure
-- `styles.css` — all styling/responsive design
-- `app.js` — ranking, podium, search and rendering logic
-- `competition.json` — entrants, clubs, crests and scores
-- `crest-placeholder.svg` — temporary crest
-- `favicon.svg` — site icon
+**Total = UCL goals for + UCL goals against + UEL goals for + UEL goals against**
 
-## Preview
+Every goal counts, regardless of which end it goes in.
 
-Because the site loads `competition.json`, use a small local web server rather than opening `index.html` directly.
+## Data structure
 
-### Python
+All competition data is stored in `competition.json`.
 
-```bash
-python -m http.server 8000
-```
-
-Then visit:
-
-```text
-http://localhost:8000
-```
-
-For a populated design preview, use:
-
-```text
-http://localhost:8000/?demo=1
-```
-
-The demo values exist only in the browser and do not alter the JSON file.
-
-## GitHub Pages
-
-This starter is fully compatible with GitHub Pages.
-
-1. Create a repository.
-2. Upload the contents of this folder to the repository root.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)`.
-6. Save.
-
-## Updating entrants later
-
-Edit `competition.json`.
-
-Each row looks like:
+Example entrant:
 
 ```json
 {
   "id": 1,
   "entrant": "Person Name",
-  "club": "Arsenal",
-  "crest": "https://example.com/arsenal.png",
-  "fixtures": ["RMA", "PSG", "INT", "BAY", "ATM", "BVB", "JUV", "BEN"],
-  "played": 2,
-  "goalsFor": 5,
-  "goalsAgainst": 3
+  "ucl": {
+    "club": "Arsenal",
+    "crest": "https://example.com/arsenal.png",
+    "played": 2,
+    "goalsFor": 5,
+    "goalsAgainst": 3,
+    "fixtures": ["BAY", "PSG", "INT", "ATM", "BEN", "PSV", "BVB", "RMA"]
+  },
+  "uel": {
+    "club": "Roma",
+    "crest": "https://example.com/roma.png",
+    "played": 2,
+    "goalsFor": 4,
+    "goalsAgainst": 4,
+    "fixtures": ["LYO", "BET", "FEN", "PAO", "CEL", "FEY", "RBL", "GEN"]
+  }
 }
 ```
 
-The website calculates the competition score automatically.
+The website calculates both club subtotals and the combined total automatically.
 
-## Next phase: live data
+## Preview
 
-The intended production architecture is:
+Run:
 
-```text
-Football live-score API
-        ↓
-Small serverless function
-        ↓
-Competition mapping (club → entrant)
-        ↓
-Website leaderboard
+```bash
+python -m http.server 8000
 ```
 
-Do **not** put a paid football API key directly in `app.js` in a public GitHub repository.
+Then open:
 
-A serverless function on Cloudflare Workers, Vercel, Netlify or similar can keep the key secret and return only the fields the website needs.
+```text
+http://localhost:8000
+```
 
-## Tie-breaking
+For a populated visual demo:
 
-The current starter sorts tied scores by:
-1. Higher competition score
-2. Higher goals scored
-3. Entrant name alphabetically
+```text
+http://localhost:8000/?demo=1
+```
 
-This can be changed once the competition's official tie-break rule is decided.
+## GitHub Pages
+
+Upload all files to the repository root, then enable:
+
+**Settings → Pages → Deploy from a branch → main → / (root)**
+
+## Live-score phase
+
+The planned production setup remains:
+
+```text
+Football data API
+        ↓
+Serverless function
+        ↓
+UCL + UEL club mapping
+        ↓
+European Goal Rush leaderboard
+```
+
+Keep API keys out of public front-end JavaScript.

@@ -1,696 +1,1380 @@
 {
-  "brandName": "GOAL RUSH",
-  "titleLine1": "Champions League",
+  "brandName": "EUROPEAN GOAL RUSH",
+  "titleLine1": "European",
   "titleLine2": "Goal Rush",
   "season": "2026/27",
   "isLive": false,
   "statusLabel": "PRE-SEASON",
   "lastUpdated": "2026-08-25T23:30:00+01:00",
-  "scoring": "goalsFor + goalsAgainst",
+  "scoring": "ucl.goalsFor + ucl.goalsAgainst + uel.goalsFor + uel.goalsAgainst",
   "entries": [
     {
       "id": 1,
       "entrant": "Entrant 01",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 2,
       "entrant": "Entrant 02",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 3,
       "entrant": "Entrant 03",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 4,
       "entrant": "Entrant 04",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 5,
       "entrant": "Entrant 05",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 6,
       "entrant": "Entrant 06",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 7,
       "entrant": "Entrant 07",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 8,
       "entrant": "Entrant 08",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 9,
       "entrant": "Entrant 09",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 10,
       "entrant": "Entrant 10",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 11,
       "entrant": "Entrant 11",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 12,
       "entrant": "Entrant 12",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 13,
       "entrant": "Entrant 13",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 14,
       "entrant": "Entrant 14",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 15,
       "entrant": "Entrant 15",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 16,
       "entrant": "Entrant 16",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 17,
       "entrant": "Entrant 17",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 18,
       "entrant": "Entrant 18",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 19,
       "entrant": "Entrant 19",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 20,
       "entrant": "Entrant 20",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 21,
       "entrant": "Entrant 21",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 22,
       "entrant": "Entrant 22",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 23,
       "entrant": "Entrant 23",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 24,
       "entrant": "Entrant 24",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 25,
       "entrant": "Entrant 25",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 26,
       "entrant": "Entrant 26",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 27,
       "entrant": "Entrant 27",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 28,
       "entrant": "Entrant 28",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 29,
       "entrant": "Entrant 29",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 30,
       "entrant": "Entrant 30",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 31,
       "entrant": "Entrant 31",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 32,
       "entrant": "Entrant 32",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 33,
       "entrant": "Entrant 33",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 34,
       "entrant": "Entrant 34",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 35,
       "entrant": "Entrant 35",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     },
     {
       "id": 36,
       "entrant": "Entrant 36",
-      "club": "Club TBD",
-      "crest": "",
-      "played": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "fixtures": [
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD",
-        "TBD"
-      ]
+      "ucl": {
+        "club": "UCL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      },
+      "uel": {
+        "club": "UEL Team TBD",
+        "crest": "",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD",
+          "TBD"
+        ]
+      }
     }
   ]
 }
