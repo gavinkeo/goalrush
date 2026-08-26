@@ -198,3 +198,15 @@ For the dummy-data design preview, blank crests are now progressively fetched fr
 - The final competition should use `fetch-crests.mjs` / API-Football so the real crest URLs are stored directly in `competition.json`.
 
 Because 72 dummy teams are being looked up under the free rate limit, the first full hydration can take roughly 2–3 minutes. The top-ranked teams are requested first.
+
+
+## v26 crest matching hardening
+
+The temporary dummy crest loader now:
+- tries club aliases automatically;
+- strips common club prefixes/suffixes for fallback searches;
+- handles accents and punctuation more robustly;
+- uses normalized-name matching before accepting a result;
+- logs any remaining unmatched clubs to the browser console.
+
+This should resolve most of the handful of dummy badges that failed to populate in v25.

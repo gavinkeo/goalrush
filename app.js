@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=25";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=25";
+const DATA_URL = "competition.json?v=26";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=26";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
@@ -68,21 +68,94 @@ function updateRenderedCrests(club, badgeUrl) {
   });
 }
 
-async function fetchDummyBadge(club) {
-  const url = `https://www.thesportsdb.com/api/v1/json/123/searchteams.php?t=${encodeURIComponent(club)}`;
+const CLUB_SEARCH_ALIASES = {
+  "psv eindhoven": ["PSV", "PSV Eindhoven"],
+  "sporting cp": ["Sporting Lisbon", "Sporting CP"],
+  "bodo/glimt": ["Bodo Glimt", "Bodø/Glimt"],
+  "eintracht frankfurt": ["Eintracht Frankfurt", "Eintracht"],
+  "union saint-gilloise": ["Union SG", "Union Saint-Gilloise"],
+  "rb leipzig": ["RB Leipzig", "Leipzig"],
+  "bayer leverkusen": ["Bayer Leverkusen", "Leverkusen"],
+  "shakhtar donetsk": ["Shakhtar Donetsk", "Shakhtar"],
+  "dinamo zagreb": ["Dinamo Zagreb", "GNK Dinamo Zagreb"],
+  "young boys": ["Young Boys", "BSC Young Boys"],
+  "slavia prague": ["Slavia Prague", "Slavia Praha"],
+  "olympiacos": ["Olympiacos", "Olympiakos"],
+  "fenerbahce": ["Fenerbahce", "Fenerbahçe"],
+  "besiktas": ["Besiktas", "Beşiktaş"],
+  "az alkmaar": ["AZ Alkmaar", "AZ"],
+  "real betis": ["Real Betis", "Betis"],
+  "athletic bilbao": ["Athletic Bilbao", "Athletic Club"],
+  "rangers": ["Rangers", "Glasgow Rangers"],
+  "ferencvaros": ["Ferencvaros", "Ferencváros"],
+  "midtylland": ["Midtjylland", "FC Midtjylland"],
+  "rapid wien": ["Rapid Wien", "Rapid Vienna"],
+  "viktoria plzen": ["Viktoria Plzen", "Viktoria Plzeň"],
+  "legia warsaw": ["Legia Warsaw", "Legia Warszawa"],
+  "copenhagen": ["Copenhagen", "FC Copenhagen", "FC København"],
+  "maccabi tel aviv": ["Maccabi Tel Aviv", "Maccabi TA"],
+  "club brugge": ["Club Brugge", "Club Brugge KV"],
+  "ac milan": ["AC Milan", "Milan"],
+  "inter milan": ["Inter Milan", "Internazionale", "Inter"],
+  "paris saint-germain": ["Paris Saint-Germain", "PSG"],
+  "manchester united": ["Manchester United", "Man United"],
+  "tottenham hotspur": ["Tottenham Hotspur", "Tottenham"]
+};
+
+function searchCandidatesForClub(club) {
+  const key = clubKey(club);
+  const aliases = CLUB_SEARCH_ALIASES[key] || [];
+
+  const simplified = String(club)
+    .replace(/\b(FC|CF|AC|SC|AFC|CP|KV|BSC|GNK)\b/gi, "")
+    .replace(/[\/-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return [...new Set([club, ...aliases, simplified].filter(Boolean))];
+}
+
+function normaliseTeamName(value) {
+  return String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .replace(/[^a-z0-9]/g, "");
+}
+
+async function searchTheSportsDb(query) {
+  const url = `https://www.thesportsdb.com/api/v1/json/123/searchteams.php?t=${encodeURIComponent(query)}`;
   const response = await fetch(url);
   if (!response.ok) throw new Error(`TheSportsDB HTTP ${response.status}`);
-
   const payload = await response.json();
-  const soccerTeams = (payload.teams || []).filter(team => team.strSport === "Soccer");
-  if (!soccerTeams.length) return null;
+  return (payload.teams || []).filter(team => team.strSport === "Soccer");
+}
 
-  const wanted = clubKey(club).replace(/[^a-z0-9]/g, "");
-  const exact = soccerTeams.find(team =>
-    clubKey(team.strTeam).replace(/[^a-z0-9]/g, "") === wanted
-  );
-  const team = exact || soccerTeams[0];
-  return team?.strBadge || null;
+async function fetchDummyBadge(club) {
+  const wanted = normaliseTeamName(club);
+  const candidates = searchCandidatesForClub(club);
+
+  for (const query of candidates) {
+    const soccerTeams = await searchTheSportsDb(query);
+    if (!soccerTeams.length) continue;
+
+    const exact = soccerTeams.find(team =>
+      normaliseTeamName(team.strTeam) === wanted
+    );
+    if (exact?.strBadge) return exact.strBadge;
+
+    const contained = soccerTeams.find(team => {
+      const candidate = normaliseTeamName(team.strTeam);
+      return candidate.includes(wanted) || wanted.includes(candidate);
+    });
+    if (contained?.strBadge) return contained.strBadge;
+
+    if (query !== club && soccerTeams[0]?.strBadge) {
+      return soccerTeams[0].strBadge;
+    }
+  }
+
+  return null;
 }
 
 function wait(ms) {
@@ -105,6 +178,8 @@ async function hydrateDummyCrests() {
 
   // Free TheSportsDB tier is 30 requests/minute.
   // 2200ms keeps us safely below that ceiling.
+  const stillMissing = [];
+
   for (const club of clubs) {
     try {
       const badge = await fetchDummyBadge(club);
@@ -112,11 +187,18 @@ async function hydrateDummyCrests() {
         dummyCrestCache[clubKey(club)] = badge;
         saveDummyCrestCache();
         updateRenderedCrests(club, badge);
+      } else {
+        stillMissing.push(club);
       }
     } catch (error) {
       console.warn(`Dummy crest lookup failed for ${club}:`, error);
+      stillMissing.push(club);
     }
-    await wait(2200);
+    await wait(2400);
+  }
+
+  if (stillMissing.length) {
+    console.info("Dummy crests still unmatched:", stillMissing);
   }
 }
 
