@@ -3593,3 +3593,76 @@ th:nth-child(5){width:7%}
     padding-right:10px !important;
   }
 }
+
+
+/* =========================================================
+   v55 - compact desktop header search + larger desktop logos
+   ========================================================= */
+@media (min-width: 701px){
+  .title-top-row{
+    display:grid !important;
+    grid-template-columns:auto minmax(220px, 1fr) auto !important;
+    align-items:center !important;
+    gap:18px !important;
+  }
+
+  .main-title{
+    white-space:nowrap;
+  }
+
+  .desktop-top-search{
+    display:flex !important;
+    width:100% !important;
+    max-width:430px !important;
+    min-width:220px;
+    justify-self:center;
+    min-height:42px;
+    padding:8px 12px !important;
+    border-radius:11px !important;
+  }
+
+  .desktop-top-search input{
+    font-size:.70rem !important;
+  }
+
+  .dashboard-header .matchday-strip{
+    justify-self:end;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    width:30px !important;
+    height:30px !important;
+    min-width:30px !important;
+  }
+
+  .dashboard-header .matchday-chip{
+    column-gap:11px !important;
+  }
+
+  .header-divider{
+    margin-top:10px !important;
+  }
+}
+
+@media (max-width: 700px){
+  .desktop-top-search{
+    order:3;
+    width:100% !important;
+    max-width:none !important;
+    margin-top:0 !important;
+  }
+
+  .title-top-row{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+  }
+
+  .main-title{
+    order:1;
+  }
+
+  .dashboard-header .matchday-strip{
+    order:2;
+  }
+}

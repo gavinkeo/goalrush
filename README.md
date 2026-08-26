@@ -1,5 +1,5 @@
-# Euro Goal Rush v54
+# Euro Goal Rush v55
 
-- Desktop: UCL/UEL PNG logos moved beside their respective matchday boxes.
-- Mobile: UCL logo flanks the title on the left and UEL logo flanks the title on the right.
-- Matchday boxes stay cleaner on mobile with the logos removed from inside the chips.
+- Desktop UCL/UEL logos enlarged.
+- Desktop search moved into the top header row between the title and tournament boxes.
+- Mobile layout unchanged: logos flank the title and search stays below the tournament boxes.
