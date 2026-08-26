@@ -3459,3 +3459,137 @@ th:nth-child(5){width:7%}
     grid-template-areas:"comp state anthem" "date date anthem";
   }
 }
+
+
+/* =========================================================
+   v54 - competition logos by matchday boxes on desktop,
+   flanking the title on mobile
+   ========================================================= */
+.title-logo-mobile{
+  display:none;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.35));
+}
+
+.main-title{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:0 !important;
+}
+
+.dashboard-header .matchday-chip{
+  grid-template-columns:auto 1fr auto auto !important;
+  grid-template-areas:
+    "logo comp state anthem"
+    "logo date date anthem" !important;
+  align-items:center;
+  column-gap:12px !important;
+  row-gap:4px !important;
+  padding-left:16px !important;
+  padding-right:14px !important;
+}
+
+.dashboard-header .matchday-chip .chip-logo{
+  display:block !important;
+  grid-area:logo;
+  width:24px;
+  height:24px;
+  object-fit:contain;
+  align-self:center;
+  justify-self:start;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.35));
+}
+
+.dashboard-header .matchday-chip .comp{
+  justify-self:start;
+  align-self:end;
+}
+
+.dashboard-header .matchday-chip .state{
+  justify-self:end;
+  align-self:end;
+}
+
+.dashboard-header .matchday-chip strong{
+  justify-self:start;
+  align-self:start;
+  white-space:nowrap;
+}
+
+.dashboard-header .matchday-chip .anthem-btn{
+  grid-area:anthem;
+  justify-self:end;
+  align-self:center;
+}
+
+@media (max-width: 900px){
+  .dashboard-header .matchday-chip{
+    padding-left:14px !important;
+    column-gap:10px !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    width:22px;
+    height:22px;
+  }
+}
+
+@media (max-width: 700px){
+  .main-title{
+    width:100%;
+    justify-content:center !important;
+    gap:12px !important;
+    text-align:center;
+  }
+
+  .title-logo-mobile{
+    display:block;
+    width:22px;
+    height:22px;
+    flex:0 0 22px;
+  }
+
+  .title-logo-mobile-ucl{
+    order:0;
+  }
+
+  .main-title-text{
+    order:1;
+  }
+
+  .title-logo-mobile-uel{
+    order:2;
+  }
+
+  .dashboard-header .matchday-chip{
+    grid-template-columns:1fr auto auto !important;
+    grid-template-areas:
+      "comp state anthem"
+      "date date anthem" !important;
+    padding-left:16px !important;
+    padding-right:12px !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    display:none !important;
+  }
+}
+
+@media (max-width: 390px){
+  .main-title{
+    gap:10px !important;
+  }
+
+  .title-logo-mobile{
+    width:20px;
+    height:20px;
+    flex-basis:20px;
+  }
+
+  .dashboard-header .matchday-chip{
+    grid-template-columns:1fr auto auto !important;
+    padding-left:14px !important;
+    padding-right:10px !important;
+  }
+}
