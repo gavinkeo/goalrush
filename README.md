@@ -406,3 +406,11 @@ Fixed the mobile countdown layout so the play buttons retain a fixed circular si
 - Vertically centered manager names with the rank/prize blocks.
 - Slightly enlarged the desktop rank boxes for better balance.
 - Mobile layout unchanged.
+
+
+## v46 anthem button cleanup and desktop manager spacing
+
+- Reworked the UCL/UEL anthem buttons so they read as compact audio controls instead of oversized hollow circles.
+- Reduced the mobile play buttons to a cleaner, tighter size while keeping the larger matchday cards.
+- Increased desktop manager-column breathing room and forced manager names onto one line.
+- Widened the desktop manager column slightly so long names like Christopher O'Sullivan no longer wrap.

@@ -2756,3 +2756,117 @@ th:nth-child(5){width:7%}
     background:rgba(229,173,134,.07) !important;
   }
 }
+
+
+/* =========================================================
+   v46 - cleaner anthem buttons + desktop manager single-line fix
+   ========================================================= */
+
+/* Make anthem buttons feel like compact audio controls instead of large hollow circles */
+.anthem-btn{
+  background:rgba(255,255,255,.075) !important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.03) inset;
+}
+
+.anthem-ucl{
+  background:rgba(73,228,255,.08) !important;
+  border-color:rgba(73,228,255,.24) !important;
+}
+
+.anthem-uel{
+  background:rgba(255,173,97,.085) !important;
+  border-color:rgba(255,173,97,.24) !important;
+}
+
+.anthem-btn:hover{
+  background:rgba(255,255,255,.11) !important;
+}
+
+.anthem-ucl:hover{
+  background:rgba(73,228,255,.14) !important;
+}
+
+.anthem-uel:hover{
+  background:rgba(255,173,97,.14) !important;
+}
+
+.anthem-icon{
+  font-size:.68rem !important;
+}
+
+@media(max-width:700px){
+  .dashboard-header .matchday-chip{
+    padding:10px 14px !important;
+    min-height:60px !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:34px !important;
+    height:34px !important;
+    min-width:34px !important;
+    min-height:34px !important;
+    border-radius:999px !important;
+  }
+
+  .dashboard-header .anthem-icon{
+    font-size:.66rem !important;
+    transform:translateX(1px) !important;
+  }
+
+  .dashboard-header .matchday-chip .state{
+    max-width:60px !important;
+  }
+}
+
+@media(max-width:390px){
+  .dashboard-header .matchday-chip{
+    padding:9px 12px !important;
+    min-height:58px !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:32px !important;
+    height:32px !important;
+    min-width:32px !important;
+    min-height:32px !important;
+  }
+
+  .dashboard-header .anthem-icon{
+    font-size:.63rem !important;
+  }
+}
+
+@media(min-width:701px){
+  /* Give manager names enough space and keep them on one line */
+  th:nth-child(1){width:19% !important}
+  th:nth-child(2){width:16% !important}
+  th:nth-child(3){width:52.5% !important}
+  th:nth-child(4){width:5.5% !important}
+  th:nth-child(5){width:7% !important}
+
+  .manager-cell{
+    min-width:250px;
+  }
+
+  .manager-wrap{
+    flex-wrap:nowrap !important;
+  }
+
+  .manager-name{
+    white-space:nowrap !important;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:.74rem !important;
+    line-height:1.1 !important;
+  }
+
+  .manager-name-wrap{
+    min-width:0;
+    flex:1 1 auto;
+  }
+
+  /* Slightly stronger prize text on desktop */
+  .rank-prize{
+    font-size:.5rem !important;
+  }
+}
