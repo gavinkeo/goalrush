@@ -126,3 +126,56 @@ Replaced `FRONT RUNNERS / The podium` with the single heading:
 
 - Removed the `LIVE STANDINGS` label from above the podium.
 - Restored `LIVE STANDINGS` as the main heading above the table.
+
+
+## v23 automatic club crests
+
+Crests can now be populated automatically from API-Football.
+
+### What gets added
+
+For each assigned UCL/UEL team the importer writes:
+
+```json
+{
+  "club": "Real Madrid",
+  "apiTeamId": 541,
+  "apiCode": "REA",
+  "crest": "https://media.api-sports.io/football/teams/541.png"
+}
+```
+
+The website already renders the `crest` field, so no UI changes are required.
+
+### Windows — easiest method
+
+1. Install Node.js if it is not already installed.
+2. Get an API-Football API key.
+3. Open PowerShell in the website folder.
+4. Run:
+
+```powershell
+.\fetch-crests.ps1
+```
+
+The helper asks for the key without saving it inside the repository.
+
+Alternatively:
+
+```powershell
+$env:API_FOOTBALL_KEY="YOUR_KEY"
+node .\fetch-crests.mjs
+```
+
+### How it works
+
+The script:
+1. finds the 2026/27 Champions League and Europa League IDs;
+2. pulls the participant list for each competition;
+3. matches the assigned club names in `competition.json`;
+4. writes API team IDs, codes and crest URLs;
+5. creates `competition.before-crests.json` as a backup.
+
+With real post-draw teams this should populate essentially everything in one run. Dummy teams that are not actually in the 2026/27 competitions are deliberately reported as unmatched rather than guessed.
+
+Never commit an API key to GitHub.

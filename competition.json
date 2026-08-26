@@ -54,7 +54,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Roma",
@@ -103,7 +105,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -157,7 +161,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Manchester United",
@@ -206,7 +212,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -260,7 +268,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Tottenham Hotspur",
@@ -309,7 +319,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -363,7 +375,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Lazio",
@@ -412,7 +426,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -466,7 +482,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Real Sociedad",
@@ -515,7 +533,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -569,7 +589,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Villarreal",
@@ -618,7 +640,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -672,7 +696,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Eintracht Frankfurt",
@@ -721,7 +747,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -775,7 +803,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Fenerbahce",
@@ -824,7 +854,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -878,7 +910,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Besiktas",
@@ -927,7 +961,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -981,7 +1017,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Anderlecht",
@@ -1030,7 +1068,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -1084,7 +1124,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Braga",
@@ -1133,7 +1175,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -1187,7 +1231,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "AZ Alkmaar",
@@ -1236,7 +1282,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -1290,7 +1338,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Union Saint-Gilloise",
@@ -1339,7 +1389,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -1393,7 +1445,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Real Betis",
@@ -1442,7 +1496,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -1496,7 +1552,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Hoffenheim",
@@ -1545,7 +1603,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -1599,7 +1659,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Freiburg",
@@ -1648,7 +1710,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -1702,7 +1766,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Nice",
@@ -1751,7 +1817,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -1805,7 +1873,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Lyon",
@@ -1854,7 +1924,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -1908,7 +1980,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Athletic Bilbao",
@@ -1957,7 +2031,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2011,7 +2087,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "PAOK",
@@ -2060,7 +2138,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2114,7 +2194,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Rangers",
@@ -2163,7 +2245,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2217,7 +2301,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Ferencvaros",
@@ -2266,7 +2352,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2320,7 +2408,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Ludogorets",
@@ -2369,7 +2459,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2423,7 +2515,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Midtjylland",
@@ -2472,7 +2566,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2526,7 +2622,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Bodo/Glimt",
@@ -2575,7 +2673,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2629,7 +2729,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Malmo",
@@ -2678,7 +2780,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2732,7 +2836,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Rapid Wien",
@@ -2781,7 +2887,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2835,7 +2943,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Partizan",
@@ -2884,7 +2994,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -2938,7 +3050,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Trabzonspor",
@@ -2987,7 +3101,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -3041,7 +3157,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Basel",
@@ -3090,7 +3208,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -3144,7 +3264,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Copenhagen",
@@ -3193,7 +3315,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -3247,7 +3371,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Gent",
@@ -3296,7 +3422,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -3350,7 +3478,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Viktoria Plzen",
@@ -3399,7 +3529,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -3453,7 +3585,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Legia Warsaw",
@@ -3502,7 +3636,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -3556,7 +3692,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Hearts",
@@ -3605,7 +3743,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     },
     {
@@ -3659,7 +3799,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       },
       "uel": {
         "club": "Maccabi Tel Aviv",
@@ -3708,7 +3850,9 @@
             "venue": "A",
             "status": ""
           }
-        ]
+        ],
+        "apiTeamId": null,
+        "apiCode": ""
       }
     }
   ],
