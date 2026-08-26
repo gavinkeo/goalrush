@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=36";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=36";
+const DATA_URL = "competition.json?v=37";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=37";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -352,10 +352,12 @@ function desktopRows(entry, rank) {
     <tr class="ucl-row">
       <td class="manager-cell" rowspan="2">
         <div class="manager-wrap">
-          <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
+          <div class="rank-spot">
+            <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
+            ${prizeBadge(rank)}
+          </div>
           <div class="manager-name-wrap">
             <span class="manager-name">${esc(entry.entrant)}</span>
-            ${prizeBadge(rank)}
           </div>
         </div>
       </td>
@@ -388,10 +390,12 @@ function mobileCard(entry, rank) {
   return `
     <article class="mobile-card">
       <div class="mobile-head">
-        <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
+        <div class="rank-spot">
+          <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
+          ${prizeBadge(rank)}
+        </div>
         <div class="mobile-manager-wrap">
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
-          ${prizeBadge(rank)}
         </div>
         <div class="mobile-combined">
           <strong>${totalScore(entry)}</strong>

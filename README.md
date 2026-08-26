@@ -321,3 +321,16 @@ GitHub Pages filenames are case-sensitive, so use those exact lowercase names.
   - 2nd €200
   - 3rd €120
 - This removes the duplicated top-three information and gets users into the actual standings immediately.
+
+
+## v37 top/header polish
+
+- Swapped the top order to:
+  - title
+  - UCL / UEL controls
+  - search
+  - subtle divider
+- Reduced the title size slightly.
+- Slimmed the search box slightly.
+- Moved the 1st/2nd/3rd prize chips out of the manager name area and into the rank block.
+- Reduced the visibility of the mobile accent stripe for a cleaner, less "progress bar" feel.
