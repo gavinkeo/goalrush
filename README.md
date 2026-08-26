@@ -117,3 +117,14 @@ Entrant names remain the real 36-name list from v67.
 - Rebuilt every dummy UEL fixture using only the current projected 36 UEL clubs.
 - Dummy schedules are symmetric: if Club A has Club B in a given MD, Club B also has Club A in that MD with the opposite venue.
 - Fixture objects now store the full opponent name as well as the compact three-letter display code, improving hover details.
+
+
+## v71 mobile tap tooltips
+
+- Fixture detail tooltips now work on mobile by tapping a score tile.
+- Tap a tile once to open the detail card; tap the same tile again or tap elsewhere to close it.
+- Desktop hover behavior remains unchanged.
+
+
+## v72 clean footer
+- Removed the Live Draw link and “Unofficial competition” text from the bottom of the main page.

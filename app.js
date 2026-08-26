@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=70";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=70";
+const DATA_URL = "competition.json?v=72";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=72";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -233,15 +233,33 @@ fixtureTooltipEl.setAttribute("role", "tooltip");
 fixtureTooltipEl.hidden = true;
 document.body.appendChild(fixtureTooltipEl);
 
+function fixtureTooltipOnMobile() {
+  return window.matchMedia("(max-width: 700px)").matches;
+}
+
 function positionFixtureTooltip(target) {
   if (!target || fixtureTooltipEl.hidden) return;
+
   const rect = target.getBoundingClientRect();
   const tipRect = fixtureTooltipEl.getBoundingClientRect();
-  const pad = 10;
+  const mobile = fixtureTooltipOnMobile();
+  const pad = mobile ? 8 : 10;
+
   let left = rect.left + rect.width / 2 - tipRect.width / 2;
-  left = Math.max(8, Math.min(left, window.innerWidth - tipRect.width - 8));
-  let top = rect.top - tipRect.height - pad;
-  if (top < 8) top = rect.bottom + pad;
+  left = Math.max(mobile ? 12 : 8, Math.min(left, window.innerWidth - tipRect.width - (mobile ? 12 : 8)));
+
+  let top;
+  if (mobile) {
+    top = rect.bottom + pad;
+    if (top + tipRect.height > window.innerHeight - 8) {
+      top = rect.top - tipRect.height - pad;
+    }
+    if (top < 8) top = 8;
+  } else {
+    top = rect.top - tipRect.height - pad;
+    if (top < 8) top = rect.bottom + pad;
+  }
+
   fixtureTooltipEl.style.left = `${Math.round(left)}px`;
   fixtureTooltipEl.style.top = `${Math.round(top)}px`;
 }
@@ -252,26 +270,47 @@ function showFixtureTooltip(target) {
   activeFixtureTooltipTarget = target;
   fixtureTooltipEl.textContent = text;
   fixtureTooltipEl.hidden = false;
+  fixtureTooltipEl.classList.toggle("is-mobile", fixtureTooltipOnMobile());
   positionFixtureTooltip(target);
 }
 
 function hideFixtureTooltip() {
   activeFixtureTooltipTarget = null;
   fixtureTooltipEl.hidden = true;
+  fixtureTooltipEl.classList.remove("is-mobile");
 }
 
 function wireFixtureTooltips() {
   document.addEventListener("mouseover", event => {
+    if (fixtureTooltipOnMobile()) return;
     const fixture = event.target.closest?.(".fixture[data-tooltip]");
     if (!fixture || fixture === activeFixtureTooltipTarget) return;
     showFixtureTooltip(fixture);
   });
 
   document.addEventListener("mouseout", event => {
+    if (fixtureTooltipOnMobile()) return;
     if (!activeFixtureTooltipTarget) return;
     if (event.relatedTarget && activeFixtureTooltipTarget.contains(event.relatedTarget)) return;
     const fromFixture = event.target.closest?.(".fixture[data-tooltip]");
     if (fromFixture === activeFixtureTooltipTarget) hideFixtureTooltip();
+  });
+
+  document.addEventListener("click", event => {
+    if (!fixtureTooltipOnMobile()) return;
+
+    const fixture = event.target.closest?.(".fixture[data-tooltip]");
+    if (fixture) {
+      event.preventDefault();
+      if (fixture === activeFixtureTooltipTarget && !fixtureTooltipEl.hidden) {
+        hideFixtureTooltip();
+      } else {
+        showFixtureTooltip(fixture);
+      }
+      return;
+    }
+
+    hideFixtureTooltip();
   });
 
   window.addEventListener("scroll", hideFixtureTooltip, { passive:true });

@@ -4508,3 +4508,21 @@ th:nth-child(5){width:7%}
     cursor:default;
   }
 }
+
+
+/* =========================================================
+   v71 - mobile tap tooltip support
+   ========================================================= */
+
+@media(max-width:700px){
+  .fixture-hover-tooltip.is-mobile{
+    max-width:min(320px, calc(100vw - 24px));
+    padding:11px 12px;
+    font-size:.68rem;
+    line-height:1.5;
+  }
+
+  .fixture[data-tooltip]{
+    -webkit-tap-highlight-color:rgba(255,255,255,.08);
+  }
+}
