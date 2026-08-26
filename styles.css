@@ -2639,3 +2639,58 @@ th:nth-child(5){width:7%}
     color:var(--green) !important;
   }
 }
+
+
+/* =========================================================
+   v44 - protect anthem play buttons from countdown squeeze
+   ========================================================= */
+
+@media(max-width:700px){
+  .dashboard-header .matchday-chip{
+    grid-template-columns:auto 1fr auto !important;
+    column-gap:10px !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    flex:0 0 auto !important;
+    width:46px !important;
+    height:46px !important;
+    min-width:46px !important;
+    min-height:46px !important;
+    aspect-ratio:1 / 1 !important;
+    padding:0 !important;
+    border-radius:50% !important;
+  }
+
+  .dashboard-header .anthem-icon{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    height:100% !important;
+    font-size:.78rem !important;
+    line-height:1 !important;
+  }
+
+  .dashboard-header .matchday-chip .state{
+    min-width:0 !important;
+    max-width:58px !important;
+    overflow:hidden;
+    text-overflow:clip;
+    white-space:nowrap;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    min-width:0 !important;
+    white-space:nowrap !important;
+  }
+}
+
+@media(max-width:390px){
+  .dashboard-header .anthem-btn{
+    width:44px !important;
+    height:44px !important;
+    min-width:44px !important;
+    min-height:44px !important;
+  }
+}

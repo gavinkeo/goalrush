@@ -394,3 +394,7 @@ Examples:
 - `37M`
 
 During the matchday date window it switches to `LIVE`. The countdown refreshes automatically every minute.
+
+
+## v44 mobile anthem button sizing
+Fixed the mobile countdown layout so the play buttons retain a fixed circular size instead of being squeezed by the countdown text.
