@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=28";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=28";
+const DATA_URL = "competition.json?v=31";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=31";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
@@ -9,8 +9,13 @@ const searchEl = $("#search");
 
 const uclAnthemBtn = $("#ucl-anthem-btn");
 const uelAnthemBtn = $("#uel-anthem-btn");
-const uclAnthemAudio = $("#ucl-anthem-audio");
-const uelAnthemAudio = $("#uel-anthem-audio");
+
+// Audio players are created directly in JavaScript.
+// Files should sit in the repository root beside index.html.
+const uclAnthemAudio = new Audio("ucl-anthem.mp3");
+const uelAnthemAudio = new Audio("uel-anthem.mp3");
+uclAnthemAudio.preload = "metadata";
+uelAnthemAudio.preload = "metadata";
 
 const anthemPairs = [
   { btn: uclAnthemBtn, audio: uclAnthemAudio, label: "UCL anthem", missingFile: "ucl-anthem.mp3" },
@@ -58,7 +63,10 @@ function wireAnthemButtons() {
   anthemPairs.forEach(({ btn, audio, label, missingFile }) => {
     if (!btn || !audio) return;
 
-    btn.addEventListener("click", async () => {
+    btn.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
       if (!audio.paused) {
         audio.pause();
         audio.currentTime = 0;
@@ -69,19 +77,32 @@ function wireAnthemButtons() {
       stopOtherAnthems(audio);
 
       try {
+        audio.currentTime = 0;
         await audio.play();
         setAnthemButtonState(btn, true);
       } catch (error) {
+        console.error(`${label} failed to play:`, error);
         setAnthemButtonState(btn, false);
-        alert(`Upload ${missingFile} to the site root to use the ${label} button.`);
+        btn.classList.add("audio-error");
+        setTimeout(() => btn.classList.remove("audio-error"), 1200);
+        alert(`Could not play ${label}. Make sure ${missingFile} is uploaded to the repository root with that exact filename.`);
       }
     });
 
-    audio.addEventListener("ended", () => setAnthemButtonState(btn, false));
-    audio.addEventListener("pause", () => {
-      if (audio.currentTime === 0 || audio.ended) setAnthemButtonState(btn, false);
+    audio.addEventListener("play", () => setAnthemButtonState(btn, true));
+    audio.addEventListener("ended", () => {
+      audio.currentTime = 0;
+      setAnthemButtonState(btn, false);
     });
-    audio.addEventListener("error", () => setAnthemButtonState(btn, false));
+    audio.addEventListener("pause", () => {
+      if (audio.currentTime === 0 || audio.ended) {
+        setAnthemButtonState(btn, false);
+      }
+    });
+    audio.addEventListener("error", () => {
+      setAnthemButtonState(btn, false);
+      console.error(`Audio file could not be loaded: ${missingFile}`);
+    });
   });
 }
 
@@ -322,25 +343,13 @@ function teamCell(team, comp) {
     </div>`;
 }
 
-function rankMovement(entry, rank) {
-  const prev = Number(entry.previousRank);
-  if (!Number.isFinite(prev) || prev <= 0) return "";
-
-  const delta = prev - rank;
-  if (delta > 0) return `<span class="rank-move up">▲${delta}</span>`;
-  if (delta < 0) return `<span class="rank-move down">▼${Math.abs(delta)}</span>`;
-  return `<span class="rank-move same">—</span>`;
-}
 
 function desktopRows(entry, rank) {
   return `
     <tr class="ucl-row">
       <td class="manager-cell" rowspan="2">
         <div class="manager-wrap">
-          <div class="rank-stack">
-            <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
-            ${rankMovement(entry, rank)}
-          </div>
+          <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
           <div>
             <span class="manager-name">${esc(entry.entrant)}</span>
           </div>
@@ -375,10 +384,7 @@ function mobileCard(entry, rank) {
   return `
     <article class="mobile-card">
       <div class="mobile-head">
-        <div class="rank-stack">
-          <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
-          ${rankMovement(entry, rank)}
-        </div>
+        <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
         <div>
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
         </div>
@@ -503,7 +509,6 @@ async function init() {
     const data = await response.json();
 
     entries = Array.isArray(data.entries) ? data.entries : [];
-    $("#brand-name").textContent = data.brandName || "EURO GOAL RUSH 26/27";
 
     setMatchday("ucl", data.matchdays?.ucl);
     setMatchday("uel", data.matchdays?.uel);
@@ -522,4 +527,5 @@ async function init() {
 }
 
 searchEl.addEventListener("input", render);
+wireAnthemButtons();
 init();

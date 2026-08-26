@@ -1077,3 +1077,94 @@ th:nth-child(5){width:7%}
       "logo date play";
   }
 }
+
+
+
+/* =========================================================
+   v29 - matchday headers + cleaner ranks
+   ========================================================= */
+
+.fixture-header{
+  padding-left:11px;
+  padding-right:11px;
+}
+
+.matchday-head-grid{
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  gap:4px;
+  width:100%;
+}
+
+.matchday-head-grid span{
+  display:block;
+  text-align:center;
+  color:#8392b0;
+  font-size:.48rem;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+
+/* Rank movement removed: position numbers now stand alone */
+.manager-wrap{
+  align-items:center;
+}
+
+.rank{
+  margin:0;
+}
+
+@media(max-width:700px){
+  .matchday-head-grid span{
+    font-size:.43rem;
+  }
+}
+
+
+/* v30 - anthem playback fix */
+.anthem-btn.audio-error{
+  border-color:rgba(255,92,108,.7) !important;
+  background:rgba(255,92,108,.16) !important;
+  animation:anthem-error-shake .28s ease-in-out 2;
+}
+
+@keyframes anthem-error-shake{
+  25%{transform:translateX(-2px)}
+  75%{transform:translateX(2px)}
+}
+
+
+
+/* =========================================================
+   v31 - cleaner top bar / title hierarchy
+   ========================================================= */
+
+.site-header{
+  justify-content:flex-end;
+  min-height:64px;
+}
+
+.matchday-strip{
+  margin-left:auto;
+}
+
+.standings-head h2{
+  font-size:1.42rem;
+  letter-spacing:-.04em;
+}
+
+@media(max-width:700px){
+  .site-header{
+    justify-content:flex-end;
+    min-height:58px;
+  }
+
+  .matchday-strip{
+    width:100%;
+    justify-content:flex-end;
+  }
+
+  .standings-head h2{
+    font-size:1.22rem;
+  }
+}

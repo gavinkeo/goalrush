@@ -237,3 +237,36 @@ Clicking the button:
 - toggles the button to pause/stop state while audio is playing.
 
 Also changed the podium crests from overlapping to side-by-side so both badges remain clearly visible.
+
+
+## v29 matchday header cleanup
+
+- Replaced the generic `FIXTURES` column heading with eight aligned headings:
+  `MD1 | MD2 | MD3 | MD4 | MD5 | MD6 | MD7 | MD8`
+- Removed all rank movement arrows from desktop and mobile.
+- Ranking is now shown only as the entrant's current position.
+
+
+## v30 anthem playback fix
+
+Fixed the non-working play buttons.
+
+The previous build had two issues:
+- `wireAnthemButtons()` existed but was never called.
+- the expected hidden audio elements were not present in the final HTML.
+
+v30 creates the audio players directly in JavaScript and wires the buttons on page load.
+
+Required root filenames remain exactly:
+
+- `ucl-anthem.mp3`
+- `uel-anthem.mp3`
+
+GitHub Pages filenames are case-sensitive, so use those exact lowercase names.
+
+
+## v31 title hierarchy
+
+- Removed the top-left `EURO GOAL RUSH 26/27` brand block and star.
+- The top strip is now dedicated to the UCL / UEL matchday and anthem controls.
+- Changed the main table heading from `LIVE STANDINGS` to `EURO GOAL RUSH 26/27`.
