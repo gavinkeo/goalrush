@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=31";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=31";
+const DATA_URL = "competition.json?v=32";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=32";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
@@ -319,13 +319,9 @@ function fixtureGrid(team, comp) {
         item.status === "live" ? " live" :
         item.status === "played" ? " played" : "";
 
-      const venue = item.venue === "H" || item.venue === "A"
-        ? `<small class="venue ${item.venue.toLowerCase()}">${item.venue}</small>`
-        : "";
-
       return `
         <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" title="${comp} Matchday ${index + 1}">
-          <b>${esc(item.code)}</b>${venue}
+          <b>${esc(item.code)}</b>
         </span>`;
     }).join("")
   }</div>`;
@@ -389,7 +385,7 @@ function mobileCard(entry, rank) {
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
         </div>
         <div class="mobile-combined">
-          <span>COMBINED</span>
+          <span>TOTAL</span>
           <strong>${totalScore(entry)}</strong>
         </div>
       </div>

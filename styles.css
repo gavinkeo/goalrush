@@ -1168,3 +1168,154 @@ th:nth-child(5){width:7%}
     font-size:1.22rem;
   }
 }
+
+
+
+/* =========================================================
+   v32 - mobile readability pass
+   ========================================================= */
+
+/* H/A data is no longer rendered; keep legacy selectors harmless */
+.fixture .venue{
+  display:none !important;
+}
+
+@media(max-width:700px){
+
+  /* Title/search block: tighter shell, larger title */
+  .standings-head{
+    padding:13px 12px 12px;
+    gap:10px;
+  }
+
+  .standings-head h2{
+    font-size:1.42rem;
+    line-height:1.05;
+  }
+
+  .search{
+    padding:10px 12px;
+    border-radius:11px;
+  }
+
+  .search input{
+    font-size:.78rem;
+  }
+
+  /* Manager header */
+  .mobile-card{
+    border-radius:15px;
+  }
+
+  .mobile-head{
+    grid-template-columns:36px 1fr auto;
+    gap:9px;
+    padding:11px 12px;
+  }
+
+  .mobile-head .rank{
+    width:34px;
+    height:34px;
+    font-size:.78rem;
+    border-radius:9px;
+  }
+
+  .mobile-manager-name{
+    font-size:.88rem;
+    line-height:1.15;
+  }
+
+  .mobile-combined{
+    min-width:66px;
+    padding:7px 9px;
+    border-radius:9px;
+  }
+
+  .mobile-combined span{
+    font-size:.42rem;
+    letter-spacing:.10em;
+  }
+
+  .mobile-combined strong{
+    margin-top:2px;
+    font-size:1.18rem;
+  }
+
+  /* Team row */
+  .mobile-comp{
+    padding:10px 10px 11px;
+  }
+
+  .mobile-team{
+    grid-template-columns:auto 31px 1fr auto;
+    gap:8px;
+    margin-bottom:8px;
+  }
+
+  .mobile-badge{
+    min-width:35px;
+    padding:4px 6px;
+    font-size:.48rem;
+    border-radius:6px;
+  }
+
+  .mobile-team .crest{
+    width:30px;
+    height:30px;
+  }
+
+  .mobile-team strong{
+    font-size:.82rem;
+    line-height:1.1;
+  }
+
+  .mobile-total{
+    min-width:38px;
+    padding:6px 8px;
+    font-size:.8rem;
+    border-radius:8px;
+  }
+
+  /* Fixtures: bigger codes, cleaner chips */
+  .mobile-comp .fixture-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
+  }
+
+  .mobile-comp .fixture{
+    min-height:38px;
+    padding:7px 4px;
+    border-radius:9px;
+    font-size:.70rem;
+    font-weight:900;
+  }
+
+  .mobile-comp .fixture b{
+    font-size:.70rem;
+    letter-spacing:.025em;
+  }
+
+  /* Slightly more breathing room between entrants */
+  .mobile-standings{
+    gap:10px;
+  }
+}
+
+@media(max-width:390px){
+  .standings-head h2{
+    font-size:1.28rem;
+  }
+
+  .mobile-manager-name{
+    font-size:.82rem;
+  }
+
+  .mobile-team strong{
+    font-size:.77rem;
+  }
+
+  .mobile-comp .fixture,
+  .mobile-comp .fixture b{
+    font-size:.66rem;
+  }
+}

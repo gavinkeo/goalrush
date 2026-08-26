@@ -270,3 +270,12 @@ GitHub Pages filenames are case-sensitive, so use those exact lowercase names.
 - Removed the top-left `EURO GOAL RUSH 26/27` brand block and star.
 - The top strip is now dedicated to the UCL / UEL matchday and anthem controls.
 - Changed the main table heading from `LIVE STANDINGS` to `EURO GOAL RUSH 26/27`.
+
+
+## v32 mobile readability
+
+- Removed visible H/A badges from fixture tiles.
+- Increased manager, team and fixture text sizes on mobile.
+- Enlarged mobile fixture chips while keeping the 4×2 layout.
+- Changed the mobile score label from `COMBINED` to `TOTAL`.
+- Tightened the title/search block so the larger text still fits comfortably.
