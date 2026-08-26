@@ -4220,3 +4220,89 @@ th:nth-child(5){width:7%}
     min-width:78px;
   }
 }
+
+
+/* =========================================================
+   v63 - MD/date headers integrated into each mobile fixture slot
+   ========================================================= */
+
+@media(max-width:700px){
+
+  /* Retire the separate MD strip completely. */
+  .mobile-md-calendar,
+  .mobile-md-calendar-card{
+    display:none !important;
+  }
+
+  .mobile-comp .mobile-fixture-grid{
+    display:grid !important;
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:10px 6px !important;
+  }
+
+  .mobile-fixture-slot{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+  }
+
+  .mobile-fixture-heading{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    min-height:27px;
+    line-height:1;
+    text-align:center;
+  }
+
+  .mobile-fixture-heading b{
+    color:#b8c4db;
+    font-size:.52rem;
+    font-weight:950;
+    letter-spacing:.07em;
+  }
+
+  .mobile-fixture-heading small{
+    color:#687895;
+    font-size:.38rem;
+    font-weight:850;
+    letter-spacing:.015em;
+    white-space:nowrap;
+  }
+
+  .mobile-fixture-slot > .fixture{
+    width:100%;
+    min-height:48px;
+  }
+
+  .mobile-fixture-slot .fixture-content{
+    width:100% !important;
+  }
+
+  /* Current/next MD heading inherits some visual emphasis. */
+  .mobile-fixture-slot:has(.fixture.current) .mobile-fixture-heading b,
+  .mobile-fixture-slot:has(.fixture.next-md) .mobile-fixture-heading b{
+    color:#fff0bd;
+  }
+
+  .mobile-fixture-slot:has(.fixture.current) .mobile-fixture-heading small{
+    color:#80efb1;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-comp .mobile-fixture-grid{
+    gap:9px 5px !important;
+  }
+
+  .mobile-fixture-heading b{
+    font-size:.50rem;
+  }
+
+  .mobile-fixture-heading small{
+    font-size:.36rem;
+  }
+}

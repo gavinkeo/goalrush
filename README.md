@@ -60,3 +60,12 @@
 - It is therefore visible only after the entrant card is tapped open.
 - It sits immediately above that entrant's UCL and UEL fixture sections.
 - Collapsed mobile leaderboard remains as compact as before.
+
+
+## v63 mobile fixture headers
+
+- Removed the standalone mobile MD strip.
+- Each mobile fixture now carries its own MD/date heading directly above it.
+- Example: `MD1 / 08–17 SEP` sits directly over `MON 1-2`, and the same MD1/date sits directly over `LYO 1-1` in the UEL section.
+- MD5–MD8 naturally align over the second row of four fixtures.
+- Date windows are populated from the same combined UCL→UEL schedule used by desktop.

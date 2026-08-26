@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=62";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=62";
+const DATA_URL = "competition.json?v=63";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=63";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -24,6 +24,7 @@ const anthemPairs = [
 
 let entries = [];
 let currentMatchdayState = { ucl: null, uel: null };
+const combinedMatchdayWindows = Array(9).fill("");
 
 function esc(value) {
   return String(value ?? "")
@@ -438,18 +439,31 @@ function desktopRows(entry, rank) {
     </tr>`;
 }
 
-function mobileMatchdayCalendar() {
-  return `
-    <div class="mobile-md-calendar mobile-md-calendar-card" aria-label="Matchday date windows">
-      ${Array.from({ length: 8 }, (_, i) => {
-        const md = i + 1;
-        return `
-          <span class="mobile-md-item">
+function mobileFixtureGrid(team, comp) {
+  return `<div class="fixture-grid mobile-fixture-grid">${
+    fixtureValues(team).map((item, index) => {
+      const statusClass =
+        item.status === "live" ? " live" :
+        item.status === "played" ? " played" : "";
+      const scoreText = fixtureScoreText(team, item, index);
+      const md = index + 1;
+      const dateWindow = formatMobileMatchdayWindow(combinedMatchdayWindows[md]);
+
+      return `
+        <div class="mobile-fixture-slot">
+          <div class="mobile-fixture-heading">
             <b>MD${md}</b>
-            <small data-mobile-md-window="${md}">—</small>
-          </span>`;
-      }).join("")}
-    </div>`;
+            <small>${esc(dateWindow || "—")}</small>
+          </div>
+          <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" title="${comp} Matchday ${md}">
+            <span class="fixture-content">
+              <b>${esc(item.code)}</b>
+              ${scoreText ? `<span class="fixture-score">${esc(scoreText)}</span>` : ""}
+            </span>
+          </span>
+        </div>`;
+    }).join("")
+  }</div>`;
 }
 
 function mobileCard(entry, rank) {
@@ -461,7 +475,7 @@ function mobileCard(entry, rank) {
         <strong>${esc(team.club)}</strong>
         <span class="mobile-total">${clubScore(team)}</span>
       </div>
-      ${fixtureGrid(team, comp)}
+      ${mobileFixtureGrid(team, comp)}
     </div>`;
 
   const compactClub = (team, comp) => `
@@ -489,7 +503,6 @@ function mobileCard(entry, rank) {
         <span class="mobile-expand" aria-hidden="true">⌄</span>
       </summary>
       <div class="mobile-details">
-        ${mobileMatchdayCalendar()}
         ${row(entry.ucl, "UCL")}
         ${row(entry.uel, "UEL")}
       </div>
@@ -566,6 +579,12 @@ function formatCombinedMatchdayWindow(startIso, endIso) {
   return `${startDay} ${monthNames[sm - 1]}–${endDay} ${monthNames[em - 1]}`;
 }
 
+function formatMobileMatchdayWindow(value) {
+  return String(value || "")
+    .replaceAll("SEPT", "SEP")
+    .replaceAll("–", "–");
+}
+
 function populateCombinedMatchdayHeaders(matchdays) {
   const ucl = Array.isArray(matchdays?.ucl) ? matchdays.ucl : [];
   const uel = Array.isArray(matchdays?.uel) ? matchdays.uel : [];
@@ -579,13 +598,10 @@ function populateCombinedMatchdayHeaders(matchdays) {
         ? formatCombinedMatchdayWindow(starts[0], ends[ends.length - 1])
         : "";
 
-    const desktopLabel = $(`#md-window-${md}`);
-    const mobileLabels = document.querySelectorAll(`[data-mobile-md-window="${md}"]`);
+    combinedMatchdayWindows[md] = value;
 
+    const desktopLabel = $(`#md-window-${md}`);
     if (desktopLabel && value) desktopLabel.textContent = value;
-    mobileLabels.forEach(label => {
-      if (value) label.textContent = value;
-    });
   }
 }
 
