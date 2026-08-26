@@ -883,3 +883,60 @@ th:nth-child(5){width:7%}
 .standings-head h2{
   margin:0;
 }
+
+
+/* =========================================================
+   v24 - UCL / UEL logos in matchday chips
+   ========================================================= */
+
+.matchday-chip{
+  grid-template-columns:auto auto 1fr;
+  grid-template-areas:
+    "logo comp state"
+    "logo date date";
+  align-items:center;
+  gap:2px 8px;
+}
+
+.chip-logo{
+  grid-area:logo;
+  width:20px;
+  height:20px;
+  display:grid;
+  place-items:center;
+  opacity:.95;
+}
+
+.chip-logo svg{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.chip-logo-ucl{
+  color:#66ebff;
+}
+
+.chip-logo-uel{
+  color:#ffb36d;
+}
+
+@media(max-width:700px){
+  .chip-logo{
+    width:17px;
+    height:17px;
+  }
+
+  .matchday-chip{
+    gap:1px 6px;
+  }
+}
+
+@media(max-width:390px){
+  .matchday-chip{
+    grid-template-columns:auto 1fr;
+    grid-template-areas:
+      "logo comp"
+      "logo date";
+  }
+}

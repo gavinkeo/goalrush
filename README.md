@@ -179,3 +179,8 @@ The script:
 With real post-draw teams this should populate essentially everything in one run. Dummy teams that are not actually in the 2026/27 competitions are deliberately reported as unmatched rather than guessed.
 
 Never commit an API key to GitHub.
+
+
+## v24 competition logos
+
+Added a small UCL icon to the Champions League matchday chip and a small UEL icon to the Europa League chip. These are built directly into the page as inline SVGs, so no separate asset upload is required.

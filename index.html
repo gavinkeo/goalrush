@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.svg?v=23" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=23">
+  <link rel="icon" href="favicon.svg?v=24" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=24">
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -25,11 +25,31 @@
 
     <div class="matchday-strip">
       <div class="matchday-chip ucl-chip" id="ucl-matchday">
+        <span class="chip-logo chip-logo-ucl" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img" focusable="false">
+            <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".9"/>
+            <circle cx="32" cy="17" r="4.2" fill="currentColor"/>
+            <circle cx="19" cy="23" r="4.2" fill="currentColor"/>
+            <circle cx="16" cy="37" r="4.2" fill="currentColor"/>
+            <circle cx="26" cy="47" r="4.2" fill="currentColor"/>
+            <circle cx="38" cy="47" r="4.2" fill="currentColor"/>
+            <circle cx="48" cy="37" r="4.2" fill="currentColor"/>
+            <circle cx="45" cy="23" r="4.2" fill="currentColor"/>
+          </svg>
+        </span>
         <span class="comp">UCL</span>
         <span class="state" id="ucl-state">NEXT</span>
         <strong id="ucl-date">MD1 · 8–10 SEP</strong>
       </div>
       <div class="matchday-chip uel-chip" id="uel-matchday">
+        <span class="chip-logo chip-logo-uel" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img" focusable="false">
+            <path d="M24 14h16l-2.5 9.5-2.5 20.5H29l-2.5-20.5L24 14Z" fill="currentColor"/>
+            <rect x="20" y="10" width="24" height="4" rx="2" fill="currentColor" opacity=".9"/>
+            <rect x="18" y="48" width="28" height="4.5" rx="2.2" fill="currentColor" opacity=".95"/>
+            <rect x="26" y="52.5" width="12" height="3.5" rx="1.7" fill="currentColor" opacity=".8"/>
+          </svg>
+        </span>
         <span class="comp">UEL</span>
         <span class="state" id="uel-state">NEXT</span>
         <strong id="uel-date">MD1 · 16–17 SEP</strong>
@@ -112,6 +132,6 @@
     <span>Unofficial competition</span>
   </footer>
 
-  <script src="app.js?v=23" defer></script>
+  <script src="app.js?v=24" defer></script>
 </body>
 </html>
