@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=32";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=32";
+const DATA_URL = "competition.json?v=33";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=33";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");

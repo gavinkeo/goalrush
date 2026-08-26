@@ -279,3 +279,11 @@ GitHub Pages filenames are case-sensitive, so use those exact lowercase names.
 - Enlarged mobile fixture chips while keeping the 4×2 layout.
 - Changed the mobile score label from `COMBINED` to `TOTAL`.
 - Tightened the title/search block so the larger text still fits comfortably.
+
+
+## v33 mobile polish
+
+- Centered and balanced the UCL / UEL top boxes on mobile.
+- Restored all three podium cards on mobile instead of showing only 1st place.
+- Gave the `EURO GOAL RUSH 26/27` heading a brighter gradient treatment.
+- Increased visual separation between mobile entrants with stronger card borders, spacing and shadows.
