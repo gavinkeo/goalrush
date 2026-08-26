@@ -398,3 +398,11 @@ During the matchday date window it switches to `LIVE`. The countdown refreshes a
 
 ## v44 mobile anthem button sizing
 Fixed the mobile countdown layout so the play buttons retain a fixed circular size instead of being squeezed by the countdown text.
+
+
+## v45 desktop manager polish
+
+- Increased the prize amount size in the desktop rank boxes.
+- Vertically centered manager names with the rank/prize blocks.
+- Slightly enlarged the desktop rank boxes for better balance.
+- Mobile layout unchanged.

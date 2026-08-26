@@ -2694,3 +2694,65 @@ th:nth-child(5){width:7%}
     min-height:44px !important;
   }
 }
+
+
+/* =========================================================
+   v45 - desktop manager/rank alignment + larger prizes
+   ========================================================= */
+
+@media(min-width:701px){
+
+  .manager-wrap{
+    align-items:center !important;
+    gap:13px !important;
+    min-height:100%;
+  }
+
+  .manager-name-wrap{
+    align-items:center !important;
+  }
+
+  .manager-name{
+    margin-top:0 !important;
+    line-height:1.15 !important;
+  }
+
+  .rank-spot{
+    justify-content:center !important;
+    min-width:50px !important;
+    flex-basis:50px !important;
+  }
+
+  .rank-box{
+    width:48px !important;
+    min-height:42px !important;
+    padding:6px 4px 5px !important;
+    gap:3px !important;
+    border-radius:11px !important;
+  }
+
+  .rank-number{
+    font-size:.78rem !important;
+  }
+
+  .rank-prize{
+    font-size:.44rem !important;
+    font-weight:1000 !important;
+    letter-spacing:.01em !important;
+  }
+
+  .rank-box-1{
+    border-color:rgba(255,213,101,.32) !important;
+    background:rgba(255,213,101,.08) !important;
+  }
+
+  .rank-box-2{
+    border-color:rgba(219,228,244,.23) !important;
+    background:rgba(219,228,244,.065) !important;
+  }
+
+  .rank-box-3{
+    border-color:rgba(229,173,134,.27) !important;
+    background:rgba(229,173,134,.07) !important;
+  }
+}
