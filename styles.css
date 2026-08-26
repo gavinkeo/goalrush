@@ -4526,3 +4526,26 @@ th:nth-child(5){width:7%}
     -webkit-tap-highlight-color:rgba(255,255,255,.08);
   }
 }
+
+
+/* =========================================================
+   v75 - title gradient from UCL blue to UEL gold
+   ========================================================= */
+.main-title-text{
+  display:inline-block;
+  background:linear-gradient(90deg, #69a8ff 0%, #88b8ff 22%, #b8cfff 44%, #d5c37a 72%, #f2d36b 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+  text-shadow:none !important;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.08));
+}
+
+/* Fallback for browsers that don't support clipped gradient text */
+@supports not ((-webkit-background-clip:text) or (background-clip:text)) {
+  .main-title-text{
+    background:none;
+    color:#cdd8ef;
+  }
+}

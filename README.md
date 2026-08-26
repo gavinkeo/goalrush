@@ -136,3 +136,7 @@ Entrant names remain the real 36-name list from v67.
 
 ## v74 meta description
 - Updated site description to: “Champions League and Europa League goals buster for the 2026/27 season.”
+
+
+## v75 gradient title
+- Updated the EURO GOAL RUSH 26/27 title text to transition from UCL blue into UEL gold.
