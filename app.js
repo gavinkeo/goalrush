@@ -1,8 +1,7 @@
-const DATA_URL = "competition.json?v=34";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=34";
+const DATA_URL = "competition.json?v=36";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=36";
 
 const $ = (sel) => document.querySelector(sel);
-const podiumEl = $("#podium");
 const bodyEl = $("#standings-body");
 const mobileEl = $("#mobile-standings");
 const searchEl = $("#search");
@@ -340,14 +339,23 @@ function teamCell(team, comp) {
 }
 
 
+
+function prizeBadge(rank) {
+  const prizes = { 1: "€400", 2: "€200", 3: "€120" };
+  const prize = prizes[rank];
+  if (!prize) return "";
+  return `<span class="standing-prize prize-${rank}">${prize}</span>`;
+}
+
 function desktopRows(entry, rank) {
   return `
     <tr class="ucl-row">
       <td class="manager-cell" rowspan="2">
         <div class="manager-wrap">
           <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
-          <div>
+          <div class="manager-name-wrap">
             <span class="manager-name">${esc(entry.entrant)}</span>
+            ${prizeBadge(rank)}
           </div>
         </div>
       </td>
@@ -381,8 +389,9 @@ function mobileCard(entry, rank) {
     <article class="mobile-card">
       <div class="mobile-head">
         <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
-        <div>
+        <div class="mobile-manager-wrap">
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
+          ${prizeBadge(rank)}
         </div>
         <div class="mobile-combined">
           <strong>${totalScore(entry)}</strong>
@@ -393,43 +402,10 @@ function mobileCard(entry, rank) {
     </article>`;
 }
 
-function podiumCard(entry, rank) {
-  const labels = ["LEADER", "2ND PLACE", "3RD PLACE"];
-  const prizes = ["€400", "€200", "€120"];
-  const klass = rank === 1 ? " first" : rank === 2 ? " second" : " third";
-
-  return `
-    <article class="podium-card${klass}">
-      <div class="podium-top">
-        <div class="podium-place">
-          <span class="medal">${labels[rank - 1]}</span>
-          <span class="podium-prize">${prizes[rank - 1]}</span>
-        </div>
-        <span class="podium-rank">0${rank}</span>
-      </div>
-      <h3 class="podium-name">${esc(entry.entrant)}</h3>
-      <div class="podium-teams">
-        <div class="pair-crests">
-          <img data-club-key="${esc(clubKey(entry.ucl.club))}" src="${crest(entry.ucl)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
-          <img data-club-key="${esc(clubKey(entry.uel.club))}" src="${crest(entry.uel)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
-        </div>
-        <div class="podium-team-names">
-          <span class="ucl"><b>UCL</b>${esc(entry.ucl.club)}</span>
-          <span class="uel"><b>UEL</b>${esc(entry.uel.club)}</span>
-        </div>
-      </div>
-      <div class="podium-bottom">
-        <span class="podium-breakdown"><span class="u">UCL ${clubScore(entry.ucl)}</span> + <span class="e">UEL ${clubScore(entry.uel)}</span></span>
-        <strong class="podium-score">${totalScore(entry)}</strong>
-      </div>
-    </article>`;
-}
 
 function render() {
   const ranked = sortedEntries(entries);
   const q = searchEl.value.trim().toLowerCase();
-
-  podiumEl.innerHTML = ranked.slice(0, 3).map((e, i) => podiumCard(e, i + 1)).join("");
 
   const filtered = ranked.filter(e =>
     !q ||
@@ -515,7 +491,6 @@ async function init() {
     hydrateDummyCrests();
   } catch (err) {
     console.error(err);
-    podiumEl.innerHTML = "";
     bodyEl.innerHTML = `<tr><td colspan="5">Could not load competition.json. Make sure all v13 files were uploaded together.</td></tr>`;
     mobileEl.innerHTML = `<div class="mobile-card"><div class="mobile-head">Could not load competition data.</div></div>`;
   }

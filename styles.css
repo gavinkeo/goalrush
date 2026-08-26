@@ -1651,3 +1651,329 @@ th:nth-child(5){width:7%}
     font-size:1.30rem !important;
   }
 }
+
+
+/* =========================================================
+   v35 - mobile compression / final hierarchy pass
+   ========================================================= */
+
+@media(max-width:700px){
+
+  /* Tighten top controls */
+  .site-header{
+    min-height:50px !important;
+    padding-top:6px !important;
+    padding-bottom:6px !important;
+  }
+
+  .matchday-strip{
+    width:min(100%, 420px) !important;
+    gap:6px !important;
+  }
+
+  .matchday-chip{
+    padding:6px 7px !important;
+    border-radius:10px !important;
+  }
+
+  .anthem-btn{
+    width:23px !important;
+    height:23px !important;
+  }
+
+  /* Podium starts sooner */
+  .podium-section{
+    padding-top:2px !important;
+  }
+
+  .compact-section-head{
+    min-height:0 !important;
+    margin:0 !important;
+  }
+
+  .podium{
+    gap:6px !important;
+  }
+
+  /* Leader: compact horizontal rhythm */
+  .podium-card.first{
+    padding:9px 11px !important;
+    border-radius:15px !important;
+  }
+
+  .podium-card.first .podium-top{
+    margin-bottom:2px;
+  }
+
+  .podium-card.first .podium-name{
+    margin:3px 0 4px !important;
+    font-size:.82rem !important;
+  }
+
+  .podium-card.first .podium-teams{
+    gap:7px !important;
+  }
+
+  .podium-card.first .pair-crests img{
+    width:25px !important;
+    height:25px !important;
+    padding:2px !important;
+  }
+
+  .podium-card.first .podium-team-names span{
+    font-size:.48rem !important;
+  }
+
+  .podium-card.first .podium-bottom{
+    margin-top:4px !important;
+  }
+
+  .podium-card.first .podium-score{
+    font-size:1.25rem !important;
+  }
+
+  /* 2nd / 3rd: deliberately denser */
+  .podium-card.second,
+  .podium-card.third{
+    padding:7px 8px !important;
+    border-radius:14px !important;
+  }
+
+  .podium-card.second .podium-top,
+  .podium-card.third .podium-top{
+    margin-bottom:1px;
+  }
+
+  .podium-card.second .medal,
+  .podium-card.third .medal{
+    font-size:.44rem !important;
+  }
+
+  .podium-card.second .podium-prize,
+  .podium-card.third .podium-prize{
+    font-size:.37rem !important;
+    padding:1px 4px !important;
+  }
+
+  .podium-card.second .podium-rank,
+  .podium-card.third .podium-rank{
+    font-size:.90rem !important;
+  }
+
+  .podium-card.second .podium-name,
+  .podium-card.third .podium-name{
+    margin:2px 0 3px !important;
+    font-size:.66rem !important;
+    line-height:1.1 !important;
+  }
+
+  .podium-card.second .pair-crests img,
+  .podium-card.third .pair-crests img{
+    width:21px !important;
+    height:21px !important;
+  }
+
+  .podium-card.second .podium-team-names span,
+  .podium-card.third .podium-team-names span{
+    font-size:.40rem !important;
+  }
+
+  .podium-card.second .podium-bottom,
+  .podium-card.third .podium-bottom{
+    margin-top:3px !important;
+  }
+
+  .podium-card.second .podium-breakdown,
+  .podium-card.third .podium-breakdown{
+    font-size:.38rem !important;
+  }
+
+  .podium-card.second .podium-score,
+  .podium-card.third .podium-score{
+    font-size:1.02rem !important;
+  }
+
+  /* Title/search should feel like controls, not another card */
+  .standings-head{
+    margin-top:2px !important;
+    margin-bottom:6px !important;
+    padding:3px 2px 6px !important;
+    gap:8px !important;
+  }
+
+  .standings-head h2{
+    font-size:1.28rem !important;
+    letter-spacing:-.04em !important;
+  }
+
+  .search{
+    min-height:42px;
+    padding:8px 10px !important;
+    border-radius:10px !important;
+  }
+
+  .search input{
+    font-size:.74rem !important;
+  }
+}
+
+@media(max-width:390px){
+  .podium-card.second .podium-name,
+  .podium-card.third .podium-name{
+    font-size:.62rem !important;
+  }
+
+  .podium-card.second .podium-team-names span,
+  .podium-card.third .podium-team-names span{
+    font-size:.37rem !important;
+  }
+
+  .standings-head h2{
+    font-size:1.18rem !important;
+  }
+}
+
+
+/* =========================================================
+   v36 - podium removed / top-first hierarchy
+   ========================================================= */
+
+.dashboard-header{
+  padding-top:12px;
+  padding-bottom:10px;
+}
+
+.title-search-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:10px;
+}
+
+.main-title{
+  margin:0;
+  font-size:1.55rem;
+  line-height:1;
+  letter-spacing:-.045em;
+  font-weight:950;
+  background:linear-gradient(90deg,#fff 0%,#dcf9ff 40%,#9deeff 68%,#c7b9ff 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.top-search{
+  width:min(280px,100%);
+}
+
+.dashboard-header .matchday-strip{
+  margin-left:auto;
+  width:max-content;
+}
+
+.standings-card{
+  margin-top:0 !important;
+}
+
+/* Prize badges in the real standings */
+.manager-name-wrap,
+.mobile-manager-wrap{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+.standing-prize{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:38px;
+  padding:2px 6px;
+  border-radius:999px;
+  font-size:.44rem;
+  font-weight:950;
+  line-height:1.2;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.045);
+}
+
+.prize-1{
+  color:#ffd565;
+  border-color:rgba(255,213,101,.22);
+  background:rgba(255,213,101,.075);
+}
+
+.prize-2{
+  color:#dbe4f4;
+  border-color:rgba(219,228,244,.16);
+  background:rgba(219,228,244,.055);
+}
+
+.prize-3{
+  color:#e5ad86;
+  border-color:rgba(229,173,134,.18);
+  background:rgba(229,173,134,.06);
+}
+
+@media(max-width:700px){
+
+  .dashboard-header{
+    padding-top:10px;
+    padding-bottom:8px;
+  }
+
+  .title-search-top{
+    flex-direction:column;
+    align-items:stretch;
+    gap:9px;
+    margin-bottom:9px;
+  }
+
+  .main-title{
+    text-align:center;
+    font-size:1.42rem;
+  }
+
+  .top-search{
+    width:100%;
+    min-height:42px;
+    padding:8px 10px !important;
+    border-radius:10px !important;
+  }
+
+  .top-search input{
+    font-size:.76rem !important;
+  }
+
+  .dashboard-header .matchday-strip{
+    width:min(100%,420px) !important;
+    margin-inline:auto !important;
+  }
+
+  .mobile-standings{
+    margin-top:0;
+  }
+
+  .standing-prize{
+    min-width:36px;
+    font-size:.42rem;
+    padding:2px 5px;
+  }
+
+  .mobile-manager-wrap{
+    gap:5px;
+  }
+}
+
+@media(max-width:390px){
+  .main-title{
+    font-size:1.30rem;
+  }
+
+  .standing-prize{
+    min-width:34px;
+    font-size:.39rem;
+  }
+}

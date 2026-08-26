@@ -298,3 +298,26 @@ GitHub Pages filenames are case-sensitive, so use those exact lowercase names.
 - Slimmed the search field.
 - Removed the redundant `TOTAL` label inside mobile entrant cards.
 - Added a subtle left accent edge to make each entrant block easier to distinguish.
+
+
+## v35 mobile compression
+
+- Reduced top control height.
+- Compressed the 1st-place podium card.
+- Made 2nd/3rd-place cards significantly shorter.
+- Reduced the gap before the standings.
+- Shrunk the mobile title slightly.
+- Slimmed the search field.
+- Left entrant cards unchanged.
+
+
+## v36 hierarchy simplification
+
+- Removed the podium completely.
+- Moved `EURO GOAL RUSH 26/27` and search to the very top.
+- UCL / UEL matchday and anthem controls now sit directly below the title/search.
+- Positions 1–3 in the standings now carry the prize badges directly:
+  - 1st €400
+  - 2nd €200
+  - 3rd €120
+- This removes the duplicated top-three information and gets users into the actual standings immediately.
