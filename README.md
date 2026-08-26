@@ -113,3 +113,16 @@ Replaced `FRONT RUNNERS / The podium` with the single heading:
 
 - Changed the small podium label from `TOP 3` to `LIVE STANDINGS`.
 - Simplified the main table heading from `Live standings` to `Standings`.
+
+
+## v21 realistic preview
+
+- Removed the `Standings` heading entirely; the table card now opens directly with the search bar.
+- Filled the leaderboard with realistic dummy manager names, clubs, fixture abbreviations and scores.
+- Added a few sample rank-movement indicators near the top so the live-ranking behaviour can be previewed.
+
+
+## v22 heading placement
+
+- Removed the `LIVE STANDINGS` label from above the podium.
+- Restored `LIVE STANDINGS` as the main heading above the table.

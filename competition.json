@@ -5,3711 +5,3711 @@
   "entries": [
     {
       "id": 1,
-      "entrant": "Entrant 01",
+      "entrant": "Christopher O'Sullivan",
+      "previousRank": 2,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Real Madrid",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 17,
+        "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MON",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BEN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SEV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NAP",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Roma",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 9,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RAP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "USG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BES",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "COP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 2,
-      "entrant": "Entrant 02",
+      "entrant": "Michelle O'Keeffe",
+      "previousRank": 1,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Manchester City",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 17,
+        "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "INT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Manchester United",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 13,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AND",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LUD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RAN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BES",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MID",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 3,
-      "entrant": "Entrant 03",
+      "entrant": "Stephen McCarthy",
+      "previousRank": 4,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Bayern Munich",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 8,
+        "goalsAgainst": 10,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SHA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAR",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAR",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Tottenham Hotspur",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 5,
+        "goalsAgainst": 9,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RSO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "USG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ROM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "VIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LEG",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 4,
-      "entrant": "Entrant 04",
+      "entrant": "Aoife O'Riordan",
+      "previousRank": 3,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Paris Saint-Germain",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 15,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAR",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AVL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Lazio",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 10,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "USG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MID",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MUN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "COP",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 5,
-      "entrant": "Entrant 05",
+      "entrant": "Conor O'Leary",
+      "previousRank": 6,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Inter Milan",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 7,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SLA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NAP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRU",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Real Sociedad",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 12,
+        "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RAN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SGE",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GEN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HEA",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 6,
-      "entrant": "Entrant 06",
+      "entrant": "Niamh Fitzgerald",
+      "previousRank": 5,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Barcelona",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 9,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "POR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "JUV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MON",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MCI",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SHA",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Villarreal",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 9,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PAO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATH",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HOF",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "COP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 7,
-      "entrant": "Entrant 07",
+      "entrant": "Darragh Murphy",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Arsenal",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 10,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "CEL",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Eintracht Frankfurt",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 8,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LUD",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RSO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MID",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MUN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "VIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TRA",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 8,
-      "entrant": "Entrant 08",
+      "entrant": "Elaine O'Donovan",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Liverpool",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 7,
+        "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Fenerbahce",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 7,
+        "goalsAgainst": 9,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MUN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AZA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RAN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATH",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SGE",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PAR",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 9,
-      "entrant": "Entrant 09",
+      "entrant": "Barry Coughlan",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Juventus",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 9,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BVB",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AVL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBL",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Besiktas",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "VIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TRA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MUN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RSO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LAZ",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 10,
-      "entrant": "Entrant 10",
+      "entrant": "Siobhan Walsh",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Atletico Madrid",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 5,
+        "goalsAgainst": 8,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "POR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NAP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MCI",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MON",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Anderlecht",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 9,
+        "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HEA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LAZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BES",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "COP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATH",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SGE",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 11,
-      "entrant": "Entrant 11",
+      "entrant": "Keith O'Mahony",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Borussia Dortmund",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 10,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "POR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SHA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Braga",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 10,
+        "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MID",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "COP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LEG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HEA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AZA",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 12,
-      "entrant": "Entrant 12",
+      "entrant": "Laura O'Shea",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Napoli",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "JUV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "OLY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SEV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAY",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "AZ Alkmaar",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 13,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BES",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RAN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LUD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MID",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATH",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 13,
-      "entrant": "Entrant 13",
+      "entrant": "Mark Kelleher",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "AC Milan",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 13,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "CEL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "OLY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SHA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBL",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Union Saint-Gilloise",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HEA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AZA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LAZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AND",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 14,
-      "entrant": "Entrant 14",
+      "entrant": "Eimear Collins",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Benfica",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SEV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "B04",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Real Betis",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 9,
+        "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HEA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "COP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LAZ",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TRA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RAP",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 15,
-      "entrant": "Entrant 15",
+      "entrant": "Pauline O'Connor",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Porto",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "JUV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AVL",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Hoffenheim",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 5,
+        "goalsAgainst": 8,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AZA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LAZ",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 16,
-      "entrant": "Entrant 16",
+      "entrant": "Alan Sheehan",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Ajax",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 6,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MCI",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "CEL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Freiburg",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 12,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LUD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ROM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 17,
-      "entrant": "Entrant 17",
+      "entrant": "Rachel Healy",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "RB Leipzig",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 3,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MON",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NAP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAR",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SHA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "INT",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Nice",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 9,
+        "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AZA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MUN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PAO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HEA",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 18,
-      "entrant": "Entrant 18",
+      "entrant": "Declan O'Brien",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Bayer Leverkusen",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SLA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "JUV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "CEL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AVL",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Lyon",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 10,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "USG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LUD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LEG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HOF",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 19,
-      "entrant": "Entrant 19",
+      "entrant": "Grace O'Callaghan",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Sevilla",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SHA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GAL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "OLY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAR",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Athletic Bilbao",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RSO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BES",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TRA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SGE",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 20,
-      "entrant": "Entrant 20",
+      "entrant": "Tom\u00e1s Hegarty",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Monaco",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 5,
+        "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GAL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NAP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "JUV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BVB",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "PAOK",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 11,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RSO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PAR",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ROM",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "COP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 21,
-      "entrant": "Entrant 21",
+      "entrant": "Aisling O'Neill",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Marseille",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 6,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MCI",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SHA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Rangers",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 6,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PAR",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "USG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATH",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "COP",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 22,
-      "entrant": "Entrant 22",
+      "entrant": "Brian Twomey",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Club Brugge",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 5,
+        "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SLA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MON",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Ferencvaros",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 7,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MUN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TRA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LUD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "USG",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 23,
-      "entrant": "Entrant 23",
+      "entrant": "Clodagh O'Keeffe",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "PSV Eindhoven",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 7,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "B04",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MON",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "INT",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Ludogorets",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 9,
+        "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BES",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LEG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "USG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ROM",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 24,
-      "entrant": "Entrant 24",
+      "entrant": "Sean Roche",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Sporting CP",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GAL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BVB",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BEN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "CEL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Midtjylland",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 6,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PAO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "COP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LEG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MUN",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 25,
-      "entrant": "Entrant 25",
+      "entrant": "Orla McAuliffe",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Celtic",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MON",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "B04",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SHA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Bodo/Glimt",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 7,
+        "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AND",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LAZ",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LEG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AZA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HOF",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 26,
-      "entrant": "Entrant 26",
+      "entrant": "Gavin Hurley",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Galatasaray",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MON",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "INT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "POR",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "JUV",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Malmo",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TRA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LEG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LUD",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 27,
-      "entrant": "Entrant 27",
+      "entrant": "Sarah O'Mahony",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Shakhtar Donetsk",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 8,
+        "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAR",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NAP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SLA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "JUV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SEV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCP",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Rapid Wien",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TRA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 28,
-      "entrant": "Entrant 28",
+      "entrant": "Kevin Noonan",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Feyenoord",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 7,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MCI",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Partizan",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RAN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "VIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BES",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATH",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 29,
-      "entrant": "Entrant 29",
+      "entrant": "Fiona Cronin",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Atalanta",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 5,
+        "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AJA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SHA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SLA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AVL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Trabzonspor",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LUD",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HEA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "VIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MUN",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 30,
-      "entrant": "Entrant 30",
+      "entrant": "Patrick Buckley",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Aston Villa",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRU",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "YBO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "POR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "INT",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SLA",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Basel",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 7,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PLZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PAR",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BET",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AZA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "USG",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 31,
-      "entrant": "Entrant 31",
+      "entrant": "Emma Linehan",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Lille",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 5,
+        "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SLA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "GAL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIV",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRU",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FEY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSV",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Copenhagen",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ROM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATH",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SGE",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 32,
-      "entrant": "Entrant 32",
+      "entrant": "James O'Driscoll",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Salzburg",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRU",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "INT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BEN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "POR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATA",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Gent",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "USG",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BES",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RSO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MID",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 33,
-      "entrant": "Entrant 33",
+      "entrant": "Louise Barrett",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Dinamo Zagreb",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 3,
+        "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "JUV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "POR",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "B04",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ARS",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BVB",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAY",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Viktoria Plzen",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RSO",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AND",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LAZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "VIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MID",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 34,
-      "entrant": "Entrant 34",
+      "entrant": "Michael Dennehy",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Young Boys",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MON",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "PSG",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRU",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "INT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BAR",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SLA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RMA",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Legia Warsaw",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MTA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AZA",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HOF",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AND",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ROM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LAZ",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 35,
-      "entrant": "Entrant 35",
+      "entrant": "Ciara O'Leary",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Slavia Prague",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 3,
+        "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "CEL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ATM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCP",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BEN",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MIL",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "JUV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "AVL",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Hearts",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 5,
+        "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BOD",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "SCF",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "MAL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LAZ",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RAP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ROM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HOF",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BES",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     },
     {
       "id": 36,
-      "entrant": "Entrant 36",
+      "entrant": "John Spillane",
+      "previousRank": null,
       "ucl": {
-        "club": "UCL Team TBD",
+        "club": "Olympiacos",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIV",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RBS",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NAP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "INT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LIL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "DIN",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "CEL",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "BRU",
+            "venue": "A",
             "status": ""
           }
         ]
       },
       "uel": {
-        "club": "UEL Team TBD",
+        "club": "Maccabi Tel Aviv",
         "crest": "",
         "played": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "FER",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "ROM",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TRA",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "LYO",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "RAP",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "TOT",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "NIC",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TBD",
-            "venue": "",
+            "code": "HOF",
+            "venue": "A",
             "status": ""
           }
         ]
-      },
-      "previousRank": null
+      }
     }
   ],
   "matchdays": {

@@ -819,3 +819,67 @@ th:nth-child(5){width:7%}
     min-height:0;
   }
 }
+
+
+/* =========================================================
+   v21 - realistic dummy data + cleaner table header
+   ========================================================= */
+
+.standings-head-minimal{
+  justify-content:flex-end;
+  padding:10px 14px;
+}
+
+.manager-name{
+  font-size:.68rem;
+}
+
+.team-name{
+  font-size:.61rem;
+}
+
+.fixture{
+  min-height:29px;
+}
+
+.fixture b{
+  letter-spacing:.02em;
+}
+
+.podium-name{
+  font-size:.72rem;
+}
+
+.podium-team-names span{
+  font-size:.53rem;
+}
+
+.podium-prize{
+  font-size:.46rem;
+}
+
+@media(max-width:700px){
+  .standings-head-minimal{
+    padding:10px;
+  }
+
+  .manager-name{
+    font-size:.7rem;
+  }
+}
+
+
+/* v22 heading placement */
+.compact-section-head{
+  min-height:6px;
+  margin-bottom:3px !important;
+}
+
+.standings-head{
+  justify-content:space-between;
+  align-items:center;
+}
+
+.standings-head h2{
+  margin:0;
+}
