@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=37";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=37";
+const DATA_URL = "competition.json?v=38";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=38";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -340,11 +340,18 @@ function teamCell(team, comp) {
 
 
 
-function prizeBadge(rank) {
+function prizeAmount(rank) {
   const prizes = { 1: "€400", 2: "€200", 3: "€120" };
-  const prize = prizes[rank];
-  if (!prize) return "";
-  return `<span class="standing-prize prize-${rank}">${prize}</span>`;
+  return prizes[rank] || "";
+}
+
+function rankBlock(rank) {
+  const prize = prizeAmount(rank);
+  return `
+    <div class="rank-box ${rank <= 3 ? `rank-box-${rank}` : ""}">
+      <span class="rank-number">${rank}</span>
+      ${prize ? `<span class="rank-prize">${prize}</span>` : ""}
+    </div>`;
 }
 
 function desktopRows(entry, rank) {
@@ -353,8 +360,7 @@ function desktopRows(entry, rank) {
       <td class="manager-cell" rowspan="2">
         <div class="manager-wrap">
           <div class="rank-spot">
-            <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
-            ${prizeBadge(rank)}
+            ${rankBlock(rank)}
           </div>
           <div class="manager-name-wrap">
             <span class="manager-name">${esc(entry.entrant)}</span>
@@ -391,8 +397,7 @@ function mobileCard(entry, rank) {
     <article class="mobile-card">
       <div class="mobile-head">
         <div class="rank-spot">
-          <span class="rank ${rank <= 3 ? "top" : ""}">${rank}</span>
-          ${prizeBadge(rank)}
+          ${rankBlock(rank)}
         </div>
         <div class="mobile-manager-wrap">
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>

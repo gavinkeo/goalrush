@@ -334,3 +334,11 @@ GitHub Pages filenames are case-sensitive, so use those exact lowercase names.
 - Slimmed the search box slightly.
 - Moved the 1st/2nd/3rd prize chips out of the manager name area and into the rank block.
 - Reduced the visibility of the mobile accent stripe for a cleaner, less "progress bar" feel.
+
+
+## v38 final mobile rank polish
+
+- Integrated the €400 / €200 / €120 prize amounts directly into the rank box.
+- Reduced the mobile manager-header padding.
+- Softened the left entrant accent line further.
+- Left fixture, team and total layouts unchanged.
