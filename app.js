@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=46";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=46";
+const DATA_URL = "competition.json?v=49";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=49";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -40,6 +40,58 @@ function clubScore(team) {
 
 function totalScore(entry) {
   return clubScore(entry.ucl) + clubScore(entry.uel);
+}
+
+const generatedFixtureScores = new Map();
+
+function hashString(value) {
+  return String(value || "").split("").reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
+}
+
+function scorePattern(totalGoals, seed) {
+  const patterns = {
+    0: ["0-0"],
+    1: ["1-0", "0-1"],
+    2: ["1-1", "2-0", "0-2"],
+    3: ["2-1", "1-2", "3-0", "0-3"],
+    4: ["2-2", "3-1", "1-3", "4-0", "0-4"],
+    5: ["3-2", "2-3", "4-1", "1-4", "5-0", "0-5"]
+  };
+
+  if (!patterns[totalGoals]) {
+    const left = Math.ceil(totalGoals / 2);
+    const right = Math.floor(totalGoals / 2);
+    return `${left}-${right}`;
+  }
+
+  const list = patterns[totalGoals];
+  return list[Math.abs(seed) % list.length];
+}
+
+function generatedFixtureScoreList(team) {
+  const total = clubScore(team);
+  const key = `${clubKey(team?.club)}|${total}`;
+  if (generatedFixtureScores.has(key)) return generatedFixtureScores.get(key);
+
+  if (!total) {
+    const blanks = Array(8).fill("");
+    generatedFixtureScores.set(key, blanks);
+    return blanks;
+  }
+
+  const allocation = Array(8).fill(0);
+  const spreadOrder = [0, 3, 6, 1, 4, 7, 2, 5];
+  for (let i = 0; i < total; i += 1) allocation[spreadOrder[i % 8]] += 1;
+
+  const seedBase = hashString(team?.club);
+  const scores = allocation.map((goals, index) => scorePattern(goals, seedBase + index));
+  generatedFixtureScores.set(key, scores);
+  return scores;
+}
+
+function fixtureScoreText(team, item, index) {
+  if (item?.score) return item.score;
+  return generatedFixtureScoreList(team)[index] || "";
 }
 
 
@@ -284,15 +336,16 @@ async function hydrateDummyCrests() {
 function fixtureValues(team) {
   const source = Array.isArray(team?.fixtures) ? team.fixtures.slice(0, 8) : [];
   const values = source.map(item => {
-    if (typeof item === "string") return { code: item, venue: "", status: "" };
+    if (typeof item === "string") return { code: item, venue: "", status: "", score: "" };
     return {
       code: item?.code || "TBD",
       venue: item?.venue || "",
-      status: item?.status || ""
+      status: item?.status || "",
+      score: item?.score || ""
     };
   });
 
-  while (values.length < 8) values.push({ code: "TBD", venue: "", status: "" });
+  while (values.length < 8) values.push({ code: "TBD", venue: "", status: "", score: "" });
   return values;
 }
 
@@ -317,10 +370,12 @@ function fixtureGrid(team, comp) {
       const statusClass =
         item.status === "live" ? " live" :
         item.status === "played" ? " played" : "";
+      const scoreText = fixtureScoreText(team, item, index);
 
       return `
         <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" title="${comp} Matchday ${index + 1}">
           <b>${esc(item.code)}</b>
+          ${scoreText ? `<span class="fixture-score">${esc(scoreText)}</span>` : ""}
         </span>`;
     }).join("")
   }</div>`;

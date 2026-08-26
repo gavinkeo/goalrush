@@ -2870,3 +2870,313 @@ th:nth-child(5){width:7%}
     font-size:.5rem !important;
   }
 }
+
+
+/* =========================================================
+   v47 - mobile summary always stacks scores below manager name
+   ========================================================= */
+
+@media(max-width:700px){
+  .mobile-manager-wrap{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    justify-content:center !important;
+    gap:6px !important;
+    min-width:0 !important;
+  }
+
+  .mobile-manager-name{
+    display:block !important;
+    width:100% !important;
+    line-height:1.12 !important;
+    margin:0 !important;
+  }
+
+  .mobile-mini-teams{
+    width:100% !important;
+    margin-top:0 !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-manager-wrap{
+    gap:5px !important;
+  }
+}
+
+
+/* =========================================================
+   v48 - fixture score display
+   ========================================================= */
+
+.fixture{
+  gap:6px !important;
+}
+
+.fixture-score{
+  display:inline-block;
+  font-size:.52rem;
+  font-weight:900;
+  line-height:1;
+  color:#eef4ff;
+  opacity:.96;
+}
+
+.ucl-row .fixture-score,
+.mobile-comp.ucl .fixture-score{
+  color:#d8fbff;
+}
+
+.uel-row .fixture-score,
+.mobile-comp.uel .fixture-score{
+  color:#ffe3c8;
+}
+
+@media(max-width:700px){
+  .mobile-comp .fixture{
+    gap:4px !important;
+    padding:7px 3px !important;
+  }
+
+  .mobile-comp .fixture b{
+    font-size:.64rem !important;
+  }
+
+  .mobile-comp .fixture-score{
+    font-size:.58rem !important;
+    white-space:nowrap;
+  }
+}
+
+@media(min-width:701px){
+  .fixture{
+    min-height:36px;
+  }
+
+  .fixture-score{
+    font-size:.50rem;
+  }
+}
+
+
+/* =========================================================
+   v49 - stronger live fixture emphasis
+   ========================================================= */
+
+@keyframes liveFixturePulse{
+  0%{ box-shadow:0 0 0 rgba(85,241,162,0), 0 0 10px rgba(85,241,162,.10); }
+  50%{ box-shadow:0 0 0 1px rgba(85,241,162,.22), 0 0 18px rgba(85,241,162,.24); }
+  100%{ box-shadow:0 0 0 rgba(85,241,162,0), 0 0 10px rgba(85,241,162,.10); }
+}
+
+@keyframes liveDotPulse{
+  0%{ transform:scale(1); box-shadow:0 0 0 0 rgba(85,241,162,.65); }
+  70%{ transform:scale(1.08); box-shadow:0 0 0 5px rgba(85,241,162,0); }
+  100%{ transform:scale(1); box-shadow:0 0 0 0 rgba(85,241,162,0); }
+}
+
+.fixture.current{
+  border-color:rgba(85,241,162,.75) !important;
+  background:linear-gradient(180deg, rgba(85,241,162,.18), rgba(85,241,162,.10)) !important;
+  color:#f2fff8 !important;
+  box-shadow:0 0 18px rgba(85,241,162,.16), inset 0 0 0 1px rgba(85,241,162,.12) !important;
+  animation:liveFixturePulse 2s ease-in-out infinite;
+}
+
+.fixture.current b,
+.fixture.current .fixture-score{
+  color:#ffffff !important;
+  text-shadow:0 0 8px rgba(85,241,162,.16);
+}
+
+.fixture.current .fixture-score{
+  font-weight:950;
+}
+
+.fixture.current.live-md::before{
+  width:6px;
+  height:6px;
+  flex:0 0 6px;
+  background:#6dffb3;
+  box-shadow:0 0 10px rgba(109,255,179,.95);
+  animation:liveDotPulse 1.5s ease-out infinite;
+}
+
+.fixture.next-md{
+  border-color:rgba(255,213,101,.46) !important;
+  background:linear-gradient(180deg, rgba(255,213,101,.11), rgba(255,213,101,.06)) !important;
+  box-shadow:inset 0 0 0 1px rgba(255,213,101,.05), 0 0 10px rgba(255,213,101,.05);
+}
+
+.fixture.next-md b,
+.fixture.next-md .fixture-score{
+  color:#fff2c8;
+}
+
+@media(max-width:700px){
+  .mobile-comp .fixture.current{
+    box-shadow:0 0 16px rgba(85,241,162,.17), inset 0 0 0 1px rgba(85,241,162,.14) !important;
+  }
+
+  .mobile-comp .fixture.current b,
+  .mobile-comp .fixture.current .fixture-score{
+    letter-spacing:.01em;
+  }
+}
+
+
+/* =========================================================
+   v50 - move competition icons to title for more matchday space
+   ========================================================= */
+
+.main-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.main-title-text{
+  display:inline-block;
+}
+
+.title-emblem{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:22px;
+  height:22px;
+  flex:0 0 22px;
+  opacity:.96;
+}
+
+.title-emblem svg{
+  width:100%;
+  height:100%;
+}
+
+.title-emblem-ucl{
+  color:var(--cyan);
+  filter:drop-shadow(0 0 10px rgba(73,228,255,.20));
+}
+
+.title-emblem-uel{
+  color:var(--gold);
+  filter:drop-shadow(0 0 10px rgba(255,173,97,.18));
+}
+
+.dashboard-header .matchday-chip{
+  grid-template-columns:1fr auto auto !important;
+  grid-template-areas:
+    "comp state play"
+    "date date play" !important;
+  column-gap:10px !important;
+  row-gap:2px !important;
+}
+
+.dashboard-header .matchday-chip .chip-logo{
+  display:none !important;
+}
+
+.dashboard-header .matchday-chip .comp{
+  align-self:end;
+}
+
+.dashboard-header .matchday-chip .state{
+  align-self:end;
+  justify-self:end;
+}
+
+.dashboard-header .matchday-chip strong{
+  align-self:start;
+}
+
+.dashboard-header .anthem-btn{
+  width:40px !important;
+  height:40px !important;
+  min-width:40px !important;
+  min-height:40px !important;
+}
+
+@media(min-width:701px){
+  .main-title{
+    justify-content:flex-start;
+  }
+
+  .title-emblem{
+    width:24px;
+    height:24px;
+    flex-basis:24px;
+  }
+
+  .dashboard-header .matchday-chip{
+    min-width:218px;
+    padding:10px 12px !important;
+  }
+}
+
+@media(max-width:700px){
+  .main-title{
+    justify-content:center;
+    gap:9px;
+  }
+
+  .title-emblem{
+    width:18px;
+    height:18px;
+    flex-basis:18px;
+  }
+
+  .dashboard-header .matchday-chip{
+    padding:10px 12px !important;
+    min-height:62px !important;
+    column-gap:8px !important;
+  }
+
+  .dashboard-header .matchday-chip .comp{
+    font-size:.66rem !important;
+  }
+
+  .dashboard-header .matchday-chip .state{
+    font-size:.48rem !important;
+    max-width:none !important;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    font-size:.76rem !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:42px !important;
+    height:42px !important;
+    min-width:42px !important;
+    min-height:42px !important;
+    border-radius:50% !important;
+  }
+}
+
+@media(max-width:390px){
+  .main-title{
+    gap:8px;
+  }
+
+  .title-emblem{
+    width:17px;
+    height:17px;
+    flex-basis:17px;
+  }
+
+  .dashboard-header .matchday-chip{
+    padding:9px 10px !important;
+    min-height:60px !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:40px !important;
+    height:40px !important;
+    min-width:40px !important;
+    min-height:40px !important;
+  }
+}

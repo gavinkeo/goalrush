@@ -9,15 +9,37 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.svg?v=46" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=46">
+  <link rel="icon" href="favicon.svg?v=50" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=50">
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
 
   <header class="dashboard-header shell">
     <div class="title-top-row">
-      <h1 class="main-title">EURO GOAL RUSH 26/27</h1>
+      <h1 class="main-title">
+        <span class="title-emblem title-emblem-ucl" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img" focusable="false">
+            <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".9"/>
+            <circle cx="32" cy="17" r="4.2" fill="currentColor"/>
+            <circle cx="19" cy="23" r="4.2" fill="currentColor"/>
+            <circle cx="16" cy="37" r="4.2" fill="currentColor"/>
+            <circle cx="26" cy="47" r="4.2" fill="currentColor"/>
+            <circle cx="38" cy="47" r="4.2" fill="currentColor"/>
+            <circle cx="48" cy="37" r="4.2" fill="currentColor"/>
+            <circle cx="45" cy="23" r="4.2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="main-title-text">EURO GOAL RUSH 26/27</span>
+        <span class="title-emblem title-emblem-uel" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img" focusable="false">
+            <path d="M24 14h16l-2.5 9.5-2.5 20.5H29l-2.5-20.5L24 14Z" fill="currentColor"/>
+            <rect x="20" y="10" width="24" height="4" rx="2" fill="currentColor" opacity=".9"/>
+            <rect x="18" y="48" width="28" height="4.5" rx="2.2" fill="currentColor" opacity=".95"/>
+            <rect x="26" y="52.5" width="12" height="3.5" rx="1.7" fill="currentColor" opacity=".8"/>
+          </svg>
+        </span>
+      </h1>
 
       <div class="matchday-strip">
         <div class="matchday-chip ucl-chip" id="ucl-matchday">
@@ -139,6 +161,6 @@
     <span><a class="footer-link" href="draw.html">Live Draw</a> · Unofficial competition</span>
   </footer>
 
-  <script src="app.js?v=46" defer></script>
+  <script src="app.js?v=50" defer></script>
 </body>
 </html>

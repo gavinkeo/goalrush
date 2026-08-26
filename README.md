@@ -414,3 +414,30 @@ Fixed the mobile countdown layout so the play buttons retain a fixed circular si
 - Reduced the mobile play buttons to a cleaner, tighter size while keeping the larger matchday cards.
 - Increased desktop manager-column breathing room and forced manager names onto one line.
 - Widened the desktop manager column slightly so long names like Christopher O'Sullivan no longer wrap.
+
+
+## v47 mobile summary stacking fix
+
+- Fixed the collapsed mobile leaderboard rows so the club-score pills always sit on a new line below the manager name.
+- Prevents short names from letting the pills appear on the same line.
+
+
+## v48 fixture scores shown
+
+- Fixture chips now show the opponent code **and** a scoreline, e.g. `MON 2-2`.
+- Supports real scorelines via a `score` field on each fixture object.
+- If no per-fixture score is provided yet, the demo data generates placeholder scorelines that match each club's current GF+GA total.
+
+
+## v49 live fixture emphasis
+
+- The active/live matchday fixture now stands out much more clearly.
+- Current live fixtures get a brighter green treatment, stronger glow, and animated live dot.
+- The next upcoming matchday remains highlighted in amber, but more subtly than the live one.
+
+
+## v50 header icon relocation
+
+- Moved the UCL and UEL visual icons out of the matchday chips and onto either side of the main title.
+- This frees up horizontal room inside the top matchday boxes.
+- Play buttons have more space and slightly larger sizing, especially on mobile.
