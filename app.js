@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=61";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=61";
+const DATA_URL = "competition.json?v=62";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=62";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -438,6 +438,20 @@ function desktopRows(entry, rank) {
     </tr>`;
 }
 
+function mobileMatchdayCalendar() {
+  return `
+    <div class="mobile-md-calendar mobile-md-calendar-card" aria-label="Matchday date windows">
+      ${Array.from({ length: 8 }, (_, i) => {
+        const md = i + 1;
+        return `
+          <span class="mobile-md-item">
+            <b>MD${md}</b>
+            <small data-mobile-md-window="${md}">—</small>
+          </span>`;
+      }).join("")}
+    </div>`;
+}
+
 function mobileCard(entry, rank) {
   const row = (team, comp) => `
     <div class="mobile-comp ${comp.toLowerCase()}">
@@ -475,6 +489,7 @@ function mobileCard(entry, rank) {
         <span class="mobile-expand" aria-hidden="true">⌄</span>
       </summary>
       <div class="mobile-details">
+        ${mobileMatchdayCalendar()}
         ${row(entry.ucl, "UCL")}
         ${row(entry.uel, "UEL")}
       </div>
@@ -565,10 +580,12 @@ function populateCombinedMatchdayHeaders(matchdays) {
         : "";
 
     const desktopLabel = $(`#md-window-${md}`);
-    const mobileLabel = $(`#mobile-md-window-${md}`);
+    const mobileLabels = document.querySelectorAll(`[data-mobile-md-window="${md}"]`);
 
     if (desktopLabel && value) desktopLabel.textContent = value;
-    if (mobileLabel && value) mobileLabel.textContent = value;
+    mobileLabels.forEach(label => {
+      if (value) label.textContent = value;
+    });
   }
 }
 

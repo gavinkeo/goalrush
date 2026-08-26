@@ -4177,3 +4177,46 @@ th:nth-child(5){width:7%}
     width:100%;
   }
 }
+
+
+/* =========================================================
+   v62 - mobile MD calendar belongs inside expanded entrant card
+   ========================================================= */
+
+@media(max-width:700px){
+
+  /* No standalone MD strip in the page header. */
+  .dashboard-header + .mobile-md-calendar{
+    display:none !important;
+  }
+
+  .mobile-details > .mobile-md-calendar-card{
+    display:flex !important;
+    gap:7px;
+    overflow-x:auto;
+    width:calc(100% - 20px);
+    margin:9px 10px 7px;
+    padding:0 0 5px;
+    scrollbar-width:none;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x proximity;
+  }
+
+  .mobile-details > .mobile-md-calendar-card::-webkit-scrollbar{
+    display:none;
+  }
+
+  .mobile-details > .mobile-md-calendar-card .mobile-md-item{
+    flex:0 0 82px;
+    min-width:82px;
+    min-height:42px;
+    padding:6px 7px;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-details > .mobile-md-calendar-card .mobile-md-item{
+    flex-basis:78px;
+    min-width:78px;
+  }
+}

@@ -51,3 +51,12 @@
 - UCL/UEL now starts on the exact same left edge as the `MD1 · date` line beneath.
 - Countdown remains on the right side of the top row.
 - No mobile or leaderboard layout changes.
+
+
+## v62 mobile MD placement
+
+- Removed the MD1–MD8 strip from the mobile page header.
+- The MD1–MD8 date-window strip now lives inside each entrant's expanded details.
+- It is therefore visible only after the entrant card is tapped open.
+- It sits immediately above that entrant's UCL and UEL fixture sections.
+- Collapsed mobile leaderboard remains as compact as before.
