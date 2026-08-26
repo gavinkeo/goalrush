@@ -375,3 +375,22 @@ Each collapsed row shows:
 - combined total
 
 Tapping the row expands the full UCL/UEL sections and fixture grids. This makes the leaderboard much faster to scan without losing detail.
+
+
+## v42 mobile matchday control polish
+
+- Increased the size of the UCL / UEL matchday controls on mobile.
+- Enlarged the competition icons and anthem buttons slightly.
+- Kept the compact collapsible leaderboard unchanged.
+
+
+## v43 matchday countdown
+
+The former `NEXT` label in the UCL and UEL header controls now shows a live countdown to the next league-phase matchday.
+
+Examples:
+- `12D 6H`
+- `18H 42M`
+- `37M`
+
+During the matchday date window it switches to `LIVE`. The countdown refreshes automatically every minute.

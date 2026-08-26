@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=41";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=41";
+const DATA_URL = "competition.json?v=43";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=43";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -483,6 +483,24 @@ function formatMD(md) {
   return `MD${md.md} · ${a.getDate()} ${am}–${b.getDate()} ${bm}`;
 }
 
+function countdownToMatchday(md) {
+  const [y, m, d] = md.start.split("-").map(Number);
+  const start = new Date(y, m - 1, d, 0, 0, 0, 0);
+  const diff = start.getTime() - Date.now();
+
+  if (diff <= 0) return "LIVE";
+
+  const totalMinutes = Math.floor(diff / 60000);
+  const days = Math.floor(totalMinutes / 1440);
+  const hours = Math.floor((totalMinutes % 1440) / 60);
+  const minutes = totalMinutes % 60;
+
+  if (days >= 2) return `${days}D ${hours}H`;
+  if (days >= 1) return `${days}D ${hours}H`;
+  if (hours >= 1) return `${hours}H ${minutes}M`;
+  return `${Math.max(1, minutes)}M`;
+}
+
 function setMatchday(kind, schedule) {
   const result = relevantMatchday(schedule);
   currentMatchdayState[kind] = result;
@@ -490,7 +508,18 @@ function setMatchday(kind, schedule) {
   if (!result) return;
 
   const chip = $(`#${kind}-matchday`);
-  $(`#${kind}-state`).textContent = result.state;
+  const stateEl = $(`#${kind}-state`);
+
+  stateEl.textContent =
+    result.state === "NEXT" ? countdownToMatchday(result.md) : result.state;
+
+  stateEl.setAttribute(
+    "aria-label",
+    result.state === "NEXT"
+      ? `Countdown to next ${kind.toUpperCase()} matchday`
+      : result.state
+  );
+
   $(`#${kind}-date`).textContent = formatMD(result.md);
   chip.classList.toggle("is-live", result.state === "LIVE");
 }
@@ -503,8 +532,16 @@ async function init() {
 
     entries = Array.isArray(data.entries) ? data.entries : [];
 
-    setMatchday("ucl", data.matchdays?.ucl);
-    setMatchday("uel", data.matchdays?.uel);
+    const uclSchedule = data.matchdays?.ucl || [];
+    const uelSchedule = data.matchdays?.uel || [];
+
+    setMatchday("ucl", uclSchedule);
+    setMatchday("uel", uelSchedule);
+
+    window.setInterval(() => {
+      setMatchday("ucl", uclSchedule);
+      setMatchday("uel", uelSchedule);
+    }, 60000);
 
     render();
 

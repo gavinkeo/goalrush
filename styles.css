@@ -2557,3 +2557,85 @@ th:nth-child(5){width:7%}
     font-size:.63rem;
   }
 }
+
+
+/* =========================================================
+   v42 - larger mobile UCL / UEL matchday controls
+   ========================================================= */
+
+@media(max-width:700px){
+  .dashboard-header .matchday-strip{
+    gap:10px !important;
+  }
+
+  .dashboard-header .matchday-chip{
+    min-height:58px !important;
+    padding:9px 12px !important;
+    border-radius:14px !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    width:24px !important;
+    height:24px !important;
+  }
+
+  .dashboard-header .matchday-chip .comp{
+    font-size:.64rem !important;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    font-size:.72rem !important;
+  }
+
+  .dashboard-header .matchday-chip .state{
+    font-size:.47rem !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:38px !important;
+    height:38px !important;
+    min-width:38px !important;
+    border-radius:50% !important;
+  }
+}
+
+@media(max-width:390px){
+  .dashboard-header .matchday-strip{
+    gap:8px !important;
+  }
+
+  .dashboard-header .matchday-chip{
+    min-height:56px !important;
+    padding:8px 10px !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:36px !important;
+    height:36px !important;
+    min-width:36px !important;
+  }
+}
+
+
+/* =========================================================
+   v43 - live countdown to next UCL / UEL matchday
+   ========================================================= */
+
+.matchday-chip .state{
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+
+@media(max-width:700px){
+  .dashboard-header .matchday-chip .state{
+    min-width:40px;
+    text-align:right;
+    color:#aebbd3 !important;
+    letter-spacing:.045em !important;
+    font-size:.50rem !important;
+  }
+
+  .dashboard-header .matchday-chip.is-live .state{
+    color:var(--green) !important;
+  }
+}
