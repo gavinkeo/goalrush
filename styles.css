@@ -3666,3 +3666,118 @@ th:nth-child(5){width:7%}
     order:2;
   }
 }
+
+
+/* =========================================================
+   v56 - desktop 3-line matchday chips + larger logos
+   ========================================================= */
+.matchday-chip .countdown{
+  display:none;
+}
+
+@media (min-width: 701px){
+  .dashboard-header .matchday-chip{
+    grid-template-columns:42px minmax(0, 1fr) auto auto !important;
+    grid-template-areas:
+      "logo comp state anthem"
+      "logo date date anthem"
+      "logo countdown countdown anthem" !important;
+    row-gap:3px !important;
+    column-gap:12px !important;
+    padding:14px 14px 13px 14px !important;
+    min-height:104px;
+    align-items:center;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    width:36px !important;
+    height:36px !important;
+    min-width:36px !important;
+    align-self:center;
+  }
+
+  .dashboard-header .matchday-chip .comp{
+    font-size:.92rem !important;
+    letter-spacing:.08em !important;
+    line-height:1;
+    align-self:end;
+  }
+
+  .dashboard-header .matchday-chip .state{
+    font-size:.74rem !important;
+    letter-spacing:.08em !important;
+    line-height:1;
+    align-self:end;
+    justify-self:end;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    font-size:1rem !important;
+    line-height:1.05;
+    letter-spacing:.01em;
+    align-self:center;
+  }
+
+  .dashboard-header .matchday-chip .countdown{
+    display:block;
+    grid-area:countdown;
+    font-size:.78rem;
+    font-weight:800;
+    letter-spacing:.03em;
+    color:#dce6ff;
+    opacity:.96;
+    line-height:1.1;
+    white-space:nowrap;
+    align-self:start;
+  }
+
+  .dashboard-header .matchday-chip.is-live .countdown{
+    color:var(--green);
+  }
+
+  .dashboard-header .anthem-btn{
+    width:56px !important;
+    height:56px !important;
+    min-width:56px !important;
+    min-height:56px !important;
+  }
+}
+
+@media (max-width: 700px){
+  .matchday-chip .countdown{
+    display:none !important;
+  }
+}
+
+
+/* =========================================================
+   v57 - combined UCL/UEL date windows beneath MD1–MD8
+   ========================================================= */
+@media (min-width: 701px){
+  .matchday-head-grid{align-items:center !important;}
+  .matchday-head-grid .md-head-item{
+    display:flex !important;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    min-width:0;
+    line-height:1;
+  }
+  .matchday-head-grid .md-head-item b{
+    display:block;
+    color:#8998b7;
+    font-size:.53rem;
+    font-weight:950;
+    letter-spacing:.10em;
+  }
+  .matchday-head-grid .md-head-item small{
+    display:block;
+    color:#596987;
+    font-size:.37rem;
+    font-weight:850;
+    letter-spacing:.035em;
+    white-space:nowrap;
+  }
+  .fixture-header{padding-top:7px !important;padding-bottom:7px !important;}
+}

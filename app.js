@@ -538,22 +538,63 @@ function formatMD(md) {
   return `MD${md.md} · ${a.getDate()} ${am}–${b.getDate()} ${bm}`;
 }
 
-function countdownToMatchday(md) {
+function formatCombinedMatchdayWindow(startIso, endIso) {
+  if (!startIso || !endIso) return "";
+  const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC"];
+  const [sy, sm, sd] = startIso.split("-").map(Number);
+  const [ey, em, ed] = endIso.split("-").map(Number);
+  const startDay = String(sd).padStart(2, "0");
+  const endDay = String(ed).padStart(2, "0");
+  if (sy === ey && sm === em) return `${startDay}–${endDay} ${monthNames[sm - 1]}`;
+  return `${startDay} ${monthNames[sm - 1]}–${endDay} ${monthNames[em - 1]}`;
+}
+
+function populateCombinedMatchdayHeaders(matchdays) {
+  const ucl = Array.isArray(matchdays?.ucl) ? matchdays.ucl : [];
+  const uel = Array.isArray(matchdays?.uel) ? matchdays.uel : [];
+  for (let md = 1; md <= 8; md += 1) {
+    const uclMd = ucl.find(item => Number(item.md) === md);
+    const uelMd = uel.find(item => Number(item.md) === md);
+    const starts = [uclMd?.start, uelMd?.start].filter(Boolean).sort();
+    const ends = [uclMd?.end, uelMd?.end].filter(Boolean).sort();
+    const label = $(`#md-window-${md}`);
+    if (label && starts.length && ends.length) {
+      label.textContent = formatCombinedMatchdayWindow(starts[0], ends[ends.length - 1]);
+    }
+  }
+}
+
+function getMatchdayCountdownParts(md) {
   const [y, m, d] = md.start.split("-").map(Number);
   const start = new Date(y, m - 1, d, 0, 0, 0, 0);
   const diff = start.getTime() - Date.now();
 
-  if (diff <= 0) return "LIVE";
+  if (diff <= 0) {
+    return {
+      short: "LIVE",
+      detailed: "Live now"
+    };
+  }
 
   const totalMinutes = Math.floor(diff / 60000);
   const days = Math.floor(totalMinutes / 1440);
   const hours = Math.floor((totalMinutes % 1440) / 60);
   const minutes = totalMinutes % 60;
 
-  if (days >= 2) return `${days}D ${hours}H`;
-  if (days >= 1) return `${days}D ${hours}H`;
-  if (hours >= 1) return `${hours}H ${minutes}M`;
-  return `${Math.max(1, minutes)}M`;
+  let short;
+  if (days >= 1) short = `${days}D ${hours}H`;
+  else if (hours >= 1) short = `${hours}H ${minutes}M`;
+  else short = `${Math.max(1, minutes)}M`;
+
+  const pieces = [];
+  if (days > 0) pieces.push(`${days} day${days === 1 ? "" : "s"}`);
+  if (hours > 0 || days > 0) pieces.push(`${hours} hour${hours === 1 ? "" : "s"}`);
+  if (days === 0 && minutes > 0) pieces.push(`${minutes} minute${minutes === 1 ? "" : "s"}`);
+
+  return {
+    short,
+    detailed: `Next in ${pieces.join(" ")}`
+  };
 }
 
 function setMatchday(kind, schedule) {
@@ -564,9 +605,11 @@ function setMatchday(kind, schedule) {
 
   const chip = $(`#${kind}-matchday`);
   const stateEl = $(`#${kind}-state`);
+  const countdownEl = $(`#${kind}-countdown`);
+  const countdown = getMatchdayCountdownParts(result.md);
 
   stateEl.textContent =
-    result.state === "NEXT" ? countdownToMatchday(result.md) : result.state;
+    result.state === "NEXT" ? countdown.short : result.state;
 
   stateEl.setAttribute(
     "aria-label",
@@ -574,6 +617,15 @@ function setMatchday(kind, schedule) {
       ? `Countdown to next ${kind.toUpperCase()} matchday`
       : result.state
   );
+
+  if (countdownEl) {
+    countdownEl.textContent =
+      result.state === "NEXT"
+        ? countdown.detailed
+        : result.state === "LIVE"
+          ? "Live now"
+          : result.state;
+  }
 
   $(`#${kind}-date`).textContent = formatMD(result.md);
   chip.classList.toggle("is-live", result.state === "LIVE");
@@ -590,6 +642,7 @@ async function init() {
     const uclSchedule = data.matchdays?.ucl || [];
     const uelSchedule = data.matchdays?.uel || [];
 
+    populateCombinedMatchdayHeaders(data.matchdays);
     setMatchday("ucl", uclSchedule);
     setMatchday("uel", uelSchedule);
 
