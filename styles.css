@@ -940,3 +940,15 @@ th:nth-child(5){width:7%}
       "logo date";
   }
 }
+
+
+/* v25 - crest loading polish */
+.crest,
+.pair-crests img{
+  transition:opacity .22s ease, transform .22s ease;
+}
+
+.crest:hover,
+.pair-crests img:hover{
+  transform:scale(1.05);
+}

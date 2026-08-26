@@ -184,3 +184,17 @@ Never commit an API key to GitHub.
 ## v24 competition logos
 
 Added a small UCL icon to the Champions League matchday chip and a small UEL icon to the Europa League chip. These are built directly into the page as inline SVGs, so no separate asset upload is required.
+
+
+## v25 temporary dummy crest hydration
+
+For the dummy-data design preview, blank crests are now progressively fetched from TheSportsDB's free public API.
+
+- Placeholder shields render immediately.
+- Real badges replace them progressively.
+- Results are cached in browser `localStorage`.
+- Requests are throttled to stay below the free 30 requests/minute limit.
+- This is only for preview/aesthetic testing.
+- The final competition should use `fetch-crests.mjs` / API-Football so the real crest URLs are stored directly in `competition.json`.
+
+Because 72 dummy teams are being looked up under the free rate limit, the first full hydration can take roughly 2–3 minutes. The top-ranked teams are requested first.

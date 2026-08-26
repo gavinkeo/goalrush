@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=24";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=24";
+const DATA_URL = "competition.json?v=25";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=25";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
@@ -37,8 +37,87 @@ function sortedEntries(list) {
   );
 }
 
+const DUMMY_CREST_CACHE_KEY = "euro-goal-rush-dummy-crests-v1";
+const dummyCrestCache = (() => {
+  try {
+    return JSON.parse(localStorage.getItem(DUMMY_CREST_CACHE_KEY) || "{}");
+  } catch {
+    return {};
+  }
+})();
+
+function clubKey(name) {
+  return String(name || "").trim().toLowerCase();
+}
+
 function crest(team) {
-  return team?.crest || PLACEHOLDER_CREST;
+  if (team?.crest) return team.crest;
+  return dummyCrestCache[clubKey(team?.club)] || PLACEHOLDER_CREST;
+}
+
+function saveDummyCrestCache() {
+  try {
+    localStorage.setItem(DUMMY_CREST_CACHE_KEY, JSON.stringify(dummyCrestCache));
+  } catch {}
+}
+
+function updateRenderedCrests(club, badgeUrl) {
+  const key = clubKey(club);
+  document.querySelectorAll("img[data-club-key]").forEach(img => {
+    if (img.dataset.clubKey === key) img.src = badgeUrl;
+  });
+}
+
+async function fetchDummyBadge(club) {
+  const url = `https://www.thesportsdb.com/api/v1/json/123/searchteams.php?t=${encodeURIComponent(club)}`;
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`TheSportsDB HTTP ${response.status}`);
+
+  const payload = await response.json();
+  const soccerTeams = (payload.teams || []).filter(team => team.strSport === "Soccer");
+  if (!soccerTeams.length) return null;
+
+  const wanted = clubKey(club).replace(/[^a-z0-9]/g, "");
+  const exact = soccerTeams.find(team =>
+    clubKey(team.strTeam).replace(/[^a-z0-9]/g, "") === wanted
+  );
+  const team = exact || soccerTeams[0];
+  return team?.strBadge || null;
+}
+
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function hydrateDummyCrests() {
+  const clubs = [];
+  const seen = new Set();
+
+  for (const entry of sortedEntries(entries)) {
+    for (const team of [entry.ucl, entry.uel]) {
+      if (!team?.club || team?.crest) continue;
+      const key = clubKey(team.club);
+      if (!key || seen.has(key) || dummyCrestCache[key]) continue;
+      seen.add(key);
+      clubs.push(team.club);
+    }
+  }
+
+  // Free TheSportsDB tier is 30 requests/minute.
+  // 2200ms keeps us safely below that ceiling.
+  for (const club of clubs) {
+    try {
+      const badge = await fetchDummyBadge(club);
+      if (badge) {
+        dummyCrestCache[clubKey(club)] = badge;
+        saveDummyCrestCache();
+        updateRenderedCrests(club, badge);
+      }
+    } catch (error) {
+      console.warn(`Dummy crest lookup failed for ${club}:`, error);
+    }
+    await wait(2200);
+  }
 }
 
 function fixtureValues(team) {
@@ -94,7 +173,7 @@ function teamCell(team, comp) {
   const c = comp.toLowerCase();
   return `
     <div class="team-cell">
-      <img class="crest" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      <img class="crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
       <div class="team-meta">
         <span class="tag ${c}">${comp}</span>
         <span class="team-name">${esc(team.club)}</span>
@@ -145,7 +224,7 @@ function mobileCard(entry, rank) {
     <div class="mobile-comp ${comp.toLowerCase()}">
       <div class="mobile-team">
         <span class="mobile-badge ${comp.toLowerCase()}">${comp}</span>
-        <img class="crest" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+        <img class="crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
         <strong>${esc(team.club)}</strong>
         <span class="mobile-total">${clubScore(team)}</span>
       </div>
@@ -189,8 +268,8 @@ function podiumCard(entry, rank) {
       <h3 class="podium-name">${esc(entry.entrant)}</h3>
       <div class="podium-teams">
         <div class="pair-crests">
-          <img src="${crest(entry.ucl)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
-          <img src="${crest(entry.uel)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+          <img data-club-key="${esc(clubKey(entry.ucl.club))}" src="${crest(entry.ucl)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+          <img data-club-key="${esc(clubKey(entry.uel.club))}" src="${crest(entry.uel)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
         </div>
         <div class="podium-team-names">
           <span class="ucl"><b>UCL</b>${esc(entry.ucl.club)}</span>
@@ -289,6 +368,10 @@ async function init() {
     setMatchday("uel", data.matchdays?.uel);
 
     render();
+
+    // Temporary aesthetic preview: progressively fill blank dummy crests.
+    // Real competition data will use the API-Football importer instead.
+    hydrateDummyCrests();
   } catch (err) {
     console.error(err);
     podiumEl.innerHTML = "";
