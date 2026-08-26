@@ -3781,3 +3781,131 @@ th:nth-child(5){width:7%}
   }
   .fixture-header{padding-top:7px !important;padding-bottom:7px !important;}
 }
+
+
+/* =========================================================
+   v58 - cleaner desktop matchday chips + exact fixture centering
+   ========================================================= */
+
+.matchday-chip .countdown{
+  display:none !important;
+}
+
+/* Children behave as normal grid items on mobile. */
+.chip-topline{
+  display:contents;
+}
+
+.fixture{
+  position:relative;
+  display:grid !important;
+  place-items:center !important;
+}
+
+.fixture-content{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  width:max-content;
+  max-width:100%;
+  margin-inline:auto;
+  line-height:1;
+}
+
+.fixture-content b,
+.fixture-content .fixture-score{
+  flex:0 0 auto;
+  text-align:center;
+}
+
+/* Keep a live dot from pushing the text group off-centre. */
+.fixture.current.live-md::before{
+  position:absolute !important;
+  left:7px;
+  top:50%;
+  transform:translateY(-50%);
+  margin:0 !important;
+}
+
+@media(min-width:701px){
+
+  .dashboard-header .matchday-chip{
+    grid-template-columns:42px minmax(150px,1fr) 56px !important;
+    grid-template-areas:
+      "logo topline anthem"
+      "logo date anthem" !important;
+    min-height:84px !important;
+    padding:12px 14px !important;
+    row-gap:6px !important;
+    column-gap:12px !important;
+    align-items:center !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    width:36px !important;
+    height:36px !important;
+    min-width:36px !important;
+    grid-area:logo;
+  }
+
+  .dashboard-header .matchday-chip .chip-topline{
+    display:flex !important;
+    grid-area:topline;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    min-width:0;
+    width:100%;
+  }
+
+  .dashboard-header .matchday-chip .comp{
+    grid-area:auto !important;
+    align-self:auto !important;
+    justify-self:auto !important;
+    font-size:.86rem !important;
+    line-height:1 !important;
+  }
+
+  .dashboard-header .matchday-chip .state{
+    grid-area:auto !important;
+    align-self:auto !important;
+    justify-self:auto !important;
+    min-width:62px;
+    text-align:center !important;
+    font-size:.72rem !important;
+    line-height:1 !important;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    grid-area:date !important;
+    justify-self:center !important;
+    align-self:start !important;
+    width:100%;
+    text-align:center !important;
+    font-size:.94rem !important;
+    line-height:1.05 !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    grid-area:anthem !important;
+    width:50px !important;
+    height:50px !important;
+    min-width:50px !important;
+    min-height:50px !important;
+  }
+
+  .fixture-content{
+    gap:5px;
+  }
+}
+
+@media(max-width:700px){
+  .chip-topline{
+    display:contents !important;
+  }
+
+  .fixture-content{
+    gap:4px;
+  }
+}

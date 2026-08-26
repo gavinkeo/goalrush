@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=49";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=49";
+const DATA_URL = "competition.json?v=58";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=58";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -374,8 +374,10 @@ function fixtureGrid(team, comp) {
 
       return `
         <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" title="${comp} Matchday ${index + 1}">
-          <b>${esc(item.code)}</b>
-          ${scoreText ? `<span class="fixture-score">${esc(scoreText)}</span>` : ""}
+          <span class="fixture-content">
+            <b>${esc(item.code)}</b>
+            ${scoreText ? `<span class="fixture-score">${esc(scoreText)}</span>` : ""}
+          </span>
         </span>`;
     }).join("")
   }</div>`;
@@ -564,37 +566,21 @@ function populateCombinedMatchdayHeaders(matchdays) {
   }
 }
 
-function getMatchdayCountdownParts(md) {
+function countdownToMatchday(md) {
   const [y, m, d] = md.start.split("-").map(Number);
   const start = new Date(y, m - 1, d, 0, 0, 0, 0);
   const diff = start.getTime() - Date.now();
 
-  if (diff <= 0) {
-    return {
-      short: "LIVE",
-      detailed: "Live now"
-    };
-  }
+  if (diff <= 0) return "LIVE";
 
   const totalMinutes = Math.floor(diff / 60000);
   const days = Math.floor(totalMinutes / 1440);
   const hours = Math.floor((totalMinutes % 1440) / 60);
   const minutes = totalMinutes % 60;
 
-  let short;
-  if (days >= 1) short = `${days}D ${hours}H`;
-  else if (hours >= 1) short = `${hours}H ${minutes}M`;
-  else short = `${Math.max(1, minutes)}M`;
-
-  const pieces = [];
-  if (days > 0) pieces.push(`${days} day${days === 1 ? "" : "s"}`);
-  if (hours > 0 || days > 0) pieces.push(`${hours} hour${hours === 1 ? "" : "s"}`);
-  if (days === 0 && minutes > 0) pieces.push(`${minutes} minute${minutes === 1 ? "" : "s"}`);
-
-  return {
-    short,
-    detailed: `Next in ${pieces.join(" ")}`
-  };
+  if (days >= 1) return `${days}D ${hours}H`;
+  if (hours >= 1) return `${hours}H ${minutes}M`;
+  return `${Math.max(1, minutes)}M`;
 }
 
 function setMatchday(kind, schedule) {
@@ -605,11 +591,9 @@ function setMatchday(kind, schedule) {
 
   const chip = $(`#${kind}-matchday`);
   const stateEl = $(`#${kind}-state`);
-  const countdownEl = $(`#${kind}-countdown`);
-  const countdown = getMatchdayCountdownParts(result.md);
 
   stateEl.textContent =
-    result.state === "NEXT" ? countdown.short : result.state;
+    result.state === "NEXT" ? countdownToMatchday(result.md) : result.state;
 
   stateEl.setAttribute(
     "aria-label",
@@ -617,15 +601,6 @@ function setMatchday(kind, schedule) {
       ? `Countdown to next ${kind.toUpperCase()} matchday`
       : result.state
   );
-
-  if (countdownEl) {
-    countdownEl.textContent =
-      result.state === "NEXT"
-        ? countdown.detailed
-        : result.state === "LIVE"
-          ? "Live now"
-          : result.state;
-  }
 
   $(`#${kind}-date`).textContent = formatMD(result.md);
   chip.classList.toggle("is-live", result.state === "LIVE");

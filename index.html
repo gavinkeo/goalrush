@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.svg?v=57" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=57">
+  <link rel="icon" href="favicon.svg?v=58" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=58">
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -27,24 +27,26 @@
       <div class="matchday-strip">
         <div class="matchday-chip ucl-chip" id="ucl-matchday">
           <img class="chip-logo chip-logo-ucl" src="assets/ucl-logo.png" alt="" aria-hidden="true">
-          <span class="comp">UCL</span>
-          <span class="state" id="ucl-state">NEXT</span>
+          <div class="chip-topline">
+            <span class="comp">UCL</span>
+            <span class="state" id="ucl-state">NEXT</span>
+          </div>
           <button class="anthem-btn anthem-ucl" id="ucl-anthem-btn" type="button" aria-label="Play Champions League anthem" title="Play UCL anthem">
             <span class="anthem-icon">▶</span>
           </button>
           <strong id="ucl-date">MD1 · 8–10 SEP</strong>
-          <span class="countdown" id="ucl-countdown">Next in 12 days 12 hours</span>
         </div>
 
         <div class="matchday-chip uel-chip" id="uel-matchday">
           <img class="chip-logo chip-logo-uel" src="assets/uel-logo.png" alt="" aria-hidden="true">
-          <span class="comp">UEL</span>
-          <span class="state" id="uel-state">NEXT</span>
+          <div class="chip-topline">
+            <span class="comp">UEL</span>
+            <span class="state" id="uel-state">NEXT</span>
+          </div>
           <button class="anthem-btn anthem-uel" id="uel-anthem-btn" type="button" aria-label="Play Europa League anthem" title="Play UEL anthem">
             <span class="anthem-icon">▶</span>
           </button>
           <strong id="uel-date">MD1 · 16–17 SEP</strong>
-          <span class="countdown" id="uel-countdown">Next in 20 days 12 hours</span>
         </div>
       </div>
     </div>
@@ -123,6 +125,6 @@
     <span><a class="footer-link" href="draw.html">Live Draw</a> · Unofficial competition</span>
   </footer>
 
-  <script src="app.js?v=57" defer></script>
+  <script src="app.js?v=58" defer></script>
 </body>
 </html>

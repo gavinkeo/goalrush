@@ -17,3 +17,13 @@
 - Date ranges are generated from the earliest UCL/UEL start and latest UCL/UEL finish for that matchday.
 - Upgraded Live Draw crest matching with the same aliases and fallback matching used on the main leaderboard.
 - Live Draw now shares the main leaderboard crest cache.
+
+
+## v58 desktop cleanup
+
+- Removed the third `Next in ...` line from desktop UCL/UEL matchday cards.
+- Short countdown now sits on the same top line as UCL/UEL and is centred with it.
+- Matchday/date remains on line two.
+- Opponent code + score is wrapped as one centred unit inside every fixture tile.
+- Live dots are absolutely positioned so they no longer shift fixture text off-centre.
+- MD1–MD8 combined date-window subheadings and the v57 Draw-page crest fixes are retained.
