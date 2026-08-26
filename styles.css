@@ -952,3 +952,128 @@ th:nth-child(5){width:7%}
 .pair-crests img:hover{
   transform:scale(1.05);
 }
+
+
+/* =========================================================
+   v28 - anthem buttons + podium crest spacing
+   ========================================================= */
+
+.matchday-chip{
+  grid-template-columns:auto auto 1fr auto;
+  grid-template-areas:
+    "logo comp state play"
+    "logo date date play";
+}
+
+.anthem-btn{
+  grid-area:play;
+  align-self:center;
+  width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  color:#eef4ff;
+  cursor:pointer;
+  transition:transform .18s ease, background .18s ease, border-color .18s ease;
+  padding:0;
+}
+
+.anthem-btn:hover{
+  transform:scale(1.05);
+  background:rgba(255,255,255,.08);
+}
+
+.anthem-btn:active{
+  transform:scale(.98);
+}
+
+.anthem-btn.is-playing{
+  background:rgba(255,255,255,.12);
+}
+
+.anthem-ucl{
+  border-color:rgba(73,228,255,.28);
+}
+
+.anthem-ucl.is-playing{
+  background:rgba(73,228,255,.13);
+  box-shadow:0 0 0 1px rgba(73,228,255,.18) inset, 0 0 14px rgba(73,228,255,.14);
+}
+
+.anthem-uel{
+  border-color:rgba(255,173,97,.28);
+}
+
+.anthem-uel.is-playing{
+  background:rgba(255,173,97,.13);
+  box-shadow:0 0 0 1px rgba(255,173,97,.18) inset, 0 0 14px rgba(255,173,97,.14);
+}
+
+.anthem-icon{
+  font-size:.62rem;
+  line-height:1;
+  transform:translateX(1px);
+}
+
+.anthem-btn.is-playing .anthem-icon{
+  transform:none;
+  font-size:.56rem;
+}
+
+.podium-teams{
+  gap:10px;
+}
+
+.pair-crests{
+  position:static;
+  width:auto;
+  height:auto;
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+.pair-crests img{
+  position:static;
+  width:28px;
+  height:28px;
+  object-fit:contain;
+  padding:3px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#0c1933;
+}
+
+.pair-crests img:last-child{
+  left:auto;
+  top:auto;
+}
+
+@media(max-width:700px){
+  .matchday-chip{
+    grid-template-columns:auto auto 1fr auto;
+    gap:1px 6px;
+  }
+
+  .anthem-btn{
+    width:24px;
+    height:24px;
+  }
+
+  .anthem-icon{
+    font-size:.54rem;
+  }
+}
+
+@media(max-width:390px){
+  .matchday-chip{
+    grid-template-columns:auto auto auto;
+    grid-template-areas:
+      "logo comp play"
+      "logo date play";
+  }
+}

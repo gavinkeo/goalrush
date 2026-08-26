@@ -1,11 +1,22 @@
-const DATA_URL = "competition.json?v=27";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=27";
+const DATA_URL = "competition.json?v=28";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=28";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
 const bodyEl = $("#standings-body");
 const mobileEl = $("#mobile-standings");
 const searchEl = $("#search");
+
+const uclAnthemBtn = $("#ucl-anthem-btn");
+const uelAnthemBtn = $("#uel-anthem-btn");
+const uclAnthemAudio = $("#ucl-anthem-audio");
+const uelAnthemAudio = $("#uel-anthem-audio");
+
+const anthemPairs = [
+  { btn: uclAnthemBtn, audio: uclAnthemAudio, label: "UCL anthem", missingFile: "ucl-anthem.mp3" },
+  { btn: uelAnthemBtn, audio: uelAnthemAudio, label: "UEL anthem", missingFile: "uel-anthem.mp3" }
+];
+
 
 let entries = [];
 let currentMatchdayState = { ucl: null, uel: null };
@@ -25,6 +36,53 @@ function clubScore(team) {
 
 function totalScore(entry) {
   return clubScore(entry.ucl) + clubScore(entry.uel);
+}
+
+
+function setAnthemButtonState(btn, playing) {
+  if (!btn) return;
+  btn.classList.toggle("is-playing", !!playing);
+  btn.querySelector(".anthem-icon").textContent = playing ? "❚❚" : "▶";
+}
+
+function stopOtherAnthems(currentAudio) {
+  anthemPairs.forEach(({ btn, audio }) => {
+    if (!audio || audio === currentAudio) return;
+    audio.pause();
+    audio.currentTime = 0;
+    setAnthemButtonState(btn, false);
+  });
+}
+
+function wireAnthemButtons() {
+  anthemPairs.forEach(({ btn, audio, label, missingFile }) => {
+    if (!btn || !audio) return;
+
+    btn.addEventListener("click", async () => {
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+        setAnthemButtonState(btn, false);
+        return;
+      }
+
+      stopOtherAnthems(audio);
+
+      try {
+        await audio.play();
+        setAnthemButtonState(btn, true);
+      } catch (error) {
+        setAnthemButtonState(btn, false);
+        alert(`Upload ${missingFile} to the site root to use the ${label} button.`);
+      }
+    });
+
+    audio.addEventListener("ended", () => setAnthemButtonState(btn, false));
+    audio.addEventListener("pause", () => {
+      if (audio.currentTime === 0 || audio.ended) setAnthemButtonState(btn, false);
+    });
+    audio.addEventListener("error", () => setAnthemButtonState(btn, false));
+  });
 }
 
 function sortedEntries(list) {

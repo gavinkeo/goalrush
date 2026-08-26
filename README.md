@@ -218,3 +218,22 @@ Added explicit Lille aliases:
 - Lille OSC
 - LOSC Lille
 - Lille
+
+
+## v28 anthem buttons + podium crest layout
+
+Added a play button to each top-right competition chip.
+
+### Audio file names
+
+Upload these files to the project root (same folder as `index.html`):
+
+- `ucl-anthem.mp3`
+- `uel-anthem.mp3`
+
+Clicking the button:
+- plays that competition anthem;
+- stops the other anthem if it is already playing;
+- toggles the button to pause/stop state while audio is playing.
+
+Also changed the podium crests from overlapping to side-by-side so both badges remain clearly visible.
