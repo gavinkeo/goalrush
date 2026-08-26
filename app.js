@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=68";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=68";
+const DATA_URL = "competition.json?v=70";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=70";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -25,6 +25,8 @@ const anthemPairs = [
 let entries = [];
 let currentMatchdayState = { ucl: null, uel: null };
 const combinedMatchdayWindows = Array(9).fill("");
+const competitionMatchdays = { ucl: [], uel: [] };
+
 
 function esc(value) {
   return String(value ?? "")
@@ -93,6 +95,187 @@ function generatedFixtureScoreList(team) {
 function fixtureScoreText(team, item, index) {
   if (item?.score) return item.score;
   return generatedFixtureScoreList(team)[index] || "";
+}
+
+const OPPONENT_NAMES = {
+  AEK:"AEK Athens",
+  AND:"Anderlecht",
+  ARS:"Arsenal",
+  ATM:"Atletico Madrid",
+  AVL:"Aston Villa",
+  AZA:"AZ Alkmaar",
+  B04:"Bayer Leverkusen",
+  BAR:"Barcelona",
+  BAY:"Bayern Munich",
+  BEN:"Benfica",
+  BES:"Besiktas",
+  BET:"Real Betis",
+  BOD:"Bodo/Glimt",
+  BOU:"Bournemouth",
+  BRU:"Club Brugge",
+  BVB:"Borussia Dortmund",
+  CEJ:"Celje",
+  CEL:"Celtic",
+  CLV:"Celta Vigo",
+  COM:"Como",
+  CRY:"Crystal Palace",
+  CRZ:"Crvena Zvezda",
+  DIN:"Dinamo Zagreb",
+  FEN:"Fenerbahce",
+  FER:"Ferencvaros",
+  FEY:"Feyenoord",
+  GAL:"Galatasaray",
+  HBS:"Hapoel Beer-Sheva",
+  HOF:"Hoffenheim",
+  INT:"Inter Milan",
+  JAG:"Jagiellonia",
+  JUV:"Juventus",
+  LAS:"LASK",
+  LEN:"Lens",
+  LEV:"Levski Sofia",
+  LIL:"Lille",
+  LIV:"Liverpool",
+  LPO:"Lech Poznan",
+  LST:"Lillestrom",
+  LYO:"Lyon",
+  MAR:"Marseille",
+  MCI:"Manchester City",
+  MIL:"AC Milan",
+  MUN:"Manchester United",
+  NAP:"Napoli",
+  NEC:"N.E.C. Nijmegen",
+  OFI:"OFI Crete",
+  OLY:"Olympiacos",
+  OMO:"Omonia",
+  PLZ:"Viktoria Plzen",
+  POR:"Porto",
+  PSG:"Paris Saint-Germain",
+  PSV:"PSV Eindhoven",
+  RBL:"RB Leipzig",
+  RBS:"Red Bull Salzburg",
+  REN:"Rennes",
+  RMA:"Real Madrid",
+  ROM:"Roma",
+  RSO:"Real Sociedad",
+  SAB:"Sabah",
+  SBR:"Slovan Bratislava",
+  SCP:"Sporting CP",
+  SHA:"Shakhtar Donetsk",
+  SLA:"Slavia Prague",
+  SPP:"Sparta Prague",
+  STG:"Sturm Graz",
+  STU:"Stuttgart",
+  SUN:"Sunderland",
+  TOR:"Torreense",
+  TRA:"Trabzonspor",
+  USG:"Union Saint-Gilloise",
+  VIL:"Villarreal"
+};
+
+function opponentFullName(code) {
+  return OPPONENT_NAMES[String(code || "").toUpperCase()] || String(code || "TBD");
+}
+
+function reverseScoreline(score) {
+  const parts = String(score || "").split(/[-–—]/).map(part => part.trim());
+  return parts.length === 2 ? `${parts[1]}–${parts[0]}` : String(score || "");
+}
+
+function formatLongFixtureDate(startIso, endIso = startIso) {
+  if (!startIso) return "Date TBC";
+  const start = parseDate(startIso);
+  const end = parseDate(endIso || startIso);
+  const startMonth = start.toLocaleString("en-GB", { month:"long" });
+  const endMonth = end.toLocaleString("en-GB", { month:"long" });
+  const startYear = start.getFullYear();
+  const endYear = end.getFullYear();
+
+  if (startIso === endIso) return `${start.getDate()} ${startMonth} ${startYear}`;
+  if (startYear === endYear && start.getMonth() === end.getMonth()) {
+    return `${start.getDate()}–${end.getDate()} ${startMonth} ${startYear}`;
+  }
+  if (startYear === endYear) {
+    return `${start.getDate()} ${startMonth}–${end.getDate()} ${endMonth} ${startYear}`;
+  }
+  return `${start.getDate()} ${startMonth} ${startYear}–${end.getDate()} ${endMonth} ${endYear}`;
+}
+
+function fixtureDateText(comp, index, item) {
+  if (item?.date) return formatLongFixtureDate(item.date, item.date);
+  const key = String(comp || "").toLowerCase();
+  const md = competitionMatchdays[key]?.find(matchday => Number(matchday.md) === index + 1);
+  return md ? formatLongFixtureDate(md.start, md.end) : "Date TBC";
+}
+
+function fixtureTooltipText(team, item, index, comp) {
+  const opponent = item?.opponent || opponentFullName(item?.code);
+  const score = fixtureScoreText(team, item, index);
+  const venueCode = String(item?.venue || "").toUpperCase();
+  const venue = venueCode === "H" ? "Home" : venueCode === "A" ? "Away" : "Venue TBC";
+  const date = fixtureDateText(comp, index, item);
+  let scoreLine;
+
+  if (!score) {
+    scoreLine = `${team?.club || "Team"} vs ${opponent}`;
+  } else if (venueCode === "A") {
+    scoreLine = `${opponent} ${reverseScoreline(score)} ${team?.club || "Team"}`;
+  } else {
+    scoreLine = `${team?.club || "Team"} ${String(score).replaceAll("-", "–")} ${opponent}`;
+  }
+
+  return `${scoreLine}\nMD${index + 1} · ${date} · ${venue}`;
+}
+
+let activeFixtureTooltipTarget = null;
+const fixtureTooltipEl = document.createElement("div");
+fixtureTooltipEl.className = "fixture-hover-tooltip";
+fixtureTooltipEl.setAttribute("role", "tooltip");
+fixtureTooltipEl.hidden = true;
+document.body.appendChild(fixtureTooltipEl);
+
+function positionFixtureTooltip(target) {
+  if (!target || fixtureTooltipEl.hidden) return;
+  const rect = target.getBoundingClientRect();
+  const tipRect = fixtureTooltipEl.getBoundingClientRect();
+  const pad = 10;
+  let left = rect.left + rect.width / 2 - tipRect.width / 2;
+  left = Math.max(8, Math.min(left, window.innerWidth - tipRect.width - 8));
+  let top = rect.top - tipRect.height - pad;
+  if (top < 8) top = rect.bottom + pad;
+  fixtureTooltipEl.style.left = `${Math.round(left)}px`;
+  fixtureTooltipEl.style.top = `${Math.round(top)}px`;
+}
+
+function showFixtureTooltip(target) {
+  const text = target?.dataset?.tooltip;
+  if (!text) return;
+  activeFixtureTooltipTarget = target;
+  fixtureTooltipEl.textContent = text;
+  fixtureTooltipEl.hidden = false;
+  positionFixtureTooltip(target);
+}
+
+function hideFixtureTooltip() {
+  activeFixtureTooltipTarget = null;
+  fixtureTooltipEl.hidden = true;
+}
+
+function wireFixtureTooltips() {
+  document.addEventListener("mouseover", event => {
+    const fixture = event.target.closest?.(".fixture[data-tooltip]");
+    if (!fixture || fixture === activeFixtureTooltipTarget) return;
+    showFixtureTooltip(fixture);
+  });
+
+  document.addEventListener("mouseout", event => {
+    if (!activeFixtureTooltipTarget) return;
+    if (event.relatedTarget && activeFixtureTooltipTarget.contains(event.relatedTarget)) return;
+    const fromFixture = event.target.closest?.(".fixture[data-tooltip]");
+    if (fromFixture === activeFixtureTooltipTarget) hideFixtureTooltip();
+  });
+
+  window.addEventListener("scroll", hideFixtureTooltip, { passive:true });
+  window.addEventListener("resize", hideFixtureTooltip);
 }
 
 
@@ -231,7 +414,9 @@ const CLUB_SEARCH_ALIASES = {
   "inter milan": ["Inter Milan", "Internazionale", "Inter"],
   "paris saint-germain": ["Paris Saint-Germain", "PSG"],
   "manchester united": ["Manchester United", "Man United"],
-  "tottenham hotspur": ["Tottenham Hotspur", "Tottenham"]
+  "tottenham hotspur": ["Tottenham Hotspur", "Tottenham"],
+  "lillestrom": ["Lillestrøm SK", "Lillestrom SK", "Lillestrøm", "Lillestrom"],
+  "hapoel beer-sheva": ["Hapoel Be'er Sheva", "Hapoel Be'er Sheva FC", "Hapoel Beer Sheva", "Hapoel Beer Sheva FC"]
 };
 
 function searchCandidatesForClub(club) {
@@ -340,6 +525,7 @@ function fixtureValues(team) {
     if (typeof item === "string") return { code: item, venue: "", status: "", score: "" };
     return {
       code: item?.code || "TBD",
+      opponent: item?.opponent || "",
       venue: item?.venue || "",
       status: item?.status || "",
       score: item?.score || ""
@@ -372,9 +558,10 @@ function fixtureGrid(team, comp) {
         item.status === "live" ? " live" :
         item.status === "played" ? " played" : "";
       const scoreText = fixtureScoreText(team, item, index);
+      const tooltipText = fixtureTooltipText(team, item, index, comp);
 
       return `
-        <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" title="${comp} Matchday ${index + 1}">
+        <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" data-tooltip="${esc(tooltipText)}" aria-label="${esc(tooltipText.replaceAll("\n", ". "))}">
           <span class="fixture-content">
             <b>${esc(item.code)}</b>
             ${scoreText ? `<span class="fixture-score">${esc(scoreText)}</span>` : ""}
@@ -448,6 +635,7 @@ function mobileFixtureGrid(team, comp) {
       const scoreText = fixtureScoreText(team, item, index);
       const md = index + 1;
       const dateWindow = formatMobileMatchdayWindow(combinedMatchdayWindows[md]);
+      const tooltipText = fixtureTooltipText(team, item, index, comp);
 
       return `
         <div class="mobile-fixture-slot">
@@ -455,7 +643,7 @@ function mobileFixtureGrid(team, comp) {
             <b>MD${md}</b>
             <small>${esc(dateWindow || "—")}</small>
           </div>
-          <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" title="${comp} Matchday ${md}">
+          <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" data-tooltip="${esc(tooltipText)}" aria-label="${esc(tooltipText.replaceAll("\n", ". "))}">
             <span class="fixture-content">
               <b>${esc(item.code)}</b>
               ${scoreText ? `<span class="fixture-score">${esc(scoreText)}</span>` : ""}
@@ -655,6 +843,8 @@ async function init() {
 
     const uclSchedule = data.matchdays?.ucl || [];
     const uelSchedule = data.matchdays?.uel || [];
+    competitionMatchdays.ucl = uclSchedule;
+    competitionMatchdays.uel = uelSchedule;
 
     populateCombinedMatchdayHeaders(data.matchdays);
     setMatchday("ucl", uclSchedule);
@@ -679,4 +869,5 @@ async function init() {
 
 searchEl.addEventListener("input", render);
 wireAnthemButtons();
+wireFixtureTooltips();
 init();

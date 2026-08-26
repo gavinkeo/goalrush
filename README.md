@@ -101,3 +101,19 @@ Updated all 36 UCL and 36 UEL team slots using current projected 2026/27 entrant
 - UEL list uses the current UEFA provisional league-phase teams plus projected play-off qualifiers / likely transfers.
 
 Entrant names remain the real 36-name list from v67.
+
+
+## v69 fixture hover details
+
+- Hovering a fixture score now shows full team names, the scoreline, matchday/date and Home/Away venue.
+- Away fixtures reverse both team order and scoreline in the tooltip so the home side is displayed first.
+- Exact `fixture.date` values will automatically be used later; until then the tooltip shows the relevant UCL/UEL matchday date window.
+
+
+## v70 crest fixes + refreshed fake fixtures
+
+- Added explicit TheSportsDB aliases for Lillestrøm/Lillestrom and Hapoel Beer-Sheva on both the main site and draw page.
+- Rebuilt every dummy UCL fixture using only the current projected 36 UCL clubs.
+- Rebuilt every dummy UEL fixture using only the current projected 36 UEL clubs.
+- Dummy schedules are symmetric: if Club A has Club B in a given MD, Club B also has Club A in that MD with the opposite venue.
+- Fixture objects now store the full opponent name as well as the compact three-letter display code, improving hover details.

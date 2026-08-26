@@ -1,7 +1,7 @@
 {
   "brandName": "EURO GOAL RUSH 26/27",
   "season": "2026/27",
-  "lastUpdated": "2026-08-26T11:59:00+01:00",
+  "lastUpdated": "2026-08-26T12:15:00+01:00",
   "entries": [
     {
       "id": 1,
@@ -15,42 +15,50 @@
         "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "MON",
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BEN",
+            "code": "SAB",
+            "opponent": "Sabah",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BAR",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "YBO",
+            "code": "LAS",
+            "opponent": "LASK",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "ATM",
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "FEY",
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "SEV",
+            "code": "AEK",
+            "opponent": "AEK Athens",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "NAP",
+            "code": "VIL",
+            "opponent": "Villarreal",
             "venue": "A",
             "status": ""
           }
@@ -66,42 +74,50 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "LYO",
+            "code": "LEV",
+            "opponent": "Levski Sofia",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BOD",
+            "code": "CEJ",
+            "opponent": "Celje",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RAP",
+            "code": "NEC",
+            "opponent": "N.E.C. Nijmegen",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "USG",
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BES",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "COP",
+            "code": "CEL",
+            "opponent": "Celtic",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "GEN",
+            "code": "OFI",
+            "opponent": "OFI Crete",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "NIC",
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
             "venue": "A",
             "status": ""
           }
@@ -122,42 +138,50 @@
         "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "ARS",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "ATA",
+            "code": "SAB",
+            "opponent": "Sabah",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "FEY",
-            "venue": "H",
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "INT",
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
             "venue": "A",
             "status": ""
           },
           {
             "code": "PSV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "AJA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MIL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "RMA",
+            "opponent": "PSV Eindhoven",
             "venue": "A",
             "status": ""
           }
@@ -173,42 +197,50 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "GEN",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LYO",
+            "code": "CEJ",
+            "opponent": "Celje",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "AND",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LUD",
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RAN",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "FER",
+            "code": "CEL",
+            "opponent": "Celtic",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BES",
-            "venue": "H",
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "MID",
+            "code": "RBS",
+            "opponent": "Red Bull Salzburg",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "CRZ",
+            "opponent": "Crvena Zvezda",
             "venue": "A",
             "status": ""
           }
@@ -229,43 +261,51 @@
         "goalsAgainst": 10,
         "fixtures": [
           {
-            "code": "SHA",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MAR",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "PSG",
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ARS",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "DIN",
+            "code": "AEK",
+            "opponent": "AEK Athens",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "AJA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SCP",
+            "code": "STU",
+            "opponent": "Stuttgart",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BAR",
-            "venue": "A",
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -280,43 +320,51 @@
         "goalsAgainst": 9,
         "fixtures": [
           {
-            "code": "LYO",
+            "code": "NEC",
+            "opponent": "N.E.C. Nijmegen",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "RSO",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "USG",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ROM",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SCF",
+            "code": "OFI",
+            "opponent": "OFI Crete",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MAL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "VIL",
+            "code": "TRA",
+            "opponent": "Trabzonspor",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LEG",
-            "venue": "A",
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -336,42 +384,50 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "BAR",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MAR",
+            "code": "LAS",
+            "opponent": "LASK",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "AVL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LIL",
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MIL",
-            "venue": "H",
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "A",
             "status": ""
           },
           {
             "code": "RMA",
+            "opponent": "Real Madrid",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RBS",
-            "venue": "H",
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "ARS",
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
             "venue": "A",
             "status": ""
           }
@@ -387,42 +443,50 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "LYO",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "USG",
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "GEN",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MID",
+            "code": "CEL",
+            "opponent": "Celtic",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BAS",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MTA",
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MUN",
-            "venue": "H",
+            "code": "RBS",
+            "opponent": "Red Bull Salzburg",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "COP",
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "CRZ",
+            "opponent": "Crvena Zvezda",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
             "venue": "A",
             "status": ""
           }
@@ -443,43 +507,51 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "ARS",
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "PSV",
-            "venue": "A",
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "H",
             "status": ""
           },
           {
             "code": "SLA",
+            "opponent": "Slavia Prague",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "PSG",
-            "venue": "A",
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "BEN",
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
             "venue": "H",
             "status": ""
           },
           {
             "code": "NAP",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BRU",
+            "opponent": "Napoli",
             "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "DIN",
-            "venue": "A",
             "status": ""
           }
         ],
@@ -494,43 +566,51 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "RAN",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LYO",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SGE",
+            "code": "OFI",
+            "opponent": "OFI Crete",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MTA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SCF",
+            "code": "TRA",
+            "opponent": "Trabzonspor",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "GEN",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BRA",
+            "code": "OMO",
+            "opponent": "Omonia",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "HEA",
-            "venue": "A",
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -550,42 +630,50 @@
         "goalsAgainst": 9,
         "fixtures": [
           {
-            "code": "POR",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "RBS",
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "JUV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "RMA",
+            "code": "VIL",
+            "opponent": "Villarreal",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MON",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MCI",
+            "code": "SCP",
+            "opponent": "Sporting CP",
             "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MIL",
-            "venue": "H",
             "status": ""
           },
           {
             "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
             "venue": "A",
             "status": ""
           }
@@ -601,42 +689,50 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "BET",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "PAO",
+            "code": "CEL",
+            "opponent": "Celtic",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "FEN",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "TOT",
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "ATH",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "HOF",
+            "code": "RBS",
+            "opponent": "Red Bull Salzburg",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "COP",
-            "venue": "H",
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "BOD",
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "CRZ",
+            "opponent": "Crvena Zvezda",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union Saint-Gilloise",
             "venue": "A",
             "status": ""
           }
@@ -657,43 +753,51 @@
         "goalsAgainst": 10,
         "fixtures": [
           {
-            "code": "SCP",
+            "code": "AEK",
+            "opponent": "AEK Athens",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "RMA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BEN",
+            "code": "STU",
+            "opponent": "Stuttgart",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "AJA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "YBO",
+            "code": "SLA",
+            "opponent": "Slavia Prague",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LIV",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "FEY",
+            "code": "ROM",
+            "opponent": "Roma",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "CEL",
-            "venue": "A",
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -708,43 +812,51 @@
         "goalsAgainst": 8,
         "fixtures": [
           {
-            "code": "LUD",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MAL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "RSO",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MID",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MUN",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "VIL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "TOT",
+            "code": "OFI",
+            "opponent": "OFI Crete",
             "venue": "H",
             "status": ""
           },
           {
             "code": "TRA",
-            "venue": "A",
+            "opponent": "Trabzonspor",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -764,42 +876,50 @@
         "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "LIL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "RBS",
+            "code": "VIL",
+            "opponent": "Villarreal",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "ARS",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "AJA",
+            "code": "SCP",
+            "opponent": "Sporting CP",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MAR",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MIL",
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "ATA",
-            "venue": "H",
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "ATM",
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
             "venue": "A",
             "status": ""
           }
@@ -815,42 +935,50 @@
         "goalsAgainst": 9,
         "fixtures": [
           {
-            "code": "MUN",
-            "venue": "H",
-            "status": ""
-          },
-          {
             "code": "PLZ",
+            "opponent": "Viktoria Plzen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "AZA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "RAN",
+            "code": "RBS",
+            "opponent": "Red Bull Salzburg",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "ATH",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "SCF",
+            "code": "LST",
+            "opponent": "Lillestrom",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "SGE",
-            "venue": "H",
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "PAR",
+            "code": "CRZ",
+            "opponent": "Crvena Zvezda",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union Saint-Gilloise",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
             "venue": "A",
             "status": ""
           }
@@ -871,43 +999,51 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "YBO",
+            "code": "STU",
+            "opponent": "Stuttgart",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BVB",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "PSV",
+            "code": "SLA",
+            "opponent": "Slavia Prague",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "PSG",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "AVL",
+            "code": "ROM",
+            "opponent": "Roma",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LIV",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "DIN",
+            "code": "BET",
+            "opponent": "Real Betis",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "RBL",
-            "venue": "A",
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -922,43 +1058,51 @@
         "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "VIL",
+            "code": "TRA",
+            "opponent": "Trabzonspor",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "NIC",
-            "venue": "A",
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "TRA",
+            "code": "LPO",
+            "opponent": "Lech Poznan",
             "venue": "H",
             "status": ""
           },
           {
             "code": "FER",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BRA",
+            "opponent": "Ferencvaros",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MUN",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "RSO",
+            "code": "BES",
+            "opponent": "Besiktas",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LAZ",
-            "venue": "A",
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -978,42 +1122,50 @@
         "goalsAgainst": 8,
         "fixtures": [
           {
-            "code": "POR",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "NAP",
+            "code": "SCP",
+            "opponent": "Sporting CP",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MCI",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MIL",
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RBS",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "AJA",
+            "code": "RMA",
+            "opponent": "Real Madrid",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "YBO",
-            "venue": "H",
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "MON",
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LEN",
+            "opponent": "Lens",
             "venue": "A",
             "status": ""
           }
@@ -1029,42 +1181,50 @@
         "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "HEA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BAS",
+            "code": "RBS",
+            "opponent": "Red Bull Salzburg",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LAZ",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "SCF",
+            "code": "LST",
+            "opponent": "Lillestrom",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BES",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "COP",
+            "code": "JAG",
+            "opponent": "Jagiellonia",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "ATH",
-            "venue": "H",
+            "code": "CRZ",
+            "opponent": "Crvena Zvezda",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "SGE",
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union Saint-Gilloise",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SPP",
+            "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
           }
@@ -1085,43 +1245,51 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "PSV",
+            "code": "SLA",
+            "opponent": "Slavia Prague",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "YBO",
-            "venue": "A",
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "H",
             "status": ""
           },
           {
             "code": "POR",
+            "opponent": "Porto",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SHA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SCP",
+            "code": "NAP",
+            "opponent": "Napoli",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ARS",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BAR",
+            "code": "MCI",
+            "opponent": "Manchester City",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "RMA",
-            "venue": "A",
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -1136,43 +1304,51 @@
         "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "MID",
+            "code": "OMO",
+            "opponent": "Omonia",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "NIC",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BET",
+            "code": "LPO",
+            "opponent": "Lech Poznan",
             "venue": "H",
             "status": ""
           },
           {
             "code": "FER",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "COP",
+            "opponent": "Ferencvaros",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LEG",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "HEA",
+            "code": "BES",
+            "opponent": "Besiktas",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "AZA",
-            "venue": "A",
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -1192,42 +1368,50 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
+            "status": ""
+          },
+          {
             "code": "PSG",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "JUV",
+            "opponent": "Paris Saint-Germain",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "OLY",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "DIN",
+            "code": "MUN",
+            "opponent": "Manchester United",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "SEV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BAY",
+            "code": "LIV",
+            "opponent": "Liverpool",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "AJA",
-            "venue": "H",
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "YBO",
+            "code": "INT",
+            "opponent": "Inter Milan",
             "venue": "A",
             "status": ""
           }
@@ -1243,42 +1427,50 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "BES",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "RAN",
+            "code": "LST",
+            "opponent": "Lillestrom",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "PLZ",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LUD",
+            "code": "JAG",
+            "opponent": "Jagiellonia",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MID",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LYO",
+            "code": "CRZ",
+            "opponent": "Crvena Zvezda",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "ATH",
-            "venue": "H",
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "BET",
+            "code": "USG",
+            "opponent": "Union Saint-Gilloise",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SPP",
+            "opponent": "Sparta Prague",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
             "venue": "A",
             "status": ""
           }
@@ -1299,43 +1491,51 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "DIN",
+            "code": "ROM",
+            "opponent": "Roma",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SCP",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "CEL",
+            "code": "BET",
+            "opponent": "Real Betis",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "RBS",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "OLY",
+            "code": "POR",
+            "opponent": "Porto",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ATM",
-            "venue": "A",
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "SHA",
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
             "venue": "H",
             "status": ""
           },
           {
             "code": "RBL",
-            "venue": "A",
+            "opponent": "RB Leipzig",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -1350,43 +1550,51 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "BET",
+            "code": "LPO",
+            "opponent": "Lech Poznan",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SCF",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "NIC",
+            "code": "FER",
+            "opponent": "Ferencvaros",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "HEA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BOD",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "AZA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "LAZ",
+            "code": "BES",
+            "opponent": "Besiktas",
             "venue": "H",
             "status": ""
           },
           {
             "code": "AND",
-            "venue": "A",
+            "opponent": "Anderlecht",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -1406,42 +1614,50 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "DIN",
-            "venue": "H",
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "SEV",
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "INT",
+            "opponent": "Inter Milan",
             "venue": "A",
             "status": ""
           },
           {
             "code": "FEY",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "B04",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "RMA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "YBO",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BAR",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "PSG",
+            "opponent": "Feyenoord",
             "venue": "A",
             "status": ""
           }
@@ -1457,42 +1673,50 @@
         "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "HEA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "COP",
+            "code": "JAG",
+            "opponent": "Jagiellonia",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "TOT",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LAZ",
+            "code": "CRZ",
+            "opponent": "Crvena Zvezda",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "SCF",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "TRA",
+            "code": "BEN",
+            "opponent": "Benfica",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "FEN",
-            "venue": "H",
+            "code": "USG",
+            "opponent": "Union Saint-Gilloise",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "RAP",
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SPP",
+            "opponent": "Sparta Prague",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
             "venue": "A",
             "status": ""
           }
@@ -1513,43 +1737,51 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "ATM",
+            "code": "BET",
+            "opponent": "Real Betis",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "RBL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MAR",
+            "code": "POR",
+            "opponent": "Porto",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ATA",
-            "venue": "A",
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "H",
             "status": ""
           },
           {
-            "code": "YBO",
+            "code": "MCI",
+            "opponent": "Manchester City",
             "venue": "H",
             "status": ""
           },
           {
             "code": "LIL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "JUV",
+            "opponent": "Lille",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "AVL",
-            "venue": "A",
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -1564,43 +1796,51 @@
         "goalsAgainst": 8,
         "fixtures": [
           {
-            "code": "MTA",
+            "code": "FER",
+            "opponent": "Ferencvaros",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "TOT",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "AZA",
+            "code": "BES",
+            "opponent": "Besiktas",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LAZ",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MAL",
+            "code": "AND",
+            "opponent": "Anderlecht",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SCF",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BOD",
+            "code": "TOR",
+            "opponent": "Torreense",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "PLZ",
-            "venue": "A",
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -1621,41 +1861,49 @@
         "fixtures": [
           {
             "code": "PSV",
-            "venue": "H",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "ATM",
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
             "venue": "A",
             "status": ""
           },
           {
             "code": "LIV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MCI",
+            "opponent": "Liverpool",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "CEL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "YBO",
+            "code": "LEN",
+            "opponent": "Lens",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RMA",
-            "venue": "H",
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "A",
             "status": ""
           },
           {
             "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
             "venue": "A",
             "status": ""
           }
@@ -1671,42 +1919,50 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "MTA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LYO",
+            "code": "CRZ",
+            "opponent": "Crvena Zvezda",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "PLZ",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LUD",
+            "code": "BEN",
+            "opponent": "Benfica",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BOD",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "ROM",
+            "code": "USG",
+            "opponent": "Union Saint-Gilloise",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BET",
-            "venue": "H",
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "FER",
+            "code": "SPP",
+            "opponent": "Sparta Prague",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "B04",
+            "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
           }
@@ -1727,43 +1983,51 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "MON",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "ARS",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "LIV",
+            "code": "POR",
+            "opponent": "Porto",
             "venue": "H",
             "status": ""
           },
           {
             "code": "NAP",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "FEY",
+            "opponent": "Napoli",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MAR",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SHA",
+            "code": "MCI",
+            "opponent": "Manchester City",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "INT",
-            "venue": "A",
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -1778,43 +2042,51 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "AZA",
+            "code": "BES",
+            "opponent": "Besiktas",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MUN",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "PAO",
+            "code": "AND",
+            "opponent": "Anderlecht",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "PLZ",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "PAR",
+            "code": "TOR",
+            "opponent": "Torreense",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "FER",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BOD",
+            "code": "STG",
+            "opponent": "Sturm Graz",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "HEA",
-            "venue": "A",
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -1834,42 +2106,50 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "ATM",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "PSV",
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LIL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "SLA",
+            "code": "MUN",
+            "opponent": "Manchester United",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RBS",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "JUV",
+            "code": "LIV",
+            "opponent": "Liverpool",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "CEL",
-            "venue": "H",
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "AVL",
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
             "venue": "A",
             "status": ""
           }
@@ -1885,42 +2165,50 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "A",
+            "status": ""
+          },
+          {
             "code": "USG",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LUD",
+            "opponent": "Union Saint-Gilloise",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "NIC",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MTA",
+            "code": "SUN",
+            "opponent": "Sunderland",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MAL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BET",
+            "code": "SPP",
+            "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LEG",
-            "venue": "H",
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "B04",
+            "opponent": "Bayer Leverkusen",
+            "venue": "A",
             "status": ""
           },
           {
             "code": "HOF",
+            "opponent": "Hoffenheim",
             "venue": "A",
             "status": ""
           }
@@ -1941,43 +2229,51 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "ATA",
+            "code": "NAP",
+            "opponent": "Napoli",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SHA",
-            "venue": "A",
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
             "status": ""
           },
           {
             "code": "GAL",
+            "opponent": "Galatasaray",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "PSV",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BEN",
+            "code": "COM",
+            "opponent": "Como",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "RBS",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "OLY",
+            "code": "BAY",
+            "opponent": "Bayern Munich",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BAR",
-            "venue": "A",
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -1992,43 +2288,51 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "RSO",
+            "code": "AND",
+            "opponent": "Anderlecht",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "FEN",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BES",
+            "code": "TOR",
+            "opponent": "Torreense",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "TRA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MAL",
+            "code": "STG",
+            "opponent": "Sturm Graz",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SGE",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "GEN",
+            "code": "REN",
+            "opponent": "Rennes",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BOD",
-            "venue": "A",
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -2048,42 +2352,50 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "YBO",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "GAL",
+            "code": "MUN",
+            "opponent": "Manchester United",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "PSV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "NAP",
+            "code": "LIV",
+            "opponent": "Liverpool",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "JUV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BVB",
+            "code": "LEN",
+            "opponent": "Lens",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BAY",
-            "venue": "H",
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "PSG",
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
             "venue": "A",
             "status": ""
           }
@@ -2099,42 +2411,50 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
+            "code": "USG",
+            "opponent": "Union Saint-Gilloise",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SPP",
+            "opponent": "Sparta Prague",
+            "venue": "A",
+            "status": ""
+          },
+          {
             "code": "RSO",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "PLZ",
+            "opponent": "Real Sociedad",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BRA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "PAR",
+            "code": "MIL",
+            "opponent": "AC Milan",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "ROM",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "COP",
+            "code": "B04",
+            "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "NIC",
-            "venue": "H",
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "LYO",
+            "code": "CLV",
+            "opponent": "Celta Vigo",
             "venue": "A",
             "status": ""
           }
@@ -2155,43 +2475,51 @@
         "goalsAgainst": 6,
         "fixtures": [
           {
-            "code": "RBL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "YBO",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "DIN",
-            "venue": "H",
-            "status": ""
-          },
-          {
             "code": "MCI",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "ATM",
+            "opponent": "Manchester City",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "PSV",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SHA",
+            "code": "LIL",
+            "opponent": "Lille",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "FEY",
-            "venue": "A",
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -2206,43 +2534,51 @@
         "goalsAgainst": 6,
         "fixtures": [
           {
-            "code": "GEN",
+            "code": "TOR",
+            "opponent": "Torreense",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "FEN",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "PLZ",
+            "code": "STG",
+            "opponent": "Sturm Graz",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "PAR",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "LYO",
+            "code": "REN",
+            "opponent": "Rennes",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "USG",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "ATH",
+            "code": "OLY",
+            "opponent": "Olympiacos",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "COP",
-            "venue": "A",
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -2262,42 +2598,50 @@
         "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "AJA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "RMA",
+            "code": "LIV",
+            "opponent": "Liverpool",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RBL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "SLA",
+            "code": "LEN",
+            "opponent": "Lens",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "PSV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MON",
+            "code": "INT",
+            "opponent": "Inter Milan",
             "venue": "A",
             "status": ""
           },
           {
             "code": "FEY",
-            "venue": "H",
+            "opponent": "Feyenoord",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "RBS",
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
             "venue": "A",
             "status": ""
           }
@@ -2313,42 +2657,50 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "BAS",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MUN",
+            "code": "SUN",
+            "opponent": "Sunderland",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "TRA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BRA",
+            "code": "SPP",
+            "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MAL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LUD",
+            "code": "RSO",
+            "opponent": "Real Sociedad",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "NIC",
-            "venue": "H",
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "USG",
+            "code": "B04",
+            "opponent": "Bayer Leverkusen",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Levski Sofia",
             "venue": "A",
             "status": ""
           }
@@ -2369,43 +2721,51 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "H",
+            "status": ""
+          },
+          {
             "code": "BAY",
+            "opponent": "Bayern Munich",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "YBO",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "B04",
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MIL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MON",
+            "code": "AVL",
+            "opponent": "Aston Villa",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "FEY",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "ATA",
+            "code": "SAB",
+            "opponent": "Sabah",
             "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "INT",
-            "venue": "A",
             "status": ""
           }
         ],
@@ -2420,43 +2780,51 @@
         "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "BES",
+            "code": "STG",
+            "opponent": "Sturm Graz",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LEG",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "PLZ",
+            "code": "REN",
+            "opponent": "Rennes",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "USG",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "ROM",
+            "code": "OLY",
+            "opponent": "Olympiacos",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MAL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SCF",
+            "code": "MAR",
+            "opponent": "Marseille",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LYO",
-            "venue": "A",
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -2476,42 +2844,50 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "BAR",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "GAL",
+            "code": "LEN",
+            "opponent": "Lens",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BVB",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BEN",
+            "code": "INT",
+            "opponent": "Inter Milan",
             "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "CEL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "AJA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "RBS",
-            "venue": "H",
             "status": ""
           },
           {
             "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "A",
             "status": ""
           }
@@ -2527,42 +2903,50 @@
         "goalsAgainst": 6,
         "fixtures": [
           {
-            "code": "LYO",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "SCF",
+            "code": "SPP",
+            "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "PAO",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "COP",
+            "code": "RSO",
+            "opponent": "Real Sociedad",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LEG",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "NIC",
+            "code": "MIL",
+            "opponent": "AC Milan",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BET",
-            "venue": "H",
+            "code": "B04",
+            "opponent": "Bayer Leverkusen",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "MUN",
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Levski Sofia",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "N.E.C. Nijmegen",
             "venue": "A",
             "status": ""
           }
@@ -2583,43 +2967,51 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "BEN",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "ARS",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MON",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "B04",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SCP",
-            "venue": "H",
-            "status": ""
-          },
-          {
             "code": "RBL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SHA",
+            "opponent": "RB Leipzig",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "YBO",
-            "venue": "A",
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -2634,43 +3026,51 @@
         "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "AND",
+            "code": "REN",
+            "opponent": "Rennes",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LAZ",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "FEN",
+            "code": "OLY",
+            "opponent": "Olympiacos",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LEG",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "AZA",
+            "code": "MAR",
+            "opponent": "Marseille",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "HOF",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BET",
+            "code": "JUV",
+            "opponent": "Juventus",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LYO",
-            "venue": "A",
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -2690,42 +3090,50 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "A",
+            "status": ""
+          },
+          {
             "code": "FEY",
-            "venue": "H",
+            "opponent": "Feyenoord",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
             "status": ""
           },
           {
             "code": "ATM",
+            "opponent": "Atletico Madrid",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MON",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "INT",
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "PSV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "POR",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MAR",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "JUV",
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
             "venue": "A",
             "status": ""
           }
@@ -2741,42 +3149,50 @@
         "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TRA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "PLZ",
+            "code": "RSO",
+            "opponent": "Real Sociedad",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "TOT",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LEG",
+            "code": "MIL",
+            "opponent": "AC Milan",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LYO",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BOD",
+            "code": "B04",
+            "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LUD",
-            "venue": "H",
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "SCF",
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Levski Sofia",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "N.E.C. Nijmegen",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "A",
             "status": ""
           }
@@ -2797,43 +3213,51 @@
         "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "DIN",
+            "code": "GAL",
+            "opponent": "Galatasaray",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BAR",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "RBL",
+            "code": "COM",
+            "opponent": "Como",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "NAP",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SLA",
+            "code": "BAY",
+            "opponent": "Bayern Munich",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "JUV",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SEV",
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SCP",
-            "venue": "A",
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -2848,43 +3272,51 @@
         "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "PLZ",
+            "code": "OLY",
+            "opponent": "Olympiacos",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BAS",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MTA",
+            "code": "MAR",
+            "opponent": "Marseille",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BOD",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "BET",
+            "code": "JUV",
+            "opponent": "Juventus",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MAL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "TRA",
+            "code": "CRY",
+            "opponent": "Crystal Palace",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "FER",
-            "venue": "A",
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -2904,42 +3336,50 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "LIL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "AJA",
+            "code": "FEY",
+            "opponent": "Feyenoord",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RBS",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MCI",
+            "code": "BRU",
+            "opponent": "Club Brugge",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "YBO",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "ATA",
+            "code": "BAR",
+            "opponent": "Barcelona",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BEN",
-            "venue": "H",
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "ARS",
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "AEK",
+            "opponent": "AEK Athens",
             "venue": "A",
             "status": ""
           }
@@ -2955,42 +3395,50 @@
         "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TOT",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BOD",
+            "code": "MIL",
+            "opponent": "AC Milan",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RAN",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "VIL",
+            "code": "B04",
+            "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MAL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "NIC",
+            "code": "HOF",
+            "opponent": "Hoffenheim",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BES",
-            "venue": "H",
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "ATH",
+            "code": "LEV",
+            "opponent": "Levski Sofia",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "N.E.C. Nijmegen",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
             "venue": "A",
             "status": ""
           }
@@ -3011,43 +3459,51 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "DIN",
+            "code": "COM",
+            "opponent": "Como",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SCP",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "AJA",
+            "code": "BAY",
+            "opponent": "Bayern Munich",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SHA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SLA",
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
             "venue": "H",
             "status": ""
           },
           {
             "code": "AVL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "PSG",
+            "opponent": "Aston Villa",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "FEY",
-            "venue": "A",
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -3062,43 +3518,51 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "LUD",
+            "code": "MAR",
+            "opponent": "Marseille",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BET",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "HEA",
+            "code": "JUV",
+            "opponent": "Juventus",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BOD",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "VIL",
+            "code": "CRY",
+            "opponent": "Crystal Palace",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "TOT",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SCF",
+            "code": "BOU",
+            "opponent": "Bournemouth",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "MUN",
-            "venue": "A",
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -3119,42 +3583,50 @@
         "fixtures": [
           {
             "code": "BRU",
-            "venue": "H",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "A",
             "status": ""
           },
           {
             "code": "DIN",
+            "opponent": "Dinamo Zagreb",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "PSG",
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
             "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "YBO",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "POR",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LIL",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "INT",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "SLA",
-            "venue": "A",
             "status": ""
           }
         ],
@@ -3169,43 +3641,51 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "PLZ",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "PAR",
+            "code": "B04",
+            "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "TOT",
-            "venue": "H",
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Levski Sofia",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "N.E.C. Nijmegen",
+            "venue": "A",
             "status": ""
           },
           {
             "code": "FEN",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "MTA",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BET",
+            "opponent": "Fenerbahce",
             "venue": "A",
             "status": ""
           },
           {
             "code": "AZA",
-            "venue": "H",
+            "opponent": "AZ Alkmaar",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "USG",
-            "venue": "A",
+            "code": "TRA",
+            "opponent": "Trabzonspor",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -3225,42 +3705,50 @@
         "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "RMA",
+            "code": "BAY",
+            "opponent": "Bayern Munich",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SLA",
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "GAL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LIV",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "ATM",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BRU",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "FEY",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "PSV",
+            "code": "SCP",
+            "opponent": "Sporting CP",
             "venue": "A",
             "status": ""
           }
@@ -3276,42 +3764,50 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "BOD",
+            "code": "JUV",
+            "opponent": "Juventus",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ROM",
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BAS",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "ATH",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "FER",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MTA",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "SGE",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MAL",
+            "code": "RBS",
+            "opponent": "Red Bull Salzburg",
             "venue": "A",
             "status": ""
           }
@@ -3332,43 +3828,51 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "A",
+            "status": ""
+          },
+          {
             "code": "DIN",
-            "venue": "H",
+            "opponent": "Dinamo Zagreb",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "A",
             "status": ""
           },
           {
             "code": "ARS",
+            "opponent": "Arsenal",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BRU",
+            "code": "AEK",
+            "opponent": "AEK Athens",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "INT",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "PSG",
+            "code": "STU",
+            "opponent": "Stuttgart",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BEN",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "POR",
+            "code": "SLA",
+            "opponent": "Slavia Prague",
             "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "ATA",
-            "venue": "A",
             "status": ""
           }
         ],
@@ -3383,43 +3887,51 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "USG",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "BRA",
+            "code": "HOF",
+            "opponent": "Hoffenheim",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BES",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "RSO",
+            "code": "CLV",
+            "opponent": "Celta Vigo",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "FER",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MID",
+            "code": "LEV",
+            "opponent": "Levski Sofia",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MAL",
+            "code": "NEC",
+            "opponent": "N.E.C. Nijmegen",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LYO",
-            "venue": "A",
+            "code": "TRA",
+            "opponent": "Trabzonspor",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -3439,42 +3951,50 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "JUV",
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "POR",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "B04",
+            "code": "AVL",
+            "opponent": "Aston Villa",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ATM",
-            "venue": "A",
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "H",
             "status": ""
           },
           {
             "code": "ARS",
+            "opponent": "Arsenal",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BVB",
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BAY",
-            "venue": "H",
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "PSG",
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
             "venue": "A",
             "status": ""
           }
@@ -3490,42 +4010,50 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "RSO",
+            "code": "CRY",
+            "opponent": "Crystal Palace",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "NIC",
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "AND",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MTA",
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LAZ",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "VIL",
+            "code": "RBS",
+            "opponent": "Red Bull Salzburg",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MID",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "FER",
+            "code": "LST",
+            "opponent": "Lillestrom",
             "venue": "A",
             "status": ""
           }
@@ -3546,43 +4074,51 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "MON",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "PSG",
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BRU",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "INT",
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BAR",
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SCP",
-            "venue": "A",
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "H",
             "status": ""
           },
           {
             "code": "SLA",
+            "opponent": "Slavia Prague",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "RMA",
-            "venue": "A",
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -3597,43 +4133,51 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "MTA",
-            "venue": "H",
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Levski Sofia",
+            "venue": "A",
             "status": ""
           },
           {
             "code": "AZA",
+            "opponent": "AZ Alkmaar",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "HOF",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "TOT",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "AND",
+            "code": "OFI",
+            "opponent": "OFI Crete",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ROM",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "LAZ",
+            "code": "TRA",
+            "opponent": "Trabzonspor",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BOD",
-            "venue": "A",
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -3653,42 +4197,50 @@
         "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "CEL",
+            "code": "AVL",
+            "opponent": "Aston Villa",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ATM",
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LIL",
-            "venue": "H",
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "A",
             "status": ""
           },
           {
             "code": "SCP",
+            "opponent": "Sporting CP",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "BEN",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "MIL",
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "JUV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "AVL",
+            "code": "RMA",
+            "opponent": "Real Madrid",
             "venue": "A",
             "status": ""
           }
@@ -3704,42 +4256,50 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "BOD",
+            "code": "BOU",
+            "opponent": "Bournemouth",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "SCF",
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "MAL",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "LAZ",
+            "code": "CEL",
+            "opponent": "Celtic",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "RAP",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "ROM",
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "HOF",
-            "venue": "H",
+            "code": "RBS",
+            "opponent": "Red Bull Salzburg",
+            "venue": "A",
             "status": ""
           },
           {
-            "code": "BES",
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
             "venue": "A",
             "status": ""
           }
@@ -3760,43 +4320,51 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "LIV",
-            "venue": "H",
-            "status": ""
-          },
-          {
-            "code": "RBS",
+            "code": "ARS",
+            "opponent": "Arsenal",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "NAP",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "INT",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "LIL",
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "DIN",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "CEL",
+            "code": "AEK",
+            "opponent": "AEK Athens",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "BRU",
-            "venue": "A",
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "H",
             "status": ""
           }
         ],
@@ -3811,43 +4379,51 @@
         "goalsAgainst": 3,
         "fixtures": [
           {
-            "code": "FER",
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "A",
+            "status": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "N.E.C. Nijmegen",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "ROM",
-            "venue": "A",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "H",
+            "status": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
+            "venue": "H",
             "status": ""
           },
           {
             "code": "TRA",
+            "opponent": "Trabzonspor",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "LYO",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "RAP",
+            "code": "OMO",
+            "opponent": "Omonia",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "TOT",
-            "venue": "A",
-            "status": ""
-          },
-          {
-            "code": "NIC",
+            "code": "LPO",
+            "opponent": "Lech Poznan",
             "venue": "H",
             "status": ""
           },
           {
-            "code": "HOF",
-            "venue": "A",
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "H",
             "status": ""
           }
         ],

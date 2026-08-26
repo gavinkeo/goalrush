@@ -4465,3 +4465,46 @@ th:nth-child(5){width:7%}
 .prize-split b{
   color:#dce6f8 !important;
 }
+
+
+/* =========================================================
+   v69 - detailed fixture hover tooltip
+   ========================================================= */
+
+.fixture[data-tooltip]{
+  cursor:help;
+}
+
+.fixture-hover-tooltip{
+  position:fixed;
+  z-index:9999;
+  width:max-content;
+  max-width:min(330px,calc(100vw - 20px));
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:10px;
+  background:rgba(5,12,27,.97);
+  box-shadow:0 14px 36px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.035);
+  color:#eef4ff;
+  font-size:.66rem;
+  font-weight:750;
+  line-height:1.55;
+  white-space:pre-line;
+  pointer-events:none;
+  backdrop-filter:blur(8px);
+}
+
+.fixture-hover-tooltip::first-line{
+  color:#ffffff;
+  font-weight:900;
+}
+
+.fixture-hover-tooltip[hidden]{
+  display:none !important;
+}
+
+@media(max-width:700px){
+  .fixture[data-tooltip]{
+    cursor:default;
+  }
+}
