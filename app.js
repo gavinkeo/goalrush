@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=26";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=26";
+const DATA_URL = "competition.json?v=27";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=27";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
@@ -95,6 +95,7 @@ const CLUB_SEARCH_ALIASES = {
   "copenhagen": ["Copenhagen", "FC Copenhagen", "FC København"],
   "maccabi tel aviv": ["Maccabi Tel Aviv", "Maccabi TA"],
   "club brugge": ["Club Brugge", "Club Brugge KV"],
+  "lille": ["Lille OSC", "LOSC Lille", "Lille"],
   "ac milan": ["AC Milan", "Milan"],
   "inter milan": ["Inter Milan", "Internazionale", "Inter"],
   "paris saint-germain": ["Paris Saint-Germain", "PSG"],

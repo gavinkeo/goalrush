@@ -210,3 +210,11 @@ The temporary dummy crest loader now:
 - logs any remaining unmatched clubs to the browser console.
 
 This should resolve most of the handful of dummy badges that failed to populate in v25.
+
+
+## v27 Lille crest fix
+
+Added explicit Lille aliases:
+- Lille OSC
+- LOSC Lille
+- Lille
