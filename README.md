@@ -69,3 +69,9 @@
 - Example: `MD1 / 08–17 SEP` sits directly over `MON 1-2`, and the same MD1/date sits directly over `LYO 1-1` in the UEL section.
 - MD5–MD8 naturally align over the second row of four fixtures.
 - Date windows are populated from the same combined UCL→UEL schedule used by desktop.
+
+
+## v64 countdown spacing
+- Pulled the countdown closer to the UCL/UEL label on both desktop and mobile.
+- Tightened the tournament boxes so they read more compactly and neatly on desktop.
+- Kept the play button clear while reducing dead space between label and countdown.

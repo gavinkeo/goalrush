@@ -4306,3 +4306,119 @@ th:nth-child(5){width:7%}
     font-size:.36rem;
   }
 }
+
+
+/* =========================================================
+   v64 - pull countdown closer to UCL/UEL labels and tighten
+   tournament boxes on desktop and mobile
+   ========================================================= */
+
+@media(min-width:701px){
+  .dashboard-header .matchday-strip{
+    gap:10px !important;
+  }
+
+  .dashboard-header .matchday-chip{
+    grid-template-columns:32px auto 44px !important;
+    grid-template-areas:"logo copy anthem" !important;
+    column-gap:12px !important;
+    padding:10px 14px 10px 14px !important;
+    min-width:0 !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    width:28px !important;
+    height:28px !important;
+    align-self:center !important;
+    justify-self:center !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-copy{
+    width:auto !important;
+    min-width:0 !important;
+    align-items:flex-start !important;
+    justify-self:start !important;
+    gap:5px !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-topline{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:18px !important;
+    width:auto !important;
+  }
+
+  .dashboard-header .matchday-chip .comp,
+  .dashboard-header .matchday-chip .state,
+  .dashboard-header .matchday-chip strong{
+    justify-self:start !important;
+    text-align:left !important;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    width:auto !important;
+    white-space:nowrap;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:40px !important;
+    height:40px !important;
+  }
+}
+
+@media(max-width:700px){
+  .dashboard-header .matchday-strip{
+    gap:10px !important;
+  }
+
+  .dashboard-header .matchday-chip{
+    grid-template-columns:minmax(0,1fr) 52px !important;
+    grid-template-areas:"copy anthem" !important;
+    column-gap:10px !important;
+    padding:10px 12px !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-copy{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    justify-content:center !important;
+    gap:5px !important;
+    min-width:0 !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-topline{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:14px !important;
+    width:auto !important;
+  }
+
+  .dashboard-header .matchday-chip .comp,
+  .dashboard-header .matchday-chip .state,
+  .dashboard-header .matchday-chip strong{
+    text-align:left !important;
+    justify-self:start !important;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    width:auto !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    display:none !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:48px !important;
+    height:48px !important;
+  }
+}
+
+@media(max-width:390px){
+  .dashboard-header .matchday-chip .chip-topline{
+    gap:10px !important;
+  }
+}
