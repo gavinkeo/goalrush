@@ -128,3 +128,11 @@ Entrant names remain the real 36-name list from v67.
 
 ## v72 clean footer
 - Removed the Live Draw link and “Unofficial competition” text from the bottom of the main page.
+
+
+## v73 meta description
+- Replaced the old meta description with: “European football goals competition for the 2026/27 season.”
+
+
+## v74 meta description
+- Updated site description to: “Champions League and Europa League goals buster for the 2026/27 season.”
