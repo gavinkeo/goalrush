@@ -140,3 +140,7 @@ Entrant names remain the real 36-name list from v67.
 
 ## v75 gradient title
 - Updated the EURO GOAL RUSH 26/27 title text to transition from UCL blue into UEL gold.
+
+
+## v76 tag-matched title
+- Updated the main title gradient to use the exact UCL cyan and UEL gold from the competition tags for a more consistent header.

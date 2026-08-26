@@ -4549,3 +4549,38 @@ th:nth-child(5){width:7%}
     color:#cdd8ef;
   }
 }
+
+
+/* =========================================================
+   v76 - match title gradient exactly to UCL / UEL tag colours
+   ========================================================= */
+.main-title-text{
+  display:inline-block;
+  background:linear-gradient(
+    90deg,
+    var(--ucl) 0%,
+    var(--ucl) 42%,
+    color-mix(in srgb, var(--ucl) 50%, var(--uel) 50%) 58%,
+    var(--uel) 76%,
+    var(--uel) 100%
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+  text-shadow:none !important;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.08));
+}
+
+@supports not (background: color-mix(in srgb, white 50%, black 50%)) {
+  .main-title-text{
+    background:linear-gradient(
+      90deg,
+      var(--ucl) 0%,
+      var(--ucl) 46%,
+      #9fd094 60%,
+      var(--uel) 78%,
+      var(--uel) 100%
+    );
+  }
+}
