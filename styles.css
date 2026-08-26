@@ -4422,3 +4422,46 @@ th:nth-child(5){width:7%}
     gap:10px !important;
   }
 }
+
+
+/* v65 - mobile countdown vertical alignment */
+@media(max-width:700px){
+  .dashboard-header .matchday-chip .chip-topline{
+    align-items: baseline !important;
+  }
+
+  .dashboard-header .matchday-chip .comp,
+  .dashboard-header .matchday-chip .state{
+    line-height: 1 !important;
+  }
+
+  .dashboard-header .matchday-chip .state{
+    position: relative;
+    top: -1px;
+  }
+}
+
+
+/* =========================================================
+   v66 - rules copy + unified Prize Pot card styling
+   ========================================================= */
+
+.prize-card{
+  border-color:rgba(255,255,255,.09) !important;
+  background:
+    linear-gradient(145deg,rgba(15,29,56,.78),rgba(7,17,36,.72)) !important;
+}
+
+.prize-card .rule-kicker{
+  color:#8fa4c8 !important;
+}
+
+.prize-split span{
+  border-color:rgba(255,255,255,.08) !important;
+  background:rgba(255,255,255,.04) !important;
+  color:#e8edf8 !important;
+}
+
+.prize-split b{
+  color:#dce6f8 !important;
+}

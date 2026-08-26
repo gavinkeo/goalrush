@@ -75,3 +75,29 @@
 - Pulled the countdown closer to the UCL/UEL label on both desktop and mobile.
 - Tightened the tournament boxes so they read more compactly and neatly on desktop.
 - Kept the play button clear while reducing dead space between label and countdown.
+
+
+## v65 mobile countdown alignment
+- Aligned the mobile countdown vertically with the UCL/UEL label.
+- Switched the mobile top line to baseline alignment for a cleaner header look.
+
+
+## v66 rules copy and prize styling
+
+- Updated Format copy with the Monday night, 7 September draw date and September–January league-phase window.
+- Updated Scoring copy to note that scores and standings update in real time.
+- Removed the brown/gold Prize Pot card treatment so it uses the same dark-blue visual language as the Format and Scoring cards.
+
+
+## v67 entrant names
+
+Replaced the 36 dummy entrant names with the supplied real entrant list, preserving the current dummy UCL/UEL assignments and scores for layout testing.
+
+
+## v68 projected teams
+
+Updated all 36 UCL and 36 UEL team slots using current projected 2026/27 entrants.
+- UCL list uses the current UEFA provisional league-phase teams plus seven projected play-off winners.
+- UEL list uses the current UEFA provisional league-phase teams plus projected play-off qualifiers / likely transfers.
+
+Entrant names remain the real 36-name list from v67.

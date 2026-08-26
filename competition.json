@@ -1,14 +1,14 @@
 {
   "brandName": "EURO GOAL RUSH 26/27",
   "season": "2026/27",
-  "lastUpdated": "2026-08-26T00:15:00+01:00",
+  "lastUpdated": "2026-08-26T11:59:00+01:00",
   "entries": [
     {
       "id": 1,
-      "entrant": "Christopher O'Sullivan",
+      "entrant": "GAVIN KEOHANE",
       "previousRank": 2,
       "ucl": {
-        "club": "Real Madrid",
+        "club": "Arsenal",
         "crest": "",
         "played": 0,
         "goalsFor": 17,
@@ -59,7 +59,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Roma",
+        "club": "AZ Alkmaar",
         "crest": "",
         "played": 0,
         "goalsFor": 9,
@@ -112,10 +112,10 @@
     },
     {
       "id": 2,
-      "entrant": "Michelle O'Keeffe",
+      "entrant": "BARRY TRIGGS",
       "previousRank": 1,
       "ucl": {
-        "club": "Manchester City",
+        "club": "Aston Villa",
         "crest": "",
         "played": 0,
         "goalsFor": 17,
@@ -166,7 +166,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Manchester United",
+        "club": "Bournemouth",
         "crest": "",
         "played": 0,
         "goalsFor": 13,
@@ -219,10 +219,10 @@
     },
     {
       "id": 3,
-      "entrant": "Stephen McCarthy",
+      "entrant": "GARY FOOLKES",
       "previousRank": 4,
       "ucl": {
-        "club": "Bayern Munich",
+        "club": "Atletico Madrid",
         "crest": "",
         "played": 0,
         "goalsFor": 8,
@@ -273,7 +273,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Tottenham Hotspur",
+        "club": "Celta Vigo",
         "crest": "",
         "played": 0,
         "goalsFor": 5,
@@ -326,10 +326,10 @@
     },
     {
       "id": 4,
-      "entrant": "Aoife O'Riordan",
+      "entrant": "BRIAN GREANEY",
       "previousRank": 3,
       "ucl": {
-        "club": "Paris Saint-Germain",
+        "club": "Borussia Dortmund",
         "crest": "",
         "played": 0,
         "goalsFor": 15,
@@ -380,7 +380,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Lazio",
+        "club": "Crystal Palace",
         "crest": "",
         "played": 0,
         "goalsFor": 10,
@@ -433,10 +433,10 @@
     },
     {
       "id": 5,
-      "entrant": "Conor O'Leary",
+      "entrant": "TERRY MCSWEENEY",
       "previousRank": 6,
       "ucl": {
-        "club": "Inter Milan",
+        "club": "Barcelona",
         "crest": "",
         "played": 0,
         "goalsFor": 7,
@@ -487,7 +487,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Real Sociedad",
+        "club": "Hoffenheim",
         "crest": "",
         "played": 0,
         "goalsFor": 12,
@@ -540,10 +540,10 @@
     },
     {
       "id": 6,
-      "entrant": "Niamh Fitzgerald",
+      "entrant": "KENNEDY MURPHY",
       "previousRank": 5,
       "ucl": {
-        "club": "Barcelona",
+        "club": "Bayern Munich",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -594,7 +594,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Villarreal",
+        "club": "Juventus",
         "crest": "",
         "played": 0,
         "goalsFor": 9,
@@ -647,10 +647,10 @@
     },
     {
       "id": 7,
-      "entrant": "Darragh Murphy",
+      "entrant": "JOHN O'DRISCOLL",
       "previousRank": null,
       "ucl": {
-        "club": "Arsenal",
+        "club": "Club Brugge",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -701,7 +701,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Eintracht Frankfurt",
+        "club": "Bayer Leverkusen",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -754,10 +754,10 @@
     },
     {
       "id": 8,
-      "entrant": "Elaine O'Donovan",
+      "entrant": "LIAM CURTIN",
       "previousRank": null,
       "ucl": {
-        "club": "Liverpool",
+        "club": "Como",
         "crest": "",
         "played": 0,
         "goalsFor": 7,
@@ -808,7 +808,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Fenerbahce",
+        "club": "Marseille",
         "crest": "",
         "played": 0,
         "goalsFor": 7,
@@ -861,10 +861,10 @@
     },
     {
       "id": 9,
-      "entrant": "Barry Coughlan",
+      "entrant": "GARY CORCORAN",
       "previousRank": null,
       "ucl": {
-        "club": "Juventus",
+        "club": "Feyenoord",
         "crest": "",
         "played": 0,
         "goalsFor": 9,
@@ -915,7 +915,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Besiktas",
+        "club": "AC Milan",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -968,10 +968,10 @@
     },
     {
       "id": 10,
-      "entrant": "Siobhan Walsh",
+      "entrant": "JAMES O'LEARY",
       "previousRank": null,
       "ucl": {
-        "club": "Atletico Madrid",
+        "club": "Galatasaray",
         "crest": "",
         "played": 0,
         "goalsFor": 5,
@@ -1022,7 +1022,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Anderlecht",
+        "club": "Olympiacos",
         "crest": "",
         "played": 0,
         "goalsFor": 9,
@@ -1075,10 +1075,10 @@
     },
     {
       "id": 11,
-      "entrant": "Keith O'Mahony",
+      "entrant": "JOE DALTON",
       "previousRank": null,
       "ucl": {
-        "club": "Borussia Dortmund",
+        "club": "Inter Milan",
         "crest": "",
         "played": 0,
         "goalsFor": 10,
@@ -1129,7 +1129,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Braga",
+        "club": "Real Sociedad",
         "crest": "",
         "played": 0,
         "goalsFor": 10,
@@ -1182,10 +1182,10 @@
     },
     {
       "id": 12,
-      "entrant": "Laura O'Shea",
+      "entrant": "PETER GILROY",
       "previousRank": null,
       "ucl": {
-        "club": "Napoli",
+        "club": "RB Leipzig",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -1236,7 +1236,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "AZ Alkmaar",
+        "club": "Rennes",
         "crest": "",
         "played": 0,
         "goalsFor": 13,
@@ -1289,10 +1289,10 @@
     },
     {
       "id": 13,
-      "entrant": "Mark Kelleher",
+      "entrant": "ERIC TRIHY",
       "previousRank": null,
       "ucl": {
-        "club": "AC Milan",
+        "club": "Lens",
         "crest": "",
         "played": 0,
         "goalsFor": 13,
@@ -1343,7 +1343,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Union Saint-Gilloise",
+        "club": "Sparta Prague",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -1396,10 +1396,10 @@
     },
     {
       "id": 14,
-      "entrant": "Eimear Collins",
+      "entrant": "SEAN KELLY",
       "previousRank": null,
       "ucl": {
-        "club": "Benfica",
+        "club": "Lille",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -1450,7 +1450,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Real Betis",
+        "club": "Sturm Graz",
         "crest": "",
         "played": 0,
         "goalsFor": 9,
@@ -1503,10 +1503,10 @@
     },
     {
       "id": 15,
-      "entrant": "Pauline O'Connor",
+      "entrant": "THE MATICIAN",
       "previousRank": null,
       "ucl": {
-        "club": "Porto",
+        "club": "Liverpool",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -1557,7 +1557,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Hoffenheim",
+        "club": "Sunderland",
         "crest": "",
         "played": 0,
         "goalsFor": 5,
@@ -1610,10 +1610,10 @@
     },
     {
       "id": 16,
-      "entrant": "Alan Sheehan",
+      "entrant": "KILLIAN KELLEHER",
       "previousRank": null,
       "ucl": {
-        "club": "Ajax",
+        "club": "Manchester City",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -1664,7 +1664,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Freiburg",
+        "club": "Torreense",
         "crest": "",
         "played": 0,
         "goalsFor": 12,
@@ -1717,10 +1717,10 @@
     },
     {
       "id": 17,
-      "entrant": "Rachel Healy",
+      "entrant": "CLODAGH CASHMAN",
       "previousRank": null,
       "ucl": {
-        "club": "RB Leipzig",
+        "club": "Manchester United",
         "crest": "",
         "played": 0,
         "goalsFor": 3,
@@ -1771,7 +1771,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Nice",
+        "club": "Union Saint-Gilloise",
         "crest": "",
         "played": 0,
         "goalsFor": 9,
@@ -1824,10 +1824,10 @@
     },
     {
       "id": 18,
-      "entrant": "Declan O'Brien",
+      "entrant": "COLIN MCCARTHY",
       "previousRank": null,
       "ucl": {
-        "club": "Bayer Leverkusen",
+        "club": "Napoli",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -1878,7 +1878,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Lyon",
+        "club": "Anderlecht",
         "crest": "",
         "played": 0,
         "goalsFor": 10,
@@ -1931,10 +1931,10 @@
     },
     {
       "id": 19,
-      "entrant": "Grace O'Callaghan",
+      "entrant": "MARK HACKETT",
       "previousRank": null,
       "ucl": {
-        "club": "Sevilla",
+        "club": "Paris Saint-Germain",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -1985,7 +1985,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Athletic Bilbao",
+        "club": "Benfica",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -2038,10 +2038,10 @@
     },
     {
       "id": 20,
-      "entrant": "Tom\u00e1s Hegarty",
+      "entrant": "GER O'BRIEN",
       "previousRank": null,
       "ucl": {
-        "club": "Monaco",
+        "club": "Porto",
         "crest": "",
         "played": 0,
         "goalsFor": 5,
@@ -2092,7 +2092,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "PAOK",
+        "club": "Besiktas",
         "crest": "",
         "played": 0,
         "goalsFor": 11,
@@ -2145,10 +2145,10 @@
     },
     {
       "id": 21,
-      "entrant": "Aisling O'Neill",
+      "entrant": "SHANE RUSSELL",
       "previousRank": null,
       "ucl": {
-        "club": "Marseille",
+        "club": "PSV Eindhoven",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -2199,7 +2199,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Rangers",
+        "club": "Crvena Zvezda",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -2252,10 +2252,10 @@
     },
     {
       "id": 22,
-      "entrant": "Brian Twomey",
+      "entrant": "STEVE DINAN",
       "previousRank": null,
       "ucl": {
-        "club": "Club Brugge",
+        "club": "Real Betis",
         "crest": "",
         "played": 0,
         "goalsFor": 5,
@@ -2359,10 +2359,10 @@
     },
     {
       "id": 23,
-      "entrant": "Clodagh O'Keeffe",
+      "entrant": "JAMIE KEENAN",
       "previousRank": null,
       "ucl": {
-        "club": "PSV Eindhoven",
+        "club": "Real Madrid",
         "crest": "",
         "played": 0,
         "goalsFor": 7,
@@ -2413,7 +2413,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Ludogorets",
+        "club": "Jagiellonia",
         "crest": "",
         "played": 0,
         "goalsFor": 9,
@@ -2466,10 +2466,10 @@
     },
     {
       "id": 24,
-      "entrant": "Sean Roche",
+      "entrant": "BRIAN CLARKE",
       "previousRank": null,
       "ucl": {
-        "club": "Sporting CP",
+        "club": "Roma",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -2520,7 +2520,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Midtjylland",
+        "club": "Lech Poznan",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -2573,10 +2573,10 @@
     },
     {
       "id": 25,
-      "entrant": "Orla McAuliffe",
+      "entrant": "GER DOLAN",
       "previousRank": null,
       "ucl": {
-        "club": "Celtic",
+        "club": "Shakhtar Donetsk",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -2627,7 +2627,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Bodo/Glimt",
+        "club": "Lillestrom",
         "crest": "",
         "played": 0,
         "goalsFor": 7,
@@ -2680,10 +2680,10 @@
     },
     {
       "id": 26,
-      "entrant": "Gavin Hurley",
+      "entrant": "VANESSA SARGENT",
       "previousRank": null,
       "ucl": {
-        "club": "Galatasaray",
+        "club": "Slavia Prague",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -2734,7 +2734,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Malmo",
+        "club": "Omonia",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -2787,10 +2787,10 @@
     },
     {
       "id": 27,
-      "entrant": "Sarah O'Mahony",
+      "entrant": "MICK O'RIORDAN",
       "previousRank": null,
       "ucl": {
-        "club": "Shakhtar Donetsk",
+        "club": "Sporting CP",
         "crest": "",
         "played": 0,
         "goalsFor": 8,
@@ -2841,7 +2841,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Rapid Wien",
+        "club": "Red Bull Salzburg",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -2894,10 +2894,10 @@
     },
     {
       "id": 28,
-      "entrant": "Kevin Noonan",
+      "entrant": "TOM PEARCE",
       "previousRank": null,
       "ucl": {
-        "club": "Feyenoord",
+        "club": "Stuttgart",
         "crest": "",
         "played": 0,
         "goalsFor": 7,
@@ -2948,7 +2948,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Partizan",
+        "club": "Trabzonspor",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -3001,10 +3001,10 @@
     },
     {
       "id": 29,
-      "entrant": "Fiona Cronin",
+      "entrant": "CHRIS GREAVES",
       "previousRank": null,
       "ucl": {
-        "club": "Atalanta",
+        "club": "Villarreal",
         "crest": "",
         "played": 0,
         "goalsFor": 5,
@@ -3055,7 +3055,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Trabzonspor",
+        "club": "Viktoria Plzen",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -3108,10 +3108,10 @@
     },
     {
       "id": 30,
-      "entrant": "Patrick Buckley",
+      "entrant": "GARRY O'CONNELL",
       "previousRank": null,
       "ucl": {
-        "club": "Aston Villa",
+        "club": "AEK Athens",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -3162,7 +3162,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Basel",
+        "club": "OFI Crete",
         "crest": "",
         "played": 0,
         "goalsFor": 7,
@@ -3215,10 +3215,10 @@
     },
     {
       "id": 31,
-      "entrant": "Emma Linehan",
+      "entrant": "DOMINIC MOYNIHAN",
       "previousRank": null,
       "ucl": {
-        "club": "Lille",
+        "club": "Bodo/Glimt",
         "crest": "",
         "played": 0,
         "goalsFor": 5,
@@ -3269,7 +3269,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Copenhagen",
+        "club": "Celtic",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -3322,10 +3322,10 @@
     },
     {
       "id": 32,
-      "entrant": "James O'Driscoll",
+      "entrant": "BRIAN KENEFICK",
       "previousRank": null,
       "ucl": {
-        "club": "Salzburg",
+        "club": "Slovan Bratislava",
         "crest": "",
         "played": 0,
         "goalsFor": 4,
@@ -3376,7 +3376,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Gent",
+        "club": "Fenerbahce",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -3429,10 +3429,10 @@
     },
     {
       "id": 33,
-      "entrant": "Louise Barrett",
+      "entrant": "JOHN TIERNEY",
       "previousRank": null,
       "ucl": {
-        "club": "Dinamo Zagreb",
+        "club": "LASK",
         "crest": "",
         "played": 0,
         "goalsFor": 3,
@@ -3483,7 +3483,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Viktoria Plzen",
+        "club": "Hapoel Beer-Sheva",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -3536,10 +3536,10 @@
     },
     {
       "id": 34,
-      "entrant": "Michael Dennehy",
+      "entrant": "KEITH O'CONNOR",
       "previousRank": null,
       "ucl": {
-        "club": "Young Boys",
+        "club": "Lyon",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -3590,7 +3590,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Legia Warsaw",
+        "club": "N.E.C. Nijmegen",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -3643,10 +3643,10 @@
     },
     {
       "id": 35,
-      "entrant": "Ciara O'Leary",
+      "entrant": "BRIAN O'DRISCOLL",
       "previousRank": null,
       "ucl": {
-        "club": "Slavia Prague",
+        "club": "Sabah",
         "crest": "",
         "played": 0,
         "goalsFor": 3,
@@ -3697,7 +3697,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Hearts",
+        "club": "Celje",
         "crest": "",
         "played": 0,
         "goalsFor": 5,
@@ -3750,10 +3750,10 @@
     },
     {
       "id": 36,
-      "entrant": "John Spillane",
+      "entrant": "RAY MURPHY",
       "previousRank": null,
       "ucl": {
-        "club": "Olympiacos",
+        "club": "Dinamo Zagreb",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -3804,7 +3804,7 @@
         "apiCode": ""
       },
       "uel": {
-        "club": "Maccabi Tel Aviv",
+        "club": "Levski Sofia",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
