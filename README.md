@@ -350,3 +350,28 @@ GitHub Pages filenames are case-sensitive, so use those exact lowercase names.
 - Made the integrated rank/prize block larger and more legible.
 - Centered mobile UCL / UEL row elements more consistently.
 - Centered the combined total box and the per-team score pills.
+
+
+## v40 live draw mode
+
+Added `draw.html`, a presentation-focused live allocation tool.
+
+Workflow: paste the entrant/UCL/UEL lists, then run `Draw entrant → Draw UCL team → Draw UEL team → Confirm & next`.
+
+The selection uses `crypto.getRandomValues()`, removes each selection from its pool, autosaves in the browser, supports fullscreen and anthem playback, looks up crests, and can export CSV or a populated `competition.json`.
+
+Open it at `/draw.html`.
+
+
+## v41 mobile collapsible leaderboard
+
+On mobile, entrant cards are now collapsed by default.
+
+Each collapsed row shows:
+- rank/prize box
+- manager name
+- UCL crest + UCL score
+- UEL crest + UEL score
+- combined total
+
+Tapping the row expands the full UCL/UEL sections and fixture grids. This makes the leaderboard much faster to scan without losing detail.

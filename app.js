@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=39";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=39";
+const DATA_URL = "competition.json?v=41";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=41";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -393,22 +393,35 @@ function mobileCard(entry, rank) {
       ${fixtureGrid(team, comp)}
     </div>`;
 
+  const compactClub = (team, comp) => `
+    <span class="mobile-mini-team ${comp.toLowerCase()}">
+      <img class="crest mini-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      <span class="mini-team-score">${clubScore(team)}</span>
+    </span>`;
+
   return `
-    <article class="mobile-card">
-      <div class="mobile-head">
+    <details class="mobile-card" data-entrant="${esc(entry.entrant)}">
+      <summary class="mobile-summary">
         <div class="rank-spot">
           ${rankBlock(rank)}
         </div>
         <div class="mobile-manager-wrap">
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
+          <div class="mobile-mini-teams">
+            ${compactClub(entry.ucl, "UCL")}
+            ${compactClub(entry.uel, "UEL")}
+          </div>
         </div>
         <div class="mobile-combined">
           <strong>${totalScore(entry)}</strong>
         </div>
+        <span class="mobile-expand" aria-hidden="true">⌄</span>
+      </summary>
+      <div class="mobile-details">
+        ${row(entry.ucl, "UCL")}
+        ${row(entry.uel, "UEL")}
       </div>
-      ${row(entry.ucl, "UCL")}
-      ${row(entry.uel, "UEL")}
-    </article>`;
+    </details>`;
 }
 
 

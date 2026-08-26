@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061024">
+  <title>Euro Goal Rush 26/27 — Live Draw</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg?v=40" type="image/svg+xml">
+  <link rel="stylesheet" href="draw.css?v=40">
+</head>
+<body>
+  <div class="draw-bg" aria-hidden="true"></div>
+
+  <header class="draw-topbar shell">
+    <a class="draw-brand" href="index.html">EURO GOAL RUSH 26/27</a>
+    <div class="top-actions">
+      <button class="ghost-btn" id="fullscreen-btn" type="button">⛶ Fullscreen</button>
+      <button class="anthem-mini ucl" id="draw-ucl-audio" type="button">▶ UCL</button>
+      <button class="anthem-mini uel" id="draw-uel-audio" type="button">▶ UEL</button>
+    </div>
+  </header>
+
+  <main class="shell draw-main">
+    <section class="setup-screen" id="setup-screen">
+      <div class="setup-hero">
+        <p class="kicker">LIVE ALLOCATION</p>
+        <h1>Build the draw</h1>
+        <p>Paste one item per line. The draw only starts when all three lists contain the same number of unique entries.</p>
+      </div>
+
+      <div class="setup-grid">
+        <label class="list-card entrants-card">
+          <div class="list-head"><span>Entrants</span><b id="entrant-count">0</b></div>
+          <textarea id="entrant-list" placeholder="Christopher O'Sullivan&#10;Michelle O'Keeffe&#10;..."></textarea>
+        </label>
+        <label class="list-card ucl-card">
+          <div class="list-head"><span>Champions League</span><b id="ucl-count">0</b></div>
+          <textarea id="ucl-list" placeholder="Real Madrid&#10;Manchester City&#10;..."></textarea>
+        </label>
+        <label class="list-card uel-card">
+          <div class="list-head"><span>Europa League</span><b id="uel-count">0</b></div>
+          <textarea id="uel-list" placeholder="Roma&#10;Manchester United&#10;..."></textarea>
+        </label>
+      </div>
+
+      <div class="setup-footer">
+        <div class="setup-note" id="setup-note">Add the three lists to begin.</div>
+        <div class="setup-buttons">
+          <button class="ghost-btn" id="demo-btn" type="button">Load demo data</button>
+          <button class="primary-btn" id="start-btn" type="button" disabled>Start live draw</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="live-screen" id="live-screen" hidden>
+      <div class="draw-status-row">
+        <div>
+          <p class="kicker">LIVE DRAW</p>
+          <h1>European Goal Rush</h1>
+        </div>
+        <div class="pool-counts">
+          <span><b id="entrants-left">36</b> entrants left</span>
+          <span class="ucl"><b id="ucl-left">36</b> UCL left</span>
+          <span class="uel"><b id="uel-left">36</b> UEL left</span>
+        </div>
+      </div>
+
+      <section class="stage-card">
+        <div class="draw-number">DRAW <span id="draw-number">01</span></div>
+        <div class="reveal-grid">
+          <article class="reveal-panel entrant-panel" id="entrant-panel">
+            <span class="reveal-label">ENTRANT</span>
+            <div class="reveal-main" id="entrant-reveal">Ready</div>
+          </article>
+          <article class="reveal-panel ucl-panel" id="ucl-panel">
+            <span class="reveal-label">CHAMPIONS LEAGUE</span>
+            <div class="club-reveal">
+              <img id="ucl-reveal-crest" src="crest-placeholder.svg" alt="">
+              <div class="reveal-main" id="ucl-reveal">—</div>
+            </div>
+          </article>
+          <article class="reveal-panel uel-panel" id="uel-panel">
+            <span class="reveal-label">EUROPA LEAGUE</span>
+            <div class="club-reveal">
+              <img id="uel-reveal-crest" src="crest-placeholder.svg" alt="">
+              <div class="reveal-main" id="uel-reveal">—</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="draw-controls">
+          <button class="draw-btn entrant-draw" id="draw-entrant-btn" type="button">Draw entrant</button>
+          <button class="draw-btn ucl-draw" id="draw-ucl-btn" type="button" disabled>Draw UCL team</button>
+          <button class="draw-btn uel-draw" id="draw-uel-btn" type="button" disabled>Draw UEL team</button>
+          <button class="confirm-btn" id="confirm-btn" type="button" disabled>Confirm & next</button>
+        </div>
+      </section>
+
+      <section class="results-section">
+        <div class="results-head">
+          <div>
+            <p class="kicker">COMPLETED DRAWS</p>
+            <h2><span id="completed-count">0</span> / <span id="total-count">36</span></h2>
+          </div>
+          <div class="result-actions">
+            <button class="ghost-btn" id="undo-btn" type="button" disabled>Undo last</button>
+            <button class="ghost-btn" id="copy-btn" type="button" disabled>Copy results</button>
+            <button class="ghost-btn" id="csv-btn" type="button" disabled>Download CSV</button>
+            <button class="primary-btn small" id="json-btn" type="button" disabled>Download competition.json</button>
+          </div>
+        </div>
+        <div class="results-table-wrap">
+          <table class="results-table">
+            <thead><tr><th>#</th><th>Entrant</th><th>UCL team</th><th>UEL team</th></tr></thead>
+            <tbody id="results-body"><tr class="empty-row"><td colspan="4">No completed draws yet.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="session-actions">
+        <span>Session saves automatically in this browser.</span>
+        <button class="danger-link" id="reset-btn" type="button">Reset draw</button>
+      </div>
+    </section>
+  </main>
+
+  <audio id="draw-ucl-track" src="ucl-anthem.mp3" preload="none"></audio>
+  <audio id="draw-uel-track" src="uel-anthem.mp3" preload="none"></audio>
+  <script src="draw.js?v=40" defer></script>
+</body>
+</html>
