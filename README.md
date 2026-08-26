@@ -27,3 +27,11 @@
 - Opponent code + score is wrapped as one centred unit inside every fixture tile.
 - Live dots are absolutely positioned so they no longer shift fixture text off-centre.
 - MD1–MD8 combined date-window subheadings and the v57 Draw-page crest fixes are retained.
+
+
+## v59 desktop header scaling
+- Reduced UCL/UEL label size on desktop.
+- Reduced matchday/date typography.
+- Reduced matchday card height and play-button size.
+- Kept countdown clear but less dominant.
+- Mobile unchanged.

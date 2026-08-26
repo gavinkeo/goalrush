@@ -3909,3 +3909,67 @@ th:nth-child(5){width:7%}
     gap:4px;
   }
 }
+
+
+/* =========================================================
+   v59 - desktop tournament header scale correction
+   ========================================================= */
+@media(min-width:701px){
+  .dashboard-header{
+    padding-top:8px !important;
+    padding-bottom:6px !important;
+  }
+
+  .title-top-row{
+    margin-bottom:7px !important;
+  }
+
+  .dashboard-header .matchday-chip{
+    min-height:74px !important;
+    padding:9px 12px !important;
+    row-gap:4px !important;
+    column-gap:11px !important;
+    grid-template-columns:38px minmax(142px,1fr) 46px !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    width:33px !important;
+    height:33px !important;
+    min-width:33px !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-topline{
+    gap:15px !important;
+  }
+
+  .dashboard-header .matchday-chip .comp{
+    font-size:.74rem !important;
+    letter-spacing:.075em !important;
+  }
+
+  .dashboard-header .matchday-chip .state{
+    min-width:58px !important;
+    font-size:.62rem !important;
+    letter-spacing:.07em !important;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    font-size:.80rem !important;
+    line-height:1.05 !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:44px !important;
+    height:44px !important;
+    min-width:44px !important;
+    min-height:44px !important;
+  }
+
+  .dashboard-header .anthem-icon{
+    font-size:.62rem !important;
+  }
+
+  .header-divider{
+    margin-top:7px !important;
+  }
+}
