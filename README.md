@@ -44,3 +44,10 @@
 - Added a compact, horizontally scrollable MD1–MD8 date-window calendar on mobile.
 - The mobile date windows are populated from the same UCL/UEL schedule data as the desktop headers.
 - Draw-page crest fixes from v57 remain intact.
+
+
+## v61 desktop chip alignment
+
+- UCL/UEL now starts on the exact same left edge as the `MD1 · date` line beneath.
+- Countdown remains on the right side of the top row.
+- No mobile or leaderboard layout changes.

@@ -4141,3 +4141,39 @@ th:nth-child(5){width:7%}
     min-width:78px;
   }
 }
+
+
+/* =========================================================
+   v61 - align UCL/UEL directly above MD1 text on desktop
+   ========================================================= */
+@media(min-width:701px){
+
+  .dashboard-header .matchday-chip .chip-copy{
+    align-items:stretch !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-topline{
+    display:grid !important;
+    grid-template-columns:auto 1fr;
+    align-items:center;
+    justify-content:stretch !important;
+    gap:14px !important;
+    width:100%;
+  }
+
+  .dashboard-header .matchday-chip .comp{
+    justify-self:start !important;
+    text-align:left !important;
+  }
+
+  .dashboard-header .matchday-chip .state{
+    justify-self:end !important;
+    text-align:right !important;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    justify-self:start !important;
+    text-align:left !important;
+    width:100%;
+  }
+}
