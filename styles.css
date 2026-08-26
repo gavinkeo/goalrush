@@ -3973,3 +3973,171 @@ th:nth-child(5){width:7%}
     margin-top:7px !important;
   }
 }
+
+
+/* =========================================================
+   v60 - tournament copy alignment, fixture pair centering,
+   mobile matchday calendar
+   ========================================================= */
+
+.mobile-md-calendar{
+  display:none;
+}
+
+@media(min-width:701px){
+
+  /* Treat logo, copy and play control as three vertically centred blocks. */
+  .dashboard-header .matchday-chip{
+    grid-template-columns:38px minmax(142px,1fr) 46px !important;
+    grid-template-areas:"logo copy anthem" !important;
+    align-items:center !important;
+    row-gap:0 !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-copy{
+    grid-area:copy;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    min-width:0;
+    align-self:center;
+  }
+
+  .dashboard-header .matchday-chip .chip-topline{
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    gap:15px !important;
+    width:100%;
+    line-height:1;
+  }
+
+  .dashboard-header .matchday-chip strong{
+    grid-area:auto !important;
+    align-self:auto !important;
+    justify-self:auto !important;
+    width:100%;
+    text-align:center !important;
+    line-height:1 !important;
+  }
+
+  .dashboard-header .matchday-chip .chip-logo{
+    align-self:center !important;
+  }
+
+  .dashboard-header .matchday-chip .anthem-btn{
+    align-self:center !important;
+  }
+
+  /*
+   * Use fixed equal-width opponent/score columns so the visual centre is
+   * always the gap between the two values. This removes the slight optical
+   * drift on examples such as "ARS 0-3".
+   */
+  .fixture-content{
+    display:grid !important;
+    grid-template-columns:3.2em 3.2em;
+    column-gap:5px;
+    align-items:center;
+    justify-content:center;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .fixture-content b{
+    text-align:right !important;
+  }
+
+  .fixture-content .fixture-score{
+    text-align:left !important;
+  }
+}
+
+@media(max-width:700px){
+
+  /*
+   * Nested copy wrapper becomes transparent to the mobile grid so the
+   * existing compact UCL/UEL cards retain their current appearance.
+   */
+  .dashboard-header .matchday-chip .chip-copy{
+    display:contents;
+  }
+
+  .mobile-md-calendar{
+    display:flex;
+    gap:7px;
+    overflow-x:auto;
+    padding:0 1px 5px;
+    margin:1px 0 7px;
+    scrollbar-width:none;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x proximity;
+  }
+
+  .mobile-md-calendar::-webkit-scrollbar{
+    display:none;
+  }
+
+  .mobile-md-item{
+    flex:0 0 82px;
+    min-width:82px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    min-height:42px;
+    padding:6px 7px;
+    border:1px solid rgba(255,255,255,.075);
+    border-radius:9px;
+    background:rgba(255,255,255,.025);
+    scroll-snap-align:start;
+    line-height:1;
+  }
+
+  .mobile-md-item b{
+    color:#aebbd3;
+    font-size:.52rem;
+    font-weight:950;
+    letter-spacing:.09em;
+  }
+
+  .mobile-md-item small{
+    color:#667694;
+    font-size:.40rem;
+    font-weight:850;
+    letter-spacing:.025em;
+    white-space:nowrap;
+  }
+
+  .fixture-content{
+    display:grid !important;
+    grid-template-columns:3.1em 3.1em;
+    column-gap:4px;
+    justify-content:center;
+    align-items:center;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .fixture-content b{
+    text-align:right !important;
+  }
+
+  .fixture-content .fixture-score{
+    text-align:left !important;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-md-item{
+    flex-basis:78px;
+    min-width:78px;
+  }
+}

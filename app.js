@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=59";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=59";
+const DATA_URL = "competition.json?v=60";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=60";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -559,10 +559,16 @@ function populateCombinedMatchdayHeaders(matchdays) {
     const uelMd = uel.find(item => Number(item.md) === md);
     const starts = [uclMd?.start, uelMd?.start].filter(Boolean).sort();
     const ends = [uclMd?.end, uelMd?.end].filter(Boolean).sort();
-    const label = $(`#md-window-${md}`);
-    if (label && starts.length && ends.length) {
-      label.textContent = formatCombinedMatchdayWindow(starts[0], ends[ends.length - 1]);
-    }
+    const value =
+      starts.length && ends.length
+        ? formatCombinedMatchdayWindow(starts[0], ends[ends.length - 1])
+        : "";
+
+    const desktopLabel = $(`#md-window-${md}`);
+    const mobileLabel = $(`#mobile-md-window-${md}`);
+
+    if (desktopLabel && value) desktopLabel.textContent = value;
+    if (mobileLabel && value) mobileLabel.textContent = value;
   }
 }
 

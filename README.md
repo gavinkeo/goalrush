@@ -35,3 +35,12 @@
 - Reduced matchday card height and play-button size.
 - Kept countdown clear but less dominant.
 - Mobile unchanged.
+
+
+## v60 polish
+
+- Desktop UCL/UEL two-line text blocks are vertically centred against their PNG logos.
+- Fixture opponent + score pairs now use equal-width columns for exact visual centring.
+- Added a compact, horizontally scrollable MD1–MD8 date-window calendar on mobile.
+- The mobile date windows are populated from the same UCL/UEL schedule data as the desktop headers.
+- Draw-page crest fixes from v57 remain intact.
