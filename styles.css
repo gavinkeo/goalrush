@@ -3411,3 +3411,51 @@ th:nth-child(5){width:7%}
     column-gap:8px !important;
   }
 }
+
+/* v53 PNG title logos + cleaner matchday chips */
+.title-logos{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-left:12px;
+  transform:translateY(2px);
+}
+.title-logo{
+  display:block;
+  width:26px;
+  height:26px;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.35));
+}
+.title-logo-ucl{width:28px;height:28px}
+.title-logo-uel{width:24px;height:24px}
+
+.dashboard-header .matchday-chip{
+  grid-template-columns:1fr auto;
+  grid-template-areas:"comp state anthem" "date date anthem";
+  padding-left:18px;
+}
+.dashboard-header .matchday-chip .comp{align-self:end}
+.dashboard-header .matchday-chip strong{align-self:start}
+.dashboard-header .matchday-chip .state{justify-self:end;align-self:end}
+.dashboard-header .matchday-chip .anthem-btn{grid-area:anthem;align-self:center;justify-self:end}
+.dashboard-header .matchday-chip .chip-logo{display:none !important}
+
+@media (max-width: 900px){
+  .title-logos{margin-left:10px;gap:8px}
+  .title-logo-ucl{width:24px;height:24px}
+  .title-logo-uel{width:21px;height:21px}
+  .dashboard-header .matchday-chip{padding-left:16px}
+}
+
+@media (max-width: 700px){
+  .main-title{justify-content:center; text-align:center;}
+  .title-logos{margin-left:8px;gap:7px;transform:translateY(1px)}
+  .title-logo-ucl{width:22px;height:22px}
+  .title-logo-uel{width:19px;height:19px}
+  .dashboard-header .matchday-chip{
+    padding-left:16px;
+    grid-template-columns:1fr auto;
+    grid-template-areas:"comp state anthem" "date date anthem";
+  }
+}
