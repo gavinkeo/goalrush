@@ -2268,3 +2268,155 @@ th:nth-child(5){width:7%}
     font-size:.33rem;
   }
 }
+
+
+/* =========================================================
+   v39 - mobile alignment + breathing room polish
+   ========================================================= */
+
+@media(max-width:700px){
+
+  /* Give the title area a bit more air */
+  .dashboard-header{
+    padding-top:12px !important;
+    padding-bottom:10px !important;
+  }
+
+  .title-top-row{
+    gap:10px !important;
+    margin-bottom:10px !important;
+  }
+
+  .main-title{
+    font-size:1.34rem !important;
+    line-height:1.05 !important;
+    margin-top:2px !important;
+    margin-bottom:2px !important;
+  }
+
+  /* Prize more visible inside the rank block */
+  .rank-spot{
+    min-width:48px !important;
+    flex-basis:48px !important;
+  }
+
+  .rank-box{
+    width:44px !important;
+    min-height:42px !important;
+    gap:3px !important;
+    padding:5px 3px 5px !important;
+    border-radius:12px !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.04),
+      0 4px 12px rgba(0,0,0,.14);
+  }
+
+  .rank-number{
+    font-size:.82rem !important;
+  }
+
+  .rank-prize{
+    font-size:.41rem !important;
+    font-weight:1000 !important;
+    letter-spacing:.015em !important;
+  }
+
+  .rank-box-1{
+    border-color:rgba(255,213,101,.34) !important;
+    background:rgba(255,213,101,.085) !important;
+  }
+
+  .rank-box-2{
+    border-color:rgba(219,228,244,.26) !important;
+    background:rgba(219,228,244,.07) !important;
+  }
+
+  .rank-box-3{
+    border-color:rgba(229,173,134,.30) !important;
+    background:rgba(229,173,134,.08) !important;
+  }
+
+  /* Header row a touch cleaner */
+  .mobile-head{
+    grid-template-columns:48px 1fr 64px !important;
+    align-items:center !important;
+    padding:10px 11px !important;
+  }
+
+  /* Center manager-row badges / crests / score pills */
+  .mobile-team{
+    align-items:center !important;
+  }
+
+  .mobile-badge{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  .mobile-team .crest{
+    align-self:center !important;
+  }
+
+  .mobile-team strong{
+    display:flex !important;
+    align-items:center !important;
+    min-height:30px;
+  }
+
+  /* Center totals properly */
+  .mobile-combined,
+  .mobile-total{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+  }
+
+  .mobile-combined{
+    min-width:62px !important;
+    min-height:48px !important;
+    padding:0 8px !important;
+    border-radius:12px !important;
+  }
+
+  .mobile-combined strong{
+    display:block;
+    width:100%;
+    text-align:center !important;
+    line-height:1 !important;
+    font-size:1.22rem !important;
+  }
+
+  .mobile-total{
+    min-width:40px !important;
+    min-height:40px !important;
+    padding:0 !important;
+    border-radius:11px !important;
+    font-size:.86rem !important;
+  }
+}
+
+@media(max-width:390px){
+  .main-title{
+    font-size:1.26rem !important;
+  }
+
+  .rank-spot{
+    min-width:46px !important;
+    flex-basis:46px !important;
+  }
+
+  .rank-box{
+    width:42px !important;
+    min-height:40px !important;
+  }
+
+  .rank-prize{
+    font-size:.39rem !important;
+  }
+
+  .mobile-head{
+    grid-template-columns:46px 1fr 60px !important;
+  }
+}

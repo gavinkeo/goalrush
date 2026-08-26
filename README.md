@@ -342,3 +342,11 @@ GitHub Pages filenames are case-sensitive, so use those exact lowercase names.
 - Reduced the mobile manager-header padding.
 - Softened the left entrant accent line further.
 - Left fixture, team and total layouts unchanged.
+
+
+## v39 mobile alignment polish
+
+- Added more breathing room around the main title.
+- Made the integrated rank/prize block larger and more legible.
+- Centered mobile UCL / UEL row elements more consistently.
+- Centered the combined total box and the per-team score pills.
