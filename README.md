@@ -287,3 +287,14 @@ GitHub Pages filenames are case-sensitive, so use those exact lowercase names.
 - Restored all three podium cards on mobile instead of showing only 1st place.
 - Gave the `EURO GOAL RUSH 26/27` heading a brighter gradient treatment.
 - Increased visual separation between mobile entrants with stronger card borders, spacing and shadows.
+
+
+## v34 mobile density pass
+
+- 1st place podium card stays full-width.
+- 2nd and 3rd place now sit side-by-side beneath it.
+- Removed the heavy outer container around the title/search area.
+- Slightly reduced the mobile title size.
+- Slimmed the search field.
+- Removed the redundant `TOTAL` label inside mobile entrant cards.
+- Added a subtle left accent edge to make each entrant block easier to distinguish.

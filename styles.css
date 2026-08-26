@@ -1486,3 +1486,168 @@ th:nth-child(5){width:7%}
     font-size:.82rem;
   }
 }
+
+
+/* =========================================================
+   v34 - mobile final-density pass
+   ========================================================= */
+
+@media(max-width:700px){
+
+  /* Podium: 1st full width, 2nd + 3rd side-by-side */
+  .podium{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+    gap:8px !important;
+  }
+
+  .podium-card{
+    min-width:0;
+  }
+
+  .podium-card.first{
+    grid-column:1 / -1;
+  }
+
+  .podium-card.second,
+  .podium-card.third{
+    padding:9px 10px !important;
+  }
+
+  .podium-card.second .podium-name,
+  .podium-card.third .podium-name{
+    font-size:.72rem !important;
+  }
+
+  .podium-card.second .podium-teams,
+  .podium-card.third .podium-teams{
+    gap:6px;
+  }
+
+  .podium-card.second .pair-crests img,
+  .podium-card.third .pair-crests img{
+    width:24px;
+    height:24px;
+    padding:2px;
+  }
+
+  .podium-card.second .podium-team-names span,
+  .podium-card.third .podium-team-names span{
+    font-size:.47rem;
+  }
+
+  .podium-card.second .podium-breakdown,
+  .podium-card.third .podium-breakdown{
+    font-size:.44rem;
+  }
+
+  .podium-card.second .podium-score,
+  .podium-card.third .podium-score{
+    font-size:1.18rem;
+  }
+
+  .podium-card.second .podium-rank,
+  .podium-card.third .podium-rank{
+    font-size:1rem;
+  }
+
+  .podium-card.second .podium-prize,
+  .podium-card.third .podium-prize{
+    font-size:.41rem;
+    padding:2px 5px;
+  }
+
+  /* Title/search: remove the heavy outer card */
+  .standings-card{
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    overflow:visible !important;
+  }
+
+  .standings-head{
+    margin-bottom:8px !important;
+    padding:4px 2px 8px !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  .standings-head h2{
+    font-size:1.42rem !important;
+    line-height:1 !important;
+    margin-bottom:2px !important;
+  }
+
+  .search{
+    padding:9px 11px !important;
+    border-radius:11px !important;
+    background:rgba(255,255,255,.035) !important;
+  }
+
+  .search input{
+    font-size:.77rem !important;
+  }
+
+  /* Entrant cards: stronger separation without extra bulk */
+  .mobile-standings{
+    gap:13px !important;
+  }
+
+  .mobile-card{
+    position:relative;
+    border:1px solid rgba(255,255,255,.11) !important;
+    box-shadow:
+      0 14px 28px rgba(0,0,0,.18),
+      inset 0 1px 0 rgba(255,255,255,.025) !important;
+  }
+
+  .mobile-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:linear-gradient(180deg, rgba(73,228,255,.55), rgba(255,173,97,.48));
+    opacity:.55;
+    pointer-events:none;
+  }
+
+  .mobile-combined{
+    min-width:58px !important;
+    padding:7px 9px !important;
+  }
+
+  .mobile-combined strong{
+    font-size:1.20rem !important;
+    line-height:1 !important;
+  }
+}
+
+@media(max-width:390px){
+
+  .podium{
+    gap:7px !important;
+  }
+
+  .podium-card.second,
+  .podium-card.third{
+    padding:8px 9px !important;
+  }
+
+  .podium-card.second .podium-name,
+  .podium-card.third .podium-name{
+    font-size:.68rem !important;
+  }
+
+  .podium-card.second .podium-team-names span,
+  .podium-card.third .podium-team-names span{
+    font-size:.44rem;
+  }
+
+  .standings-head h2{
+    font-size:1.30rem !important;
+  }
+}

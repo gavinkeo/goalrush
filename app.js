@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=33";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=33";
+const DATA_URL = "competition.json?v=34";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=34";
 
 const $ = (sel) => document.querySelector(sel);
 const podiumEl = $("#podium");
@@ -385,7 +385,6 @@ function mobileCard(entry, rank) {
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
         </div>
         <div class="mobile-combined">
-          <span>TOTAL</span>
           <strong>${totalScore(entry)}</strong>
         </div>
       </div>
