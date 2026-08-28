@@ -953,7 +953,7 @@ function openTeamModal(teamName, comp) {
         </div>
       </div>
       <div class="team-modal-total ${c}">
-        <span>GF+GA</span>
+        <span>GOALS</span>
         <strong>${clubScore(team)}</strong>
       </div>
     </div>
