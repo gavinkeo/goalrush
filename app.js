@@ -420,21 +420,8 @@ function hideFixtureTooltip() {
 }
 
 function wireFixtureTooltips() {
-  document.addEventListener("mouseover", event => {
-    if (fixtureTooltipOnMobile()) return;
-    const fixture = event.target.closest?.(".fixture[data-tooltip]");
-    if (!fixture || fixture === activeFixtureTooltipTarget) return;
-    showFixtureTooltip(fixture);
-  });
-
-  document.addEventListener("mouseout", event => {
-    if (fixtureTooltipOnMobile()) return;
-    if (!activeFixtureTooltipTarget) return;
-    if (event.relatedTarget && activeFixtureTooltipTarget.contains(event.relatedTarget)) return;
-    const fromFixture = event.target.closest?.(".fixture[data-tooltip]");
-    if (fromFixture === activeFixtureTooltipTarget) hideFixtureTooltip();
-  });
-
+  // Fixture detail bubbles are mobile-only.
+  // Desktop uses the cleaner crest tiles + clickable team fixture modal.
   document.addEventListener("click", event => {
     if (!fixtureTooltipOnMobile()) return;
 
