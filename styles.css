@@ -7223,3 +7223,92 @@ html.manager-modal-open body{
     font-size:.98rem !important;
   }
 }
+
+
+/* =========================================================
+   v107 - clickable desktop club badges
+   ========================================================= */
+
+@media(min-width:701px){
+
+  .team-crest-button,
+  .fixture-crest-button,
+  .team-modal-opponent-crest-button{
+    appearance:none;
+    -webkit-appearance:none;
+    display:inline-grid;
+    place-items:center;
+    flex:0 0 auto;
+    margin:0;
+    padding:0;
+    border:0;
+    background:transparent;
+    color:inherit;
+    font:inherit;
+    cursor:pointer;
+  }
+
+  .team-crest-button{
+    border-radius:10px;
+  }
+
+  .team-crest-button .team-main-crest{
+    transition:
+      transform .14s ease,
+      border-color .14s ease,
+      background .14s ease,
+      box-shadow .14s ease !important;
+  }
+
+  .team-crest-button:hover .team-main-crest,
+  .team-crest-button:focus-visible .team-main-crest{
+    transform:translateY(-1px) scale(1.045);
+    border-color:rgba(164,203,255,.25) !important;
+    background:rgba(255,255,255,.065) !important;
+    box-shadow:0 5px 14px rgba(0,0,0,.12);
+  }
+
+  .team-crest-button:focus-visible,
+  .fixture-crest-button:focus-visible,
+  .team-modal-opponent-crest-button:focus-visible{
+    outline:2px solid rgba(73,228,255,.38);
+    outline-offset:2px;
+  }
+
+  .fixture-crest-button{
+    width:27px !important;
+    height:27px !important;
+    border-radius:8px !important;
+    transition:
+      transform .14s ease,
+      background .14s ease,
+      box-shadow .14s ease !important;
+  }
+
+  .fixture-crest-button:hover,
+  .fixture-crest-button:focus-visible{
+    transform:scale(1.08);
+    background:rgba(255,255,255,.075) !important;
+    box-shadow:0 4px 12px rgba(0,0,0,.13);
+  }
+
+  .team-modal-opponent-crest-button{
+    width:31px;
+    height:31px;
+    border-radius:8px;
+    transition:
+      transform .14s ease,
+      background .14s ease !important;
+  }
+
+  .team-modal-opponent-crest-button:hover,
+  .team-modal-opponent-crest-button:focus-visible{
+    transform:scale(1.07);
+    background:rgba(255,255,255,.055);
+  }
+
+  .team-modal-opponent-crest-button img{
+    width:27px !important;
+    height:27px !important;
+  }
+}

@@ -918,13 +918,25 @@ function fixtureGrid(team, comp) {
         <span class="fixture desktop-fixture${statusClass}${fixtureTemporalClass(index, comp)}"
               aria-label="${esc(tooltipText.replaceAll("\n", ". "))}">
           <span class="fixture-content desktop-fixture-content">
-            <span class="fixture-crest-plate">
-              <img class="fixture-opponent-crest"
-                   data-club-key="${esc(clubKey(opponentKey))}"
-                   src="${esc(fixtureOpponentCrest(item))}"
-                   alt=""
-                   onerror="this.src='${PLACEHOLDER_CREST}'">
-            </span>
+            ${opponent ? `
+              <button class="fixture-crest-plate fixture-crest-button team-fixture-trigger"
+                      type="button"
+                      data-team="${esc(opponent.club)}"
+                      data-comp="${esc(comp)}"
+                      aria-label="View ${esc(opponent.club)} fixtures">
+                <img class="fixture-opponent-crest"
+                     data-club-key="${esc(clubKey(opponentKey))}"
+                     src="${esc(fixtureOpponentCrest(item))}"
+                     alt=""
+                     onerror="this.src='${PLACEHOLDER_CREST}'">
+              </button>` : `
+              <span class="fixture-crest-plate">
+                <img class="fixture-opponent-crest"
+                     data-club-key="${esc(clubKey(opponentKey))}"
+                     src="${esc(fixtureOpponentCrest(item))}"
+                     alt=""
+                     onerror="this.src='${PLACEHOLDER_CREST}'">
+              </span>`}
             <span class="fixture-score">${esc(scoreText || "–")}</span>
           </span>
         </span>`;
@@ -935,7 +947,17 @@ function fixtureGrid(team, comp) {
 function teamCell(team, comp) {
   return `
     <div class="team-cell">
-      <img class="crest team-main-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      <button class="team-crest-button team-fixture-trigger"
+              type="button"
+              data-team="${esc(team.club)}"
+              data-comp="${esc(comp)}"
+              aria-label="View ${esc(team.club)} fixtures">
+        <img class="crest team-main-crest"
+             data-club-key="${esc(clubKey(team.club))}"
+             src="${crest(team)}"
+             alt=""
+             onerror="this.src='${PLACEHOLDER_CREST}'">
+      </button>
       <div class="team-meta">
         <button class="team-name team-name-button"
                 type="button"
@@ -1119,10 +1141,21 @@ function teamModalFixtureRows(team, comp) {
         <span class="team-modal-time">${esc(kickoffText)}</span>
         <span class="team-modal-venue ${venueCode === "H" ? "home" : venueCode === "A" ? "away" : ""}" title="${venueWord}">${venueLabel}</span>
         <span class="team-modal-opponent">
-          <img data-club-key="${esc(clubKey(opponentKey))}"
-               src="${esc(opponent ? crest(opponent) : PLACEHOLDER_CREST)}"
-               alt=""
-               onerror="this.src='${PLACEHOLDER_CREST}'">
+          ${opponent ? `
+            <button class="team-modal-opponent-crest-button team-fixture-trigger"
+                    type="button"
+                    data-team="${esc(opponent.club)}"
+                    data-comp="${esc(comp)}"
+                    aria-label="View ${esc(opponent.club)} fixtures">
+              <img data-club-key="${esc(clubKey(opponentKey))}"
+                   src="${esc(crest(opponent))}"
+                   alt=""
+                   onerror="this.src='${PLACEHOLDER_CREST}'">
+            </button>` : `
+            <img data-club-key="${esc(clubKey(opponentKey))}"
+                 src="${PLACEHOLDER_CREST}"
+                 alt=""
+                 onerror="this.src='${PLACEHOLDER_CREST}'">`}
           ${countryFlagMarkup(countryInfo, "team-modal-flag")}
           <strong>${esc(opponentName)}</strong>
         </span>
@@ -1192,7 +1225,7 @@ function closeTeamModal() {
 
 function wireTeamModal() {
   document.addEventListener("click", event => {
-    const teamButton = event.target.closest?.(".team-name-button");
+    const teamButton = event.target.closest?.(".team-name-button, .team-fixture-trigger");
     if (teamButton) {
       event.preventDefault();
       openTeamModal(teamButton.dataset.team, teamButton.dataset.comp);
