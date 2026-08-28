@@ -1375,7 +1375,15 @@ async function init() {
     if (!response.ok) throw new Error(`competition.json HTTP ${response.status}`);
     const data = await response.json();
 
-    entries = Array.isArray(data.entries) ? data.entries : [];
+    entries = Array.isArray(data.entries)
+      ? data.entries.map(entry => ({
+          ...entry,
+          entrant:
+            entry?.entrant === "Danielle Neville" ? "Brian Clarke" :
+            entry?.entrant === "Bob" ? "Bob O'Neill" :
+            entry?.entrant
+        }))
+      : [];
 
     const uclSchedule = data.matchdays?.ucl || [];
     const uelSchedule = data.matchdays?.uel || [];
