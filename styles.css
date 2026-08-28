@@ -5827,3 +5827,218 @@ html.team-modal-open body{
     display:none !important;
   }
 }
+
+
+/* =========================================================
+   v86 - remove redundant desktop fixture hover cards
+   + refine the team fixture modal
+   ========================================================= */
+
+@media(min-width:701px){
+
+  .desktop-fixture{
+    cursor:default !important;
+  }
+
+  /* No hover lift now that these are deliberately glanceable score tiles. */
+  .desktop-fixture:hover{
+    transform:none !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.022),
+      0 3px 9px rgba(0,0,0,.035) !important;
+  }
+
+  .ucl-row .desktop-fixture:hover{
+    border-color:rgba(73,228,255,.115) !important;
+  }
+
+  .uel-row .desktop-fixture:hover{
+    border-color:rgba(255,173,97,.12) !important;
+  }
+
+  .desktop-fixture.next-md:hover{
+    border-color:rgba(255,213,101,.46) !important;
+    box-shadow:
+      0 0 18px rgba(255,213,101,.055),
+      inset 0 1px 0 rgba(255,255,255,.045) !important;
+  }
+
+  .desktop-fixture.current:hover{
+    border-color:rgba(85,241,162,.48) !important;
+  }
+}
+
+
+/* Slightly tighter / richer fixture cue card. */
+
+.team-modal-card{
+  width:min(720px,calc(100vw - 36px)) !important;
+}
+
+.team-modal-hero{
+  padding-top:21px !important;
+  padding-bottom:17px !important;
+}
+
+.team-modal-main-crest{
+  width:58px !important;
+  height:58px !important;
+  flex-basis:58px !important;
+}
+
+.team-modal-main-crest img{
+  width:47px !important;
+  height:47px !important;
+}
+
+.team-modal-column-heads,
+.team-modal-fixture{
+  grid-template-columns:44px 78px 52px 40px minmax(0,1fr) 54px !important;
+  column-gap:9px !important;
+}
+
+.team-modal-column-heads{
+  padding:11px 22px 7px !important;
+}
+
+.team-modal-fixtures{
+  padding:0 15px 14px !important;
+}
+
+.team-modal-fixture{
+  min-height:48px !important;
+  padding:4px 7px !important;
+}
+
+.team-modal-md{
+  font-size:.59rem !important;
+}
+
+.team-modal-date,
+.team-modal-time{
+  font-size:.56rem !important;
+}
+
+.team-modal-opponent{
+  gap:11px !important;
+}
+
+.team-modal-opponent img{
+  width:31px !important;
+  height:31px !important;
+  flex-basis:31px !important;
+}
+
+.team-modal-opponent strong{
+  color:#f5f8ff !important;
+  font-size:.65rem !important;
+  font-weight:900 !important;
+  letter-spacing:-.006em;
+}
+
+.team-modal-venue{
+  width:28px !important;
+  height:28px !important;
+  border-radius:8px !important;
+  font-size:.53rem !important;
+  background:rgba(255,255,255,.02) !important;
+}
+
+/* Competition tint is more useful than generic home/away colour. */
+.team-modal-fixtures.ucl .team-modal-venue{
+  color:#bdf8ff !important;
+  border-color:rgba(73,228,255,.16) !important;
+  background:rgba(73,228,255,.055) !important;
+}
+
+.team-modal-fixtures.uel .team-modal-venue{
+  color:#ffdbb8 !important;
+  border-color:rgba(255,173,97,.16) !important;
+  background:rgba(255,173,97,.055) !important;
+}
+
+/* Home is a touch stronger; away stays visibly secondary. */
+.team-modal-fixtures .team-modal-venue.home{
+  font-weight:950 !important;
+}
+
+.team-modal-fixtures .team-modal-venue.away{
+  opacity:.78;
+}
+
+.team-modal-score{
+  min-width:50px !important;
+  padding:6px 7px !important;
+  border-radius:9px !important;
+  background:rgba(255,255,255,.018) !important;
+  font-size:.63rem !important;
+}
+
+.team-modal-fixtures.ucl .team-modal-score{
+  border-color:rgba(73,228,255,.11) !important;
+  background:rgba(73,228,255,.032) !important;
+}
+
+.team-modal-fixtures.uel .team-modal-score{
+  border-color:rgba(255,173,97,.11) !important;
+  background:rgba(255,173,97,.032) !important;
+}
+
+/* Keep the highlighted next/current match elegant rather than boxy. */
+.team-modal-fixture.next-md,
+.team-modal-fixture.current{
+  margin-inline:-2px;
+  padding-inline:9px !important;
+}
+
+@media(max-height:720px) and (min-width:701px){
+  .team-modal-fixture{
+    min-height:44px !important;
+  }
+
+  .team-modal-hero{
+    padding-top:17px !important;
+    padding-bottom:14px !important;
+  }
+}
+
+
+/* =========================================================
+   v87 - entrant names in uppercase
+   Presentation only; competition.json remains unchanged.
+   ========================================================= */
+
+.manager-name,
+.mobile-manager-name{
+  text-transform:uppercase !important;
+  letter-spacing:.012em;
+}
+
+
+/* =========================================================
+   v88 - desktop club names in uppercase
+   Mobile club names remain mixed case for readability.
+   ========================================================= */
+
+@media(min-width:701px){
+  .team-name-button,
+  .team-name{
+    text-transform:uppercase !important;
+    letter-spacing:.018em;
+  }
+}
+
+
+/* =========================================================
+   v89 - slightly larger main site title
+   ========================================================= */
+
+.main-title-text{
+  font-size:1.10em !important;
+}
+
+@media(max-width:700px){
+  .main-title-text{
+    font-size:1.12em !important;
+  }
+}
