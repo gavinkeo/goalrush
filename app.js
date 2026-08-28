@@ -7,6 +7,8 @@ const mobileEl = $("#mobile-standings");
 const searchEl = $("#search");
 const teamModalEl = $("#team-modal");
 const teamModalContentEl = $("#team-modal-content");
+const managerModalEl = $("#manager-modal");
+const managerModalContentEl = $("#manager-modal-content");
 
 const uclAnthemBtn = $("#ucl-anthem-btn");
 const uelAnthemBtn = $("#uel-anthem-btn");
@@ -278,6 +280,109 @@ const OPPONENT_NAMES = {
   VIL:"Villarreal"
 };
 
+const CLUB_COUNTRIES = {
+  "AC Milan": { code:"IT", name:"Italy" },
+  "AEK Athens": { code:"GR", name:"Greece" },
+  "AZ Alkmaar": { code:"NL", name:"Netherlands" },
+  "Anderlecht": { code:"BE", name:"Belgium" },
+  "Ararat-Armenia": { code:"AM", name:"Armenia" },
+  "Arsenal": { code:"GB", name:"United Kingdom" },
+  "Aston Villa": { code:"GB", name:"United Kingdom" },
+  "Atletico Madrid": { code:"ES", name:"Spain" },
+  "Barcelona": { code:"ES", name:"Spain" },
+  "Bayer Leverkusen": { code:"DE", name:"Germany" },
+  "Bayern Munich": { code:"DE", name:"Germany" },
+  "Benfica": { code:"PT", name:"Portugal" },
+  "Besiktas": { code:"TR", name:"Turkey" },
+  "Bodo/Glimt": { code:"NO", name:"Norway" },
+  "Borussia Dortmund": { code:"DE", name:"Germany" },
+  "Bournemouth": { code:"GB", name:"United Kingdom" },
+  "Celje": { code:"SI", name:"Slovenia" },
+  "Celta Vigo": { code:"ES", name:"Spain" },
+  "Celtic": { code:"GB", name:"United Kingdom" },
+  "Club Brugge": { code:"BE", name:"Belgium" },
+  "Como": { code:"IT", name:"Italy" },
+  "Crystal Palace": { code:"GB", name:"United Kingdom" },
+  "Crvena Zvezda": { code:"RS", name:"Serbia" },
+  "Dinamo Zagreb": { code:"HR", name:"Croatia" },
+  "Fenerbahce": { code:"TR", name:"Turkey" },
+  "Ferencvaros": { code:"HU", name:"Hungary" },
+  "Feyenoord": { code:"NL", name:"Netherlands" },
+  "GNK Dinamo": { code:"HR", name:"Croatia" },
+  "Galatasaray": { code:"TR", name:"Turkey" },
+  "Hapoel Beer-Sheva": { code:"IL", name:"Israel" },
+  "Hoffenheim": { code:"DE", name:"Germany" },
+  "Inter Milan": { code:"IT", name:"Italy" },
+  "Jagiellonia": { code:"PL", name:"Poland" },
+  "Juventus": { code:"IT", name:"Italy" },
+  "LASK": { code:"AT", name:"Austria" },
+  "Lech Poznan": { code:"PL", name:"Poland" },
+  "Lens": { code:"FR", name:"France" },
+  "Levski Sofia": { code:"BG", name:"Bulgaria" },
+  "Lille": { code:"FR", name:"France" },
+  "Lillestrom": { code:"NO", name:"Norway" },
+  "Liverpool": { code:"GB", name:"United Kingdom" },
+  "Lyon": { code:"FR", name:"France" },
+  "Manchester City": { code:"GB", name:"United Kingdom" },
+  "Manchester United": { code:"GB", name:"United Kingdom" },
+  "Marseille": { code:"FR", name:"France" },
+  "N.E.C. Nijmegen": { code:"NL", name:"Netherlands" },
+  "Napoli": { code:"IT", name:"Italy" },
+  "OFI Crete": { code:"GR", name:"Greece" },
+  "Olympiacos": { code:"GR", name:"Greece" },
+  "Omonia": { code:"CY", name:"Cyprus" },
+  "PSV Eindhoven": { code:"NL", name:"Netherlands" },
+  "Paris Saint-Germain": { code:"FR", name:"France" },
+  "Porto": { code:"PT", name:"Portugal" },
+  "RB Leipzig": { code:"DE", name:"Germany" },
+  "Real Betis": { code:"ES", name:"Spain" },
+  "Real Madrid": { code:"ES", name:"Spain" },
+  "Real Sociedad": { code:"ES", name:"Spain" },
+  "Red Bull Salzburg": { code:"AT", name:"Austria" },
+  "Rennes": { code:"FR", name:"France" },
+  "Roma": { code:"IT", name:"Italy" },
+  "Sabah": { code:"AZ", name:"Azerbaijan" },
+  "Shakhtar Donetsk": { code:"UA", name:"Ukraine" },
+  "Slavia Prague": { code:"CZ", name:"Czech Republic" },
+  "Slovan Bratislava": { code:"SK", name:"Slovakia" },
+  "Sparta Prague": { code:"CZ", name:"Czech Republic" },
+  "Sporting CP": { code:"PT", name:"Portugal" },
+  "Sturm Graz": { code:"AT", name:"Austria" },
+  "Stuttgart": { code:"DE", name:"Germany" },
+  "Sunderland": { code:"GB", name:"United Kingdom" },
+  "Torreense": { code:"PT", name:"Portugal" },
+  "Trabzonspor": { code:"TR", name:"Turkey" },
+  "Union Saint-Gilloise": { code:"BE", name:"Belgium" },
+  "Viking": { code:"NO", name:"Norway" },
+  "Viktoria Plzen": { code:"CZ", name:"Czech Republic" },
+  "Villarreal": { code:"ES", name:"Spain" },
+  "Young Boys": { code:"CH", name:"Switzerland" },
+  "Maccabi Tel Aviv": { code:"IL", name:"Israel" }
+};
+
+function countryCodeToFlag(code) {
+  const cc = String(code || "").trim().toUpperCase();
+  if (!/^[A-Z]{2}$/.test(cc)) return "";
+  return String.fromCodePoint(...[...cc].map(ch => 127397 + ch.charCodeAt(0)));
+}
+
+function clubCountryInfo(club) {
+  const data = CLUB_COUNTRIES[String(club || "").trim()];
+  if (!data?.code) return null;
+  return { ...data, flag: countryCodeToFlag(data.code) };
+}
+
+function fixtureOpponentCountryInfo(item) {
+  const opponent = fixtureOpponentTeam(item);
+  return clubCountryInfo(opponent?.club || item?.opponent || opponentFullName(item?.code));
+}
+
+function countryFlagMarkup(info, extraClass = "") {
+  if (!info?.flag) return "";
+  const cls = extraClass ? ` class="fixture-flag ${extraClass}"` : ' class="fixture-flag"';
+  return `<span${cls} title="${esc(info.name)}">${esc(info.flag)}</span>`;
+}
+
 function opponentFullName(code) {
   return OPPONENT_NAMES[String(code || "").toUpperCase()] || String(code || "TBD");
 }
@@ -420,27 +525,8 @@ function hideFixtureTooltip() {
 }
 
 function wireFixtureTooltips() {
-  // Fixture detail bubbles are mobile-only.
-  // Desktop uses the cleaner crest tiles + clickable team fixture modal.
-  document.addEventListener("click", event => {
-    if (!fixtureTooltipOnMobile()) return;
-
-    const fixture = event.target.closest?.(".fixture[data-tooltip]");
-    if (fixture) {
-      event.preventDefault();
-      if (fixture === activeFixtureTooltipTarget && !fixtureTooltipEl.hidden) {
-        hideFixtureTooltip();
-      } else {
-        showFixtureTooltip(fixture);
-      }
-      return;
-    }
-
-    hideFixtureTooltip();
-  });
-
-  window.addEventListener("scroll", hideFixtureTooltip, { passive:true });
-  window.addEventListener("resize", hideFixtureTooltip);
+  // Tooltips removed in favour of the richer inline / modal fixture views.
+  hideFixtureTooltip();
 }
 
 
@@ -720,13 +806,8 @@ function fixtureTemporalClass(index, comp) {
   if (!state?.md) return "";
 
   const mdIndex = Number(state.md.md) - 1;
-
   if (index < mdIndex) return " past";
-  if (index === mdIndex) {
-    if (state.state === "LIVE") return " current live-md";
-    if (state.state === "NEXT") return " next-md";
-    return " past";
-  }
+  if (state.state === "COMPLETE" && index === mdIndex) return " past";
   return "";
 }
 
@@ -760,12 +841,10 @@ function fixtureGrid(team, comp) {
 }
 
 function teamCell(team, comp) {
-  const c = comp.toLowerCase();
   return `
     <div class="team-cell">
       <img class="crest team-main-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
       <div class="team-meta">
-        <span class="tag ${c}">${comp}</span>
         <button class="team-name team-name-button"
                 type="button"
                 data-team="${esc(team.club)}"
@@ -803,7 +882,13 @@ function desktopRows(entry, rank) {
             ${rankBlock(rank)}
           </div>
           <div class="manager-name-wrap">
-            <span class="manager-name">${esc(entry.entrant)}</span>
+            <button class="manager-name manager-name-button"
+                    type="button"
+                    data-entrant="${esc(entry.entrant)}"
+                    aria-label="View ${esc(entry.entrant)} summary">
+              <span>${esc(entry.entrant)}</span>
+              <span class="manager-open-icon" aria-hidden="true">↗</span>
+            </button>
           </div>
         </div>
       </td>
@@ -829,22 +914,22 @@ function mobileFixtureGrid(team, comp) {
         item.status === "played" ? " played" : "";
 
       const scoreText = fixtureScoreText(team, item, index);
-      const tooltipText = fixtureTooltipText(team, item, index, comp);
       const opponent = item?.opponent || opponentFullName(item?.code);
+      const countryInfo = fixtureOpponentCountryInfo(item);
       const dateText = formatFixtureListDate(comp, index, item);
       const kickoffText = fixtureKickoffText(item);
       const venueCode = String(item?.venue || "").toUpperCase();
       const venueText = venueCode === "H" ? "H" : venueCode === "A" ? "A" : "–";
+      const ariaText = `${team?.club || "Team"} vs ${opponent}. MD${index + 1}. ${dateText}. ${kickoffText}. ${venueCode === "H" ? "Home" : venueCode === "A" ? "Away" : "Venue TBC"}. ${scoreText || "Score TBC"}`;
 
       return `
         <div class="fixture mobile-fixture-row${statusClass}${fixtureTemporalClass(index, comp)}"
-             data-tooltip="${esc(tooltipText)}"
-             aria-label="${esc(tooltipText.replaceAll("\\n", ". "))}">
+             aria-label="${esc(ariaText)}">
           <span class="mobile-fixture-md">MD${index + 1}</span>
           <span class="mobile-fixture-date">${esc(dateText)}</span>
           <span class="mobile-fixture-time">${esc(kickoffText)}</span>
           <span class="mobile-fixture-opponent-wrap">
-            <span class="mobile-fixture-opponent">${esc(opponent)}</span>
+            <span class="mobile-fixture-opponent">${countryFlagMarkup(countryInfo, "mobile-opponent-flag")}<span class="mobile-fixture-opponent-text">${esc(opponent)}</span></span>
             ${scoreText ? `<span class="mobile-list-score">${esc(scoreText)}</span>` : ""}
           </span>
           <span class="mobile-fixture-venue ${venueCode === "H" ? "home" : venueCode === "A" ? "away" : ""}"
@@ -905,6 +990,8 @@ function teamModalFixtureRows(team, comp) {
     const opponent = fixtureOpponentTeam(item);
     const opponentName = item?.opponent || opponent?.club || opponentFullName(item?.code);
     const opponentKey = opponent?.club || opponentName;
+    const countryInfo = fixtureOpponentCountryInfo(item);
+    const statusClass = item.status === "live" ? " live" : item.status === "played" ? " played" : "";
     const scoreText = fixtureScoreText(team, item, index) || "–";
     const dateText = formatFixtureListDate(comp, index, item);
     const kickoffText = fixtureKickoffText(item);
@@ -913,7 +1000,7 @@ function teamModalFixtureRows(team, comp) {
     const venueWord = venueCode === "H" ? "Home" : venueCode === "A" ? "Away" : "Venue TBC";
 
     return `
-      <div class="team-modal-fixture${fixtureTemporalClass(index, comp)}">
+      <div class="team-modal-fixture${statusClass}${fixtureTemporalClass(index, comp)}">
         <span class="team-modal-md">MD${index + 1}</span>
         <span class="team-modal-date">${esc(dateText)}</span>
         <span class="team-modal-time">${esc(kickoffText)}</span>
@@ -923,6 +1010,7 @@ function teamModalFixtureRows(team, comp) {
                src="${esc(opponent ? crest(opponent) : PLACEHOLDER_CREST)}"
                alt=""
                onerror="this.src='${PLACEHOLDER_CREST}'">
+          ${countryFlagMarkup(countryInfo, "team-modal-flag")}
           <strong>${esc(opponentName)}</strong>
         </span>
         <span class="team-modal-score">${esc(scoreText)}</span>
@@ -1011,6 +1099,140 @@ function wireTeamModal() {
   });
 }
 
+
+function gapSummary(ranked, rank, total) {
+  if (!Array.isArray(ranked) || !ranked.length) return "";
+  if (rank === 1) {
+    const next = ranked[1];
+    if (!next) return "Sole leader";
+    const gap = total - totalScore(next);
+    return gap > 0 ? `${gap} goal${gap === 1 ? "" : "s"} clear of 2nd` : "Level at the top";
+  }
+
+  const leaderGap = totalScore(ranked[0]) - total;
+  const above = ranked[rank - 2];
+  const aboveGap = above ? totalScore(above) - total : 0;
+  if (aboveGap <= 0) return leaderGap > 0 ? `${leaderGap} goal${leaderGap === 1 ? "" : "s"} off the lead` : "Level with the lead";
+  return `${aboveGap} goal${aboveGap === 1 ? "" : "s"} behind ${String(above.entrant).toUpperCase()}`;
+}
+
+function managerTeamCard(team, comp) {
+  const info = clubCountryInfo(team?.club);
+  return `
+    <button class="manager-modal-team ${String(comp).toLowerCase()}"
+            type="button"
+            data-team="${esc(team.club)}"
+            data-comp="${esc(comp)}"
+            aria-label="View ${esc(team.club)} fixtures">
+      <span class="manager-modal-team-top">
+        <span class="manager-modal-team-badge ${String(comp).toLowerCase()}">${esc(comp)}</span>
+        <span class="manager-modal-team-goals">${clubScore(team)}</span>
+      </span>
+      <span class="manager-modal-team-body">
+        <span class="manager-modal-team-crest-wrap">
+          <img class="manager-modal-team-crest" data-club-key="${esc(clubKey(team.club))}" src="${esc(crest(team))}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+        </span>
+        <span class="manager-modal-team-copy">
+          <span class="manager-modal-team-name-row">${countryFlagMarkup(info, "manager-modal-flag")}<strong>${esc(team.club)}</strong></span>
+          <span class="manager-modal-team-sub">View 8 fixtures</span>
+        </span>
+      </span>
+    </button>`;
+}
+
+function openManagerModal(entrantName) {
+  if (!managerModalEl || !managerModalContentEl) return;
+
+  const ranked = sortedEntries(entries);
+  const entry = ranked.find(item => String(item.entrant) === String(entrantName));
+  if (!entry) return;
+
+  hideFixtureTooltip();
+  const rank = ranked.indexOf(entry) + 1;
+  const total = totalScore(entry);
+  const prize = prizeAmount(rank);
+  const gapText = gapSummary(ranked, rank, total);
+
+  managerModalContentEl.innerHTML = `
+    <div class="manager-modal-hero">
+      <div>
+        <span class="manager-modal-eyebrow">Entrant summary</span>
+        <h2 id="manager-modal-title">${esc(String(entry.entrant).toUpperCase())}</h2>
+        <p class="manager-modal-subhead">${rank === 1 ? "1st place" : `${rank}${rank === 2 ? "nd" : rank === 3 ? "rd" : "th"} place`} · ${esc(gapText)}</p>
+      </div>
+      <div class="manager-modal-rank-box">
+        <span>RANK</span>
+        <strong>${rank}</strong>
+      </div>
+    </div>
+
+    <div class="manager-modal-pair-grid">
+      ${managerTeamCard(entry.ucl, "UCL")}
+      ${managerTeamCard(entry.uel, "UEL")}
+    </div>
+
+    <div class="manager-modal-summary-row">
+      <div class="manager-modal-summary-card">
+        <span>TOTAL</span>
+        <strong>${total}</strong>
+      </div>
+      <div class="manager-modal-summary-card">
+        <span>GOALS SPLIT</span>
+        <strong>${clubScore(entry.ucl)} + ${clubScore(entry.uel)}</strong>
+      </div>
+      <div class="manager-modal-summary-card ${prize ? "is-prize" : ""}">
+        <span>${prize ? "PRIZE" : "STATUS"}</span>
+        <strong>${prize || esc(gapText)}</strong>
+      </div>
+    </div>
+  `;
+
+  managerModalEl.hidden = false;
+  document.documentElement.classList.add("manager-modal-open");
+  requestAnimationFrame(() => managerModalEl.classList.add("is-open"));
+  managerModalEl.querySelector(".manager-modal-close")?.focus();
+}
+
+function closeManagerModal() {
+  if (!managerModalEl || managerModalEl.hidden) return;
+  managerModalEl.classList.remove("is-open");
+  document.documentElement.classList.remove("manager-modal-open");
+  window.setTimeout(() => {
+    if (!managerModalEl.classList.contains("is-open")) {
+      managerModalEl.hidden = true;
+    }
+  }, 160);
+}
+
+function wireManagerModal() {
+  document.addEventListener("click", event => {
+    const managerButton = event.target.closest?.(".manager-name-button");
+    if (managerButton) {
+      event.preventDefault();
+      openManagerModal(managerButton.dataset.entrant);
+      return;
+    }
+
+    const managerTeamButton = event.target.closest?.(".manager-modal-team");
+    if (managerTeamButton) {
+      event.preventDefault();
+      closeManagerModal();
+      window.setTimeout(() => openTeamModal(managerTeamButton.dataset.team, managerTeamButton.dataset.comp), 90);
+      return;
+    }
+
+    if (event.target.closest?.("[data-close-manager-modal]")) {
+      event.preventDefault();
+      closeManagerModal();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && managerModalEl && !managerModalEl.hidden) {
+      closeManagerModal();
+    }
+  });
+}
 
 function render() {
   const ranked = sortedEntries(entries);
@@ -1185,4 +1407,5 @@ searchEl.addEventListener("input", render);
 wireAnthemButtons();
 wireFixtureTooltips();
 wireTeamModal();
+wireManagerModal();
 init();

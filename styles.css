@@ -6137,3 +6137,464 @@ html.team-modal-open body{
     animation:none !important;
   }
 }
+
+/* =========================================================
+   v94 - agreed enhancements
+   - remove mobile tooltips / matchday highlighting
+   - red live state only
+   - country flags in fixture cue cards
+   - clickable manager summary modal
+   - sticky desktop header + manager column
+   ========================================================= */
+
+.fixture-hover-tooltip{
+  display:none !important;
+}
+
+.fixture[data-tooltip]{
+  cursor:default !important;
+}
+
+.fixture.next-md,
+.fixture.current,
+.mobile-fixture-row.next-md,
+.mobile-fixture-row.current,
+.team-modal-fixture.next-md,
+.team-modal-fixture.current{
+  box-shadow:none !important;
+}
+
+.desktop-fixture.next-md,
+.desktop-fixture.current,
+.mobile-fixture-row.next-md,
+.mobile-fixture-row.current,
+.team-modal-fixture.next-md,
+.team-modal-fixture.current{
+  border-color:rgba(255,255,255,.08) !important;
+  background:rgba(255,255,255,.025) !important;
+  color:inherit !important;
+}
+
+.desktop-fixture.live,
+.mobile-fixture-row.live,
+.team-modal-fixture.live{
+  border-color:rgba(255,98,98,.42) !important;
+  background:linear-gradient(145deg,rgba(255,98,98,.12),rgba(255,98,98,.035)) !important;
+  box-shadow:0 0 18px rgba(255,98,98,.12), inset 0 1px 0 rgba(255,255,255,.035) !important;
+}
+
+.desktop-fixture.live .fixture-score,
+.mobile-fixture-row.live .mobile-list-score,
+.team-modal-fixture.live .team-modal-score,
+.team-modal-fixture.live .team-modal-md{
+  color:#fff4f4 !important;
+}
+
+.fixture-flag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  font-size:.88rem;
+  line-height:1;
+}
+
+.mobile-fixture-opponent{
+  display:flex !important;
+  align-items:center;
+  gap:6px;
+  min-width:0;
+}
+
+.mobile-fixture-opponent-text{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.team-modal-opponent{
+  gap:9px;
+}
+
+.team-modal-flag{
+  font-size:.92rem;
+}
+
+@media(min-width:701px){
+  .desktop-table{
+    overflow:auto;
+  }
+
+  .standings-table{
+    min-width:1320px;
+  }
+
+  .standings-table thead th{
+    position:sticky;
+    top:0;
+    z-index:24;
+    background:#0a162c !important;
+  }
+
+  .standings-table thead th:first-child{
+    left:0;
+    z-index:28;
+  }
+
+  .manager-cell{
+    position:sticky;
+    left:0;
+    z-index:12;
+    box-shadow:1px 0 0 rgba(255,255,255,.07);
+  }
+
+  .team-meta{
+    display:flex;
+    align-items:center;
+    min-height:31px;
+  }
+
+  .team-name-button,
+  .team-name{
+    margin-top:0 !important;
+    font-size:.72rem !important;
+    line-height:1.15 !important;
+    letter-spacing:.015em;
+  }
+
+  .team-cell{
+    gap:10px !important;
+  }
+
+  .manager-name-button{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    padding:0;
+    border:0;
+    background:transparent;
+    color:#fff;
+    font:inherit;
+    font-size:.76rem;
+    font-weight:850;
+    letter-spacing:.012em;
+    cursor:pointer;
+    text-align:left;
+  }
+
+  .manager-name-button:hover{
+    color:#e7f6ff;
+  }
+
+  .manager-open-icon,
+  .team-open-icon{
+    color:#7388ad;
+    font-size:.68rem;
+    line-height:1;
+  }
+}
+
+.manager-modal[hidden]{
+  display:none !important;
+}
+
+.manager-modal{
+  position:fixed;
+  inset:0;
+  z-index:10010;
+  display:grid;
+  place-items:center;
+  padding:22px;
+  opacity:0;
+  transition:opacity .16s ease;
+}
+
+.manager-modal.is-open{
+  opacity:1;
+}
+
+.manager-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(1,7,18,.76);
+  backdrop-filter:blur(9px);
+}
+
+.manager-modal-card{
+  position:relative;
+  z-index:1;
+  width:min(780px,calc(100vw - 36px));
+  max-height:min(760px,calc(100vh - 40px));
+  overflow:auto;
+  border:1px solid rgba(138,170,224,.18);
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 10% 0%,rgba(73,228,255,.05),transparent 30%),
+    radial-gradient(circle at 92% 100%,rgba(255,173,97,.05),transparent 32%),
+    linear-gradient(145deg,rgba(11,25,50,.985),rgba(5,13,29,.99));
+  box-shadow:
+    0 34px 90px rgba(0,0,0,.48),
+    inset 0 1px 0 rgba(255,255,255,.04);
+  transform:translateY(8px) scale(.985);
+  transition:transform .16s ease;
+}
+
+.manager-modal.is-open .manager-modal-card{
+  transform:translateY(0) scale(1);
+}
+
+.manager-modal-close{
+  position:absolute;
+  z-index:3;
+  top:14px;
+  right:14px;
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:10px;
+  background:rgba(255,255,255,.045);
+  color:#c8d3e8;
+  font-size:1rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+.manager-modal-close:hover{
+  background:rgba(255,255,255,.075);
+  color:#fff;
+}
+
+.manager-modal-hero{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+  padding:25px 64px 20px 24px;
+  border-bottom:1px solid rgba(255,255,255,.075);
+}
+
+.manager-modal-eyebrow{
+  display:block;
+  margin-bottom:4px;
+  color:#72dffb;
+  font-size:.53rem;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.manager-modal-hero h2{
+  margin:0;
+  color:#fff;
+  font-size:1.28rem;
+  line-height:1.1;
+  font-weight:950;
+  letter-spacing:-.02em;
+}
+
+.manager-modal-subhead{
+  margin:7px 0 0;
+  color:#8ea0bf;
+  font-size:.68rem;
+  font-weight:700;
+}
+
+.manager-modal-rank-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:76px;
+  height:70px;
+  flex:0 0 76px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:15px;
+  background:rgba(255,255,255,.035);
+}
+
+.manager-modal-rank-box span,
+.manager-modal-summary-card span,
+.manager-modal-team-goals,
+.manager-modal-team-sub{
+  color:#7386a8;
+  font-size:.46rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.manager-modal-rank-box strong{
+  margin-top:3px;
+  color:#fff;
+  font-size:1.2rem;
+  line-height:1;
+  font-weight:950;
+}
+
+.manager-modal-pair-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  padding:18px 22px 0;
+}
+
+.manager-modal-team{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:14px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  background:rgba(255,255,255,.03);
+  color:inherit;
+  cursor:pointer;
+  text-align:left;
+}
+
+.manager-modal-team.ucl{
+  border-color:rgba(73,228,255,.12);
+  background:linear-gradient(145deg,rgba(73,228,255,.06),rgba(255,255,255,.02));
+}
+
+.manager-modal-team.uel{
+  border-color:rgba(255,173,97,.13);
+  background:linear-gradient(145deg,rgba(255,173,97,.06),rgba(255,255,255,.02));
+}
+
+.manager-modal-team-top,
+.manager-modal-team-body,
+.manager-modal-team-name-row,
+.manager-modal-summary-row{
+  display:flex;
+  align-items:center;
+}
+
+.manager-modal-team-top{
+  justify-content:space-between;
+  gap:10px;
+}
+
+.manager-modal-team-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:42px;
+  height:24px;
+  padding:0 8px;
+  border-radius:8px;
+  font-size:.54rem;
+  font-weight:950;
+  letter-spacing:.05em;
+}
+
+.manager-modal-team-badge.ucl{
+  color:#9ff4ff;
+  background:rgba(73,228,255,.12);
+  border:1px solid rgba(73,228,255,.14);
+}
+
+.manager-modal-team-badge.uel{
+  color:#ffd5ad;
+  background:rgba(255,173,97,.11);
+  border:1px solid rgba(255,173,97,.14);
+}
+
+.manager-modal-team-goals{
+  font-size:.54rem;
+}
+
+.manager-modal-team-body{
+  gap:12px;
+}
+
+.manager-modal-team-crest-wrap{
+  display:grid;
+  place-items:center;
+  width:58px;
+  height:58px;
+  flex:0 0 58px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:15px;
+  background:rgba(255,255,255,.04);
+}
+
+.manager-modal-team-crest{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+}
+
+.manager-modal-team-copy{
+  min-width:0;
+  display:grid;
+  gap:5px;
+}
+
+.manager-modal-team-name-row{
+  gap:7px;
+  min-width:0;
+}
+
+.manager-modal-team-name-row strong{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:#fff;
+  font-size:.84rem;
+  font-weight:850;
+}
+
+.manager-modal-team:hover{
+  border-color:rgba(255,255,255,.16);
+  transform:translateY(-1px);
+}
+
+.manager-modal-summary-row{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  padding:18px 22px 22px;
+}
+
+.manager-modal-summary-card{
+  padding:13px 14px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  background:rgba(255,255,255,.03);
+}
+
+.manager-modal-summary-card strong{
+  display:block;
+  margin-top:4px;
+  color:#fff;
+  font-size:.9rem;
+  line-height:1.2;
+  font-weight:900;
+}
+
+.manager-modal-summary-card.is-prize strong{
+  color:#ffd565;
+}
+
+html.manager-modal-open,
+html.manager-modal-open body{
+  overflow:hidden;
+}
+
+@media(max-width:700px){
+  .manager-modal{
+    display:none !important;
+  }
+
+  .mobile-fixture-opponent{
+    gap:5px;
+  }
+
+  .fixture-flag{
+    font-size:.84rem;
+  }
+}
