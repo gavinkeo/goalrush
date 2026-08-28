@@ -6598,3 +6598,104 @@ html.manager-modal-open body{
     font-size:.84rem;
   }
 }
+
+
+/* =========================================================
+   v97 - tighter desktop table / two-line manager names
+   ========================================================= */
+
+@media(min-width:701px){
+
+  /* The v94 1320px minimum guaranteed a horizontal scrollbar
+     inside the 1220px site shell. Let the table fit its container. */
+  .desktop-table{
+    overflow:visible !important;
+  }
+
+  .standings-table{
+    width:100% !important;
+    min-width:0 !important;
+    table-layout:fixed !important;
+  }
+
+  /* Rebalance without sacrificing the fixture tiles. */
+  .standings-table th:nth-child(1){ width:15% !important; }
+  .standings-table th:nth-child(2){ width:18% !important; }
+  .standings-table th:nth-child(3){ width:57% !important; }
+  .standings-table th:nth-child(4){ width:5% !important; }
+  .standings-table th:nth-child(5){ width:5% !important; }
+
+  .standings-table .fixture-grid{
+    gap:4px !important;
+  }
+
+  .standings-table .desktop-fixture{
+    padding-left:4px !important;
+    padding-right:4px !important;
+  }
+
+  .manager-cell{
+    overflow:hidden;
+  }
+
+  .manager-wrap{
+    gap:10px !important;
+    min-width:0;
+  }
+
+  .manager-name-wrap{
+    min-width:0;
+    flex:1 1 auto;
+  }
+
+  .manager-name-button{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr);
+    align-items:start !important;
+    justify-items:start;
+    gap:1px !important;
+    width:100%;
+    min-width:0;
+    font-size:inherit !important;
+    line-height:1.02 !important;
+    text-transform:uppercase;
+  }
+
+  .manager-first-name{
+    display:block;
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color:#8fa0bd;
+    font-size:.57rem;
+    font-weight:800;
+    letter-spacing:.055em;
+  }
+
+  .manager-surname-row{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    min-width:0;
+    max-width:100%;
+  }
+
+  .manager-surname{
+    display:block;
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color:#f6f9ff;
+    font-size:.74rem;
+    font-weight:950;
+    letter-spacing:.018em;
+  }
+
+  .manager-open-icon{
+    flex:0 0 auto;
+    font-size:.55rem !important;
+    opacity:.72;
+  }
+}

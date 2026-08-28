@@ -859,6 +859,23 @@ function teamCell(team, comp) {
 
 
 
+
+function desktopManagerNameParts(name) {
+  const parts = String(name || "").trim().split(/\s+/).filter(Boolean);
+  if (!parts.length) return { first: "", last: "" };
+  if (parts.length === 1) return { first: "", last: parts[0] };
+
+  let suffix = "";
+  const finalToken = parts[parts.length - 1];
+  if (!/[\p{L}\p{N}]/u.test(finalToken)) {
+    suffix = ` ${parts.pop()}`;
+  }
+
+  const last = `${parts.pop() || ""}${suffix}`;
+  const first = parts.join(" ");
+  return { first, last };
+}
+
 function prizeAmount(rank) {
   const prizes = { 1: "€400", 2: "€200", 3: "€120" };
   return prizes[rank] || "";
@@ -874,6 +891,7 @@ function rankBlock(rank) {
 }
 
 function desktopRows(entry, rank) {
+  const managerName = desktopManagerNameParts(entry.entrant);
   return `
     <tr class="ucl-row">
       <td class="manager-cell" rowspan="2">
@@ -886,8 +904,11 @@ function desktopRows(entry, rank) {
                     type="button"
                     data-entrant="${esc(entry.entrant)}"
                     aria-label="View ${esc(entry.entrant)} summary">
-              <span>${esc(entry.entrant)}</span>
-              <span class="manager-open-icon" aria-hidden="true">↗</span>
+              ${managerName.first ? `<span class="manager-first-name">${esc(managerName.first)}</span>` : ""}
+              <span class="manager-surname-row">
+                <span class="manager-surname">${esc(managerName.last)}</span>
+                <span class="manager-open-icon" aria-hidden="true">↗</span>
+              </span>
             </button>
           </div>
         </div>
