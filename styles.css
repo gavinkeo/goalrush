@@ -6978,3 +6978,101 @@ html.manager-modal-open body{
     padding-right:6px !important;
   }
 }
+
+
+/* =========================================================
+   v102 - mobile two-row summary grid
+   NAME = top row
+   TEAM 1 + TEAM 2 = bottom row
+   Rank / total / chevron span both rows
+   ========================================================= */
+
+@media(max-width:700px){
+
+  .mobile-summary{
+    display:grid !important;
+    grid-template-columns:42px minmax(0,1fr) 52px 13px !important;
+    grid-template-rows:1fr 1fr !important;
+    column-gap:7px !important;
+    row-gap:0 !important;
+    align-items:stretch !important;
+    padding:8px 18px 8px 10px !important;
+  }
+
+  .mobile-summary > .rank-spot{
+    grid-column:1 !important;
+    grid-row:1 / 3 !important;
+    align-self:center !important;
+    justify-self:start !important;
+  }
+
+  .mobile-manager-wrap{
+    grid-column:2 !important;
+    grid-row:1 / 3 !important;
+    display:grid !important;
+    grid-template-rows:1fr 1fr !important;
+    gap:0 !important;
+    min-width:0 !important;
+    align-self:stretch !important;
+  }
+
+  .mobile-manager-name{
+    grid-row:1 !important;
+    align-self:center !important;
+    margin:0 !important;
+    line-height:1 !important;
+  }
+
+  .mobile-mini-teams{
+    grid-row:2 !important;
+    align-self:center !important;
+    margin:0 !important;
+    width:min(100%,248px) !important;
+    max-width:248px !important;
+  }
+
+  .mobile-summary > .mobile-combined{
+    grid-column:3 !important;
+    grid-row:1 / 3 !important;
+    align-self:center !important;
+    justify-self:center !important;
+    transform:none !important;
+  }
+
+  .mobile-summary > .mobile-expand{
+    grid-column:4 !important;
+    grid-row:1 / 3 !important;
+    align-self:center !important;
+    justify-self:center !important;
+    transform:none !important;
+  }
+
+  .mobile-card[open] .mobile-expand{
+    transform:rotate(180deg) !important;
+  }
+}
+
+@media(max-width:430px){
+  .mobile-summary{
+    grid-template-columns:40px minmax(0,1fr) 48px 12px !important;
+    column-gap:6px !important;
+    padding:8px 14px 8px 9px !important;
+  }
+
+  .mobile-mini-teams{
+    width:min(100%,220px) !important;
+    max-width:220px !important;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-summary{
+    grid-template-columns:38px minmax(0,1fr) 46px 12px !important;
+    column-gap:5px !important;
+  }
+
+  .mobile-mini-teams{
+    width:100% !important;
+    max-width:204px !important;
+  }
+}
