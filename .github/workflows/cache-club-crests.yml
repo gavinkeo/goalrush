@@ -1,0 +1,52 @@
+name: Cache club crests locally
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_refresh:
+        description: "Redownload crests that already exist"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: euro-goal-rush-crest-cache
+  cancel-in-progress: false
+
+jobs:
+  cache-crests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Download club crests
+        env:
+          FORCE_CRESTS: ${{ inputs.force_refresh }}
+        run: node fetch-local-crests.mjs
+
+      - name: Commit local crests
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- competition.json club-crests)" ]; then
+            echo "No crest changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add competition.json club-crests
+          git commit -m "Cache club crests locally"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
