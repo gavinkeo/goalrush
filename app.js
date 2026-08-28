@@ -286,8 +286,8 @@ const CLUB_COUNTRIES = {
   "AZ Alkmaar": { code:"NL", name:"Netherlands" },
   "Anderlecht": { code:"BE", name:"Belgium" },
   "Ararat-Armenia": { code:"AM", name:"Armenia" },
-  "Arsenal": { code:"GB", name:"United Kingdom" },
-  "Aston Villa": { code:"GB", name:"United Kingdom" },
+  "Arsenal": { code:"ENG", name:"England" },
+  "Aston Villa": { code:"ENG", name:"England" },
   "Atletico Madrid": { code:"ES", name:"Spain" },
   "Barcelona": { code:"ES", name:"Spain" },
   "Bayer Leverkusen": { code:"DE", name:"Germany" },
@@ -296,13 +296,13 @@ const CLUB_COUNTRIES = {
   "Besiktas": { code:"TR", name:"Turkey" },
   "Bodo/Glimt": { code:"NO", name:"Norway" },
   "Borussia Dortmund": { code:"DE", name:"Germany" },
-  "Bournemouth": { code:"GB", name:"United Kingdom" },
+  "Bournemouth": { code:"ENG", name:"England" },
   "Celje": { code:"SI", name:"Slovenia" },
   "Celta Vigo": { code:"ES", name:"Spain" },
-  "Celtic": { code:"GB", name:"United Kingdom" },
+  "Celtic": { code:"SCO", name:"Scotland" },
   "Club Brugge": { code:"BE", name:"Belgium" },
   "Como": { code:"IT", name:"Italy" },
-  "Crystal Palace": { code:"GB", name:"United Kingdom" },
+  "Crystal Palace": { code:"ENG", name:"England" },
   "Crvena Zvezda": { code:"RS", name:"Serbia" },
   "Dinamo Zagreb": { code:"HR", name:"Croatia" },
   "Fenerbahce": { code:"TR", name:"Turkey" },
@@ -321,10 +321,10 @@ const CLUB_COUNTRIES = {
   "Levski Sofia": { code:"BG", name:"Bulgaria" },
   "Lille": { code:"FR", name:"France" },
   "Lillestrom": { code:"NO", name:"Norway" },
-  "Liverpool": { code:"GB", name:"United Kingdom" },
+  "Liverpool": { code:"ENG", name:"England" },
   "Lyon": { code:"FR", name:"France" },
-  "Manchester City": { code:"GB", name:"United Kingdom" },
-  "Manchester United": { code:"GB", name:"United Kingdom" },
+  "Manchester City": { code:"ENG", name:"England" },
+  "Manchester United": { code:"ENG", name:"England" },
   "Marseille": { code:"FR", name:"France" },
   "N.E.C. Nijmegen": { code:"NL", name:"Netherlands" },
   "Napoli": { code:"IT", name:"Italy" },
@@ -349,7 +349,7 @@ const CLUB_COUNTRIES = {
   "Sporting CP": { code:"PT", name:"Portugal" },
   "Sturm Graz": { code:"AT", name:"Austria" },
   "Stuttgart": { code:"DE", name:"Germany" },
-  "Sunderland": { code:"GB", name:"United Kingdom" },
+  "Sunderland": { code:"ENG", name:"England" },
   "Torreense": { code:"PT", name:"Portugal" },
   "Trabzonspor": { code:"TR", name:"Turkey" },
   "Union Saint-Gilloise": { code:"BE", name:"Belgium" },
@@ -362,6 +362,13 @@ const CLUB_COUNTRIES = {
 
 function countryCodeToFlag(code) {
   const cc = String(code || "").trim().toUpperCase();
+
+  // Football-association flags for UK home nations.
+  // These are Unicode subdivision flags rather than the generic UK flag.
+  if (cc === "ENG") return "🏴󠁧󠁢󠁥󠁮󠁧󠁿";
+  if (cc === "SCO") return "🏴󠁧󠁢󠁳󠁣󠁴󠁿";
+  if (cc === "WAL") return "🏴󠁧󠁢󠁷󠁬󠁳󠁿";
+
   if (!/^[A-Z]{2}$/.test(cc)) return "";
   return String.fromCodePoint(...[...cc].map(ch => 127397 + ch.charCodeAt(0)));
 }
@@ -1402,6 +1409,8 @@ async function init() {
           entrant:
             entry?.entrant === "Danielle Neville" ? "Brian Clarke" :
             entry?.entrant === "Bob" ? "Bob O'Neill" :
+            entry?.entrant === "Ger O'Brien" ? "Geraldo" :
+            entry?.entrant === "Gary Corcoran 🦊" ? "Gary 🦊 Corcoran" :
             entry?.entrant
         }))
       : [];

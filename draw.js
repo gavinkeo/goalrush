@@ -8,6 +8,8 @@ function entrantName(v){
   const name=String(v||"").trim();
   if(name==="Danielle Neville")return "Brian Clarke";
   if(name==="Bob")return "Bob O'Neill";
+  if(name==="Ger O'Brien")return "Geraldo";
+  if(name==="Gary Corcoran 🦊")return "Gary 🦊 Corcoran";
   return v;
 }
 function migrateEntrantSwap(){
