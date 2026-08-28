@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=85";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=85";
+const DATA_URL = "competition.json?v=86";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -756,7 +756,6 @@ function fixtureGrid(team, comp) {
 
       return `
         <span class="fixture desktop-fixture${statusClass}${fixtureTemporalClass(index, comp)}"
-              data-tooltip="${esc(tooltipText)}"
               aria-label="${esc(tooltipText.replaceAll("\n", ". "))}">
           <span class="fixture-content desktop-fixture-content">
             <span class="fixture-crest-plate">
