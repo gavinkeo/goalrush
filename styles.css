@@ -7126,3 +7126,100 @@ html.manager-modal-open body{
     row-gap:4px !important;
   }
 }
+
+
+/* =========================================================
+   v104 - make mobile rank + total more balanced
+   Slightly enlarge rank, and standardise rank / total box sizing
+   ========================================================= */
+
+@media(max-width:700px){
+  .mobile-summary{
+    grid-template-columns:48px minmax(0,1fr) 54px 13px !important;
+    column-gap:8px !important;
+  }
+
+  .mobile-summary > .rank-spot{
+    min-width:48px !important;
+    flex-basis:48px !important;
+  }
+
+  .rank-box{
+    width:46px !important;
+    min-width:46px !important;
+    min-height:46px !important;
+    padding:4px 3px !important;
+    border-radius:11px !important;
+    gap:2px !important;
+  }
+
+  .rank-box-1,
+  .rank-box-2,
+  .rank-box-3{
+    min-height:46px !important;
+  }
+
+  .rank-number{
+    font-size:1.04rem !important;
+    line-height:1 !important;
+  }
+
+  .rank-prize{
+    font-size:.40rem !important;
+    line-height:1 !important;
+  }
+
+  .mobile-summary > .mobile-combined{
+    width:46px !important;
+    min-width:46px !important;
+    min-height:46px !important;
+    border-radius:11px !important;
+  }
+
+  .mobile-combined strong{
+    font-size:1.04rem !important;
+    line-height:1 !important;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-summary{
+    grid-template-columns:44px minmax(0,1fr) 50px 12px !important;
+    column-gap:6px !important;
+  }
+
+  .mobile-summary > .rank-spot{
+    min-width:44px !important;
+    flex-basis:44px !important;
+  }
+
+  .rank-box{
+    width:42px !important;
+    min-width:42px !important;
+    min-height:42px !important;
+  }
+
+  .rank-box-1,
+  .rank-box-2,
+  .rank-box-3{
+    min-height:42px !important;
+  }
+
+  .rank-number{
+    font-size:.98rem !important;
+  }
+
+  .rank-prize{
+    font-size:.38rem !important;
+  }
+
+  .mobile-summary > .mobile-combined{
+    width:42px !important;
+    min-width:42px !important;
+    min-height:42px !important;
+  }
+
+  .mobile-combined strong{
+    font-size:.98rem !important;
+  }
+}
