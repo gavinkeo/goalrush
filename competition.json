@@ -9,7 +9,7 @@
       "previousRank": 2,
       "ucl": {
         "club": "Arsenal",
-        "crest": "",
+        "crest": "club-crests/arsenal.png",
         "played": 0,
         "goalsFor": 17,
         "goalsAgainst": 2,
@@ -69,7 +69,7 @@
       },
       "uel": {
         "club": "AZ Alkmaar",
-        "crest": "",
+        "crest": "club-crests/az-alkmaar.png",
         "played": 0,
         "goalsFor": 9,
         "goalsAgainst": 7,
@@ -134,7 +134,7 @@
       "previousRank": 1,
       "ucl": {
         "club": "Aston Villa",
-        "crest": "",
+        "crest": "club-crests/aston-villa.png",
         "played": 0,
         "goalsFor": 17,
         "goalsAgainst": 2,
@@ -194,7 +194,7 @@
       },
       "uel": {
         "club": "Bournemouth",
-        "crest": "",
+        "crest": "club-crests/bournemouth.png",
         "played": 0,
         "goalsFor": 13,
         "goalsAgainst": 1,
@@ -259,7 +259,7 @@
       "previousRank": 4,
       "ucl": {
         "club": "Atletico Madrid",
-        "crest": "",
+        "crest": "club-crests/atletico-madrid.png",
         "played": 0,
         "goalsFor": 8,
         "goalsAgainst": 10,
@@ -319,7 +319,7 @@
       },
       "uel": {
         "club": "Celta Vigo",
-        "crest": "",
+        "crest": "club-crests/celta-vigo.png",
         "played": 0,
         "goalsFor": 5,
         "goalsAgainst": 9,
@@ -384,7 +384,7 @@
       "previousRank": 3,
       "ucl": {
         "club": "Borussia Dortmund",
-        "crest": "",
+        "crest": "club-crests/borussia-dortmund.png",
         "played": 0,
         "goalsFor": 15,
         "goalsAgainst": 3,
@@ -444,7 +444,7 @@
       },
       "uel": {
         "club": "Crystal Palace",
-        "crest": "",
+        "crest": "club-crests/crystal-palace.png",
         "played": 0,
         "goalsFor": 10,
         "goalsAgainst": 3,
@@ -509,7 +509,7 @@
       "previousRank": 6,
       "ucl": {
         "club": "Barcelona",
-        "crest": "",
+        "crest": "club-crests/barcelona.png",
         "played": 0,
         "goalsFor": 7,
         "goalsAgainst": 7,
@@ -569,7 +569,7 @@
       },
       "uel": {
         "club": "Hoffenheim",
-        "crest": "",
+        "crest": "club-crests/hoffenheim.png",
         "played": 0,
         "goalsFor": 12,
         "goalsAgainst": 4,
@@ -634,7 +634,7 @@
       "previousRank": 5,
       "ucl": {
         "club": "Bayern Munich",
-        "crest": "",
+        "crest": "club-crests/bayern-munich.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 9,
@@ -694,7 +694,7 @@
       },
       "uel": {
         "club": "Juventus",
-        "crest": "",
+        "crest": "club-crests/juventus.png",
         "played": 0,
         "goalsFor": 9,
         "goalsAgainst": 7,
@@ -759,7 +759,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Club Brugge",
-        "crest": "",
+        "crest": "club-crests/club-brugge.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 10,
@@ -819,7 +819,7 @@
       },
       "uel": {
         "club": "Bayer Leverkusen",
-        "crest": "",
+        "crest": "club-crests/bayer-leverkusen.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 8,
@@ -884,7 +884,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Como",
-        "crest": "",
+        "crest": "club-crests/como.png",
         "played": 0,
         "goalsFor": 7,
         "goalsAgainst": 5,
@@ -944,7 +944,7 @@
       },
       "uel": {
         "club": "Marseille",
-        "crest": "",
+        "crest": "club-crests/marseille.png",
         "played": 0,
         "goalsFor": 7,
         "goalsAgainst": 9,
@@ -1009,7 +1009,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Feyenoord",
-        "crest": "",
+        "crest": "club-crests/feyenoord.png",
         "played": 0,
         "goalsFor": 9,
         "goalsAgainst": 7,
@@ -1069,7 +1069,7 @@
       },
       "uel": {
         "club": "AC Milan",
-        "crest": "",
+        "crest": "club-crests/ac-milan.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 5,
@@ -1134,7 +1134,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Galatasaray",
-        "crest": "",
+        "crest": "club-crests/galatasaray.png",
         "played": 0,
         "goalsFor": 5,
         "goalsAgainst": 8,
@@ -1194,7 +1194,7 @@
       },
       "uel": {
         "club": "Olympiacos",
-        "crest": "",
+        "crest": "club-crests/olympiacos.png",
         "played": 0,
         "goalsFor": 9,
         "goalsAgainst": 5,
@@ -1259,7 +1259,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Inter Milan",
-        "crest": "",
+        "crest": "club-crests/inter-milan.png",
         "played": 0,
         "goalsFor": 10,
         "goalsAgainst": 1,
@@ -1319,7 +1319,7 @@
       },
       "uel": {
         "club": "Real Sociedad",
-        "crest": "",
+        "crest": "club-crests/real-sociedad.png",
         "played": 0,
         "goalsFor": 10,
         "goalsAgainst": 5,
@@ -1384,7 +1384,7 @@
       "previousRank": null,
       "ucl": {
         "club": "RB Leipzig",
-        "crest": "",
+        "crest": "club-crests/rb-leipzig.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 7,
@@ -1444,7 +1444,7 @@
       },
       "uel": {
         "club": "Rennes",
-        "crest": "",
+        "crest": "club-crests/rennes.png",
         "played": 0,
         "goalsFor": 13,
         "goalsAgainst": 1,
@@ -1509,7 +1509,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Lens",
-        "crest": "",
+        "crest": "club-crests/lens.png",
         "played": 0,
         "goalsFor": 13,
         "goalsAgainst": 1,
@@ -1569,7 +1569,7 @@
       },
       "uel": {
         "club": "Sparta Prague",
-        "crest": "",
+        "crest": "club-crests/sparta-prague.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 7,
@@ -1634,7 +1634,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Lille",
-        "crest": "",
+        "crest": "club-crests/lille.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 7,
@@ -1694,7 +1694,7 @@
       },
       "uel": {
         "club": "Sturm Graz",
-        "crest": "",
+        "crest": "club-crests/sturm-graz.png",
         "played": 0,
         "goalsFor": 9,
         "goalsAgainst": 2,
@@ -1759,7 +1759,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Liverpool",
-        "crest": "",
+        "crest": "club-crests/liverpool.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 7,
@@ -1819,7 +1819,7 @@
       },
       "uel": {
         "club": "Sunderland",
-        "crest": "",
+        "crest": "club-crests/sunderland.png",
         "played": 0,
         "goalsFor": 5,
         "goalsAgainst": 8,
@@ -1884,7 +1884,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Manchester City",
-        "crest": "",
+        "crest": "club-crests/manchester-city.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 6,
@@ -1944,7 +1944,7 @@
       },
       "uel": {
         "club": "Torreense",
-        "crest": "",
+        "crest": "club-crests/torreense.png",
         "played": 0,
         "goalsFor": 12,
         "goalsAgainst": 1,
@@ -2009,7 +2009,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Manchester United",
-        "crest": "",
+        "crest": "club-crests/manchester-united.png",
         "played": 0,
         "goalsFor": 3,
         "goalsAgainst": 7,
@@ -2069,7 +2069,7 @@
       },
       "uel": {
         "club": "Union Saint-Gilloise",
-        "crest": "",
+        "crest": "club-crests/union-saint-gilloise.png",
         "played": 0,
         "goalsFor": 9,
         "goalsAgainst": 4,
@@ -2134,7 +2134,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Napoli",
-        "crest": "",
+        "crest": "club-crests/napoli.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 7,
@@ -2194,7 +2194,7 @@
       },
       "uel": {
         "club": "Anderlecht",
-        "crest": "",
+        "crest": "club-crests/anderlecht.png",
         "played": 0,
         "goalsFor": 10,
         "goalsAgainst": 1,
@@ -2259,7 +2259,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Paris Saint-Germain",
-        "crest": "",
+        "crest": "club-crests/paris-saint-germain.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 7,
@@ -2319,7 +2319,7 @@
       },
       "uel": {
         "club": "Benfica",
-        "crest": "",
+        "crest": "club-crests/benfica.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 4,
@@ -2384,7 +2384,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Porto",
-        "crest": "",
+        "crest": "club-crests/porto.png",
         "played": 0,
         "goalsFor": 5,
         "goalsAgainst": 4,
@@ -2444,7 +2444,7 @@
       },
       "uel": {
         "club": "Besiktas",
-        "crest": "",
+        "crest": "club-crests/besiktas.png",
         "played": 0,
         "goalsFor": 11,
         "goalsAgainst": 1,
@@ -2509,7 +2509,7 @@
       "previousRank": null,
       "ucl": {
         "club": "PSV Eindhoven",
-        "crest": "",
+        "crest": "club-crests/psv-eindhoven.png",
         "played": 0,
         "goalsFor": 2,
         "goalsAgainst": 6,
@@ -2569,7 +2569,7 @@
       },
       "uel": {
         "club": "GNK Dinamo",
-        "crest": "",
+        "crest": "club-crests/gnk-dinamo.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 6,
@@ -2634,7 +2634,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Real Betis",
-        "crest": "",
+        "crest": "club-crests/real-betis.png",
         "played": 0,
         "goalsFor": 5,
         "goalsAgainst": 5,
@@ -2694,7 +2694,7 @@
       },
       "uel": {
         "club": "Ferencvaros",
-        "crest": "",
+        "crest": "club-crests/ferencvaros.png",
         "played": 0,
         "goalsFor": 7,
         "goalsAgainst": 3,
@@ -2759,7 +2759,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Real Madrid",
-        "crest": "",
+        "crest": "club-crests/real-madrid.png",
         "played": 0,
         "goalsFor": 7,
         "goalsAgainst": 1,
@@ -2819,7 +2819,7 @@
       },
       "uel": {
         "club": "Jagiellonia",
-        "crest": "",
+        "crest": "club-crests/jagiellonia.png",
         "played": 0,
         "goalsFor": 9,
         "goalsAgainst": 2,
@@ -2884,7 +2884,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Roma",
-        "crest": "",
+        "crest": "club-crests/roma.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 3,
@@ -2944,7 +2944,7 @@
       },
       "uel": {
         "club": "Lech Poznan",
-        "crest": "",
+        "crest": "club-crests/lech-poznan.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 6,
@@ -3009,7 +3009,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Shakhtar Donetsk",
-        "crest": "",
+        "crest": "club-crests/shakhtar-donetsk.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 3,
@@ -3069,7 +3069,7 @@
       },
       "uel": {
         "club": "Lillestrom",
-        "crest": "",
+        "crest": "club-crests/lillestrom.png",
         "played": 0,
         "goalsFor": 7,
         "goalsAgainst": 2,
@@ -3134,7 +3134,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Slavia Prague",
-        "crest": "",
+        "crest": "club-crests/slavia-prague.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 3,
@@ -3194,7 +3194,7 @@
       },
       "uel": {
         "club": "Omonia",
-        "crest": "",
+        "crest": "club-crests/omonia.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 5,
@@ -3259,7 +3259,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Sporting CP",
-        "crest": "",
+        "crest": "club-crests/sporting-cp.png",
         "played": 0,
         "goalsFor": 8,
         "goalsAgainst": 2,
@@ -3319,7 +3319,7 @@
       },
       "uel": {
         "club": "Red Bull Salzburg",
-        "crest": "",
+        "crest": "club-crests/red-bull-salzburg.png",
         "played": 0,
         "goalsFor": 2,
         "goalsAgainst": 5,
@@ -3384,7 +3384,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Stuttgart",
-        "crest": "",
+        "crest": "club-crests/stuttgart.png",
         "played": 0,
         "goalsFor": 7,
         "goalsAgainst": 3,
@@ -3444,7 +3444,7 @@
       },
       "uel": {
         "club": "Lyon",
-        "crest": "",
+        "crest": "club-crests/lyon.png",
         "played": 0,
         "goalsFor": 2,
         "goalsAgainst": 5,
@@ -3509,7 +3509,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Villarreal",
-        "crest": "",
+        "crest": "club-crests/villarreal.png",
         "played": 0,
         "goalsFor": 5,
         "goalsAgainst": 4,
@@ -3569,7 +3569,7 @@
       },
       "uel": {
         "club": "Viktoria Plzen",
-        "crest": "",
+        "crest": "club-crests/viktoria-plzen.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 1,
@@ -3634,7 +3634,7 @@
       "previousRank": null,
       "ucl": {
         "club": "AEK Athens",
-        "crest": "",
+        "crest": "club-crests/aek-athens.png",
         "played": 0,
         "goalsFor": 2,
         "goalsAgainst": 5,
@@ -3694,7 +3694,7 @@
       },
       "uel": {
         "club": "OFI Crete",
-        "crest": "",
+        "crest": "club-crests/ofi-crete.png",
         "played": 0,
         "goalsFor": 7,
         "goalsAgainst": 1,
@@ -3759,7 +3759,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Bodo/Glimt",
-        "crest": "",
+        "crest": "club-crests/bodo-glimt.png",
         "played": 0,
         "goalsFor": 5,
         "goalsAgainst": 2,
@@ -3819,7 +3819,7 @@
       },
       "uel": {
         "club": "Celtic",
-        "crest": "",
+        "crest": "club-crests/celtic.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 1,
@@ -3884,7 +3884,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Slovan Bratislava",
-        "crest": "",
+        "crest": "club-crests/slovan-bratislava.png",
         "played": 0,
         "goalsFor": 4,
         "goalsAgainst": 4,
@@ -3944,7 +3944,7 @@
       },
       "uel": {
         "club": "Ararat-Armenia",
-        "crest": "",
+        "crest": "club-crests/ararat-armenia.png",
         "played": 0,
         "goalsFor": 2,
         "goalsAgainst": 4,
@@ -4009,7 +4009,7 @@
       "previousRank": null,
       "ucl": {
         "club": "LASK",
-        "crest": "",
+        "crest": "club-crests/lask.png",
         "played": 0,
         "goalsFor": 3,
         "goalsAgainst": 4,
@@ -4069,7 +4069,7 @@
       },
       "uel": {
         "club": "Hapoel Beer-Sheva",
-        "crest": "",
+        "crest": "club-crests/hapoel-beer-sheva.png",
         "played": 0,
         "goalsFor": 2,
         "goalsAgainst": 4,
@@ -4134,7 +4134,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Fenerbahce",
-        "crest": "",
+        "crest": "club-crests/fenerbahce.png",
         "played": 0,
         "goalsFor": 6,
         "goalsAgainst": 1,
@@ -4194,7 +4194,7 @@
       },
       "uel": {
         "club": "N.E.C. Nijmegen",
-        "crest": "",
+        "crest": "club-crests/n-e-c-nijmegen.png",
         "played": 0,
         "goalsFor": 2,
         "goalsAgainst": 3,
@@ -4259,7 +4259,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Sabah",
-        "crest": "",
+        "crest": "club-crests/sabah.png",
         "played": 0,
         "goalsFor": 3,
         "goalsAgainst": 2,
@@ -4319,7 +4319,7 @@
       },
       "uel": {
         "club": "Celje",
-        "crest": "",
+        "crest": "club-crests/celje.png",
         "played": 0,
         "goalsFor": 5,
         "goalsAgainst": 1,
@@ -4384,7 +4384,7 @@
       "previousRank": null,
       "ucl": {
         "club": "Viking",
-        "crest": "",
+        "crest": "club-crests/viking.png",
         "played": 0,
         "goalsFor": 2,
         "goalsAgainst": 3,
@@ -4444,7 +4444,7 @@
       },
       "uel": {
         "club": "Levski Sofia",
-        "crest": "",
+        "crest": "club-crests/levski-sofia.png",
         "played": 0,
         "goalsFor": 2,
         "goalsAgainst": 3,
