@@ -4846,3 +4846,155 @@ th:nth-child(5){width:7%}
     font-size:.68rem !important;
   }
 }
+
+
+/* =========================================================
+   v81 - compact expanded mobile fixture list
+   Desktop fixture presentation remains unchanged.
+   ========================================================= */
+
+@media(max-width:700px){
+
+  .mobile-comp .mobile-fixture-grid{
+    display:none !important;
+  }
+
+  .mobile-fixture-list{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    margin-top:9px;
+    border-top:1px solid rgba(255,255,255,.055);
+  }
+
+  .mobile-fixture-list .mobile-fixture-row{
+    display:grid !important;
+    grid-template-columns:34px 66px 43px minmax(0,1fr) 24px !important;
+    align-items:center;
+    column-gap:6px;
+    width:100%;
+    min-height:43px !important;
+    padding:7px 4px !important;
+    border:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.055) !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    font-variant-numeric:tabular-nums;
+    text-align:left !important;
+  }
+
+  .mobile-fixture-list .mobile-fixture-row:last-child{
+    border-bottom:0 !important;
+  }
+
+  .mobile-fixture-md{
+    color:#b9c5dc;
+    font-size:.52rem;
+    font-weight:950;
+    letter-spacing:.035em;
+    white-space:nowrap;
+  }
+
+  .mobile-fixture-date{
+    color:#7f8daa;
+    font-size:.47rem;
+    font-weight:850;
+    white-space:nowrap;
+  }
+
+  .mobile-fixture-time{
+    color:#98a7c2;
+    font-size:.47rem;
+    font-weight:900;
+    text-align:center;
+    white-space:nowrap;
+  }
+
+  .mobile-fixture-opponent-wrap{
+    display:flex;
+    align-items:center;
+    min-width:0;
+    gap:6px;
+  }
+
+  .mobile-fixture-opponent{
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color:#eef3fc;
+    font-size:.56rem;
+    font-weight:900;
+  }
+
+  .mobile-list-score{
+    flex:0 0 auto;
+    color:#c9d4e8;
+    font-size:.51rem;
+    font-weight:950;
+    white-space:nowrap;
+  }
+
+  .mobile-comp.ucl .mobile-list-score{
+    color:#c7fbff;
+  }
+
+  .mobile-comp.uel .mobile-list-score{
+    color:#ffe1bf;
+  }
+
+  .mobile-fixture-venue{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:22px;
+    height:22px;
+    border:1px solid rgba(255,255,255,.075);
+    border-radius:6px;
+    color:#7786a1;
+    background:rgba(255,255,255,.025);
+    font-size:.46rem;
+    font-weight:950;
+  }
+
+  .mobile-fixture-venue.home{
+    color:#bdeffc;
+  }
+
+  .mobile-fixture-venue.away{
+    color:#d6c4aa;
+  }
+
+  .mobile-fixture-row.current,
+  .mobile-fixture-row.next-md{
+    background:rgba(255,255,255,.025) !important;
+  }
+
+  .mobile-fixture-row.current .mobile-fixture-md,
+  .mobile-fixture-row.next-md .mobile-fixture-md{
+    color:#fff0bd;
+  }
+
+  .mobile-fixture-row.live{
+    background:rgba(85,241,162,.045) !important;
+  }
+
+  .mobile-fixture-row.live .mobile-fixture-md{
+    color:#80efb1;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-fixture-list .mobile-fixture-row{
+    grid-template-columns:32px 62px 40px minmax(0,1fr) 22px !important;
+    column-gap:5px;
+    padding-inline:2px !important;
+  }
+
+  .mobile-fixture-md{ font-size:.49rem; }
+  .mobile-fixture-date,
+  .mobile-fixture-time{ font-size:.44rem; }
+  .mobile-fixture-opponent{ font-size:.53rem; }
+  .mobile-list-score{ font-size:.48rem; }
+}

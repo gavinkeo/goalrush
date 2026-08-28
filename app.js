@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=78";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=78";
+const DATA_URL = "competition.json?v=81";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=81";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -286,6 +286,38 @@ function fixtureDateText(comp, index, item) {
   return md ? formatLongFixtureDate(md.start, md.end) : "Date TBC";
 }
 
+function formatFixtureListDate(comp, index, item) {
+  const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+
+  if (item?.date) {
+    const d = parseDate(item.date);
+    return `${String(d.getDate()).padStart(2, "0")} ${months[d.getMonth()]}`;
+  }
+
+  const key = String(comp || "").toLowerCase();
+  const md = competitionMatchdays[key]?.find(matchday => Number(matchday.md) === index + 1);
+  if (!md?.start) return "TBC";
+
+  const start = parseDate(md.start);
+  const end = parseDate(md.end || md.start);
+
+  if (start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth()) {
+    if (start.getDate() === end.getDate()) {
+      return `${String(start.getDate()).padStart(2, "0")} ${months[start.getMonth()]}`;
+    }
+    return `${String(start.getDate()).padStart(2, "0")}–${String(end.getDate()).padStart(2, "0")} ${months[start.getMonth()]}`;
+  }
+
+  return `${String(start.getDate()).padStart(2, "0")} ${months[start.getMonth()]}`;
+}
+
+function fixtureKickoffText(item) {
+  const raw = String(item?.kickoff || item?.time || "").trim();
+  if (!raw) return "TBC";
+  const timeMatch = raw.match(/(?:T|\s)(\d{1,2}:\d{2})/) || raw.match(/^(\d{1,2}:\d{2})$/);
+  return timeMatch ? timeMatch[1] : raw;
+}
+
 function fixtureTooltipText(team, item, index, comp) {
   const opponent = item?.opponent || opponentFullName(item?.code);
   const score = fixtureScoreText(team, item, index);
@@ -302,7 +334,8 @@ function fixtureTooltipText(team, item, index, comp) {
     scoreLine = `${team?.club || "Team"} ${String(score).replaceAll("-", "–")} ${opponent}`;
   }
 
-  return `${scoreLine}\nMD${index + 1} · ${date} · ${venue}`;
+  const kickoff = fixtureKickoffText(item);
+  return `${scoreLine}\nMD${index + 1} · ${date}${kickoff !== "TBC" ? ` · ${kickoff}` : ""} · ${venue}`;
 }
 
 let activeFixtureTooltipTarget = null;
@@ -657,7 +690,10 @@ function fixtureValues(team) {
       opponent: item?.opponent || "",
       venue: item?.venue || "",
       status: item?.status || "",
-      score: item?.score || ""
+      score: item?.score || "",
+      date: item?.date || "",
+      kickoff: item?.kickoff || item?.time || "",
+      stadium: item?.stadium || item?.ground || ""
     };
   });
 
@@ -756,28 +792,33 @@ function desktopRows(entry, rank) {
 }
 
 function mobileFixtureGrid(team, comp) {
-  return `<div class="fixture-grid mobile-fixture-grid">${
+  return `<div class="mobile-fixture-list">${
     fixtureValues(team).map((item, index) => {
       const statusClass =
         item.status === "live" ? " live" :
         item.status === "played" ? " played" : "";
+
       const scoreText = fixtureScoreText(team, item, index);
-      const md = index + 1;
-      const dateWindow = formatMobileMatchdayWindow(combinedMatchdayWindows[md]);
       const tooltipText = fixtureTooltipText(team, item, index, comp);
+      const opponent = item?.opponent || opponentFullName(item?.code);
+      const dateText = formatFixtureListDate(comp, index, item);
+      const kickoffText = fixtureKickoffText(item);
+      const venueCode = String(item?.venue || "").toUpperCase();
+      const venueText = venueCode === "H" ? "H" : venueCode === "A" ? "A" : "–";
 
       return `
-        <div class="mobile-fixture-slot">
-          <div class="mobile-fixture-heading">
-            <b>MD${md}</b>
-            <small>${esc(dateWindow || "—")}</small>
-          </div>
-          <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" data-tooltip="${esc(tooltipText)}" aria-label="${esc(tooltipText.replaceAll("\n", ". "))}">
-            <span class="fixture-content">
-              <b>${esc(item.code)}</b>
-              ${scoreText ? `<span class="fixture-score">${esc(scoreText)}</span>` : ""}
-            </span>
+        <div class="fixture mobile-fixture-row${statusClass}${fixtureTemporalClass(index, comp)}"
+             data-tooltip="${esc(tooltipText)}"
+             aria-label="${esc(tooltipText.replaceAll("\\n", ". "))}">
+          <span class="mobile-fixture-md">MD${index + 1}</span>
+          <span class="mobile-fixture-date">${esc(dateText)}</span>
+          <span class="mobile-fixture-time">${esc(kickoffText)}</span>
+          <span class="mobile-fixture-opponent-wrap">
+            <span class="mobile-fixture-opponent">${esc(opponent)}</span>
+            ${scoreText ? `<span class="mobile-list-score">${esc(scoreText)}</span>` : ""}
           </span>
+          <span class="mobile-fixture-venue ${venueCode === "H" ? "home" : venueCode === "A" ? "away" : ""}"
+                title="${venueCode === "H" ? "Home" : venueCode === "A" ? "Away" : "Venue TBC"}">${venueText}</span>
         </div>`;
     }).join("")
   }</div>`;
