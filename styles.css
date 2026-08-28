@@ -6042,3 +6042,28 @@ html.team-modal-open body{
     font-size:1.12em !important;
   }
 }
+
+
+/* =========================================================
+   v90 - keep all mobile fixture columns on one line
+   Fixes H/A chip wrapping onto a second grid row.
+   ========================================================= */
+
+@media(max-width:700px){
+  .mobile-fixture-md,
+  .mobile-fixture-date,
+  .mobile-fixture-time,
+  .mobile-fixture-venue,
+  .mobile-fixture-opponent,
+  .mobile-list-score{
+    grid-row:1 !important;
+  }
+
+  .mobile-fixture-list .mobile-fixture-row{
+    align-items:center !important;
+  }
+
+  .mobile-fixture-venue{
+    align-self:center !important;
+  }
+}
