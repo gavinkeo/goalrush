@@ -1,5 +1,5 @@
-const DATA_URL = "competition.json?v=72";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=72";
+const DATA_URL = "competition.json?v=77";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=77";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
@@ -35,6 +35,85 @@ function esc(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+const TEAM_ABBR = {
+  "AC Milan":"MIL",
+  "AEK Athens":"AEK",
+  "AZ Alkmaar":"AZA",
+  "Anderlecht":"AND",
+  "Ararat-Armenia":"ARA",
+  "Arsenal":"ARS",
+  "Aston Villa":"AVL",
+  "Atletico Madrid":"ATM",
+  "Barcelona":"BAR",
+  "Bayer Leverkusen":"LEV",
+  "Bayern Munich":"BAY",
+  "Benfica":"BEN",
+  "Besiktas":"BES",
+  "Bodo/Glimt":"BOD",
+  "Borussia Dortmund":"BVB",
+  "Bournemouth":"BOU",
+  "Celje":"CEJ",
+  "Celta Vigo":"CLV",
+  "Celtic":"CEL",
+  "Club Brugge":"BRU",
+  "Como":"COM",
+  "Crystal Palace":"CRY",
+  "Fenerbahce":"FEN",
+  "Ferencvaros":"FER",
+  "Feyenoord":"FEY",
+  "GNK Dinamo":"DIN",
+  "Galatasaray":"GAL",
+  "Hapoel Beer-Sheva":"HBS",
+  "Hoffenheim":"HOF",
+  "Inter Milan":"INT",
+  "Jagiellonia":"JAG",
+  "Juventus":"JUV",
+  "LASK":"LAS",
+  "Lech Poznan":"LPO",
+  "Lens":"LEN",
+  "Levski Sofia":"LSO",
+  "Lille":"LIL",
+  "Lillestrom":"LST",
+  "Liverpool":"LIV",
+  "Lyon":"LYO",
+  "Manchester City":"MCI",
+  "Manchester United":"MUN",
+  "Marseille":"MAR",
+  "N.E.C. Nijmegen":"NEC",
+  "Napoli":"NAP",
+  "OFI Crete":"OFI",
+  "Olympiacos":"OLY",
+  "Omonia":"OMO",
+  "PSV Eindhoven":"PSV",
+  "Paris Saint-Germain":"PSG",
+  "Porto":"POR",
+  "RB Leipzig":"RBL",
+  "Real Betis":"BET",
+  "Real Madrid":"RMA",
+  "Real Sociedad":"RSO",
+  "Red Bull Salzburg":"RBS",
+  "Rennes":"REN",
+  "Roma":"ROM",
+  "Sabah":"SAB",
+  "Shakhtar Donetsk":"SHA",
+  "Slavia Prague":"SLA",
+  "Slovan Bratislava":"SBR",
+  "Sparta Prague":"SPA",
+  "Sporting CP":"SCP",
+  "Sturm Graz":"STG",
+  "Stuttgart":"STU",
+  "Sunderland":"SUN",
+  "Torreense":"TOR",
+  "Union Saint-Gilloise":"USG",
+  "Viking":"VIK",
+  "Viktoria Plzen":"PLZ",
+  "Villarreal":"VIL"
+};
+
+function teamAbbr(team) {
+  return team?.abbr || TEAM_ABBR[team?.club] || String(team?.club || "").replace(/[^A-Za-z0-9]/g, "").slice(0, 3).toUpperCase();
 }
 
 function clubScore(team) {
@@ -320,8 +399,12 @@ function wireFixtureTooltips() {
 
 function setAnthemButtonState(btn, playing) {
   if (!btn) return;
-  btn.classList.toggle("is-playing", !!playing);
-  btn.querySelector(".anthem-icon").textContent = playing ? "❚❚" : "▶";
+  const isPlaying = !!playing;
+  const name = btn.dataset.anthemName || "Competition";
+  btn.classList.toggle("is-playing", isPlaying);
+  btn.setAttribute("aria-pressed", String(isPlaying));
+  btn.setAttribute("aria-label", `${isPlaying ? "Stop" : "Play"} ${name} anthem`);
+  btn.title = isPlaying ? `Tap to stop ${name} anthem` : name;
 }
 
 function stopOtherAnthems(currentAudio) {
@@ -454,6 +537,13 @@ const CLUB_SEARCH_ALIASES = {
   "paris saint-germain": ["Paris Saint-Germain", "PSG"],
   "manchester united": ["Manchester United", "Man United"],
   "tottenham hotspur": ["Tottenham Hotspur", "Tottenham"],
+  "gnk dinamo": ["Dinamo Zagreb", "GNK Dinamo Zagreb", "Dinamo"],
+  "viking": ["Viking FK", "Viking"],
+  "ararat-armenia": ["FC Ararat-Armenia", "Ararat-Armenia"],
+  "n.e.c. nijmegen": ["NEC Nijmegen", "N.E.C.", "NEC"],
+  "lask": ["LASK Linz", "LASK"],
+  "torreense": ["SCU Torreense", "Torreense"],
+  "slovan bratislava": ["Slovan Bratislava", "ŠK Slovan Bratislava"],
   "lillestrom": ["Lillestrøm SK", "Lillestrom SK", "Lillestrøm", "Lillestrom"],
   "hapoel beer-sheva": ["Hapoel Be'er Sheva", "Hapoel Be'er Sheva FC", "Hapoel Beer Sheva", "Hapoel Beer Sheva FC"]
 };
@@ -708,6 +798,7 @@ function mobileCard(entry, rank) {
   const compactClub = (team, comp) => `
     <span class="mobile-mini-team ${comp.toLowerCase()}">
       <img class="crest mini-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      <span class="mini-team-code">${esc(teamAbbr(team))}</span>
       <span class="mini-team-score">${clubScore(team)}</span>
     </span>`;
 
@@ -721,6 +812,7 @@ function mobileCard(entry, rank) {
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
           <div class="mobile-mini-teams">
             ${compactClub(entry.ucl, "UCL")}
+            <span class="mobile-pair-plus" aria-hidden="true">+</span>
             ${compactClub(entry.uel, "UEL")}
           </div>
         </div>

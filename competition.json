@@ -1,11 +1,11 @@
 {
   "brandName": "EURO GOAL RUSH 26/27",
   "season": "2026/27",
-  "lastUpdated": "2026-08-26T12:15:00+01:00",
+  "lastUpdated": "2026-08-28",
   "entries": [
     {
       "id": 1,
-      "entrant": "GAVIN KEOHANE",
+      "entrant": "Gavin Keohane",
       "previousRank": 2,
       "ucl": {
         "club": "Arsenal",
@@ -15,8 +15,8 @@
         "goalsAgainst": 2,
         "fixtures": [
           {
-            "code": "DIN",
-            "opponent": "Dinamo Zagreb",
+            "code": "VIK",
+            "opponent": "Viking",
             "venue": "H",
             "status": ""
           },
@@ -27,8 +27,8 @@
             "status": ""
           },
           {
-            "code": "LYO",
-            "opponent": "Lyon",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "H",
             "status": ""
           },
@@ -64,7 +64,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "ARS"
       },
       "uel": {
         "club": "AZ Alkmaar",
@@ -74,7 +75,7 @@
         "goalsAgainst": 7,
         "fixtures": [
           {
-            "code": "LEV",
+            "code": "LSO",
             "opponent": "Levski Sofia",
             "venue": "H",
             "status": ""
@@ -98,8 +99,8 @@
             "status": ""
           },
           {
-            "code": "FEN",
-            "opponent": "Fenerbahce",
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
             "venue": "H",
             "status": ""
           },
@@ -123,12 +124,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "AZA"
       }
     },
     {
       "id": 2,
-      "entrant": "BARRY TRIGGS",
+      "entrant": "Barry Triggs",
       "previousRank": 1,
       "ucl": {
         "club": "Aston Villa",
@@ -187,7 +189,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "AVL"
       },
       "uel": {
         "club": "Bournemouth",
@@ -239,19 +242,20 @@
             "status": ""
           },
           {
-            "code": "CRZ",
-            "opponent": "Crvena Zvezda",
+            "code": "DIN",
+            "opponent": "GNK Dinamo",
             "venue": "A",
             "status": ""
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "BOU"
       }
     },
     {
       "id": 3,
-      "entrant": "GARY FOOLKES",
+      "entrant": "Brian Greaney",
       "previousRank": 4,
       "ucl": {
         "club": "Atletico Madrid",
@@ -261,8 +265,8 @@
         "goalsAgainst": 10,
         "fixtures": [
           {
-            "code": "LYO",
-            "opponent": "Lyon",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "H",
             "status": ""
           },
@@ -310,7 +314,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "ATM"
       },
       "uel": {
         "club": "Celta Vigo",
@@ -326,8 +331,8 @@
             "status": ""
           },
           {
-            "code": "FEN",
-            "opponent": "Fenerbahce",
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
             "venue": "H",
             "status": ""
           },
@@ -338,8 +343,8 @@
             "status": ""
           },
           {
-            "code": "TRA",
-            "opponent": "Trabzonspor",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
@@ -369,12 +374,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "CLV"
       }
     },
     {
       "id": 4,
-      "entrant": "BRIAN GREANEY",
+      "entrant": "Garry O'Connell",
       "previousRank": 3,
       "ucl": {
         "club": "Borussia Dortmund",
@@ -433,7 +439,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "BVB"
       },
       "uel": {
         "club": "Crystal Palace",
@@ -479,8 +486,8 @@
             "status": ""
           },
           {
-            "code": "CRZ",
-            "opponent": "Crvena Zvezda",
+            "code": "DIN",
+            "opponent": "GNK Dinamo",
             "venue": "A",
             "status": ""
           },
@@ -492,12 +499,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "CRY"
       }
     },
     {
       "id": 5,
-      "entrant": "TERRY MCSWEENEY",
+      "entrant": "Ciara Neville",
       "previousRank": 6,
       "ucl": {
         "club": "Barcelona",
@@ -556,7 +564,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "BAR"
       },
       "uel": {
         "club": "Hoffenheim",
@@ -566,8 +575,8 @@
         "goalsAgainst": 4,
         "fixtures": [
           {
-            "code": "FEN",
-            "opponent": "Fenerbahce",
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
             "venue": "H",
             "status": ""
           },
@@ -578,8 +587,8 @@
             "status": ""
           },
           {
-            "code": "TRA",
-            "opponent": "Trabzonspor",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
@@ -615,12 +624,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "HOF"
       }
     },
     {
       "id": 6,
-      "entrant": "KENNEDY MURPHY",
+      "entrant": "Rebecca Horgan",
       "previousRank": 5,
       "ucl": {
         "club": "Bayern Munich",
@@ -679,7 +689,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "BAY"
       },
       "uel": {
         "club": "Juventus",
@@ -719,8 +730,8 @@
             "status": ""
           },
           {
-            "code": "CRZ",
-            "opponent": "Crvena Zvezda",
+            "code": "DIN",
+            "opponent": "GNK Dinamo",
             "venue": "A",
             "status": ""
           },
@@ -738,12 +749,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "JUV"
       }
     },
     {
       "id": 7,
-      "entrant": "JOHN O'DRISCOLL",
+      "entrant": "Sean Kelly",
       "previousRank": null,
       "ucl": {
         "club": "Club Brugge",
@@ -802,7 +814,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "BRU"
       },
       "uel": {
         "club": "Bayer Leverkusen",
@@ -818,8 +831,8 @@
             "status": ""
           },
           {
-            "code": "TRA",
-            "opponent": "Trabzonspor",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
@@ -861,12 +874,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "LEV"
       }
     },
     {
       "id": 8,
-      "entrant": "LIAM CURTIN",
+      "entrant": "Tom Pearce",
       "previousRank": null,
       "ucl": {
         "club": "Como",
@@ -925,7 +939,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "COM"
       },
       "uel": {
         "club": "Marseille",
@@ -959,8 +974,8 @@
             "status": ""
           },
           {
-            "code": "CRZ",
-            "opponent": "Crvena Zvezda",
+            "code": "DIN",
+            "opponent": "GNK Dinamo",
             "venue": "A",
             "status": ""
           },
@@ -984,12 +999,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "MAR"
       }
     },
     {
       "id": 9,
-      "entrant": "GARY CORCORAN",
+      "entrant": "Liam Curtin",
       "previousRank": null,
       "ucl": {
         "club": "Feyenoord",
@@ -1048,7 +1064,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "FEY"
       },
       "uel": {
         "club": "AC Milan",
@@ -1058,8 +1075,8 @@
         "goalsAgainst": 5,
         "fixtures": [
           {
-            "code": "TRA",
-            "opponent": "Trabzonspor",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
@@ -1107,12 +1124,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "MIL"
       }
     },
     {
       "id": 10,
-      "entrant": "JAMES O'LEARY",
+      "entrant": "Colin McCarthy",
       "previousRank": null,
       "ucl": {
         "club": "Galatasaray",
@@ -1171,7 +1189,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "GAL"
       },
       "uel": {
         "club": "Olympiacos",
@@ -1199,8 +1218,8 @@
             "status": ""
           },
           {
-            "code": "CRZ",
-            "opponent": "Crvena Zvezda",
+            "code": "DIN",
+            "opponent": "GNK Dinamo",
             "venue": "A",
             "status": ""
           },
@@ -1223,19 +1242,20 @@
             "status": ""
           },
           {
-            "code": "SPP",
+            "code": "SPA",
             "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "OLY"
       }
     },
     {
       "id": 11,
-      "entrant": "JOE DALTON",
+      "entrant": "Dominic Moynihan",
       "previousRank": null,
       "ucl": {
         "club": "Inter Milan",
@@ -1294,7 +1314,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "INT"
       },
       "uel": {
         "club": "Real Sociedad",
@@ -1353,12 +1374,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "RSO"
       }
     },
     {
       "id": 12,
-      "entrant": "PETER GILROY",
+      "entrant": "Jamie Keenan",
       "previousRank": null,
       "ucl": {
         "club": "RB Leipzig",
@@ -1417,7 +1439,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "RBL"
       },
       "uel": {
         "club": "Rennes",
@@ -1439,8 +1462,8 @@
             "status": ""
           },
           {
-            "code": "CRZ",
-            "opponent": "Crvena Zvezda",
+            "code": "DIN",
+            "opponent": "GNK Dinamo",
             "venue": "A",
             "status": ""
           },
@@ -1463,7 +1486,7 @@
             "status": ""
           },
           {
-            "code": "SPP",
+            "code": "SPA",
             "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
@@ -1476,12 +1499,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "REN"
       }
     },
     {
       "id": 13,
-      "entrant": "ERIC TRIHY",
+      "entrant": "Mark Hackett",
       "previousRank": null,
       "ucl": {
         "club": "Lens",
@@ -1540,7 +1564,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "LEN"
       },
       "uel": {
         "club": "Sparta Prague",
@@ -1599,12 +1624,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "SPA"
       }
     },
     {
       "id": 14,
-      "entrant": "SEAN KELLY",
+      "entrant": "Gary Corcoran 🦊",
       "previousRank": null,
       "ucl": {
         "club": "Lille",
@@ -1663,7 +1689,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "LIL"
       },
       "uel": {
         "club": "Sturm Graz",
@@ -1679,8 +1706,8 @@
             "status": ""
           },
           {
-            "code": "CRZ",
-            "opponent": "Crvena Zvezda",
+            "code": "DIN",
+            "opponent": "GNK Dinamo",
             "venue": "A",
             "status": ""
           },
@@ -1703,7 +1730,7 @@
             "status": ""
           },
           {
-            "code": "SPP",
+            "code": "SPA",
             "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
@@ -1722,12 +1749,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "STG"
       }
     },
     {
       "id": 15,
-      "entrant": "THE MATICIAN",
+      "entrant": "Gary Foolkes",
       "previousRank": null,
       "ucl": {
         "club": "Liverpool",
@@ -1786,7 +1814,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "LIV"
       },
       "uel": {
         "club": "Sunderland",
@@ -1845,12 +1874,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "SUN"
       }
     },
     {
       "id": 16,
-      "entrant": "KILLIAN KELLEHER",
+      "entrant": "Steve Dinan",
       "previousRank": null,
       "ucl": {
         "club": "Manchester City",
@@ -1909,7 +1939,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "MCI"
       },
       "uel": {
         "club": "Torreense",
@@ -1919,8 +1950,8 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "CRZ",
-            "opponent": "Crvena Zvezda",
+            "code": "DIN",
+            "opponent": "GNK Dinamo",
             "venue": "A",
             "status": ""
           },
@@ -1943,7 +1974,7 @@
             "status": ""
           },
           {
-            "code": "SPP",
+            "code": "SPA",
             "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
@@ -1961,19 +1992,20 @@
             "status": ""
           },
           {
-            "code": "B04",
+            "code": "LEV",
             "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "TOR"
       }
     },
     {
       "id": 17,
-      "entrant": "CLODAGH CASHMAN",
+      "entrant": "Alan Conway",
       "previousRank": null,
       "ucl": {
         "club": "Manchester United",
@@ -2032,7 +2064,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "MUN"
       },
       "uel": {
         "club": "Union Saint-Gilloise",
@@ -2091,12 +2124,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "USG"
       }
     },
     {
       "id": 18,
-      "entrant": "COLIN MCCARTHY",
+      "entrant": "James Murphy",
       "previousRank": null,
       "ucl": {
         "club": "Napoli",
@@ -2155,7 +2189,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "NAP"
       },
       "uel": {
         "club": "Anderlecht",
@@ -2183,7 +2218,7 @@
             "status": ""
           },
           {
-            "code": "SPP",
+            "code": "SPA",
             "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
@@ -2201,7 +2236,7 @@
             "status": ""
           },
           {
-            "code": "B04",
+            "code": "LEV",
             "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
@@ -2214,12 +2249,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "AND"
       }
     },
     {
       "id": 19,
-      "entrant": "MARK HACKETT",
+      "entrant": "Gavin Rogers",
       "previousRank": null,
       "ucl": {
         "club": "Paris Saint-Germain",
@@ -2278,7 +2314,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "PSG"
       },
       "uel": {
         "club": "Benfica",
@@ -2337,12 +2374,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "BEN"
       }
     },
     {
       "id": 20,
-      "entrant": "GER O'BRIEN",
+      "entrant": "Alison Kennedy",
       "previousRank": null,
       "ucl": {
         "club": "Porto",
@@ -2401,7 +2439,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "POR"
       },
       "uel": {
         "club": "Besiktas",
@@ -2423,7 +2462,7 @@
             "status": ""
           },
           {
-            "code": "SPP",
+            "code": "SPA",
             "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
@@ -2441,7 +2480,7 @@
             "status": ""
           },
           {
-            "code": "B04",
+            "code": "LEV",
             "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
@@ -2460,12 +2499,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "BES"
       }
     },
     {
       "id": 21,
-      "entrant": "SHANE RUSSELL",
+      "entrant": "Aaron Hickey",
       "previousRank": null,
       "ucl": {
         "club": "PSV Eindhoven",
@@ -2524,10 +2564,11 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "PSV"
       },
       "uel": {
-        "club": "Crvena Zvezda",
+        "club": "GNK Dinamo",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -2583,12 +2624,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "DIN"
       }
     },
     {
       "id": 22,
-      "entrant": "STEVE DINAN",
+      "entrant": "Bob",
       "previousRank": null,
       "ucl": {
         "club": "Real Betis",
@@ -2640,14 +2682,15 @@
             "status": ""
           },
           {
-            "code": "DIN",
-            "opponent": "Dinamo Zagreb",
+            "code": "VIK",
+            "opponent": "Viking",
             "venue": "A",
             "status": ""
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "BET"
       },
       "uel": {
         "club": "Ferencvaros",
@@ -2663,7 +2706,7 @@
             "status": ""
           },
           {
-            "code": "SPP",
+            "code": "SPA",
             "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
@@ -2681,7 +2724,7 @@
             "status": ""
           },
           {
-            "code": "B04",
+            "code": "LEV",
             "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
@@ -2699,19 +2742,20 @@
             "status": ""
           },
           {
-            "code": "LEV",
+            "code": "LSO",
             "opponent": "Levski Sofia",
             "venue": "A",
             "status": ""
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "FER"
       }
     },
     {
       "id": 23,
-      "entrant": "JAMIE KEENAN",
+      "entrant": "Terry McSweeney",
       "previousRank": null,
       "ucl": {
         "club": "Real Madrid",
@@ -2770,7 +2814,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "RMA"
       },
       "uel": {
         "club": "Jagiellonia",
@@ -2829,12 +2874,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "JAG"
       }
     },
     {
       "id": 24,
-      "entrant": "BRIAN CLARKE",
+      "entrant": "Pat Mulcair",
       "previousRank": null,
       "ucl": {
         "club": "Roma",
@@ -2880,20 +2926,21 @@
             "status": ""
           },
           {
-            "code": "DIN",
-            "opponent": "Dinamo Zagreb",
+            "code": "VIK",
+            "opponent": "Viking",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LYO",
-            "opponent": "Lyon",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "A",
             "status": ""
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "ROM"
       },
       "uel": {
         "club": "Lech Poznan",
@@ -2903,7 +2950,7 @@
         "goalsAgainst": 6,
         "fixtures": [
           {
-            "code": "SPP",
+            "code": "SPA",
             "opponent": "Sparta Prague",
             "venue": "A",
             "status": ""
@@ -2921,7 +2968,7 @@
             "status": ""
           },
           {
-            "code": "B04",
+            "code": "LEV",
             "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
@@ -2939,7 +2986,7 @@
             "status": ""
           },
           {
-            "code": "LEV",
+            "code": "LSO",
             "opponent": "Levski Sofia",
             "venue": "A",
             "status": ""
@@ -2952,12 +2999,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "LPO"
       }
     },
     {
       "id": 25,
-      "entrant": "GER DOLAN",
+      "entrant": "Vanessa Sargent",
       "previousRank": null,
       "ucl": {
         "club": "Shakhtar Donetsk",
@@ -3016,7 +3064,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "SHA"
       },
       "uel": {
         "club": "Lillestrom",
@@ -3075,12 +3124,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "LST"
       }
     },
     {
       "id": 26,
-      "entrant": "VANESSA SARGENT",
+      "entrant": "Killian Kelleher",
       "previousRank": null,
       "ucl": {
         "club": "Slavia Prague",
@@ -3120,14 +3170,14 @@
             "status": ""
           },
           {
-            "code": "DIN",
-            "opponent": "Dinamo Zagreb",
+            "code": "VIK",
+            "opponent": "Viking",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LYO",
-            "opponent": "Lyon",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "A",
             "status": ""
           },
@@ -3139,7 +3189,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "SLA"
       },
       "uel": {
         "club": "Omonia",
@@ -3161,7 +3212,7 @@
             "status": ""
           },
           {
-            "code": "B04",
+            "code": "LEV",
             "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
@@ -3179,7 +3230,7 @@
             "status": ""
           },
           {
-            "code": "LEV",
+            "code": "LSO",
             "opponent": "Levski Sofia",
             "venue": "A",
             "status": ""
@@ -3191,19 +3242,20 @@
             "status": ""
           },
           {
-            "code": "FEN",
-            "opponent": "Fenerbahce",
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
             "venue": "A",
             "status": ""
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "OMO"
       }
     },
     {
       "id": 27,
-      "entrant": "MICK O'RIORDAN",
+      "entrant": "Brian O'Driscoll",
       "previousRank": null,
       "ucl": {
         "club": "Sporting CP",
@@ -3262,7 +3314,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "SCP"
       },
       "uel": {
         "club": "Red Bull Salzburg",
@@ -3321,12 +3374,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "RBS"
       }
     },
     {
       "id": 28,
-      "entrant": "TOM PEARCE",
+      "entrant": "John O'Driscoll",
       "previousRank": null,
       "ucl": {
         "club": "Stuttgart",
@@ -3360,14 +3414,14 @@
             "status": ""
           },
           {
-            "code": "DIN",
-            "opponent": "Dinamo Zagreb",
+            "code": "VIK",
+            "opponent": "Viking",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LYO",
-            "opponent": "Lyon",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "A",
             "status": ""
           },
@@ -3385,10 +3439,11 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "STU"
       },
       "uel": {
-        "club": "Trabzonspor",
+        "club": "Lyon",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -3401,7 +3456,7 @@
             "status": ""
           },
           {
-            "code": "B04",
+            "code": "LEV",
             "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
@@ -3419,7 +3474,7 @@
             "status": ""
           },
           {
-            "code": "LEV",
+            "code": "LSO",
             "opponent": "Levski Sofia",
             "venue": "A",
             "status": ""
@@ -3431,8 +3486,8 @@
             "status": ""
           },
           {
-            "code": "FEN",
-            "opponent": "Fenerbahce",
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
             "venue": "A",
             "status": ""
           },
@@ -3444,12 +3499,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "LYO"
       }
     },
     {
       "id": 29,
-      "entrant": "CHRIS GREAVES",
+      "entrant": "Kennedy Murphy",
       "previousRank": null,
       "ucl": {
         "club": "Villarreal",
@@ -3508,7 +3564,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "VIL"
       },
       "uel": {
         "club": "Viktoria Plzen",
@@ -3567,12 +3624,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "PLZ"
       }
     },
     {
       "id": 30,
-      "entrant": "GARRY O'CONNELL",
+      "entrant": "Ger O'Brien",
       "previousRank": null,
       "ucl": {
         "club": "AEK Athens",
@@ -3600,14 +3658,14 @@
             "status": ""
           },
           {
-            "code": "DIN",
-            "opponent": "Dinamo Zagreb",
+            "code": "VIK",
+            "opponent": "Viking",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LYO",
-            "opponent": "Lyon",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "A",
             "status": ""
           },
@@ -3631,7 +3689,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "AEK"
       },
       "uel": {
         "club": "OFI Crete",
@@ -3641,7 +3700,7 @@
         "goalsAgainst": 1,
         "fixtures": [
           {
-            "code": "B04",
+            "code": "LEV",
             "opponent": "Bayer Leverkusen",
             "venue": "A",
             "status": ""
@@ -3659,7 +3718,7 @@
             "status": ""
           },
           {
-            "code": "LEV",
+            "code": "LSO",
             "opponent": "Levski Sofia",
             "venue": "A",
             "status": ""
@@ -3671,8 +3730,8 @@
             "status": ""
           },
           {
-            "code": "FEN",
-            "opponent": "Fenerbahce",
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
             "venue": "A",
             "status": ""
           },
@@ -3683,19 +3742,20 @@
             "status": ""
           },
           {
-            "code": "TRA",
-            "opponent": "Trabzonspor",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "OFI"
       }
     },
     {
       "id": 31,
-      "entrant": "DOMINIC MOYNIHAN",
+      "entrant": "John Tierney",
       "previousRank": null,
       "ucl": {
         "club": "Bodo/Glimt",
@@ -3754,7 +3814,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "BOD"
       },
       "uel": {
         "club": "Celtic",
@@ -3813,12 +3874,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "CEL"
       }
     },
     {
       "id": 32,
-      "entrant": "BRIAN KENEFICK",
+      "entrant": "Ray Murphy",
       "previousRank": null,
       "ucl": {
         "club": "Slovan Bratislava",
@@ -3840,14 +3902,14 @@
             "status": ""
           },
           {
-            "code": "DIN",
-            "opponent": "Dinamo Zagreb",
+            "code": "VIK",
+            "opponent": "Viking",
             "venue": "A",
             "status": ""
           },
           {
-            "code": "LYO",
-            "opponent": "Lyon",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "A",
             "status": ""
           },
@@ -3877,10 +3939,11 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "SBR"
       },
       "uel": {
-        "club": "Fenerbahce",
+        "club": "Ararat-Armenia",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -3899,7 +3962,7 @@
             "status": ""
           },
           {
-            "code": "LEV",
+            "code": "LSO",
             "opponent": "Levski Sofia",
             "venue": "A",
             "status": ""
@@ -3923,8 +3986,8 @@
             "status": ""
           },
           {
-            "code": "TRA",
-            "opponent": "Trabzonspor",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
@@ -3936,12 +3999,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "ARA"
       }
     },
     {
       "id": 33,
-      "entrant": "JOHN TIERNEY",
+      "entrant": "Clodagh Cashman",
       "previousRank": null,
       "ucl": {
         "club": "LASK",
@@ -4000,7 +4064,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "LAS"
       },
       "uel": {
         "club": "Hapoel Beer-Sheva",
@@ -4059,15 +4124,16 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "HBS"
       }
     },
     {
       "id": 34,
-      "entrant": "KEITH O'CONNOR",
+      "entrant": "Brian Kenefick",
       "previousRank": null,
       "ucl": {
-        "club": "Lyon",
+        "club": "Fenerbahce",
         "crest": "",
         "played": 0,
         "goalsFor": 6,
@@ -4080,8 +4146,8 @@
             "status": ""
           },
           {
-            "code": "DIN",
-            "opponent": "Dinamo Zagreb",
+            "code": "VIK",
+            "opponent": "Viking",
             "venue": "A",
             "status": ""
           },
@@ -4123,7 +4189,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "FEN"
       },
       "uel": {
         "club": "N.E.C. Nijmegen",
@@ -4139,7 +4206,7 @@
             "status": ""
           },
           {
-            "code": "LEV",
+            "code": "LSO",
             "opponent": "Levski Sofia",
             "venue": "A",
             "status": ""
@@ -4151,8 +4218,8 @@
             "status": ""
           },
           {
-            "code": "FEN",
-            "opponent": "Fenerbahce",
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
             "venue": "H",
             "status": ""
           },
@@ -4163,8 +4230,8 @@
             "status": ""
           },
           {
-            "code": "TRA",
-            "opponent": "Trabzonspor",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
@@ -4182,12 +4249,13 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "NEC"
       }
     },
     {
       "id": 35,
-      "entrant": "BRIAN O'DRISCOLL",
+      "entrant": "Peter Gilroy",
       "previousRank": null,
       "ucl": {
         "club": "Sabah",
@@ -4246,7 +4314,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "SAB"
       },
       "uel": {
         "club": "Celje",
@@ -4305,15 +4374,16 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "CEJ"
       }
     },
     {
       "id": 36,
-      "entrant": "RAY MURPHY",
+      "entrant": "Danielle Neville",
       "previousRank": null,
       "ucl": {
-        "club": "Dinamo Zagreb",
+        "club": "Viking",
         "crest": "",
         "played": 0,
         "goalsFor": 2,
@@ -4326,8 +4396,8 @@
             "status": ""
           },
           {
-            "code": "LYO",
-            "opponent": "Lyon",
+            "code": "FEN",
+            "opponent": "Fenerbahce",
             "venue": "H",
             "status": ""
           },
@@ -4369,7 +4439,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "VIK"
       },
       "uel": {
         "club": "Levski Sofia",
@@ -4391,8 +4462,8 @@
             "status": ""
           },
           {
-            "code": "FEN",
-            "opponent": "Fenerbahce",
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
             "venue": "H",
             "status": ""
           },
@@ -4403,8 +4474,8 @@
             "status": ""
           },
           {
-            "code": "TRA",
-            "opponent": "Trabzonspor",
+            "code": "LYO",
+            "opponent": "Lyon",
             "venue": "H",
             "status": ""
           },
@@ -4428,7 +4499,8 @@
           }
         ],
         "apiTeamId": null,
-        "apiCode": ""
+        "apiCode": "",
+        "abbr": "LSO"
       }
     }
   ],

@@ -144,3 +144,14 @@ Entrant names remain the real 36-name list from v67.
 
 ## v76 tag-matched title
 - Updated the main title gradient to use the exact UCL cyan and UEL gold from the competition tags for a more consistent header.
+
+
+## v77 pre-fixture upgrade
+
+- Updated the leaderboard and draw data to the new 36-person entrant list.
+- Gary Corcoran is displayed as `Gary Corcoran 🦊`.
+- Updated both competition pools to the confirmed 36 UCL and 36 UEL league-phase teams.
+- Competition logos were removed from around the title / chip edge and moved inside the circular anthem controls.
+- Tapping/clicking a competition logo now plays or stops its anthem; the logo remains visible as a hidden easter-egg control.
+- Mobile collapsed cards now show crest + three-letter team code + team subtotal, with a subtle `+` between UCL and UEL.
+- Real league-phase fixture schedules are deliberately not populated yet. Dummy fixtures were regenerated so they only use clubs in the confirmed final pools.

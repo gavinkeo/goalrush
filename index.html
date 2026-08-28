@@ -9,15 +9,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.svg?v=63" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=67">
+  <link rel="icon" href="favicon.svg?v=77" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=77">
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
 
   <header class="dashboard-header shell">
     <div class="title-top-row">
-      <h1 class="main-title"><img class="title-logo-mobile title-logo-mobile-ucl" src="assets/ucl-logo.png" alt="" aria-hidden="true"><span class="main-title-text">EURO GOAL RUSH 26/27</span><img class="title-logo-mobile title-logo-mobile-uel" src="assets/uel-logo.png" alt="" aria-hidden="true"></h1>
+      <h1 class="main-title"><span class="main-title-text">EURO GOAL RUSH 26/27</span></h1>
 
       <label class="search top-search desktop-top-search">
         <span>⌕</span>
@@ -26,7 +26,6 @@
 
       <div class="matchday-strip">
         <div class="matchday-chip ucl-chip" id="ucl-matchday">
-          <img class="chip-logo chip-logo-ucl" src="assets/ucl-logo.png" alt="" aria-hidden="true">
           <div class="chip-copy">
             <div class="chip-topline">
               <span class="comp">UCL</span>
@@ -34,13 +33,12 @@
             </div>
             <strong id="ucl-date">MD1 · 8–10 SEP</strong>
           </div>
-          <button class="anthem-btn anthem-ucl" id="ucl-anthem-btn" type="button" aria-label="Play Champions League anthem" title="Play UCL anthem">
-            <span class="anthem-icon">▶</span>
+          <button class="anthem-btn anthem-ucl" id="ucl-anthem-btn" type="button" aria-label="Play Champions League anthem" aria-pressed="false" data-anthem-name="Champions League" title="Champions League">
+            <img class="anthem-logo anthem-logo-ucl" src="assets/ucl-logo.png" alt="" aria-hidden="true">
           </button>
         </div>
 
         <div class="matchday-chip uel-chip" id="uel-matchday">
-          <img class="chip-logo chip-logo-uel" src="assets/uel-logo.png" alt="" aria-hidden="true">
           <div class="chip-copy">
             <div class="chip-topline">
               <span class="comp">UEL</span>
@@ -48,8 +46,8 @@
             </div>
             <strong id="uel-date">MD1 · 16–17 SEP</strong>
           </div>
-          <button class="anthem-btn anthem-uel" id="uel-anthem-btn" type="button" aria-label="Play Europa League anthem" title="Play UEL anthem">
-            <span class="anthem-icon">▶</span>
+          <button class="anthem-btn anthem-uel" id="uel-anthem-btn" type="button" aria-label="Play Europa League anthem" aria-pressed="false" data-anthem-name="Europa League" title="Europa League">
+            <img class="anthem-logo anthem-logo-uel" src="assets/uel-logo.png" alt="" aria-hidden="true">
           </button>
         </div>
       </div>
@@ -128,6 +126,6 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <script src="app.js?v=63" defer></script>
+  <script src="app.js?v=77" defer></script>
 </body>
 </html>

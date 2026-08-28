@@ -4584,3 +4584,153 @@ th:nth-child(5){width:7%}
     );
   }
 }
+
+
+/* =========================================================
+   v77 - logo anthem controls + richer compact mobile pairings
+   ========================================================= */
+
+/* Competition logos now live inside the anthem controls. */
+.title-logo-mobile,
+.dashboard-header .matchday-chip .chip-logo{
+  display:none !important;
+}
+
+.dashboard-header .matchday-chip{
+  grid-template-columns:auto 52px !important;
+  grid-template-areas:"copy anthem" !important;
+}
+
+.anthem-btn{
+  overflow:hidden;
+}
+
+.anthem-logo{
+  display:block;
+  width:26px;
+  height:26px;
+  object-fit:contain;
+  pointer-events:none;
+  user-select:none;
+  transition:transform .18s ease, filter .18s ease, opacity .18s ease;
+  filter:drop-shadow(0 2px 5px rgba(0,0,0,.42));
+}
+
+.anthem-logo-ucl{
+  width:29px;
+  height:29px;
+}
+
+.anthem-logo-uel{
+  width:27px;
+  height:27px;
+}
+
+.anthem-btn.is-playing .anthem-logo{
+  transform:scale(1.07);
+  opacity:1;
+}
+
+.anthem-ucl.is-playing .anthem-logo{
+  filter:drop-shadow(0 0 8px rgba(73,228,255,.7));
+}
+
+.anthem-uel.is-playing .anthem-logo{
+  filter:drop-shadow(0 0 8px rgba(255,173,97,.7));
+}
+
+@media(min-width:701px){
+  .dashboard-header .matchday-chip{
+    grid-template-columns:auto 48px !important;
+    column-gap:13px !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:44px !important;
+    height:44px !important;
+  }
+}
+
+@media(max-width:700px){
+  .main-title{
+    gap:0 !important;
+  }
+
+  .dashboard-header .matchday-chip{
+    grid-template-columns:minmax(0,1fr) 56px !important;
+    grid-template-areas:"copy anthem" !important;
+    column-gap:10px !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:52px !important;
+    height:52px !important;
+  }
+
+  .anthem-logo-ucl{
+    width:31px;
+    height:31px;
+  }
+
+  .anthem-logo-uel{
+    width:29px;
+    height:29px;
+  }
+
+  .mobile-mini-teams{
+    gap:5px !important;
+    flex-wrap:nowrap !important;
+  }
+
+  .mobile-mini-team{
+    gap:4px !important;
+    min-width:0 !important;
+    padding:4px 6px !important;
+  }
+
+  .mini-team-code{
+    font-size:.56rem;
+    font-weight:900;
+    line-height:1;
+    letter-spacing:.035em;
+    white-space:nowrap;
+  }
+
+  .mobile-mini-team.ucl .mini-team-code{
+    color:var(--ucl);
+  }
+
+  .mobile-mini-team.uel .mini-team-code{
+    color:var(--uel);
+  }
+
+  .mini-team-score{
+    font-size:.64rem !important;
+  }
+
+  .mobile-pair-plus{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    color:#7f8da9;
+    font-size:.66rem;
+    font-weight:950;
+    line-height:1;
+    opacity:.9;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-mini-team{
+    padding-inline:5px !important;
+  }
+
+  .mini-team-code{
+    font-size:.53rem;
+  }
+
+  .mobile-pair-plus{
+    font-size:.62rem;
+  }
+}
