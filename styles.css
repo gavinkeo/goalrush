@@ -6882,3 +6882,99 @@ html.manager-modal-open body{
     font-size:1.05rem !important;
   }
 }
+
+
+/* =========================================================
+   v101 - mobile horizontal balance
+   Keep v100 density; fill the centre of each card more naturally.
+   ========================================================= */
+
+@media(max-width:700px){
+
+  /* Nudge the total/chevron cluster inward without changing card height. */
+  .mobile-summary{
+    padding-right:18px !important;
+  }
+
+  /* Give the pairing row a deliberate usable width instead of
+     allowing two tiny intrinsic-width pills followed by dead space. */
+  .mobile-mini-teams{
+    display:flex !important;
+    align-items:center !important;
+    width:min(100%, 248px) !important;
+    max-width:248px !important;
+    gap:5px !important;
+  }
+
+  .mobile-mini-team{
+    flex:1 1 0 !important;
+    min-width:0 !important;
+    max-width:116px !important;
+    padding-left:9px !important;
+    padding-right:9px !important;
+    justify-content:center !important;
+  }
+
+  .mobile-pair-plus{
+    flex:0 0 auto !important;
+    width:9px !important;
+    text-align:center !important;
+    margin-inline:0 !important;
+  }
+
+  /* Slightly pull the data cluster toward the pairings. */
+  .mobile-combined{
+    transform:translateX(-4px);
+  }
+
+  .mobile-expand{
+    transform:translateX(-3px);
+  }
+
+  .mobile-card[open] .mobile-expand{
+    transform:translateX(-3px) rotate(180deg) !important;
+  }
+}
+
+/* Smaller handsets get the same balance without risking overflow. */
+@media(max-width:430px){
+  .mobile-summary{
+    padding-right:14px !important;
+  }
+
+  .mobile-mini-teams{
+    width:min(100%, 220px) !important;
+    max-width:220px !important;
+  }
+
+  .mobile-mini-team{
+    max-width:103px !important;
+    padding-left:7px !important;
+    padding-right:7px !important;
+  }
+
+  .mobile-combined{
+    transform:translateX(-2px);
+  }
+
+  .mobile-expand{
+    transform:translateX(-1px);
+  }
+
+  .mobile-card[open] .mobile-expand{
+    transform:translateX(-1px) rotate(180deg) !important;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-mini-teams{
+    width:100% !important;
+    max-width:204px !important;
+  }
+
+  .mobile-mini-team{
+    max-width:95px !important;
+    padding-left:6px !important;
+    padding-right:6px !important;
+  }
+}
