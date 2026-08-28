@@ -4734,3 +4734,57 @@ th:nth-child(5){width:7%}
     font-size:.62rem;
   }
 }
+
+
+/* =========================================================
+   v78 - force fresh competition logos + showcase them more
+   ========================================================= */
+
+.anthem-btn .anthem-logo{
+  display:block !important;
+  object-fit:contain !important;
+  max-width:none !important;
+  max-height:none !important;
+}
+
+@media(min-width:701px){
+  .dashboard-header .matchday-chip{
+    grid-template-columns:auto 54px !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:50px !important;
+    height:50px !important;
+  }
+
+  .dashboard-header .anthem-logo-ucl{
+    width:35px !important;
+    height:35px !important;
+  }
+
+  .dashboard-header .anthem-logo-uel{
+    width:33px !important;
+    height:33px !important;
+  }
+}
+
+@media(max-width:700px){
+  .dashboard-header .matchday-chip{
+    grid-template-columns:minmax(0,1fr) 62px !important;
+  }
+
+  .dashboard-header .anthem-btn{
+    width:58px !important;
+    height:58px !important;
+  }
+
+  .dashboard-header .anthem-logo-ucl{
+    width:40px !important;
+    height:40px !important;
+  }
+
+  .dashboard-header .anthem-logo-uel{
+    width:38px !important;
+    height:38px !important;
+  }
+}

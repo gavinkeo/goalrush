@@ -155,3 +155,10 @@ Entrant names remain the real 36-name list from v67.
 - Tapping/clicking a competition logo now plays or stops its anthem; the logo remains visible as a hidden easter-egg control.
 - Mobile collapsed cards now show crest + three-letter team code + team subtotal, with a subtle `+` between UCL and UEL.
 - Real league-phase fixture schedules are deliberately not populated yet. Dummy fixtures were regenerated so they only use clubs in the confirmed final pools.
+
+
+## v78 competition logo refresh
+
+- Added explicit cache-busting to the UCL and UEL logo image URLs so mobile/desktop browsers cannot keep serving older cached icons.
+- Enlarged the circular anthem controls and the competition logos slightly on both desktop and mobile.
+- The logo remains the hidden play/pause control for each anthem.
