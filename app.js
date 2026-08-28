@@ -1,10 +1,12 @@
-const DATA_URL = "competition.json?v=81";
-const PLACEHOLDER_CREST = "crest-placeholder.svg?v=81";
+const DATA_URL = "competition.json?v=85";
+const PLACEHOLDER_CREST = "crest-placeholder.svg?v=85";
 
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
 const mobileEl = $("#mobile-standings");
 const searchEl = $("#search");
+const teamModalEl = $("#team-modal");
+const teamModalContentEl = $("#team-modal-content");
 
 const uclAnthemBtn = $("#ucl-anthem-btn");
 const uelAnthemBtn = $("#uel-anthem-btn");
@@ -114,6 +116,31 @@ const TEAM_ABBR = {
 
 function teamAbbr(team) {
   return team?.abbr || TEAM_ABBR[team?.club] || String(team?.club || "").replace(/[^A-Za-z0-9]/g, "").slice(0, 3).toUpperCase();
+}
+
+function competitionTeams() {
+  return entries.flatMap(entry => [entry?.ucl, entry?.uel]).filter(team => team?.club);
+}
+
+function competitionTeamByClub(name) {
+  const wanted = clubKey(name);
+  if (!wanted) return null;
+  return competitionTeams().find(team => clubKey(team.club) === wanted) || null;
+}
+
+function competitionTeamByCode(code) {
+  const wanted = String(code || "").trim().toUpperCase();
+  if (!wanted) return null;
+  return competitionTeams().find(team => teamAbbr(team) === wanted) || null;
+}
+
+function fixtureOpponentTeam(item) {
+  return competitionTeamByClub(item?.opponent) || competitionTeamByCode(item?.code);
+}
+
+function fixtureOpponentCrest(item) {
+  const opponent = fixtureOpponentTeam(item);
+  return opponent ? crest(opponent) : PLACEHOLDER_CREST;
 }
 
 function clubScore(team) {
@@ -724,12 +751,22 @@ function fixtureGrid(team, comp) {
         item.status === "played" ? " played" : "";
       const scoreText = fixtureScoreText(team, item, index);
       const tooltipText = fixtureTooltipText(team, item, index, comp);
+      const opponent = fixtureOpponentTeam(item);
+      const opponentKey = opponent?.club || item?.opponent || item?.code || "";
 
       return `
-        <span class="fixture${statusClass}${fixtureTemporalClass(index, comp)}" data-tooltip="${esc(tooltipText)}" aria-label="${esc(tooltipText.replaceAll("\n", ". "))}">
-          <span class="fixture-content">
-            <b>${esc(item.code)}</b>
-            ${scoreText ? `<span class="fixture-score">${esc(scoreText)}</span>` : ""}
+        <span class="fixture desktop-fixture${statusClass}${fixtureTemporalClass(index, comp)}"
+              data-tooltip="${esc(tooltipText)}"
+              aria-label="${esc(tooltipText.replaceAll("\n", ". "))}">
+          <span class="fixture-content desktop-fixture-content">
+            <span class="fixture-crest-plate">
+              <img class="fixture-opponent-crest"
+                   data-club-key="${esc(clubKey(opponentKey))}"
+                   src="${esc(fixtureOpponentCrest(item))}"
+                   alt=""
+                   onerror="this.src='${PLACEHOLDER_CREST}'">
+            </span>
+            <span class="fixture-score">${esc(scoreText || "–")}</span>
           </span>
         </span>`;
     }).join("")
@@ -740,10 +777,17 @@ function teamCell(team, comp) {
   const c = comp.toLowerCase();
   return `
     <div class="team-cell">
-      <img class="crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      <img class="crest team-main-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
       <div class="team-meta">
         <span class="tag ${c}">${comp}</span>
-        <span class="team-name">${esc(team.club)}</span>
+        <button class="team-name team-name-button"
+                type="button"
+                data-team="${esc(team.club)}"
+                data-comp="${esc(comp)}"
+                aria-label="View ${esc(team.club)} fixtures">
+          <span>${esc(team.club)}</span>
+          <span class="team-open-icon" aria-hidden="true">↗</span>
+        </button>
       </div>
     </div>`;
 }
@@ -867,6 +911,118 @@ function mobileCard(entry, rank) {
         ${row(entry.uel, "UEL")}
       </div>
     </details>`;
+}
+
+
+function teamModalFixtureRows(team, comp) {
+  return fixtureValues(team).map((item, index) => {
+    const opponent = fixtureOpponentTeam(item);
+    const opponentName = item?.opponent || opponent?.club || opponentFullName(item?.code);
+    const opponentKey = opponent?.club || opponentName;
+    const scoreText = fixtureScoreText(team, item, index) || "–";
+    const dateText = formatFixtureListDate(comp, index, item);
+    const kickoffText = fixtureKickoffText(item);
+    const venueCode = String(item?.venue || "").toUpperCase();
+    const venueLabel = venueCode === "H" ? "H" : venueCode === "A" ? "A" : "–";
+    const venueWord = venueCode === "H" ? "Home" : venueCode === "A" ? "Away" : "Venue TBC";
+
+    return `
+      <div class="team-modal-fixture${fixtureTemporalClass(index, comp)}">
+        <span class="team-modal-md">MD${index + 1}</span>
+        <span class="team-modal-date">${esc(dateText)}</span>
+        <span class="team-modal-time">${esc(kickoffText)}</span>
+        <span class="team-modal-venue ${venueCode === "H" ? "home" : venueCode === "A" ? "away" : ""}" title="${venueWord}">${venueLabel}</span>
+        <span class="team-modal-opponent">
+          <img data-club-key="${esc(clubKey(opponentKey))}"
+               src="${esc(opponent ? crest(opponent) : PLACEHOLDER_CREST)}"
+               alt=""
+               onerror="this.src='${PLACEHOLDER_CREST}'">
+          <strong>${esc(opponentName)}</strong>
+        </span>
+        <span class="team-modal-score">${esc(scoreText)}</span>
+      </div>`;
+  }).join("");
+}
+
+function openTeamModal(teamName, comp) {
+  const team = competitionTeamByClub(teamName);
+  if (!team || !teamModalEl || !teamModalContentEl) return;
+
+  hideFixtureTooltip();
+
+  const c = String(comp || "").toLowerCase();
+  teamModalContentEl.innerHTML = `
+    <div class="team-modal-hero ${c}">
+      <div class="team-modal-hero-left">
+        <span class="team-modal-comp ${c}">${esc(comp)}</span>
+        <span class="team-modal-main-crest">
+          <img data-club-key="${esc(clubKey(team.club))}"
+               src="${esc(crest(team))}"
+               alt=""
+               onerror="this.src='${PLACEHOLDER_CREST}'">
+        </span>
+        <div>
+          <span class="team-modal-eyebrow">8 league-phase fixtures</span>
+          <h2 id="team-modal-title">${esc(team.club)}</h2>
+        </div>
+      </div>
+      <div class="team-modal-total ${c}">
+        <span>GF+GA</span>
+        <strong>${clubScore(team)}</strong>
+      </div>
+    </div>
+
+    <div class="team-modal-column-heads" aria-hidden="true">
+      <span>MD</span>
+      <span>Date</span>
+      <span>KO</span>
+      <span>H/A</span>
+      <span>Opponent</span>
+      <span>Score</span>
+    </div>
+
+    <div class="team-modal-fixtures ${c}">
+      ${teamModalFixtureRows(team, comp)}
+    </div>
+  `;
+
+  teamModalEl.hidden = false;
+  document.documentElement.classList.add("team-modal-open");
+  requestAnimationFrame(() => teamModalEl.classList.add("is-open"));
+  teamModalEl.querySelector(".team-modal-close")?.focus();
+}
+
+function closeTeamModal() {
+  if (!teamModalEl || teamModalEl.hidden) return;
+  teamModalEl.classList.remove("is-open");
+  document.documentElement.classList.remove("team-modal-open");
+  window.setTimeout(() => {
+    if (!teamModalEl.classList.contains("is-open")) {
+      teamModalEl.hidden = true;
+    }
+  }, 160);
+}
+
+function wireTeamModal() {
+  document.addEventListener("click", event => {
+    const teamButton = event.target.closest?.(".team-name-button");
+    if (teamButton) {
+      event.preventDefault();
+      openTeamModal(teamButton.dataset.team, teamButton.dataset.comp);
+      return;
+    }
+
+    if (event.target.closest?.("[data-close-team-modal]")) {
+      event.preventDefault();
+      closeTeamModal();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && teamModalEl && !teamModalEl.hidden) {
+      closeTeamModal();
+    }
+  });
 }
 
 
@@ -1042,4 +1198,5 @@ async function init() {
 searchEl.addEventListener("input", render);
 wireAnthemButtons();
 wireFixtureTooltips();
+wireTeamModal();
 init();
