@@ -7076,3 +7076,53 @@ html.manager-modal-open body{
     max-width:204px !important;
   }
 }
+
+
+/* =========================================================
+   v103 - give the mobile two-row grid proper breathing room
+   ========================================================= */
+
+@media(max-width:700px){
+
+  .mobile-summary{
+    min-height:78px !important;
+    grid-template-rows:1fr 1fr !important;
+    row-gap:5px !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+  }
+
+  .mobile-manager-wrap{
+    grid-template-rows:1fr 1fr !important;
+    row-gap:5px !important;
+    align-content:stretch !important;
+  }
+
+  .mobile-manager-name{
+    align-self:center !important;
+  }
+
+  .mobile-mini-teams{
+    align-self:center !important;
+  }
+
+  /* Keep the spanning elements visually anchored through both rows. */
+  .mobile-summary > .rank-spot,
+  .mobile-summary > .mobile-combined,
+  .mobile-summary > .mobile-expand{
+    align-self:center !important;
+  }
+}
+
+@media(max-width:430px){
+  .mobile-summary{
+    min-height:76px !important;
+    row-gap:4px !important;
+    padding-top:9px !important;
+    padding-bottom:9px !important;
+  }
+
+  .mobile-manager-wrap{
+    row-gap:4px !important;
+  }
+}
