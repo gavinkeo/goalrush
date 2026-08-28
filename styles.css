@@ -6699,3 +6699,186 @@ html.manager-modal-open body{
     opacity:.72;
   }
 }
+
+
+/* =========================================================
+   v100 - mobile sleekness pass
+   Same information architecture, less boxy / more compact.
+   Expanded fixture display intentionally unchanged.
+   ========================================================= */
+
+@media(max-width:700px){
+
+  /* Slightly denser leaderboard without making cards feel cramped. */
+  .mobile-standings{
+    gap:9px !important;
+  }
+
+  .mobile-card{
+    border-radius:15px !important;
+    border-color:rgba(255,255,255,.075) !important;
+    box-shadow:
+      0 8px 20px rgba(0,0,0,.13),
+      inset 0 1px 0 rgba(255,255,255,.018) !important;
+  }
+
+  .mobile-card::before{
+    width:1px !important;
+    opacity:.24 !important;
+  }
+
+  /* More efficient summary grid. */
+  .mobile-summary{
+    grid-template-columns:42px minmax(0,1fr) 52px 13px !important;
+    gap:7px !important;
+    padding:8px 10px !important;
+  }
+
+  /* Rank remains obvious, but no longer dominates the card. */
+  .rank-spot{
+    min-width:40px !important;
+    flex-basis:40px !important;
+  }
+
+  .rank-box{
+    width:38px !important;
+    min-height:34px !important;
+    padding:4px 3px !important;
+    gap:2px !important;
+    border-radius:9px !important;
+    box-shadow:none !important;
+  }
+
+  .rank-box-1,
+  .rank-box-2,
+  .rank-box-3{
+    min-height:38px !important;
+  }
+
+  .rank-number{
+    font-size:.75rem !important;
+  }
+
+  .rank-prize{
+    font-size:.36rem !important;
+  }
+
+  /* Keep the manager as the primary visual anchor. */
+  .mobile-manager-wrap{
+    gap:4px !important;
+  }
+
+  .mobile-manager-name{
+    font-size:.83rem !important;
+    line-height:1.08 !important;
+  }
+
+  /* Club pairings stay recognisable but lose a little bulk. */
+  .mobile-mini-teams{
+    gap:5px !important;
+    margin-top:2px !important;
+  }
+
+  .mobile-mini-team{
+    min-height:27px !important;
+    padding:4px 7px !important;
+    gap:5px !important;
+    border-color:rgba(255,255,255,.055) !important;
+  }
+
+  .mobile-mini-team.ucl{
+    border-color:rgba(73,228,255,.11) !important;
+    background:rgba(73,228,255,.045) !important;
+  }
+
+  .mobile-mini-team.uel{
+    border-color:rgba(255,173,97,.12) !important;
+    background:rgba(255,173,97,.05) !important;
+  }
+
+  .mini-crest{
+    width:20px !important;
+    height:20px !important;
+  }
+
+  .mini-team-code{
+    font-size:.57rem !important;
+  }
+
+  .mini-team-score{
+    font-size:.66rem !important;
+  }
+
+  .mobile-pair-plus{
+    font-size:.64rem !important;
+    opacity:.58 !important;
+  }
+
+  /* Total is still prominent, but reads as data rather than another card. */
+  .mobile-combined{
+    min-width:50px !important;
+    width:50px !important;
+    min-height:42px !important;
+    padding:0 !important;
+    border-radius:10px !important;
+    border-color:rgba(255,255,255,.055) !important;
+    background:rgba(255,255,255,.012) !important;
+    box-shadow:none !important;
+  }
+
+  .mobile-combined strong{
+    font-size:1.10rem !important;
+    font-weight:950 !important;
+  }
+
+  /* Pull the chevron back into the data row. */
+  .mobile-expand{
+    width:13px !important;
+    font-size:.76rem !important;
+    color:#6f7f9d !important;
+    opacity:.72;
+  }
+
+  .mobile-card[open] .mobile-expand{
+    color:#aebbd1 !important;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-summary{
+    grid-template-columns:40px minmax(0,1fr) 48px 12px !important;
+    gap:6px !important;
+    padding:8px 9px !important;
+  }
+
+  .rank-spot{
+    min-width:38px !important;
+    flex-basis:38px !important;
+  }
+
+  .rank-box{
+    width:36px !important;
+  }
+
+  .mobile-manager-name{
+    font-size:.80rem !important;
+  }
+
+  .mobile-mini-team{
+    padding-inline:6px !important;
+  }
+
+  .mini-crest{
+    width:19px !important;
+    height:19px !important;
+  }
+
+  .mobile-combined{
+    min-width:46px !important;
+    width:46px !important;
+  }
+
+  .mobile-combined strong{
+    font-size:1.05rem !important;
+  }
+}
