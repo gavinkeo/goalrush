@@ -4998,3 +4998,109 @@ th:nth-child(5){width:7%}
   .mobile-fixture-opponent{ font-size:.53rem; }
   .mobile-list-score{ font-size:.48rem; }
 }
+
+
+/* =========================================================
+   v82 - tighter expanded mobile fixtures
+   ========================================================= */
+@media(max-width:700px){
+
+  /* Compress the team section chrome without making it feel cramped. */
+  .mobile-comp{
+    padding:7px 10px 7px !important;
+  }
+
+  .mobile-team{
+    margin-bottom:3px !important;
+  }
+
+  .mobile-team strong{
+    font-size:.86rem !important;
+  }
+
+  .mobile-badge{
+    font-size:.50rem !important;
+  }
+
+  .mobile-total{
+    font-size:.84rem !important;
+  }
+
+  .mobile-fixture-list{
+    margin-top:4px !important;
+  }
+
+  .mobile-fixture-list .mobile-fixture-row{
+    box-sizing:border-box !important;
+    grid-template-columns:34px 62px 40px minmax(0,1fr) 23px !important;
+    column-gap:6px !important;
+    min-height:35px !important;
+    height:35px !important;
+    padding:3px 3px !important;
+    line-height:1 !important;
+  }
+
+  .mobile-fixture-md{
+    font-size:.56rem !important;
+  }
+
+  .mobile-fixture-date{
+    font-size:.50rem !important;
+  }
+
+  .mobile-fixture-time{
+    font-size:.50rem !important;
+  }
+
+  .mobile-fixture-opponent-wrap{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) auto !important;
+    align-items:center !important;
+    justify-content:start !important;
+    gap:6px !important;
+    width:100% !important;
+    min-width:0 !important;
+    text-align:left !important;
+  }
+
+  .mobile-fixture-opponent{
+    display:block !important;
+    width:100% !important;
+    text-align:left !important;
+    font-size:.60rem !important;
+    line-height:1.05 !important;
+  }
+
+  .mobile-list-score{
+    justify-self:end !important;
+    font-size:.55rem !important;
+    line-height:1 !important;
+  }
+
+  .mobile-fixture-venue{
+    width:21px !important;
+    height:21px !important;
+    border-radius:6px !important;
+    font-size:.49rem !important;
+  }
+}
+
+@media(max-width:390px){
+  .mobile-comp{
+    padding:6px 8px 6px !important;
+  }
+
+  .mobile-fixture-list .mobile-fixture-row{
+    grid-template-columns:32px 58px 38px minmax(0,1fr) 21px !important;
+    column-gap:5px !important;
+    min-height:34px !important;
+    height:34px !important;
+    padding:3px 2px !important;
+  }
+
+  .mobile-fixture-md{ font-size:.54rem !important; }
+  .mobile-fixture-date,
+  .mobile-fixture-time{ font-size:.48rem !important; }
+  .mobile-fixture-opponent{ font-size:.58rem !important; }
+  .mobile-list-score{ font-size:.53rem !important; }
+}
