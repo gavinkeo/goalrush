@@ -10,6 +10,7 @@ function entrantName(v){
   if(name==="Bob")return "Bob O'Neill";
   if(name==="Ger O'Brien")return "Geraldo";
   if(name==="Gary Corcoran 🦊")return "Gary 🦊 Corcoran";
+  if(name==="John Tierney")return "Eric Trihy";
   return v;
 }
 function migrateEntrantSwap(){

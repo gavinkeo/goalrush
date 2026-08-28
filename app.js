@@ -1411,6 +1411,7 @@ async function init() {
             entry?.entrant === "Bob" ? "Bob O'Neill" :
             entry?.entrant === "Ger O'Brien" ? "Geraldo" :
             entry?.entrant === "Gary Corcoran 🦊" ? "Gary 🦊 Corcoran" :
+            entry?.entrant === "John Tierney" ? "Eric Trihy" :
             entry?.entrant
         }))
       : [];
