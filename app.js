@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=86";
+const DATA_URL = "competition.json?v=108";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const $ = (sel) => document.querySelector(sel);
@@ -202,6 +202,7 @@ function generatedFixtureScoreList(team) {
 
 function fixtureScoreText(team, item, index) {
   if (item?.score) return item.score;
+  if (item?.placeholderScore) return item.placeholderScore;
   return generatedFixtureScoreList(team)[index] || "";
 }
 
