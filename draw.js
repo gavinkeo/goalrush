@@ -43,6 +43,22 @@ function startDraw(){const v=validateSetup();if(!v)return;state={entrantsPool:[.
 function showLive(){els.setup.hidden=true;els.live.hidden=false;if(els.poolCounts)els.poolCounts.hidden=false}function restoreSession(){const x=loadJson(STORAGE_KEY,null);if(!x?.total)return false;state=x;migrateEntrantSwap();showLive();render();return true}
 function render(){els.entrantsLeft.textContent=state.entrantsPool.length;els.uclLeft.textContent=state.uclPool.length;els.uelLeft.textContent=state.uelPool.length;els.total.textContent=state.total;els.completed.textContent=state.results.length;els.drawNumber.textContent=String(Math.min(state.results.length+1,state.total)).padStart(2,"0");els.entrantReveal.textContent=state.current.entrant||"Ready";els.uclReveal.textContent=state.current.ucl||"—";els.uelReveal.textContent=state.current.uel||"—";setCrest(els.uclCrest,state.current.ucl);setCrest(els.uelCrest,state.current.uel);const done=state.results.length===state.total;document.body.classList.toggle("draw-complete",done);els.drawEntrant.disabled=busy||done||!!state.current.entrant;els.drawUcl.disabled=busy||done||!state.current.entrant||!!state.current.ucl;els.drawUel.disabled=busy||done||!state.current.ucl||!!state.current.uel;els.confirm.disabled=busy||done||!(state.current.entrant&&state.current.ucl&&state.current.uel);els.undo.disabled=busy||!state.results.length||!!state.current.entrant;const has=state.results.length>0;els.copy.disabled=!has;els.csv.disabled=!has;els.json.disabled=!has;renderResults();save()}
 function clubKey(name){return String(name||"").trim().toLowerCase()}
+function migrateCrestCacheNames(){
+  const aliases=[
+    ["gnk dinamo","dinamo zagreb"],
+    ["union saint-gilloise","union sg"],
+    ["n.e.c. nijmegen","nec nijmegen"],
+    ["red bull salzburg","rb salzburg"]
+  ];
+  let changed=false;
+  for(const [oldKey,newKey] of aliases){
+    if(!crestCache[newKey]&&crestCache[oldKey]){
+      crestCache[newKey]=crestCache[oldKey];
+      changed=true;
+    }
+  }
+  if(changed)saveCrestCache();
+}
 function norm(v){return String(v||"").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu,"").replace(/[^a-z0-9]/g,"")}
 const CLUB_SEARCH_ALIASES={
   "psv eindhoven":["PSV","PSV Eindhoven"],"sporting cp":["Sporting Lisbon","Sporting CP"],"bodo/glimt":["Bodo Glimt","Bodø/Glimt"],
@@ -61,6 +77,29 @@ const CLUB_SEARCH_ALIASES={
 };
 function searchCandidatesForClub(club){const key=clubKey(club),aliases=CLUB_SEARCH_ALIASES[key]||[];const simplified=String(club).replace(/\b(FC|CF|AC|SC|AFC|CP|KV|BSC|GNK|SK)\b/gi,"").replace(/[\/-]/g," ").replace(/\s+/g," ").trim();return [...new Set([club,...aliases,simplified].filter(Boolean))]}
 function saveCrestCache(){try{const payload=JSON.stringify(crestCache);localStorage.setItem(DRAW_CREST_CACHE_KEY,payload);localStorage.setItem(MAIN_CREST_CACHE_KEY,payload)}catch{}}
+async function seedLocalCrestsFromCompetition(){
+  try{
+    const r=await fetch("competition.json?v=110",{cache:"no-store"});
+    if(!r.ok)return;
+    const d=await r.json();
+    let changed=false;
+    for(const entry of (d.entries||[])){
+      for(const comp of ["ucl","uel"]){
+        const team=entry?.[comp];
+        if(!team?.club||!team?.crest)continue;
+        const key=clubKey(team.club);
+        if(crestCache[key]!==team.crest){
+          crestCache[key]=team.crest;
+          changed=true;
+        }
+      }
+    }
+    if(changed)saveCrestCache();
+    render();
+  }catch(error){
+    console.warn("Could not seed local draw crests:",error);
+  }
+}
 async function searchTheSportsDb(query){const r=await fetch(`https://www.thesportsdb.com/api/v1/json/123/searchteams.php?t=${encodeURIComponent(query)}`);if(!r.ok)throw new Error(`TheSportsDB HTTP ${r.status}`);const j=await r.json();return (j.teams||[]).filter(t=>t.strSport==="Soccer")}
 async function fetchCrestForClub(team){const wanted=norm(team);for(const query of searchCandidatesForClub(team)){const soccer=await searchTheSportsDb(query);if(!soccer.length)continue;const exact=soccer.find(t=>norm(t.strTeam)===wanted);if(exact?.strBadge)return exact.strBadge;const contained=soccer.find(t=>{const candidate=norm(t.strTeam);return candidate.includes(wanted)||wanted.includes(candidate)});if(contained?.strBadge)return contained.strBadge;if(query!==team&&soccer[0]?.strBadge)return soccer[0].strBadge}return null}
 function cachedCrest(team){return team?(crestCache[clubKey(team)]||PLACEHOLDER):PLACEHOLDER}
@@ -77,5 +116,7 @@ async function competitionJson(){let base={brandName:"EURO GOAL RUSH 26/27",seas
 function wireAudio(btn,audio,otherBtn,otherAudio){btn.addEventListener("click",async()=>{if(!audio.paused){audio.pause();audio.currentTime=0;btn.classList.remove("is-playing");btn.setAttribute("aria-pressed","false");return}otherAudio.pause();otherAudio.currentTime=0;otherBtn.classList.remove("is-playing");otherBtn.setAttribute("aria-pressed","false");try{await audio.play();btn.classList.add("is-playing");btn.setAttribute("aria-pressed","true")}catch{alert("Upload the matching anthem MP3 to the repository root.")}});audio.addEventListener("ended",()=>{btn.classList.remove("is-playing");btn.setAttribute("aria-pressed","false")})}
 [els.entrants,els.ucl,els.uel].forEach(x=>x.addEventListener("input",validateSetup));els.start.addEventListener("click",startDraw);els.drawEntrant.addEventListener("click",()=>drawFrom("entrants"));els.drawUcl.addEventListener("click",()=>drawFrom("ucl"));els.drawUel.addEventListener("click",()=>drawFrom("uel"));els.confirm.addEventListener("click",confirmCurrent);els.undo.addEventListener("click",()=>{if(confirm("Undo the last confirmed draw?"))undoLast()});els.copy.addEventListener("click",async()=>{await navigator.clipboard.writeText(state.results.map((r,i)=>`${i+1}. ${r.entrant} — ${r.ucl} / ${r.uel}`).join("\n"));els.copy.textContent="Copied";setTimeout(()=>els.copy.textContent="Copy results",1200)});els.csv.addEventListener("click",()=>download("euro-goal-rush-draw.csv",csvText(),"text/csv"));els.json.addEventListener("click",async()=>download("competition.json",await competitionJson(),"application/json"));els.reset.addEventListener("click",()=>{if(confirm("Reset the entire draw? This cannot be undone.")){localStorage.removeItem(STORAGE_KEY);location.reload()}});els.fullscreen.addEventListener("click",()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen());
 wireAudio(els.uclAudioBtn,els.uclAudio,els.uelAudioBtn,els.uelAudio);wireAudio(els.uelAudioBtn,els.uelAudio,els.uclAudioBtn,els.uclAudio);
-els.demo.addEventListener("click",async()=>{try{const r=await fetch("competition.json?v=110",{cache:"no-store"}),d=await r.json();els.entrants.value=d.entries.map(e=>entrantName(e.entrant)).join("\n");els.ucl.value=d.entries.map(e=>e.ucl.club).join("\n");els.uel.value=d.entries.map(e=>e.uel.club).join("\n");validateSetup()}catch{alert("Could not load demo data.")}});
+els.demo.addEventListener("click",async()=>{try{const r=await fetch("competition.json?v=110",{cache:"no-store"}),d=await r.json();els.entrants.value=d.entries.map(e=>entrantName(e.entrant)).join("\n");els.ucl.value=d.entries.map(e=>e.ucl.club).join("\n");els.uel.value=d.entries.map(e=>e.uel.club).join("\n");for(const e of (d.entries||[])){for(const comp of ["ucl","uel"]){const team=e?.[comp];if(team?.club&&team?.crest)crestCache[clubKey(team.club)]=team.crest}}saveCrestCache();validateSetup()}catch{alert("Could not load demo data.")}});
+migrateCrestCacheNames();
 if(!restoreSession())validateSetup();
+seedLocalCrestsFromCompetition();
