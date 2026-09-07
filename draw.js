@@ -13,10 +13,27 @@ function entrantName(v){
   if(name==="John Tierney")return "Eric Trihy";
   return v;
 }
+function teamDisplayName(v){
+  const name=String(v||"").trim();
+  if(name==="GNK Dinamo")return "Dinamo Zagreb";
+  if(name==="Union Saint-Gilloise")return "Union SG";
+  if(name==="N.E.C. Nijmegen")return "NEC Nijmegen";
+  if(name==="Red Bull Salzburg")return "RB Salzburg";
+  return v;
+}
 function migrateEntrantSwap(){
   state.entrantsPool=(state.entrantsPool||[]).map(entrantName);
-  state.results=(state.results||[]).map(r=>({...r,entrant:entrantName(r.entrant)}));
+  state.uclPool=(state.uclPool||[]).map(teamDisplayName);
+  state.uelPool=(state.uelPool||[]).map(teamDisplayName);
+  state.results=(state.results||[]).map(r=>({
+    ...r,
+    entrant:entrantName(r.entrant),
+    ucl:teamDisplayName(r.ucl),
+    uel:teamDisplayName(r.uel)
+  }));
   if(state.current?.entrant)state.current.entrant=entrantName(state.current.entrant);
+  if(state.current?.ucl)state.current.ucl=teamDisplayName(state.current.ucl);
+  if(state.current?.uel)state.current.uel=teamDisplayName(state.current.uel);
 }function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}
 function cleanLines(v){return v.split(/\r?\n/).map(x=>x.trim()).filter(Boolean)}function unique(a){return new Set(a.map(v=>v.toLocaleLowerCase())).size===a.length}
 function secureIndex(n){const max=0x100000000,limit=max-(max%n),a=new Uint32Array(1);do{crypto.getRandomValues(a)}while(a[0]>=limit);return a[0]%n}function sleep(ms){return new Promise(r=>setTimeout(r,ms))}
@@ -29,7 +46,7 @@ function clubKey(name){return String(name||"").trim().toLowerCase()}
 function norm(v){return String(v||"").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu,"").replace(/[^a-z0-9]/g,"")}
 const CLUB_SEARCH_ALIASES={
   "psv eindhoven":["PSV","PSV Eindhoven"],"sporting cp":["Sporting Lisbon","Sporting CP"],"bodo/glimt":["Bodo Glimt","Bodø/Glimt"],
-  "eintracht frankfurt":["Eintracht Frankfurt","Eintracht"],"union saint-gilloise":["Union SG","Union Saint-Gilloise"],"rb leipzig":["RB Leipzig","Leipzig"],
+  "eintracht frankfurt":["Eintracht Frankfurt","Eintracht"],"union sg":["Union SG","Union Saint-Gilloise"],"union saint-gilloise":["Union SG","Union Saint-Gilloise"],"rb leipzig":["RB Leipzig","Leipzig"],
   "bayer leverkusen":["Bayer Leverkusen","Leverkusen"],"shakhtar donetsk":["Shakhtar Donetsk","Shakhtar"],"dinamo zagreb":["Dinamo Zagreb","GNK Dinamo Zagreb"],
   "young boys":["Young Boys","BSC Young Boys"],"slavia prague":["Slavia Prague","Slavia Praha"],"olympiacos":["Olympiacos","Olympiakos"],
   "fenerbahce":["Fenerbahce","Fenerbahçe"],"besiktas":["Besiktas","Beşiktaş"],"az alkmaar":["AZ Alkmaar","AZ"],"real betis":["Real Betis","Betis"],
@@ -39,8 +56,8 @@ const CLUB_SEARCH_ALIASES={
   "club brugge":["Club Brugge","Club Brugge KV"],"lille":["Lille OSC","LOSC Lille","Lille"],"ac milan":["AC Milan","Milan"],
   "inter milan":["Inter Milan","Internazionale","Inter"],"paris saint-germain":["Paris Saint-Germain","PSG"],"manchester united":["Manchester United","Man United"],
   "manchester city":["Manchester City","Man City"],"tottenham hotspur":["Tottenham Hotspur","Tottenham"],"real sociedad":["Real Sociedad","Sociedad"],
-  "red bull salzburg":["Red Bull Salzburg","RB Salzburg","Salzburg"],"salzburg":["Red Bull Salzburg","RB Salzburg","Salzburg"],"galatasaray":["Galatasaray","Galatasaray SK"],
-  "celtic":["Celtic","Celtic FC"],"hearts":["Hearts","Heart of Midlothian"],"basel":["Basel","FC Basel"],"gnk dinamo":["Dinamo Zagreb","GNK Dinamo Zagreb","Dinamo"],"viking":["Viking FK","Viking"],"ararat-armenia":["FC Ararat-Armenia","Ararat-Armenia"],"n.e.c. nijmegen":["NEC Nijmegen","N.E.C.","NEC"],"lask":["LASK Linz","LASK"],"torreense":["SCU Torreense","Torreense"],"slovan bratislava":["Slovan Bratislava","ŠK Slovan Bratislava"],"lillestrom":["Lillestrøm SK","Lillestrom SK","Lillestrøm","Lillestrom"],"hapoel beer-sheva":["Hapoel Be\'er Sheva","Hapoel Be\'er Sheva FC","Hapoel Beer Sheva","Hapoel Beer Sheva FC"]
+  "rb salzburg":["RB Salzburg","Red Bull Salzburg","Salzburg"],"red bull salzburg":["Red Bull Salzburg","RB Salzburg","Salzburg"],"salzburg":["Red Bull Salzburg","RB Salzburg","Salzburg"],"galatasaray":["Galatasaray","Galatasaray SK"],
+  "celtic":["Celtic","Celtic FC"],"hearts":["Hearts","Heart of Midlothian"],"basel":["Basel","FC Basel"],"gnk dinamo":["Dinamo Zagreb","GNK Dinamo Zagreb","Dinamo"],"viking":["Viking FK","Viking"],"ararat-armenia":["FC Ararat-Armenia","Ararat-Armenia"],"nec nijmegen":["NEC Nijmegen","N.E.C. Nijmegen","N.E.C.","NEC"],"n.e.c. nijmegen":["NEC Nijmegen","N.E.C. Nijmegen","N.E.C.","NEC"],"lask":["LASK Linz","LASK"],"torreense":["SCU Torreense","Torreense"],"slovan bratislava":["Slovan Bratislava","ŠK Slovan Bratislava"],"lillestrom":["Lillestrøm SK","Lillestrom SK","Lillestrøm","Lillestrom"],"hapoel beer-sheva":["Hapoel Be\'er Sheva","Hapoel Be\'er Sheva FC","Hapoel Beer Sheva","Hapoel Beer Sheva FC"]
 };
 function searchCandidatesForClub(club){const key=clubKey(club),aliases=CLUB_SEARCH_ALIASES[key]||[];const simplified=String(club).replace(/\b(FC|CF|AC|SC|AFC|CP|KV|BSC|GNK|SK)\b/gi,"").replace(/[\/-]/g," ").replace(/\s+/g," ").trim();return [...new Set([club,...aliases,simplified].filter(Boolean))]}
 function saveCrestCache(){try{const payload=JSON.stringify(crestCache);localStorage.setItem(DRAW_CREST_CACHE_KEY,payload);localStorage.setItem(MAIN_CREST_CACHE_KEY,payload)}catch{}}
@@ -56,9 +73,9 @@ function undoLast(){const x=state.results.pop();if(!x)return;state.entrantsPool.
 function renderResults(){if(!state.results.length){els.body.innerHTML='<tr class="empty-row"><td colspan="4">No completed draws yet.</td></tr>';return}els.body.innerHTML=state.results.map((r,i)=>`<tr><td>${i+1}</td><td><strong>${esc(r.entrant)}</strong></td><td><div class="result-team"><img src="${cachedCrest(r.ucl)}" alt=""><span>${esc(r.ucl)}</span></div></td><td><div class="result-team"><img src="${cachedCrest(r.uel)}" alt=""><span>${esc(r.uel)}</span></div></td></tr>`).join("")}
 function download(name,text,type){const blob=new Blob([text],{type}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),500)}
 function csvText(){return ["Position,Entrant,UCL Team,UEL Team",...state.results.map((r,i)=>`${i+1},"${r.entrant.replaceAll('"','""')}","${r.ucl.replaceAll('"','""')}","${r.uel.replaceAll('"','""')}"`)].join("\n")}
-async function competitionJson(){let base={brandName:"EURO GOAL RUSH 26/27",season:"2026/27",entries:[]};try{const r=await fetch("competition.json?v=80",{cache:"no-store"});if(r.ok)base=await r.json()}catch{}base.entries=state.results.map((r,i)=>({id:i+1,entrant:r.entrant,previousRank:null,ucl:{club:r.ucl,crest:crestCache[clubKey(r.ucl)]||"",apiTeamId:null,apiCode:"",played:0,goalsFor:0,goalsAgainst:0,fixtures:Array.from({length:8},()=>({code:"TBD",venue:"",status:""}))},uel:{club:r.uel,crest:crestCache[clubKey(r.uel)]||"",apiTeamId:null,apiCode:"",played:0,goalsFor:0,goalsAgainst:0,fixtures:Array.from({length:8},()=>({code:"TBD",venue:"",status:""}))}}));return JSON.stringify(base,null,2)+"\n"}
+async function competitionJson(){let base={brandName:"EURO GOAL RUSH 26/27",season:"2026/27",entries:[]};try{const r=await fetch("competition.json?v=110",{cache:"no-store"});if(r.ok)base=await r.json()}catch{}base.entries=state.results.map((r,i)=>({id:i+1,entrant:r.entrant,previousRank:null,ucl:{club:r.ucl,crest:crestCache[clubKey(r.ucl)]||"",apiTeamId:null,apiCode:"",played:0,goalsFor:0,goalsAgainst:0,fixtures:Array.from({length:8},()=>({code:"TBD",venue:"",status:""}))},uel:{club:r.uel,crest:crestCache[clubKey(r.uel)]||"",apiTeamId:null,apiCode:"",played:0,goalsFor:0,goalsAgainst:0,fixtures:Array.from({length:8},()=>({code:"TBD",venue:"",status:""}))}}));return JSON.stringify(base,null,2)+"\n"}
 function wireAudio(btn,audio,otherBtn,otherAudio){btn.addEventListener("click",async()=>{if(!audio.paused){audio.pause();audio.currentTime=0;btn.classList.remove("is-playing");btn.setAttribute("aria-pressed","false");return}otherAudio.pause();otherAudio.currentTime=0;otherBtn.classList.remove("is-playing");otherBtn.setAttribute("aria-pressed","false");try{await audio.play();btn.classList.add("is-playing");btn.setAttribute("aria-pressed","true")}catch{alert("Upload the matching anthem MP3 to the repository root.")}});audio.addEventListener("ended",()=>{btn.classList.remove("is-playing");btn.setAttribute("aria-pressed","false")})}
 [els.entrants,els.ucl,els.uel].forEach(x=>x.addEventListener("input",validateSetup));els.start.addEventListener("click",startDraw);els.drawEntrant.addEventListener("click",()=>drawFrom("entrants"));els.drawUcl.addEventListener("click",()=>drawFrom("ucl"));els.drawUel.addEventListener("click",()=>drawFrom("uel"));els.confirm.addEventListener("click",confirmCurrent);els.undo.addEventListener("click",()=>{if(confirm("Undo the last confirmed draw?"))undoLast()});els.copy.addEventListener("click",async()=>{await navigator.clipboard.writeText(state.results.map((r,i)=>`${i+1}. ${r.entrant} — ${r.ucl} / ${r.uel}`).join("\n"));els.copy.textContent="Copied";setTimeout(()=>els.copy.textContent="Copy results",1200)});els.csv.addEventListener("click",()=>download("euro-goal-rush-draw.csv",csvText(),"text/csv"));els.json.addEventListener("click",async()=>download("competition.json",await competitionJson(),"application/json"));els.reset.addEventListener("click",()=>{if(confirm("Reset the entire draw? This cannot be undone.")){localStorage.removeItem(STORAGE_KEY);location.reload()}});els.fullscreen.addEventListener("click",()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen());
 wireAudio(els.uclAudioBtn,els.uclAudio,els.uelAudioBtn,els.uelAudio);wireAudio(els.uelAudioBtn,els.uelAudio,els.uclAudioBtn,els.uclAudio);
-els.demo.addEventListener("click",async()=>{try{const r=await fetch("competition.json?v=80",{cache:"no-store"}),d=await r.json();els.entrants.value=d.entries.map(e=>entrantName(e.entrant)).join("\n");els.ucl.value=d.entries.map(e=>e.ucl.club).join("\n");els.uel.value=d.entries.map(e=>e.uel.club).join("\n");validateSetup()}catch{alert("Could not load demo data.")}});
+els.demo.addEventListener("click",async()=>{try{const r=await fetch("competition.json?v=110",{cache:"no-store"}),d=await r.json();els.entrants.value=d.entries.map(e=>entrantName(e.entrant)).join("\n");els.ucl.value=d.entries.map(e=>e.ucl.club).join("\n");els.uel.value=d.entries.map(e=>e.uel.club).join("\n");validateSetup()}catch{alert("Could not load demo data.")}});
 if(!restoreSession())validateSetup();

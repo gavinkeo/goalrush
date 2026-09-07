@@ -168,7 +168,7 @@
           },
           {
             "code": "DIN",
-            "opponent": "GNK Dinamo",
+            "opponent": "Dinamo Zagreb",
             "venue": "H",
             "status": "",
             "score": "",
@@ -516,7 +516,7 @@
           },
           {
             "code": "USG",
-            "opponent": "Union Saint-Gilloise",
+            "opponent": "Union SG",
             "venue": "H",
             "status": "",
             "score": "",
@@ -745,7 +745,7 @@
           },
           {
             "code": "RBS",
-            "opponent": "Red Bull Salzburg",
+            "opponent": "RB Salzburg",
             "venue": "A",
             "status": "",
             "score": "",
@@ -1053,7 +1053,7 @@
         "fixtures": [
           {
             "code": "NEC",
-            "opponent": "N.E.C. Nijmegen",
+            "opponent": "NEC Nijmegen",
             "venue": "H",
             "status": "",
             "score": "",
@@ -1282,7 +1282,7 @@
           },
           {
             "code": "DIN",
-            "opponent": "GNK Dinamo",
+            "opponent": "Dinamo Zagreb",
             "venue": "A",
             "status": "",
             "score": "",
@@ -1302,7 +1302,7 @@
           },
           {
             "code": "RBS",
-            "opponent": "Red Bull Salzburg",
+            "opponent": "RB Salzburg",
             "venue": "H",
             "status": "",
             "score": "",
@@ -1630,7 +1630,7 @@
           },
           {
             "code": "RBS",
-            "opponent": "Red Bull Salzburg",
+            "opponent": "RB Salzburg",
             "venue": "A",
             "status": "",
             "score": "",
@@ -2008,7 +2008,7 @@
           },
           {
             "code": "USG",
-            "opponent": "Union Saint-Gilloise",
+            "opponent": "Union SG",
             "venue": "A",
             "status": "",
             "score": "",
@@ -2227,7 +2227,7 @@
           },
           {
             "code": "NEC",
-            "opponent": "N.E.C. Nijmegen",
+            "opponent": "NEC Nijmegen",
             "venue": "A",
             "status": "",
             "score": "",
@@ -2237,7 +2237,7 @@
           },
           {
             "code": "DIN",
-            "opponent": "GNK Dinamo",
+            "opponent": "Dinamo Zagreb",
             "venue": "H",
             "status": "",
             "score": "",
@@ -2426,7 +2426,7 @@
           },
           {
             "code": "RBS",
-            "opponent": "Red Bull Salzburg",
+            "opponent": "RB Salzburg",
             "venue": "A",
             "status": "",
             "score": "",
@@ -2635,7 +2635,7 @@
           },
           {
             "code": "DIN",
-            "opponent": "GNK Dinamo",
+            "opponent": "Dinamo Zagreb",
             "venue": "A",
             "status": "",
             "score": "",
@@ -2784,7 +2784,7 @@
           },
           {
             "code": "DIN",
-            "opponent": "GNK Dinamo",
+            "opponent": "Dinamo Zagreb",
             "venue": "H",
             "status": "",
             "score": "",
@@ -3124,7 +3124,7 @@
         "abbr": "MUN"
       },
       "uel": {
-        "club": "Union Saint-Gilloise",
+        "club": "Union SG",
         "crest": "club-crests/union-saint-gilloise.png",
         "played": 0,
         "goalsFor": 10,
@@ -3331,7 +3331,7 @@
           },
           {
             "code": "DIN",
-            "opponent": "GNK Dinamo",
+            "opponent": "Dinamo Zagreb",
             "venue": "A",
             "status": "",
             "score": "",
@@ -3351,7 +3351,7 @@
           },
           {
             "code": "RBS",
-            "opponent": "Red Bull Salzburg",
+            "opponent": "RB Salzburg",
             "venue": "H",
             "status": "",
             "score": "",
@@ -3570,7 +3570,7 @@
           },
           {
             "code": "NEC",
-            "opponent": "N.E.C. Nijmegen",
+            "opponent": "NEC Nijmegen",
             "venue": "A",
             "status": "",
             "score": "",
@@ -3759,7 +3759,7 @@
           },
           {
             "code": "USG",
-            "opponent": "Union Saint-Gilloise",
+            "opponent": "Union SG",
             "venue": "H",
             "status": "",
             "score": "",
@@ -3880,7 +3880,7 @@
         "abbr": "PSV"
       },
       "uel": {
-        "club": "GNK Dinamo",
+        "club": "Dinamo Zagreb",
         "crest": "club-crests/gnk-dinamo.png",
         "played": 0,
         "goalsFor": 18,
@@ -3908,7 +3908,7 @@
           },
           {
             "code": "NEC",
-            "opponent": "N.E.C. Nijmegen",
+            "opponent": "NEC Nijmegen",
             "venue": "H",
             "status": "",
             "score": "",
@@ -4495,7 +4495,7 @@
           },
           {
             "code": "USG",
-            "opponent": "Union Saint-Gilloise",
+            "opponent": "Union SG",
             "venue": "A",
             "status": "",
             "score": "",
@@ -4863,7 +4863,7 @@
           },
           {
             "code": "NEC",
-            "opponent": "N.E.C. Nijmegen",
+            "opponent": "NEC Nijmegen",
             "venue": "A",
             "status": "",
             "score": "",
@@ -5014,7 +5014,7 @@
         "abbr": "SCP"
       },
       "uel": {
-        "club": "Red Bull Salzburg",
+        "club": "RB Salzburg",
         "crest": "club-crests/red-bull-salzburg.png",
         "played": 0,
         "goalsFor": 14,
@@ -5261,7 +5261,7 @@
           },
           {
             "code": "USG",
-            "opponent": "Union Saint-Gilloise",
+            "opponent": "Union SG",
             "venue": "H",
             "status": "",
             "score": "",
@@ -5400,7 +5400,7 @@
         "fixtures": [
           {
             "code": "USG",
-            "opponent": "Union Saint-Gilloise",
+            "opponent": "Union SG",
             "venue": "H",
             "status": "",
             "score": "",
@@ -5848,7 +5848,7 @@
           },
           {
             "code": "USG",
-            "opponent": "Union Saint-Gilloise",
+            "opponent": "Union SG",
             "venue": "A",
             "status": "",
             "score": "",
@@ -6007,7 +6007,7 @@
           },
           {
             "code": "RBS",
-            "opponent": "Red Bull Salzburg",
+            "opponent": "RB Salzburg",
             "venue": "A",
             "status": "",
             "score": "",
@@ -6017,7 +6017,7 @@
           },
           {
             "code": "NEC",
-            "opponent": "N.E.C. Nijmegen",
+            "opponent": "NEC Nijmegen",
             "venue": "H",
             "status": "",
             "score": "",
@@ -6156,7 +6156,7 @@
         "fixtures": [
           {
             "code": "DIN",
-            "opponent": "GNK Dinamo",
+            "opponent": "Dinamo Zagreb",
             "venue": "H",
             "status": "",
             "score": "",
@@ -6176,7 +6176,7 @@
           },
           {
             "code": "USG",
-            "opponent": "Union Saint-Gilloise",
+            "opponent": "Union SG",
             "venue": "A",
             "status": "",
             "score": "",
@@ -6337,7 +6337,7 @@
         "abbr": "FEN"
       },
       "uel": {
-        "club": "N.E.C. Nijmegen",
+        "club": "NEC Nijmegen",
         "crest": "club-crests/n-e-c-nijmegen.png",
         "played": 0,
         "goalsFor": 4,
@@ -6365,7 +6365,7 @@
           },
           {
             "code": "DIN",
-            "opponent": "GNK Dinamo",
+            "opponent": "Dinamo Zagreb",
             "venue": "A",
             "status": "",
             "score": "",
@@ -6554,7 +6554,7 @@
           },
           {
             "code": "RBS",
-            "opponent": "Red Bull Salzburg",
+            "opponent": "RB Salzburg",
             "venue": "H",
             "status": "",
             "score": "",
@@ -6604,7 +6604,7 @@
           },
           {
             "code": "NEC",
-            "opponent": "N.E.C. Nijmegen",
+            "opponent": "NEC Nijmegen",
             "venue": "H",
             "status": "",
             "score": "",
@@ -6723,7 +6723,7 @@
         "fixtures": [
           {
             "code": "RBS",
-            "opponent": "Red Bull Salzburg",
+            "opponent": "RB Salzburg",
             "venue": "H",
             "status": "",
             "score": "",
@@ -6733,7 +6733,7 @@
           },
           {
             "code": "NEC",
-            "opponent": "N.E.C. Nijmegen",
+            "opponent": "NEC Nijmegen",
             "venue": "A",
             "status": "",
             "score": "",
