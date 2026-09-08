@@ -869,6 +869,28 @@ function espnGoalEvents(competition, home, away) {
     });
 }
 
+function espnClockValue(...statuses) {
+  for (const status of statuses.filter(Boolean)) {
+    const candidates = [
+      status?.displayClock,
+      status?.clock?.displayValue,
+      status?.clock?.display,
+      status?.type?.shortDetail,
+      status?.type?.detail,
+      status?.type?.description
+    ];
+    for (const candidate of candidates) {
+      const text = String(candidate || "").trim();
+      if (!text) continue;
+      if (/^\d{1,3}:\d{2}$/.test(text)) return text;
+      if (/^\d{1,3}['’′]?$/.test(text)) return text;
+      const minute = text.match(/(?:^|\s)(\d{1,3})(?::\d{2})?\s*['’′](?:\s|$)/);
+      if (minute) return `${minute[1]}'`;
+    }
+  }
+  return "";
+}
+
 function parseEspnEvent(event, comp) {
   const competition = event?.competitions?.[0];
   const competitors = competition?.competitors || [];
@@ -892,7 +914,7 @@ function parseEspnEvent(event, comp) {
     homeScore,
     awayScore,
     status: completed ? "ft" : live ? "live" : "upcoming",
-    clock: status?.displayClock || competition?.status?.displayClock || event?.status?.displayClock || "",
+    clock: espnClockValue(status, competition?.status, event?.status),
     goals: espnGoalEvents(competition, home, away),
     homeShots: espnStatNumber(home, ["totalShots", "shotAttempts", "shotsTotal", "shots"]),
     awayShots: espnStatNumber(away, ["totalShots", "shotAttempts", "shotsTotal", "shots"]),
@@ -960,9 +982,12 @@ function enrichEspnMatchFromSummary(match, payload) {
   const awayShotsOnTarget = espnSummaryStatNumber(away, ["shotsOnTarget", "shotsOnGoal", "shotsOnTargetTotal"]);
   const homeXg = espnSummaryStatNumber(home, ["expectedGoals", "expectedGoalsTotal", "expectedGoal", "xG", "xg"]);
   const awayXg = espnSummaryStatNumber(away, ["expectedGoals", "expectedGoalsTotal", "expectedGoal", "xG", "xg"]);
+  const summaryCompetition = payload?.header?.competitions?.[0];
+  const summaryClock = espnClockValue(summaryCompetition?.status, payload?.header?.status);
 
   return {
     ...match,
+    clock: summaryClock || match.clock,
     homeShots: Number.isFinite(homeShots) ? homeShots : match.homeShots,
     awayShots: Number.isFinite(awayShots) ? awayShots : match.awayShots,
     homeShotsOnTarget: Number.isFinite(homeShotsOnTarget) ? homeShotsOnTarget : match.homeShotsOnTarget,
@@ -2198,6 +2223,15 @@ function updateMatchCentreNavBadges(fixtures = allCompetitionFixtures()) {
   });
 }
 
+function compactEstimatedLiveMinute(match) {
+  const kickoff = Number(match?.timestamp);
+  if (!Number.isFinite(kickoff)) return "";
+  const wallMinutes = Math.max(0, Math.floor((Date.now() - kickoff) / 60000));
+  if (wallMinutes <= 55) return `${Math.min(wallMinutes, 45)}'`;
+  if (wallMinutes <= 125) return `${Math.min(90, Math.max(46, wallMinutes - 15))}'`;
+  return "";
+}
+
 function compactFixtureStatus(match) {
   if (match.status === "live") {
     let clock = String(match?.liveMatch?.clock || "").trim();
@@ -2205,6 +2239,7 @@ function compactFixtureStatus(match) {
     // clock (e.g. 23:14). Keep the homepage label football-simple.
     if (/^\d{1,3}:\d{2}$/.test(clock)) clock = `${Number.parseInt(clock, 10)}'`;
     else if (/^\d{1,3}$/.test(clock)) clock = `${clock}'`;
+    if (!clock) clock = compactEstimatedLiveMinute(match);
     return { text: clock ? `LIVE ${clock}` : "LIVE", className: "live" };
   }
   if (match.status === "ft") return { text: "FT", className: "ft" };
@@ -2263,13 +2298,10 @@ function compactFixtureDetailsMarkup(match, expanded) {
   const homeXg = xgValue(live.homeXg);
   const awayXg = xgValue(live.awayXg);
 
+  // Keep the comparison self-explanatory: no feed/status helper copy under the stats.
   const note = unresolvedGoals.length
     ? `Feed update: ${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}`
-    : match.status === "live" && live?.clock
-      ? `<span class="compact-mobile-live">LIVE · ${esc(live.clock)}</span> · refreshing automatically`
-      : (!Number.isFinite(live.homeXg) && !Number.isFinite(live.awayXg) && match.status !== "upcoming")
-        ? "xG will appear when available from the match feed."
-        : "";
+    : "";
 
   return `
     <span class="compact-fixture-details" ${expanded ? "" : "hidden"}>
