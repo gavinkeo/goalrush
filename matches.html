@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=107">
   <style>
     :root{
       --bg:#061024;
@@ -116,27 +117,96 @@
       .owners-row{grid-template-columns:minmax(0,1fr);gap:6px}
       .owners-row .owner.away,.owners-row .versus{text-align:left}
     }
+
+    /* v123: compact homepage-style Match Centre header */
+    .match-centre-dashboard-header{padding-top:14px !important;padding-bottom:0 !important;}
+    .match-centre-dashboard-header .main-title{
+      margin:0;
+      font-size:clamp(.98rem,1.65vw,1.28rem) !important;
+      line-height:1 !important;
+      white-space:nowrap;
+    }
+    .match-centre-dashboard-header .mc-title-suffix{color:var(--uel);}
+    .mc-header-tools{display:flex;align-items:stretch;justify-content:flex-end;min-width:0;}
+    .mc-standings-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:36px;
+      padding:8px 12px;
+      border:1px solid rgba(91,137,207,.24);
+      border-radius:999px;
+      background:linear-gradient(180deg,rgba(10,26,53,.90),rgba(7,20,43,.94));
+      color:#e7f0ff;
+      text-decoration:none;
+      font-size:.68rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .mc-standings-link:hover{border-color:rgba(111,174,255,.44);}
+    .mc-matchday-link{color:inherit;text-decoration:none;}
+    .mc-matchday-link:hover{border-color:rgba(111,174,255,.38);}
+    .mc-comp-logo{pointer-events:none;}
+    .match-centre-dashboard-header .header-divider{margin-top:10px;}
+    @media(max-width:720px){
+      .match-centre-dashboard-header{padding-top:11px !important;}
+      .match-centre-dashboard-header .title-top-row{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+      }
+      .match-centre-dashboard-header .main-title{order:1;text-align:center;font-size:.92rem !important;}
+      .match-centre-dashboard-header .matchday-strip{order:2;width:100%;margin-top:8px;}
+      .match-centre-dashboard-header .mc-header-tools{order:3;width:100%;margin-top:7px;}
+      .mc-standings-link{min-height:34px;font-size:.62rem;padding:7px 10px;}
+      .match-centre-dashboard-header .header-divider{margin-top:8px;}
+    }
   </style>
 </head>
 <body>
-  <div class="shell page-top">
-    <div class="page-top-bar">
-      <div>
-        <p class="page-kicker">Live scores · full schedule</p>
-        <h1 class="page-title"><span class="blue">EURO GOAL RUSH</span> <span class="gold">MATCH CENTRE</span></h1>
-        <p class="page-subtitle">Every league-phase fixture from the Champions League and Europa League, with live status, kick-off times and the corresponding Goal Rush entrants attached to each club.</p>
+  <header class="dashboard-header shell match-centre-dashboard-header">
+    <div class="title-top-row">
+      <h1 class="main-title"><span class="main-title-text">EURO GOAL RUSH <span class="mc-title-suffix">MATCH CENTRE</span></span></h1>
+
+      <div class="mc-header-tools">
+        <a class="mc-standings-link" href="index.html">← Standings</a>
       </div>
-      <a class="back-link" href="index.html">← Back to standings</a>
+
+      <div class="matchday-strip">
+        <a class="matchday-chip ucl-chip mc-matchday-link" id="mc-ucl-matchday" href="matches.html?comp=UCL" aria-label="Champions League fixtures">
+          <div class="chip-copy">
+            <div class="chip-topline">
+              <span class="comp">UCL</span>
+              <span class="state" id="mc-ucl-state">NEXT</span>
+            </div>
+            <strong id="mc-ucl-date">MD1 · 8–10 SEP</strong>
+          </div>
+          <span class="anthem-btn anthem-ucl mc-comp-logo" aria-hidden="true">
+            <img class="anthem-logo anthem-logo-ucl" src="assets/ucl-logo.png?v=78" alt="">
+          </span>
+        </a>
+
+        <a class="matchday-chip uel-chip mc-matchday-link" id="mc-uel-matchday" href="matches.html?comp=UEL" aria-label="Europa League fixtures">
+          <div class="chip-copy">
+            <div class="chip-topline">
+              <span class="comp">UEL</span>
+              <span class="state" id="mc-uel-state">NEXT</span>
+            </div>
+            <strong id="mc-uel-date">MD1 · 16–17 SEP</strong>
+          </div>
+          <span class="anthem-btn anthem-uel mc-comp-logo" aria-hidden="true">
+            <img class="anthem-logo anthem-logo-uel" src="assets/uel-logo.png?v=78" alt="">
+          </span>
+        </a>
+      </div>
     </div>
-  </div>
+    <div class="header-divider" aria-hidden="true"></div>
+  </header>
 
   <main class="shell">
-    <section class="hero-card">
-      <div class="hero-meta">
-        <div class="hero-note" id="hero-note">Use the filters below to move between today's live action and the full league-phase schedule.</div>
-        <a class="hero-link" href="index.html">Main leaderboard →</a>
-      </div>
-    </section>
 
     <section class="filters-card" aria-label="Schedule filters">
       <div class="filter-row">
@@ -167,6 +237,6 @@
     </section>
   </main>
 
-  <script src="matches.js?v=120" defer></script>
+  <script src="matches.js?v=123" defer></script>
 </body>
 </html>

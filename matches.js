@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=120";
+const DATA_URL = "competition.json?v=123";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const state = {
@@ -237,12 +237,6 @@ function renderFixtures() {
   const empty = $("#empty-state");
   const scheduleCard = $("#schedule-card");
   const groupsEl = $("#schedule-groups");
-  const heroNote = $("#hero-note");
-
-  heroNote.textContent = state.filters.view === "TODAY"
-    ? "Today's live and upcoming fixtures are shown below. Use the filters to jump to a specific competition or matchday."
-    : "Browse the full league-phase schedule, or narrow the page to a single competition and matchday.";
-
   if (!list.length) {
     empty.hidden = false;
     scheduleCard.hidden = true;
@@ -267,6 +261,71 @@ function renderFixtures() {
       </div>
     </section>`).join("");
 }
+
+function headerMatchdayTiming(comp, md) {
+  const fixtures = state.fixtures.filter(match => match.comp === comp && Number(match.md) === Number(md?.md));
+  const kickoffTimes = fixtures.map(match => match.timestamp).filter(Number.isFinite);
+
+  if (!kickoffTimes.length) {
+    const firstKickoff = parseDate(md?.start || "");
+    const finalWindowEnd = parseDate(md?.end || md?.start || "");
+    finalWindowEnd.setHours(23, 59, 59, 999);
+    return { firstKickoff, finalWindowEnd, fixtures };
+  }
+
+  const firstKickoff = new Date(Math.min(...kickoffTimes));
+  const lastKickoff = new Date(Math.max(...kickoffTimes));
+  const finalWindowEnd = new Date(lastKickoff.getTime() + (2 * 60 + 15) * 60000);
+  return { firstKickoff, finalWindowEnd, fixtures };
+}
+function relevantHeaderMatchday(comp, schedule) {
+  const now = Date.now();
+  for (const md of schedule || []) {
+    const timing = headerMatchdayTiming(comp, md);
+    const explicitLive = timing.fixtures.some(match => match.status === "live");
+    if (now < timing.firstKickoff.getTime()) return { md, state: "NEXT", timing };
+    if (explicitLive || now <= timing.finalWindowEnd.getTime()) return { md, state: "LIVE", timing };
+  }
+  return schedule?.length
+    ? { md: schedule[schedule.length - 1], state: "COMPLETE", timing: headerMatchdayTiming(comp, schedule[schedule.length - 1]) }
+    : null;
+}
+function formatHeaderMatchday(md) {
+  const a = parseDate(md.start);
+  const b = parseDate(md.end);
+  const am = a.toLocaleString("en-GB", { month: "short" }).toUpperCase();
+  const bm = b.toLocaleString("en-GB", { month: "short" }).toUpperCase();
+  if (md.start === md.end) return `MD${md.md} · ${a.getDate()} ${am}`;
+  if (am === bm) return `MD${md.md} · ${a.getDate()}–${b.getDate()} ${am}`;
+  return `MD${md.md} · ${a.getDate()} ${am}–${b.getDate()} ${bm}`;
+}
+function headerCountdown(kickoffDate) {
+  const diff = kickoffDate.getTime() - Date.now();
+  if (diff <= 0) return "LIVE";
+  const totalMinutes = Math.max(0, Math.floor(diff / 60000));
+  const days = Math.floor(totalMinutes / 1440);
+  const hours = Math.floor((totalMinutes % 1440) / 60);
+  const minutes = totalMinutes % 60;
+  if (days >= 1) return `${days}D ${hours}H`;
+  if (hours >= 1) return `${hours}H ${minutes}M`;
+  return `${Math.max(1, minutes)}M`;
+}
+function renderHeaderMatchday(comp, schedule) {
+  const key = comp.toLowerCase();
+  const result = relevantHeaderMatchday(comp, schedule);
+  const chip = $(`#mc-${key}-matchday`);
+  const stateEl = $(`#mc-${key}-state`);
+  const dateEl = $(`#mc-${key}-date`);
+  if (!result || !chip || !stateEl || !dateEl) return;
+  stateEl.textContent = result.state === "NEXT" ? headerCountdown(result.timing.firstKickoff) : result.state;
+  dateEl.textContent = formatHeaderMatchday(result.md);
+  chip.classList.toggle("is-live", result.state === "LIVE");
+}
+function renderHeaderMatchdays(matchdays) {
+  renderHeaderMatchday("UCL", Array.isArray(matchdays?.ucl) ? matchdays.ucl : []);
+  renderHeaderMatchday("UEL", Array.isArray(matchdays?.uel) ? matchdays.uel : []);
+}
+
 function renderAll() {
   renderFilters();
   renderFixtures();
@@ -295,6 +354,8 @@ async function init() {
     const data = await response.json();
     state.entries = Array.isArray(data.entries) ? data.entries : [];
     state.fixtures = flattenFixtures();
+    renderHeaderMatchdays(data.matchdays || {});
+    window.setInterval(() => renderHeaderMatchdays(data.matchdays || {}), 30000);
     applyQueryDefaults();
     renderAll();
   } catch (error) {

@@ -286,6 +286,59 @@
     }
   </style>
 
+  <style id="v123-header-tools-layout">
+    .header-tools{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      align-items:stretch;
+      gap:8px;
+      width:100%;
+      min-width:0;
+    }
+    .header-tools .top-search{
+      width:100% !important;
+      min-width:0;
+      margin:0 !important;
+    }
+    .header-tools .top-search input{min-width:0;}
+    .header-tools .header-quick-link{
+      width:100%;
+      min-width:0;
+      min-height:100%;
+      padding:7px 9px;
+      gap:6px;
+      white-space:nowrap;
+      box-shadow:none;
+    }
+    .header-tools .header-nav-badge{
+      flex:0 0 auto;
+      padding:3px 5px;
+      font-size:.50rem;
+    }
+    @media(max-width:700px){
+      .dashboard-header .title-top-row{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+      }
+      .dashboard-header .main-title{order:1;}
+      .dashboard-header .matchday-strip{order:2;width:100%;}
+      .dashboard-header .header-tools{order:3;width:100%;margin-top:7px;}
+      .header-tools .header-quick-link{
+        min-height:35px;
+        padding:7px 6px;
+        gap:4px;
+        font-size:.59rem;
+        letter-spacing:.055em;
+      }
+      .header-tools .header-nav-badge{
+        font-size:.47rem;
+        padding:3px 4px;
+      }
+      .header-tools .top-search input{font-size:.70rem;}
+    }
+  </style>
+
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -294,10 +347,16 @@
     <div class="title-top-row">
       <h1 class="main-title"><span class="main-title-text">EURO GOAL RUSH 26/27</span></h1>
 
-      <label class="search top-search desktop-top-search">
-        <span>⌕</span>
-        <input id="search" type="search" placeholder="Search manager or club" autocomplete="off">
-      </label>
+      <div class="header-tools" aria-label="Search and match centre">
+        <label class="search top-search desktop-top-search">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="Search manager or club" autocomplete="off">
+        </label>
+        <a class="header-quick-link centre" href="matches.html">
+          <span>Match Centre</span>
+          <span class="header-nav-badge" id="header-live-count">0 LIVE</span>
+        </a>
+      </div>
 
       <div class="matchday-strip">
         <div class="matchday-chip ucl-chip" id="ucl-matchday">
@@ -328,13 +387,6 @@
       </div>
     </div>
 
-    <nav class="header-quick-nav" aria-label="Match centre">
-      <a class="header-quick-link centre" href="matches.html">
-        <span>Match Centre</span>
-        <span class="header-nav-badge" id="header-live-count">0 LIVE</span>
-        <span class="header-arrow" aria-hidden="true">→</span>
-      </a>
-    </nav>
 
     <div class="header-divider" aria-hidden="true"></div>
   </header>
@@ -439,6 +491,6 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <script src="app.js?v=122" defer></script>
+  <script src="app.js?v=123" defer></script>
 </body>
 </html>
