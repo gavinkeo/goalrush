@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=124";
+const DATA_URL = "competition.json?v=127";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const $ = (sel) => document.querySelector(sel);
@@ -16,6 +16,7 @@ const matchCentreTitleEl = $("#match-centre-title");
 const matchCentreSubtitleEl = $("#match-centre-subtitle");
 const headerTodayCountEl = $("#header-today-count");
 const headerLiveCountEl = $("#header-live-count");
+const anthemHintTextEl = $("#anthem-hint-text");
 const teaserLiveCountEl = $("#teaser-live-count");
 const compactTodayEl = $("#compact-today");
 const compactTodayListEl = $("#compact-today-list");
@@ -571,6 +572,18 @@ function wireFixtureTooltips() {
 }
 
 
+function updateAnthemDiscoveryHint() {
+  if (!anthemHintTextEl) return;
+  const active = anthemPairs.find(({ btn }) => btn?.classList.contains("is-playing"));
+  if (!active?.btn) {
+    anthemHintTextEl.textContent = "TAP LOGOS FOR ANTHEMS";
+    return;
+  }
+  const name = active.btn.dataset.anthemName || "Competition";
+  const shortName = name === "Champions League" ? "UCL" : name === "Europa League" ? "UEL" : name;
+  anthemHintTextEl.textContent = `${shortName} ANTHEM PLAYING`;
+}
+
 function setAnthemButtonState(btn, playing) {
   if (!btn) return;
   const isPlaying = !!playing;
@@ -578,7 +591,8 @@ function setAnthemButtonState(btn, playing) {
   btn.classList.toggle("is-playing", isPlaying);
   btn.setAttribute("aria-pressed", String(isPlaying));
   btn.setAttribute("aria-label", `${isPlaying ? "Stop" : "Play"} ${name} anthem`);
-  btn.title = isPlaying ? `Tap to stop ${name} anthem` : name;
+  btn.title = isPlaying ? `Tap to stop ${name} anthem` : `Play ${name} anthem`;
+  updateAnthemDiscoveryHint();
 }
 
 function stopOtherAnthems(currentAudio) {
@@ -2075,10 +2089,10 @@ function fixtureClusterMarkup(comp, fixtures, mode = "today") {
                   <span class="teaser-owner away">${ownerAway}</span>
                 </div>
               </div>
-              <a class="match-centre-mini-link" href="matches.html?comp=${comp}&md=${match.md}">MD${match.md}</a>
+              <span class="match-centre-mini-link" aria-hidden="true">MD${match.md}</span>
             </div>`;
         }).join("")}
-        ${more > 0 ? `<div class="fixture-cluster-empty">+${more} more in the full match centre.</div>` : ""}
+        ${more > 0 ? `<div class="fixture-cluster-empty">+${more} more fixtures.</div>` : ""}
       </div>
     </article>`;
 }
@@ -2267,7 +2281,7 @@ function renderMatchCentreTeaser() {
 
   const title = teaserMode === "today" ? "Today's live and upcoming fixtures" : "Next scheduled fixtures";
   const subtitle = teaserMode === "today"
-    ? "Quick access to today’s schedule across both competitions. Open the full match centre for every fixture and live status update."
+    ? "Today’s schedule across both competitions, with live status updates here on the homepage."
     : "No fixtures are scheduled today. The next games below show the upcoming matchday in each competition.";
 
   if (matchCentreKickerEl) matchCentreKickerEl.textContent = teaserMode === "today" ? "TODAY'S GAMES" : "NEXT GAMES";

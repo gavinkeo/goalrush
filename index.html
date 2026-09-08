@@ -539,6 +539,97 @@
     }
   </style>
 
+  <style id="v127-one-page-anthem-discovery">
+    /* Match Centre has moved into the one-page experience. The second header tool is now a discoverability hint for the anthem logos. */
+    .anthem-discovery{
+      width:100%;
+      min-width:0;
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:7px;
+      padding:7px 9px;
+      border:1px solid rgba(91,137,207,.24);
+      border-radius:999px;
+      background:linear-gradient(180deg,rgba(10,26,53,.90),rgba(7,20,43,.94));
+      color:#a9bad3;
+      font-size:.61rem;
+      font-weight:900;
+      letter-spacing:.075em;
+      line-height:1;
+      text-align:center;
+      text-transform:uppercase;
+      white-space:nowrap;
+      box-shadow:none;
+    }
+    .anthem-discovery-icon{
+      color:#60dfff;
+      font-size:.88rem;
+      line-height:1;
+      text-shadow:0 0 8px rgba(65,211,255,.32);
+    }
+
+    /* Make the previously-hidden audio action visually obvious without turning the header into another navigation bar. */
+    .anthem-btn{
+      position:relative !important;
+      overflow:visible !important;
+      animation:v127AnthemNudge 1.45s ease-in-out 3;
+    }
+    .anthem-btn::after{
+      content:"♪";
+      position:absolute;
+      right:-3px;
+      bottom:-3px;
+      z-index:4;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:17px;
+      height:17px;
+      border-radius:50%;
+      border:1px solid rgba(128,180,235,.32);
+      background:#0a1932;
+      color:#eaf5ff;
+      font-size:.58rem;
+      font-weight:950;
+      line-height:1;
+      box-shadow:0 2px 8px rgba(0,0,0,.32),0 0 9px rgba(77,201,255,.10);
+      pointer-events:none;
+    }
+    .anthem-uel::after{
+      color:#ffd8a4;
+      border-color:rgba(245,179,101,.36);
+      box-shadow:0 2px 8px rgba(0,0,0,.32),0 0 9px rgba(245,179,101,.10);
+    }
+    .anthem-btn:hover::after,.anthem-btn:focus-visible::after,.anthem-btn.is-playing::after{
+      transform:scale(1.08);
+    }
+    @keyframes v127AnthemNudge{
+      0%,100%{filter:none}
+      50%{filter:drop-shadow(0 0 7px rgba(102,207,255,.42))}
+    }
+    .anthem-uel{animation-name:v127AnthemNudgeUel}
+    @keyframes v127AnthemNudgeUel{
+      0%,100%{filter:none}
+      50%{filter:drop-shadow(0 0 7px rgba(247,181,98,.38))}
+    }
+    @media(max-width:700px){
+      .anthem-discovery{
+        min-height:35px;
+        padding:7px 5px;
+        gap:4px;
+        font-size:.52rem;
+        letter-spacing:.045em;
+      }
+      .anthem-discovery-icon{font-size:.76rem}
+      .anthem-btn::after{width:15px;height:15px;font-size:.52rem;right:-2px;bottom:-2px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .anthem-btn{animation:none !important}
+    }
+  </style>
+
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -547,15 +638,15 @@
     <div class="title-top-row">
       <h1 class="main-title"><span class="main-title-text">EURO GOAL RUSH 26/27</span></h1>
 
-      <div class="header-tools" aria-label="Search and match centre">
+      <div class="header-tools" aria-label="Search and anthem controls">
         <label class="search top-search desktop-top-search">
           <span>⌕</span>
           <input id="search" type="search" placeholder="Search manager or club" autocomplete="off">
         </label>
-        <a class="header-quick-link centre" href="matches.html">
-          <span>Match Centre</span>
-          <span class="header-nav-badge" id="header-live-count">0 LIVE</span>
-        </a>
+        <div class="anthem-discovery" aria-live="polite">
+          <span class="anthem-discovery-icon" aria-hidden="true">♪</span>
+          <span id="anthem-hint-text">TAP LOGOS FOR ANTHEMS</span>
+        </div>
       </div>
 
       <div class="matchday-strip">
@@ -567,7 +658,7 @@
             </div>
             <strong id="ucl-date">MD1 · 8–10 SEP</strong>
           </div>
-          <button class="anthem-btn anthem-ucl" id="ucl-anthem-btn" type="button" aria-label="Play Champions League anthem" aria-pressed="false" data-anthem-name="Champions League" title="Champions League">
+          <button class="anthem-btn anthem-ucl" id="ucl-anthem-btn" type="button" aria-label="Play Champions League anthem" aria-pressed="false" data-anthem-name="Champions League" title="Play Champions League anthem">
             <img class="anthem-logo anthem-logo-ucl" src="assets/ucl-logo.png?v=78" alt="" aria-hidden="true">
           </button>
         </div>
@@ -580,7 +671,7 @@
             </div>
             <strong id="uel-date">MD1 · 16–17 SEP</strong>
           </div>
-          <button class="anthem-btn anthem-uel" id="uel-anthem-btn" type="button" aria-label="Play Europa League anthem" aria-pressed="false" data-anthem-name="Europa League" title="Europa League">
+          <button class="anthem-btn anthem-uel" id="uel-anthem-btn" type="button" aria-label="Play Europa League anthem" aria-pressed="false" data-anthem-name="Europa League" title="Play Europa League anthem">
             <img class="anthem-logo anthem-logo-uel" src="assets/uel-logo.png?v=78" alt="" aria-hidden="true">
           </button>
         </div>
@@ -691,6 +782,6 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <script src="app.js?v=124" defer></script>
+  <script src="app.js?v=127" defer></script>
 </body>
 </html>
