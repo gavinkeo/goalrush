@@ -20,6 +20,7 @@ const teaserLiveCountEl = $("#teaser-live-count");
 const compactTodayEl = $("#compact-today");
 const compactTodayListEl = $("#compact-today-list");
 const compactTodaySummaryEl = $("#compact-today-summary");
+const expandedCompactFixtures = new Set();
 
 const uclAnthemBtn = $("#ucl-anthem-btn");
 const uelAnthemBtn = $("#uel-anthem-btn");
@@ -815,6 +816,52 @@ function espnScoreValue(competitor) {
   return Number.isFinite(value) ? value : null;
 }
 
+function normalizeEspnStatKey(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+function espnStatNumber(competitor, candidateKeys) {
+  const wanted = new Set(candidateKeys.map(normalizeEspnStatKey));
+  const stats = Array.isArray(competitor?.statistics) ? competitor.statistics : [];
+  for (const stat of stats) {
+    const keys = [stat?.name, stat?.displayName, stat?.label, stat?.shortDisplayName, stat?.abbreviation]
+      .map(normalizeEspnStatKey)
+      .filter(Boolean);
+    if (!keys.some(key => wanted.has(key))) continue;
+    const raw = stat?.value ?? stat?.displayValue;
+    const value = Number.parseFloat(String(raw ?? "").replace(/[^0-9.+-]/g, ""));
+    if (Number.isFinite(value)) return value;
+  }
+  return null;
+}
+
+function espnGoalEvents(competition, home, away) {
+  const homeId = String(home?.team?.id || home?.id || "");
+  const awayId = String(away?.team?.id || away?.id || "");
+  const details = Array.isArray(competition?.details) ? competition.details : [];
+
+  return details
+    .filter(detail => Boolean(detail?.scoringPlay) && !Boolean(detail?.shootout))
+    .map(detail => {
+      const teamId = String(detail?.team?.id || "");
+      const athlete = Array.isArray(detail?.athletesInvolved) ? detail.athletesInvolved[0] : null;
+      const scorer = athlete?.displayName || athlete?.shortName || athlete?.fullName || "Goal";
+      const minute = detail?.clock?.displayValue || detail?.clock?.display || "";
+      let side = "";
+      if (teamId && teamId === homeId) side = "home";
+      if (teamId && teamId === awayId) side = "away";
+      return {
+        side,
+        scorer,
+        minute,
+        ownGoal: Boolean(detail?.ownGoal),
+        penalty: Boolean(detail?.penaltyKick) || /penalty/i.test(String(detail?.type?.text || ""))
+      };
+    });
+}
+
 function parseEspnEvent(event, comp) {
   const competition = event?.competitions?.[0];
   const competitors = competition?.competitors || [];
@@ -822,7 +869,8 @@ function parseEspnEvent(event, comp) {
   const away = competitors.find(item => item?.homeAway === "away");
   if (!home || !away) return null;
 
-  const statusType = competition?.status?.type || event?.status?.type || {};
+  const status = competition?.status || event?.status || {};
+  const statusType = status?.type || {};
   const state = String(statusType.state || "").toLowerCase();
   const completed = Boolean(statusType.completed) || state === "post";
   const live = !completed && (state === "in" || state === "live" || state === "inprogress");
@@ -831,11 +879,18 @@ function parseEspnEvent(event, comp) {
 
   return {
     comp,
+    eventId: String(event?.id || competition?.id || ""),
     home: home?.team?.displayName || home?.team?.shortDisplayName || home?.team?.name || "",
     away: away?.team?.displayName || away?.team?.shortDisplayName || away?.team?.name || "",
     homeScore,
     awayScore,
     status: completed ? "ft" : live ? "live" : "upcoming",
+    clock: status?.displayClock || competition?.status?.displayClock || event?.status?.displayClock || "",
+    goals: espnGoalEvents(competition, home, away),
+    homeShots: espnStatNumber(home, ["totalShots", "shotAttempts", "shotsTotal", "shots"]),
+    awayShots: espnStatNumber(away, ["totalShots", "shotAttempts", "shotsTotal", "shots"]),
+    homeShotsOnTarget: espnStatNumber(home, ["shotsOnTarget", "shotsOnGoal", "shotsOnTargetTotal"]),
+    awayShotsOnTarget: espnStatNumber(away, ["shotsOnTarget", "shotsOnGoal", "shotsOnTargetTotal"]),
     date: String(event?.date || competition?.date || "").slice(0, 10)
   };
 }
@@ -924,9 +979,21 @@ function applyLiveScoreFeed(feedMatches) {
             : `${match.awayScore}-${match.homeScore}`;
         }
 
-        if (String(item.status || "") !== nextStatus || String(item.score || "") !== nextScore) {
+        const liveMatch = {
+          eventId: match.eventId || "",
+          clock: match.clock || "",
+          goals: Array.isArray(match.goals) ? match.goals : [],
+          homeShots: match.homeShots,
+          awayShots: match.awayShots,
+          homeShotsOnTarget: match.homeShotsOnTarget,
+          awayShotsOnTarget: match.awayShotsOnTarget
+        };
+        const liveChanged = JSON.stringify(item._liveMatch || null) !== JSON.stringify(liveMatch);
+
+        if (String(item.status || "") !== nextStatus || String(item.score || "") !== nextScore || liveChanged) {
           item.status = nextStatus;
           item.score = nextScore;
+          item._liveMatch = liveMatch;
           changed = true;
         }
       });
@@ -1904,6 +1971,7 @@ function allCompetitionFixtures() {
         const existing = map.get(key);
 
         const base = {
+          key,
           comp,
           md: index + 1,
           date: item.date,
@@ -1917,7 +1985,8 @@ function allCompetitionFixtures() {
           awayOwner: ownerForClub(pairing.away),
           homeTeam: competitionTeamByClub(pairing.home),
           awayTeam: competitionTeamByClub(pairing.away),
-          stadium: item?.stadium || ""
+          stadium: item?.stadium || "",
+          liveMatch: item?._liveMatch || null
         };
 
         if (!existing) {
@@ -1933,6 +2002,7 @@ function allCompetitionFixtures() {
         if (!existing.awayTeam && base.awayTeam) existing.awayTeam = base.awayTeam;
         if (!existing.homeOwner && base.homeOwner) existing.homeOwner = base.homeOwner;
         if (!existing.awayOwner && base.awayOwner) existing.awayOwner = base.awayOwner;
+        if (base.liveMatch) existing.liveMatch = base.liveMatch;
       });
     });
   });
@@ -2030,7 +2100,7 @@ function updateMatchCentreNavBadges(fixtures = allCompetitionFixtures()) {
 
 function compactFixtureStatus(match) {
   if (match.status === "live") return { text: "LIVE", className: "live" };
-  if (match.status === "ft") return { text: match.score ? match.score.replaceAll("-", "–") : "FT", className: "ft" };
+  if (match.status === "ft") return { text: "FT", className: "ft" };
   return { text: match.kickoff || "TBC", className: "upcoming" };
 }
 
@@ -2046,6 +2116,74 @@ function compactTeamMarkup(club, team, side, owner = "") {
       ${side === "away" ? copy : ""}
       <img src="${esc(image)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
       ${side === "home" ? copy : ""}
+    </span>`;
+}
+
+function compactGoalText(goal) {
+  const tags = [];
+  if (goal?.penalty) tags.push("P");
+  if (goal?.ownGoal) tags.push("OG");
+  const suffix = tags.length ? ` (${tags.join(", ")})` : "";
+  return `${goal?.scorer || "Goal"}${goal?.minute ? ` ${goal.minute}` : ""}${suffix}`;
+}
+
+function compactScoreGoalCount(score) {
+  const parts = String(score || "").split(/[-–—]/).map(value => Number(String(value).trim()));
+  return parts.length === 2 && parts.every(Number.isFinite) ? parts[0] + parts[1] : 0;
+}
+
+function compactFixtureDetailsMarkup(match, expanded) {
+  const live = match?.liveMatch || {};
+  const goals = Array.isArray(live?.goals) ? live.goals : [];
+  const homeGoals = goals.filter(goal => goal?.side === "home");
+  const awayGoals = goals.filter(goal => goal?.side === "away");
+  const unresolvedGoals = goals.filter(goal => !goal?.side);
+  const hasAttempts = Number.isFinite(live?.homeShots) || Number.isFinite(live?.awayShots);
+  const hasOnTarget = Number.isFinite(live?.homeShotsOnTarget) || Number.isFinite(live?.awayShotsOnTarget);
+  const scoreHasGoals = compactScoreGoalCount(match?.score) > 0;
+
+  let goalsMarkup = "";
+  if (homeGoals.length || awayGoals.length || unresolvedGoals.length) {
+    goalsMarkup = `
+      <div class="compact-goal-sides">
+        <span><b>${esc(match.home)}</b>: ${homeGoals.length ? homeGoals.map(goal => esc(compactGoalText(goal))).join(" · ") : "—"}</span>
+        <span><b>${esc(match.away)}</b>: ${awayGoals.length ? awayGoals.map(goal => esc(compactGoalText(goal))).join(" · ") : "—"}</span>
+        ${unresolvedGoals.length ? `<span class="compact-goal-unresolved">${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}</span>` : ""}
+      </div>`;
+  } else if (match.status === "upcoming") {
+    goalsMarkup = `<span class="compact-detail-muted">Goalscorers will appear here live.</span>`;
+  } else if (scoreHasGoals) {
+    goalsMarkup = `<span class="compact-detail-muted">Goal details are updating from the live feed…</span>`;
+  } else {
+    goalsMarkup = `<span class="compact-detail-muted">No goals yet.</span>`;
+  }
+
+  let attemptsMarkup = "";
+  if (hasAttempts || hasOnTarget) {
+    const attempts = `${Number.isFinite(live.homeShots) ? live.homeShots : "—"}–${Number.isFinite(live.awayShots) ? live.awayShots : "—"}`;
+    const onTarget = `${Number.isFinite(live.homeShotsOnTarget) ? live.homeShotsOnTarget : "—"}–${Number.isFinite(live.awayShotsOnTarget) ? live.awayShotsOnTarget : "—"}`;
+    attemptsMarkup = `<strong>${esc(attempts)}</strong>${hasOnTarget ? `<span class="compact-stat-secondary">ON TARGET ${esc(onTarget)}</span>` : ""}`;
+  } else if (match.status === "upcoming") {
+    attemptsMarkup = `<span class="compact-detail-muted">Available after kick-off.</span>`;
+  } else {
+    attemptsMarkup = `<span class="compact-detail-muted">Awaiting match stats.</span>`;
+  }
+
+  return `
+    <span class="compact-fixture-details" ${expanded ? "" : "hidden"}>
+      <span class="compact-detail-row compact-detail-managers">
+        <span class="compact-detail-label">MANAGERS</span>
+        <span class="compact-manager-pair"><span>${esc(match.homeOwner || "Unassigned")}</span><span>${esc(match.awayOwner || "Unassigned")}</span></span>
+      </span>
+      <span class="compact-detail-row compact-detail-goals">
+        <span class="compact-detail-label">GOALS</span>
+        ${goalsMarkup}
+      </span>
+      <span class="compact-detail-row compact-detail-stats">
+        <span class="compact-detail-label">ATTEMPTS</span>
+        <span class="compact-stat-values">${attemptsMarkup}</span>
+      </span>
+      ${match.status === "live" && live?.clock ? `<span class="compact-live-clock">LIVE · ${esc(live.clock)}</span>` : ""}
     </span>`;
 }
 
@@ -2076,19 +2214,43 @@ function renderCompactToday() {
 
   compactTodayListEl.innerHTML = todaysFixtures.map(match => {
     const status = compactFixtureStatus(match);
+    const expanded = expandedCompactFixtures.has(match.key);
+    const scoreOrVs = match.score && (match.status === "live" || match.status === "ft")
+      ? match.score.replaceAll("-", "–")
+      : "v";
     return `
-      <a class="compact-fixture" href="matches.html?comp=${match.comp}&md=${match.md}" aria-label="${esc(match.home)} v ${esc(match.away)} in the match centre">
+      <button class="compact-fixture compact-fixture-toggle${expanded ? " is-expanded" : ""}" type="button"
+              data-fixture-key="${esc(match.key)}" aria-expanded="${expanded ? "true" : "false"}"
+              aria-label="Show ${esc(match.home)} v ${esc(match.away)} fixture details">
         <span class="compact-fixture-status ${status.className}">${esc(status.text)}</span>
         <span class="compact-comp ${match.comp.toLowerCase()}">${match.comp}</span>
         <span class="compact-teams">
           ${compactTeamMarkup(match.home, match.homeTeam, "home", match.homeOwner)}
-          <span class="compact-v">v</span>
+          <span class="compact-v${scoreOrVs !== "v" ? " has-score" : ""}">${esc(scoreOrVs)}</span>
           ${compactTeamMarkup(match.away, match.awayTeam, "away", match.awayOwner)}
         </span>
-      </a>`;
+        <span class="compact-expand-icon" aria-hidden="true">⌄</span>
+        ${compactFixtureDetailsMarkup(match, expanded)}
+      </button>`;
   }).join("");
 
   compactTodayEl.hidden = false;
+}
+
+function wireCompactTodayDetails() {
+  if (!compactTodayListEl) return;
+  compactTodayListEl.addEventListener("click", event => {
+    const fixture = event.target.closest?.(".compact-fixture-toggle");
+    if (!fixture) return;
+    const key = fixture.dataset.fixtureKey || "";
+    const details = fixture.querySelector(".compact-fixture-details");
+    const nextExpanded = fixture.getAttribute("aria-expanded") !== "true";
+    fixture.setAttribute("aria-expanded", nextExpanded ? "true" : "false");
+    fixture.classList.toggle("is-expanded", nextExpanded);
+    if (details) details.hidden = !nextExpanded;
+    if (nextExpanded) expandedCompactFixtures.add(key);
+    else expandedCompactFixtures.delete(key);
+  });
 }
 
 function renderMatchCentreTeaser() {
@@ -2204,4 +2366,5 @@ wireAnthemButtons();
 wireFixtureTooltips();
 wireTeamModal();
 wireManagerModal();
+wireCompactTodayDetails();
 init();
