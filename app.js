@@ -2145,11 +2145,11 @@ function compactFixtureDetailsMarkup(match, expanded) {
   let goalsMarkup = "";
   if (homeGoals.length || awayGoals.length || unresolvedGoals.length) {
     goalsMarkup = `
-      <div class="compact-goal-sides">
+      <span class="compact-goal-sides">
         <span><b>${esc(match.home)}</b>: ${homeGoals.length ? homeGoals.map(goal => esc(compactGoalText(goal))).join(" · ") : "—"}</span>
         <span><b>${esc(match.away)}</b>: ${awayGoals.length ? awayGoals.map(goal => esc(compactGoalText(goal))).join(" · ") : "—"}</span>
         ${unresolvedGoals.length ? `<span class="compact-goal-unresolved">${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}</span>` : ""}
-      </div>`;
+      </span>`;
   } else if (match.status === "upcoming") {
     goalsMarkup = `<span class="compact-detail-muted">Goalscorers will appear here live.</span>`;
   } else if (scoreHasGoals) {
@@ -2169,21 +2169,63 @@ function compactFixtureDetailsMarkup(match, expanded) {
     attemptsMarkup = `<span class="compact-detail-muted">Awaiting match stats.</span>`;
   }
 
+  const mobileGoalSide = (sideGoals, side) => {
+    if (!sideGoals.length) return `<span class="compact-mobile-empty">—</span>`;
+    return `<span class="compact-mobile-goal-list ${side}">${sideGoals.map(goal => `<span class="compact-mobile-goal">${esc(compactGoalText(goal))}</span>`).join("")}</span>`;
+  };
+  const homeAttempts = Number.isFinite(live.homeShots) ? live.homeShots : "—";
+  const awayAttempts = Number.isFinite(live.awayShots) ? live.awayShots : "—";
+  const homeOnTarget = Number.isFinite(live.homeShotsOnTarget) ? live.homeShotsOnTarget : "—";
+  const awayOnTarget = Number.isFinite(live.awayShotsOnTarget) ? live.awayShotsOnTarget : "—";
+  const mobileNote = match.status === "upcoming"
+    ? "Scorers and match stats will populate live after kick-off."
+    : unresolvedGoals.length
+      ? `Feed update: ${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}`
+      : match.status === "live" && live?.clock
+        ? `<span class="compact-mobile-live">LIVE · ${esc(live.clock)}</span> · refreshing automatically`
+        : "";
+
   return `
     <span class="compact-fixture-details" ${expanded ? "" : "hidden"}>
-      <span class="compact-detail-row compact-detail-managers">
-        <span class="compact-detail-label">MANAGERS</span>
-        <span class="compact-manager-pair"><span>${esc(match.homeOwner || "Unassigned")}</span><span>${esc(match.awayOwner || "Unassigned")}</span></span>
+      <span class="compact-detail-desktop">
+        <span class="compact-detail-row compact-detail-managers">
+          <span class="compact-detail-label">MANAGERS</span>
+          <span class="compact-manager-pair"><span>${esc(match.homeOwner || "Unassigned")}</span><span>${esc(match.awayOwner || "Unassigned")}</span></span>
+        </span>
+        <span class="compact-detail-row compact-detail-goals">
+          <span class="compact-detail-label">GOALS</span>
+          ${goalsMarkup}
+        </span>
+        <span class="compact-detail-row compact-detail-stats">
+          <span class="compact-detail-label">ATTEMPTS</span>
+          <span class="compact-stat-values">${attemptsMarkup}</span>
+        </span>
+        ${match.status === "live" && live?.clock ? `<span class="compact-live-clock">LIVE · ${esc(live.clock)}</span>` : ""}
       </span>
-      <span class="compact-detail-row compact-detail-goals">
-        <span class="compact-detail-label">GOALS</span>
-        ${goalsMarkup}
+
+      <span class="compact-detail-mobile">
+        <span class="compact-mobile-row">
+          <span class="compact-mobile-side home compact-mobile-manager">${esc(match.homeOwner || "Unassigned")}</span>
+          <span class="compact-mobile-label">Managers</span>
+          <span class="compact-mobile-side away compact-mobile-manager">${esc(match.awayOwner || "Unassigned")}</span>
+        </span>
+        <span class="compact-mobile-row">
+          <span class="compact-mobile-side home">${mobileGoalSide(homeGoals, "home")}</span>
+          <span class="compact-mobile-label">Goals</span>
+          <span class="compact-mobile-side away">${mobileGoalSide(awayGoals, "away")}</span>
+        </span>
+        <span class="compact-mobile-row">
+          <span class="compact-mobile-side home compact-mobile-stat">${esc(String(homeAttempts))}</span>
+          <span class="compact-mobile-label">Attempts</span>
+          <span class="compact-mobile-side away compact-mobile-stat">${esc(String(awayAttempts))}</span>
+        </span>
+        <span class="compact-mobile-row">
+          <span class="compact-mobile-side home compact-mobile-stat">${esc(String(homeOnTarget))}</span>
+          <span class="compact-mobile-label">On target</span>
+          <span class="compact-mobile-side away compact-mobile-stat">${esc(String(awayOnTarget))}</span>
+        </span>
+        ${mobileNote ? `<span class="compact-mobile-note">${mobileNote}</span>` : ""}
       </span>
-      <span class="compact-detail-row compact-detail-stats">
-        <span class="compact-detail-label">ATTEMPTS</span>
-        <span class="compact-stat-values">${attemptsMarkup}</span>
-      </span>
-      ${match.status === "live" && live?.clock ? `<span class="compact-live-clock">LIVE · ${esc(live.clock)}</span>` : ""}
     </span>`;
 }
 
