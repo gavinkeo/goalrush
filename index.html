@@ -45,148 +45,38 @@
     }
   </style>
 
-
-  <style id="v118-match-centre-teaser">
-    .match-centre-teaser{
-      margin:0 0 18px;
-      border:1px solid rgba(79,132,217,.26);
-      border-radius:28px;
-      background:
-        radial-gradient(circle at 10% 20%,rgba(37,114,255,.09),transparent 28%),
-        radial-gradient(circle at 88% 78%,rgba(0,195,255,.08),transparent 24%),
-        linear-gradient(135deg,rgba(7,19,43,.96),rgba(5,16,37,.97));
-      box-shadow:0 18px 45px rgba(2,8,22,.32), inset 0 0 0 1px rgba(255,255,255,.02);
-      overflow:hidden;
-    }
-    .match-centre-teaser[hidden]{display:none !important;}
-    .match-centre-top{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:18px;
-      padding:22px 24px 14px;
-    }
-    .match-centre-kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      margin:0 0 6px;
-      color:#8fadc9;
-      font-size:.76rem;
-      font-weight:900;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-    }
-    .match-centre-kicker .dot{
-      width:8px;height:8px;border-radius:999px;background:#36d7ff;box-shadow:0 0 10px rgba(54,215,255,.5);
-    }
-    .match-centre-title{margin:0;color:#fff;font-size:1.42rem;line-height:1.06;font-weight:900;letter-spacing:-.02em;}
-    .match-centre-subtitle{margin:8px 0 0;color:#93a7c8;font-size:.96rem;line-height:1.55;max-width:780px;}
-    .match-centre-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
-    .match-centre-link{
-      appearance:none;border:1px solid rgba(86,142,235,.35);border-radius:999px;padding:11px 16px;
-      background:linear-gradient(180deg,rgba(16,36,73,.94),rgba(10,24,52,.96));color:#ecf4ff;text-decoration:none;
-      font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 8px 20px rgba(0,0,0,.2);
-      transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;
-    }
-    .match-centre-link:hover{transform:translateY(-1px);border-color:rgba(111,175,255,.54);box-shadow:0 10px 24px rgba(0,0,0,.24);}
-    .match-centre-mini-link{appearance:none;border:1px solid rgba(86,142,235,.28);border-radius:999px;padding:8px 12px;background:rgba(11,28,57,.92);color:#e9f2ff;text-decoration:none;font-weight:800;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;}
-    .match-centre-mini-link:hover{border-color:rgba(111,175,255,.52);}
-    .match-centre-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:0 24px 22px;}
-    .fixture-cluster{border:1px solid rgba(70,120,199,.22);border-radius:22px;background:linear-gradient(135deg,rgba(9,21,44,.86),rgba(8,18,40,.9));overflow:hidden;}
-    .fixture-cluster-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06);}
-    .fixture-cluster-label{display:flex;align-items:center;gap:10px;min-width:0;}
-    .fixture-cluster-pill{padding:7px 11px;border-radius:999px;font-size:.75rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;}
-    .fixture-cluster.ucl .fixture-cluster-pill{background:rgba(33,180,255,.12);border:1px solid rgba(59,206,255,.24);color:#57d9ff;}
-    .fixture-cluster.uel .fixture-cluster-pill{background:rgba(247,181,98,.10);border:1px solid rgba(255,189,110,.2);color:#f6b56d;}
-    .fixture-cluster-meta{display:flex;flex-direction:column;gap:2px;min-width:0;}
-    .fixture-cluster-meta strong{color:#fff;font-size:.98rem;line-height:1.15;letter-spacing:.02em;}
-    .fixture-cluster-meta span{color:#8ca2c4;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
-    .fixture-cluster-count{color:#92a8c8;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
-    .fixture-cluster-list{display:grid;gap:0;padding:2px 0;}
-    .fixture-cluster-empty{padding:18px 16px;color:#98a9c1;font-size:.92rem;}
-    .teaser-fixture{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:12px 16px;}
-    .teaser-fixture + .teaser-fixture{border-top:1px solid rgba(255,255,255,.055);}
-    .teaser-fixture-time{min-width:62px;}
-    .teaser-status{display:inline-flex;align-items:center;justify-content:center;min-width:58px;padding:6px 8px;border-radius:999px;background:rgba(17,31,58,.9);border:1px solid rgba(95,124,175,.22);color:#e6eefb;font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;}
-    .teaser-status.live{background:rgba(79,14,23,.92);border-color:rgba(255,91,104,.44);color:#ff7483;box-shadow:0 0 14px rgba(255,73,93,.18);text-shadow:0 0 8px rgba(255,79,99,.42);}
-    .teaser-status.ft{background:rgba(23,34,56,.92);color:#a8bbd6;}
-    .teaser-status.upcoming{background:rgba(14,29,56,.92);color:#d9e6f8;}
-    .teaser-fixture-body{display:grid;gap:7px;min-width:0;}
-    .teaser-teams{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center;min-width:0;}
-    .teaser-team{display:flex;align-items:center;gap:8px;min-width:0;color:#f6f9ff;font-weight:800;font-size:.95rem;letter-spacing:.01em;}
-    .teaser-team.away{justify-content:flex-end;text-align:right;}
-    .teaser-team img{width:26px;height:26px;object-fit:contain;flex:0 0 26px;}
-    .teaser-team-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-    .teaser-score-sep{color:#93a9c8;font-size:.84rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;}
-    .teaser-owners{display:flex;justify-content:space-between;gap:10px;color:#7f96b6;font-size:.78rem;line-height:1.35;}
-    .teaser-owner{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-    .teaser-owner.away{text-align:right;}
-    @media (max-width: 1080px){
-      .match-centre-top{flex-direction:column;}
-      .match-centre-actions{justify-content:flex-start;}
-    }
-    @media (max-width: 860px){
-      .match-centre-board{grid-template-columns:1fr;}
-    }
-    @media (max-width: 700px){
-      .match-centre-teaser{margin:0 0 16px;border-radius:24px;}
-      .match-centre-top{padding:18px 18px 12px;gap:12px;}
-      .match-centre-title{font-size:1.18rem;}
-      .match-centre-subtitle{font-size:.87rem;margin-top:6px;}
-      .match-centre-actions .match-centre-link{width:100%;justify-content:center;text-align:center;}
-      .match-centre-board{padding:0 18px 18px;gap:12px;}
-      .fixture-cluster-head{padding:12px 14px;}
-      .teaser-fixture{grid-template-columns:1fr;gap:9px;padding:12px 14px;}
-      .teaser-fixture-time{min-width:0;}
-      .teaser-status{min-width:0;}
-      .teaser-teams{grid-template-columns:minmax(0,1fr);gap:8px;}
-      .teaser-team,.teaser-team.away{justify-content:flex-start;text-align:left;}
-      .teaser-score-sep{display:none;}
-      .teaser-owners{flex-direction:column;gap:4px;}
-      .teaser-owner.away{text-align:left;}
-    }
-  </style>
-
-
-  <style id="v119-header-match-nav">
+  <style id="v120-header-match-nav">
     .header-quick-nav{
       display:flex;
       align-items:center;
       justify-content:flex-end;
-      gap:9px;
-      margin-top:9px;
+      margin-top:8px;
     }
     .header-quick-link{
       display:inline-flex;
       align-items:center;
-      gap:9px;
+      justify-content:center;
+      gap:8px;
       min-height:36px;
-      padding:8px 12px;
-      border:1px solid rgba(91,137,207,.22);
+      padding:8px 13px;
+      border:1px solid rgba(91,137,207,.24);
       border-radius:999px;
       background:linear-gradient(180deg,rgba(10,26,53,.90),rgba(7,20,43,.94));
-      color:#dce9fb;
+      color:#e7f0ff;
       text-decoration:none;
-      font-size:.72rem;
+      font-size:.70rem;
       font-weight:900;
       letter-spacing:.09em;
       text-transform:uppercase;
-      box-shadow:0 7px 18px rgba(0,0,0,.14);
+      box-shadow:0 7px 18px rgba(0,0,0,.13);
       transition:transform .14s ease,border-color .14s ease,background .14s ease;
     }
     .header-quick-link:hover{
       transform:translateY(-1px);
-      border-color:rgba(111,174,255,.42);
+      border-color:rgba(111,174,255,.44);
       background:linear-gradient(180deg,rgba(14,34,67,.94),rgba(8,24,50,.96));
     }
-    .header-quick-link.today{
-      border-color:rgba(73,228,255,.20);
-    }
-    .header-quick-link.centre{
-      border-color:rgba(255,173,97,.18);
-    }
-    .header-nav-badge,.match-centre-live-badge{
+    .header-nav-badge{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -196,38 +86,33 @@
       border:1px solid rgba(120,150,198,.20);
       background:rgba(255,255,255,.045);
       color:#8fa5c6;
-      font-size:.58rem;
+      font-size:.56rem;
       font-weight:950;
       letter-spacing:.09em;
       line-height:1;
       white-space:nowrap;
     }
-    .header-quick-link.today .header-nav-badge{
-      color:#63defa;
-      border-color:rgba(73,228,255,.20);
-      background:rgba(73,228,255,.07);
-    }
-    .header-nav-badge.is-live,.match-centre-live-badge.is-live{
+    .header-nav-badge.is-live{
       color:#ff7785;
       border-color:rgba(255,80,101,.42);
       background:rgba(92,15,28,.78);
       box-shadow:0 0 12px rgba(255,70,92,.15);
       text-shadow:0 0 7px rgba(255,80,100,.35);
     }
-    .match-centre-live-badge{
-      margin-left:2px;
+    .header-arrow{
+      color:#8ca9d0;
+      font-size:.82rem;
+      line-height:1;
     }
     @media(max-width:700px){
       .header-quick-nav{
         justify-content:stretch;
-        gap:7px;
         margin-top:7px;
       }
       .header-quick-link{
-        flex:1 1 0;
-        justify-content:center;
-        min-width:0;
-        padding:8px 8px;
+        width:100%;
+        min-height:35px;
+        padding:8px 10px;
         font-size:.64rem;
       }
       .header-nav-badge{
@@ -279,15 +164,11 @@
       </div>
     </div>
 
-
-    <nav class="header-quick-nav" aria-label="Match centre navigation">
-      <a class="header-quick-link today" href="matches.html?view=TODAY">
-        <span>Today's Games</span>
-        <span class="header-nav-badge" id="header-today-count">— TODAY</span>
-      </a>
+    <nav class="header-quick-nav" aria-label="Match centre">
       <a class="header-quick-link centre" href="matches.html">
         <span>Match Centre</span>
         <span class="header-nav-badge" id="header-live-count">0 LIVE</span>
+        <span class="header-arrow" aria-hidden="true">→</span>
       </a>
     </nav>
 
@@ -295,20 +176,6 @@
   </header>
 
   <main class="shell">
-
-    <section class="match-centre-teaser" id="match-centre-teaser" hidden aria-label="Today's games and match centre">
-      <div class="match-centre-top">
-        <div>
-          <span class="match-centre-kicker"><span class="dot" aria-hidden="true"></span><span id="match-centre-kicker">TODAY'S GAMES</span></span>
-          <h2 class="match-centre-title" id="match-centre-title">Today's live and upcoming fixtures</h2>
-          <p class="match-centre-subtitle" id="match-centre-subtitle">Track the live schedule across both competitions and jump into the full match centre for every league-phase fixture.</p>
-        </div>
-        <div class="match-centre-actions">
-          <a class="match-centre-link" href="matches.html">View match centre → <span class="match-centre-live-badge" id="teaser-live-count">0 LIVE</span></a>
-        </div>
-      </div>
-      <div class="match-centre-board" id="match-centre-board"></div>
-    </section>
 
 <section class="standings-card">
 <div class="desktop-table">
@@ -400,6 +267,6 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <script src="app.js?v=119" defer></script>
+  <script src="app.js?v=120" defer></script>
 </body>
 </html>

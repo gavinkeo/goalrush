@@ -11,8 +11,8 @@
         "club": "Inter Milan",
         "crest": "club-crests/inter-milan.png",
         "played": 0,
-        "goalsFor": 17,
-        "goalsAgainst": 8,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "RMA",
@@ -22,7 +22,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BRU",
@@ -32,7 +32,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "1-3"
+            "placeholderScore": ""
           },
           {
             "code": "SHA",
@@ -42,7 +42,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "FEY",
@@ -52,7 +52,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "STU",
@@ -62,7 +62,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BVB",
@@ -72,7 +72,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LIV",
@@ -82,7 +82,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "SBR",
@@ -92,7 +92,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -103,8 +103,8 @@
         "club": "Ararat-Armenia",
         "crest": "club-crests/ararat-armenia.png",
         "played": 0,
-        "goalsFor": 9,
-        "goalsAgainst": 9,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "SPA",
@@ -114,7 +114,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "JAG",
@@ -124,7 +124,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "AZA",
@@ -134,7 +134,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "TOR",
@@ -144,7 +144,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "RBS",
@@ -154,7 +154,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "NEC",
@@ -164,7 +164,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "CEJ",
@@ -174,7 +174,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "MIL",
@@ -184,7 +184,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -200,8 +200,8 @@
         "club": "Aston Villa",
         "crest": "club-crests/aston-villa.png",
         "played": 0,
-        "goalsFor": 14,
-        "goalsAgainst": 16,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "BRU",
@@ -211,7 +211,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "17:45",
-            "placeholderScore": "3-3"
+            "placeholderScore": ""
           },
           {
             "code": "FEN",
@@ -221,7 +221,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "VIK",
@@ -231,7 +231,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BAR",
@@ -241,7 +241,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "GAL",
@@ -251,7 +251,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "17:45",
-            "placeholderScore": "4-1"
+            "placeholderScore": ""
           },
           {
             "code": "PSG",
@@ -261,7 +261,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BVB",
@@ -271,7 +271,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "2-2"
+            "placeholderScore": ""
           },
           {
             "code": "SLA",
@@ -281,7 +281,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -292,8 +292,8 @@
         "club": "Anderlecht",
         "crest": "club-crests/anderlecht.png",
         "played": 0,
-        "goalsFor": 10,
-        "goalsAgainst": 15,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "LYO",
@@ -303,7 +303,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "DIN",
@@ -313,7 +313,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "JAG",
@@ -323,7 +323,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RBS",
@@ -333,7 +333,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "OFI",
@@ -343,7 +343,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "HOF",
@@ -353,7 +353,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "1-3"
+            "placeholderScore": ""
           },
           {
             "code": "SUN",
@@ -363,7 +363,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "MAR",
@@ -373,7 +373,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -389,8 +389,8 @@
         "club": "RB Leipzig",
         "crest": "club-crests/rb-leipzig.png",
         "played": 0,
-        "goalsFor": 17,
-        "goalsAgainst": 10,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "COM",
@@ -400,7 +400,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "PSV",
@@ -410,7 +410,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "RMA",
@@ -420,7 +420,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "MCI",
@@ -430,7 +430,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "2-3"
+            "placeholderScore": ""
           },
           {
             "code": "LEN",
@@ -440,7 +440,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "3-1"
+            "placeholderScore": ""
           },
           {
             "code": "MUN",
@@ -450,7 +450,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SHA",
@@ -460,7 +460,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "FEY",
@@ -470,7 +470,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -481,8 +481,8 @@
         "club": "Hoffenheim",
         "crest": "club-crests/hoffenheim.png",
         "played": 0,
-        "goalsFor": 18,
-        "goalsAgainst": 12,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "OFI",
@@ -492,7 +492,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BES",
@@ -502,7 +502,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LYO",
@@ -512,7 +512,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "CRY",
@@ -522,7 +522,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "5-1"
+            "placeholderScore": ""
           },
           {
             "code": "STG",
@@ -532,7 +532,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "AND",
@@ -542,7 +542,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "3-1"
+            "placeholderScore": ""
           },
           {
             "code": "OLY",
@@ -552,7 +552,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "3-2"
+            "placeholderScore": ""
           },
           {
             "code": "FER",
@@ -562,7 +562,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -578,8 +578,8 @@
         "club": "Liverpool",
         "crest": "club-crests/liverpool.png",
         "played": 0,
-        "goalsFor": 16,
-        "goalsAgainst": 10,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "ATM",
@@ -589,7 +589,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "20:00",
-            "placeholderScore": "1-4"
+            "placeholderScore": ""
           },
           {
             "code": "LAS",
@@ -599,7 +599,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "VIL",
@@ -609,7 +609,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "FEN",
@@ -619,7 +619,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BRU",
@@ -629,7 +629,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "POR",
@@ -639,7 +639,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "INT",
@@ -649,7 +649,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "LEN",
@@ -659,7 +659,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -670,8 +670,8 @@
         "club": "Torreense",
         "crest": "club-crests/torreense.png",
         "played": 0,
-        "goalsFor": 10,
-        "goalsAgainst": 14,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "LST",
@@ -681,7 +681,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "SUN",
@@ -691,7 +691,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "FER",
@@ -701,7 +701,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "ARA",
@@ -711,7 +711,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "CEL",
@@ -721,7 +721,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RSO",
@@ -731,7 +731,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LPO",
@@ -741,7 +741,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "OLY",
@@ -751,7 +751,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -767,8 +767,8 @@
         "club": "Paris Saint-Germain",
         "crest": "club-crests/paris-saint-germain.png",
         "played": 0,
-        "goalsFor": 12,
-        "goalsAgainst": 12,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "SBR",
@@ -778,7 +778,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "MCI",
@@ -788,7 +788,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BAR",
@@ -798,7 +798,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "VIL",
@@ -808,7 +808,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "ROM",
@@ -818,7 +818,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "AVL",
@@ -828,7 +828,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "COM",
@@ -838,7 +838,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "GAL",
@@ -848,7 +848,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -859,8 +859,8 @@
         "club": "Union SG",
         "crest": "club-crests/union-saint-gilloise.png",
         "played": 0,
-        "goalsFor": 10,
-        "goalsAgainst": 15,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "PLZ",
@@ -870,7 +870,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RSO",
@@ -880,7 +880,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "HBS",
@@ -890,7 +890,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "CLV",
@@ -900,7 +900,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "3-1"
+            "placeholderScore": ""
           },
           {
             "code": "LPO",
@@ -910,7 +910,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LYO",
@@ -920,7 +920,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BES",
@@ -930,7 +930,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CEL",
@@ -940,7 +940,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -956,8 +956,8 @@
         "club": "Viking",
         "crest": "club-crests/viking.png",
         "played": 0,
-        "goalsFor": 11,
-        "goalsAgainst": 7,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "STU",
@@ -967,7 +967,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "BAY",
@@ -977,7 +977,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "AVL",
@@ -987,7 +987,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SAB",
@@ -997,7 +997,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "ATM",
@@ -1007,7 +1007,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "FEY",
@@ -1017,7 +1017,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "PSV",
@@ -1027,7 +1027,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "NAP",
@@ -1037,7 +1037,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1048,8 +1048,8 @@
         "club": "Benfica",
         "crest": "club-crests/benfica.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 11,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "MIL",
@@ -1059,7 +1059,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CEL",
@@ -1069,7 +1069,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "OMO",
@@ -1079,7 +1079,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LPO",
@@ -1089,7 +1089,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "PLZ",
@@ -1099,7 +1099,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "OFI",
@@ -1109,7 +1109,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "NEC",
@@ -1119,7 +1119,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "AZA",
@@ -1129,7 +1129,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1145,8 +1145,8 @@
         "club": "Porto",
         "crest": "club-crests/porto.png",
         "played": 0,
-        "goalsFor": 15,
-        "goalsAgainst": 9,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "MCI",
@@ -1156,7 +1156,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BET",
@@ -1166,7 +1166,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "PSV",
@@ -1176,7 +1176,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "NAP",
@@ -1186,7 +1186,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "FEY",
@@ -1196,7 +1196,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LIV",
@@ -1206,7 +1206,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "SLA",
@@ -1216,7 +1216,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LAS",
@@ -1226,7 +1226,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1237,8 +1237,8 @@
         "club": "Rennes",
         "crest": "club-crests/rennes.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 11,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "STG",
@@ -1248,7 +1248,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "OFI",
@@ -1258,7 +1258,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "JUV",
@@ -1268,7 +1268,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "OLY",
@@ -1278,7 +1278,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "NEC",
@@ -1288,7 +1288,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "DIN",
@@ -1298,7 +1298,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "OMO",
@@ -1308,7 +1308,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SPA",
@@ -1318,7 +1318,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1334,8 +1334,8 @@
         "club": "Bodo/Glimt",
         "crest": "club-crests/bodo-glimt.png",
         "played": 0,
-        "goalsFor": 10,
-        "goalsAgainst": 10,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "BAY",
@@ -1345,7 +1345,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "20:00",
-            "placeholderScore": "0-2"
+            "placeholderScore": ""
           },
           {
             "code": "BVB",
@@ -1355,7 +1355,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "NAP",
@@ -1365,7 +1365,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LIL",
@@ -1375,7 +1375,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LAS",
@@ -1385,7 +1385,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "LEN",
@@ -1395,7 +1395,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ATM",
@@ -1405,7 +1405,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BRU",
@@ -1415,7 +1415,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1426,8 +1426,8 @@
         "club": "NEC Nijmegen",
         "crest": "club-crests/n-e-c-nijmegen.png",
         "played": 0,
-        "goalsFor": 4,
-        "goalsAgainst": 11,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "JUV",
@@ -1437,7 +1437,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LSO",
@@ -1447,7 +1447,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "DIN",
@@ -1457,7 +1457,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "OMO",
@@ -1467,7 +1467,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "REN",
@@ -1477,7 +1477,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "ARA",
@@ -1487,7 +1487,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "BEN",
@@ -1497,7 +1497,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CEJ",
@@ -1507,7 +1507,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1523,8 +1523,8 @@
         "club": "Club Brugge",
         "crest": "club-crests/club-brugge.png",
         "played": 0,
-        "goalsFor": 15,
-        "goalsAgainst": 13,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "AVL",
@@ -1534,7 +1534,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "17:45",
-            "placeholderScore": "3-3"
+            "placeholderScore": ""
           },
           {
             "code": "INT",
@@ -1544,7 +1544,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "3-1"
+            "placeholderScore": ""
           },
           {
             "code": "LEN",
@@ -1554,7 +1554,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "PSV",
@@ -1564,7 +1564,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LIV",
@@ -1574,7 +1574,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "NAP",
@@ -1584,7 +1584,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "STU",
@@ -1594,7 +1594,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BOD",
@@ -1604,7 +1604,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1615,8 +1615,8 @@
         "club": "Ferencvaros",
         "crest": "club-crests/ferencvaros.png",
         "played": 0,
-        "goalsFor": 8,
-        "goalsAgainst": 15,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "CEL",
@@ -1626,7 +1626,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "PLZ",
@@ -1636,7 +1636,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "TOR",
@@ -1646,7 +1646,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "MIL",
@@ -1656,7 +1656,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "CEJ",
@@ -1666,7 +1666,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LPO",
@@ -1676,7 +1676,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "JUV",
@@ -1686,7 +1686,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "HOF",
@@ -1696,7 +1696,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1712,8 +1712,8 @@
         "club": "Roma",
         "crest": "club-crests/roma.png",
         "played": 0,
-        "goalsFor": 9,
-        "goalsAgainst": 14,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "FEN",
@@ -1723,7 +1723,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RMA",
@@ -1733,7 +1733,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SBR",
@@ -1743,7 +1743,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "2-0"
+            "placeholderScore": ""
           },
           {
             "code": "MUN",
@@ -1753,7 +1753,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "PSG",
@@ -1763,7 +1763,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SCP",
@@ -1773,7 +1773,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "AEK",
@@ -1783,7 +1783,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LIL",
@@ -1793,7 +1793,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1804,8 +1804,8 @@
         "club": "Levski Sofia",
         "crest": "club-crests/levski-sofia.png",
         "played": 0,
-        "goalsFor": 10,
-        "goalsAgainst": 7,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "RBS",
@@ -1815,7 +1815,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "NEC",
@@ -1825,7 +1825,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "PLZ",
@@ -1835,7 +1835,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "JAG",
@@ -1845,7 +1845,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "MAR",
@@ -1855,7 +1855,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LST",
@@ -1865,7 +1865,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "MIL",
@@ -1875,7 +1875,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "SUN",
@@ -1885,7 +1885,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1901,8 +1901,8 @@
         "club": "Bayern Munich",
         "crest": "club-crests/bayern-munich.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 13,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "BOD",
@@ -1912,7 +1912,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-0"
+            "placeholderScore": ""
           },
           {
             "code": "VIK",
@@ -1922,7 +1922,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "ARS",
@@ -1932,7 +1932,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "5-1"
+            "placeholderScore": ""
           },
           {
             "code": "ATM",
@@ -1942,7 +1942,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LIL",
@@ -1952,7 +1952,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "SLA",
@@ -1962,7 +1962,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "MUN",
@@ -1972,7 +1972,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BET",
@@ -1982,7 +1982,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -1993,8 +1993,8 @@
         "club": "Omonia",
         "crest": "club-crests/omonia.png",
         "played": 0,
-        "goalsFor": 12,
-        "goalsAgainst": 10,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "CLV",
@@ -2004,7 +2004,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CEJ",
@@ -2014,7 +2014,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BEN",
@@ -2024,7 +2024,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "NEC",
@@ -2034,7 +2034,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "JUV",
@@ -2044,7 +2044,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "2-2"
+            "placeholderScore": ""
           },
           {
             "code": "CEL",
@@ -2054,7 +2054,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "REN",
@@ -2064,7 +2064,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BES",
@@ -2074,7 +2074,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2090,8 +2090,8 @@
         "club": "Fenerbahce",
         "crest": "club-crests/fenerbahce.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 10,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "ROM",
@@ -2101,7 +2101,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "AVL",
@@ -2111,7 +2111,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SLA",
@@ -2121,7 +2121,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LIV",
@@ -2131,7 +2131,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "SHA",
@@ -2141,7 +2141,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LAS",
@@ -2151,7 +2151,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "VIL",
@@ -2161,7 +2161,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "ATM",
@@ -2171,7 +2171,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2182,8 +2182,8 @@
         "club": "Lech Poznan",
         "crest": "club-crests/lech-poznan.png",
         "played": 0,
-        "goalsFor": 15,
-        "goalsAgainst": 8,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "CRY",
@@ -2193,7 +2193,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LEV",
@@ -2203,7 +2203,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SUN",
@@ -2213,7 +2213,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BEN",
@@ -2223,7 +2223,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "USG",
@@ -2233,7 +2233,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "FER",
@@ -2243,7 +2243,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "TOR",
@@ -2253,7 +2253,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "OFI",
@@ -2263,7 +2263,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2279,8 +2279,8 @@
         "club": "Barcelona",
         "crest": "club-crests/barcelona.png",
         "played": 0,
-        "goalsFor": 12,
-        "goalsAgainst": 15,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "FEY",
@@ -2290,7 +2290,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "17:45",
-            "placeholderScore": "4-2"
+            "placeholderScore": ""
           },
           {
             "code": "GAL",
@@ -2300,7 +2300,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "PSG",
@@ -2310,7 +2310,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "AVL",
@@ -2320,7 +2320,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SAB",
@@ -2330,7 +2330,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "MCI",
@@ -2340,7 +2340,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SCP",
@@ -2350,7 +2350,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "COM",
@@ -2360,7 +2360,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2371,8 +2371,8 @@
         "club": "Juventus",
         "crest": "club-crests/juventus.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 17,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "NEC",
@@ -2382,7 +2382,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CLV",
@@ -2392,7 +2392,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "3-3"
+            "placeholderScore": ""
           },
           {
             "code": "REN",
@@ -2402,7 +2402,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "AZA",
@@ -2412,7 +2412,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "2-3"
+            "placeholderScore": ""
           },
           {
             "code": "OMO",
@@ -2422,7 +2422,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "2-2"
+            "placeholderScore": ""
           },
           {
             "code": "HBS",
@@ -2432,7 +2432,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "FER",
@@ -2442,7 +2442,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "RSO",
@@ -2452,7 +2452,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2468,8 +2468,8 @@
         "club": "Lille",
         "crest": "club-crests/lille.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 11,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "BET",
@@ -2479,7 +2479,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "ARS",
@@ -2489,7 +2489,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "GAL",
@@ -2499,7 +2499,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BOD",
@@ -2509,7 +2509,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BAY",
@@ -2519,7 +2519,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "STU",
@@ -2529,7 +2529,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "SBR",
@@ -2539,7 +2539,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ROM",
@@ -2549,7 +2549,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2560,8 +2560,8 @@
         "club": "Crystal Palace",
         "crest": "club-crests/crystal-palace.png",
         "played": 0,
-        "goalsFor": 9,
-        "goalsAgainst": 21,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "LPO",
@@ -2571,7 +2571,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LYO",
@@ -2581,7 +2581,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BES",
@@ -2591,7 +2591,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "HOF",
@@ -2601,7 +2601,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-5"
+            "placeholderScore": ""
           },
           {
             "code": "RSO",
@@ -2611,7 +2611,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "2-4"
+            "placeholderScore": ""
           },
           {
             "code": "JAG",
@@ -2621,7 +2621,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "SPA",
@@ -2631,7 +2631,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "RBS",
@@ -2641,7 +2641,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2657,8 +2657,8 @@
         "club": "Slovan Bratislava",
         "crest": "club-crests/slovan-bratislava.png",
         "played": 0,
-        "goalsFor": 7,
-        "goalsAgainst": 16,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "PSG",
@@ -2668,7 +2668,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "STU",
@@ -2678,7 +2678,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "ROM",
@@ -2688,7 +2688,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "0-2"
+            "placeholderScore": ""
           },
           {
             "code": "LAS",
@@ -2698,7 +2698,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BET",
@@ -2708,7 +2708,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SHA",
@@ -2718,7 +2718,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "LIL",
@@ -2728,7 +2728,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "INT",
@@ -2738,7 +2738,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2749,8 +2749,8 @@
         "club": "Celta Vigo",
         "crest": "club-crests/celta-vigo.png",
         "played": 0,
-        "goalsFor": 17,
-        "goalsAgainst": 16,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "OMO",
@@ -2760,7 +2760,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "JUV",
@@ -2770,7 +2770,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "3-3"
+            "placeholderScore": ""
           },
           {
             "code": "CEL",
@@ -2780,7 +2780,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "USG",
@@ -2790,7 +2790,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "1-3"
+            "placeholderScore": ""
           },
           {
             "code": "BOU",
@@ -2800,7 +2800,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "3-3"
+            "placeholderScore": ""
           },
           {
             "code": "MAR",
@@ -2810,7 +2810,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "3-2"
+            "placeholderScore": ""
           },
           {
             "code": "HBS",
@@ -2820,7 +2820,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LST",
@@ -2830,7 +2830,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2846,8 +2846,8 @@
         "club": "Feyenoord",
         "crest": "club-crests/feyenoord.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 14,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "BAR",
@@ -2857,7 +2857,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "17:45",
-            "placeholderScore": "2-4"
+            "placeholderScore": ""
           },
           {
             "code": "COM",
@@ -2867,7 +2867,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BET",
@@ -2877,7 +2877,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "INT",
@@ -2887,7 +2887,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "POR",
@@ -2897,7 +2897,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "VIK",
@@ -2907,7 +2907,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "GAL",
@@ -2917,7 +2917,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "RBL",
@@ -2927,7 +2927,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -2938,8 +2938,8 @@
         "club": "OFI Crete",
         "crest": "club-crests/ofi-crete.png",
         "played": 0,
-        "goalsFor": 14,
-        "goalsAgainst": 9,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "HOF",
@@ -2949,7 +2949,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "REN",
@@ -2959,7 +2959,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "LEV",
@@ -2969,7 +2969,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "HBS",
@@ -2979,7 +2979,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "AND",
@@ -2989,7 +2989,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BEN",
@@ -2999,7 +2999,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "STG",
@@ -3009,7 +3009,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LPO",
@@ -3019,7 +3019,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "2-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3035,8 +3035,8 @@
         "club": "Napoli",
         "crest": "club-crests/napoli.png",
         "played": 0,
-        "goalsFor": 8,
-        "goalsAgainst": 16,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "ARS",
@@ -3046,7 +3046,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "VIL",
@@ -3056,7 +3056,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BOD",
@@ -3066,7 +3066,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "POR",
@@ -3076,7 +3076,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "MCI",
@@ -3086,7 +3086,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BRU",
@@ -3096,7 +3096,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SAB",
@@ -3106,7 +3106,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "VIK",
@@ -3116,7 +3116,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3127,8 +3127,8 @@
         "club": "Lillestrom",
         "crest": "club-crests/lillestrom.png",
         "played": 0,
-        "goalsFor": 5,
-        "goalsAgainst": 19,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "TOR",
@@ -3138,7 +3138,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "SPA",
@@ -3148,7 +3148,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "RSO",
@@ -3158,7 +3158,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "PLZ",
@@ -3168,7 +3168,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LYO",
@@ -3178,7 +3178,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "LSO",
@@ -3188,7 +3188,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BOU",
@@ -3198,7 +3198,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "CLV",
@@ -3208,7 +3208,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3224,8 +3224,8 @@
         "club": "PSV Eindhoven",
         "crest": "club-crests/psv-eindhoven.png",
         "played": 0,
-        "goalsFor": 15,
-        "goalsAgainst": 8,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "SHA",
@@ -3235,7 +3235,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "RBL",
@@ -3245,7 +3245,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "POR",
@@ -3255,7 +3255,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BRU",
@@ -3265,7 +3265,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RMA",
@@ -3275,7 +3275,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ATM",
@@ -3285,7 +3285,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "VIK",
@@ -3295,7 +3295,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "STU",
@@ -3305,7 +3305,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3316,8 +3316,8 @@
         "club": "Olympiacos",
         "crest": "club-crests/olympiacos.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 14,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "JAG",
@@ -3327,7 +3327,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "MAR",
@@ -3337,7 +3337,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "2-2"
+            "placeholderScore": ""
           },
           {
             "code": "SPA",
@@ -3347,7 +3347,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "REN",
@@ -3357,7 +3357,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "MIL",
@@ -3367,7 +3367,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "CEJ",
@@ -3377,7 +3377,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "HOF",
@@ -3387,7 +3387,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "2-3"
+            "placeholderScore": ""
           },
           {
             "code": "TOR",
@@ -3397,7 +3397,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3413,8 +3413,8 @@
         "club": "AEK Athens",
         "crest": "club-crests/aek-athens.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 6,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "LAS",
@@ -3424,7 +3424,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "17:45",
-            "placeholderScore": "0-1"
+            "placeholderScore": ""
           },
           {
             "code": "SHA",
@@ -3434,7 +3434,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "MCI",
@@ -3444,7 +3444,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "RMA",
@@ -3454,7 +3454,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "COM",
@@ -3464,7 +3464,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "GAL",
@@ -3474,7 +3474,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ROM",
@@ -3484,7 +3484,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BVB",
@@ -3494,7 +3494,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3505,8 +3505,8 @@
         "club": "Besiktas",
         "crest": "club-crests/besiktas.png",
         "played": 0,
-        "goalsFor": 9,
-        "goalsAgainst": 15,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "MAR",
@@ -3516,7 +3516,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "HOF",
@@ -3526,7 +3526,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CRY",
@@ -3536,7 +3536,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "CEL",
@@ -3546,7 +3546,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "HBS",
@@ -3556,7 +3556,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "LEV",
@@ -3566,7 +3566,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "USG",
@@ -3576,7 +3576,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "OMO",
@@ -3586,7 +3586,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3602,8 +3602,8 @@
         "club": "Slavia Prague",
         "crest": "club-crests/slavia-prague.png",
         "played": 0,
-        "goalsFor": 11,
-        "goalsAgainst": 12,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "LEN",
@@ -3613,7 +3613,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SAB",
@@ -3623,7 +3623,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "17:45",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "FEN",
@@ -3633,7 +3633,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "ARS",
@@ -3643,7 +3643,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "VIL",
@@ -3653,7 +3653,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BAY",
@@ -3663,7 +3663,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "POR",
@@ -3673,7 +3673,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "AVL",
@@ -3683,7 +3683,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3694,8 +3694,8 @@
         "club": "RB Salzburg",
         "crest": "club-crests/red-bull-salzburg.png",
         "played": 0,
-        "goalsFor": 14,
-        "goalsAgainst": 9,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "LSO",
@@ -3705,7 +3705,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "MIL",
@@ -3715,7 +3715,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "CEJ",
@@ -3725,7 +3725,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "AND",
@@ -3735,7 +3735,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "ARA",
@@ -3745,7 +3745,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SPA",
@@ -3755,7 +3755,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LEV",
@@ -3765,7 +3765,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CRY",
@@ -3775,7 +3775,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3791,8 +3791,8 @@
         "club": "Borussia Dortmund",
         "crest": "club-crests/borussia-dortmund.png",
         "played": 0,
-        "goalsFor": 11,
-        "goalsAgainst": 17,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "VIL",
@@ -3802,7 +3802,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BOD",
@@ -3812,7 +3812,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SAB",
@@ -3822,7 +3822,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BET",
@@ -3832,7 +3832,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "ARS",
@@ -3842,7 +3842,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "1-5"
+            "placeholderScore": ""
           },
           {
             "code": "INT",
@@ -3852,7 +3852,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "AVL",
@@ -3862,7 +3862,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "2-2"
+            "placeholderScore": ""
           },
           {
             "code": "AEK",
@@ -3872,7 +3872,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3883,8 +3883,8 @@
         "club": "Sturm Graz",
         "crest": "club-crests/sturm-graz.png",
         "played": 0,
-        "goalsFor": 14,
-        "goalsAgainst": 13,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "REN",
@@ -3894,7 +3894,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BOU",
@@ -3904,7 +3904,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "MAR",
@@ -3914,7 +3914,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "CEJ",
@@ -3924,7 +3924,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "HOF",
@@ -3934,7 +3934,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "AZA",
@@ -3944,7 +3944,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "5-1"
+            "placeholderScore": ""
           },
           {
             "code": "OFI",
@@ -3954,7 +3954,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "DIN",
@@ -3964,7 +3964,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -3980,8 +3980,8 @@
         "club": "Villarreal",
         "crest": "club-crests/villarreal.png",
         "played": 0,
-        "goalsFor": 11,
-        "goalsAgainst": 12,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "BVB",
@@ -3991,7 +3991,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "NAP",
@@ -4001,7 +4001,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LIV",
@@ -4011,7 +4011,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "PSG",
@@ -4021,7 +4021,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "SLA",
@@ -4031,7 +4031,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SAB",
@@ -4041,7 +4041,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "17:45",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "FEN",
@@ -4051,7 +4051,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "MUN",
@@ -4061,7 +4061,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4072,8 +4072,8 @@
         "club": "Sparta Prague",
         "crest": "club-crests/sparta-prague.png",
         "played": 0,
-        "goalsFor": 14,
-        "goalsAgainst": 13,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "ARA",
@@ -4083,7 +4083,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LST",
@@ -4093,7 +4093,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "OLY",
@@ -4103,7 +4103,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BOU",
@@ -4113,7 +4113,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "AZA",
@@ -4123,7 +4123,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "4-2"
+            "placeholderScore": ""
           },
           {
             "code": "RBS",
@@ -4133,7 +4133,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CRY",
@@ -4143,7 +4143,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "REN",
@@ -4153,7 +4153,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4169,8 +4169,8 @@
         "club": "Manchester City",
         "crest": "club-crests/manchester-city.png",
         "played": 0,
-        "goalsFor": 14,
-        "goalsAgainst": 12,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "POR",
@@ -4180,7 +4180,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "PSG",
@@ -4190,7 +4190,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "AEK",
@@ -4200,7 +4200,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "RBL",
@@ -4210,7 +4210,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "3-2"
+            "placeholderScore": ""
           },
           {
             "code": "NAP",
@@ -4220,7 +4220,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BAR",
@@ -4230,7 +4230,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LEN",
@@ -4240,7 +4240,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SCP",
@@ -4250,7 +4250,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4261,8 +4261,8 @@
         "club": "Marseille",
         "crest": "club-crests/marseille.png",
         "played": 0,
-        "goalsFor": 16,
-        "goalsAgainst": 14,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "BES",
@@ -4272,7 +4272,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "OLY",
@@ -4282,7 +4282,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "2-2"
+            "placeholderScore": ""
           },
           {
             "code": "STG",
@@ -4292,7 +4292,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LEV",
@@ -4302,7 +4302,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "4-2"
+            "placeholderScore": ""
           },
           {
             "code": "LSO",
@@ -4312,7 +4312,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "CLV",
@@ -4322,7 +4322,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "2-3"
+            "placeholderScore": ""
           },
           {
             "code": "CEL",
@@ -4332,7 +4332,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "AND",
@@ -4342,7 +4342,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4358,8 +4358,8 @@
         "club": "Shakhtar Donetsk",
         "crest": "club-crests/shakhtar-donetsk.png",
         "played": 0,
-        "goalsFor": 6,
-        "goalsAgainst": 15,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "PSV",
@@ -4369,7 +4369,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "AEK",
@@ -4379,7 +4379,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "INT",
@@ -4389,7 +4389,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SCP",
@@ -4399,7 +4399,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "FEN",
@@ -4409,7 +4409,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SBR",
@@ -4419,7 +4419,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "RBL",
@@ -4429,7 +4429,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RMA",
@@ -4439,7 +4439,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4450,8 +4450,8 @@
         "club": "Bournemouth",
         "crest": "club-crests/bournemouth.png",
         "played": 0,
-        "goalsFor": 17,
-        "goalsAgainst": 13,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "RSO",
@@ -4461,7 +4461,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "STG",
@@ -4471,7 +4471,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "MIL",
@@ -4481,7 +4481,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "2-4"
+            "placeholderScore": ""
           },
           {
             "code": "SPA",
@@ -4491,7 +4491,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "CLV",
@@ -4501,7 +4501,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "3-3"
+            "placeholderScore": ""
           },
           {
             "code": "PLZ",
@@ -4511,7 +4511,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LST",
@@ -4521,7 +4521,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "HBS",
@@ -4531,7 +4531,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4547,8 +4547,8 @@
         "club": "Lens",
         "crest": "club-crests/lens.png",
         "played": 0,
-        "goalsFor": 10,
-        "goalsAgainst": 15,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "SLA",
@@ -4558,7 +4558,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SCP",
@@ -4568,7 +4568,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BRU",
@@ -4578,7 +4578,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "COM",
@@ -4588,7 +4588,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "RBL",
@@ -4598,7 +4598,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "1-3"
+            "placeholderScore": ""
           },
           {
             "code": "BOD",
@@ -4608,7 +4608,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "MCI",
@@ -4618,7 +4618,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LIV",
@@ -4628,7 +4628,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4639,8 +4639,8 @@
         "club": "Real Sociedad",
         "crest": "club-crests/real-sociedad.png",
         "played": 0,
-        "goalsFor": 15,
-        "goalsAgainst": 12,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "BOU",
@@ -4650,7 +4650,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "USG",
@@ -4660,7 +4660,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "LST",
@@ -4670,7 +4670,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LYO",
@@ -4680,7 +4680,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CRY",
@@ -4690,7 +4690,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "4-2"
+            "placeholderScore": ""
           },
           {
             "code": "TOR",
@@ -4700,7 +4700,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "PLZ",
@@ -4710,7 +4710,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "JUV",
@@ -4720,7 +4720,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4736,8 +4736,8 @@
         "club": "Sporting CP",
         "crest": "club-crests/sporting-cp.png",
         "played": 0,
-        "goalsFor": 12,
-        "goalsAgainst": 9,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "GAL",
@@ -4747,7 +4747,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LEN",
@@ -4757,7 +4757,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "LAS",
@@ -4767,7 +4767,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "SHA",
@@ -4777,7 +4777,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "MUN",
@@ -4787,7 +4787,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "ROM",
@@ -4797,7 +4797,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BAR",
@@ -4807,7 +4807,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "MCI",
@@ -4817,7 +4817,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4828,8 +4828,8 @@
         "club": "Jagiellonia",
         "crest": "club-crests/jagiellonia.png",
         "played": 0,
-        "goalsFor": 16,
-        "goalsAgainst": 6,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "OLY",
@@ -4839,7 +4839,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ARA",
@@ -4849,7 +4849,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "AND",
@@ -4859,7 +4859,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LSO",
@@ -4869,7 +4869,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "SUN",
@@ -4879,7 +4879,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "CRY",
@@ -4889,7 +4889,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "LYO",
@@ -4899,7 +4899,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "PLZ",
@@ -4909,7 +4909,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -4925,8 +4925,8 @@
         "club": "Como",
         "crest": "club-crests/como.png",
         "played": 0,
-        "goalsFor": 8,
-        "goalsAgainst": 16,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "RBL",
@@ -4936,7 +4936,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "FEY",
@@ -4946,7 +4946,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "MUN",
@@ -4956,7 +4956,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "LEN",
@@ -4966,7 +4966,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "AEK",
@@ -4976,7 +4976,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BET",
@@ -4986,7 +4986,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "PSG",
@@ -4996,7 +4996,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BAR",
@@ -5006,7 +5006,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5017,8 +5017,8 @@
         "club": "Celje",
         "crest": "club-crests/celje.png",
         "played": 0,
-        "goalsFor": 8,
-        "goalsAgainst": 9,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "LEV",
@@ -5028,7 +5028,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "OMO",
@@ -5038,7 +5038,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RBS",
@@ -5048,7 +5048,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "STG",
@@ -5058,7 +5058,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "FER",
@@ -5068,7 +5068,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "OLY",
@@ -5078,7 +5078,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "ARA",
@@ -5088,7 +5088,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "NEC",
@@ -5098,7 +5098,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5114,8 +5114,8 @@
         "club": "Manchester United",
         "crest": "club-crests/manchester-united.png",
         "played": 0,
-        "goalsFor": 14,
-        "goalsAgainst": 10,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "SAB",
@@ -5125,7 +5125,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "ATM",
@@ -5135,7 +5135,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "COM",
@@ -5145,7 +5145,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ROM",
@@ -5155,7 +5155,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "SCP",
@@ -5165,7 +5165,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RBL",
@@ -5175,7 +5175,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BAY",
@@ -5185,7 +5185,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "VIL",
@@ -5195,7 +5195,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5206,8 +5206,8 @@
         "club": "Hapoel Beer-Sheva",
         "crest": "club-crests/hapoel-beer-sheva.png",
         "played": 0,
-        "goalsFor": 12,
-        "goalsAgainst": 12,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "DIN",
@@ -5217,7 +5217,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "AZA",
@@ -5227,7 +5227,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "USG",
@@ -5237,7 +5237,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "OFI",
@@ -5247,7 +5247,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BES",
@@ -5257,7 +5257,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "JUV",
@@ -5267,7 +5267,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CLV",
@@ -5277,7 +5277,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BOU",
@@ -5287,7 +5287,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5303,8 +5303,8 @@
         "club": "LASK",
         "crest": "club-crests/lask.png",
         "played": 0,
-        "goalsFor": 9,
-        "goalsAgainst": 6,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "AEK",
@@ -5314,7 +5314,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "17:45",
-            "placeholderScore": "1-0"
+            "placeholderScore": ""
           },
           {
             "code": "LIV",
@@ -5324,7 +5324,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SCP",
@@ -5334,7 +5334,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "SBR",
@@ -5344,7 +5344,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BOD",
@@ -5354,7 +5354,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "FEN",
@@ -5364,7 +5364,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "RMA",
@@ -5374,7 +5374,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "POR",
@@ -5384,7 +5384,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5395,8 +5395,8 @@
         "club": "Bayer Leverkusen",
         "crest": "club-crests/bayer-leverkusen.png",
         "played": 0,
-        "goalsFor": 11,
-        "goalsAgainst": 16,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "CEJ",
@@ -5406,7 +5406,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "LPO",
@@ -5416,7 +5416,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "OFI",
@@ -5426,7 +5426,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "MAR",
@@ -5436,7 +5436,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "2-4"
+            "placeholderScore": ""
           },
           {
             "code": "DIN",
@@ -5446,7 +5446,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BES",
@@ -5456,7 +5456,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "RBS",
@@ -5466,7 +5466,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LYO",
@@ -5476,7 +5476,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5492,8 +5492,8 @@
         "club": "Real Madrid",
         "crest": "club-crests/real-madrid.png",
         "played": 0,
-        "goalsFor": 8,
-        "goalsAgainst": 16,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "INT",
@@ -5503,7 +5503,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "ROM",
@@ -5513,7 +5513,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "RBL",
@@ -5523,7 +5523,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "AEK",
@@ -5533,7 +5533,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "PSV",
@@ -5543,7 +5543,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "ARS",
@@ -5553,7 +5553,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "LAS",
@@ -5563,7 +5563,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "SHA",
@@ -5573,7 +5573,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5584,8 +5584,8 @@
         "club": "AC Milan",
         "crest": "club-crests/ac-milan.png",
         "played": 0,
-        "goalsFor": 16,
-        "goalsAgainst": 11,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "BEN",
@@ -5595,7 +5595,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RBS",
@@ -5605,7 +5605,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BOU",
@@ -5615,7 +5615,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "4-2"
+            "placeholderScore": ""
           },
           {
             "code": "FER",
@@ -5625,7 +5625,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "OLY",
@@ -5635,7 +5635,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SUN",
@@ -5645,7 +5645,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LSO",
@@ -5655,7 +5655,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ARA",
@@ -5665,7 +5665,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5681,8 +5681,8 @@
         "club": "Galatasaray",
         "crest": "club-crests/galatasaray.png",
         "played": 0,
-        "goalsFor": 10,
-        "goalsAgainst": 16,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "SCP",
@@ -5692,7 +5692,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BAR",
@@ -5702,7 +5702,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LIL",
@@ -5712,7 +5712,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "STU",
@@ -5722,7 +5722,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "AVL",
@@ -5732,7 +5732,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "17:45",
-            "placeholderScore": "1-4"
+            "placeholderScore": ""
           },
           {
             "code": "AEK",
@@ -5742,7 +5742,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "FEY",
@@ -5752,7 +5752,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "PSG",
@@ -5762,7 +5762,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5773,8 +5773,8 @@
         "club": "Dinamo Zagreb",
         "crest": "club-crests/gnk-dinamo.png",
         "played": 0,
-        "goalsFor": 18,
-        "goalsAgainst": 6,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "HBS",
@@ -5784,7 +5784,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "AND",
@@ -5794,7 +5794,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "NEC",
@@ -5804,7 +5804,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "SUN",
@@ -5814,7 +5814,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LEV",
@@ -5824,7 +5824,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "REN",
@@ -5834,7 +5834,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "AZA",
@@ -5844,7 +5844,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "STG",
@@ -5854,7 +5854,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5870,8 +5870,8 @@
         "club": "Arsenal",
         "crest": "club-crests/arsenal.png",
         "played": 0,
-        "goalsFor": 15,
-        "goalsAgainst": 15,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "NAP",
@@ -5881,7 +5881,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "LIL",
@@ -5891,7 +5891,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BAY",
@@ -5901,7 +5901,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-5"
+            "placeholderScore": ""
           },
           {
             "code": "SLA",
@@ -5911,7 +5911,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BVB",
@@ -5921,7 +5921,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "5-1"
+            "placeholderScore": ""
           },
           {
             "code": "RMA",
@@ -5931,7 +5931,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BET",
@@ -5941,7 +5941,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "SAB",
@@ -5951,7 +5951,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -5962,8 +5962,8 @@
         "club": "Lyon",
         "crest": "club-crests/lyon.png",
         "played": 0,
-        "goalsFor": 14,
-        "goalsAgainst": 10,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "AND",
@@ -5973,7 +5973,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "CRY",
@@ -5983,7 +5983,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "HOF",
@@ -5993,7 +5993,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "RSO",
@@ -6003,7 +6003,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LST",
@@ -6013,7 +6013,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "USG",
@@ -6023,7 +6023,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "JAG",
@@ -6033,7 +6033,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "LEV",
@@ -6043,7 +6043,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -6059,8 +6059,8 @@
         "club": "Atletico Madrid",
         "crest": "club-crests/atletico-madrid.png",
         "played": 0,
-        "goalsFor": 14,
-        "goalsAgainst": 12,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "LIV",
@@ -6070,7 +6070,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "20:00",
-            "placeholderScore": "4-1"
+            "placeholderScore": ""
           },
           {
             "code": "MUN",
@@ -6080,7 +6080,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "STU",
@@ -6090,7 +6090,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BAY",
@@ -6100,7 +6100,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "VIK",
@@ -6110,7 +6110,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "PSV",
@@ -6120,7 +6120,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BOD",
@@ -6130,7 +6130,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "FEN",
@@ -6140,7 +6140,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -6151,8 +6151,8 @@
         "club": "AZ Alkmaar",
         "crest": "club-crests/az-alkmaar.png",
         "played": 0,
-        "goalsFor": 12,
-        "goalsAgainst": 20,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "SUN",
@@ -6162,7 +6162,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "HBS",
@@ -6172,7 +6172,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ARA",
@@ -6182,7 +6182,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "JUV",
@@ -6192,7 +6192,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "3-2"
+            "placeholderScore": ""
           },
           {
             "code": "SPA",
@@ -6202,7 +6202,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "2-4"
+            "placeholderScore": ""
           },
           {
             "code": "STG",
@@ -6212,7 +6212,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "1-5"
+            "placeholderScore": ""
           },
           {
             "code": "DIN",
@@ -6222,7 +6222,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BEN",
@@ -6232,7 +6232,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -6248,8 +6248,8 @@
         "club": "Stuttgart",
         "crest": "club-crests/stuttgart.png",
         "played": 0,
-        "goalsFor": 6,
-        "goalsAgainst": 14,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "VIK",
@@ -6259,7 +6259,7 @@
             "score": "",
             "date": "2026-09-09",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "SBR",
@@ -6269,7 +6269,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "ATM",
@@ -6279,7 +6279,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "GAL",
@@ -6289,7 +6289,7 @@
             "score": "",
             "date": "2026-11-03",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "INT",
@@ -6299,7 +6299,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "LIL",
@@ -6309,7 +6309,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BRU",
@@ -6319,7 +6319,7 @@
             "score": "",
             "date": "2027-01-19",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "PSV",
@@ -6329,7 +6329,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "0-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -6340,8 +6340,8 @@
         "club": "Viktoria Plzen",
         "crest": "club-crests/viktoria-plzen.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 7,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "USG",
@@ -6351,7 +6351,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "FER",
@@ -6361,7 +6361,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "LSO",
@@ -6371,7 +6371,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "LST",
@@ -6381,7 +6381,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "BEN",
@@ -6391,7 +6391,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "17:45",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BOU",
@@ -6401,7 +6401,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "RSO",
@@ -6411,7 +6411,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "JAG",
@@ -6421,7 +6421,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -6437,8 +6437,8 @@
         "club": "Real Betis",
         "crest": "club-crests/real-betis.png",
         "played": 0,
-        "goalsFor": 18,
-        "goalsAgainst": 6,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "LIL",
@@ -6448,7 +6448,7 @@
             "score": "",
             "date": "2026-09-08",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "POR",
@@ -6458,7 +6458,7 @@
             "score": "",
             "date": "2026-10-14",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "FEY",
@@ -6468,7 +6468,7 @@
             "score": "",
             "date": "2026-10-21",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "BVB",
@@ -6478,7 +6478,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "SBR",
@@ -6488,7 +6488,7 @@
             "score": "",
             "date": "2026-11-24",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "COM",
@@ -6498,7 +6498,7 @@
             "score": "",
             "date": "2026-12-09",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ARS",
@@ -6508,7 +6508,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "BAY",
@@ -6518,7 +6518,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -6529,8 +6529,8 @@
         "club": "Sunderland",
         "crest": "club-crests/sunderland.png",
         "played": 0,
-        "goalsFor": 8,
-        "goalsAgainst": 16,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "AZA",
@@ -6540,7 +6540,7 @@
             "score": "",
             "date": "2026-09-16",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "TOR",
@@ -6550,7 +6550,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "17:45",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LPO",
@@ -6560,7 +6560,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "DIN",
@@ -6570,7 +6570,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "JAG",
@@ -6580,7 +6580,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "MIL",
@@ -6590,7 +6590,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "AND",
@@ -6600,7 +6600,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "LSO",
@@ -6610,7 +6610,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -6626,8 +6626,8 @@
         "club": "Sabah",
         "crest": "club-crests/sabah.png",
         "played": 0,
-        "goalsFor": 10,
-        "goalsAgainst": 9,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "MUN",
@@ -6637,7 +6637,7 @@
             "score": "",
             "date": "2026-09-10",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "SLA",
@@ -6647,7 +6647,7 @@
             "score": "",
             "date": "2026-10-13",
             "kickoff": "17:45",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "BVB",
@@ -6657,7 +6657,7 @@
             "score": "",
             "date": "2026-10-20",
             "kickoff": "17:45",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           },
           {
             "code": "VIK",
@@ -6667,7 +6667,7 @@
             "score": "",
             "date": "2026-11-04",
             "kickoff": "20:00",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "BAR",
@@ -6677,7 +6677,7 @@
             "score": "",
             "date": "2026-11-25",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "VIL",
@@ -6687,7 +6687,7 @@
             "score": "",
             "date": "2026-12-08",
             "kickoff": "17:45",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "NAP",
@@ -6697,7 +6697,7 @@
             "score": "",
             "date": "2027-01-20",
             "kickoff": "17:45",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "ARS",
@@ -6707,7 +6707,7 @@
             "score": "",
             "date": "2027-01-27",
             "kickoff": "20:00",
-            "placeholderScore": "0-3"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,
@@ -6718,8 +6718,8 @@
         "club": "Celtic",
         "crest": "club-crests/celtic.png",
         "played": 0,
-        "goalsFor": 13,
-        "goalsAgainst": 7,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
         "fixtures": [
           {
             "code": "FER",
@@ -6729,7 +6729,7 @@
             "score": "",
             "date": "2026-09-17",
             "kickoff": "20:00",
-            "placeholderScore": "1-1"
+            "placeholderScore": ""
           },
           {
             "code": "BEN",
@@ -6739,7 +6739,7 @@
             "score": "",
             "date": "2026-10-15",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "CLV",
@@ -6749,7 +6749,7 @@
             "score": "",
             "date": "2026-10-22",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "BES",
@@ -6759,7 +6759,7 @@
             "score": "",
             "date": "2026-11-05",
             "kickoff": "20:00",
-            "placeholderScore": "3-0"
+            "placeholderScore": ""
           },
           {
             "code": "TOR",
@@ -6769,7 +6769,7 @@
             "score": "",
             "date": "2026-11-26",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           },
           {
             "code": "OMO",
@@ -6779,7 +6779,7 @@
             "score": "",
             "date": "2026-12-10",
             "kickoff": "17:45",
-            "placeholderScore": "0-0"
+            "placeholderScore": ""
           },
           {
             "code": "MAR",
@@ -6789,7 +6789,7 @@
             "score": "",
             "date": "2027-01-21",
             "kickoff": "20:00",
-            "placeholderScore": "1-2"
+            "placeholderScore": ""
           },
           {
             "code": "USG",
@@ -6799,7 +6799,7 @@
             "score": "",
             "date": "2027-01-28",
             "kickoff": "20:00",
-            "placeholderScore": "2-1"
+            "placeholderScore": ""
           }
         ],
         "apiTeamId": null,

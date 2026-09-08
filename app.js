@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=119";
+const DATA_URL = "competition.json?v=120";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const $ = (sel) => document.querySelector(sel);
@@ -683,90 +683,6 @@ function rankingRows(list) {
   return rows;
 }
 
-
-// Pre-season placeholder score calibration.
-// Expected shape for this 16-fixture format:
-// winner around 62, field average 48.5, contenders mostly in the 50s.
-// It automatically switches off as soon as real results/statuses appear.
-const PLACEHOLDER_COMBINED_TOTALS = [
-  62, 60, 59, 58, 57, 56, 55, 54, 54,
-  53, 52, 52, 51, 51, 50, 50, 49, 49,
-  48, 48, 47, 47, 46, 46, 45, 45, 44,
-  44, 43, 42, 41, 40, 39, 38, 36, 35
-];
-
-function teamHasRealResult(team) {
-  return Array.isArray(team?.fixtures) && team.fixtures.some(item => {
-    if (!item || typeof item === "string") return false;
-    const status = String(item.status || "").toLowerCase();
-    return Boolean(String(item.score || "").trim()) ||
-      status === "live" ||
-      status === "played" ||
-      status === "finished";
-  });
-}
-
-function setPlaceholderTeamTotal(team, targetTotal) {
-  const currentFor = Number(team?.goalsFor || 0);
-  const currentAgainst = Number(team?.goalsAgainst || 0);
-  const currentTotal = currentFor + currentAgainst;
-
-  let goalsFor;
-  if (currentTotal > 0) {
-    goalsFor = Math.round(targetTotal * (currentFor / currentTotal));
-  } else {
-    goalsFor = Math.ceil(targetTotal / 2);
-  }
-
-  goalsFor = Math.max(0, Math.min(targetTotal, goalsFor));
-  const goalsAgainst = targetTotal - goalsFor;
-
-  return {
-    ...team,
-    goalsFor,
-    goalsAgainst
-  };
-}
-
-function applyPlaceholderScoreCalibration(list) {
-  if (!Array.isArray(list) || !list.length) return list;
-
-  const hasRealResults = list.some(entry =>
-    teamHasRealResult(entry?.ucl) || teamHasRealResult(entry?.uel)
-  );
-
-  if (hasRealResults) return list;
-
-  const ranked = sortedEntries(list);
-  const targetByEntrant = new Map();
-
-  ranked.forEach((entry, index) => {
-    const target = PLACEHOLDER_COMBINED_TOTALS[index];
-    if (Number.isFinite(target)) targetByEntrant.set(entry.entrant, target);
-  });
-
-  return list.map(entry => {
-    const combinedTarget = targetByEntrant.get(entry.entrant);
-    if (!Number.isFinite(combinedTarget)) return entry;
-
-    const oldUcl = clubScore(entry.ucl);
-    const oldUel = clubScore(entry.uel);
-    const oldCombined = oldUcl + oldUel;
-
-    // Preserve each entrant's broad UCL/UEL split without allowing
-    // one side to become unrealistically dominant.
-    const rawRatio = oldCombined > 0 ? oldUcl / oldCombined : 0.5;
-    const uclRatio = Math.max(0.42, Math.min(0.58, rawRatio));
-    const uclTarget = Math.round(combinedTarget * uclRatio);
-    const uelTarget = combinedTarget - uclTarget;
-
-    return {
-      ...entry,
-      ucl: setPlaceholderTeamTotal(entry.ucl, uclTarget),
-      uel: setPlaceholderTeamTotal(entry.uel, uelTarget)
-    };
-  });
-}
 
 const DUMMY_CREST_CACHE_KEY = "euro-goal-rush-dummy-crests-v1";
 const dummyCrestCache = (() => {
@@ -1838,10 +1754,10 @@ function updateMatchCentreNavBadges(fixtures = allCompetitionFixtures()) {
 }
 
 function renderMatchCentreTeaser() {
-  if (!matchCentreTeaserEl || !matchCentreBoardEl) return;
-
   const fixtures = allCompetitionFixtures();
   updateMatchCentreNavBadges(fixtures);
+
+  if (!matchCentreTeaserEl || !matchCentreBoardEl) return;
   const now = Date.now();
   const today = new Date();
   const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
@@ -1914,7 +1830,6 @@ async function init() {
         }))
       : [];
 
-    entries = applyPlaceholderScoreCalibration(entries);
 
     const uclSchedule = data.matchdays?.ucl || [];
     const uelSchedule = data.matchdays?.uel || [];

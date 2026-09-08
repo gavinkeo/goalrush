@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=119";
+const DATA_URL = "competition.json?v=120";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const state = {
