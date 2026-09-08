@@ -2199,9 +2199,16 @@ function updateMatchCentreNavBadges(fixtures = allCompetitionFixtures()) {
 }
 
 function compactFixtureStatus(match) {
-  if (match.status === "live") return { text: "LIVE", className: "live" };
+  if (match.status === "live") {
+    let clock = String(match?.liveMatch?.clock || "").trim();
+    // ESPN can return either a football-style minute (e.g. 23') or a running
+    // clock (e.g. 23:14). Keep the homepage label football-simple.
+    if (/^\d{1,3}:\d{2}$/.test(clock)) clock = `${Number.parseInt(clock, 10)}'`;
+    else if (/^\d{1,3}$/.test(clock)) clock = `${clock}'`;
+    return { text: clock ? `LIVE ${clock}` : "LIVE", className: "live" };
+  }
   if (match.status === "ft") return { text: "FT", className: "ft" };
-  return { text: match.kickoff || "TBC", className: "upcoming" };
+  return { text: `${match.comp} · ${match.kickoff || "TBC"}`, className: "upcoming" };
 }
 
 function compactTeamMarkup(club, team, side, owner = "") {
@@ -2322,18 +2329,19 @@ function renderCompactToday() {
   compactTodayListEl.innerHTML = todaysFixtures.map(match => {
     const status = compactFixtureStatus(match);
     const expanded = expandedCompactFixtures.has(match.key);
-    const scoreOrVs = match.score && (match.status === "live" || match.status === "ft")
+    const scoreText = match.score && (match.status === "live" || match.status === "ft")
       ? match.score.replaceAll("-", "–")
-      : "v";
+      : "";
     return `
       <button class="compact-fixture compact-fixture-toggle${expanded ? " is-expanded" : ""}" type="button"
               data-fixture-key="${esc(match.key)}" aria-expanded="${expanded ? "true" : "false"}"
               aria-label="Show ${esc(match.home)} v ${esc(match.away)} fixture details">
-        <span class="compact-fixture-status ${status.className}">${esc(status.text)}</span>
-        <span class="compact-comp ${match.comp.toLowerCase()}">${match.comp}</span>
         <span class="compact-teams">
           ${compactTeamMarkup(match.home, match.homeTeam, "home", match.homeOwner)}
-          <span class="compact-v${scoreOrVs !== "v" ? " has-score" : ""}">${esc(scoreOrVs)}</span>
+          <span class="compact-match-centre ${status.className} ${match.comp.toLowerCase()}">
+            ${scoreText ? `<span class="compact-centre-score">${esc(scoreText)}</span>` : ""}
+            <span class="compact-centre-status">${esc(status.text)}</span>
+          </span>
           ${compactTeamMarkup(match.away, match.awayTeam, "away", match.awayOwner)}
         </span>
         <span class="compact-expand-icon" aria-hidden="true">⌄</span>

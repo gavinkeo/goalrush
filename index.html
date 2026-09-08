@@ -861,6 +861,71 @@
     }
   </style>
 
+
+  <style id="v134-centred-fixture-status">
+    /* The top line now mirrors the expanded comparison: home | centred match state | away. */
+    .compact-fixture-toggle{
+      grid-template-columns:minmax(0,1fr) 15px !important;
+    }
+    .compact-fixture-toggle > .compact-teams{
+      grid-column:1;
+      width:100%;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 84px minmax(0,1fr);
+      align-items:center;
+      gap:10px;
+    }
+    .compact-fixture-toggle > .compact-expand-icon{grid-column:2;}
+    .compact-match-centre{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      min-width:0;
+      gap:2px;
+      text-align:center;
+      white-space:nowrap;
+    }
+    .compact-centre-status{
+      font-size:.49rem;
+      font-weight:950;
+      letter-spacing:.075em;
+      line-height:1.05;
+      text-transform:uppercase;
+      color:#8ba3c4;
+    }
+    .compact-match-centre.upcoming.ucl .compact-centre-status{color:#55d9ff;}
+    .compact-match-centre.upcoming.uel .compact-centre-status{color:#f3b46d;}
+    .compact-match-centre.live .compact-centre-status{
+      color:#ff7587;
+      text-shadow:0 0 10px rgba(255,83,108,.18);
+    }
+    .compact-match-centre.ft .compact-centre-status{color:#8ea4c0;}
+    .compact-centre-score{
+      color:#f6fbff;
+      font-size:.72rem;
+      font-weight:950;
+      letter-spacing:.035em;
+      line-height:1;
+    }
+    @media(max-width:700px){
+      .compact-fixture-toggle{grid-template-columns:minmax(0,1fr) 14px !important;}
+      .compact-fixture-toggle > .compact-teams{
+        grid-template-columns:minmax(0,1fr) 68px minmax(0,1fr);
+        gap:6px;
+      }
+      .compact-centre-status{font-size:.44rem;letter-spacing:.055em;}
+      .compact-centre-score{font-size:.67rem;}
+    }
+    @media(max-width:390px){
+      .compact-fixture-toggle > .compact-teams{
+        grid-template-columns:minmax(0,1fr) 62px minmax(0,1fr);
+        gap:5px;
+      }
+      .compact-centre-status{font-size:.41rem;letter-spacing:.04em;}
+    }
+  </style>
+
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
