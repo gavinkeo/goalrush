@@ -2253,15 +2253,13 @@ function compactFixtureDetailsMarkup(match, expanded) {
   const homeXg = xgValue(live.homeXg);
   const awayXg = xgValue(live.awayXg);
 
-  const note = match.status === "upcoming"
-    ? "Scorers, attempts and xG will populate after kick-off when supplied by the live feed."
-    : unresolvedGoals.length
-      ? `Feed update: ${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}`
-      : match.status === "live" && live?.clock
-        ? `<span class="compact-mobile-live">LIVE · ${esc(live.clock)}</span> · refreshing automatically`
-        : (!Number.isFinite(live.homeXg) && !Number.isFinite(live.awayXg))
-          ? "xG will appear when available from the match feed."
-          : "";
+  const note = unresolvedGoals.length
+    ? `Feed update: ${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}`
+    : match.status === "live" && live?.clock
+      ? `<span class="compact-mobile-live">LIVE · ${esc(live.clock)}</span> · refreshing automatically`
+      : (!Number.isFinite(live.homeXg) && !Number.isFinite(live.awayXg) && match.status !== "upcoming")
+        ? "xG will appear when available from the match feed."
+        : "";
 
   return `
     <span class="compact-fixture-details" ${expanded ? "" : "hidden"}>
