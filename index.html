@@ -747,6 +747,109 @@
     }
   </style>
 
+
+  <style id="v131-unified-match-comparison-xg">
+    /* One comparison layout on both desktop and mobile. */
+    .compact-detail-desktop,.compact-detail-mobile{display:none !important;}
+    .compact-detail-compare{
+      display:grid;
+      width:100%;
+      min-width:0;
+    }
+    .compact-mobile-row{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);
+      align-items:center;
+      gap:9px;
+      min-height:28px;
+      padding:4px 2px;
+      border-bottom:1px solid rgba(116,151,201,.085);
+    }
+    .compact-mobile-row:last-of-type{border-bottom:0;}
+    .compact-mobile-label{
+      color:#657f9f;
+      font-size:.47rem;
+      font-weight:950;
+      letter-spacing:.09em;
+      line-height:1.05;
+      text-align:center;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .compact-mobile-side{
+      min-width:0;
+      color:#bfd0e7;
+      font-size:.56rem;
+      font-weight:760;
+      line-height:1.22;
+      overflow-wrap:anywhere;
+    }
+    .compact-mobile-side.home{text-align:left;}
+    .compact-mobile-side.away{text-align:right;}
+    .compact-mobile-manager{color:#d8e5f5;font-weight:850;}
+    .compact-mobile-goal-list{display:flex;flex-direction:column;gap:2px;}
+    .compact-mobile-goal-list.away{align-items:flex-end;}
+    .compact-mobile-goal{display:block;max-width:100%;}
+    .compact-mobile-stat{
+      color:#f0f6ff;
+      font-size:.68rem;
+      font-weight:950;
+      letter-spacing:.025em;
+    }
+    .compact-xg-value{color:#d8f5e9;}
+    .compact-mobile-empty{color:#7188a8;font-weight:800;}
+    .compact-mobile-note{
+      display:block;
+      padding-top:6px;
+      color:#7088a8;
+      font-size:.47rem;
+      font-weight:700;
+      line-height:1.2;
+      text-align:center;
+      letter-spacing:.02em;
+    }
+    .compact-mobile-live{color:#ff7587;font-weight:900;}
+
+    @media(min-width:701px){
+      .compact-fixture-details{
+        margin:7px -10px -2px !important;
+        padding:8px 11px 9px !important;
+        gap:0 !important;
+        border-top:1px solid rgba(112,153,215,.15) !important;
+        border-radius:0 0 10px 10px;
+        background:linear-gradient(180deg,rgba(10,27,55,.54),rgba(6,20,44,.66));
+      }
+      .compact-mobile-row{
+        grid-template-columns:minmax(0,1fr) 84px minmax(0,1fr);
+        gap:12px;
+        min-height:29px;
+        padding:4px 3px;
+      }
+      .compact-mobile-label{font-size:.48rem;}
+      .compact-mobile-side{font-size:.57rem;}
+      .compact-mobile-stat{font-size:.70rem;}
+      .compact-mobile-note{font-size:.48rem;}
+    }
+
+    @media(max-width:700px){
+      .compact-fixture-details{
+        margin:6px -10px 0 !important;
+        padding:8px 10px 9px !important;
+        gap:0 !important;
+      }
+      .compact-mobile-row{
+        grid-template-columns:minmax(0,1fr) 62px minmax(0,1fr);
+        gap:7px;
+        min-height:30px;
+        padding:5px 1px;
+      }
+      .compact-mobile-label{font-size:.46rem;}
+      .compact-mobile-side{font-size:.55rem;}
+      .compact-mobile-manager{font-size:.57rem;}
+      .compact-mobile-stat{font-size:.67rem;}
+    }
+  </style>
+
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -895,6 +998,6 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <script src="app.js?v=130" defer></script>
+  <script src="app.js?v=131" defer></script>
 </body>
 </html>

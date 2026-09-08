@@ -730,6 +730,13 @@ const ESPN_SCOREBOARD = {
   UCL: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard",
   UEL: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard"
 };
+const ESPN_SUMMARY = {
+  UCL: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary",
+  UEL: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/summary"
+};
+const ESPN_SUMMARY_TTL_LIVE_MS = 60000;
+const ESPN_SUMMARY_TTL_FT_MS = 300000;
+const espnSummaryCache = new Map();
 
 const LIVE_NAME_ALIASES = {
   "inter milan": ["internazionale", "inter", "fc internazionale milano"],
@@ -891,6 +898,8 @@ function parseEspnEvent(event, comp) {
     awayShots: espnStatNumber(away, ["totalShots", "shotAttempts", "shotsTotal", "shots"]),
     homeShotsOnTarget: espnStatNumber(home, ["shotsOnTarget", "shotsOnGoal", "shotsOnTargetTotal"]),
     awayShotsOnTarget: espnStatNumber(away, ["shotsOnTarget", "shotsOnGoal", "shotsOnTargetTotal"]),
+    homeXg: espnStatNumber(home, ["expectedGoals", "expectedGoalsTotal", "expectedGoal", "xG", "xg"]),
+    awayXg: espnStatNumber(away, ["expectedGoals", "expectedGoalsTotal", "expectedGoal", "xG", "xg"]),
     date: String(event?.date || competition?.date || "").slice(0, 10)
   };
 }
@@ -913,6 +922,76 @@ function currentLocalIsoDate() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
+function espnSummaryTeamRows(payload) {
+  return Array.isArray(payload?.boxscore?.teams) ? payload.boxscore.teams : [];
+}
+
+function espnSummaryTeamName(row) {
+  return row?.team?.displayName || row?.team?.shortDisplayName || row?.team?.name || "";
+}
+
+function espnSummaryStatNumber(row, candidateKeys) {
+  const wanted = new Set(candidateKeys.map(normalizeEspnStatKey));
+  const stats = Array.isArray(row?.statistics) ? row.statistics : [];
+  for (const stat of stats) {
+    const keys = [stat?.name, stat?.displayName, stat?.label, stat?.shortDisplayName, stat?.abbreviation]
+      .map(normalizeEspnStatKey)
+      .filter(Boolean);
+    if (!keys.some(key => wanted.has(key))) continue;
+    const raw = stat?.value ?? stat?.displayValue;
+    const value = Number.parseFloat(String(raw ?? "").replace(/[^0-9.+-]/g, ""));
+    if (Number.isFinite(value)) return value;
+  }
+  return null;
+}
+
+function enrichEspnMatchFromSummary(match, payload) {
+  if (!match || !payload) return match;
+  const rows = espnSummaryTeamRows(payload);
+  const home = rows.find(row => String(row?.homeAway || "").toLowerCase() === "home")
+    || rows.find(row => liveSameClub(espnSummaryTeamName(row), match.home));
+  const away = rows.find(row => String(row?.homeAway || "").toLowerCase() === "away")
+    || rows.find(row => liveSameClub(espnSummaryTeamName(row), match.away));
+  if (!home || !away) return match;
+
+  const homeShots = espnSummaryStatNumber(home, ["totalShots", "shotAttempts", "shotsTotal", "shots"]);
+  const awayShots = espnSummaryStatNumber(away, ["totalShots", "shotAttempts", "shotsTotal", "shots"]);
+  const homeShotsOnTarget = espnSummaryStatNumber(home, ["shotsOnTarget", "shotsOnGoal", "shotsOnTargetTotal"]);
+  const awayShotsOnTarget = espnSummaryStatNumber(away, ["shotsOnTarget", "shotsOnGoal", "shotsOnTargetTotal"]);
+  const homeXg = espnSummaryStatNumber(home, ["expectedGoals", "expectedGoalsTotal", "expectedGoal", "xG", "xg"]);
+  const awayXg = espnSummaryStatNumber(away, ["expectedGoals", "expectedGoalsTotal", "expectedGoal", "xG", "xg"]);
+
+  return {
+    ...match,
+    homeShots: Number.isFinite(homeShots) ? homeShots : match.homeShots,
+    awayShots: Number.isFinite(awayShots) ? awayShots : match.awayShots,
+    homeShotsOnTarget: Number.isFinite(homeShotsOnTarget) ? homeShotsOnTarget : match.homeShotsOnTarget,
+    awayShotsOnTarget: Number.isFinite(awayShotsOnTarget) ? awayShotsOnTarget : match.awayShotsOnTarget,
+    homeXg: Number.isFinite(homeXg) ? homeXg : match.homeXg,
+    awayXg: Number.isFinite(awayXg) ? awayXg : match.awayXg
+  };
+}
+
+async function fetchEspnSummaryCached(comp, match) {
+  const endpoint = ESPN_SUMMARY[comp];
+  if (!endpoint || !match?.eventId) return null;
+  const key = `${comp}:${match.eventId}`;
+  const cached = espnSummaryCache.get(key);
+  const ttl = match.status === "live" ? ESPN_SUMMARY_TTL_LIVE_MS : ESPN_SUMMARY_TTL_FT_MS;
+  if (cached && Date.now() - cached.at < ttl) return cached.payload;
+
+  try {
+    const response = await fetch(`${endpoint}?event=${encodeURIComponent(match.eventId)}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`ESPN ${comp} summary HTTP ${response.status}`);
+    const payload = await response.json();
+    espnSummaryCache.set(key, { at: Date.now(), payload });
+    return payload;
+  } catch (error) {
+    console.warn("ESPN match-detail feed:", error);
+    return cached?.payload || null;
+  }
+}
+
 async function fetchEspnScoreboard(comp, startIso, endIso = startIso) {
   const endpoint = ESPN_SCOREBOARD[comp];
   if (!endpoint) return [];
@@ -925,6 +1004,21 @@ async function fetchEspnScoreboard(comp, startIso, endIso = startIso) {
   return (Array.isArray(payload?.events) ? payload.events : [])
     .map(event => parseEspnEvent(event, comp))
     .filter(Boolean);
+}
+
+async function refreshEspnMatchDetails(feedMatches) {
+  const today = currentLocalIsoDate();
+  const relevant = feedMatches.filter(match =>
+    match?.eventId && match.date === today && ["live", "ft"].includes(match.status)
+  );
+  if (!relevant.length) return;
+
+  const enriched = (await Promise.all(relevant.map(async match => {
+    const summary = await fetchEspnSummaryCached(match.comp, match);
+    return summary ? enrichEspnMatchFromSummary(match, summary) : match;
+  }))).filter(Boolean);
+
+  if (applyLiveScoreFeed(enriched)) refreshLiveScoreUi();
 }
 
 function homeOrientedScore(item) {
@@ -986,7 +1080,9 @@ function applyLiveScoreFeed(feedMatches) {
           homeShots: match.homeShots,
           awayShots: match.awayShots,
           homeShotsOnTarget: match.homeShotsOnTarget,
-          awayShotsOnTarget: match.awayShotsOnTarget
+          awayShotsOnTarget: match.awayShotsOnTarget,
+          homeXg: match.homeXg,
+          awayXg: match.awayXg
         };
         const liveChanged = JSON.stringify(item._liveMatch || null) !== JSON.stringify(liveMatch);
 
@@ -1026,7 +1122,11 @@ async function refreshEspnLiveScores({ history = false } = {}) {
     ]);
     const feedMatches = results.flatMap(result => result.status === "fulfilled" ? result.value : []);
     results.filter(result => result.status === "rejected").forEach(result => console.warn("Live score feed:", result.reason));
+
+    // Apply scores immediately. Richer match-detail/xG requests run separately so they can never
+    // hold up a goal appearing on the leaderboard.
     if (applyLiveScoreFeed(feedMatches)) refreshLiveScoreUi();
+    refreshEspnMatchDetails(feedMatches).catch(error => console.warn("Live match details:", error));
   } catch (error) {
     console.warn("Live score refresh failed", error);
   }
@@ -2138,93 +2238,60 @@ function compactFixtureDetailsMarkup(match, expanded) {
   const homeGoals = goals.filter(goal => goal?.side === "home");
   const awayGoals = goals.filter(goal => goal?.side === "away");
   const unresolvedGoals = goals.filter(goal => !goal?.side);
-  const hasAttempts = Number.isFinite(live?.homeShots) || Number.isFinite(live?.awayShots);
-  const hasOnTarget = Number.isFinite(live?.homeShotsOnTarget) || Number.isFinite(live?.awayShotsOnTarget);
-  const scoreHasGoals = compactScoreGoalCount(match?.score) > 0;
 
-  let goalsMarkup = "";
-  if (homeGoals.length || awayGoals.length || unresolvedGoals.length) {
-    goalsMarkup = `
-      <span class="compact-goal-sides">
-        <span><b>${esc(match.home)}</b>: ${homeGoals.length ? homeGoals.map(goal => esc(compactGoalText(goal))).join(" · ") : "—"}</span>
-        <span><b>${esc(match.away)}</b>: ${awayGoals.length ? awayGoals.map(goal => esc(compactGoalText(goal))).join(" · ") : "—"}</span>
-        ${unresolvedGoals.length ? `<span class="compact-goal-unresolved">${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}</span>` : ""}
-      </span>`;
-  } else if (match.status === "upcoming") {
-    goalsMarkup = `<span class="compact-detail-muted">Goalscorers will appear here live.</span>`;
-  } else if (scoreHasGoals) {
-    goalsMarkup = `<span class="compact-detail-muted">Goal details are updating from the live feed…</span>`;
-  } else {
-    goalsMarkup = `<span class="compact-detail-muted">No goals yet.</span>`;
-  }
-
-  let attemptsMarkup = "";
-  if (hasAttempts || hasOnTarget) {
-    const attempts = `${Number.isFinite(live.homeShots) ? live.homeShots : "—"}–${Number.isFinite(live.awayShots) ? live.awayShots : "—"}`;
-    const onTarget = `${Number.isFinite(live.homeShotsOnTarget) ? live.homeShotsOnTarget : "—"}–${Number.isFinite(live.awayShotsOnTarget) ? live.awayShotsOnTarget : "—"}`;
-    attemptsMarkup = `<strong>${esc(attempts)}</strong>${hasOnTarget ? `<span class="compact-stat-secondary">ON TARGET ${esc(onTarget)}</span>` : ""}`;
-  } else if (match.status === "upcoming") {
-    attemptsMarkup = `<span class="compact-detail-muted">Available after kick-off.</span>`;
-  } else {
-    attemptsMarkup = `<span class="compact-detail-muted">Awaiting match stats.</span>`;
-  }
-
-  const mobileGoalSide = (sideGoals, side) => {
+  const comparisonGoalSide = (sideGoals, side) => {
     if (!sideGoals.length) return `<span class="compact-mobile-empty">—</span>`;
     return `<span class="compact-mobile-goal-list ${side}">${sideGoals.map(goal => `<span class="compact-mobile-goal">${esc(compactGoalText(goal))}</span>`).join("")}</span>`;
   };
-  const homeAttempts = Number.isFinite(live.homeShots) ? live.homeShots : "—";
-  const awayAttempts = Number.isFinite(live.awayShots) ? live.awayShots : "—";
-  const homeOnTarget = Number.isFinite(live.homeShotsOnTarget) ? live.homeShotsOnTarget : "—";
-  const awayOnTarget = Number.isFinite(live.awayShotsOnTarget) ? live.awayShotsOnTarget : "—";
-  const mobileNote = match.status === "upcoming"
-    ? "Scorers and match stats will populate live after kick-off."
+  const statValue = value => Number.isFinite(value) ? String(value) : "—";
+  const xgValue = value => Number.isFinite(value) ? Number(value).toFixed(2) : "—";
+
+  const homeAttempts = statValue(live.homeShots);
+  const awayAttempts = statValue(live.awayShots);
+  const homeOnTarget = statValue(live.homeShotsOnTarget);
+  const awayOnTarget = statValue(live.awayShotsOnTarget);
+  const homeXg = xgValue(live.homeXg);
+  const awayXg = xgValue(live.awayXg);
+
+  const note = match.status === "upcoming"
+    ? "Scorers, attempts and xG will populate after kick-off when supplied by the live feed."
     : unresolvedGoals.length
       ? `Feed update: ${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}`
       : match.status === "live" && live?.clock
         ? `<span class="compact-mobile-live">LIVE · ${esc(live.clock)}</span> · refreshing automatically`
-        : "";
+        : (!Number.isFinite(live.homeXg) && !Number.isFinite(live.awayXg))
+          ? "xG will appear when available from the match feed."
+          : "";
 
   return `
     <span class="compact-fixture-details" ${expanded ? "" : "hidden"}>
-      <span class="compact-detail-desktop">
-        <span class="compact-detail-row compact-detail-managers">
-          <span class="compact-detail-label">MANAGERS</span>
-          <span class="compact-manager-pair"><span>${esc(match.homeOwner || "Unassigned")}</span><span>${esc(match.awayOwner || "Unassigned")}</span></span>
-        </span>
-        <span class="compact-detail-row compact-detail-goals">
-          <span class="compact-detail-label">GOALS</span>
-          ${goalsMarkup}
-        </span>
-        <span class="compact-detail-row compact-detail-stats">
-          <span class="compact-detail-label">ATTEMPTS</span>
-          <span class="compact-stat-values">${attemptsMarkup}</span>
-        </span>
-        ${match.status === "live" && live?.clock ? `<span class="compact-live-clock">LIVE · ${esc(live.clock)}</span>` : ""}
-      </span>
-
-      <span class="compact-detail-mobile">
-        <span class="compact-mobile-row">
+      <span class="compact-detail-compare">
+        <span class="compact-mobile-row compact-compare-managers">
           <span class="compact-mobile-side home compact-mobile-manager">${esc(match.homeOwner || "Unassigned")}</span>
           <span class="compact-mobile-label">Managers</span>
           <span class="compact-mobile-side away compact-mobile-manager">${esc(match.awayOwner || "Unassigned")}</span>
         </span>
-        <span class="compact-mobile-row">
-          <span class="compact-mobile-side home">${mobileGoalSide(homeGoals, "home")}</span>
+        <span class="compact-mobile-row compact-compare-goals">
+          <span class="compact-mobile-side home">${comparisonGoalSide(homeGoals, "home")}</span>
           <span class="compact-mobile-label">Goals</span>
-          <span class="compact-mobile-side away">${mobileGoalSide(awayGoals, "away")}</span>
+          <span class="compact-mobile-side away">${comparisonGoalSide(awayGoals, "away")}</span>
         </span>
         <span class="compact-mobile-row">
-          <span class="compact-mobile-side home compact-mobile-stat">${esc(String(homeAttempts))}</span>
+          <span class="compact-mobile-side home compact-mobile-stat">${esc(homeAttempts)}</span>
           <span class="compact-mobile-label">Attempts</span>
-          <span class="compact-mobile-side away compact-mobile-stat">${esc(String(awayAttempts))}</span>
+          <span class="compact-mobile-side away compact-mobile-stat">${esc(awayAttempts)}</span>
         </span>
         <span class="compact-mobile-row">
-          <span class="compact-mobile-side home compact-mobile-stat">${esc(String(homeOnTarget))}</span>
+          <span class="compact-mobile-side home compact-mobile-stat">${esc(homeOnTarget)}</span>
           <span class="compact-mobile-label">On target</span>
-          <span class="compact-mobile-side away compact-mobile-stat">${esc(String(awayOnTarget))}</span>
+          <span class="compact-mobile-side away compact-mobile-stat">${esc(awayOnTarget)}</span>
         </span>
-        ${mobileNote ? `<span class="compact-mobile-note">${mobileNote}</span>` : ""}
+        <span class="compact-mobile-row compact-compare-xg">
+          <span class="compact-mobile-side home compact-mobile-stat compact-xg-value">${esc(homeXg)}</span>
+          <span class="compact-mobile-label">xG</span>
+          <span class="compact-mobile-side away compact-mobile-stat compact-xg-value">${esc(awayXg)}</span>
+        </span>
+        ${note ? `<span class="compact-mobile-note">${note}</span>` : ""}
       </span>
     </span>`;
 }
