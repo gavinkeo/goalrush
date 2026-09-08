@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=128";
+const DATA_URL = "competition.json?v=129";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const $ = (sel) => document.querySelector(sel);

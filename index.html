@@ -608,20 +608,48 @@
     }
   </style>
 
+
+  <style id="v129-searchless-header">
+    /* Keep the one-page header deliberately simple: title + the two competition chips. */
+    @media(min-width:701px){
+      .dashboard-header .title-top-row{
+        display:grid !important;
+        grid-template-columns:max-content minmax(0,1fr) !important;
+        align-items:center !important;
+        gap:18px !important;
+      }
+      .dashboard-header .main-title{
+        grid-column:1 !important;
+        margin:0 !important;
+      }
+      .dashboard-header .matchday-strip{
+        grid-column:2 !important;
+        justify-self:end !important;
+        width:auto !important;
+        margin:0 !important;
+      }
+    }
+    @media(max-width:700px){
+      .dashboard-header .title-top-row{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+      }
+      .dashboard-header .main-title{order:1 !important;}
+      .dashboard-header .matchday-strip{order:2 !important;width:100% !important;}
+    }
+  </style>
+
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
 
   <header class="dashboard-header shell">
+    <!-- Search/filter engine retained for future use, but intentionally hidden from the one-page UI. -->
+    <input id="search" type="search" autocomplete="off" hidden aria-hidden="true" tabindex="-1">
+
     <div class="title-top-row">
       <h1 class="main-title"><span class="main-title-text">EURO GOAL RUSH 26/27</span></h1>
-
-      <div class="header-tools" aria-label="Search">
-        <label class="search top-search desktop-top-search">
-          <span>⌕</span>
-          <input id="search" type="search" placeholder="Search manager or club" autocomplete="off">
-        </label>
-      </div>
 
       <div class="matchday-strip">
         <div class="matchday-chip ucl-chip" id="ucl-matchday">
@@ -756,6 +784,6 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <script src="app.js?v=128" defer></script>
+  <script src="app.js?v=129" defer></script>
 </body>
 </html>
