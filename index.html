@@ -926,6 +926,44 @@
     }
   </style>
 
+
+  <style id="v135-bigger-centred-kickoff-live">
+    /* Make the centre state read like part of the scoreline, not tiny metadata. */
+    .compact-fixture-toggle > .compact-teams{
+      grid-template-columns:minmax(0,1fr) 96px minmax(0,1fr);
+    }
+    .compact-centre-status{
+      font-size:.72rem;
+      font-weight:950;
+      letter-spacing:.02em;
+      line-height:1;
+    }
+    .compact-match-centre.upcoming .compact-centre-status{font-size:.78rem;}
+    .compact-match-centre.live .compact-centre-status{font-size:.72rem;}
+    .compact-match-centre.ft .compact-centre-status{font-size:.70rem;}
+    .compact-centre-score{font-size:.82rem;}
+
+    @media(max-width:700px){
+      .compact-fixture-toggle > .compact-teams{
+        grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);
+        gap:6px;
+      }
+      .compact-centre-status{font-size:.63rem;letter-spacing:.01em;}
+      .compact-match-centre.upcoming .compact-centre-status{font-size:.70rem;}
+      .compact-match-centre.live .compact-centre-status{font-size:.65rem;}
+      .compact-match-centre.ft .compact-centre-status{font-size:.63rem;}
+      .compact-centre-score{font-size:.76rem;}
+    }
+    @media(max-width:390px){
+      .compact-fixture-toggle > .compact-teams{
+        grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr);
+        gap:5px;
+      }
+      .compact-match-centre.upcoming .compact-centre-status{font-size:.66rem;}
+      .compact-match-centre.live .compact-centre-status{font-size:.61rem;}
+    }
+  </style>
+
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>

@@ -2208,7 +2208,10 @@ function compactFixtureStatus(match) {
     return { text: clock ? `LIVE ${clock}` : "LIVE", className: "live" };
   }
   if (match.status === "ft") return { text: "FT", className: "ft" };
-  return { text: `${match.comp} · ${match.kickoff || "TBC"}`, className: "upcoming" };
+  // Competition is already obvious from the Today's Games header/colour treatment.
+  // Keep the centre column focused on the useful bit: kickoff before the game,
+  // then the live elapsed minute once it starts.
+  return { text: match.kickoff || "TBC", className: "upcoming" };
 }
 
 function compactTeamMarkup(club, team, side, owner = "") {
