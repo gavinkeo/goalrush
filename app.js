@@ -469,6 +469,27 @@ function fixtureKickoffText(item) {
   return timeMatch ? timeMatch[1] : raw;
 }
 
+function desktopFixtureDisplayText(team, item, index) {
+  const scoreText = fixtureScoreText(team, item, index);
+  if (scoreText) return scoreText;
+
+  if (!item?.date) return "–";
+
+  const fixtureDate = parseDate(item.date);
+  const today = new Date();
+  const isToday =
+    fixtureDate.getFullYear() === today.getFullYear() &&
+    fixtureDate.getMonth() === today.getMonth() &&
+    fixtureDate.getDate() === today.getDate();
+
+  if (isToday) {
+    const kickoff = fixtureKickoffText(item);
+    if (kickoff !== "TBC") return kickoff;
+  }
+
+  return `${String(fixtureDate.getDate()).padStart(2, "0")}/${String(fixtureDate.getMonth() + 1).padStart(2, "0")}`;
+}
+
 function fixtureTooltipText(team, item, index, comp) {
   const opponent = item?.opponent || opponentFullName(item?.code);
   const score = fixtureScoreText(team, item, index);
@@ -901,7 +922,7 @@ function fixtureGrid(team, comp) {
       const statusClass =
         item.status === "live" ? " live" :
         item.status === "played" ? " played" : "";
-      const scoreText = fixtureScoreText(team, item, index);
+      const displayText = desktopFixtureDisplayText(team, item, index);
       const tooltipText = fixtureTooltipText(team, item, index, comp);
       const opponent = fixtureOpponentTeam(item);
       const opponentKey = opponent?.club || item?.opponent || item?.code || "";
@@ -929,7 +950,7 @@ function fixtureGrid(team, comp) {
                      alt=""
                      onerror="this.src='${PLACEHOLDER_CREST}'">
               </span>`}
-            <span class="fixture-score">${esc(scoreText || "–")}</span>
+            <span class="fixture-score">${esc(displayText)}</span>
           </span>
         </span>`;
     }).join("")
