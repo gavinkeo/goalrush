@@ -1252,10 +1252,10 @@ async function refreshEspnLiveScores({ history = false } = {}) {
     const feedMatches = results.flatMap(result => result.status === "fulfilled" ? result.value : []);
     results.filter(result => result.status === "rejected").forEach(result => console.warn("Live score feed:", result.reason));
 
-    // Apply scores immediately. Richer match-detail/xG requests run separately so they can never
-    // hold up a goal appearing on the leaderboard.
+    // Apply the scoreboard feed only. The richer ESPN match-detail endpoints proved
+    // inconsistent for these UCL fixtures, so v139 deliberately does not call them.
+    // This keeps the live score/standings path small and dependable.
     if (applyLiveScoreFeed(feedMatches)) refreshLiveScoreUi();
-    refreshEspnMatchDetails(feedMatches).catch(error => console.warn("Live match details:", error));
   } catch (error) {
     console.warn("Live score refresh failed", error);
   }
@@ -2327,15 +2327,6 @@ function updateMatchCentreNavBadges(fixtures = allCompetitionFixtures()) {
   });
 }
 
-function compactEstimatedLiveMinute(match) {
-  const kickoff = Number(match?.timestamp);
-  if (!Number.isFinite(kickoff)) return "";
-  const wallMinutes = Math.max(0, Math.floor((Date.now() - kickoff) / 60000));
-  if (wallMinutes <= 55) return `${Math.min(wallMinutes, 45)}'`;
-  if (wallMinutes <= 125) return `${Math.min(90, Math.max(46, wallMinutes - 15))}'`;
-  return "";
-}
-
 function compactFixtureStatus(match) {
   if (match.status === "live") {
     const phase = String(match?.liveMatch?.phase || "").toLowerCase();
@@ -2348,7 +2339,10 @@ function compactFixtureStatus(match) {
     // clock (e.g. 23:14). Keep the homepage label football-simple.
     if (/^\d{1,3}:\d{2}$/.test(clock)) clock = `${Number.parseInt(clock, 10)}'`;
     else if (/^\d{1,3}$/.test(clock)) clock = `${clock}'`;
-    if (!clock) clock = compactEstimatedLiveMinute(match);
+    // Never manufacture a minute from the scheduled kick-off. Two matches can
+    // actually start a couple of minutes apart; the old wall-clock fallback made
+    // simultaneous fixtures look falsely synchronised. If ESPN supplies a match-
+    // specific clock, show it. Otherwise show LIVE rather than a made-up minute.
     return { text: clock ? `LIVE ${clock}` : "LIVE", className: "live" };
   }
   if (match.status === "ft") return { text: "FT", className: "ft" };
@@ -2387,61 +2381,17 @@ function compactScoreGoalCount(score) {
 }
 
 function compactFixtureDetailsMarkup(match, expanded) {
-  const live = match?.liveMatch || {};
-  const goals = Array.isArray(live?.goals) ? live.goals : [];
-  const homeGoals = goals.filter(goal => goal?.side === "home");
-  const awayGoals = goals.filter(goal => goal?.side === "away");
-  const unresolvedGoals = goals.filter(goal => !goal?.side);
-
-  const comparisonGoalSide = (sideGoals, side) => {
-    if (!sideGoals.length) return `<span class="compact-mobile-empty">—</span>`;
-    return `<span class="compact-mobile-goal-list ${side}">${sideGoals.map(goal => `<span class="compact-mobile-goal">${esc(compactGoalText(goal))}</span>`).join("")}</span>`;
-  };
-  const statValue = value => Number.isFinite(value) ? String(value) : "—";
-  const anyFinite = (...values) => values.some(Number.isFinite);
-
-  const homeAttempts = statValue(live.homeShots);
-  const awayAttempts = statValue(live.awayShots);
-  const homeOnTarget = statValue(live.homeShotsOnTarget);
-  const awayOnTarget = statValue(live.awayShotsOnTarget);
-
-  // Only render live-data rows when ESPN has actually supplied the data. This keeps
-  // the expanded card clean instead of filling it with dead dashes if a provider
-  // omits a stat for a particular match.
-  const goalRow = goals.length ? `
-        <span class="compact-mobile-row compact-compare-goals">
-          <span class="compact-mobile-side home">${comparisonGoalSide(homeGoals, "home")}</span>
-          <span class="compact-mobile-label">Goalscorers</span>
-          <span class="compact-mobile-side away">${comparisonGoalSide(awayGoals, "away")}</span>
-        </span>` : "";
-  const attemptsRow = anyFinite(live.homeShots, live.awayShots) ? `
-        <span class="compact-mobile-row">
-          <span class="compact-mobile-side home compact-mobile-stat">${esc(homeAttempts)}</span>
-          <span class="compact-mobile-label">Attempts</span>
-          <span class="compact-mobile-side away compact-mobile-stat">${esc(awayAttempts)}</span>
-        </span>` : "";
-  const targetRow = anyFinite(live.homeShotsOnTarget, live.awayShotsOnTarget) ? `
-        <span class="compact-mobile-row">
-          <span class="compact-mobile-side home compact-mobile-stat">${esc(homeOnTarget)}</span>
-          <span class="compact-mobile-label">On target</span>
-          <span class="compact-mobile-side away compact-mobile-stat">${esc(awayOnTarget)}</span>
-        </span>` : "";
-  const note = unresolvedGoals.length
-    ? `Feed update: ${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}`
-    : "";
-
+  // Keep the only dependable extra information: who owns each team. ESPN's
+  // richer live-detail endpoints did not reliably expose scorers/shots for these
+  // fixtures in-browser, so those empty rows and their network requests are gone.
   return `
     <span class="compact-fixture-details" ${expanded ? "" : "hidden"}>
-      <span class="compact-detail-compare">
+      <span class="compact-detail-compare compact-detail-managers-only">
         <span class="compact-mobile-row compact-compare-managers">
           <span class="compact-mobile-side home compact-mobile-manager">${esc(match.homeOwner || "Unassigned")}</span>
           <span class="compact-mobile-label">Managers</span>
           <span class="compact-mobile-side away compact-mobile-manager">${esc(match.awayOwner || "Unassigned")}</span>
         </span>
-        ${goalRow}
-        ${attemptsRow}
-        ${targetRow}
-        ${note ? `<span class="compact-mobile-note">${note}</span>` : ""}
       </span>
     </span>`;
 }
