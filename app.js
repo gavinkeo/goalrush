@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=120";
+const DATA_URL = "competition.json?v=121";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const $ = (sel) => document.querySelector(sel);
@@ -17,6 +17,9 @@ const matchCentreSubtitleEl = $("#match-centre-subtitle");
 const headerTodayCountEl = $("#header-today-count");
 const headerLiveCountEl = $("#header-live-count");
 const teaserLiveCountEl = $("#teaser-live-count");
+const compactTodayEl = $("#compact-today");
+const compactTodayListEl = $("#compact-today-list");
+const compactTodaySummaryEl = $("#compact-today-summary");
 
 const uclAnthemBtn = $("#ucl-anthem-btn");
 const uelAnthemBtn = $("#uel-anthem-btn");
@@ -1753,6 +1756,64 @@ function updateMatchCentreNavBadges(fixtures = allCompetitionFixtures()) {
   });
 }
 
+function compactFixtureStatus(match) {
+  if (match.status === "live") return { text: "LIVE", className: "live" };
+  if (match.status === "ft") return { text: match.score ? match.score.replaceAll("-", "–") : "FT", className: "ft" };
+  return { text: match.kickoff || "TBC", className: "upcoming" };
+}
+
+function compactTeamMarkup(club, team, side) {
+  const image = team ? crest(team) : PLACEHOLDER_CREST;
+  return `
+    <span class="compact-team ${side}">
+      ${side === "away" ? `<span class="compact-team-name">${esc(club)}</span>` : ""}
+      <img src="${esc(image)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      ${side === "home" ? `<span class="compact-team-name">${esc(club)}</span>` : ""}
+    </span>`;
+}
+
+function renderCompactToday() {
+  const fixtures = allCompetitionFixtures();
+  updateMatchCentreNavBadges(fixtures);
+  if (!compactTodayEl || !compactTodayListEl) return;
+
+  const today = new Date();
+  const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+  const todaysFixtures = fixtures.filter(match => match.status === "live" || match.date === todayIso);
+
+  if (!todaysFixtures.length) {
+    compactTodayEl.hidden = true;
+    compactTodayListEl.innerHTML = "";
+    return;
+  }
+
+  const uclCount = todaysFixtures.filter(match => match.comp === "UCL").length;
+  const uelCount = todaysFixtures.filter(match => match.comp === "UEL").length;
+  if (compactTodaySummaryEl) {
+    const bits = [];
+    if (uclCount) bits.push(`<span class="ucl">UCL ${uclCount}</span>`);
+    if (uelCount) bits.push(`<span class="uel">UEL ${uelCount}</span>`);
+    bits.push(`<span>${todaysFixtures.length} ${todaysFixtures.length === 1 ? "FIXTURE" : "FIXTURES"}</span>`);
+    compactTodaySummaryEl.innerHTML = bits.join(" · ");
+  }
+
+  compactTodayListEl.innerHTML = todaysFixtures.map(match => {
+    const status = compactFixtureStatus(match);
+    return `
+      <a class="compact-fixture" href="matches.html?comp=${match.comp}&md=${match.md}" aria-label="${esc(match.home)} v ${esc(match.away)} in the match centre">
+        <span class="compact-fixture-status ${status.className}">${esc(status.text)}</span>
+        <span class="compact-comp ${match.comp.toLowerCase()}">${match.comp}</span>
+        <span class="compact-teams">
+          ${compactTeamMarkup(match.home, match.homeTeam, "home")}
+          <span class="compact-v">v</span>
+          ${compactTeamMarkup(match.away, match.awayTeam, "away")}
+        </span>
+      </a>`;
+  }).join("");
+
+  compactTodayEl.hidden = false;
+}
+
 function renderMatchCentreTeaser() {
   const fixtures = allCompetitionFixtures();
   updateMatchCentreNavBadges(fixtures);
@@ -1839,12 +1900,12 @@ async function init() {
     populateCombinedMatchdayHeaders(data.matchdays);
     setMatchday("ucl", uclSchedule);
     setMatchday("uel", uelSchedule);
-    renderMatchCentreTeaser();
+    renderCompactToday();
 
     window.setInterval(() => {
       setMatchday("ucl", uclSchedule);
       setMatchday("uel", uelSchedule);
-      renderMatchCentreTeaser();
+      renderCompactToday();
     }, 60000);
 
     render();
