@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=123";
+const DATA_URL = "competition.json?v=124";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const state = {
@@ -35,6 +35,180 @@ function esc(value) {
     .replaceAll("'", "&#039;");
 }
 function clubKey(name) { return String(name || "").trim().toLowerCase(); }
+
+const LIVE_SCORE_POLL_MS = 30000;
+const ESPN_SCOREBOARD = {
+  UCL: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard",
+  UEL: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard"
+};
+const LIVE_NAME_ALIASES = {
+  "inter milan": ["internazionale", "inter", "fc internazionale milano"],
+  "atletico madrid": ["atletico de madrid"],
+  "bayern munich": ["bayern munchen", "fc bayern munich", "fc bayern munchen"],
+  "paris saint germain": ["psg", "paris sg"],
+  "porto": ["fc porto"],
+  "sporting cp": ["sporting lisbon", "sporting clube de portugal"],
+  "union sg": ["union saint gilloise", "union st gilloise", "union st.-gilloise", "royale union saint gilloise"],
+  "rb salzburg": ["red bull salzburg", "fc salzburg", "salzburg"],
+  "sparta prague": ["sparta praha", "ac sparta praha"],
+  "slavia prague": ["slavia praha", "sk slavia praha"],
+  "viktoria plzen": ["fc viktoria plzen"],
+  "fenerbahce": ["fenerbahce sk"],
+  "besiktas": ["besiktas jk"],
+  "omonia": ["omonia nicosia", "ac omonia"],
+  "lillestrom": ["lillestrom sk"],
+  "hapoel beer sheva": ["hapoel be'er sheva", "hapoel beersheba"],
+  "hoffenheim": ["tsg hoffenheim", "1899 hoffenheim"],
+  "marseille": ["olympique de marseille"],
+  "lens": ["rc lens"],
+  "rennes": ["stade rennais", "stade rennais fc"],
+  "ofi crete": ["ofi", "ofi fc"],
+  "torreense": ["scu torreense", "sc torreense"],
+  "nec nijmegen": ["nec", "n.e.c."],
+  "como": ["como 1907"],
+  "celje": ["nk celje"],
+  "viking": ["viking fk"],
+  "sabah": ["sabah fk"],
+  "jagiellonia": ["jagiellonia bialystok"],
+  "bodo glimt": ["bodo/glimt", "fk bodo glimt"],
+  "psv eindhoven": ["psv"],
+  "stuttgart": ["vfb stuttgart"],
+  "anderlecht": ["rsc anderlecht"],
+  "shakhtar donetsk": ["shakhtar", "fc shakhtar donetsk"],
+  "dinamo zagreb": ["gnk dinamo zagreb"],
+  "ferencvaros": ["ferencvarosi tc", "ferencvaros tc"],
+  "olympiacos": ["olympiacos fc", "olympiakos"],
+  "slovan bratislava": ["sk slovan bratislava"],
+  "sturm graz": ["sk sturm graz"],
+  "lech poznan": ["kks lech poznan"],
+  "lask": ["lask linz"],
+  "real betis": ["real betis balompie"],
+  "celtic": ["celtic fc"],
+  "liverpool": ["liverpool fc"],
+  "aston villa": ["aston villa fc"],
+  "manchester city": ["man city"],
+  "manchester united": ["man united", "man utd"],
+  "real sociedad": ["real sociedad san sebastian"],
+  "ararat armenia": ["fc ararat armenia"]
+};
+function liveClubKey(name) {
+  return String(name || "")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+    .replace(/&/g, " and ").replace(/[’']/g, "").replace(/[^a-z0-9]+/g, " ")
+    .replace(/\b(fc|cf|sc|ac|afc|fk|sk|rc|sv|vfb|nk|gnk|kks|rsc|jk)\b/g, " ")
+    .replace(/\s+/g, " ").trim();
+}
+function liveClubKeys(name) {
+  const base = liveClubKey(name);
+  return new Set([base, ...(LIVE_NAME_ALIASES[base] || []).map(liveClubKey)].filter(Boolean));
+}
+function liveSameClub(a, b) {
+  const aKeys = liveClubKeys(a), bKeys = liveClubKeys(b);
+  for (const key of aKeys) if (bKeys.has(key)) return true;
+  return false;
+}
+function espnScoreValue(competitor) {
+  const raw = competitor?.score?.displayValue ?? competitor?.score?.value ?? competitor?.score;
+  const value = Number(raw);
+  return Number.isFinite(value) ? value : null;
+}
+function parseEspnEvent(event, comp) {
+  const competition = event?.competitions?.[0];
+  const competitors = competition?.competitors || [];
+  const home = competitors.find(item => item?.homeAway === "home");
+  const away = competitors.find(item => item?.homeAway === "away");
+  if (!home || !away) return null;
+  const type = competition?.status?.type || event?.status?.type || {};
+  const stateValue = String(type.state || "").toLowerCase();
+  const completed = Boolean(type.completed) || stateValue === "post";
+  const live = !completed && (stateValue === "in" || stateValue === "live" || stateValue === "inprogress");
+  return {
+    comp,
+    home: home?.team?.displayName || home?.team?.shortDisplayName || home?.team?.name || "",
+    away: away?.team?.displayName || away?.team?.shortDisplayName || away?.team?.name || "",
+    homeScore: espnScoreValue(home), awayScore: espnScoreValue(away),
+    status: completed ? "ft" : live ? "live" : "upcoming"
+  };
+}
+function currentCompactDate(iso) { return String(iso || "").replaceAll("-", ""); }
+function firstFixtureDate() {
+  const dates = state.entries.flatMap(entry => [entry?.ucl, entry?.uel])
+    .flatMap(team => Array.isArray(team?.fixtures) ? team.fixtures : [])
+    .map(item => String(item?.date || "")).filter(Boolean).sort();
+  return dates[0] || currentIsoDate();
+}
+async function fetchEspnScoreboard(comp, startIso, endIso = startIso) {
+  const dates = startIso === endIso ? currentCompactDate(startIso) : `${currentCompactDate(startIso)}-${currentCompactDate(endIso)}`;
+  const response = await fetch(`${ESPN_SCOREBOARD[comp]}?dates=${encodeURIComponent(dates)}&limit=500`, { cache: "no-store" });
+  if (!response.ok) throw new Error(`ESPN ${comp} HTTP ${response.status}`);
+  const payload = await response.json();
+  return (Array.isArray(payload?.events) ? payload.events : []).map(event => parseEspnEvent(event, comp)).filter(Boolean);
+}
+function reverseScore(score) {
+  const parts = String(score || "").split(/[-–—]/).map(value => value.trim());
+  return parts.length === 2 ? `${parts[1]}-${parts[0]}` : String(score || "");
+}
+function homeOrientedScore(fixture) {
+  const raw = String(fixture?.score || "").trim();
+  if (!raw) return "";
+  return String(fixture?.venue || "").toUpperCase() === "A" ? reverseScore(raw) : raw;
+}
+function recalculateTeamTotals(team) {
+  let goalsFor = 0, goalsAgainst = 0, played = 0;
+  (Array.isArray(team?.fixtures) ? team.fixtures : []).forEach(item => {
+    const parts = String(item?.score || "").split(/[-–—]/).map(value => Number(String(value).trim()));
+    if (parts.length !== 2 || parts.some(value => !Number.isFinite(value))) return;
+    goalsFor += parts[0]; goalsAgainst += parts[1];
+    if (["played", "finished", "ft"].includes(String(item?.status || "").toLowerCase())) played += 1;
+  });
+  team.goalsFor = goalsFor; team.goalsAgainst = goalsAgainst; team.played = played;
+}
+function applyLiveFeed(feedMatches) {
+  let changed = false;
+  state.entries.forEach(entry => {
+    [["UCL", entry?.ucl], ["UEL", entry?.uel]].forEach(([comp, team]) => {
+      if (!team?.club || !Array.isArray(team?.fixtures)) return;
+      team.fixtures.forEach(fixture => {
+        const pair = fixturePairing(team, fixture);
+        const match = feedMatches.find(candidate => candidate.comp === comp && liveSameClub(candidate.home, pair.home) && liveSameClub(candidate.away, pair.away));
+        if (!match) return;
+        const nextStatus = match.status === "live" ? "live" : match.status === "ft" ? "played" : "";
+        let nextScore = "";
+        if ((match.status === "live" || match.status === "ft") && match.homeScore !== null && match.awayScore !== null) {
+          const teamIsHome = liveSameClub(team.club, match.home);
+          nextScore = teamIsHome ? `${match.homeScore}-${match.awayScore}` : `${match.awayScore}-${match.homeScore}`;
+        }
+        if (String(fixture.status || "") !== nextStatus || String(fixture.score || "") !== nextScore) {
+          fixture.status = nextStatus; fixture.score = nextScore; changed = true;
+        }
+      });
+      recalculateTeamTotals(team);
+    });
+  });
+  return changed;
+}
+let liveScorePollingStarted = false;
+async function refreshLiveFeed(matchdays, history = false) {
+  const today = currentIsoDate();
+  const start = history ? firstFixtureDate() : today;
+  const results = await Promise.allSettled([
+    fetchEspnScoreboard("UCL", start, today),
+    fetchEspnScoreboard("UEL", start, today)
+  ]);
+  const feed = results.flatMap(result => result.status === "fulfilled" ? result.value : []);
+  results.filter(result => result.status === "rejected").forEach(result => console.warn("Live score feed:", result.reason));
+  if (applyLiveFeed(feed)) {
+    state.fixtures = flattenFixtures();
+    renderHeaderMatchdays(matchdays || {});
+    renderAll();
+  }
+}
+function startLiveScorePolling(matchdays) {
+  if (liveScorePollingStarted) return;
+  liveScorePollingStarted = true;
+  refreshLiveFeed(matchdays, true);
+  window.setInterval(() => refreshLiveFeed(matchdays, false), LIVE_SCORE_POLL_MS);
+}
 function parseDate(iso) {
   const [y, m, d] = String(iso || "").split("-").map(Number);
   return new Date(y, (m || 1) - 1, d || 1);
@@ -108,7 +282,7 @@ function flattenFixtures() {
           kickoff: kickoffText(fixture),
           timestamp: fixtureKickoffDate(fixture)?.getTime() ?? Number.POSITIVE_INFINITY,
           status: fixtureStatus(fixture),
-          score: String(fixture?.score || "").trim(),
+          score: homeOrientedScore(fixture),
           home: pair.home,
           away: pair.away,
           homeOwner: ownerForClub(pair.home),
@@ -358,6 +532,7 @@ async function init() {
     window.setInterval(() => renderHeaderMatchdays(data.matchdays || {}), 30000);
     applyQueryDefaults();
     renderAll();
+    startLiveScorePolling(data.matchdays || {});
   } catch (error) {
     console.error(error);
     $("#empty-state").hidden = false;

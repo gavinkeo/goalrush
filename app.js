@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=121";
+const DATA_URL = "competition.json?v=124";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const $ = (sel) => document.querySelector(sel);
@@ -212,9 +212,9 @@ function generatedFixtureScoreList(team) {
 }
 
 function fixtureScoreText(team, item, index) {
-  if (item?.score) return item.score;
-  if (item?.placeholderScore) return item.placeholderScore;
-  return generatedFixtureScoreList(team)[index] || "";
+  // Only real fixture scores are ever shown. Never synthesize/allocate a team's
+  // running total across unplayed fixtures.
+  return String(item?.score || "").trim();
 }
 
 const OPPONENT_NAMES = {
@@ -719,6 +719,257 @@ const dummyCrestCache = (() => {
 
 function clubKey(name) {
   return String(name || "").trim().toLowerCase();
+}
+
+// Live scores are pulled directly in the browser from ESPN's public scoreboard feed.
+// No secret/API key is embedded in the site. The static competition.json remains the
+// source of truth for the draw and fixture list; live results are overlaid at runtime.
+const LIVE_SCORE_POLL_MS = 30000;
+const ESPN_SCOREBOARD = {
+  UCL: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard",
+  UEL: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard"
+};
+
+const LIVE_NAME_ALIASES = {
+  "inter milan": ["internazionale", "inter", "fc internazionale milano"],
+  "atletico madrid": ["atletico de madrid", "atletico madrid"],
+  "bayern munich": ["bayern munchen", "fc bayern munich", "fc bayern munchen"],
+  "paris saint germain": ["psg", "paris sg"],
+  "porto": ["fc porto"],
+  "sporting cp": ["sporting lisbon", "sporting clube de portugal"],
+  "union sg": ["union saint gilloise", "union st gilloise", "union st.-gilloise", "royale union saint gilloise"],
+  "rb salzburg": ["red bull salzburg", "fc salzburg", "salzburg"],
+  "sparta prague": ["sparta praha", "ac sparta praha"],
+  "slavia prague": ["slavia praha", "sk slavia praha"],
+  "viktoria plzen": ["viktoria plzen", "fc viktoria plzen"],
+  "fenerbahce": ["fenerbahce sk"],
+  "besiktas": ["besiktas jk"],
+  "omonia": ["omonia nicosia", "ac omonia"],
+  "lillestrom": ["lillestrom sk"],
+  "hapoel beer sheva": ["hapoel be'er sheva", "hapoel beersheba"],
+  "hoffenneim": ["tsg hoffenheim"],
+  "hoffenheim": ["tsg hoffenheim", "1899 hoffenheim"],
+  "marseille": ["olympique de marseille"],
+  "lens": ["rc lens"],
+  "rennes": ["stade rennais", "stade rennais fc"],
+  "ofi crete": ["ofi", "ofi fc"],
+  "torreense": ["scu torreense", "sc torreense"],
+  "nec nijmegen": ["nec", "n.e.c."],
+  "como": ["como 1907"],
+  "celje": ["nk celje"],
+  "viking": ["viking fk"],
+  "sabah": ["sabah fk"],
+  "jagiellonia": ["jagiellonia bialystok"],
+  "bodo glimt": ["bodo/glimt", "fk bodo glimt"],
+  "psv eindhoven": ["psv"],
+  "stuttgart": ["vfb stuttgart"],
+  "anderlecht": ["rsc anderlecht"],
+  "shakhtar donetsk": ["shakhtar", "fc shakhtar donetsk"],
+  "dinamo zagreb": ["gnk dinamo zagreb"],
+  "ferencvaros": ["ferencvarosi tc", "ferencvaros tc"],
+  "olympiacos": ["olympiacos fc", "olympiakos"],
+  "slovan bratislava": ["sk slovan bratislava"],
+  "sturm graz": ["sk sturm graz"],
+  "lecs poznan": ["lech poznan"],
+  "lech poznan": ["kks lech poznan"],
+  "lask": ["lask linz"],
+  "real betis": ["real betis balompie"],
+  "celtic": ["celtic fc"],
+  "liverpool": ["liverpool fc"],
+  "aston villa": ["aston villa fc"],
+  "manchester city": ["man city"],
+  "manchester united": ["man united", "man utd"],
+  "real sociedad": ["real sociedad san sebastian"],
+  "ararat armenia": ["fc ararat armenia"]
+};
+
+function liveClubKey(name) {
+  return String(name || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\b(fc|cf|sc|ac|afc|fk|sk|rc|sv|vfb|nk|gnk|kks|rsc|jk)\b/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function liveClubKeys(name) {
+  const base = liveClubKey(name);
+  const aliases = LIVE_NAME_ALIASES[base] || [];
+  return new Set([base, ...aliases.map(liveClubKey)].filter(Boolean));
+}
+
+function liveSameClub(a, b) {
+  const aKeys = liveClubKeys(a);
+  const bKeys = liveClubKeys(b);
+  for (const key of aKeys) if (bKeys.has(key)) return true;
+  return false;
+}
+
+function espnScoreValue(competitor) {
+  const raw = competitor?.score?.displayValue ?? competitor?.score?.value ?? competitor?.score;
+  const value = Number(raw);
+  return Number.isFinite(value) ? value : null;
+}
+
+function parseEspnEvent(event, comp) {
+  const competition = event?.competitions?.[0];
+  const competitors = competition?.competitors || [];
+  const home = competitors.find(item => item?.homeAway === "home");
+  const away = competitors.find(item => item?.homeAway === "away");
+  if (!home || !away) return null;
+
+  const statusType = competition?.status?.type || event?.status?.type || {};
+  const state = String(statusType.state || "").toLowerCase();
+  const completed = Boolean(statusType.completed) || state === "post";
+  const live = !completed && (state === "in" || state === "live" || state === "inprogress");
+  const homeScore = espnScoreValue(home);
+  const awayScore = espnScoreValue(away);
+
+  return {
+    comp,
+    home: home?.team?.displayName || home?.team?.shortDisplayName || home?.team?.name || "",
+    away: away?.team?.displayName || away?.team?.shortDisplayName || away?.team?.name || "",
+    homeScore,
+    awayScore,
+    status: completed ? "ft" : live ? "live" : "upcoming",
+    date: String(event?.date || competition?.date || "").slice(0, 10)
+  };
+}
+
+function compactEspnDate(iso) {
+  return String(iso || "").replaceAll("-", "");
+}
+
+function firstCompetitionFixtureDate() {
+  const dates = competitionTeams()
+    .flatMap(team => (Array.isArray(team?.fixtures) ? team.fixtures : []))
+    .map(item => String(item?.date || ""))
+    .filter(Boolean)
+    .sort();
+  return dates[0] || currentLocalIsoDate();
+}
+
+function currentLocalIsoDate() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+async function fetchEspnScoreboard(comp, startIso, endIso = startIso) {
+  const endpoint = ESPN_SCOREBOARD[comp];
+  if (!endpoint) return [];
+  const dates = startIso === endIso
+    ? compactEspnDate(startIso)
+    : `${compactEspnDate(startIso)}-${compactEspnDate(endIso)}`;
+  const response = await fetch(`${endpoint}?dates=${encodeURIComponent(dates)}&limit=500`, { cache: "no-store" });
+  if (!response.ok) throw new Error(`ESPN ${comp} HTTP ${response.status}`);
+  const payload = await response.json();
+  return (Array.isArray(payload?.events) ? payload.events : [])
+    .map(event => parseEspnEvent(event, comp))
+    .filter(Boolean);
+}
+
+function homeOrientedScore(item) {
+  const raw = String(item?.score || "").trim();
+  if (!raw) return "";
+  return String(item?.venue || "").toUpperCase() === "A" ? reverseScoreline(raw) : raw;
+}
+
+function recalculateTeamTotals(team) {
+  let goalsFor = 0;
+  let goalsAgainst = 0;
+  let played = 0;
+  (Array.isArray(team?.fixtures) ? team.fixtures : []).forEach(item => {
+    const parts = String(item?.score || "").split(/[-–—]/).map(value => Number(String(value).trim()));
+    if (parts.length !== 2 || parts.some(value => !Number.isFinite(value))) return;
+    goalsFor += parts[0];
+    goalsAgainst += parts[1];
+    if (["played", "finished", "ft"].includes(String(item?.status || "").toLowerCase())) played += 1;
+  });
+  team.goalsFor = goalsFor;
+  team.goalsAgainst = goalsAgainst;
+  team.played = played;
+}
+
+function applyLiveScoreFeed(feedMatches) {
+  if (!Array.isArray(feedMatches) || !feedMatches.length) return false;
+  let changed = false;
+
+  entries.forEach(entry => {
+    [["UCL", entry?.ucl], ["UEL", entry?.uel]].forEach(([comp, team]) => {
+      if (!team?.club || !Array.isArray(team?.fixtures)) return;
+
+      team.fixtures.forEach(item => {
+        if (!item?.date) return;
+        const pairing = fixturePairing(team, item);
+        const match = feedMatches.find(candidate =>
+          candidate.comp === comp &&
+          liveSameClub(candidate.home, pairing.home) &&
+          liveSameClub(candidate.away, pairing.away)
+        );
+        if (!match) return;
+
+        let nextStatus = "";
+        let nextScore = "";
+        if (match.status === "live") nextStatus = "live";
+        if (match.status === "ft") nextStatus = "played";
+
+        if ((match.status === "live" || match.status === "ft") && match.homeScore !== null && match.awayScore !== null) {
+          const teamIsHome = liveSameClub(team.club, match.home);
+          nextScore = teamIsHome
+            ? `${match.homeScore}-${match.awayScore}`
+            : `${match.awayScore}-${match.homeScore}`;
+        }
+
+        if (String(item.status || "") !== nextStatus || String(item.score || "") !== nextScore) {
+          item.status = nextStatus;
+          item.score = nextScore;
+          changed = true;
+        }
+      });
+
+      recalculateTeamTotals(team);
+    });
+  });
+
+  if (changed) generatedFixtureScores.clear();
+  return changed;
+}
+
+function refreshLiveScoreUi() {
+  const uclSchedule = competitionMatchdays.ucl || [];
+  const uelSchedule = competitionMatchdays.uel || [];
+  setMatchday("ucl", uclSchedule);
+  setMatchday("uel", uelSchedule);
+  renderCompactToday();
+  render();
+}
+
+let liveScorePollingStarted = false;
+async function refreshEspnLiveScores({ history = false } = {}) {
+  const today = currentLocalIsoDate();
+  const start = history ? firstCompetitionFixtureDate() : today;
+  try {
+    const results = await Promise.allSettled([
+      fetchEspnScoreboard("UCL", start, today),
+      fetchEspnScoreboard("UEL", start, today)
+    ]);
+    const feedMatches = results.flatMap(result => result.status === "fulfilled" ? result.value : []);
+    results.filter(result => result.status === "rejected").forEach(result => console.warn("Live score feed:", result.reason));
+    if (applyLiveScoreFeed(feedMatches)) refreshLiveScoreUi();
+  } catch (error) {
+    console.warn("Live score refresh failed", error);
+  }
+}
+
+function startLiveScorePolling() {
+  if (liveScorePollingStarted) return;
+  liveScorePollingStarted = true;
+  refreshEspnLiveScores({ history: true });
+  window.setInterval(() => refreshEspnLiveScores(), LIVE_SCORE_POLL_MS);
 }
 
 function crest(team) {
@@ -1659,7 +1910,7 @@ function allCompetitionFixtures() {
           kickoff: fixtureKickoffText(item),
           timestamp: fixtureDateTimeValue(item),
           status,
-          score: String(item?.score || "").trim(),
+          score: homeOrientedScore(item),
           home: pairing.home,
           away: pairing.away,
           homeOwner: ownerForClub(pairing.home),
@@ -1931,8 +2182,10 @@ async function init() {
 
     render();
 
+    // Pull completed + live results on load, then refresh the current day's scores every 30 seconds.
+    startLiveScorePolling();
+
     // Temporary aesthetic preview: progressively fill blank dummy crests.
-    // Real competition data will use the API-Football importer instead.
     hydrateDummyCrests();
   } catch (err) {
     console.error(err);
