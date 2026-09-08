@@ -2034,13 +2034,18 @@ function compactFixtureStatus(match) {
   return { text: match.kickoff || "TBC", className: "upcoming" };
 }
 
-function compactTeamMarkup(club, team, side) {
+function compactTeamMarkup(club, team, side, owner = "") {
   const image = team ? crest(team) : PLACEHOLDER_CREST;
+  const copy = `
+    <span class="compact-team-copy">
+      <span class="compact-team-name">${esc(club)}</span>
+      ${owner ? `<span class="compact-owner">${esc(owner)}</span>` : ""}
+    </span>`;
   return `
     <span class="compact-team ${side}">
-      ${side === "away" ? `<span class="compact-team-name">${esc(club)}</span>` : ""}
+      ${side === "away" ? copy : ""}
       <img src="${esc(image)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
-      ${side === "home" ? `<span class="compact-team-name">${esc(club)}</span>` : ""}
+      ${side === "home" ? copy : ""}
     </span>`;
 }
 
@@ -2076,9 +2081,9 @@ function renderCompactToday() {
         <span class="compact-fixture-status ${status.className}">${esc(status.text)}</span>
         <span class="compact-comp ${match.comp.toLowerCase()}">${match.comp}</span>
         <span class="compact-teams">
-          ${compactTeamMarkup(match.home, match.homeTeam, "home")}
+          ${compactTeamMarkup(match.home, match.homeTeam, "home", match.homeOwner)}
           <span class="compact-v">v</span>
-          ${compactTeamMarkup(match.away, match.awayTeam, "away")}
+          ${compactTeamMarkup(match.away, match.awayTeam, "away", match.awayOwner)}
         </span>
       </a>`;
   }).join("");
