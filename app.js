@@ -2273,7 +2273,7 @@ function compactFixtureDetailsMarkup(match, expanded) {
         </span>
         <span class="compact-mobile-row compact-compare-goals">
           <span class="compact-mobile-side home">${comparisonGoalSide(homeGoals, "home")}</span>
-          <span class="compact-mobile-label">Goals</span>
+          <span class="compact-mobile-label">Goalscorers</span>
           <span class="compact-mobile-side away">${comparisonGoalSide(awayGoals, "away")}</span>
         </span>
         <span class="compact-mobile-row">
