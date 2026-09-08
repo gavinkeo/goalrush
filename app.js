@@ -1,4 +1,4 @@
-const DATA_URL = "competition.json?v=110";
+const DATA_URL = "competition.json?v=119";
 const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 
 const $ = (sel) => document.querySelector(sel);
@@ -9,6 +9,14 @@ const teamModalEl = $("#team-modal");
 const teamModalContentEl = $("#team-modal-content");
 const managerModalEl = $("#manager-modal");
 const managerModalContentEl = $("#manager-modal-content");
+const matchCentreTeaserEl = $("#match-centre-teaser");
+const matchCentreBoardEl = $("#match-centre-board");
+const matchCentreKickerEl = $("#match-centre-kicker");
+const matchCentreTitleEl = $("#match-centre-title");
+const matchCentreSubtitleEl = $("#match-centre-subtitle");
+const headerTodayCountEl = $("#header-today-count");
+const headerLiveCountEl = $("#header-live-count");
+const teaserLiveCountEl = $("#teaser-live-count");
 
 const uclAnthemBtn = $("#ucl-anthem-btn");
 const uelAnthemBtn = $("#uel-anthem-btn");
@@ -614,6 +622,67 @@ function sortedEntries(list) {
   );
 }
 
+function rankingRows(list) {
+  const ranked = sortedEntries(list);
+  const rows = [];
+  let previousTotal = null;
+  let previousRank = null;
+
+  ranked.forEach((entry, index) => {
+    const total = totalScore(entry);
+    const rank =
+      previousTotal !== null && total === previousTotal
+        ? previousRank
+        : index + 1;
+
+    const tied =
+      (index > 0 && totalScore(ranked[index - 1]) === total) ||
+      (index < ranked.length - 1 && totalScore(ranked[index + 1]) === total);
+
+    rows.push({
+      entry,
+      total,
+      rank,
+      rankLabel: tied ? `T${rank}` : String(rank),
+      position: index + 1,
+      prizeValue: 0,
+      prizeLabel: ""
+    });
+
+    previousTotal = total;
+    previousRank = rank;
+  });
+
+  // Dead-heat rule: entrants tied on the same total share equally the
+  // prize money attached to every finishing position occupied by that tie.
+  // Example: tied 3rd/4th => (€120 + €0) / 2 = €60 each.
+  for (let start = 0; start < rows.length; ) {
+    let end = start;
+    while (end + 1 < rows.length && rows[end + 1].total === rows[start].total) {
+      end += 1;
+    }
+
+    const groupSize = end - start + 1;
+    let groupPrize = 0;
+
+    for (let position = start + 1; position <= end + 1; position += 1) {
+      groupPrize += basePrizeValue(position);
+    }
+
+    const share = groupPrize > 0 ? groupPrize / groupSize : 0;
+    const label = share > 0 ? formatPrize(share) : "";
+
+    for (let i = start; i <= end; i += 1) {
+      rows[i].prizeValue = share;
+      rows[i].prizeLabel = label;
+    }
+
+    start = end + 1;
+  }
+
+  return rows;
+}
+
 
 // Pre-season placeholder score calibration.
 // Expected shape for this 16-fixture format:
@@ -994,28 +1063,33 @@ function desktopManagerNameParts(name) {
   return { first, last };
 }
 
-function prizeAmount(rank) {
-  const prizes = { 1: "€400", 2: "€200", 3: "€120" };
-  return prizes[rank] || "";
+function basePrizeValue(position) {
+  const prizes = { 1: 400, 2: 200, 3: 120 };
+  return prizes[position] || 0;
 }
 
-function rankBlock(rank) {
-  const prize = prizeAmount(rank);
+function formatPrize(value) {
+  if (!value) return "";
+  const rounded = Math.round(value * 100) / 100;
+  return `€${Number.isInteger(rounded) ? rounded.toFixed(0) : rounded.toFixed(2)}`;
+}
+
+function rankBlock(rank, rankLabel = String(rank), prizeLabel = "") {
   return `
     <div class="rank-box ${rank <= 3 ? `rank-box-${rank}` : ""}">
-      <span class="rank-number">${rank}</span>
-      ${prize ? `<span class="rank-prize">${prize}</span>` : ""}
+      <span class="rank-number">${esc(rankLabel)}</span>
+      ${prizeLabel ? `<span class="rank-prize">${esc(prizeLabel)}</span>` : ""}
     </div>`;
 }
 
-function desktopRows(entry, rank) {
+function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
   const managerName = desktopManagerNameParts(entry.entrant);
   return `
     <tr class="ucl-row">
       <td class="manager-cell" rowspan="2">
         <div class="manager-wrap">
           <div class="rank-spot">
-            ${rankBlock(rank)}
+            ${rankBlock(rank, rankLabel, prizeLabel)}
           </div>
           <div class="manager-name-wrap">
             <button class="manager-name manager-name-button"
@@ -1078,7 +1152,7 @@ function mobileFixtureGrid(team, comp) {
   }</div>`;
 }
 
-function mobileCard(entry, rank) {
+function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
   const row = (team, comp) => `
     <div class="mobile-comp ${comp.toLowerCase()}">
       <div class="mobile-team">
@@ -1101,7 +1175,7 @@ function mobileCard(entry, rank) {
     <details class="mobile-card" data-entrant="${esc(entry.entrant)}">
       <summary class="mobile-summary">
         <div class="rank-spot">
-          ${rankBlock(rank)}
+          ${rankBlock(rank, rankLabel, prizeLabel)}
         </div>
         <div class="mobile-manager-wrap">
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
@@ -1294,25 +1368,29 @@ function openManagerModal(entrantName) {
   if (!managerModalEl || !managerModalContentEl) return;
 
   const ranked = sortedEntries(entries);
-  const entry = ranked.find(item => String(item.entrant) === String(entrantName));
-  if (!entry) return;
+  const ranking = rankingRows(entries);
+  const rankingRow = ranking.find(item => String(item.entry.entrant) === String(entrantName));
+  if (!rankingRow) return;
 
+  const entry = rankingRow.entry;
   hideFixtureTooltip();
-  const rank = ranked.indexOf(entry) + 1;
+  const rank = rankingRow.rank;
+  const rankLabel = rankingRow.rankLabel;
+  const position = rankingRow.position;
   const total = totalScore(entry);
-  const prize = prizeAmount(rank);
-  const gapText = gapSummary(ranked, rank, total);
+  const prize = rankingRow.prizeLabel;
+  const gapText = gapSummary(ranked, position, total);
 
   managerModalContentEl.innerHTML = `
     <div class="manager-modal-hero">
       <div>
         <span class="manager-modal-eyebrow">Entrant summary</span>
         <h2 id="manager-modal-title">${esc(String(entry.entrant).toUpperCase())}</h2>
-        <p class="manager-modal-subhead">${rank === 1 ? "1st place" : `${rank}${rank === 2 ? "nd" : rank === 3 ? "rd" : "th"} place`} · ${esc(gapText)}</p>
+        <p class="manager-modal-subhead">${rankLabel.startsWith("T") ? `${esc(rankLabel)} · TIED` : (rank === 1 ? "1st place" : `${rank}${rank === 2 ? "nd" : rank === 3 ? "rd" : "th"} place`)} · ${esc(gapText)}</p>
       </div>
       <div class="manager-modal-rank-box">
         <span>RANK</span>
-        <strong>${rank}</strong>
+        <strong>${esc(rankLabel)}</strong>
       </div>
     </div>
 
@@ -1385,14 +1463,14 @@ function wireManagerModal() {
 }
 
 function render() {
-  const ranked = sortedEntries(entries);
+  const ranking = rankingRows(entries);
   const q = searchEl.value.trim().toLowerCase();
 
-  const filtered = ranked.filter(e =>
+  const filtered = ranking.filter(({ entry }) =>
     !q ||
-    e.entrant.toLowerCase().includes(q) ||
-    e.ucl.club.toLowerCase().includes(q) ||
-    e.uel.club.toLowerCase().includes(q)
+    entry.entrant.toLowerCase().includes(q) ||
+    entry.ucl.club.toLowerCase().includes(q) ||
+    entry.uel.club.toLowerCase().includes(q)
   );
 
   if (!filtered.length) {
@@ -1401,8 +1479,17 @@ function render() {
     return;
   }
 
-  bodyEl.innerHTML = filtered.map(e => desktopRows(e, ranked.indexOf(e) + 1)).join("");
-  mobileEl.innerHTML = filtered.map(e => mobileCard(e, ranked.indexOf(e) + 1)).join("");
+  bodyEl.innerHTML = filtered
+    .map(({ entry, rank, rankLabel, prizeLabel }) =>
+      desktopRows(entry, rank, rankLabel, prizeLabel)
+    )
+    .join("");
+
+  mobileEl.innerHTML = filtered
+    .map(({ entry, rank, rankLabel, prizeLabel }) =>
+      mobileCard(entry, rank, rankLabel, prizeLabel)
+    )
+    .join("");
 }
 
 function parseDate(s) {
@@ -1410,24 +1497,86 @@ function parseDate(s) {
   return new Date(y, m - 1, d);
 }
 
-function dateOnly() {
-  const n = new Date();
-  return new Date(n.getFullYear(), n.getMonth(), n.getDate());
+function fixtureKickoffDate(fixture) {
+  if (!fixture?.date) return null;
+
+  const [y, m, d] = String(fixture.date).split("-").map(Number);
+  if (![y, m, d].every(Number.isFinite)) return null;
+
+  const kickoffMatch = String(fixture.kickoff || "00:00").match(/^(\d{1,2}):(\d{2})/);
+  const hour = kickoffMatch ? Number(kickoffMatch[1]) : 0;
+  const minute = kickoffMatch ? Number(kickoffMatch[2]) : 0;
+
+  return new Date(y, m - 1, d, hour, minute, 0, 0);
 }
 
-function relevantMatchday(schedule) {
-  const today = dateOnly();
+function fixturesInsideMatchday(kind, md) {
+  if (!md?.start || !md?.end) return [];
+
+  return entries.flatMap(entry => {
+    const fixtures = entry?.[kind]?.fixtures;
+    if (!Array.isArray(fixtures)) return [];
+
+    return fixtures.filter(fixture =>
+      fixture?.date &&
+      fixture.date >= md.start &&
+      fixture.date <= md.end
+    );
+  });
+}
+
+function matchdayTiming(kind, md) {
+  const fixtures = fixturesInsideMatchday(kind, md);
+  const kickoffTimes = fixtures
+    .map(fixtureKickoffDate)
+    .filter(Boolean)
+    .map(date => date.getTime());
+
+  if (!kickoffTimes.length) {
+    const fallbackStart = parseDate(md.start);
+    const fallbackEnd = parseDate(md.end);
+    fallbackEnd.setHours(23, 59, 59, 999);
+
+    return {
+      firstKickoff: fallbackStart,
+      finalWindowEnd: fallbackEnd,
+      fixtures
+    };
+  }
+
+  const firstKickoff = new Date(Math.min(...kickoffTimes));
+  const lastKickoff = new Date(Math.max(...kickoffTimes));
+
+  // Covers normal match time plus stoppage / a small buffer.
+  const finalWindowEnd = new Date(lastKickoff.getTime() + (2 * 60 + 15) * 60000);
+
+  return { firstKickoff, finalWindowEnd, fixtures };
+}
+
+function relevantMatchday(kind, schedule) {
+  const now = Date.now();
 
   for (const md of schedule || []) {
-    const start = parseDate(md.start);
-    const end = parseDate(md.end);
+    const timing = matchdayTiming(kind, md);
+    const explicitLive = timing.fixtures.some(
+      fixture => String(fixture?.status || "").toLowerCase() === "live"
+    );
 
-    if (today >= start && today <= end) return { md, state: "LIVE" };
-    if (today < start) return { md, state: "NEXT" };
+    if (now < timing.firstKickoff.getTime()) {
+      return { md, state: "NEXT", timing };
+    }
+
+    if (explicitLive || now <= timing.finalWindowEnd.getTime()) {
+      return { md, state: "LIVE", timing };
+    }
   }
 
   return schedule?.length
-    ? { md: schedule[schedule.length - 1], state: "COMPLETE" }
+    ? {
+        md: schedule[schedule.length - 1],
+        state: "COMPLETE",
+        timing: matchdayTiming(kind, schedule[schedule.length - 1])
+      }
     : null;
 }
 
@@ -1479,14 +1628,12 @@ function populateCombinedMatchdayHeaders(matchdays) {
   }
 }
 
-function countdownToMatchday(md) {
-  const [y, m, d] = md.start.split("-").map(Number);
-  const start = new Date(y, m - 1, d, 0, 0, 0, 0);
-  const diff = start.getTime() - Date.now();
+function countdownToKickoff(kickoffDate) {
+  const diff = kickoffDate.getTime() - Date.now();
 
   if (diff <= 0) return "LIVE";
 
-  const totalMinutes = Math.floor(diff / 60000);
+  const totalMinutes = Math.max(0, Math.floor(diff / 60000));
   const days = Math.floor(totalMinutes / 1440);
   const hours = Math.floor((totalMinutes % 1440) / 60);
   const minutes = totalMinutes % 60;
@@ -1497,7 +1644,7 @@ function countdownToMatchday(md) {
 }
 
 function setMatchday(kind, schedule) {
-  const result = relevantMatchday(schedule);
+  const result = relevantMatchday(kind, schedule);
   currentMatchdayState[kind] = result;
 
   if (!result) return;
@@ -1506,17 +1653,246 @@ function setMatchday(kind, schedule) {
   const stateEl = $(`#${kind}-state`);
 
   stateEl.textContent =
-    result.state === "NEXT" ? countdownToMatchday(result.md) : result.state;
+    result.state === "NEXT"
+      ? countdownToKickoff(result.timing.firstKickoff)
+      : result.state;
 
   stateEl.setAttribute(
     "aria-label",
     result.state === "NEXT"
-      ? `Countdown to next ${kind.toUpperCase()} matchday`
-      : result.state
+      ? `Countdown to first kickoff of ${kind.toUpperCase()} matchday ${result.md.md}`
+      : result.state === "LIVE"
+        ? `${kind.toUpperCase()} matchday ${result.md.md} is live`
+        : result.state
   );
 
   $(`#${kind}-date`).textContent = formatMD(result.md);
   chip.classList.toggle("is-live", result.state === "LIVE");
+}
+
+
+function ownerForClub(club) {
+  const wanted = clubKey(club);
+  if (!wanted) return "";
+  const entry = entries.find(entry => clubKey(entry?.ucl?.club) === wanted || clubKey(entry?.uel?.club) === wanted);
+  return entry?.entrant || "";
+}
+
+function fixtureStatus(item) {
+  const raw = String(item?.status || "").toLowerCase();
+  if (raw === "live") return "live";
+  if (raw === "played" || raw === "finished" || raw === "ft") return "ft";
+  if (String(item?.score || "").trim()) return "ft";
+  return "upcoming";
+}
+
+function fixtureDateTimeValue(item) {
+  const value = fixtureKickoffDate(item);
+  return value ? value.getTime() : Number.POSITIVE_INFINITY;
+}
+
+function fixturePairing(team, item) {
+  const opponentName = item?.opponent || opponentFullName(item?.code);
+  const venue = String(item?.venue || "").toUpperCase();
+  const home = venue === "A" ? opponentName : team?.club || "";
+  const away = venue === "A" ? team?.club || "" : opponentName;
+  return { home, away, venue };
+}
+
+function allCompetitionFixtures() {
+  const map = new Map();
+
+  entries.forEach(entry => {
+    [["UCL", entry?.ucl], ["UEL", entry?.uel]].forEach(([comp, team]) => {
+      fixtureValues(team).forEach((item, index) => {
+        if (!item?.date || !(item?.opponent || item?.code)) return;
+
+        const pairing = fixturePairing(team, item);
+        const key = [comp, index + 1, item.date, fixtureKickoffText(item), clubKey(pairing.home), clubKey(pairing.away)].join("|");
+        const status = fixtureStatus(item);
+        const existing = map.get(key);
+
+        const base = {
+          comp,
+          md: index + 1,
+          date: item.date,
+          kickoff: fixtureKickoffText(item),
+          timestamp: fixtureDateTimeValue(item),
+          status,
+          score: String(item?.score || "").trim(),
+          home: pairing.home,
+          away: pairing.away,
+          homeOwner: ownerForClub(pairing.home),
+          awayOwner: ownerForClub(pairing.away),
+          homeTeam: competitionTeamByClub(pairing.home),
+          awayTeam: competitionTeamByClub(pairing.away),
+          stadium: item?.stadium || ""
+        };
+
+        if (!existing) {
+          map.set(key, base);
+          return;
+        }
+
+        if (!existing.score && base.score) existing.score = base.score;
+        if (existing.status !== "live" && base.status === "live") existing.status = "live";
+        if (existing.status === "upcoming" && base.status === "ft") existing.status = "ft";
+        if (!existing.stadium && base.stadium) existing.stadium = base.stadium;
+        if (!existing.homeTeam && base.homeTeam) existing.homeTeam = base.homeTeam;
+        if (!existing.awayTeam && base.awayTeam) existing.awayTeam = base.awayTeam;
+        if (!existing.homeOwner && base.homeOwner) existing.homeOwner = base.homeOwner;
+        if (!existing.awayOwner && base.awayOwner) existing.awayOwner = base.awayOwner;
+      });
+    });
+  });
+
+  return [...map.values()].sort((a, b) =>
+    a.timestamp - b.timestamp ||
+    a.comp.localeCompare(b.comp) ||
+    a.home.localeCompare(b.home)
+  );
+}
+
+function fixtureDateHeading(isoDate) {
+  if (!isoDate) return "Date TBC";
+  const date = parseDate(isoDate);
+  return date.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" }).toUpperCase();
+}
+
+function teaserStatusLabel(match) {
+  if (match.status === "live") return { text: "LIVE", className: "live" };
+  if (match.status === "ft") return { text: match.score ? match.score.replaceAll("-", "–") : "FT", className: "ft" };
+  return { text: match.kickoff || "TBC", className: "upcoming" };
+}
+
+function teaserTeamMarkup(club, team, align = "home") {
+  const image = team ? crest(team) : PLACEHOLDER_CREST;
+  return `
+    <span class="teaser-team ${align}">
+      ${align === "away" ? `<span class="teaser-team-name">${esc(club)}</span>` : ""}
+      <img src="${esc(image)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      ${align === "home" ? `<span class="teaser-team-name">${esc(club)}</span>` : ""}
+    </span>`;
+}
+
+function fixtureClusterMarkup(comp, fixtures, mode = "today") {
+  const compName = comp === "UCL" ? "Champions League" : "Europa League";
+  const md = fixtures[0]?.md || 1;
+  const countText = fixtures.length === 1 ? "1 fixture" : `${fixtures.length} fixtures`;
+  const headText = mode === "today" ? fixtureDateHeading(fixtures[0]?.date) : `MD${md} · ${fixtureDateHeading(fixtures[0]?.date)}`;
+  const visible = fixtures.slice(0, 4);
+  const more = fixtures.length - visible.length;
+
+  return `
+    <article class="fixture-cluster ${comp.toLowerCase()}">
+      <div class="fixture-cluster-head">
+        <div class="fixture-cluster-label">
+          <span class="fixture-cluster-pill">${comp}</span>
+          <div class="fixture-cluster-meta">
+            <strong>${compName}</strong>
+            <span>${esc(headText)}</span>
+          </div>
+        </div>
+        <span class="fixture-cluster-count">${esc(countText)}</span>
+      </div>
+      <div class="fixture-cluster-list">
+        ${visible.map(match => {
+          const status = teaserStatusLabel(match);
+          const ownerHome = match.homeOwner ? esc(match.homeOwner) : "Unassigned";
+          const ownerAway = match.awayOwner ? esc(match.awayOwner) : "Unassigned";
+          return `
+            <div class="teaser-fixture">
+              <div class="teaser-fixture-time"><span class="teaser-status ${status.className}">${esc(status.text)}</span></div>
+              <div class="teaser-fixture-body">
+                <div class="teaser-teams">
+                  ${teaserTeamMarkup(match.home, match.homeTeam, "home")}
+                  <span class="teaser-score-sep">v</span>
+                  ${teaserTeamMarkup(match.away, match.awayTeam, "away")}
+                </div>
+                <div class="teaser-owners">
+                  <span class="teaser-owner">${ownerHome}</span>
+                  <span class="teaser-owner away">${ownerAway}</span>
+                </div>
+              </div>
+              <a class="match-centre-mini-link" href="matches.html?comp=${comp}&md=${match.md}">MD${match.md}</a>
+            </div>`;
+        }).join("")}
+        ${more > 0 ? `<div class="fixture-cluster-empty">+${more} more in the full match centre.</div>` : ""}
+      </div>
+    </article>`;
+}
+
+function updateMatchCentreNavBadges(fixtures = allCompetitionFixtures()) {
+  const today = new Date();
+  const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+  const todayCount = fixtures.filter(match => match.status === "live" || match.date === todayIso).length;
+  const liveCount = fixtures.filter(match => match.status === "live").length;
+
+  if (headerTodayCountEl) headerTodayCountEl.textContent = `${todayCount} TODAY`;
+
+  [headerLiveCountEl, teaserLiveCountEl].forEach(el => {
+    if (!el) return;
+    el.textContent = `${liveCount} LIVE`;
+    el.classList.toggle("is-live", liveCount > 0);
+  });
+}
+
+function renderMatchCentreTeaser() {
+  if (!matchCentreTeaserEl || !matchCentreBoardEl) return;
+
+  const fixtures = allCompetitionFixtures();
+  updateMatchCentreNavBadges(fixtures);
+  const now = Date.now();
+  const today = new Date();
+  const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+
+  const liveOrToday = fixtures.filter(match => match.status === "live" || match.date === todayIso);
+  const teaserMode = liveOrToday.length ? "today" : "next";
+
+  const title = teaserMode === "today" ? "Today's live and upcoming fixtures" : "Next scheduled fixtures";
+  const subtitle = teaserMode === "today"
+    ? "Quick access to today’s schedule across both competitions. Open the full match centre for every fixture and live status update."
+    : "No fixtures are scheduled today. The next games below show the upcoming matchday in each competition.";
+
+  if (matchCentreKickerEl) matchCentreKickerEl.textContent = teaserMode === "today" ? "TODAY'S GAMES" : "NEXT GAMES";
+  if (matchCentreTitleEl) matchCentreTitleEl.textContent = title;
+  if (matchCentreSubtitleEl) matchCentreSubtitleEl.textContent = subtitle;
+
+  const sections = ["UCL", "UEL"].map(comp => {
+    const compFixtures = fixtures.filter(match => match.comp === comp);
+
+    let relevant = [];
+    if (teaserMode === "today") {
+      relevant = compFixtures.filter(match => match.status === "live" || match.date === todayIso);
+    } else {
+      relevant = compFixtures.filter(match => Number.isFinite(match.timestamp) && match.timestamp >= now);
+      if (relevant.length) {
+        const md = relevant[0].md;
+        relevant = relevant.filter(match => match.md === md);
+      }
+    }
+
+    if (!relevant.length) {
+      return `
+        <article class="fixture-cluster ${comp.toLowerCase()}">
+          <div class="fixture-cluster-head">
+            <div class="fixture-cluster-label">
+              <span class="fixture-cluster-pill">${comp}</span>
+              <div class="fixture-cluster-meta">
+                <strong>${comp === "UCL" ? "Champions League" : "Europa League"}</strong>
+                <span>No fixtures available</span>
+              </div>
+            </div>
+          </div>
+          <div class="fixture-cluster-empty">No scheduled fixtures found for this competition.</div>
+        </article>`;
+    }
+
+    return fixtureClusterMarkup(comp, relevant, teaserMode);
+  });
+
+  matchCentreBoardEl.innerHTML = sections.join("");
+  matchCentreTeaserEl.hidden = false;
 }
 
 async function init() {
@@ -1548,10 +1924,12 @@ async function init() {
     populateCombinedMatchdayHeaders(data.matchdays);
     setMatchday("ucl", uclSchedule);
     setMatchday("uel", uelSchedule);
+    renderMatchCentreTeaser();
 
     window.setInterval(() => {
       setMatchday("ucl", uclSchedule);
       setMatchday("uel", uelSchedule);
+      renderMatchCentreTeaser();
     }, 60000);
 
     render();
