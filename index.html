@@ -539,94 +539,72 @@
     }
   </style>
 
-  <style id="v127-one-page-anthem-discovery">
-    /* Match Centre has moved into the one-page experience. The second header tool is now a discoverability hint for the anthem logos. */
-    .anthem-discovery{
-      width:100%;
-      min-width:0;
-      min-height:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:7px;
-      padding:7px 9px;
-      border:1px solid rgba(91,137,207,.24);
-      border-radius:999px;
-      background:linear-gradient(180deg,rgba(10,26,53,.90),rgba(7,20,43,.94));
-      color:#a9bad3;
-      font-size:.61rem;
-      font-weight:900;
-      letter-spacing:.075em;
-      line-height:1;
-      text-align:center;
-      text-transform:uppercase;
-      white-space:nowrap;
-      box-shadow:none;
+  <style id="v128-easter-egg-and-mobile-fixture-fix">
+    /* Keep the anthem controls as an Easter egg: no hint text or music-note badge. */
+    .header-tools{
+      grid-template-columns:minmax(0,1fr);
     }
-    .anthem-discovery-icon{
-      color:#60dfff;
-      font-size:.88rem;
-      line-height:1;
-      text-shadow:0 0 8px rgba(65,211,255,.32);
-    }
-
-    /* Make the previously-hidden audio action visually obvious without turning the header into another navigation bar. */
     .anthem-btn{
       position:relative !important;
       overflow:visible !important;
-      animation:v127AnthemNudge 1.45s ease-in-out 3;
+      animation:none !important;
     }
-    .anthem-btn::after{
-      content:"♪";
-      position:absolute;
-      right:-3px;
-      bottom:-3px;
-      z-index:4;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      width:17px;
-      height:17px;
-      border-radius:50%;
-      border:1px solid rgba(128,180,235,.32);
-      background:#0a1932;
-      color:#eaf5ff;
-      font-size:.58rem;
-      font-weight:950;
-      line-height:1;
-      box-shadow:0 2px 8px rgba(0,0,0,.32),0 0 9px rgba(77,201,255,.10);
-      pointer-events:none;
+    .anthem-btn::after{content:none !important;display:none !important;}
+
+    /* A restrained halo is the only visual clue that the competition emblems are interactive. */
+    .anthem-ucl{
+      box-shadow:
+        0 0 0 1px rgba(83,216,255,.12),
+        0 0 14px rgba(65,207,255,.20),
+        0 0 28px rgba(42,154,255,.09) !important;
+      transition:box-shadow .18s ease,transform .18s ease,filter .18s ease;
     }
-    .anthem-uel::after{
-      color:#ffd8a4;
-      border-color:rgba(245,179,101,.36);
-      box-shadow:0 2px 8px rgba(0,0,0,.32),0 0 9px rgba(245,179,101,.10);
+    .anthem-uel{
+      box-shadow:
+        0 0 0 1px rgba(247,181,98,.12),
+        0 0 14px rgba(247,181,98,.18),
+        0 0 28px rgba(225,125,50,.08) !important;
+      transition:box-shadow .18s ease,transform .18s ease,filter .18s ease;
     }
-    .anthem-btn:hover::after,.anthem-btn:focus-visible::after,.anthem-btn.is-playing::after{
-      transform:scale(1.08);
+    .anthem-ucl:hover,.anthem-ucl:focus-visible,.anthem-ucl.is-playing{
+      box-shadow:
+        0 0 0 1px rgba(104,226,255,.28),
+        0 0 18px rgba(65,207,255,.34),
+        0 0 34px rgba(42,154,255,.15) !important;
+      filter:brightness(1.07);
     }
-    @keyframes v127AnthemNudge{
-      0%,100%{filter:none}
-      50%{filter:drop-shadow(0 0 7px rgba(102,207,255,.42))}
+    .anthem-uel:hover,.anthem-uel:focus-visible,.anthem-uel.is-playing{
+      box-shadow:
+        0 0 0 1px rgba(255,198,126,.27),
+        0 0 18px rgba(247,181,98,.31),
+        0 0 34px rgba(225,125,50,.14) !important;
+      filter:brightness(1.07);
     }
-    .anthem-uel{animation-name:v127AnthemNudgeUel}
-    @keyframes v127AnthemNudgeUel{
-      0%,100%{filter:none}
-      50%{filter:drop-shadow(0 0 7px rgba(247,181,98,.38))}
+
+    /* Buttons inherit a white user-agent background on some mobile browsers unless explicitly reset. */
+    .compact-fixture-toggle{
+      background:transparent !important;
+      color:inherit !important;
+      border-left:0;
+      border-right:0;
+      border-bottom:0;
+      -webkit-tap-highlight-color:transparent;
     }
+    .compact-fixture-toggle:focus-visible{
+      outline:1px solid rgba(91,151,228,.45);
+      outline-offset:-2px;
+    }
+
     @media(max-width:700px){
-      .anthem-discovery{
-        min-height:35px;
-        padding:7px 5px;
-        gap:4px;
-        font-size:.52rem;
-        letter-spacing:.045em;
+      /* With Match Centre and the anthem hint gone, let search reclaim the row rather than leave a dead half. */
+      .dashboard-header .header-tools{grid-template-columns:1fr;}
+      .header-tools .top-search{width:100% !important;}
+      .compact-fixture-toggle{
+        background:rgba(7,19,42,.20) !important;
       }
-      .anthem-discovery-icon{font-size:.76rem}
-      .anthem-btn::after{width:15px;height:15px;font-size:.52rem;right:-2px;bottom:-2px}
-    }
-    @media(prefers-reduced-motion:reduce){
-      .anthem-btn{animation:none !important}
+      .compact-fixture-toggle.is-expanded{
+        background:rgba(20,43,80,.34) !important;
+      }
     }
   </style>
 
@@ -638,15 +616,11 @@
     <div class="title-top-row">
       <h1 class="main-title"><span class="main-title-text">EURO GOAL RUSH 26/27</span></h1>
 
-      <div class="header-tools" aria-label="Search and anthem controls">
+      <div class="header-tools" aria-label="Search">
         <label class="search top-search desktop-top-search">
           <span>⌕</span>
           <input id="search" type="search" placeholder="Search manager or club" autocomplete="off">
         </label>
-        <div class="anthem-discovery" aria-live="polite">
-          <span class="anthem-discovery-icon" aria-hidden="true">♪</span>
-          <span id="anthem-hint-text">TAP LOGOS FOR ANTHEMS</span>
-        </div>
       </div>
 
       <div class="matchday-strip">
@@ -782,6 +756,6 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <script src="app.js?v=127" defer></script>
+  <script src="app.js?v=128" defer></script>
 </body>
 </html>
