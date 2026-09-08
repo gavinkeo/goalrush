@@ -731,13 +731,16 @@ const ESPN_SCOREBOARD = {
   UEL: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard"
 };
 const ESPN_SUMMARY = {
+  // Use the same site.api host that is already successfully serving the live scoreboard.
+  // v137 tried site.web.api first; that endpoint can return a header-only payload, which
+  // looked superficially valid and prevented us reaching the richer summary response.
   UCL: [
-    "https://site.web.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary",
-    "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary"
+    "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary",
+    "https://site.web.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary"
   ],
   UEL: [
-    "https://site.web.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/summary",
-    "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/summary"
+    "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/summary",
+    "https://site.web.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/summary"
   ]
 };
 const ESPN_CDN_GAME = {
@@ -1051,8 +1054,6 @@ function enrichEspnMatchFromSummary(match, payload) {
   const awayShots = away ? espnSummaryStatNumber(away, ["totalShots", "shotAttempts", "shotsTotal", "shots"]) : null;
   const homeShotsOnTarget = home ? espnSummaryStatNumber(home, ["shotsOnTarget", "shotsOnGoal", "shotsOnTargetTotal"]) : null;
   const awayShotsOnTarget = away ? espnSummaryStatNumber(away, ["shotsOnTarget", "shotsOnGoal", "shotsOnTargetTotal"]) : null;
-  const homeXg = home ? espnSummaryStatNumber(home, ["expectedGoals", "expectedGoalsTotal", "expectedGoal", "xG", "xg"]) : null;
-  const awayXg = away ? espnSummaryStatNumber(away, ["expectedGoals", "expectedGoalsTotal", "expectedGoal", "xG", "xg"]) : null;
   const summaryCompetition = payload?.header?.competitions?.[0];
   const summaryClock = espnClockValue(summaryCompetition?.status, payload?.header?.status);
   const summaryPhase = espnStatusPhase(summaryCompetition?.status, payload?.header?.status);
@@ -1066,9 +1067,7 @@ function enrichEspnMatchFromSummary(match, payload) {
     homeShots: Number.isFinite(homeShots) ? homeShots : match.homeShots,
     awayShots: Number.isFinite(awayShots) ? awayShots : match.awayShots,
     homeShotsOnTarget: Number.isFinite(homeShotsOnTarget) ? homeShotsOnTarget : match.homeShotsOnTarget,
-    awayShotsOnTarget: Number.isFinite(awayShotsOnTarget) ? awayShotsOnTarget : match.awayShotsOnTarget,
-    homeXg: Number.isFinite(homeXg) ? homeXg : match.homeXg,
-    awayXg: Number.isFinite(awayXg) ? awayXg : match.awayXg
+    awayShotsOnTarget: Number.isFinite(awayShotsOnTarget) ? awayShotsOnTarget : match.awayShotsOnTarget
   };
 }
 
@@ -1101,8 +1100,13 @@ async function fetchEspnSummaryCached(comp, match) {
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const raw = await response.json();
       const payload = normalizeEspnDetailPayload(raw);
-      if (!payload || (!payload.boxscore && !payload.keyEvents && !payload.header)) {
-        throw new Error("detail payload missing expected soccer data");
+      const hasBoxscoreTeams = Array.isArray(payload?.boxscore?.teams) && payload.boxscore.teams.length >= 2;
+      const hasKeyEvents = Array.isArray(payload?.keyEvents) && payload.keyEvents.length > 0;
+      const hasScoringPlays = Array.isArray(payload?.scoringPlays) && payload.scoringPlays.length > 0;
+      // Do NOT accept/cache a header-only response. That was the v137 bug: the first
+      // endpoint returned enough header data to pass our old test, but no scorers/stats.
+      if (!payload || (!hasBoxscoreTeams && !hasKeyEvents && !hasScoringPlays)) {
+        throw new Error("detail payload has no boxscore/key events");
       }
       espnSummaryCache.set(key, { at: Date.now(), payload });
       return payload;
@@ -2394,15 +2398,12 @@ function compactFixtureDetailsMarkup(match, expanded) {
     return `<span class="compact-mobile-goal-list ${side}">${sideGoals.map(goal => `<span class="compact-mobile-goal">${esc(compactGoalText(goal))}</span>`).join("")}</span>`;
   };
   const statValue = value => Number.isFinite(value) ? String(value) : "—";
-  const xgValue = value => Number.isFinite(value) ? Number(value).toFixed(2) : "—";
   const anyFinite = (...values) => values.some(Number.isFinite);
 
   const homeAttempts = statValue(live.homeShots);
   const awayAttempts = statValue(live.awayShots);
   const homeOnTarget = statValue(live.homeShotsOnTarget);
   const awayOnTarget = statValue(live.awayShotsOnTarget);
-  const homeXg = xgValue(live.homeXg);
-  const awayXg = xgValue(live.awayXg);
 
   // Only render live-data rows when ESPN has actually supplied the data. This keeps
   // the expanded card clean instead of filling it with dead dashes if a provider
@@ -2425,12 +2426,6 @@ function compactFixtureDetailsMarkup(match, expanded) {
           <span class="compact-mobile-label">On target</span>
           <span class="compact-mobile-side away compact-mobile-stat">${esc(awayOnTarget)}</span>
         </span>` : "";
-  const xgRow = anyFinite(live.homeXg, live.awayXg) ? `
-        <span class="compact-mobile-row compact-compare-xg">
-          <span class="compact-mobile-side home compact-mobile-stat compact-xg-value">${esc(homeXg)}</span>
-          <span class="compact-mobile-label">xG</span>
-          <span class="compact-mobile-side away compact-mobile-stat compact-xg-value">${esc(awayXg)}</span>
-        </span>` : "";
   const note = unresolvedGoals.length
     ? `Feed update: ${unresolvedGoals.map(goal => esc(compactGoalText(goal))).join(" · ")}`
     : "";
@@ -2446,7 +2441,6 @@ function compactFixtureDetailsMarkup(match, expanded) {
         ${goalRow}
         ${attemptsRow}
         ${targetRow}
-        ${xgRow}
         ${note ? `<span class="compact-mobile-note">${note}</span>` : ""}
       </span>
     </span>`;
