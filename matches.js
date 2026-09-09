@@ -43,6 +43,7 @@ const ESPN_SCOREBOARD = {
 };
 const LIVE_NAME_ALIASES = {
   "inter milan": ["internazionale", "inter", "fc internazionale milano"],
+  "feyenoord": ["feyenoord rotterdam"],
   "atletico madrid": ["atletico de madrid"],
   "bayern munich": ["bayern munchen", "fc bayern munich", "fc bayern munchen"],
   "paris saint germain": ["psg", "paris sg"],
