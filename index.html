@@ -1018,6 +1018,228 @@
     }
   </style>
 
+
+  <style id="v147-mobile-leaderboard-today-theme">
+    /* Mobile only: treat the leaderboard like Today's Games — one compact panel,
+       faint separators, dense rows. Desktop standings are deliberately untouched. */
+    @media(max-width:700px){
+      #mobile-standings.mobile-standings{
+        display:block !important;
+        margin:10px 0 0 !important;
+        padding:0 !important;
+        border:1px solid rgba(68,120,202,.23) !important;
+        border-radius:16px !important;
+        overflow:hidden !important;
+        background:
+          radial-gradient(circle at 8% 8%,rgba(37,114,255,.055),transparent 28%),
+          linear-gradient(135deg,rgba(7,19,43,.94),rgba(5,16,37,.96)) !important;
+        box-shadow:0 10px 28px rgba(2,8,22,.20), inset 0 0 0 1px rgba(255,255,255,.012) !important;
+        gap:0 !important;
+      }
+
+      .mobile-leaderboard-head,
+      #mobile-standings .mobile-board-summary{
+        grid-template-columns:48px minmax(82px,1fr) 42px 12px 42px 42px;
+        column-gap:4px;
+      }
+
+      .mobile-leaderboard-head{
+        display:grid;
+        align-items:center;
+        padding:8px 9px 7px;
+        border-bottom:1px solid rgba(255,255,255,.055);
+        color:#7088aa;
+        font-size:.46rem;
+        font-weight:950;
+        letter-spacing:.105em;
+        line-height:1;
+        text-transform:uppercase;
+      }
+      .mobile-leaderboard-head span{min-width:0;text-align:center;}
+      .mobile-leaderboard-head span:nth-child(2){text-align:left;}
+      .mobile-leaderboard-head .ucl{color:#55d9ff;}
+      .mobile-leaderboard-head .uel{color:#f3b46d;}
+
+      #mobile-standings .mobile-card{
+        display:block !important;
+        width:100% !important;
+        margin:0 !important;
+        padding:0 !important;
+        border:0 !important;
+        border-radius:0 !important;
+        background:transparent !important;
+        box-shadow:none !important;
+        overflow:hidden !important;
+      }
+      #mobile-standings .mobile-card + .mobile-card{
+        border-top:1px solid rgba(255,255,255,.052) !important;
+      }
+      #mobile-standings .mobile-card[open]{
+        background:rgba(14,31,61,.20) !important;
+      }
+
+      #mobile-standings .mobile-board-summary{
+        display:grid !important;
+        align-items:center !important;
+        width:100% !important;
+        min-height:54px !important;
+        margin:0 !important;
+        padding:7px 9px !important;
+        border:0 !important;
+        border-radius:0 !important;
+        background:transparent !important;
+        box-shadow:none !important;
+        list-style:none !important;
+        cursor:pointer;
+      }
+      #mobile-standings .mobile-board-summary::-webkit-details-marker{display:none !important;}
+      #mobile-standings .mobile-board-summary::marker{content:"";}
+      #mobile-standings .mobile-board-summary::after{display:none !important;content:none !important;}
+
+      #mobile-standings .mobile-board-rank,
+      #mobile-standings .mobile-board-name,
+      #mobile-standings .mobile-board-team,
+      #mobile-standings .mobile-board-plus,
+      #mobile-standings .mobile-board-total{
+        min-width:0;
+      }
+
+      #mobile-standings .mobile-board-rank{
+        display:flex !important;
+        align-items:center !important;
+        justify-content:flex-start !important;
+        margin:0 !important;
+        padding:0 !important;
+      }
+      #mobile-standings .mobile-board-rank .rank-box{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:center !important;
+        width:42px !important;
+        min-width:42px !important;
+        height:38px !important;
+        min-height:38px !important;
+        margin:0 !important;
+        padding:0 !important;
+        border:1px solid rgba(112,137,177,.22) !important;
+        border-radius:10px !important;
+        background:rgba(255,255,255,.025) !important;
+        box-shadow:none !important;
+      }
+      #mobile-standings .mobile-board-rank .rank-box-1,
+      #mobile-standings .mobile-board-rank .rank-box-2,
+      #mobile-standings .mobile-board-rank .rank-box-3{
+        border-color:rgba(205,174,94,.36) !important;
+        background:linear-gradient(145deg,rgba(137,107,36,.10),rgba(255,255,255,.018)) !important;
+      }
+      #mobile-standings .mobile-board-rank .rank-number{
+        font-size:.72rem !important;
+        font-weight:950 !important;
+        line-height:1 !important;
+      }
+      #mobile-standings .mobile-board-rank .rank-prize{
+        margin-top:3px !important;
+        font-size:.43rem !important;
+        font-weight:900 !important;
+        line-height:1 !important;
+      }
+
+      #mobile-standings .mobile-board-name{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        gap:0;
+        overflow:hidden;
+        color:#f1f5fc;
+        font-size:.66rem;
+        font-weight:900;
+        line-height:1.02;
+        letter-spacing:.015em;
+        text-transform:uppercase;
+      }
+      #mobile-standings .mobile-board-name span{
+        display:block;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+
+      #mobile-standings .mobile-board-team{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:3px;
+        overflow:hidden;
+      }
+      #mobile-standings .mobile-board-crest{
+        display:block !important;
+        width:20px !important;
+        height:20px !important;
+        min-width:20px !important;
+        max-width:20px !important;
+        object-fit:contain !important;
+        border-radius:0 !important;
+      }
+      #mobile-standings .mobile-board-goals{
+        color:#f4f7fd;
+        font-size:.71rem;
+        font-weight:950;
+        font-variant-numeric:tabular-nums;
+        line-height:1;
+      }
+      #mobile-standings .mobile-board-team.ucl .mobile-board-goals{color:#dff8ff;}
+      #mobile-standings .mobile-board-team.uel .mobile-board-goals{color:#fff0df;}
+      #mobile-standings .mobile-board-plus{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#566d8f;
+        font-size:.64rem;
+        font-weight:950;
+      }
+      #mobile-standings .mobile-board-total{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#ffffff;
+        font-size:.88rem;
+        font-weight:950;
+        font-variant-numeric:tabular-nums;
+        line-height:1;
+      }
+
+      #mobile-standings .mobile-board-details{
+        margin:0 !important;
+        padding:7px 9px 9px !important;
+        border-top:1px solid rgba(255,255,255,.045) !important;
+        background:rgba(4,13,31,.28) !important;
+      }
+
+      /* Old card-layout pieces are not part of the compact summary any more. */
+      #mobile-standings .mobile-manager-wrap,
+      #mobile-standings .mobile-mini-teams,
+      #mobile-standings .mobile-combined,
+      #mobile-standings .mobile-expand{
+        display:none !important;
+      }
+    }
+
+    @media(max-width:380px){
+      .mobile-leaderboard-head,
+      #mobile-standings .mobile-board-summary{
+        grid-template-columns:44px minmax(74px,1fr) 39px 10px 39px 36px;
+        column-gap:3px;
+      }
+      .mobile-leaderboard-head{padding-left:7px;padding-right:7px;font-size:.43rem;}
+      #mobile-standings .mobile-board-summary{padding-left:7px !important;padding-right:7px !important;}
+      #mobile-standings .mobile-board-rank .rank-box{width:39px !important;min-width:39px !important;}
+      #mobile-standings .mobile-board-name{font-size:.62rem;}
+      #mobile-standings .mobile-board-crest{width:18px !important;height:18px !important;min-width:18px !important;max-width:18px !important;}
+      #mobile-standings .mobile-board-goals{font-size:.68rem;}
+      #mobile-standings .mobile-board-total{font-size:.83rem;}
+    }
+  </style>
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -1166,6 +1388,6 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <script src="app.js?v=142" defer></script>
+  <script src="app.js?v=147" defer></script>
 </body>
 </html>
