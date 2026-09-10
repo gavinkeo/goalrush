@@ -766,6 +766,7 @@ const LIVE_NAME_ALIASES = {
   "slavia prague": ["slavia praha", "sk slavia praha"],
   "viktoria plzen": ["viktoria plzen", "fc viktoria plzen"],
   "fenerbahce": ["fenerbahce sk"],
+  "roma": ["as roma", "a.s. roma"],
   "besiktas": ["besiktas jk"],
   "omonia": ["omonia nicosia", "ac omonia"],
   "lillestrom": ["lillestrom sk"],
@@ -814,7 +815,7 @@ function liveClubKey(name) {
     .replace(/&/g, " and ")
     .replace(/[’']/g, "")
     .replace(/[^a-z0-9]+/g, " ")
-    .replace(/\b(fc|cf|sc|ac|afc|fk|sk|rc|sv|vfb|nk|gnk|kks|rsc|jk)\b/g, " ")
+    .replace(/\b(fc|cf|sc|ac|afc|fk|sk|rc|sv|vfb|nk|gnk|kks|rsc|jk|as|ss|ssc|sl|pfc|tsg)\b/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -830,6 +831,32 @@ function liveSameClub(a, b) {
   const bKeys = liveClubKeys(b);
   for (const key of aKeys) if (bKeys.has(key)) return true;
   return false;
+}
+
+function findLiveFixtureMatch(feedMatches, comp, pairing, fixtureDate) {
+  // First demand the strongest possible match: same competition, same date and both clubs.
+  // The date check matters because the history refresh contains every matchday seen so far.
+  const sameDate = feedMatches.filter(candidate =>
+    candidate?.comp === comp && String(candidate?.date || "") === String(fixtureDate || "")
+  );
+
+  const exact = sameDate.find(candidate =>
+    liveSameClub(candidate.home, pairing.home) &&
+    liveSameClub(candidate.away, pairing.away)
+  );
+  if (exact) return exact;
+
+  // ESPN occasionally expands one club name (e.g. Roma -> AS Roma, Feyenoord ->
+  // Feyenoord Rotterdam). A single correctly matched side on the correct date/home-away
+  // slot is enough to identify a fixture uniquely, so don't let one naming variation
+  // block the score for both entrants.
+  const homeSide = sameDate.filter(candidate => liveSameClub(candidate.home, pairing.home));
+  if (homeSide.length === 1) return homeSide[0];
+
+  const awaySide = sameDate.filter(candidate => liveSameClub(candidate.away, pairing.away));
+  if (awaySide.length === 1) return awaySide[0];
+
+  return null;
 }
 
 function espnScoreValue(competitor) {
@@ -1182,11 +1209,7 @@ function applyLiveScoreFeed(feedMatches) {
       team.fixtures.forEach(item => {
         if (!item?.date) return;
         const pairing = fixturePairing(team, item);
-        const match = feedMatches.find(candidate =>
-          candidate.comp === comp &&
-          liveSameClub(candidate.home, pairing.home) &&
-          liveSameClub(candidate.away, pairing.away)
-        );
+        const match = findLiveFixtureMatch(feedMatches, comp, pairing, item.date);
         if (!match) return;
 
         let nextStatus = "";
@@ -1195,7 +1218,10 @@ function applyLiveScoreFeed(feedMatches) {
         if (match.status === "ft") nextStatus = "played";
 
         if ((match.status === "live" || match.status === "ft") && match.homeScore !== null && match.awayScore !== null) {
-          const teamIsHome = liveSameClub(team.club, match.home);
+          // The fixture already knows whether this entrant's club is home or away.
+          // Use that instead of re-matching the club name, so an ESPN naming variation
+          // on the entrant's own club cannot reverse or suppress the score.
+          const teamIsHome = String(pairing.venue || "").toUpperCase() !== "A";
           nextScore = teamIsHome
             ? `${match.homeScore}-${match.awayScore}`
             : `${match.awayScore}-${match.homeScore}`;
