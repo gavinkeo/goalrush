@@ -2407,20 +2407,10 @@ function compactScoreGoalCount(score) {
   return parts.length === 2 && parts.every(Number.isFinite) ? parts[0] + parts[1] : 0;
 }
 
-function compactFixtureDetailsMarkup(match, expanded) {
-  // Keep the only dependable extra information: who owns each team. ESPN's
-  // richer live-detail endpoints did not reliably expose scorers/shots for these
-  // fixtures in-browser, so those empty rows and their network requests are gone.
-  return `
-    <span class="compact-fixture-details" ${expanded ? "" : "hidden"}>
-      <span class="compact-detail-compare compact-detail-managers-only">
-        <span class="compact-mobile-row compact-compare-managers">
-          <span class="compact-mobile-side home compact-mobile-manager">${esc(match.homeOwner || "Unassigned")}</span>
-          <span class="compact-mobile-label">Managers</span>
-          <span class="compact-mobile-side away compact-mobile-manager">${esc(match.awayOwner || "Unassigned")}</span>
-        </span>
-      </span>
-    </span>`;
+function compactFixtureDetailsMarkup() {
+  // v142: Today's Games is deliberately non-interactive. Manager names now sit
+  // directly beneath each club name on every viewport, so no expand panel is needed.
+  return "";
 }
 
 function renderCompactToday() {
@@ -2450,14 +2440,11 @@ function renderCompactToday() {
 
   compactTodayListEl.innerHTML = todaysFixtures.map(match => {
     const status = compactFixtureStatus(match);
-    const expanded = expandedCompactFixtures.has(match.key);
     const scoreText = match.score && (match.status === "live" || match.status === "ft")
       ? match.score.replaceAll("-", "–")
       : "";
     return `
-      <button class="compact-fixture compact-fixture-toggle${expanded ? " is-expanded" : ""}" type="button"
-              data-fixture-key="${esc(match.key)}" aria-expanded="${expanded ? "true" : "false"}"
-              aria-label="Show ${esc(match.home)} v ${esc(match.away)} fixture details">
+      <div class="compact-fixture compact-fixture-toggle compact-fixture-static">
         <span class="compact-teams">
           ${compactTeamMarkup(match.home, match.homeTeam, "home", match.homeOwner)}
           <span class="compact-match-centre ${status.className} ${match.comp.toLowerCase()}">
@@ -2466,28 +2453,15 @@ function renderCompactToday() {
           </span>
           ${compactTeamMarkup(match.away, match.awayTeam, "away", match.awayOwner)}
         </span>
-        <span class="compact-expand-icon" aria-hidden="true">⌄</span>
-        ${compactFixtureDetailsMarkup(match, expanded)}
-      </button>`;
+      </div>`;
   }).join("");
 
   compactTodayEl.hidden = false;
 }
 
 function wireCompactTodayDetails() {
-  if (!compactTodayListEl) return;
-  compactTodayListEl.addEventListener("click", event => {
-    const fixture = event.target.closest?.(".compact-fixture-toggle");
-    if (!fixture) return;
-    const key = fixture.dataset.fixtureKey || "";
-    const details = fixture.querySelector(".compact-fixture-details");
-    const nextExpanded = fixture.getAttribute("aria-expanded") !== "true";
-    fixture.setAttribute("aria-expanded", nextExpanded ? "true" : "false");
-    fixture.classList.toggle("is-expanded", nextExpanded);
-    if (details) details.hidden = !nextExpanded;
-    if (nextExpanded) expandedCompactFixtures.add(key);
-    else expandedCompactFixtures.delete(key);
-  });
+  // v142: no expand/collapse controls. Kept as a no-op so the existing init
+  // sequence stays stable without changing unrelated live-score code.
 }
 
 function renderMatchCentreTeaser() {

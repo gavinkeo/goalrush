@@ -964,6 +964,60 @@
     }
   </style>
 
+
+  <style id="v142-static-today-managers-mobile-live-red">
+    /* Today's Games: manager names are always visible; fixtures no longer expand. */
+    .compact-fixture-toggle{
+      grid-template-columns:minmax(0,1fr) !important;
+      cursor:default !important;
+    }
+    .compact-fixture-toggle > .compact-teams{
+      grid-column:1 !important;
+    }
+    .compact-fixture-static:hover{
+      transform:none !important;
+    }
+    .compact-expand-icon,
+    .compact-fixture-details{
+      display:none !important;
+    }
+
+    @media(max-width:700px){
+      .compact-team-copy{
+        display:flex !important;
+        flex-direction:column;
+        min-width:0;
+        gap:2px;
+      }
+      .compact-team.away .compact-team-copy{align-items:flex-end;}
+      .compact-owner{
+        display:block !important;
+        max-width:100%;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        color:#7088aa;
+        font-size:.50rem;
+        font-weight:650;
+        line-height:1.05;
+      }
+      .compact-fixture{
+        min-height:48px;
+        padding-top:7px;
+        padding-bottom:7px;
+      }
+      /* Keep the mobile matchday LIVE treatment consistent with desktop. */
+      .matchday-chip.is-live .state{
+        color:#ff4b60 !important;
+        text-shadow:0 0 9px rgba(255,54,76,.72) !important;
+      }
+      .matchday-chip.is-live .state:before{
+        background:#ff4258 !important;
+        box-shadow:0 0 5px rgba(255,55,76,1),0 0 12px rgba(255,55,76,.88) !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -1112,6 +1166,6 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <script src="app.js?v=141" defer></script>
+  <script src="app.js?v=142" defer></script>
 </body>
 </html>
