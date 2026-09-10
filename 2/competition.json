@@ -1,0 +1,6897 @@
+{
+  "brandName": "EURO GOAL RUSH 26/27",
+  "season": "2026/27",
+  "lastUpdated": "2026-09-07",
+  "entries": [
+    {
+      "id": 1,
+      "entrant": "Gavin Keohane",
+      "previousRank": 2,
+      "ucl": {
+        "club": "Inter Milan",
+        "crest": "club-crests/inter-milan.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "INT"
+      },
+      "uel": {
+        "club": "Ararat-Armenia",
+        "crest": "club-crests/ararat-armenia.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "SPA",
+            "opponent": "Sparta Prague",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBS",
+            "opponent": "RB Salzburg",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "NEC Nijmegen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "ARA"
+      }
+    },
+    {
+      "id": 2,
+      "entrant": "Barry Triggs",
+      "previousRank": 1,
+      "ucl": {
+        "club": "Aston Villa",
+        "crest": "club-crests/aston-villa.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIK",
+            "opponent": "Viking",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "AVL"
+      },
+      "uel": {
+        "club": "Anderlecht",
+        "crest": "club-crests/anderlecht.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBS",
+            "opponent": "RB Salzburg",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "AND"
+      }
+    },
+    {
+      "id": 3,
+      "entrant": "Brian Greaney",
+      "previousRank": 4,
+      "ucl": {
+        "club": "RB Leipzig",
+        "crest": "club-crests/rb-leipzig.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "RBL"
+      },
+      "uel": {
+        "club": "Hoffenheim",
+        "crest": "club-crests/hoffenheim.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "HOF"
+      }
+    },
+    {
+      "id": 4,
+      "entrant": "Garry O'Connell",
+      "previousRank": 3,
+      "ucl": {
+        "club": "Liverpool",
+        "crest": "club-crests/liverpool.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "LIV"
+      },
+      "uel": {
+        "club": "Torreense",
+        "crest": "club-crests/torreense.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "TOR"
+      }
+    },
+    {
+      "id": 5,
+      "entrant": "Ciara Neville",
+      "previousRank": 6,
+      "ucl": {
+        "club": "Paris Saint-Germain",
+        "crest": "club-crests/paris-saint-germain.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "PSG"
+      },
+      "uel": {
+        "club": "Union SG",
+        "crest": "club-crests/union-saint-gilloise.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "USG"
+      }
+    },
+    {
+      "id": 6,
+      "entrant": "Rebecca Horgan",
+      "previousRank": 5,
+      "ucl": {
+        "club": "Viking",
+        "crest": "club-crests/viking.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "VIK"
+      },
+      "uel": {
+        "club": "Benfica",
+        "crest": "club-crests/benfica.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "NEC Nijmegen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "BEN"
+      }
+    },
+    {
+      "id": 7,
+      "entrant": "Sean Kelly",
+      "previousRank": null,
+      "ucl": {
+        "club": "Porto",
+        "crest": "club-crests/porto.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "POR"
+      },
+      "uel": {
+        "club": "Rennes",
+        "crest": "club-crests/rennes.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "NEC Nijmegen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SPA",
+            "opponent": "Sparta Prague",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "REN"
+      }
+    },
+    {
+      "id": 8,
+      "entrant": "Tom Pearce",
+      "previousRank": null,
+      "ucl": {
+        "club": "Bodo/Glimt",
+        "crest": "club-crests/bodo-glimt.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "BOD"
+      },
+      "uel": {
+        "club": "NEC Nijmegen",
+        "crest": "club-crests/n-e-c-nijmegen.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LSO",
+            "opponent": "Levski Sofia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "NEC"
+      }
+    },
+    {
+      "id": 9,
+      "entrant": "Liam Curtin",
+      "previousRank": null,
+      "ucl": {
+        "club": "Club Brugge",
+        "crest": "club-crests/club-brugge.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "BRU"
+      },
+      "uel": {
+        "club": "Ferencvaros",
+        "crest": "club-crests/ferencvaros.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "FER"
+      }
+    },
+    {
+      "id": 10,
+      "entrant": "Colin McCarthy",
+      "previousRank": null,
+      "ucl": {
+        "club": "Roma",
+        "crest": "club-crests/roma.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "ROM"
+      },
+      "uel": {
+        "club": "Levski Sofia",
+        "crest": "club-crests/levski-sofia.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "RBS",
+            "opponent": "RB Salzburg",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "NEC Nijmegen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "LSO"
+      }
+    },
+    {
+      "id": 11,
+      "entrant": "Dominic Moynihan",
+      "previousRank": null,
+      "ucl": {
+        "club": "Bayern Munich",
+        "crest": "club-crests/bayern-munich.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIK",
+            "opponent": "Viking",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "BAY"
+      },
+      "uel": {
+        "club": "Omonia",
+        "crest": "club-crests/omonia.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "NEC Nijmegen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "OMO"
+      }
+    },
+    {
+      "id": 12,
+      "entrant": "Jamie Keenan",
+      "previousRank": null,
+      "ucl": {
+        "club": "Fenerbahce",
+        "crest": "club-crests/fenerbahce.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "FEN"
+      },
+      "uel": {
+        "club": "Lech Poznan",
+        "crest": "club-crests/lech-poznan.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Bayer Leverkusen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union SG",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "LPO"
+      }
+    },
+    {
+      "id": 13,
+      "entrant": "Mark Hackett",
+      "previousRank": null,
+      "ucl": {
+        "club": "Barcelona",
+        "crest": "club-crests/barcelona.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "BAR"
+      },
+      "uel": {
+        "club": "Juventus",
+        "crest": "club-crests/juventus.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "NEC",
+            "opponent": "NEC Nijmegen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "JUV"
+      }
+    },
+    {
+      "id": 14,
+      "entrant": "Gary 🦊 Corcoran",
+      "previousRank": null,
+      "ucl": {
+        "club": "Lille",
+        "crest": "club-crests/lille.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "LIL"
+      },
+      "uel": {
+        "club": "Crystal Palace",
+        "crest": "club-crests/crystal-palace.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SPA",
+            "opponent": "Sparta Prague",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBS",
+            "opponent": "RB Salzburg",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "CRY"
+      }
+    },
+    {
+      "id": 15,
+      "entrant": "Gary Foolkes",
+      "previousRank": null,
+      "ucl": {
+        "club": "Slovan Bratislava",
+        "crest": "club-crests/slovan-bratislava.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "SBR"
+      },
+      "uel": {
+        "club": "Celta Vigo",
+        "crest": "club-crests/celta-vigo.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union SG",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "CLV"
+      }
+    },
+    {
+      "id": 16,
+      "entrant": "Steve Dinan",
+      "previousRank": null,
+      "ucl": {
+        "club": "Feyenoord",
+        "crest": "club-crests/feyenoord.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIK",
+            "opponent": "Viking",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "FEY"
+      },
+      "uel": {
+        "club": "OFI Crete",
+        "crest": "club-crests/ofi-crete.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Bayer Leverkusen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "OFI"
+      }
+    },
+    {
+      "id": 17,
+      "entrant": "Alan Conway",
+      "previousRank": null,
+      "ucl": {
+        "club": "Napoli",
+        "crest": "club-crests/napoli.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIK",
+            "opponent": "Viking",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "NAP"
+      },
+      "uel": {
+        "club": "Lillestrom",
+        "crest": "club-crests/lillestrom.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SPA",
+            "opponent": "Sparta Prague",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LSO",
+            "opponent": "Levski Sofia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "LST"
+      }
+    },
+    {
+      "id": 18,
+      "entrant": "James Murphy",
+      "previousRank": null,
+      "ucl": {
+        "club": "PSV Eindhoven",
+        "crest": "club-crests/psv-eindhoven.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIK",
+            "opponent": "Viking",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "PSV"
+      },
+      "uel": {
+        "club": "Olympiacos",
+        "crest": "club-crests/olympiacos.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SPA",
+            "opponent": "Sparta Prague",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "OLY"
+      }
+    },
+    {
+      "id": 19,
+      "entrant": "Gavin Rogers",
+      "previousRank": null,
+      "ucl": {
+        "club": "AEK Athens",
+        "crest": "club-crests/aek-athens.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "AEK"
+      },
+      "uel": {
+        "club": "Besiktas",
+        "crest": "club-crests/besiktas.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Bayer Leverkusen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union SG",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "BES"
+      }
+    },
+    {
+      "id": 20,
+      "entrant": "Alison Kennedy",
+      "previousRank": null,
+      "ucl": {
+        "club": "Slavia Prague",
+        "crest": "club-crests/slavia-prague.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "SLA"
+      },
+      "uel": {
+        "club": "RB Salzburg",
+        "crest": "club-crests/red-bull-salzburg.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "LSO",
+            "opponent": "Levski Sofia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SPA",
+            "opponent": "Sparta Prague",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Bayer Leverkusen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "RBS"
+      }
+    },
+    {
+      "id": 21,
+      "entrant": "Aaron Hickey",
+      "previousRank": null,
+      "ucl": {
+        "club": "Borussia Dortmund",
+        "crest": "club-crests/borussia-dortmund.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "BVB"
+      },
+      "uel": {
+        "club": "Sturm Graz",
+        "crest": "club-crests/sturm-graz.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "STG"
+      }
+    },
+    {
+      "id": 22,
+      "entrant": "Bob O'Neill",
+      "previousRank": null,
+      "ucl": {
+        "club": "Villarreal",
+        "crest": "club-crests/villarreal.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "VIL"
+      },
+      "uel": {
+        "club": "Sparta Prague",
+        "crest": "club-crests/sparta-prague.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBS",
+            "opponent": "RB Salzburg",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "SPA"
+      }
+    },
+    {
+      "id": 23,
+      "entrant": "Terry McSweeney",
+      "previousRank": null,
+      "ucl": {
+        "club": "Manchester City",
+        "crest": "club-crests/manchester-city.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "MCI"
+      },
+      "uel": {
+        "club": "Marseille",
+        "crest": "club-crests/marseille.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Bayer Leverkusen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LSO",
+            "opponent": "Levski Sofia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CEL",
+            "opponent": "Celtic",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "MAR"
+      }
+    },
+    {
+      "id": 24,
+      "entrant": "Pat Mulcair",
+      "previousRank": null,
+      "ucl": {
+        "club": "Shakhtar Donetsk",
+        "crest": "club-crests/shakhtar-donetsk.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "SHA"
+      },
+      "uel": {
+        "club": "Bournemouth",
+        "crest": "club-crests/bournemouth.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SPA",
+            "opponent": "Sparta Prague",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "BOU"
+      }
+    },
+    {
+      "id": 25,
+      "entrant": "Vanessa Sargent",
+      "previousRank": null,
+      "ucl": {
+        "club": "Lens",
+        "crest": "club-crests/lens.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "LEN"
+      },
+      "uel": {
+        "club": "Real Sociedad",
+        "crest": "club-crests/real-sociedad.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union SG",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "RSO"
+      }
+    },
+    {
+      "id": 26,
+      "entrant": "Killian Kelleher",
+      "previousRank": null,
+      "ucl": {
+        "club": "Sporting CP",
+        "crest": "club-crests/sporting-cp.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MCI",
+            "opponent": "Manchester City",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "SCP"
+      },
+      "uel": {
+        "club": "Jagiellonia",
+        "crest": "club-crests/jagiellonia.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LSO",
+            "opponent": "Levski Sofia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PLZ",
+            "opponent": "Viktoria Plzen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "JAG"
+      }
+    },
+    {
+      "id": 27,
+      "entrant": "Brian O'Driscoll",
+      "previousRank": null,
+      "ucl": {
+        "club": "Como",
+        "crest": "club-crests/como.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEN",
+            "opponent": "Lens",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "COM"
+      },
+      "uel": {
+        "club": "Celje",
+        "crest": "club-crests/celje.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "LEV",
+            "opponent": "Bayer Leverkusen",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBS",
+            "opponent": "RB Salzburg",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "NEC Nijmegen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "CEJ"
+      }
+    },
+    {
+      "id": 28,
+      "entrant": "John O'Driscoll",
+      "previousRank": null,
+      "ucl": {
+        "club": "Manchester United",
+        "crest": "club-crests/manchester-united.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "MUN"
+      },
+      "uel": {
+        "club": "Hapoel Beer-Sheva",
+        "crest": "club-crests/hapoel-beer-sheva.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union SG",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "HBS"
+      }
+    },
+    {
+      "id": 29,
+      "entrant": "Kennedy Murphy",
+      "previousRank": null,
+      "ucl": {
+        "club": "LASK",
+        "crest": "club-crests/lask.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "LAS"
+      },
+      "uel": {
+        "club": "Bayer Leverkusen",
+        "crest": "club-crests/bayer-leverkusen.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "CEJ",
+            "opponent": "Celje",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OFI",
+            "opponent": "OFI Crete",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBS",
+            "opponent": "RB Salzburg",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LYO",
+            "opponent": "Lyon",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "LEV"
+      }
+    },
+    {
+      "id": 30,
+      "entrant": "Geraldo",
+      "previousRank": null,
+      "ucl": {
+        "club": "Real Madrid",
+        "crest": "club-crests/real-madrid.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ROM",
+            "opponent": "Roma",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBL",
+            "opponent": "RB Leipzig",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LAS",
+            "opponent": "LASK",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SHA",
+            "opponent": "Shakhtar Donetsk",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "RMA"
+      },
+      "uel": {
+        "club": "AC Milan",
+        "crest": "club-crests/ac-milan.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RBS",
+            "opponent": "RB Salzburg",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OLY",
+            "opponent": "Olympiacos",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LSO",
+            "opponent": "Levski Sofia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "MIL"
+      }
+    },
+    {
+      "id": 31,
+      "entrant": "Eric Trihy",
+      "previousRank": null,
+      "ucl": {
+        "club": "Galatasaray",
+        "crest": "club-crests/galatasaray.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "SCP",
+            "opponent": "Sporting CP",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AVL",
+            "opponent": "Aston Villa",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AEK",
+            "opponent": "AEK Athens",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSG",
+            "opponent": "Paris Saint-Germain",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "GAL"
+      },
+      "uel": {
+        "club": "Dinamo Zagreb",
+        "crest": "club-crests/gnk-dinamo.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NEC",
+            "opponent": "NEC Nijmegen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Bayer Leverkusen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "REN",
+            "opponent": "Rennes",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "DIN"
+      }
+    },
+    {
+      "id": 32,
+      "entrant": "Ray Murphy",
+      "previousRank": null,
+      "ucl": {
+        "club": "Arsenal",
+        "crest": "club-crests/arsenal.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RMA",
+            "opponent": "Real Madrid",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BET",
+            "opponent": "Real Betis",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SAB",
+            "opponent": "Sabah",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "ARS"
+      },
+      "uel": {
+        "club": "Lyon",
+        "crest": "club-crests/lyon.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CRY",
+            "opponent": "Crystal Palace",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HOF",
+            "opponent": "Hoffenheim",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union SG",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LEV",
+            "opponent": "Bayer Leverkusen",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "LYO"
+      }
+    },
+    {
+      "id": 33,
+      "entrant": "Clodagh Cashman",
+      "previousRank": null,
+      "ucl": {
+        "club": "Atletico Madrid",
+        "crest": "club-crests/atletico-madrid.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "LIV",
+            "opponent": "Liverpool",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STU",
+            "opponent": "Stuttgart",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIK",
+            "opponent": "Viking",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOD",
+            "opponent": "Bodo/Glimt",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEN",
+            "opponent": "Fenerbahce",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "ATM"
+      },
+      "uel": {
+        "club": "AZ Alkmaar",
+        "crest": "club-crests/az-alkmaar.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "SUN",
+            "opponent": "Sunderland",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "HBS",
+            "opponent": "Hapoel Beer-Sheva",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARA",
+            "opponent": "Ararat-Armenia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JUV",
+            "opponent": "Juventus",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SPA",
+            "opponent": "Sparta Prague",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "STG",
+            "opponent": "Sturm Graz",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "AZA"
+      }
+    },
+    {
+      "id": 34,
+      "entrant": "Brian Kenefick",
+      "previousRank": null,
+      "ucl": {
+        "club": "Stuttgart",
+        "crest": "club-crests/stuttgart.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "VIK",
+            "opponent": "Viking",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-09",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ATM",
+            "opponent": "Atletico Madrid",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "GAL",
+            "opponent": "Galatasaray",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-03",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "INT",
+            "opponent": "Inter Milan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BRU",
+            "opponent": "Club Brugge",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-19",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "PSV",
+            "opponent": "PSV Eindhoven",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "STU"
+      },
+      "uel": {
+        "club": "Viktoria Plzen",
+        "crest": "club-crests/viktoria-plzen.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "USG",
+            "opponent": "Union SG",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LSO",
+            "opponent": "Levski Sofia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LST",
+            "opponent": "Lillestrom",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BOU",
+            "opponent": "Bournemouth",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "RSO",
+            "opponent": "Real Sociedad",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "PLZ"
+      }
+    },
+    {
+      "id": 35,
+      "entrant": "Peter Gilroy",
+      "previousRank": null,
+      "ucl": {
+        "club": "Real Betis",
+        "crest": "club-crests/real-betis.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "LIL",
+            "opponent": "Lille",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-08",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "POR",
+            "opponent": "Porto",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-14",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "FEY",
+            "opponent": "Feyenoord",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SBR",
+            "opponent": "Slovan Bratislava",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-24",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "COM",
+            "opponent": "Como",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-12-09",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAY",
+            "opponent": "Bayern Munich",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "BET"
+      },
+      "uel": {
+        "club": "Sunderland",
+        "crest": "club-crests/sunderland.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "AZA",
+            "opponent": "AZ Alkmaar",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-16",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LPO",
+            "opponent": "Lech Poznan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "DIN",
+            "opponent": "Dinamo Zagreb",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "JAG",
+            "opponent": "Jagiellonia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MIL",
+            "opponent": "AC Milan",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "AND",
+            "opponent": "Anderlecht",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "LSO",
+            "opponent": "Levski Sofia",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "SUN"
+      }
+    },
+    {
+      "id": 36,
+      "entrant": "Brian Clarke",
+      "previousRank": null,
+      "ucl": {
+        "club": "Sabah",
+        "crest": "club-crests/sabah.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "MUN",
+            "opponent": "Manchester United",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-09-10",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "SLA",
+            "opponent": "Slavia Prague",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-13",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BVB",
+            "opponent": "Borussia Dortmund",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-20",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIK",
+            "opponent": "Viking",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-04",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BAR",
+            "opponent": "Barcelona",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-25",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "VIL",
+            "opponent": "Villarreal",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-08",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "NAP",
+            "opponent": "Napoli",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-20",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "ARS",
+            "opponent": "Arsenal",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-27",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "SAB"
+      },
+      "uel": {
+        "club": "Celtic",
+        "crest": "club-crests/celtic.png",
+        "played": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "fixtures": [
+          {
+            "code": "FER",
+            "opponent": "Ferencvaros",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-09-17",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BEN",
+            "opponent": "Benfica",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-10-15",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "CLV",
+            "opponent": "Celta Vigo",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-10-22",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "BES",
+            "opponent": "Besiktas",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2026-11-05",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "TOR",
+            "opponent": "Torreense",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-11-26",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "OMO",
+            "opponent": "Omonia",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2026-12-10",
+            "kickoff": "17:45",
+            "placeholderScore": ""
+          },
+          {
+            "code": "MAR",
+            "opponent": "Marseille",
+            "venue": "H",
+            "status": "",
+            "score": "",
+            "date": "2027-01-21",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          },
+          {
+            "code": "USG",
+            "opponent": "Union SG",
+            "venue": "A",
+            "status": "",
+            "score": "",
+            "date": "2027-01-28",
+            "kickoff": "20:00",
+            "placeholderScore": ""
+          }
+        ],
+        "apiTeamId": null,
+        "apiCode": "",
+        "abbr": "CEL"
+      }
+    }
+  ],
+  "matchdays": {
+    "ucl": [
+      {
+        "md": 1,
+        "start": "2026-09-08",
+        "end": "2026-09-10"
+      },
+      {
+        "md": 2,
+        "start": "2026-10-13",
+        "end": "2026-10-14"
+      },
+      {
+        "md": 3,
+        "start": "2026-10-20",
+        "end": "2026-10-21"
+      },
+      {
+        "md": 4,
+        "start": "2026-11-03",
+        "end": "2026-11-04"
+      },
+      {
+        "md": 5,
+        "start": "2026-11-24",
+        "end": "2026-11-25"
+      },
+      {
+        "md": 6,
+        "start": "2026-12-08",
+        "end": "2026-12-09"
+      },
+      {
+        "md": 7,
+        "start": "2027-01-19",
+        "end": "2027-01-20"
+      },
+      {
+        "md": 8,
+        "start": "2027-01-27",
+        "end": "2027-01-27"
+      }
+    ],
+    "uel": [
+      {
+        "md": 1,
+        "start": "2026-09-16",
+        "end": "2026-09-17"
+      },
+      {
+        "md": 2,
+        "start": "2026-10-15",
+        "end": "2026-10-15"
+      },
+      {
+        "md": 3,
+        "start": "2026-10-22",
+        "end": "2026-10-22"
+      },
+      {
+        "md": 4,
+        "start": "2026-11-05",
+        "end": "2026-11-05"
+      },
+      {
+        "md": 5,
+        "start": "2026-11-26",
+        "end": "2026-11-26"
+      },
+      {
+        "md": 6,
+        "start": "2026-12-10",
+        "end": "2026-12-10"
+      },
+      {
+        "md": 7,
+        "start": "2027-01-21",
+        "end": "2027-01-21"
+      },
+      {
+        "md": 8,
+        "start": "2027-01-28",
+        "end": "2027-01-28"
+      }
+    ]
+  }
+}

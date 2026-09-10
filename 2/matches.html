@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061024">
+  <meta name="description" content="Live scores and full match schedule for Euro Goal Rush 26/27.">
+  <title>EURO GOAL RUSH 26/27 · MATCH CENTRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=107">
+  <style>
+    :root{
+      --bg:#061024;
+      --panel:#09182f;
+      --panel-2:#0c1d39;
+      --line:rgba(92,131,196,.22);
+      --line-strong:rgba(104,155,233,.36);
+      --text:#f6f8fe;
+      --muted:#8da4c7;
+      --muted-2:#6e84a7;
+      --ucl:#4de0ff;
+      --uel:#f4b062;
+      --live:#ff5c6d;
+      --shadow:0 22px 55px rgba(0,0,0,.28);
+      color-scheme:dark;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:#061024;color:var(--text);font-family:Inter,system-ui,sans-serif}
+    body{
+      background:
+        radial-gradient(circle at 12% 16%, rgba(0, 174, 255, .10), transparent 18%),
+        radial-gradient(circle at 84% 76%, rgba(255, 170, 73, .10), transparent 20%),
+        linear-gradient(180deg,#061024,#050d1e 58%,#07152c 100%);
+      min-height:100vh;
+    }
+    .shell{width:min(1280px, calc(100% - 28px));margin:0 auto}
+    .page-top{padding:22px 0 14px}
+    .page-top-bar{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}
+    .back-link{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(9,24,47,.88);color:#dce7f8;text-decoration:none;font-size:.86rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    .back-link:hover{border-color:var(--line-strong)}
+    .page-kicker{margin:0 0 8px;color:#91a7c8;font-size:.76rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    .page-title{margin:0;font-size:clamp(1.6rem,4vw,2.7rem);font-weight:900;line-height:1.02;letter-spacing:-.03em}
+    .page-title .blue{color:var(--ucl)}
+    .page-title .gold{color:var(--uel)}
+    .page-subtitle{margin:10px 0 0;color:var(--muted);max-width:920px;line-height:1.6}
+    .hero-card,.filters-card,.summary-card,.schedule-card,.empty-state{border:1px solid var(--line);background:linear-gradient(135deg,rgba(8,20,42,.96),rgba(7,18,39,.97));box-shadow:var(--shadow);border-radius:28px}
+    .hero-card{padding:20px 22px;margin:0 0 18px}
+    .hero-meta{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .hero-note{color:var(--muted);font-size:.92rem}
+    .hero-link{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid rgba(92,145,232,.34);background:rgba(12,31,60,.9);color:#eef5ff;text-decoration:none;font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+    .filters-card,.summary-card{padding:18px 20px;margin:0 0 16px}
+    .filter-row + .filter-row{margin-top:14px}
+    .filter-label{display:block;margin:0 0 8px;color:#91a7c8;font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+    .button-row{display:flex;gap:10px;flex-wrap:wrap}
+    .filter-btn{appearance:none;border:1px solid var(--line);background:rgba(10,24,48,.84);color:#cfdbef;padding:10px 14px;border-radius:999px;font-weight:800;font-size:.84rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.15s ease}
+    .filter-btn:hover{border-color:var(--line-strong);transform:translateY(-1px)}
+    .filter-btn.is-active{background:linear-gradient(180deg,rgba(21,49,92,.95),rgba(10,28,59,.96));color:#fff;border-color:rgba(109,170,255,.48);box-shadow:0 0 0 1px rgba(109,170,255,.12),0 10px 24px rgba(0,0,0,.16)}
+    .summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .summary-chip{border:1px solid rgba(92,131,196,.18);background:rgba(12,28,53,.72);border-radius:18px;padding:14px 15px}
+    .summary-chip span{display:block;color:#8ea5c8;font-size:.7rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px}
+    .summary-chip strong{font-size:1.28rem;line-height:1.05}
+    .summary-chip.live strong{color:#ff7381}
+    .summary-chip.ucl strong{color:var(--ucl)}
+    .summary-chip.uel strong{color:var(--uel)}
+    .schedule-card{padding:16px 16px 18px;margin:0 0 24px}
+    .date-group + .date-group{margin-top:18px}
+    .date-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:6px 6px 12px}
+    .date-head h2{margin:0;font-size:1.08rem;letter-spacing:.02em}
+    .date-head span{color:var(--muted);font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .fixture-list{display:grid;gap:12px}
+    .fixture-card{border:1px solid rgba(92,131,196,.18);background:linear-gradient(135deg,rgba(10,24,49,.94),rgba(8,18,39,.96));border-radius:22px;padding:14px 16px;box-shadow:0 12px 28px rgba(0,0,0,.14)}
+    .fixture-card.is-live{border-color:rgba(255,96,112,.40);box-shadow:0 0 0 1px rgba(255,96,112,.08),0 14px 30px rgba(0,0,0,.18)}
+    .fixture-card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+    .fixture-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .comp-pill,.md-pill,.status-pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .comp-pill{padding:7px 11px;font-size:.72rem}
+    .comp-pill.ucl{background:rgba(28,176,255,.12);border:1px solid rgba(75,214,255,.22);color:var(--ucl)}
+    .comp-pill.uel{background:rgba(243,177,96,.10);border:1px solid rgba(243,177,96,.18);color:var(--uel)}
+    .md-pill{padding:7px 10px;font-size:.7rem;background:rgba(20,35,63,.9);border:1px solid rgba(92,131,196,.18);color:#dbe7f8}
+    .status-pill{min-width:72px;padding:8px 11px;font-size:.76rem;background:rgba(20,35,63,.9);border:1px solid rgba(92,131,196,.18);color:#eaf0fb}
+    .status-pill.live{background:rgba(76,12,25,.94);border-color:rgba(255,93,108,.46);color:#ff7b88;text-shadow:0 0 10px rgba(255,83,100,.38)}
+    .status-pill.ft{color:#9eb4d3}
+    .fixture-main{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center}
+    .match-team{display:flex;align-items:center;gap:10px;min-width:0}
+    .match-team.away{justify-content:flex-end;text-align:right}
+    .match-team img{width:34px;height:34px;object-fit:contain;flex:0 0 34px}
+    .match-team-name{font-weight:800;font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .match-divider{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:72px}
+    .match-divider strong{font-size:1.05rem;letter-spacing:.04em}
+    .match-divider small{color:#88a0c2;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .owners-row{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.05);color:#7f97ba;font-size:.78rem}
+    .owners-row .owner{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .owners-row .owner.away{text-align:right}
+    .owners-row .versus{text-align:center;color:#5f7597;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .empty-state{padding:26px 24px;text-align:center;color:var(--muted);margin:0 0 24px}
+    .empty-state h3{margin:0 0 8px;color:#fff}
+    @media (max-width: 920px){
+      .summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width: 720px){
+      .shell{width:min(100% - 16px, 100%)}
+      .page-top{padding:16px 0 10px}
+      .hero-card,.filters-card,.summary-card,.schedule-card,.empty-state{border-radius:22px}
+      .hero-card{padding:18px 16px}
+      .filters-card,.summary-card{padding:16px}
+      .schedule-card{padding:12px}
+      .summary-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+      .button-row{gap:8px}
+      .filter-btn{font-size:.78rem;padding:9px 12px}
+      .fixture-card{padding:13px 13px 14px}
+      .fixture-card-top{margin-bottom:10px}
+      .fixture-main{grid-template-columns:minmax(0,1fr);gap:10px}
+      .match-team,.match-team.away{justify-content:flex-start;text-align:left}
+      .match-divider{min-width:0;align-items:flex-start}
+      .owners-row{grid-template-columns:minmax(0,1fr);gap:6px}
+      .owners-row .owner.away,.owners-row .versus{text-align:left}
+    }
+
+    /* v123: compact homepage-style Match Centre header */
+    .match-centre-dashboard-header{padding-top:14px !important;padding-bottom:0 !important;}
+    .match-centre-dashboard-header .main-title{
+      margin:0;
+      font-size:clamp(.98rem,1.65vw,1.28rem) !important;
+      line-height:1 !important;
+      white-space:nowrap;
+    }
+    .match-centre-dashboard-header .mc-title-suffix{color:var(--uel);}
+    .mc-header-tools{display:flex;align-items:stretch;justify-content:flex-end;min-width:0;}
+    .mc-standings-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:36px;
+      padding:8px 12px;
+      border:1px solid rgba(91,137,207,.24);
+      border-radius:999px;
+      background:linear-gradient(180deg,rgba(10,26,53,.90),rgba(7,20,43,.94));
+      color:#e7f0ff;
+      text-decoration:none;
+      font-size:.68rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .mc-standings-link:hover{border-color:rgba(111,174,255,.44);}
+    .mc-matchday-link{color:inherit;text-decoration:none;}
+    .mc-matchday-link:hover{border-color:rgba(111,174,255,.38);}
+    .mc-comp-logo{pointer-events:none;}
+    .match-centre-dashboard-header .header-divider{margin-top:10px;}
+    @media(max-width:720px){
+      .match-centre-dashboard-header{padding-top:11px !important;}
+      .match-centre-dashboard-header .title-top-row{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+      }
+      .match-centre-dashboard-header .main-title{order:1;text-align:center;font-size:.92rem !important;}
+      .match-centre-dashboard-header .matchday-strip{order:2;width:100%;margin-top:8px;}
+      .match-centre-dashboard-header .mc-header-tools{order:3;width:100%;margin-top:7px;}
+      .mc-standings-link{min-height:34px;font-size:.62rem;padding:7px 10px;}
+      .match-centre-dashboard-header .header-divider{margin-top:8px;}
+    }
+  </style>
+</head>
+<body>
+  <header class="dashboard-header shell match-centre-dashboard-header">
+    <div class="title-top-row">
+      <h1 class="main-title"><span class="main-title-text">EURO GOAL RUSH <span class="mc-title-suffix">MATCH CENTRE</span></span></h1>
+
+      <div class="mc-header-tools">
+        <a class="mc-standings-link" href="index.html">← Standings</a>
+      </div>
+
+      <div class="matchday-strip">
+        <a class="matchday-chip ucl-chip mc-matchday-link" id="mc-ucl-matchday" href="matches.html?comp=UCL" aria-label="Champions League fixtures">
+          <div class="chip-copy">
+            <div class="chip-topline">
+              <span class="comp">UCL</span>
+              <span class="state" id="mc-ucl-state">NEXT</span>
+            </div>
+            <strong id="mc-ucl-date">MD1 · 8–10 SEP</strong>
+          </div>
+          <span class="anthem-btn anthem-ucl mc-comp-logo" aria-hidden="true">
+            <img class="anthem-logo anthem-logo-ucl" src="../assets/ucl-logo.png?v=78" alt="">
+          </span>
+        </a>
+
+        <a class="matchday-chip uel-chip mc-matchday-link" id="mc-uel-matchday" href="matches.html?comp=UEL" aria-label="Europa League fixtures">
+          <div class="chip-copy">
+            <div class="chip-topline">
+              <span class="comp">UEL</span>
+              <span class="state" id="mc-uel-state">NEXT</span>
+            </div>
+            <strong id="mc-uel-date">MD1 · 16–17 SEP</strong>
+          </div>
+          <span class="anthem-btn anthem-uel mc-comp-logo" aria-hidden="true">
+            <img class="anthem-logo anthem-logo-uel" src="../assets/uel-logo.png?v=78" alt="">
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="header-divider" aria-hidden="true"></div>
+  </header>
+
+  <main class="shell">
+
+    <section class="filters-card" aria-label="Schedule filters">
+      <div class="filter-row">
+        <span class="filter-label">View</span>
+        <div class="button-row" id="view-filter-row"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Competition</span>
+        <div class="button-row" id="comp-filter-row"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Matchday</span>
+        <div class="button-row" id="md-filter-row"></div>
+      </div>
+    </section>
+
+    <section class="summary-card">
+      <div class="summary-grid" id="summary-grid"></div>
+    </section>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <h3>No fixtures match the current filters.</h3>
+      <p id="empty-message">Try another competition or switch to the full schedule.</p>
+    </div>
+
+    <section class="schedule-card" id="schedule-card">
+      <div id="schedule-groups"></div>
+    </section>
+  </main>
+
+  <script src="matches.js?v=124" defer></script>
+</body>
+</html>

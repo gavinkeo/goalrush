@@ -1,0 +1,1395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061024">
+  <meta name="description" content="Champions League and Europa League goals buster for the 2026/27 season.">
+  <title>EURO GOAL RUSH 26/27</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="../favicon.svg?v=78" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=107">
+
+  <style id="v113-live-matchday">
+    .matchday-chip.is-live{
+      border-color:rgba(255,70,86,.64) !important;
+      background:
+        radial-gradient(circle at 82% 18%,rgba(255,58,76,.10),transparent 34%),
+        rgba(8,19,40,.84) !important;
+      box-shadow:
+        0 0 0 1px rgba(255,70,86,.08),
+        0 0 18px rgba(255,42,64,.16) !important;
+    }
+    .matchday-chip.is-live .state{
+      color:#ff4b60 !important;
+      font-size:.54rem !important;
+      font-weight:950 !important;
+      letter-spacing:.13em !important;
+      text-shadow:0 0 9px rgba(255,54,76,.72);
+      animation:v113LivePulse 1.65s ease-in-out infinite;
+    }
+    .matchday-chip.is-live .state:before{
+      background:#ff4258 !important;
+      box-shadow:
+        0 0 5px rgba(255,55,76,1),
+        0 0 12px rgba(255,55,76,.88) !important;
+    }
+    @keyframes v113LivePulse{
+      0%,100%{opacity:.82}
+      50%{opacity:1}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .matchday-chip.is-live .state{animation:none}
+    }
+  </style>
+
+  <style id="v120-header-match-nav">
+    .header-quick-nav{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      margin-top:8px;
+    }
+    .header-quick-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:36px;
+      padding:8px 13px;
+      border:1px solid rgba(91,137,207,.24);
+      border-radius:999px;
+      background:linear-gradient(180deg,rgba(10,26,53,.90),rgba(7,20,43,.94));
+      color:#e7f0ff;
+      text-decoration:none;
+      font-size:.70rem;
+      font-weight:900;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+      box-shadow:0 7px 18px rgba(0,0,0,.13);
+      transition:transform .14s ease,border-color .14s ease,background .14s ease;
+    }
+    .header-quick-link:hover{
+      transform:translateY(-1px);
+      border-color:rgba(111,174,255,.44);
+      background:linear-gradient(180deg,rgba(14,34,67,.94),rgba(8,24,50,.96));
+    }
+    .header-nav-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:20px;
+      padding:3px 7px;
+      border-radius:999px;
+      border:1px solid rgba(120,150,198,.20);
+      background:rgba(255,255,255,.045);
+      color:#8fa5c6;
+      font-size:.56rem;
+      font-weight:950;
+      letter-spacing:.09em;
+      line-height:1;
+      white-space:nowrap;
+    }
+    .header-nav-badge.is-live{
+      color:#ff7785;
+      border-color:rgba(255,80,101,.42);
+      background:rgba(92,15,28,.78);
+      box-shadow:0 0 12px rgba(255,70,92,.15);
+      text-shadow:0 0 7px rgba(255,80,100,.35);
+    }
+    .header-arrow{
+      color:#8ca9d0;
+      font-size:.82rem;
+      line-height:1;
+    }
+    @media(max-width:700px){
+      .header-quick-nav{
+        justify-content:stretch;
+        margin-top:7px;
+      }
+      .header-quick-link{
+        width:100%;
+        min-height:35px;
+        padding:8px 10px;
+        font-size:.64rem;
+      }
+      .header-nav-badge{
+        font-size:.53rem;
+        padding-inline:6px;
+      }
+    }
+  </style>
+
+  <style id="v121-compact-today">
+    .compact-today{
+      margin:0 0 12px;
+      border:1px solid rgba(68,120,202,.23);
+      border-radius:18px;
+      background:
+        radial-gradient(circle at 8% 20%,rgba(37,114,255,.07),transparent 32%),
+        linear-gradient(135deg,rgba(7,19,43,.94),rgba(5,16,37,.96));
+      box-shadow:0 10px 28px rgba(2,8,22,.22), inset 0 0 0 1px rgba(255,255,255,.015);
+      overflow:hidden;
+    }
+    .compact-today[hidden]{display:none !important;}
+    .compact-today-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 13px;
+      border-bottom:1px solid rgba(255,255,255,.055);
+    }
+    .compact-today-title{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      min-width:0;
+      color:#edf5ff;
+      font-size:.72rem;
+      font-weight:950;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+    .compact-today-dot{
+      width:7px;height:7px;border-radius:50%;flex:0 0 7px;
+      background:#36d7ff;
+      box-shadow:0 0 9px rgba(54,215,255,.55);
+    }
+    .compact-today-summary{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      color:#849aba;
+      font-size:.58rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .compact-today-summary .ucl{color:#55d9ff;}
+    .compact-today-summary .uel{color:#f3b46d;}
+    .compact-today-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+    .compact-fixture{
+      display:grid;
+      grid-template-columns:47px 32px minmax(0,1fr);
+      align-items:center;
+      gap:7px;
+      min-height:43px;
+      padding:7px 11px;
+      text-decoration:none;
+      color:inherit;
+      border-top:1px solid rgba(255,255,255,.045);
+      transition:background .13s ease;
+    }
+    .compact-fixture:nth-child(-n+2){border-top:0;}
+    .compact-fixture:nth-child(even){border-left:1px solid rgba(255,255,255,.045);}
+    .compact-fixture:hover{background:rgba(27,56,103,.16);}
+    .compact-fixture-status{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:43px;
+      padding:4px 5px;
+      border-radius:999px;
+      border:1px solid rgba(92,122,171,.20);
+      background:rgba(15,29,55,.78);
+      color:#dfe9f8;
+      font-size:.66rem;
+      font-weight:950;
+      line-height:1;
+      letter-spacing:.035em;
+      white-space:nowrap;
+    }
+    .compact-fixture-status.live{
+      color:#ff7585;
+      border-color:rgba(255,80,101,.40);
+      background:rgba(89,15,28,.78);
+      box-shadow:0 0 10px rgba(255,70,92,.12);
+    }
+    .compact-fixture-status.ft{color:#a8bad3;}
+    .compact-comp{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:31px;
+      padding:4px 0;
+      border-radius:999px;
+      font-size:.56rem;
+      font-weight:950;
+      letter-spacing:.06em;
+      line-height:1;
+    }
+    .compact-comp.ucl{color:#59d8ff;background:rgba(34,181,255,.09);border:1px solid rgba(59,206,255,.18);}
+    .compact-comp.uel{color:#f4b46c;background:rgba(247,181,98,.08);border:1px solid rgba(255,189,110,.16);}
+    .compact-teams{
+      display:flex;
+      align-items:center;
+      gap:5px;
+      min-width:0;
+      color:#f4f7fd;
+      font-size:.76rem;
+      font-weight:800;
+      line-height:1.15;
+    }
+    .compact-team{
+      display:flex;
+      align-items:center;
+      gap:5px;
+      min-width:0;
+      flex:1 1 0;
+    }
+    .compact-team.away{justify-content:flex-end;text-align:right;}
+    .compact-team img{width:19px;height:19px;object-fit:contain;flex:0 0 19px;}
+    .compact-team-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+    .compact-v{flex:0 0 auto;color:#7188aa;font-size:.62rem;font-weight:950;text-transform:uppercase;}
+    .compact-more{
+      grid-column:1/-1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:6px 10px;
+      border-top:1px solid rgba(255,255,255,.045);
+      color:#89a1c3;
+      text-decoration:none;
+      font-size:.66rem;
+      font-weight:850;
+      letter-spacing:.04em;
+    }
+    @media(max-width:700px){
+      .compact-today{margin-bottom:10px;border-radius:16px;}
+      .compact-today-head{padding:9px 11px;}
+      .compact-today-title{font-size:.66rem;letter-spacing:.11em;}
+      .compact-today-summary{font-size:.53rem;gap:5px;}
+      .compact-today-list{grid-template-columns:1fr;}
+      .compact-fixture{
+        grid-template-columns:44px 30px minmax(0,1fr);
+        min-height:39px;
+        padding:6px 10px;
+        gap:6px;
+      }
+      .compact-fixture:nth-child(-n+2){border-top:1px solid rgba(255,255,255,.045);}
+      .compact-fixture:first-child{border-top:0;}
+      .compact-fixture:nth-child(even){border-left:0;}
+      .compact-fixture-status{min-width:40px;font-size:.62rem;padding:4px;}
+      .compact-comp{width:29px;font-size:.52rem;}
+      .compact-teams{font-size:.72rem;gap:4px;}
+      .compact-team{gap:4px;}
+      .compact-team img{width:18px;height:18px;flex-basis:18px;}
+      .compact-v{font-size:.58rem;}
+    }
+  </style>
+
+  <style id="v125-desktop-today-refinement">
+    @media(min-width:701px){
+      .compact-today-list{
+        column-gap:12px;
+        row-gap:7px;
+        padding:8px 10px 10px;
+      }
+      .compact-fixture{
+        min-height:54px;
+        padding:6px 10px;
+        border:1px solid rgba(91,137,207,.12) !important;
+        border-radius:11px;
+        background:rgba(7,19,42,.34);
+      }
+      .compact-fixture:nth-child(-n+2),
+      .compact-fixture:nth-child(even){
+        border:1px solid rgba(91,137,207,.12) !important;
+      }
+      .compact-fixture:hover{
+        border-color:rgba(91,151,228,.25) !important;
+        background:rgba(19,43,82,.38);
+      }
+      .compact-teams{
+        display:grid;
+        grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr);
+        gap:6px;
+      }
+      .compact-team{gap:6px;}
+      .compact-team-copy{
+        display:flex;
+        flex-direction:column;
+        min-width:0;
+        gap:2px;
+      }
+      .compact-team.away .compact-team-copy{align-items:flex-end;}
+      .compact-owner{
+        display:block;
+        max-width:100%;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        color:#7088aa;
+        font-size:.56rem;
+        font-weight:650;
+        line-height:1.05;
+      }
+      .compact-v{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        align-self:stretch;
+      }
+      .matchday-head-grid .md-head-item{justify-content:center;}
+    }
+    @media(max-width:700px){
+      .compact-owner{display:none;}
+      .compact-team-copy{display:contents;}
+    }
+  </style>
+
+  <style id="v123-header-tools-layout">
+    .header-tools{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      align-items:stretch;
+      gap:8px;
+      width:100%;
+      min-width:0;
+    }
+    .header-tools .top-search{
+      width:100% !important;
+      min-width:0;
+      margin:0 !important;
+    }
+    .header-tools .top-search input{min-width:0;}
+    .header-tools .header-quick-link{
+      width:100%;
+      min-width:0;
+      min-height:100%;
+      padding:7px 9px;
+      gap:6px;
+      white-space:nowrap;
+      box-shadow:none;
+    }
+    .header-tools .header-nav-badge{
+      flex:0 0 auto;
+      padding:3px 5px;
+      font-size:.50rem;
+    }
+    @media(max-width:700px){
+      .dashboard-header .title-top-row{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+      }
+      .dashboard-header .main-title{order:1;}
+      .dashboard-header .matchday-strip{order:2;width:100%;}
+      .dashboard-header .header-tools{order:3;width:100%;margin-top:7px;}
+      .header-tools .header-quick-link{
+        min-height:35px;
+        padding:7px 6px;
+        gap:4px;
+        font-size:.59rem;
+        letter-spacing:.055em;
+      }
+      .header-tools .header-nav-badge{
+        font-size:.47rem;
+        padding:3px 4px;
+      }
+      .header-tools .top-search input{font-size:.70rem;}
+    }
+  </style>
+
+
+  <style id="v126-expandable-live-fixture-details">
+    .compact-fixture-toggle{
+      appearance:none;
+      -webkit-appearance:none;
+      width:100%;
+      margin:0;
+      font:inherit;
+      text-align:left;
+      cursor:pointer;
+      grid-template-columns:47px 32px minmax(0,1fr) 15px;
+    }
+    .compact-expand-icon{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#6f88ab;
+      font-size:.78rem;
+      font-weight:900;
+      line-height:1;
+      transform:translateY(-1px);
+      transition:transform .15s ease,color .15s ease;
+    }
+    .compact-fixture-toggle.is-expanded .compact-expand-icon{
+      transform:rotate(180deg) translateY(1px);
+      color:#a8c0e4;
+    }
+    .compact-v.has-score{
+      min-width:26px;
+      color:#f6fbff;
+      font-size:.68rem;
+      letter-spacing:.02em;
+    }
+    .compact-fixture-details{
+      grid-column:1/-1;
+      display:grid;
+      gap:5px;
+      margin-top:5px;
+      padding:7px 2px 1px;
+      border-top:1px solid rgba(112,153,215,.12);
+      color:#b7c7de;
+      font-size:.58rem;
+      line-height:1.35;
+      text-align:left;
+    }
+    .compact-fixture-details[hidden]{display:none !important;}
+    .compact-detail-row{
+      display:grid;
+      grid-template-columns:68px minmax(0,1fr);
+      align-items:start;
+      gap:8px;
+      min-width:0;
+    }
+    .compact-detail-label{
+      color:#627c9f;
+      font-size:.50rem;
+      font-weight:950;
+      letter-spacing:.09em;
+      white-space:nowrap;
+    }
+    .compact-detail-managers{display:none;}
+    .compact-goal-sides{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      gap:5px 12px;
+      min-width:0;
+    }
+    .compact-goal-sides span{min-width:0;overflow-wrap:anywhere;}
+    .compact-goal-sides b{color:#d9e6f8;font-weight:850;}
+    .compact-goal-unresolved{grid-column:1/-1;color:#8ea5c4;}
+    .compact-detail-muted{color:#778faa;font-weight:650;}
+    .compact-stat-values{
+      display:flex;
+      align-items:center;
+      gap:9px;
+      min-width:0;
+    }
+    .compact-stat-values strong{
+      color:#edf6ff;
+      font-size:.64rem;
+      font-weight:950;
+      letter-spacing:.03em;
+    }
+    .compact-stat-secondary{
+      color:#8ba1bd;
+      font-size:.52rem;
+      font-weight:850;
+      letter-spacing:.055em;
+      white-space:nowrap;
+    }
+    .compact-live-clock{
+      justify-self:end;
+      color:#ff7688;
+      font-size:.50rem;
+      font-weight:950;
+      letter-spacing:.08em;
+    }
+    @media(min-width:701px){
+      .compact-fixture-toggle.is-expanded{
+        background:rgba(19,43,82,.46);
+        border-color:rgba(91,151,228,.25) !important;
+      }
+    }
+    @media(max-width:700px){
+      .compact-fixture-toggle{
+        grid-template-columns:44px 30px minmax(0,1fr) 14px;
+      }
+      .compact-fixture-toggle.is-expanded{
+        background:rgba(20,43,80,.28);
+      }
+      .compact-fixture-details{
+        margin-top:4px;
+        padding:7px 1px 2px;
+        gap:6px;
+        font-size:.57rem;
+      }
+      .compact-detail-row{
+        grid-template-columns:58px minmax(0,1fr);
+        gap:7px;
+      }
+      .compact-detail-managers{display:grid;}
+      .compact-manager-pair{
+        display:grid;
+        grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+        gap:10px;
+        color:#a7bad4;
+        font-weight:750;
+      }
+      .compact-manager-pair span:last-child{text-align:right;}
+      .compact-goal-sides{
+        grid-template-columns:1fr;
+        gap:3px;
+      }
+      .compact-goal-unresolved{grid-column:auto;}
+      .compact-stat-values{gap:7px;flex-wrap:wrap;}
+      .compact-stat-secondary{font-size:.50rem;}
+      .compact-live-clock{font-size:.48rem;}
+    }
+  </style>
+
+  <style id="v128-easter-egg-and-mobile-fixture-fix">
+    /* Keep the anthem controls as an Easter egg: no hint text or music-note badge. */
+    .header-tools{
+      grid-template-columns:minmax(0,1fr);
+    }
+    .anthem-btn{
+      position:relative !important;
+      overflow:visible !important;
+      animation:none !important;
+    }
+    .anthem-btn::after{content:none !important;display:none !important;}
+
+    /* A restrained halo is the only visual clue that the competition emblems are interactive. */
+    .anthem-ucl{
+      box-shadow:
+        0 0 0 1px rgba(83,216,255,.12),
+        0 0 14px rgba(65,207,255,.20),
+        0 0 28px rgba(42,154,255,.09) !important;
+      transition:box-shadow .18s ease,transform .18s ease,filter .18s ease;
+    }
+    .anthem-uel{
+      box-shadow:
+        0 0 0 1px rgba(247,181,98,.12),
+        0 0 14px rgba(247,181,98,.18),
+        0 0 28px rgba(225,125,50,.08) !important;
+      transition:box-shadow .18s ease,transform .18s ease,filter .18s ease;
+    }
+    .anthem-ucl:hover,.anthem-ucl:focus-visible,.anthem-ucl.is-playing{
+      box-shadow:
+        0 0 0 1px rgba(104,226,255,.28),
+        0 0 18px rgba(65,207,255,.34),
+        0 0 34px rgba(42,154,255,.15) !important;
+      filter:brightness(1.07);
+    }
+    .anthem-uel:hover,.anthem-uel:focus-visible,.anthem-uel.is-playing{
+      box-shadow:
+        0 0 0 1px rgba(255,198,126,.27),
+        0 0 18px rgba(247,181,98,.31),
+        0 0 34px rgba(225,125,50,.14) !important;
+      filter:brightness(1.07);
+    }
+
+    /* Buttons inherit a white user-agent background on some mobile browsers unless explicitly reset. */
+    .compact-fixture-toggle{
+      background:transparent !important;
+      color:inherit !important;
+      border-left:0;
+      border-right:0;
+      border-bottom:0;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .compact-fixture-toggle:focus-visible{
+      outline:1px solid rgba(91,151,228,.45);
+      outline-offset:-2px;
+    }
+
+    @media(max-width:700px){
+      /* With Match Centre and the anthem hint gone, let search reclaim the row rather than leave a dead half. */
+      .dashboard-header .header-tools{grid-template-columns:1fr;}
+      .header-tools .top-search{width:100% !important;}
+      .compact-fixture-toggle{
+        background:rgba(7,19,42,.20) !important;
+      }
+      .compact-fixture-toggle.is-expanded{
+        background:rgba(20,43,80,.34) !important;
+      }
+    }
+  </style>
+
+
+  <style id="v130-desktop-search-mobile-details">
+    .compact-detail-desktop{display:grid;gap:5px;}
+    /* Desktop has enough horizontal room for search; mobile stays deliberately search-free. */
+    @media(min-width:701px){
+      .dashboard-header .title-top-row{
+        display:grid !important;
+        grid-template-columns:max-content minmax(190px,1fr) max-content !important;
+        align-items:center !important;
+        gap:16px !important;
+      }
+      .dashboard-header .main-title{
+        grid-column:1 !important;
+        margin:0 !important;
+      }
+      .dashboard-header .header-tools{
+        grid-column:2 !important;
+        display:block !important;
+        width:100% !important;
+        max-width:360px !important;
+        justify-self:stretch !important;
+        margin:0 !important;
+      }
+      .dashboard-header .header-tools .top-search{
+        display:flex !important;
+        width:100% !important;
+        margin:0 !important;
+      }
+      .dashboard-header .matchday-strip{
+        grid-column:3 !important;
+        justify-self:end !important;
+        width:auto !important;
+        margin:0 !important;
+      }
+      .compact-detail-mobile{display:none !important;}
+    }
+
+    @media(max-width:700px){
+      .dashboard-header .title-top-row{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+      }
+      .dashboard-header .main-title{order:1 !important;}
+      .dashboard-header .matchday-strip{order:2 !important;width:100% !important;}
+      .dashboard-header .header-tools{
+        display:none !important;
+      }
+
+      /* Make the expanded fixture feel like one compact comparison card rather than loose label/value rows. */
+      .compact-fixture-toggle.is-expanded{
+        padding-bottom:0 !important;
+        border-color:rgba(88,145,223,.28) !important;
+        background:rgba(15,36,70,.34) !important;
+      }
+      .compact-fixture-details{
+        margin:6px -10px 0 !important;
+        padding:8px 10px 9px !important;
+        gap:0 !important;
+        border-top:1px solid rgba(112,153,215,.15) !important;
+        border-radius:0 0 11px 11px;
+        background:linear-gradient(180deg,rgba(10,27,55,.62),rgba(6,20,44,.74));
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.012);
+      }
+      .compact-detail-desktop{display:none !important;}
+      .compact-detail-mobile{
+        display:grid;
+        width:100%;
+        min-width:0;
+      }
+      .compact-mobile-row{
+        display:grid;
+        grid-template-columns:minmax(0,1fr) 62px minmax(0,1fr);
+        align-items:center;
+        gap:7px;
+        min-height:30px;
+        padding:5px 1px;
+        border-bottom:1px solid rgba(116,151,201,.09);
+      }
+      .compact-mobile-row:last-of-type{border-bottom:0;}
+      .compact-mobile-label{
+        color:#657f9f;
+        font-size:.46rem;
+        font-weight:950;
+        letter-spacing:.09em;
+        line-height:1.05;
+        text-align:center;
+        text-transform:uppercase;
+        white-space:nowrap;
+      }
+      .compact-mobile-side{
+        min-width:0;
+        color:#bfd0e7;
+        font-size:.55rem;
+        font-weight:760;
+        line-height:1.22;
+        overflow-wrap:anywhere;
+      }
+      .compact-mobile-side.home{text-align:left;}
+      .compact-mobile-side.away{text-align:right;}
+      .compact-mobile-manager{
+        color:#d8e5f5;
+        font-size:.57rem;
+        font-weight:850;
+      }
+      .compact-mobile-goal-list{
+        display:flex;
+        flex-direction:column;
+        gap:2px;
+      }
+      .compact-mobile-goal-list.away{align-items:flex-end;}
+      .compact-mobile-goal{
+        display:block;
+        max-width:100%;
+      }
+      .compact-mobile-stat{
+        color:#f0f6ff;
+        font-size:.67rem;
+        font-weight:950;
+        letter-spacing:.025em;
+      }
+      .compact-mobile-empty{color:#7188a8;font-weight:800;}
+      .compact-mobile-note{
+        display:block;
+        padding-top:6px;
+        color:#7088a8;
+        font-size:.47rem;
+        font-weight:700;
+        line-height:1.2;
+        text-align:center;
+        letter-spacing:.02em;
+      }
+      .compact-mobile-live{
+        color:#ff7587;
+        font-weight:900;
+      }
+    }
+  </style>
+
+
+  <style id="v131-unified-match-comparison-xg">
+    /* One comparison layout on both desktop and mobile. */
+    .compact-detail-desktop,.compact-detail-mobile{display:none !important;}
+    .compact-detail-compare{
+      display:grid;
+      width:100%;
+      min-width:0;
+    }
+    .compact-mobile-row{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);
+      align-items:center;
+      gap:9px;
+      min-height:28px;
+      padding:4px 2px;
+      border-bottom:1px solid rgba(116,151,201,.085);
+    }
+    .compact-mobile-row:last-of-type{border-bottom:0;}
+    .compact-mobile-label{
+      color:#657f9f;
+      font-size:.47rem;
+      font-weight:950;
+      letter-spacing:.09em;
+      line-height:1.05;
+      text-align:center;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .compact-mobile-side{
+      min-width:0;
+      color:#bfd0e7;
+      font-size:.56rem;
+      font-weight:760;
+      line-height:1.22;
+      overflow-wrap:anywhere;
+    }
+    .compact-mobile-side.home{text-align:left;}
+    .compact-mobile-side.away{text-align:right;}
+    .compact-mobile-manager{color:#d8e5f5;font-weight:850;}
+    .compact-mobile-goal-list{display:flex;flex-direction:column;gap:2px;}
+    .compact-mobile-goal-list.away{align-items:flex-end;}
+    .compact-mobile-goal{display:block;max-width:100%;}
+    .compact-mobile-stat{
+      color:#f0f6ff;
+      font-size:.68rem;
+      font-weight:950;
+      letter-spacing:.025em;
+    }
+    .compact-xg-value{color:#d8f5e9;}
+    .compact-mobile-empty{color:#7188a8;font-weight:800;}
+    .compact-mobile-note{
+      display:block;
+      padding-top:6px;
+      color:#7088a8;
+      font-size:.47rem;
+      font-weight:700;
+      line-height:1.2;
+      text-align:center;
+      letter-spacing:.02em;
+    }
+    .compact-mobile-live{color:#ff7587;font-weight:900;}
+
+    @media(min-width:701px){
+      .compact-fixture-details{
+        margin:7px -10px -2px !important;
+        padding:8px 11px 9px !important;
+        gap:0 !important;
+        border-top:1px solid rgba(112,153,215,.15) !important;
+        border-radius:0 0 10px 10px;
+        background:linear-gradient(180deg,rgba(10,27,55,.54),rgba(6,20,44,.66));
+      }
+      .compact-mobile-row{
+        grid-template-columns:minmax(0,1fr) 84px minmax(0,1fr);
+        gap:12px;
+        min-height:29px;
+        padding:4px 3px;
+      }
+      .compact-mobile-label{font-size:.48rem;}
+      .compact-mobile-side{font-size:.57rem;}
+      .compact-mobile-stat{font-size:.70rem;}
+      .compact-mobile-note{font-size:.48rem;}
+    }
+
+    @media(max-width:700px){
+      .compact-fixture-details{
+        margin:6px -10px 0 !important;
+        padding:8px 10px 9px !important;
+        gap:0 !important;
+      }
+      .compact-mobile-row{
+        grid-template-columns:minmax(0,1fr) 62px minmax(0,1fr);
+        gap:7px;
+        min-height:30px;
+        padding:5px 1px;
+      }
+      .compact-mobile-label{font-size:.46rem;}
+      .compact-mobile-side{font-size:.55rem;}
+      .compact-mobile-manager{font-size:.57rem;}
+      .compact-mobile-stat{font-size:.67rem;}
+    }
+  </style>
+
+
+  <style id="v132-goalscorers-label-fix">
+    .compact-compare-goals .compact-mobile-label{
+      letter-spacing:.045em;
+      white-space:nowrap;
+    }
+    @media(max-width:430px){
+      .compact-compare-goals .compact-mobile-label{font-size:.42rem;}
+    }
+  </style>
+
+
+  <style id="v134-centred-fixture-status">
+    /* The top line now mirrors the expanded comparison: home | centred match state | away. */
+    .compact-fixture-toggle{
+      grid-template-columns:minmax(0,1fr) 15px !important;
+    }
+    .compact-fixture-toggle > .compact-teams{
+      grid-column:1;
+      width:100%;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 84px minmax(0,1fr);
+      align-items:center;
+      gap:10px;
+    }
+    .compact-fixture-toggle > .compact-expand-icon{grid-column:2;}
+    .compact-match-centre{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      min-width:0;
+      gap:2px;
+      text-align:center;
+      white-space:nowrap;
+    }
+    .compact-centre-status{
+      font-size:.49rem;
+      font-weight:950;
+      letter-spacing:.075em;
+      line-height:1.05;
+      text-transform:uppercase;
+      color:#8ba3c4;
+    }
+    .compact-match-centre.upcoming.ucl .compact-centre-status{color:#55d9ff;}
+    .compact-match-centre.upcoming.uel .compact-centre-status{color:#f3b46d;}
+    .compact-match-centre.live .compact-centre-status{
+      color:#ff7587;
+      text-shadow:0 0 10px rgba(255,83,108,.18);
+    }
+    .compact-match-centre.ft .compact-centre-status{color:#8ea4c0;}
+    .compact-centre-score{
+      color:#f6fbff;
+      font-size:.72rem;
+      font-weight:950;
+      letter-spacing:.035em;
+      line-height:1;
+    }
+    @media(max-width:700px){
+      .compact-fixture-toggle{grid-template-columns:minmax(0,1fr) 14px !important;}
+      .compact-fixture-toggle > .compact-teams{
+        grid-template-columns:minmax(0,1fr) 68px minmax(0,1fr);
+        gap:6px;
+      }
+      .compact-centre-status{font-size:.44rem;letter-spacing:.055em;}
+      .compact-centre-score{font-size:.67rem;}
+    }
+    @media(max-width:390px){
+      .compact-fixture-toggle > .compact-teams{
+        grid-template-columns:minmax(0,1fr) 62px minmax(0,1fr);
+        gap:5px;
+      }
+      .compact-centre-status{font-size:.41rem;letter-spacing:.04em;}
+    }
+  </style>
+
+
+  <style id="v135-bigger-centred-kickoff-live">
+    /* Make the centre state read like part of the scoreline, not tiny metadata. */
+    .compact-fixture-toggle > .compact-teams{
+      grid-template-columns:minmax(0,1fr) 96px minmax(0,1fr);
+    }
+    .compact-centre-status{
+      font-size:.72rem;
+      font-weight:950;
+      letter-spacing:.02em;
+      line-height:1;
+    }
+    .compact-match-centre.upcoming .compact-centre-status{font-size:.78rem;}
+    .compact-match-centre.live .compact-centre-status{font-size:.72rem;}
+    .compact-match-centre.ft .compact-centre-status{font-size:.70rem;}
+    .compact-centre-score{font-size:.82rem;}
+
+    @media(max-width:700px){
+      .compact-fixture-toggle > .compact-teams{
+        grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);
+        gap:6px;
+      }
+      .compact-centre-status{font-size:.63rem;letter-spacing:.01em;}
+      .compact-match-centre.upcoming .compact-centre-status{font-size:.70rem;}
+      .compact-match-centre.live .compact-centre-status{font-size:.65rem;}
+      .compact-match-centre.ft .compact-centre-status{font-size:.63rem;}
+      .compact-centre-score{font-size:.76rem;}
+    }
+    @media(max-width:390px){
+      .compact-fixture-toggle > .compact-teams{
+        grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr);
+        gap:5px;
+      }
+      .compact-match-centre.upcoming .compact-centre-status{font-size:.66rem;}
+      .compact-match-centre.live .compact-centre-status{font-size:.61rem;}
+    }
+  </style>
+
+
+  <style id="v142-static-today-managers-mobile-live-red">
+    /* Today's Games: manager names are always visible; fixtures no longer expand. */
+    .compact-fixture-toggle{
+      grid-template-columns:minmax(0,1fr) !important;
+      cursor:default !important;
+    }
+    .compact-fixture-toggle > .compact-teams{
+      grid-column:1 !important;
+    }
+    .compact-fixture-static:hover{
+      transform:none !important;
+    }
+    .compact-expand-icon,
+    .compact-fixture-details{
+      display:none !important;
+    }
+
+    @media(max-width:700px){
+      .compact-team-copy{
+        display:flex !important;
+        flex-direction:column;
+        min-width:0;
+        gap:2px;
+      }
+      .compact-team.away .compact-team-copy{align-items:flex-end;}
+      .compact-owner{
+        display:block !important;
+        max-width:100%;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        color:#7088aa;
+        font-size:.50rem;
+        font-weight:650;
+        line-height:1.05;
+      }
+      .compact-fixture{
+        min-height:48px;
+        padding-top:7px;
+        padding-bottom:7px;
+      }
+      /* Keep the mobile matchday LIVE treatment consistent with desktop. */
+      .matchday-chip.is-live .state{
+        color:#ff4b60 !important;
+        text-shadow:0 0 9px rgba(255,54,76,.72) !important;
+      }
+      .matchday-chip.is-live .state:before{
+        background:#ff4258 !important;
+        box-shadow:0 0 5px rgba(255,55,76,1),0 0 12px rgba(255,55,76,.88) !important;
+      }
+    }
+  </style>
+
+
+  <style id="v148-mobile-leaderboard-rebuild">
+    /* v148: mobile-only leaderboard rebuilt as an isolated component.
+       No legacy mobile-card/mobile-summary classes are used, so historic
+       leaderboard CSS cannot reflow these columns. Desktop is untouched. */
+    @media(max-width:700px){
+      #mobile-standings{
+        display:block !important;
+      }
+      .v148-mobile-leaderboard{
+        width:100%;
+        overflow:hidden;
+        border:1px solid rgba(68,120,202,.23);
+        border-radius:16px;
+        background:
+          radial-gradient(circle at 8% 20%,rgba(37,114,255,.045),transparent 34%),
+          linear-gradient(135deg,rgba(7,19,43,.96),rgba(5,16,37,.98));
+        box-shadow:0 10px 28px rgba(2,8,22,.18),inset 0 0 0 1px rgba(255,255,255,.012);
+      }
+      .v148-header,
+      .v148-row{
+        display:grid !important;
+        grid-template-columns:48px minmax(0,1fr) 48px 48px 44px !important;
+        column-gap:6px !important;
+        align-items:center !important;
+        width:100%;
+        min-width:0;
+        padding-left:9px !important;
+        padding-right:9px !important;
+      }
+      .v148-header{
+        min-height:28px;
+        padding-top:2px;
+        border-bottom:1px solid rgba(255,255,255,.055);
+        color:#7588a8;
+        font-size:.48rem;
+        font-weight:950;
+        letter-spacing:.12em;
+        line-height:1;
+        text-transform:uppercase;
+      }
+      .v148-header span:nth-child(3),
+      .v148-header span:nth-child(4),
+      .v148-header span:nth-child(5){text-align:center}
+      .v148-header .ucl{color:#55d9ff}
+      .v148-header .uel{color:#f3b46d}
+
+      .v148-entry{
+        display:block !important;
+        margin:0 !important;
+        padding:0 !important;
+        border:0 !important;
+        border-bottom:1px solid rgba(255,255,255,.052) !important;
+        border-radius:0 !important;
+        background:transparent !important;
+        box-shadow:none !important;
+        overflow:hidden;
+      }
+      .v148-entry:last-child{border-bottom:0 !important}
+      .v148-entry::before{display:none !important}
+      .v148-row{
+        list-style:none !important;
+        min-height:58px;
+        padding-top:6px !important;
+        padding-bottom:6px !important;
+        cursor:pointer;
+        user-select:none;
+        background:transparent !important;
+      }
+      .v148-row::-webkit-details-marker{display:none}
+      .v148-row::marker{content:""}
+      .v148-entry[open] > .v148-row{background:rgba(30,59,105,.09) !important}
+
+      .v148-rank{
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+        min-width:0;
+      }
+      .v148-rank .rank-box{
+        width:42px !important;
+        min-width:42px !important;
+        min-height:42px !important;
+        height:42px !important;
+        margin:0 !important;
+        padding:3px 2px !important;
+        gap:2px !important;
+        border-radius:10px !important;
+        box-shadow:none !important;
+      }
+      .v148-rank .rank-number{
+        font-size:.90rem !important;
+        line-height:1 !important;
+      }
+      .v148-rank .rank-prize{
+        font-size:.34rem !important;
+        line-height:1 !important;
+      }
+
+      .v148-name{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        min-width:0;
+        color:#f5f8ff;
+        font-size:.72rem;
+        font-weight:950;
+        letter-spacing:.018em;
+        line-height:1.02;
+        text-transform:uppercase;
+      }
+      .v148-name > span{
+        display:block;
+        min-width:0;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+
+      .v148-club-score{
+        position:relative;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:4px;
+        width:48px;
+        min-width:0;
+        color:#eef5ff;
+        line-height:1;
+      }
+      .v148-club-score.ucl::after{
+        content:"+";
+        position:absolute;
+        right:-8px;
+        top:50%;
+        transform:translateY(-50%);
+        color:#627695;
+        font-size:.62rem;
+        font-weight:950;
+        opacity:.8;
+        pointer-events:none;
+      }
+      .v148-club-crest{
+        display:block !important;
+        width:21px !important;
+        height:21px !important;
+        min-width:21px !important;
+        flex:0 0 21px !important;
+        margin:0 !important;
+        padding:0 !important;
+        border:0 !important;
+        border-radius:0 !important;
+        background:transparent !important;
+        object-fit:contain;
+        box-shadow:none !important;
+      }
+      .v148-club-score strong{
+        min-width:10px;
+        color:#f4f8ff;
+        font-size:.76rem;
+        font-weight:950;
+        text-align:center;
+        line-height:1;
+      }
+      .v148-club-score.ucl strong{color:#e9fbff}
+      .v148-club-score.uel strong{color:#fff3e7}
+
+      .v148-total{
+        display:grid;
+        place-items:center;
+        width:42px;
+        min-width:42px;
+        height:42px;
+        border:1px solid rgba(255,255,255,.06);
+        border-radius:10px;
+        background:rgba(255,255,255,.012);
+        color:#fff;
+        font-size:1rem;
+        font-weight:950;
+        line-height:1;
+        text-align:center;
+      }
+      .v148-details{
+        border-top:1px solid rgba(255,255,255,.055);
+        background:rgba(4,14,31,.46);
+      }
+      .v148-entry:not([open]) > .v148-details{display:none}
+    }
+
+    @media(max-width:390px){
+      .v148-header,
+      .v148-row{
+        grid-template-columns:44px minmax(0,1fr) 44px 44px 40px !important;
+        column-gap:4px !important;
+        padding-left:7px !important;
+        padding-right:7px !important;
+      }
+      .v148-rank .rank-box{
+        width:40px !important;
+        min-width:40px !important;
+        height:40px !important;
+        min-height:40px !important;
+      }
+      .v148-rank .rank-number{font-size:.86rem !important}
+      .v148-name{font-size:.68rem}
+      .v148-club-score{width:44px;gap:3px}
+      .v148-club-crest{
+        width:19px !important;
+        height:19px !important;
+        min-width:19px !important;
+        flex-basis:19px !important;
+      }
+      .v148-club-score strong{font-size:.72rem}
+      .v148-club-score.ucl::after{right:-6px}
+      .v148-total{
+        width:38px;
+        min-width:38px;
+        height:40px;
+        font-size:.94rem;
+      }
+      .v148-row{min-height:55px}
+    }
+  </style>
+
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="dashboard-header shell">
+    <div class="title-top-row">
+      <h1 class="main-title"><span class="main-title-text">EURO GOAL RUSH 26/27</span></h1>
+
+      <div class="header-tools" aria-label="Search">
+        <label class="search top-search desktop-top-search">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="Search manager or club" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="matchday-strip">
+        <div class="matchday-chip ucl-chip" id="ucl-matchday">
+          <div class="chip-copy">
+            <div class="chip-topline">
+              <span class="comp">UCL</span>
+              <span class="state" id="ucl-state">NEXT</span>
+            </div>
+            <strong id="ucl-date">MD1 · 8–10 SEP</strong>
+          </div>
+          <button class="anthem-btn anthem-ucl" id="ucl-anthem-btn" type="button" aria-label="Play Champions League anthem" aria-pressed="false" data-anthem-name="Champions League" title="Play Champions League anthem">
+            <img class="anthem-logo anthem-logo-ucl" src="../assets/ucl-logo.png?v=78" alt="" aria-hidden="true">
+          </button>
+        </div>
+
+        <div class="matchday-chip uel-chip" id="uel-matchday">
+          <div class="chip-copy">
+            <div class="chip-topline">
+              <span class="comp">UEL</span>
+              <span class="state" id="uel-state">NEXT</span>
+            </div>
+            <strong id="uel-date">MD1 · 16–17 SEP</strong>
+          </div>
+          <button class="anthem-btn anthem-uel" id="uel-anthem-btn" type="button" aria-label="Play Europa League anthem" aria-pressed="false" data-anthem-name="Europa League" title="Play Europa League anthem">
+            <img class="anthem-logo anthem-logo-uel" src="../assets/uel-logo.png?v=78" alt="" aria-hidden="true">
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="header-divider" aria-hidden="true"></div>
+  </header>
+
+  <main class="shell">
+
+    <section class="compact-today" id="compact-today" hidden aria-label="Today's fixtures">
+      <div class="compact-today-head">
+        <div class="compact-today-title"><span class="compact-today-dot" aria-hidden="true"></span><span>TODAY'S GAMES</span></div>
+        <div class="compact-today-summary" id="compact-today-summary">—</div>
+      </div>
+      <div class="compact-today-list" id="compact-today-list"></div>
+    </section>
+
+<section class="standings-card">
+<div class="desktop-table">
+        <table class="standings-table">
+          <thead>
+            <tr>
+              <th>Manager</th>
+              <th>Teams</th>
+              <th class="fixture-header">
+                <div class="matchday-head-grid" aria-label="Matchdays">
+                  <span class="md-head-item"><b>MD1</b></span>
+                  <span class="md-head-item"><b>MD2</b></span>
+                  <span class="md-head-item"><b>MD3</b></span>
+                  <span class="md-head-item"><b>MD4</b></span>
+                  <span class="md-head-item"><b>MD5</b></span>
+                  <span class="md-head-item"><b>MD6</b></span>
+                  <span class="md-head-item"><b>MD7</b></span>
+                  <span class="md-head-item"><b>MD8</b></span>
+                </div>
+              </th>
+              <th class="num">GOALS</th>
+              <th class="num combined-head">Total</th>
+            </tr>
+          </thead>
+          <tbody id="standings-body"></tbody>
+        </table>
+      </div>
+
+      <div id="mobile-standings" class="mobile-standings"></div>
+    </section>
+
+    <div class="header-divider rules-section-divider" aria-hidden="true"></div>
+
+    <section class="rules-grid rules-grid-v19" aria-label="Competition rules">
+      <article class="rule-card-small format-card">
+        <span class="rule-icon">⚽</span>
+        <div>
+          <span class="rule-kicker">FORMAT</span>
+          <h3>36 entrants · 72 teams · 16 scoring fixtures</h3>
+          <p>Each entrant has been allocated one Champions League (UCL) club and one Europa League (UEL) club. Each club will contest eight league-phase fixtures between September and January, providing every entrant with 16 scoring fixtures in total. Only league-phase matches are included in the competition.</p>
+        </div>
+      </article>
+
+      <article class="rule-card-small scoring-card">
+        <span class="rule-icon">＋</span>
+        <div>
+          <span class="rule-kicker">SCORING</span>
+          <h3>Goals scored + goals conceded</h3>
+          <p>For every fixture, all goals scored and all goals conceded by an entrant's allocated club are added to that entrant's total. For example, a 2-2 draw contributes 4 goals. The Champions League (UCL) and Europa League (UEL) totals are combined, and the entrant with the highest aggregate total after all 16 fixtures is the winner. Standings are updated as results are recorded.</p>
+        </div>
+      </article>
+
+      <article class="rule-card-small prize-card">
+        <span class="rule-icon">💶</span>
+        <div class="prize-content">
+          <span class="rule-kicker">PRIZE POT</span>
+          <h3>€720 total</h3>
+          <p class="prize-note">Entry fee: €20 per entrant. Prizes are awarded to the top three finishing positions. Dead-heat rules apply: where entrants are tied across one or more prize positions, the prize money attached to those positions will be combined and divided equally between the tied entrants.</p>
+          <div class="prize-split">
+            <span><b>1st</b> €400</span>
+            <span><b>2nd</b> €200</span>
+            <span><b>3rd</b> €120</span>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+
+  <div class="team-modal" id="team-modal" hidden>
+    <div class="team-modal-backdrop" data-close-team-modal></div>
+    <section class="team-modal-card" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
+      <button class="team-modal-close" type="button" data-close-team-modal aria-label="Close team fixtures">×</button>
+      <div id="team-modal-content"></div>
+    </section>
+  </div>
+
+
+
+  <div class="manager-modal" id="manager-modal" hidden>
+    <div class="manager-modal-backdrop" data-close-manager-modal></div>
+    <section class="manager-modal-card" role="dialog" aria-modal="true" aria-labelledby="manager-modal-title">
+      <button class="manager-modal-close" type="button" data-close-manager-modal aria-label="Close entrant summary">×</button>
+      <div id="manager-modal-content"></div>
+    </section>
+  </div>
+
+  <footer class="shell footer">
+    <span>2026/27 European Goal Rush</span>
+  </footer>
+
+  <script src="app.js?v=148" defer></script>
+</body>
+</html>
