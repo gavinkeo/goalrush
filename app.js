@@ -1678,34 +1678,39 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
       ${mobileFixtureGrid(team, comp)}
     </div>`;
 
-  const managerName = desktopManagerNameParts(entry.entrant);
-  const scoreCell = (team, comp) => `
-    <span class="mobile-board-team ${comp.toLowerCase()}" title="${esc(team.club)}">
-      <img class="crest mobile-board-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
-      <strong class="mobile-board-goals">${clubScore(team)}</strong>
+  const compactClub = (team, comp) => `
+    <span class="mobile-mini-team ${comp.toLowerCase()}">
+      <img class="crest mini-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      <span class="mini-team-code">${esc(teamAbbr(team))}</span>
+      <span class="mini-team-score">${clubScore(team)}</span>
     </span>`;
 
   return `
-    <details class="mobile-card mobile-board-row" data-entrant="${esc(entry.entrant)}">
-      <summary class="mobile-summary mobile-board-summary" aria-label="${esc(entry.entrant)}, ${esc(rankLabel)}, ${clubScore(entry.ucl)} Champions League goals, ${clubScore(entry.uel)} Europa League goals, ${totalScore(entry)} total">
-        <div class="rank-spot mobile-board-rank">
+    <details class="mobile-card" data-entrant="${esc(entry.entrant)}">
+      <summary class="mobile-summary">
+        <div class="rank-spot">
           ${rankBlock(rank, rankLabel, prizeLabel)}
         </div>
-        <div class="mobile-board-name">
-          ${managerName.first ? `<span>${esc(managerName.first)}</span>` : ""}
-          <span>${esc(managerName.last)}</span>
+        <div class="mobile-manager-wrap">
+          <span class="mobile-manager-name">${esc(entry.entrant)}</span>
+          <div class="mobile-mini-teams">
+            ${compactClub(entry.ucl, "UCL")}
+            <span class="mobile-pair-plus" aria-hidden="true">+</span>
+            ${compactClub(entry.uel, "UEL")}
+          </div>
         </div>
-        ${scoreCell(entry.ucl, "UCL")}
-        <span class="mobile-board-plus" aria-hidden="true">+</span>
-        ${scoreCell(entry.uel, "UEL")}
-        <strong class="mobile-board-total">${totalScore(entry)}</strong>
+        <div class="mobile-combined">
+          <strong>${totalScore(entry)}</strong>
+        </div>
+        <span class="mobile-expand" aria-hidden="true">⌄</span>
       </summary>
-      <div class="mobile-details mobile-board-details">
+      <div class="mobile-details">
         ${row(entry.ucl, "UCL")}
         ${row(entry.uel, "UEL")}
       </div>
     </details>`;
 }
+
 
 function teamModalFixtureRows(team, comp) {
   return fixtureValues(team).map((item, index) => {
@@ -1994,15 +1999,7 @@ function render() {
     )
     .join("");
 
-  mobileEl.innerHTML = `
-    <div class="mobile-leaderboard-head" aria-hidden="true">
-      <span>RANK</span>
-      <span>NAME</span>
-      <span class="ucl">UCL</span>
-      <span></span>
-      <span class="uel">UEL</span>
-      <span>TOTAL</span>
-    </div>` + filtered
+  mobileEl.innerHTML = filtered
     .map(({ entry, rank, rankLabel, prizeLabel }) =>
       mobileCard(entry, rank, rankLabel, prizeLabel)
     )
