@@ -1002,6 +1002,15 @@ function firstCompetitionFixtureDate() {
   return dates[0] || currentLocalIsoDate();
 }
 
+function competitionFixtureDates(comp, throughIso = currentLocalIsoDate()) {
+  const key = String(comp || "").toUpperCase() === "UEL" ? "uel" : "ucl";
+  return [...new Set(entries
+    .flatMap(entry => Array.isArray(entry?.[key]?.fixtures) ? entry[key].fixtures : [])
+    .map(item => String(item?.date || ""))
+    .filter(date => date && date <= throughIso))]
+    .sort();
+}
+
 function currentLocalIsoDate() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -1267,15 +1276,47 @@ function refreshLiveScoreUi() {
   render();
 }
 
+async function fetchEspnScoreboardHistory(comp, throughIso) {
+  // ESPN's scoreboard endpoint is reliable when queried for one match date at a time,
+  // but broad date-range requests can omit older matchdays. That made completed UCL
+  // scores disappear on a later UEL matchday because competition.json intentionally
+  // starts with blank scores. Rebuild history from the exact fixture dates instead.
+  const dates = competitionFixtureDates(comp, throughIso);
+  if (!dates.length) return [];
+
+  const results = await Promise.allSettled(
+    dates.map(async date => {
+      try {
+        return await fetchEspnScoreboard(comp, date, date);
+      } catch (firstError) {
+        // One quick retry protects the historical table from a transient request failure.
+        await new Promise(resolve => window.setTimeout(resolve, 500));
+        return fetchEspnScoreboard(comp, date, date);
+      }
+    })
+  );
+  results.forEach((result, index) => {
+    if (result.status === "rejected") {
+      console.warn(`Historical ${comp} score feed (${dates[index]}):`, result.reason);
+    }
+  });
+  return results.flatMap(result => result.status === "fulfilled" ? result.value : []);
+}
+
 let liveScorePollingStarted = false;
 async function refreshEspnLiveScores({ history = false } = {}) {
   const today = currentLocalIsoDate();
-  const start = history ? firstCompetitionFixtureDate() : today;
   try {
-    const results = await Promise.allSettled([
-      fetchEspnScoreboard("UCL", start, today),
-      fetchEspnScoreboard("UEL", start, today)
-    ]);
+    const results = history
+      ? await Promise.allSettled([
+          fetchEspnScoreboardHistory("UCL", today),
+          fetchEspnScoreboardHistory("UEL", today)
+        ])
+      : await Promise.allSettled([
+          fetchEspnScoreboard("UCL", today, today),
+          fetchEspnScoreboard("UEL", today, today)
+        ]);
+
     const feedMatches = results.flatMap(result => result.status === "fulfilled" ? result.value : []);
     results.filter(result => result.status === "rejected").forEach(result => console.warn("Live score feed:", result.reason));
 
