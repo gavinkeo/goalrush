@@ -486,7 +486,10 @@ function renderHeaderMatchday(comp, schedule) {
   const stateEl = $(`#mc-${key}-state`);
   const dateEl = $(`#mc-${key}-date`);
   if (!result || !chip || !stateEl || !dateEl) return;
-  stateEl.textContent = result.state === "NEXT" ? headerCountdown(result.timing.firstKickoff) : result.state;
+  const nextKickoff = result.timing.fixtures.map(match => match.timestamp).filter(time => Number.isFinite(time) && time > Date.now()).sort((a, b) => a - b)[0];
+  const countdown = result.state === "NEXT" ? result.timing.firstKickoff : result.state === "ROUND" && nextKickoff ? new Date(nextKickoff) : null;
+  stateEl.textContent = countdown ? headerCountdown(countdown) : result.state === "ROUND" ? "UPDATING" : result.state;
+  stateEl.setAttribute("aria-label", countdown ? `Countdown to next ${comp} kickoff` : result.state === "ROUND" ? "Awaiting confirmed results" : result.state);
   dateEl.textContent = formatHeaderMatchday(result.md);
   chip.classList.toggle("is-live", result.state === "LIVE");
 }

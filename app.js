@@ -1723,6 +1723,7 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
           ${rankBlock(rank, rankLabel, prizeLabel)}
         </div>
         <div class="mobile-manager-wrap">
+          <span class="mobile-entry-crests">${[entry.ucl, entry.uel].map(team => `<img class="mobile-entry-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="${esc(team.club)}" onerror="this.src='${PLACEHOLDER_CREST}'">`).join('')}</span>
           <span class="mobile-manager-name">${esc(entry.entrant)}</span>
           <div class="mobile-mini-teams">
             ${compactClub(entry.ucl, "UCL")}
@@ -2033,6 +2034,7 @@ function render() {
   if (!filtered.length) {
     bodyEl.innerHTML = `<tr><td colspan="5">No matches.</td></tr>`;
     mobileEl.innerHTML = `<div class="mobile-card"><div class="mobile-head">No matches.</div></div>`;
+    GoalRushUI.update();
     return;
   }
 
@@ -2206,19 +2208,13 @@ function setMatchday(kind, schedule) {
   const chip = $(`#${kind}-matchday`);
   const stateEl = $(`#${kind}-state`);
 
-  stateEl.textContent =
-    result.state === "NEXT"
-      ? countdownToKickoff(result.timing.firstKickoff)
-      : result.state;
-
-  stateEl.setAttribute(
-    "aria-label",
-    result.state === "NEXT"
-      ? `Countdown to first kickoff of ${kind.toUpperCase()} matchday ${result.md.md}`
-      : result.state === "LIVE"
-        ? `${kind.toUpperCase()} matchday ${result.md.md} is live`
-        : result.state
-  );
+  const nextKickoff = result.timing.fixtures.map(fixtureKickoffDate).filter(date => date && date.getTime() > Date.now()).sort((a, b) => a - b)[0];
+  const countdown = result.state === "NEXT" ? result.timing.firstKickoff : result.state === "ROUND" ? nextKickoff : null;
+  stateEl.textContent = countdown ? countdownToKickoff(countdown) : result.state === "ROUND" ? "UPDATING" : result.state;
+  stateEl.setAttribute("aria-label", countdown
+    ? `Countdown to next kickoff of ${kind.toUpperCase()} matchday ${result.md.md}`
+    : result.state === "LIVE" ? `${kind.toUpperCase()} matchday ${result.md.md} is live`
+    : result.state === "ROUND" ? "Awaiting confirmed results" : result.state);
 
   $(`#${kind}-date`).textContent = formatMD(result.md);
   chip.classList.toggle("is-live", result.state === "LIVE");

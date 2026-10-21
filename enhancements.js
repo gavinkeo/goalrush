@@ -43,6 +43,13 @@ function status(state){
 }
 function update(){
  if(!model)return;
+ const cov=S().coverage(model.entries),pct=cov.total?Math.min(100,cov.finished/cov.total*100):0;
+ const percent=`${pct.toFixed(1)}%`;
+ $('gr-progress-percent').textContent=percent;
+ $('gr-progress-count').innerHTML=`<strong>${cov.finished}</strong> / ${cov.total} matches complete`;
+ $('gr-progress-fill').style.width=`${pct}%`;
+ $('gr-progress-meter').setAttribute('aria-valuenow',pct.toFixed(1));
+ $('gr-progress-meter').setAttribute('aria-valuetext',`${cov.finished} of ${cov.total} matches complete, ${percent}`);
  const e=chosen(),b=$('gr-my-entry');b.hidden=!e;
  if(e){
   const r=model.ranking().find(r=>String(r.entry.id)===selected);

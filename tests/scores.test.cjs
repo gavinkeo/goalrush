@@ -35,5 +35,5 @@ test('live updates preserve finals, accept corrections and apply away orientatio
 });
 test('bundled result pairs agree and reconstruct the saved live standings',()=>{
  const data=JSON.parse(fs.readFileSync('competition.json')),base=JSON.parse(fs.readFileSync('results.json'));S.restore(data.entries,base.records);let count=0;
- S.each(data.entries,(f,t,c)=>{if(!S.isFinal(f))return;count++;const other=data.entries.map(e=>e[c]).find(t2=>t2.club===f.opponent);const reverse=other.fixtures.find(x=>x.opponent===t.club&&x.date===f.date);assert.equal(reverse.score,S.score(f.score).reverse().join('-'));});assert.ok(count>=144);assert.equal(count,Object.keys(base.records).length);
+ S.each(data.entries,(f,t,c)=>{if(!S.isFinal(f))return;count++;const other=data.entries.map(e=>e[c]).find(t2=>t2.club===f.opponent);const reverse=other.fixtures.find(x=>x.opponent===t.club&&x.date===f.date);assert.equal(reverse.score,S.score(f.score).reverse().join('-'));});assert.ok(count>=144);assert.equal(count,Object.keys(base.records).length);const progress=S.coverage(data.entries);assert.equal(progress.finished,count/2);assert.equal(progress.total,288);assert.equal(progress.finished,81);
 });
