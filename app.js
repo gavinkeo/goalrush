@@ -1533,14 +1533,24 @@ function desktopEntrantActivity(entry) {
     .filter(f => f.activity).sort((a,b) => (a.activity === 'live' ? -1 : b.activity === 'live' ? 1 : 0));
 }
 
+function desktopActivityFixture(team, item, opponent) {
+  const away = String(item.venue).toUpperCase() === 'A';
+  const homeTeam = away ? opponent : team, awayTeam = away ? team : opponent;
+  const score = GoalRushScores.score(item.score);
+  const result = score && (item.status === 'live' || GoalRushScores.isFinal(item))
+    ? `${score[away ? 1 : 0]}–${score[away ? 0 : 1]}` : null;
+  return {
+    homeCode:teamAbbr(homeTeam),awayCode:teamAbbr(awayTeam),result,
+    description:`${homeTeam.club} ${result || 'v'} ${awayTeam.club}`
+  };
+}
+
 function desktopActivityMarkup(entry, activity) {
   return activity.map(({comp,item,activity:state}) => {
-    const opponent = fixtureOpponentTeam(item)?.club || item.opponent || opponentFullName(item.code);
-    const home = String(item.venue).toUpperCase() !== 'A';
-    const team = entry[comp].club;
-    const pair = home ? `${team} v ${opponent}` : `${opponent} v ${team}`;
+    const opponent = fixtureOpponentTeam(item) || {club:item.opponent || opponentFullName(item.code),abbr:item.code};
+    const fixture = desktopActivityFixture(entry[comp],item,opponent);
     const label = state === 'today' ? `TODAY · ${fixtureKickoffText(item)}` : desktopActivityStatus(item,state);
-    return `<span class="gr-desktop-activity ${comp} ${state}" title="${esc(pair)}"><span class="gr-activity-badge">${esc(label)}</span><span class="gr-activity-fixture">${esc(pair)}</span></span>`;
+    return `<span class="gr-desktop-activity ${comp} ${state}" title="${esc(fixture.description)}" aria-label="${esc(`${fixture.description}, ${label}`)}"><span class="gr-activity-badge">${esc(label)}</span><span class="gr-activity-fixture"><span>${esc(fixture.homeCode)}</span><strong>${esc(fixture.result || 'v')}</strong><span>${esc(fixture.awayCode)}</span></span></span>`;
   }).join('');
 }
 

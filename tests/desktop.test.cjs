@@ -4,8 +4,8 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const S = require('../scores.js');
 const source = fs.readFileSync(require.resolve('../app.js'),'utf8');
-const context = vm.createContext({GoalRushScores:S});
-for(const [name,next] of [['fixtureValues','fixtureTemporalClass'],['desktopFixtureActivity','desktopActivityStatus'],['desktopActivityStatus','desktopEntrantActivity'],['compactFixtureStatus','compactTeamMarkup']]) {
+const context = vm.createContext({GoalRushScores:S,teamAbbr:team=>team.abbr});
+for(const [name,next] of [['desktopActivityFixture','desktopActivityMarkup'],['fixtureValues','fixtureTemporalClass'],['desktopFixtureActivity','desktopActivityStatus'],['desktopActivityStatus','desktopEntrantActivity'],['compactFixtureStatus','compactTeamMarkup']]) {
  vm.runInContext(source.slice(source.indexOf(`function ${name}(`),source.indexOf(`function ${next}(`)),context);
 }
 test('desktop highlights only the active football day, while retaining an ongoing match',()=>{
@@ -28,4 +28,16 @@ test('desktop fixture tiles retain the supplied live clock and halftime, without
  tile._liveMatch={};
  assert.equal(context.desktopActivityStatus(tile,'live'),'LIVE');
  assert.equal(context.desktopActivityStatus({status:'played'},'finished'),'FT');
+});
+
+test('compact entrant scores keep home-away order and preserve nil-nil without inventing a result',()=>{
+ const como={club:'Como',abbr:'COM'},united={club:'Manchester United',abbr:'MUN'};
+ const home=context.desktopActivityFixture(como,{venue:'H',status:'played',score:'4-1'},united);
+ const away=context.desktopActivityFixture(united,{venue:'A',status:'played',score:'1-4'},como);
+ assert.equal(home.description,'Como 4–1 Manchester United');
+ assert.equal(away.description,home.description);
+ assert.equal(away.homeCode,'COM');assert.equal(away.awayCode,'MUN');
+ assert.equal(context.desktopActivityFixture(como,{venue:'H',status:'live',score:'0-0'},united).result,'0–0');
+ assert.equal(context.desktopActivityFixture(como,{venue:'H',status:'scheduled',score:''},united).result,null);
+ assert.equal(context.desktopActivityFixture(como,{venue:'H',status:'live',score:''},united).result,null);
 });

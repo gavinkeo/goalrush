@@ -280,3 +280,10 @@
 /* v173: keep live competition labels red and match scorelines neutral. */
 .dashboard-header .gr-competition .matchday-chip.is-live .state{color:#ff4b60!important;text-shadow:0 0 9px rgba(255,54,76,.3)!important}
 #compact-today .compact-match-centre .compact-centre-score{color:#f4f8ff!important;text-shadow:none}
+
+/* v174: a compact score strip beside the entrant, with full fixture names on hover. */
+@media(min-width:701px){
+ .gr-desktop-activity .gr-activity-fixture{display:flex;align-items:baseline;gap:5px;white-space:nowrap;font-size:9px;line-height:1.2;letter-spacing:.015em;font-variant-numeric:tabular-nums}
+ .gr-activity-fixture>span{color:#a9bfd5;font-weight:650}
+ .gr-activity-fixture>strong{color:#f4f8ff;font-size:11px;font-weight:850;letter-spacing:0}
+}
