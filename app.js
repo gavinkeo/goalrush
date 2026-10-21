@@ -1627,17 +1627,12 @@ function rankBlock(rank, rankLabel = String(rank), prizeLabel = "") {
     </div>`;
 }
 
-let leaderboardMetrics = new Map();
-function gamesPlayedMarkup(entry) {
-  const m=leaderboardMetrics.get(String(entry.id));
-  return m ? `<span class="gr-games" aria-label="${m.played} of ${m.scheduled} games completed">${m.played}/${m.scheduled}</span>` : '';
-}
 function todaysFixtureMarkup(entry) {
   const day=GoalRushScores.today();
   return ['ucl','uel'].flatMap(comp=>(entry[comp].fixtures||[]).filter(f=>f.date===day).map(f=>{
     const team=entry[comp],opponent=fixtureOpponentTeam(f)||{club:f.opponent,abbr:f.code};
     const away=String(f.venue).toUpperCase()==='A';
-    const homeCode=teamAbbr(away?opponent:team),awayCode=teamAbbr(away?team:opponent);
+    const homeCode=(away?opponent:team).club,awayCode=(away?team:opponent).club;
     const score=GoalRushScores.score(f.score),done=GoalRushScores.isFinal(f),live=f.status==='live';
     const pair=score&&(done||live)?`${homeCode} ${away?score[1]:score[0]}–${away?score[0]:score[1]} ${awayCode}`:`${homeCode} v ${awayCode}`;
     const time=live?'LIVE':done?'FT':f.kickoff||'TBC';
@@ -1666,7 +1661,7 @@ function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
                 <span class="manager-open-icon" aria-hidden="true">↗</span>
               </span>
             </button>
-            <span class="gr-entrant-meta">${gamesPlayedMarkup(entry)}${todaysFixtureMarkup(entry)}</span>
+            <span class="gr-entrant-meta">${todaysFixtureMarkup(entry)}</span>
           </div>
         </div>
       </td>
@@ -1744,7 +1739,8 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
         </div>
         <div class="mobile-manager-wrap">
           <span class="mobile-entry-crests">${[entry.ucl, entry.uel].map(team => `<img class="mobile-entry-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="${esc(team.club)}" onerror="this.src='${PLACEHOLDER_CREST}'">`).join('')}</span>
-          <span class="mobile-entrant-info"><span class="mobile-manager-name">${esc(entry.entrant)}</span><span class="gr-entrant-meta">${gamesPlayedMarkup(entry)}${todaysFixtureMarkup(entry)}</span></span>
+          <span class="mobile-entrant-info"><span class="mobile-manager-name">${esc(entry.entrant)}</span></span>
+          ${todaysFixtureMarkup(entry)}
           <div class="mobile-mini-teams">
             ${compactClub(entry.ucl, "UCL")}
             <span class="mobile-pair-plus" aria-hidden="true">+</span>
@@ -2042,7 +2038,6 @@ function render() {
   const anchorY = anchor?.getBoundingClientRect().top;
   mobileEl.querySelectorAll(".mobile-card[open]").forEach(el => expandedEntrants.add(el.dataset.entrant));
   const ranking = rankingRows(entries);
-  leaderboardMetrics = new Map(GoalRushScores.dailyStandings(entries).map(row=>[row.id,row]));
   const q = searchEl.value.trim().toLowerCase();
 
   const filtered = ranking.filter(({ entry }) =>

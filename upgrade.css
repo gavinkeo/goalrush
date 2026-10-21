@@ -130,3 +130,14 @@
 .gr-entrant-meta>.gr-today-fixture{min-width:0;flex:0 1 auto;font-size:8px!important}
 .manager-name-wrap>.gr-entrant-meta{margin-top:5px}
 @media(max-width:700px){.mobile-summary>.mobile-combined{gap:0!important}}
+
+/* v158: full fixture names beneath entrants; no played count. */
+.gr-today-fixture,.gr-entrant-meta>.gr-today-fixture{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:normal;font-size:9px!important;line-height:1.4}
+.gr-entrant-meta:empty{display:none}
+@media(max-width:700px){
+ .mobile-summary>.mobile-manager-wrap{display:grid!important;grid-template-columns:45px minmax(0,1fr);grid-template-rows:auto!important;grid-auto-rows:auto!important;gap:4px 8px!important;align-items:center!important}
+ .mobile-entry-crests{grid-column:1;grid-row:1}
+ .mobile-entrant-info{grid-column:2;grid-row:1}
+ .mobile-manager-wrap>.gr-today-fixture{grid-column:1/-1;grid-row:auto;line-height:13px;font-size:9px!important;margin:0 0 1px}
+}
+@media(max-width:350px){.mobile-summary>.mobile-manager-wrap{grid-template-columns:39px minmax(0,1fr);column-gap:5px!important}}
