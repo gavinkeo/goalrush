@@ -1549,7 +1549,7 @@ function desktopActivityMarkup(entry, activity) {
     const opponent = fixtureOpponentTeam(item) || {club:item.opponent || opponentFullName(item.code),abbr:item.code};
     const fixture = desktopActivityFixture(entry[comp],item,opponent);
     const label = state === 'today' ? fixtureKickoffText(item) : desktopActivityStatus(item,state);
-    return `<span class="gr-desktop-activity ${comp} ${state}" title="${esc(fixture.description)}" aria-label="${esc(`${fixture.description}, ${label}`)}"><span class="gr-activity-badge">${esc(label)}</span><span class="gr-activity-fixture"><span>${esc(fixture.homeCode)}</span><strong>${esc(fixture.result || 'v')}</strong><span>${esc(fixture.awayCode)}</span></span></span>`;
+    return `<span class="gr-desktop-activity ${comp} ${state}" title="${esc(fixture.description)}" aria-label="${esc(`${fixture.description}, ${label}`)}"><span class="gr-activity-badge">${esc(label)}</span><span class="gr-activity-fixture"><span${String(item.venue).toUpperCase() !== 'A' ? ' class="gr-owned-team"' : ''}>${esc(fixture.homeCode)}</span><strong>${esc(fixture.result || 'v')}</strong><span${String(item.venue).toUpperCase() === 'A' ? ' class="gr-owned-team"' : ''}>${esc(fixture.awayCode)}</span></span></span>`;
   }).join('');
 }
 
@@ -1672,7 +1672,10 @@ function todaysFixtureMarkup(entry) {
     const pair=score&&(done||live)?`${homeCode} ${away?score[1]:score[0]}–${away?score[0]:score[1]} ${awayCode}`:`${homeCode} v ${awayCode}`;
     const time=live?'LIVE':done?'FT':f.kickoff||'TBC';
     const label=`Today: ${away?opponent.club:team.club} v ${away?team.club:opponent.club}, ${time}${score?' · '+pair:''}`;
-    return `<span class="gr-today-fixture${live?' gr-fixture-live':''}" title="${esc(label)}" aria-label="${esc(label)}">${esc(pair)} <span aria-hidden="true">·</span> ${esc(time)}</span>`;
+    const separator=score&&(done||live)?`${away?score[1]:score[0]}–${away?score[0]:score[1]}`:'v';
+    const homeMarkup=away?esc(homeCode):`<strong class="gr-owned-team">${esc(homeCode)}</strong>`;
+    const awayMarkup=away?`<strong class="gr-owned-team">${esc(awayCode)}</strong>`:esc(awayCode);
+    return `<span class="gr-today-fixture ${comp}${live?' gr-fixture-live':''}" title="${esc(label)}" aria-label="${esc(label)}">${homeMarkup} ${esc(separator)} ${awayMarkup} <span aria-hidden="true">·</span> ${esc(time)}</span>`;
   })).join('');
 }
 
@@ -2472,9 +2475,9 @@ function compactTeamMarkup(club, team, side, owner = "") {
     </span>`;
   return `
     <span class="compact-team ${side}">
-      ${side === "away" ? copy : ""}
-      <img src="${esc(image)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
       ${side === "home" ? copy : ""}
+      <img src="${esc(image)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      ${side === "away" ? copy : ""}
     </span>`;
 }
 

@@ -378,3 +378,13 @@
  .gr-desktop-activity.today .gr-activity-fixture{order:1}
  .gr-desktop-activity.today .gr-activity-badge{order:2;align-self:center;border:0;border-radius:0;background:none;padding:0;font-size:8px;letter-spacing:0;flex-shrink:0}
 }
+
+/* v180: crests frame the match centre; owned clubs stand out in fixture summaries. */
+#compact-today .compact-team.home{justify-content:flex-end;text-align:right}
+#compact-today .compact-team.away{justify-content:flex-start;text-align:left}
+#compact-today .compact-team.home .compact-team-copy{align-items:flex-end}
+#compact-today .compact-team.away .compact-team-copy{align-items:flex-start}
+.gr-today-fixture.ucl{--gr-owner-colour:#4bdaf0}
+.gr-today-fixture.uel{--gr-owner-colour:#f4b76f}
+.gr-today-fixture .gr-owned-team{color:var(--gr-owner-colour);font-weight:800}
+.gr-desktop-activity .gr-activity-fixture>.gr-owned-team{color:var(--gr-activity-colour);font-weight:850}
