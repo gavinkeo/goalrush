@@ -276,3 +276,7 @@
  .gr-fixture-live .gr-fixture-signal::before{content:'';width:4px;height:4px;border-radius:50%;background:currentColor;box-shadow:0 0 5px currentColor}
  .gr-fixture-finished .gr-fixture-signal{color:#9fb3ca}
 }
+
+/* v173: keep live competition labels red and match scorelines neutral. */
+.dashboard-header .gr-competition .matchday-chip.is-live .state{color:#ff4b60!important;text-shadow:0 0 9px rgba(255,54,76,.3)!important}
+#compact-today .compact-match-centre .compact-centre-score{color:#f4f8ff!important;text-shadow:none}
