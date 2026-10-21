@@ -141,3 +141,13 @@
  .mobile-manager-wrap>.gr-today-fixture{grid-column:1/-1;grid-row:auto;line-height:13px;font-size:9px!important;margin:0 0 1px}
 }
 @media(max-width:350px){.mobile-summary>.mobile-manager-wrap{grid-template-columns:39px minmax(0,1fr);column-gap:5px!important}}
+
+/* v159: one continuous leaderboard capsule, matching Today's Games. */
+.standings-card.gr-leaderboard-capsule{margin:0!important;padding:0!important;border:1px solid rgba(68,120,202,.23)!important;border-radius:18px!important;background:radial-gradient(circle at 8% 20%,rgba(37,114,255,.07),transparent 32%),linear-gradient(135deg,rgba(7,19,43,.94),rgba(5,16,37,.96))!important;box-shadow:0 10px 28px rgba(2,8,22,.22),inset 0 0 0 1px rgba(255,255,255,.015)!important;overflow:hidden!important}
+#gr-leaderboard-title{margin:0;font:inherit;letter-spacing:inherit;color:inherit}
+.gr-leaderboard-capsule .desktop-table{border:0!important;border-radius:0!important}
+@media(max-width:700px){
+ .standings-card.gr-leaderboard-capsule{border-radius:16px!important}
+ .gr-leaderboard-capsule .mobile-card:first-child,.gr-leaderboard-capsule .mobile-card:last-child{border-radius:0!important}
+ .gr-leaderboard-capsule .mobile-card:last-child{border-bottom:0!important}
+}
