@@ -465,8 +465,8 @@ function formatHeaderMatchday(md) {
   const am = a.toLocaleString("en-GB", { month: "short" }).toUpperCase();
   const bm = b.toLocaleString("en-GB", { month: "short" }).toUpperCase();
   if (md.start === md.end) return `MD${md.md} · ${a.getDate()} ${am}`;
-  if (am === bm) return `MD${md.md} · ${a.getDate()}–${b.getDate()} ${am}`;
-  return `MD${md.md} · ${a.getDate()} ${am}–${b.getDate()} ${bm}`;
+  if (am === bm) return `MD${md.md} · ${a.getDate()}/${b.getDate()} ${am}`;
+  return `MD${md.md} · ${a.getDate()} ${am}/${b.getDate()} ${bm}`;
 }
 function headerCountdown(kickoffDate) {
   const diff = kickoffDate.getTime() - Date.now();

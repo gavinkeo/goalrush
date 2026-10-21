@@ -151,3 +151,11 @@
  .gr-leaderboard-capsule .mobile-card:first-child,.gr-leaderboard-capsule .mobile-card:last-child{border-radius:0!important}
  .gr-leaderboard-capsule .mobile-card:last-child{border-bottom:0!important}
 }
+
+/* v160: fixtures align with the name, with a consistent compact row height. */
+@media(max-width:700px){
+ .mobile-summary{min-height:56px!important}
+ .mobile-entrant-info{min-height:40px;gap:2px}
+ .mobile-entrant-info>.gr-today-fixture{margin:0;line-height:12px;font-size:9px!important;text-align:left}
+}
+@media(max-width:350px){.mobile-summary{min-height:68px!important}}

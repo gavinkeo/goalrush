@@ -1739,8 +1739,7 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
         </div>
         <div class="mobile-manager-wrap">
           <span class="mobile-entry-crests">${[entry.ucl, entry.uel].map(team => `<img class="mobile-entry-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="${esc(team.club)}" onerror="this.src='${PLACEHOLDER_CREST}'">`).join('')}</span>
-          <span class="mobile-entrant-info"><span class="mobile-manager-name">${esc(entry.entrant)}</span></span>
-          ${todaysFixtureMarkup(entry)}
+          <span class="mobile-entrant-info"><span class="mobile-manager-name">${esc(entry.entrant)}</span>${todaysFixtureMarkup(entry)}</span>
           <div class="mobile-mini-teams">
             ${compactClub(entry.ucl, "UCL")}
             <span class="mobile-pair-plus" aria-hidden="true">+</span>
@@ -2159,8 +2158,8 @@ function formatMD(md) {
   const bm = b.toLocaleString("en-GB", { month: "short" }).toUpperCase();
 
   if (md.start === md.end) return `MD${md.md} · ${a.getDate()} ${am}`;
-  if (am === bm) return `MD${md.md} · ${a.getDate()}–${b.getDate()} ${am}`;
-  return `MD${md.md} · ${a.getDate()} ${am}–${b.getDate()} ${bm}`;
+  if (am === bm) return `MD${md.md} · ${a.getDate()}/${b.getDate()} ${am}`;
+  return `MD${md.md} · ${a.getDate()} ${am}/${b.getDate()} ${bm}`;
 }
 
 function formatCombinedMatchdayWindow(startIso, endIso) {
