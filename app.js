@@ -1632,10 +1632,18 @@ function gamesPlayedMarkup(entry) {
   const m=leaderboardMetrics.get(String(entry.id));
   return m ? `<span class="gr-games" aria-label="${m.played} of ${m.scheduled} games completed">${m.played}/${m.scheduled}</span>` : '';
 }
-function dailyMovementMarkup(entry) {
-  const change=leaderboardMetrics.get(String(entry.id))?.change;
-  const label=change==null?'Daily movement unavailable until earlier results are confirmed':change>0?`Up ${change} places today`:change<0?`Down ${Math.abs(change)} places today`:'No position change today';
-  return `<span class="gr-daily ${change>0?'gr-up':change<0?'gr-down':'gr-neutral'}" title="${label}" aria-label="${label}">${change==null?'—':change>0?'↑ +'+change:change<0?'↓ '+change:'—'} <span class="gr-day-label">today</span></span>`;
+function todaysFixtureMarkup(entry) {
+  const day=GoalRushScores.today();
+  return ['ucl','uel'].flatMap(comp=>(entry[comp].fixtures||[]).filter(f=>f.date===day).map(f=>{
+    const team=entry[comp],opponent=fixtureOpponentTeam(f)||{club:f.opponent,abbr:f.code};
+    const away=String(f.venue).toUpperCase()==='A';
+    const homeCode=teamAbbr(away?opponent:team),awayCode=teamAbbr(away?team:opponent);
+    const score=GoalRushScores.score(f.score),done=GoalRushScores.isFinal(f),live=f.status==='live';
+    const pair=score&&(done||live)?`${homeCode} ${away?score[1]:score[0]}–${away?score[0]:score[1]} ${awayCode}`:`${homeCode} v ${awayCode}`;
+    const time=live?'LIVE':done?'FT':f.kickoff||'TBC';
+    const label=`Today: ${away?opponent.club:team.club} v ${away?team.club:opponent.club}, ${time}${score?' · '+pair:''}`;
+    return `<span class="gr-today-fixture${live?' gr-fixture-live':''}" title="${esc(label)}" aria-label="${esc(label)}">${esc(pair)} <span aria-hidden="true">·</span> ${esc(time)}</span>`;
+  })).join('');
 }
 
 function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
@@ -1666,7 +1674,7 @@ function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
       <td class="num"><span class="line-total ucl-total">${clubScore(entry.ucl)}</span></td>
       <td class="num combined-cell" rowspan="2">
         <strong class="combined-score">${totalScore(entry)}</strong>
-        <div class="gr-desktop-meta">${gamesPlayedMarkup(entry)}${dailyMovementMarkup(entry)}</div>
+        <div class="gr-desktop-meta">${gamesPlayedMarkup(entry)}${todaysFixtureMarkup(entry)}</div>
       </td>
     </tr>
     <tr class="uel-row">
@@ -1736,7 +1744,7 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
         </div>
         <div class="mobile-manager-wrap">
           <span class="mobile-entry-crests">${[entry.ucl, entry.uel].map(team => `<img class="mobile-entry-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="${esc(team.club)}" onerror="this.src='${PLACEHOLDER_CREST}'">`).join('')}</span>
-          <span class="mobile-entrant-info"><span class="mobile-manager-name">${esc(entry.entrant)}</span>${dailyMovementMarkup(entry)}</span>
+          <span class="mobile-entrant-info"><span class="mobile-manager-name">${esc(entry.entrant)}</span>${todaysFixtureMarkup(entry)}</span>
           <div class="mobile-mini-teams">
             ${compactClub(entry.ucl, "UCL")}
             <span class="mobile-pair-plus" aria-hidden="true">+</span>

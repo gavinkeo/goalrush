@@ -119,3 +119,7 @@
 }
 
 @media(max-width:700px){.mobile-combined .gr-games{font-size:9px!important;line-height:12px!important;letter-spacing:0!important;color:#a5bdd3!important}}
+
+/* v156: only show an entrant's fixture when they play today. */
+.gr-today-fixture{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#95aec7;font-size:9px!important;line-height:12px;font-weight:500;letter-spacing:0!important;font-variant-numeric:tabular-nums}
+.gr-today-fixture>span{color:#5b7898;margin:0 2px}.gr-fixture-live{color:#55dff7}
