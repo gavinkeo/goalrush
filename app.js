@@ -1688,7 +1688,6 @@ function mobileFixtureGrid(team, comp) {
 
       const scoreText = fixtureScoreText(team, item, index);
       const opponent = item?.opponent || opponentFullName(item?.code);
-      const countryInfo = fixtureOpponentCountryInfo(item);
       const dateText = formatFixtureListDate(comp, index, item);
       const kickoffText = fixtureKickoffText(item);
       const venueCode = String(item?.venue || "").toUpperCase();
@@ -1702,7 +1701,7 @@ function mobileFixtureGrid(team, comp) {
           <span class="mobile-fixture-date">${esc(dateText)}</span>
           <span class="mobile-fixture-time">${esc(kickoffText)}</span>
           <span class="mobile-fixture-opponent-wrap">
-            <span class="mobile-fixture-opponent">${countryFlagMarkup(countryInfo, "mobile-opponent-flag")}<span class="mobile-fixture-opponent-text">${esc(opponent)}</span></span>
+            <span class="mobile-fixture-opponent"><img class="mobile-opponent-crest" data-club-key="${esc(clubKey(fixtureOpponentTeam(item)?.club || opponent))}" src="${esc(fixtureOpponentCrest(item))}" alt="" onerror="this.onerror=null;this.src='${PLACEHOLDER_CREST}'"><span class="mobile-fixture-opponent-text">${esc(opponent)}</span></span>
             ${scoreText ? `<span class="mobile-list-score">${esc(scoreText)}</span>` : ""}
           </span>
           <span class="mobile-fixture-venue ${venueCode === "H" ? "home" : venueCode === "A" ? "away" : ""}"
