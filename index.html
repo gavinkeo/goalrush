@@ -1026,12 +1026,7 @@
     <div class="title-top-row">
       <h1 class="main-title"><span class="main-title-text">EURO GOAL RUSH 26/27</span></h1>
 
-      <div class="header-tools" aria-label="Search">
-        <label class="search top-search desktop-top-search">
-          <span>⌕</span>
-          <input aria-label="Search manager or club" id="search" type="search" placeholder="Search manager or club" autocomplete="off">
-        </label>
-      </div>
+      <div class="header-tools" id="gr-desktop-progress"></div>
 
       <div class="matchday-strip">
         <div class="gr-competition gr-competition-ucl">
@@ -1073,12 +1068,14 @@
 
   <main class="shell">
 
+    <div id="gr-mobile-progress">
     <section class="gr-progress" aria-label="Competition progress">
       <div class="gr-progress-summary"><span class="gr-progress-label">COMPETITION PROGRESS</span><span id="gr-progress-count">Loading completed matches…</span></div>
       <strong id="gr-progress-percent">—</strong>
       <div class="gr-overall-stats" id="gr-stat-all"><span><strong id="gr-goals-all">—</strong> total goals</span><span><b id="gr-average-all">—</b> per game</span></div>
       <div class="gr-progress-track" id="gr-progress-meter" role="progressbar" aria-label="Matches completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="gr-progress-fill"></span></div>
     </section>
+    </div>
 
     <section class="compact-today" id="compact-today" hidden aria-label="Today's fixtures">
       <div class="compact-today-head">
@@ -1170,6 +1167,13 @@
   </main>
 
 
+  <aside class="gr-scorebar" id="gr-scorebar" hidden aria-label="Today's football scores">
+    <a class="gr-scorebar-return" href="#compact-today">Today's games <span aria-hidden="true">↑</span></a>
+    <button class="gr-scorebar-nav" id="gr-scorebar-prev" type="button" aria-label="Previous matches" aria-controls="gr-scorebar-list">‹</button>
+    <div class="gr-scorebar-list" id="gr-scorebar-list" role="list" aria-label="Today's matches"></div>
+    <button class="gr-scorebar-nav" id="gr-scorebar-next" type="button" aria-label="Next matches" aria-controls="gr-scorebar-list">›</button>
+  </aside>
+
   <div class="team-modal" id="team-modal" hidden>
     <div class="team-modal-backdrop" data-close-team-modal></div>
     <section class="team-modal-card" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
@@ -1192,9 +1196,9 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <link rel="stylesheet" href="upgrade.css?v=174">
-  <script src="scores.js?v=174" defer></script>
-  <script src="enhancements.js?v=174" defer></script>
-  <script src="app.js?v=174" defer></script>
+  <link rel="stylesheet" href="upgrade.css?v=175">
+  <script src="scores.js?v=175" defer></script>
+  <script src="enhancements.js?v=175" defer></script>
+  <script src="app.js?v=175" defer></script>
 </body>
 </html>

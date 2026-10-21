@@ -287,3 +287,47 @@
  .gr-activity-fixture>span{color:#a9bfd5;font-weight:650}
  .gr-activity-fixture>strong{color:#f4f8ff;font-size:11px;font-weight:850;letter-spacing:0}
 }
+
+/* v175: header progress and a desktop scorebar after the fixture list leaves view. */
+.gr-scorebar[hidden]{display:none!important}
+#gr-mobile-progress:empty{display:none}
+@media(min-width:701px){
+ .dashboard-header .title-top-row{grid-template-columns:minmax(0,1fr) minmax(300px,1fr) max-content!important;gap:18px!important}
+ .dashboard-header .main-title-text{font-size:clamp(18px,1.8vw,26px)!important;white-space:nowrap}
+ .dashboard-header #gr-desktop-progress{max-width:none!important}
+ #gr-desktop-progress .gr-progress{margin:0!important;padding:12px;gap:10px 8px}
+ #gr-desktop-progress .gr-progress-label{font-size:7px;letter-spacing:.06em}
+ #gr-desktop-progress #gr-progress-count{font-size:10px}
+ #gr-desktop-progress #gr-progress-percent{font-size:23px}
+ #gr-desktop-progress .gr-overall-stats{font-size:9px}
+ body.gr-scorebar-visible{padding-bottom:108px}
+ .gr-scorebar{position:fixed;bottom:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:auto 30px minmax(0,1fr) 30px;align-items:center;gap:10px;padding:10px max(16px,calc((100vw - 1220px)/2));padding-bottom:max(10px,env(safe-area-inset-bottom));border-top:1px solid #2c4862;background:rgba(5,15,31,.97);box-shadow:0 -8px 26px rgba(0,0,0,.3);backdrop-filter:blur(12px);font-family:Inter,system-ui,sans-serif}
+ .gr-scorebar-return{color:#b6c9db;font-size:10px;font-weight:750;line-height:1.4;text-decoration:none;white-space:nowrap}
+ .gr-scorebar-return span{color:#f4f8ff;margin-left:4px}
+ .gr-scorebar-list{display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#304a65 transparent;min-width:0;padding:2px 0 4px}
+ .gr-scorebar-item{flex:0 0 238px;scroll-snap-align:start}
+ .gr-scorebar-match{display:flex;flex-direction:column;gap:7px;padding:8px 10px;text-decoration:none;border:1px solid #26374f;border-radius:10px;background:#0b1b30;--gr-bar-colour:#4bdaf0;--gr-bar-rgb:75,218,240}
+ .gr-scorebar-match.uel{--gr-bar-colour:#f4b76f;--gr-bar-rgb:244,183,111}
+ .gr-scorebar-match.live{border-color:rgba(var(--gr-bar-rgb),.5);background:linear-gradient(120deg,rgba(var(--gr-bar-rgb),.09),#0b1b30)}
+ .gr-scorebar-score{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;padding:0 16px}
+ .gr-scorebar-score img{width:28px;height:28px;object-fit:contain;justify-self:center}
+ .gr-scorebar-score strong{color:#f4f8ff;font-size:21px;font-weight:850;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+ .gr-scorebar-details{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:5px;align-items:center}
+ .gr-scorebar-owner{font-size:9px;line-height:12px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:#a8bfd5}
+ .gr-scorebar-owner:last-child{text-align:right}
+ .gr-scorebar-clock{display:flex;align-items:center;gap:3px;font-size:8px;font-weight:800;line-height:12px;white-space:nowrap;color:var(--gr-bar-colour)}
+ .gr-scorebar-match.live .gr-scorebar-clock::before{content:'';width:4px;height:4px;border-radius:50%;background:currentColor}
+ .gr-scorebar-match.ft .gr-scorebar-clock{color:#9eb2c8}
+ .gr-scorebar-nav{display:grid;place-items:center;width:30px;height:38px;padding:0;border:1px solid #314961;border-radius:7px;background:#0e2036;color:#e5f0fb;font:24px/1 system-ui;cursor:pointer}
+ .gr-scorebar-nav:disabled{opacity:.3;cursor:default}
+ .gr-scorebar :is(a,button):focus-visible{outline:2px solid #f4f8ff;outline-offset:2px}
+}
+@media(min-width:701px) and (max-width:1100px){
+ .dashboard-header .title-top-row{grid-template-columns:minmax(0,1fr) max-content!important}
+ .dashboard-header .main-title{grid-row:1;grid-column:1/-1!important;justify-self:center}
+ .dashboard-header #gr-desktop-progress{grid-row:2;grid-column:1!important;max-width:480px!important}
+ .dashboard-header .matchday-strip{grid-row:2;grid-column:2!important}
+ .gr-scorebar{grid-template-columns:30px minmax(0,1fr) 30px;gap:6px;padding-left:12px;padding-right:12px}
+ .gr-scorebar-return{display:none}
+}
+@media(max-width:700px){.gr-scorebar{display:none!important}}

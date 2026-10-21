@@ -4,10 +4,11 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const S = require('../scores.js');
 const source = fs.readFileSync(require.resolve('../app.js'),'utf8');
-const context = vm.createContext({GoalRushScores:S,teamAbbr:team=>team.abbr});
-for(const [name,next] of [['desktopActivityFixture','desktopActivityMarkup'],['fixtureValues','fixtureTemporalClass'],['desktopFixtureActivity','desktopActivityStatus'],['desktopActivityStatus','desktopEntrantActivity'],['compactFixtureStatus','compactTeamMarkup']]) {
+const context = vm.createContext({GoalRushScores:S,teamAbbr:team=>team.abbr,crest:team=>team.crest,PLACEHOLDER_CREST:"placeholder.svg"});
+for(const [name,next] of [['scorebarMatchMarkup','renderDesktopScorebar'],['desktopActivityFixture','desktopActivityMarkup'],['fixtureValues','fixtureTemporalClass'],['desktopFixtureActivity','desktopActivityStatus'],['desktopActivityStatus','desktopEntrantActivity'],['compactFixtureStatus','compactTeamMarkup']]) {
  vm.runInContext(source.slice(source.indexOf(`function ${name}(`),source.indexOf(`function ${next}(`)),context);
 }
+vm.runInContext(source.slice(source.indexOf('function esc('),source.indexOf('const TEAM_ABBR')),context);
 test('desktop highlights only the active football day, while retaining an ongoing match',()=>{
  const day=S.fixtureDay(new Date('2026-10-22T01:59:59Z'));
  assert.equal(context.desktopFixtureActivity({date:'2026-10-21',status:'scheduled'},day),'today');
@@ -40,4 +41,22 @@ test('compact entrant scores keep home-away order and preserve nil-nil without i
  assert.equal(context.desktopActivityFixture(como,{venue:'H',status:'live',score:'0-0'},united).result,'0–0');
  assert.equal(context.desktopActivityFixture(como,{venue:'H',status:'scheduled',score:''},united).result,null);
  assert.equal(context.desktopActivityFixture(como,{venue:'H',status:'live',score:''},united).result,null);
+});
+
+test('bottom scorebar renders supplied scores, manager names and clocks without assuming a missing score is nil-nil',()=>{
+ const match={key:'game-1',comp:'UEL',home:'Home',away:'Away',homeOwner:'A & B',awayOwner:'Other manager',homeTeam:{crest:'home.svg'},awayTeam:{crest:'away.svg'},status:'live',score:'0-0',liveMatch:{clock:'72:12'}};
+ const live=context.scorebarMatchMarkup(match);
+ assert.match(live,/gr-scorebar-match uel live/);
+ assert.match(live,/<strong>0 – 0<\/strong>/);
+ assert.match(live,/LIVE 72/);
+ assert.match(live,/A &amp; B/);
+ assert.match(live,/Other manager/);
+ assert.match(live,/src="home.svg"/);
+ const upcoming=context.scorebarMatchMarkup({...match,status:'upcoming',score:'',kickoff:'20:00'});
+ assert.match(upcoming,/<strong>–<\/strong>/);
+ assert.doesNotMatch(upcoming,/<strong>0 – 0/);
+ assert.match(upcoming,/20:00/);
+ const final=context.scorebarMatchMarkup({...match,status:'ft',score:'4-1'});
+ assert.match(final,/<strong>4 – 1<\/strong>/);
+ assert.match(final,/>FT</);
 });

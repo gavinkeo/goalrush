@@ -4,7 +4,6 @@ const PLACEHOLDER_CREST = "crest-placeholder.svg?v=86";
 const $ = (sel) => document.querySelector(sel);
 const bodyEl = $("#standings-body");
 const mobileEl = $("#mobile-standings");
-const searchEl = $("#search");
 const teamModalEl = $("#team-modal");
 const teamModalContentEl = $("#team-modal-content");
 const managerModalEl = $("#manager-modal");
@@ -2078,14 +2077,7 @@ function render() {
   const anchorY = anchor?.getBoundingClientRect().top;
   mobileEl.querySelectorAll(".mobile-card[open]").forEach(el => expandedEntrants.add(el.dataset.entrant));
   const ranking = rankingRows(entries);
-  const q = searchEl.value.trim().toLowerCase();
-
-  const filtered = ranking.filter(({ entry }) =>
-    !q ||
-    entry.entrant.toLowerCase().includes(q) ||
-    entry.ucl.club.toLowerCase().includes(q) ||
-    entry.uel.club.toLowerCase().includes(q)
-  );
+  const filtered = ranking;
 
   if (!filtered.length) {
     bodyEl.innerHTML = `<tr><td colspan="5">No matches.</td></tr>`;
@@ -2517,6 +2509,7 @@ function renderCompactToday() {
   if (!todaysFixtures.length) {
     compactTodayEl.hidden = true;
     compactTodayListEl.innerHTML = "";
+    renderDesktopScorebar([]);
     return;
   }
 
@@ -2539,6 +2532,67 @@ function renderCompactToday() {
   }).join("");
 
   compactTodayEl.hidden = false;
+  renderDesktopScorebar(todaysFixtures);
+}
+
+let desktopScorebarController;
+
+function scorebarMatchMarkup(match) {
+  const status = compactFixtureStatus(match);
+  const score = (match.status === 'live' || match.status === 'ft') ? GoalRushScores.score(match.score) : null;
+  const result = score ? `${score[0]} – ${score[1]}` : '–';
+  const description = `${match.home} ${result} ${match.away}, ${status.text}`;
+  const image = team => team ? crest(team) : PLACEHOLDER_CREST;
+  return `<div role="listitem" class="gr-scorebar-item"><a href="#compact-today" class="gr-scorebar-match ${match.comp.toLowerCase()} ${status.className}" data-key="${esc(match.key)}" aria-label="${esc(description)}" title="${esc(description)}">
+    <span class="gr-scorebar-score"><img src="${esc(image(match.homeTeam))}" alt="${esc(match.home)}" onerror="this.onerror=null;this.src='${PLACEHOLDER_CREST}'"><strong>${esc(result)}</strong><img src="${esc(image(match.awayTeam))}" alt="${esc(match.away)}" onerror="this.onerror=null;this.src='${PLACEHOLDER_CREST}'"></span>
+    <span class="gr-scorebar-details"><span class="gr-scorebar-owner" title="${esc(match.homeOwner)}">${esc(match.homeOwner || '—')}</span><span class="gr-scorebar-clock">${esc(status.text)}</span><span class="gr-scorebar-owner" title="${esc(match.awayOwner)}">${esc(match.awayOwner || '—')}</span></span>
+  </a></div>`;
+}
+
+function renderDesktopScorebar(fixtures) {
+  const list = $('#gr-scorebar-list');
+  if(!list)return;
+  const html = fixtures.map(scorebarMatchMarkup).join('');
+  if(list.innerHTML !== html) {
+    const left = list.scrollLeft;
+    const focused = document.activeElement?.closest?.('.gr-scorebar-match')?.dataset.key;
+    list.innerHTML = html;
+    list.scrollLeft = left;
+    if(focused)[...list.querySelectorAll('.gr-scorebar-match')].find(el=>el.dataset.key===focused)?.focus({preventScroll:true});
+  }
+  desktopScorebarController?.update(fixtures.length > 0);
+}
+
+function wireDesktopScorebar() {
+  const media = window.matchMedia('(min-width:701px)');
+  const bar = $('#gr-scorebar'),list = $('#gr-scorebar-list');
+  const previous = $('#gr-scorebar-prev'),next = $('#gr-scorebar-next');
+  const progress = $('.gr-progress');
+  let hasFixtures = false;
+  const navigation = () => {
+    previous.disabled = list.scrollLeft <= 2;
+    next.disabled = list.scrollLeft + list.clientWidth >= list.scrollWidth - 2;
+  };
+  const visibility = () => {
+    const passed = compactTodayEl && !compactTodayEl.hidden && compactTodayEl.getBoundingClientRect().bottom <= 0;
+    const visible = media.matches && hasFixtures && passed;
+    bar.hidden = !visible;
+    document.body.classList.toggle('gr-scorebar-visible',visible);
+    if(visible)requestAnimationFrame(navigation);
+  };
+  const layout = () => {
+    (media.matches ? $('#gr-desktop-progress') : $('#gr-mobile-progress')).append(progress);
+    visibility();
+  };
+  desktopScorebarController = {update(present){hasFixtures=present;visibility();}};
+  new IntersectionObserver(visibility,{threshold:0}).observe(compactTodayEl);
+  media.addEventListener('change',layout);
+  window.addEventListener('resize',visibility);
+  list.addEventListener('scroll',navigation,{passive:true});
+  const move = direction => list.scrollBy({left:direction*list.clientWidth*.85,behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+  previous.addEventListener('click',()=>move(-1));
+  next.addEventListener('click',()=>move(1));
+  layout();
 }
 
 function wireCompactTodayDetails() {
@@ -2667,10 +2721,10 @@ async function init() {
   }
 }
 
-searchEl.addEventListener("input", render);
 wireAnthemButtons();
 wireFixtureTooltips();
 wireTeamModal();
 wireManagerModal();
 wireCompactTodayDetails();
+wireDesktopScorebar();
 init();
