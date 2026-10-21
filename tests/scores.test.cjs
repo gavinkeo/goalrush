@@ -1,0 +1,39 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const vm=require('node:vm');const S=require('../scores.js');
+const fixture=(n,status='played')=>({date:'2026-10-20',kickoff:'20:00',opponent:'Other',venue:'H',score:n,status});
+const entry=(id,a,b)=>({id,entrant:'Entrant '+id,ucl:{club:'Club '+id,fixtures:a.map((x,i)=>({...fixture(x),date:`2026-10-${20+i}`}))},uel:{club:'UEL '+id,fixtures:b.map((x,i)=>({...fixture(x),date:`2026-10-${20+i}`}))}});
+test('strict score parsing preserves 0-0 and rejects missing/malformed values',()=>{
+ assert.deepEqual(S.score('0–0'),[0,0]);for(const s of ['',null,'-','1-','-2','1.5-0','NaN-0'])assert.equal(S.score(s),null);
+});
+test('only finished scores persist; cache restoration recalculates correct totals',()=>{
+ const entries=[entry(1,['0-0','2-3'],['1-2'])];entries[0].ucl.fixtures[1].status='live';S.recalc(entries);const saved=S.capture(entries);assert.equal(Object.keys(saved).length,2);
+ const copy=structuredClone(entries);S.each(copy,f=>{f.score='';f.status='';});S.restore(copy,saved);assert.equal(copy[0].ucl.played,1);assert.equal(copy[0].uel.goalsFor+copy[0].uel.goalsAgainst,3);assert.equal(copy[0].ucl.fixtures[1].score,'');
+});
+test('cache never overwrites a newer in-memory score or unknown fixture',()=>{
+ const entries=[entry(1,['1-0'],['2-0'])];const records=S.capture(entries);entries[0].ucl.fixtures[0].score='4-0';S.restore(entries,records);assert.equal(entries[0].ucl.goalsFor,4);
+ entries[0].uel.fixtures[0].score='';entries[0].uel.fixtures[0].date='2026-11-01';S.restore(entries,records);assert.equal(entries[0].uel.goalsFor,0);
+});
+test('round history handles tied ranks, gains and position changes',()=>{
+ const entries=[entry(1,['1-0','0-0'],['1-0','1-0']),entry(2,['0-0','4-0'],['1-0','0-0']),entry(3,['0-0','2-0'],['1-0','0-0'])];
+ const h=S.round(entries,2);assert.equal(h.complete,true);assert.deepEqual(h.rows.map(r=>[r.id,r.rank,r.total,r.change]),[['2',1,5,1],['1',2,3,-1],['3',2,3,0]]);
+ assert.equal(h.rows[1].tied,true);assert.equal(h.rows[0].gained,4);
+});
+test('partial or missing earlier results suppress movement',()=>{
+ const entries=[entry(1,['1-0','2-0'],['','0-0'])];const h=S.round(entries,2);assert.equal(h.complete,false);assert.equal(h.rows[0].change,null);
+});
+test('kickoff follows Dublin daylight saving regardless of machine timezone',()=>{
+ assert.equal(S.kickoff({date:'2026-10-21',kickoff:'20:00'}).toISOString(),'2026-10-21T19:00:00.000Z');
+ assert.equal(S.kickoff({date:'2026-11-04',kickoff:'20:00'}).toISOString(),'2026-11-04T20:00:00.000Z');
+});
+test('live updates preserve finals, accept corrections and apply away orientation',()=>{
+ const entries=[{id:1,ucl:{club:'Liverpool',fixtures:[{date:'2026-10-20',opponent:'Arsenal',venue:'A',score:'2-1',status:'played'}]},uel:{club:'UEL',fixtures:[]}}];
+ const sandbox={entries,GoalRushScores:S,fixturePairing:(t,f)=>({home:f.opponent,away:t.club,venue:f.venue}),findLiveFixtureMatch:S.findLiveFixtureMatch,recalculateTeamTotals:S.totals,generatedFixtureScores:new Map()};vm.createContext(sandbox);
+ const source=fs.readFileSync('app.js','utf8');vm.runInContext(source.slice(source.indexOf('function applyLiveScoreFeed('),source.indexOf('function refreshLiveScoreUi(')),sandbox);
+ const m={comp:'UCL',date:'2026-10-20',home:'Arsenal',away:'Liverpool',homeScore:null,awayScore:null,status:'upcoming'};
+ sandbox.applyLiveScoreFeed([m]);assert.equal(entries[0].ucl.fixtures[0].score,'2-1');
+ sandbox.applyLiveScoreFeed([{...m,homeScore:1,awayScore:3,status:'ft'}]);assert.equal(entries[0].ucl.fixtures[0].score,'3-1');assert.equal(entries[0].ucl.goalsFor,3);
+ sandbox.applyLiveScoreFeed([{...m,homeScore:0,awayScore:0,status:'live'}]);assert.equal(entries[0].ucl.fixtures[0].score,'3-1');
+});
+test('bundled result pairs agree and reconstruct the saved live standings',()=>{
+ const data=JSON.parse(fs.readFileSync('competition.json')),base=JSON.parse(fs.readFileSync('results.json'));S.restore(data.entries,base.records);let count=0;
+ S.each(data.entries,(f,t,c)=>{if(!S.isFinal(f))return;count++;const other=data.entries.map(e=>e[c]).find(t2=>t2.club===f.opponent);const reverse=other.fixtures.find(x=>x.opponent===t.club&&x.date===f.date);assert.equal(reverse.score,S.score(f.score).reverse().join('-'));});assert.ok(count>=144);assert.equal(count,Object.keys(base.records).length);
+});

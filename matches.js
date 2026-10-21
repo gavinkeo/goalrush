@@ -110,6 +110,7 @@ function liveSameClub(a, b) {
 }
 function espnScoreValue(competitor) {
   const raw = competitor?.score?.displayValue ?? competitor?.score?.value ?? competitor?.score;
+  if (raw === null || raw === undefined || raw === "") return null;
   const value = Number(raw);
   return Number.isFinite(value) ? value : null;
 }
@@ -125,6 +126,7 @@ function parseEspnEvent(event, comp) {
   const live = !completed && (stateValue === "in" || stateValue === "live" || stateValue === "inprogress");
   return {
     comp,
+    date: String(event?.date || competition?.date || "").slice(0,10),
     home: home?.team?.displayName || home?.team?.shortDisplayName || home?.team?.name || "",
     away: away?.team?.displayName || away?.team?.shortDisplayName || away?.team?.name || "",
     homeScore: espnScoreValue(home), awayScore: espnScoreValue(away),
@@ -140,9 +142,7 @@ function firstFixtureDate() {
 }
 async function fetchEspnScoreboard(comp, startIso, endIso = startIso) {
   const dates = startIso === endIso ? currentCompactDate(startIso) : `${currentCompactDate(startIso)}-${currentCompactDate(endIso)}`;
-  const response = await fetch(`${ESPN_SCOREBOARD[comp]}?dates=${encodeURIComponent(dates)}&limit=500`, { cache: "no-store" });
-  if (!response.ok) throw new Error(`ESPN ${comp} HTTP ${response.status}`);
-  const payload = await response.json();
+  const payload = await GoalRushScores.json(`${ESPN_SCOREBOARD[comp]}?dates=${encodeURIComponent(dates)}&limit=500`);
   return (Array.isArray(payload?.events) ? payload.events : []).map(event => parseEspnEvent(event, comp)).filter(Boolean);
 }
 function reverseScore(score) {
@@ -154,16 +154,8 @@ function homeOrientedScore(fixture) {
   if (!raw) return "";
   return String(fixture?.venue || "").toUpperCase() === "A" ? reverseScore(raw) : raw;
 }
-function recalculateTeamTotals(team) {
-  let goalsFor = 0, goalsAgainst = 0, played = 0;
-  (Array.isArray(team?.fixtures) ? team.fixtures : []).forEach(item => {
-    const parts = String(item?.score || "").split(/[-–—]/).map(value => Number(String(value).trim()));
-    if (parts.length !== 2 || parts.some(value => !Number.isFinite(value))) return;
-    goalsFor += parts[0]; goalsAgainst += parts[1];
-    if (["played", "finished", "ft"].includes(String(item?.status || "").toLowerCase())) played += 1;
-  });
-  team.goalsFor = goalsFor; team.goalsAgainst = goalsAgainst; team.played = played;
-}
+function recalculateTeamTotals(team) { GoalRushScores.totals(team); }
+
 function applyLiveFeed(feedMatches) {
   let changed = false;
   state.entries.forEach(entry => {
@@ -171,14 +163,16 @@ function applyLiveFeed(feedMatches) {
       if (!team?.club || !Array.isArray(team?.fixtures)) return;
       team.fixtures.forEach(fixture => {
         const pair = fixturePairing(team, fixture);
-        const match = feedMatches.find(candidate => candidate.comp === comp && liveSameClub(candidate.home, pair.home) && liveSameClub(candidate.away, pair.away));
+        const match = GoalRushScores.findLiveFixtureMatch(feedMatches, comp, pair, fixture.date);
         if (!match) return;
         const nextStatus = match.status === "live" ? "live" : match.status === "ft" ? "played" : "";
         let nextScore = "";
         if ((match.status === "live" || match.status === "ft") && match.homeScore !== null && match.awayScore !== null) {
-          const teamIsHome = liveSameClub(team.club, match.home);
+          const teamIsHome = String(fixture.venue || "").toUpperCase() !== "A";
           nextScore = teamIsHome ? `${match.homeScore}-${match.awayScore}` : `${match.awayScore}-${match.homeScore}`;
         }
+        if (!GoalRushScores.score(nextScore)) return;
+        if (GoalRushScores.isFinal(fixture) && nextStatus !== "played") return;
         if (String(fixture.status || "") !== nextStatus || String(fixture.score || "") !== nextScore) {
           fixture.status = nextStatus; fixture.score = nextScore; changed = true;
         }
@@ -207,17 +201,22 @@ async function refreshLiveFeed(matchdays, history = false) {
 function startLiveScorePolling(matchdays) {
   if (liveScorePollingStarted) return;
   liveScorePollingStarted = true;
-  refreshLiveFeed(matchdays, true);
-  window.setInterval(() => refreshLiveFeed(matchdays, false), LIVE_SCORE_POLL_MS);
+  const notice = document.createElement('p');
+  notice.style.cssText='color:#a8bdd7;font:12px Inter,sans-serif;padding:12px;max-width:1200px;margin:auto';
+  notice.setAttribute('role','status');document.querySelector('main')?.prepend(notice);
+  GoalRushScores.engine({ entries:state.entries,
+    fetch:(comp,date)=>fetchEspnScoreboard(comp,date,date), apply:applyLiveFeed,
+    repaint:()=>{state.fixtures=flattenFixtures();renderHeaderMatchdays(matchdays||{});renderAll();},
+    status:s=>{notice.textContent=(s.busy?'Updating scores…':s.failures?'Feed unavailable · saved results shown':s.lastChecked?'Scores checked '+new Date(s.lastChecked).toLocaleTimeString('en-IE',{timeZone:'Europe/Dublin',hour:'2-digit',minute:'2-digit'})+' Irish time':'Saved results')+(s.missing?' · '+s.missing+' results awaiting confirmation':'');}
+  });
 }
+
 function parseDate(iso) {
   const [y, m, d] = String(iso || "").split("-").map(Number);
   return new Date(y, (m || 1) - 1, d || 1);
 }
-function currentIsoDate() {
-  const d = new Date();
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-}
+function currentIsoDate() { return GoalRushScores.today(); }
+
 function displayEntrantName(name) {
   return name === "Danielle Neville" ? "Brian Clarke" :
     name === "Bob" ? "Bob O'Neill" :
@@ -239,14 +238,8 @@ function teamForClub(club) {
   return null;
 }
 function crestForTeam(team) { return team?.crest || PLACEHOLDER_CREST; }
-function fixtureKickoffDate(fixture) {
-  if (!fixture?.date) return null;
-  const [y, m, d] = String(fixture.date).split("-").map(Number);
-  const match = String(fixture.kickoff || fixture.time || "00:00").match(/^(\d{1,2}):(\d{2})/);
-  const hour = match ? Number(match[1]) : 0;
-  const minute = match ? Number(match[2]) : 0;
-  return new Date(y, (m || 1) - 1, d || 1, hour, minute, 0, 0);
-}
+function fixtureKickoffDate(fixture) { return GoalRushScores.kickoff(fixture); }
+
 function kickoffText(fixture) {
   const raw = String(fixture?.kickoff || fixture?.time || "").trim();
   const match = raw.match(/(\d{1,2}:\d{2})/);
@@ -459,7 +452,8 @@ function relevantHeaderMatchday(comp, schedule) {
     const timing = headerMatchdayTiming(comp, md);
     const explicitLive = timing.fixtures.some(match => match.status === "live");
     if (now < timing.firstKickoff.getTime()) return { md, state: "NEXT", timing };
-    if (explicitLive || now <= timing.finalWindowEnd.getTime()) return { md, state: "LIVE", timing };
+    if (explicitLive) return { md, state: "LIVE", timing };
+    if (now <= timing.finalWindowEnd.getTime()) return { md, state: "ROUND", timing };
   }
   return schedule?.length
     ? { md: schedule[schedule.length - 1], state: "COMPLETE", timing: headerMatchdayTiming(comp, schedule[schedule.length - 1]) }

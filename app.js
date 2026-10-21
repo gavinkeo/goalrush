@@ -861,6 +861,7 @@ function findLiveFixtureMatch(feedMatches, comp, pairing, fixtureDate) {
 
 function espnScoreValue(competitor) {
   const raw = competitor?.score?.displayValue ?? competitor?.score?.value ?? competitor?.score;
+  if (raw === null || raw === undefined || raw === "") return null;
   const value = Number(raw);
   return Number.isFinite(value) ? value : null;
 }
@@ -1011,10 +1012,7 @@ function competitionFixtureDates(comp, throughIso = currentLocalIsoDate()) {
     .sort();
 }
 
-function currentLocalIsoDate() {
-  const d = new Date();
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-}
+function currentLocalIsoDate() { return GoalRushScores.today(); }
 
 function espnSummaryTeamRows(payload) {
   return Array.isArray(payload?.boxscore?.teams) ? payload.boxscore.teams : [];
@@ -1162,9 +1160,7 @@ async function fetchEspnScoreboard(comp, startIso, endIso = startIso) {
   const dates = startIso === endIso
     ? compactEspnDate(startIso)
     : `${compactEspnDate(startIso)}-${compactEspnDate(endIso)}`;
-  const response = await fetch(`${endpoint}?dates=${encodeURIComponent(dates)}&limit=500`, { cache: "no-store" });
-  if (!response.ok) throw new Error(`ESPN ${comp} HTTP ${response.status}`);
-  const payload = await response.json();
+  const payload = await GoalRushScores.json(`${endpoint}?dates=${encodeURIComponent(dates)}&limit=500`);
   return (Array.isArray(payload?.events) ? payload.events : [])
     .map(event => parseEspnEvent(event, comp))
     .filter(Boolean);
@@ -1191,21 +1187,7 @@ function homeOrientedScore(item) {
   return String(item?.venue || "").toUpperCase() === "A" ? reverseScoreline(raw) : raw;
 }
 
-function recalculateTeamTotals(team) {
-  let goalsFor = 0;
-  let goalsAgainst = 0;
-  let played = 0;
-  (Array.isArray(team?.fixtures) ? team.fixtures : []).forEach(item => {
-    const parts = String(item?.score || "").split(/[-–—]/).map(value => Number(String(value).trim()));
-    if (parts.length !== 2 || parts.some(value => !Number.isFinite(value))) return;
-    goalsFor += parts[0];
-    goalsAgainst += parts[1];
-    if (["played", "finished", "ft"].includes(String(item?.status || "").toLowerCase())) played += 1;
-  });
-  team.goalsFor = goalsFor;
-  team.goalsAgainst = goalsAgainst;
-  team.played = played;
-}
+function recalculateTeamTotals(team) { GoalRushScores.totals(team); }
 
 function applyLiveScoreFeed(feedMatches) {
   if (!Array.isArray(feedMatches) || !feedMatches.length) return false;
@@ -1236,6 +1218,9 @@ function applyLiveScoreFeed(feedMatches) {
             : `${match.awayScore}-${match.homeScore}`;
         }
 
+        // Preserve a confirmed result if a feed temporarily regresses or omits a score.
+        if (!GoalRushScores.score(nextScore)) return;
+        if (GoalRushScores.isFinal(item) && nextStatus !== "played") return;
         const liveMatch = {
           eventId: match.eventId || "",
           clock: match.clock || "",
@@ -1332,8 +1317,13 @@ async function refreshEspnLiveScores({ history = false } = {}) {
 function startLiveScorePolling() {
   if (liveScorePollingStarted) return;
   liveScorePollingStarted = true;
-  refreshEspnLiveScores({ history: true });
-  window.setInterval(() => refreshEspnLiveScores(), LIVE_SCORE_POLL_MS);
+  window.goalRushScoreEngine = GoalRushScores.engine({
+    entries,
+    fetch: (comp, date) => fetchEspnScoreboard(comp, date, date),
+    apply: applyLiveScoreFeed,
+    repaint: refreshLiveScoreUi,
+    status: state => GoalRushUI.status(state)
+  });
 }
 
 function crest(team) {
@@ -2017,7 +2007,19 @@ function wireManagerModal() {
   });
 }
 
+const expandedEntrants = new Set();
+document.addEventListener("toggle", event => {
+  const card = event.target;
+  if (!card.matches?.(".mobile-card") || !card.isConnected) return;
+  if (card.open) expandedEntrants.add(card.dataset.entrant);
+  else expandedEntrants.delete(card.dataset.entrant);
+}, true);
 function render() {
+  const focused = document.activeElement?.closest?.(".mobile-card")?.dataset.entrant;
+  const anchor = [...mobileEl.querySelectorAll(".mobile-card")].find(el => el.getBoundingClientRect().bottom > 0);
+  const anchorName = anchor?.dataset.entrant;
+  const anchorY = anchor?.getBoundingClientRect().top;
+  mobileEl.querySelectorAll(".mobile-card[open]").forEach(el => expandedEntrants.add(el.dataset.entrant));
   const ranking = rankingRows(entries);
   const q = searchEl.value.trim().toLowerCase();
 
@@ -2045,6 +2047,15 @@ function render() {
       mobileCard(entry, rank, rankLabel, prizeLabel)
     )
     .join("");
+  mobileEl.querySelectorAll(".mobile-card").forEach(card => {
+    card.open = expandedEntrants.has(card.dataset.entrant);
+    if (focused === card.dataset.entrant) card.querySelector("summary")?.focus({preventScroll:true});
+  });
+  if (window.matchMedia("(max-width:700px)").matches && anchorName && window.scrollY > 0) {
+    const next = [...mobileEl.querySelectorAll(".mobile-card")].find(el=>el.dataset.entrant===anchorName);
+    if(next) window.scrollBy(0,next.getBoundingClientRect().top-anchorY);
+  }
+  GoalRushUI.update();
 }
 
 function parseDate(s) {
@@ -2052,18 +2063,7 @@ function parseDate(s) {
   return new Date(y, m - 1, d);
 }
 
-function fixtureKickoffDate(fixture) {
-  if (!fixture?.date) return null;
-
-  const [y, m, d] = String(fixture.date).split("-").map(Number);
-  if (![y, m, d].every(Number.isFinite)) return null;
-
-  const kickoffMatch = String(fixture.kickoff || "00:00").match(/^(\d{1,2}):(\d{2})/);
-  const hour = kickoffMatch ? Number(kickoffMatch[1]) : 0;
-  const minute = kickoffMatch ? Number(kickoffMatch[2]) : 0;
-
-  return new Date(y, m - 1, d, hour, minute, 0, 0);
-}
+function fixtureKickoffDate(fixture) { return GoalRushScores.kickoff(fixture); }
 
 function fixturesInsideMatchday(kind, md) {
   if (!md?.start || !md?.end) return [];
@@ -2121,9 +2121,8 @@ function relevantMatchday(kind, schedule) {
       return { md, state: "NEXT", timing };
     }
 
-    if (explicitLive || now <= timing.finalWindowEnd.getTime()) {
-      return { md, state: "LIVE", timing };
-    }
+    if (explicitLive) return { md, state: "LIVE", timing };
+    if (now <= timing.finalWindowEnd.getTime()) return { md, state: "ROUND", timing };
   }
 
   return schedule?.length
@@ -2382,7 +2381,7 @@ function fixtureClusterMarkup(comp, fixtures, mode = "today") {
 
 function updateMatchCentreNavBadges(fixtures = allCompetitionFixtures()) {
   const today = new Date();
-  const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+  const todayIso = GoalRushScores.today();
   const todayCount = fixtures.filter(match => match.status === "live" || match.date === todayIso).length;
   const liveCount = fixtures.filter(match => match.status === "live").length;
 
@@ -2460,7 +2459,7 @@ function renderCompactToday() {
   if (!compactTodayEl || !compactTodayListEl) return;
 
   const today = new Date();
-  const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+  const todayIso = GoalRushScores.today();
   const todaysFixtures = fixtures.filter(match => match.status === "live" || match.date === todayIso);
 
   if (!todaysFixtures.length) {
@@ -2512,7 +2511,7 @@ function renderMatchCentreTeaser() {
   if (!matchCentreTeaserEl || !matchCentreBoardEl) return;
   const now = Date.now();
   const today = new Date();
-  const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+  const todayIso = GoalRushScores.today();
 
   const liveOrToday = fixtures.filter(match => match.status === "live" || match.date === todayIso);
   const teaserMode = liveOrToday.length ? "today" : "next";
@@ -2583,6 +2582,7 @@ async function init() {
       : [];
 
 
+    GoalRushUI.init({entries, ranking:()=>rankingRows(entries), open:openManagerModal});
     const uclSchedule = data.matchdays?.ucl || [];
     const uelSchedule = data.matchdays?.uel || [];
     competitionMatchdays.ucl = uclSchedule;

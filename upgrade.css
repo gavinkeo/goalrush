@@ -1,0 +1,54 @@
+/* v151: deliberately scoped to tools and the mobile leaderboard. */
+.gr-tools{margin:14px 0;color:#eaf2ff;font-family:Inter,system-ui,sans-serif}
+.gr-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.gr-tools button,.gr-tools select{font:600 13px Inter,system-ui,sans-serif;color:#eaf2ff;background:#101f36;border:1px solid #29415e;border-radius:8px;padding:10px 13px;min-height:42px;cursor:pointer}
+.gr-tools button:hover{border-color:#4de0ff;background:#142b43}
+.gr-tools button:focus-visible,.gr-tools select:focus-visible,.mobile-summary:focus-visible{outline:2px solid #4de0ff;outline-offset:3px}
+.gr-tools button:disabled{opacity:.6;cursor:wait}
+.gr-pick{display:flex;align-items:center;gap:10px;margin-right:auto}
+.gr-pick>span{font-size:10px;letter-spacing:.12em;color:#8da4c7;font-weight:800}
+.gr-pick select{max-width:250px}
+.gr-tools select option{background:#101f36}
+.gr-sync{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:5px 0;font-size:11px;color:#91a8c6}
+.gr-sync button{padding:6px 8px;min-height:36px;background:transparent;border-color:transparent;font-size:11px;flex-shrink:0}
+.gr-warning{color:#efbd7e}
+.gr-tools [hidden]{display:none!important}
+.gr-tools .gr-my-entry{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;margin-top:10px;background:#0b2639;border-color:#23556a;text-align:left}
+.gr-my-entry small{display:block;color:#94b5c8;font-weight:400;font-size:11px;margin-top:5px;line-height:1.4}
+.gr-my-score{white-space:nowrap;text-align:right;color:#55dff7;font-size:16px}
+#gr-message:not(:empty){font-size:12px;color:#b8d6e6;padding:5px 0}
+.gr-history{border:1px solid #29415e;border-radius:10px;padding:14px;margin:10px 0 16px;background:#09182e}
+.gr-history-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px}
+.gr-history-head label{display:flex;gap:8px;align-items:center}
+#gr-history-note{font-size:12px;line-height:1.6;color:#a3b6cd;margin:12px 0}
+.gr-history-scroll{overflow-x:auto;max-height:440px;overflow-y:auto}
+.gr-history table{width:100%;border-collapse:collapse;font-size:12px;table-layout:auto}
+.gr-history th,.gr-history td{padding:10px 7px;border-bottom:1px solid #1d3049;text-align:left;white-space:nowrap}
+.gr-history thead{position:sticky;top:0;background:#10243b;color:#8fa8c5;z-index:1}
+.gr-history tbody th{font-weight:600;white-space:normal}
+.gr-selected{background-color:#103146!important}
+.gr-up{color:#64e1be}.gr-down{color:#ffa1a8}
+@media(max-width:700px){
+ .mobile-standings{gap:0!important;padding:0!important}
+ .mobile-card{border-radius:0!important;margin:0!important;border:0!important;border-bottom:1px solid rgba(110,149,196,.18)!important;box-shadow:none!important;overflow:hidden}
+ .mobile-card:first-child{border-radius:10px 10px 0 0!important}.mobile-card:last-child{border-radius:0 0 10px 10px!important}
+ .mobile-card::before{display:none!important}
+ .mobile-summary{min-height:52px!important;height:auto!important;grid-template-columns:36px minmax(0,1fr) 38px 14px!important;grid-template-rows:auto!important;gap:7px!important;align-items:center!important;padding:6px 10px!important}
+ .mobile-summary>.rank-spot,.mobile-summary>.mobile-combined,.mobile-summary>.mobile-expand,.mobile-manager-wrap{grid-row:1!important;align-self:center!important}
+ .mobile-summary>.rank-spot{min-width:36px!important;width:36px!important;flex-basis:36px!important}
+ .mobile-summary .rank-box{width:34px!important;min-width:34px!important;min-height:36px!important;padding:3px 0!important;gap:3px!important;border-radius:6px!important;background:transparent!important;box-shadow:none!important;border-color:transparent!important}
+ .mobile-summary .rank-number{font-size:14px!important}.mobile-summary .rank-prize{font-size:8px!important}
+ .mobile-manager-wrap{display:block!important;margin:0!important;padding:0!important;min-width:0!important}
+ .mobile-manager-name{font-size:12px!important;line-height:1.3!important;white-space:normal!important;overflow-wrap:anywhere;letter-spacing:0!important}
+ .mobile-mini-teams{display:none!important}
+ .mobile-summary>.mobile-combined{width:38px!important;min-width:38px!important;min-height:36px!important;border:0!important;box-shadow:none!important;background:transparent!important}
+ .mobile-combined strong{font-size:19px!important}.mobile-expand{font-size:16px!important;color:#91a8c6!important}
+ .mobile-details{padding-top:8px!important}.mobile-card[open]{background:#0b1c32!important}
+ .mobile-card.gr-selected{box-shadow:inset 3px 0 #4de0ff!important}
+ .gr-toolbar{gap:7px}.gr-pick{flex:1;min-width:0;margin:0;display:block}.gr-pick>span{display:none}.gr-pick select{width:100%;max-width:none;padding:9px 7px}
+ .gr-tools button,.gr-tools select{font-size:12px}.gr-toolbar>button{padding:9px 10px}
+ .gr-history{padding:10px}.gr-history-head{flex-wrap:wrap}.gr-history th,.gr-history td{padding:10px 5px;font-size:11px}
+ .gr-sync{font-size:10px;line-height:1.5}.gr-my-entry strong{font-size:12px}
+ .matchday-chip .state{display:inline!important;font-size:9px!important;white-space:nowrap!important}
+}
+@media(prefers-reduced-motion:reduce){.gr-tools *{scroll-behavior:auto!important}}
