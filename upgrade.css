@@ -235,3 +235,9 @@
 .dashboard-header .gr-competition .anthem-btn{width:62px!important;height:62px!important;box-sizing:border-box!important}
 .dashboard-header .gr-competition .anthem-logo-ucl{width:44px!important;height:44px!important}
 .dashboard-header .gr-competition .anthem-logo-uel{width:42px!important;height:42px!important}
+
+/* v169: centre supporting labels against the figures and match heading sizes. */
+.dashboard-header .gr-competition .gr-comp-stats>span{display:flex;align-items:center;gap:4px;line-height:1}
+.dashboard-header .gr-competition .gr-comp-stats strong,.dashboard-header .gr-competition .gr-comp-stats b{display:inline-block;min-width:3.4ch;line-height:1}
+.dashboard-header .gr-competition .state{font-size:14px!important}
+@media(min-width:351px) and (max-width:380px){.dashboard-header .gr-competition .comp,.dashboard-header .gr-competition .state{font-size:12px!important}}
