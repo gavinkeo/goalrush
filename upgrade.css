@@ -241,3 +241,10 @@
 .dashboard-header .gr-competition .gr-comp-stats strong,.dashboard-header .gr-competition .gr-comp-stats b{display:inline-block;min-width:3.4ch;line-height:1}
 .dashboard-header .gr-competition .state{font-size:14px!important}
 @media(min-width:351px) and (max-width:380px){.dashboard-header .gr-competition .comp,.dashboard-header .gr-competition .state{font-size:12px!important}}
+
+/* v171: neutral overall progress and competition colours throughout match status. */
+#gr-progress-percent{color:#f4f8ff}
+.compact-match-centre.ucl{--gr-match-colour:#4bdaf0}
+.compact-match-centre.uel{--gr-match-colour:#f4b76f}
+.compact-match-centre.ucl .compact-centre-status,.compact-match-centre.ucl .compact-centre-score,
+.compact-match-centre.uel .compact-centre-status,.compact-match-centre.uel .compact-centre-score{color:var(--gr-match-colour)!important;text-shadow:none}
