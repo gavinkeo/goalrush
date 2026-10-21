@@ -371,3 +371,10 @@
  .gr-scorebar-score{display:flex;flex-direction:column;align-items:center;gap:7px;padding:4px 0 0;min-width:58px}
  .gr-scorebar-clock{justify-content:center}
 }
+
+/* v179: upcoming kickoff sits inline after the entrant fixture. */
+@media(min-width:701px){
+ .gr-desktop-activity.today{flex-direction:row;align-items:center;gap:5px}
+ .gr-desktop-activity.today .gr-activity-fixture{order:1}
+ .gr-desktop-activity.today .gr-activity-badge{order:2;align-self:center;border:0;border-radius:0;background:none;padding:0;font-size:8px;letter-spacing:0;flex-shrink:0}
+}

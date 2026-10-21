@@ -1548,7 +1548,7 @@ function desktopActivityMarkup(entry, activity) {
   return activity.map(({comp,item,activity:state}) => {
     const opponent = fixtureOpponentTeam(item) || {club:item.opponent || opponentFullName(item.code),abbr:item.code};
     const fixture = desktopActivityFixture(entry[comp],item,opponent);
-    const label = state === 'today' ? `TODAY · ${fixtureKickoffText(item)}` : desktopActivityStatus(item,state);
+    const label = state === 'today' ? fixtureKickoffText(item) : desktopActivityStatus(item,state);
     return `<span class="gr-desktop-activity ${comp} ${state}" title="${esc(fixture.description)}" aria-label="${esc(`${fixture.description}, ${label}`)}"><span class="gr-activity-badge">${esc(label)}</span><span class="gr-activity-fixture"><span>${esc(fixture.homeCode)}</span><strong>${esc(fixture.result || 'v')}</strong><span>${esc(fixture.awayCode)}</span></span></span>`;
   }).join('');
 }
