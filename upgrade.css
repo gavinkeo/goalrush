@@ -347,3 +347,15 @@
  .gr-scorebar-list{overflow-x:auto}
  .gr-scorebar-copy{display:none}
 }
+
+/* v177: inline entrant FT labels and vertically centred fixture crests. */
+@media(min-width:701px){
+ .gr-desktop-activity.finished{flex-direction:row;align-items:center;gap:5px}
+ .gr-desktop-activity.finished .gr-activity-fixture{order:1}
+ .gr-desktop-activity.finished .gr-activity-badge{order:2;align-self:center;padding:2px 3px;font-size:7px;flex-shrink:0}
+ .standings-table .desktop-fixture[class*="gr-fixture-"]{display:grid!important;grid-template-columns:27px minmax(0,1fr);grid-template-rows:auto auto;align-content:center!important;column-gap:4px!important;row-gap:2px!important}
+ .standings-table .desktop-fixture[class*="gr-fixture-"] .fixture-content{display:contents!important}
+ .standings-table .desktop-fixture[class*="gr-fixture-"] .fixture-crest-plate{grid-column:1;grid-row:1/3;align-self:center;justify-self:center}
+ .standings-table .desktop-fixture[class*="gr-fixture-"] .fixture-score{grid-column:2;grid-row:1;justify-self:center;text-align:center;min-width:0}
+ .standings-table .desktop-fixture[class*="gr-fixture-"] .gr-fixture-signal{grid-column:2;grid-row:2;justify-self:center;text-align:center}
+}
