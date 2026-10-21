@@ -1666,6 +1666,7 @@ function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
                 <span class="manager-open-icon" aria-hidden="true">↗</span>
               </span>
             </button>
+            <span class="gr-entrant-meta">${gamesPlayedMarkup(entry)}${todaysFixtureMarkup(entry)}</span>
           </div>
         </div>
       </td>
@@ -1674,7 +1675,6 @@ function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
       <td class="num"><span class="line-total ucl-total">${clubScore(entry.ucl)}</span></td>
       <td class="num combined-cell" rowspan="2">
         <strong class="combined-score">${totalScore(entry)}</strong>
-        <div class="gr-desktop-meta">${gamesPlayedMarkup(entry)}${todaysFixtureMarkup(entry)}</div>
       </td>
     </tr>
     <tr class="uel-row">
@@ -1744,7 +1744,7 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
         </div>
         <div class="mobile-manager-wrap">
           <span class="mobile-entry-crests">${[entry.ucl, entry.uel].map(team => `<img class="mobile-entry-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="${esc(team.club)}" onerror="this.src='${PLACEHOLDER_CREST}'">`).join('')}</span>
-          <span class="mobile-entrant-info"><span class="mobile-manager-name">${esc(entry.entrant)}</span>${todaysFixtureMarkup(entry)}</span>
+          <span class="mobile-entrant-info"><span class="mobile-manager-name">${esc(entry.entrant)}</span><span class="gr-entrant-meta">${gamesPlayedMarkup(entry)}${todaysFixtureMarkup(entry)}</span></span>
           <div class="mobile-mini-teams">
             ${compactClub(entry.ucl, "UCL")}
             <span class="mobile-pair-plus" aria-hidden="true">+</span>
@@ -1753,7 +1753,6 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
         </div>
         <div class="mobile-combined">
           <strong>${totalScore(entry)}</strong>
-          ${gamesPlayedMarkup(entry)}
         </div>
         <span class="mobile-expand" aria-hidden="true">⌄</span>
       </summary>

@@ -123,3 +123,10 @@
 /* v156: only show an entrant's fixture when they play today. */
 .gr-today-fixture{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#95aec7;font-size:9px!important;line-height:12px;font-weight:500;letter-spacing:0!important;font-variant-numeric:tabular-nums}
 .gr-today-fixture>span{color:#5b7898;margin:0 2px}.gr-fixture-live{color:#55dff7}
+
+/* v157: keep match context together under the entrant, leaving goals on their own. */
+.gr-entrant-meta{display:flex;align-items:center;gap:7px;min-width:0;max-width:100%;line-height:12px}
+.gr-entrant-meta>.gr-games{flex:0 0 auto;font-size:9px!important;line-height:12px!important;letter-spacing:0!important;color:#a5bdd3!important}
+.gr-entrant-meta>.gr-today-fixture{min-width:0;flex:0 1 auto;font-size:8px!important}
+.manager-name-wrap>.gr-entrant-meta{margin-top:5px}
+@media(max-width:700px){.mobile-summary>.mobile-combined{gap:0!important}}
