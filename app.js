@@ -1627,6 +1627,17 @@ function rankBlock(rank, rankLabel = String(rank), prizeLabel = "") {
     </div>`;
 }
 
+let leaderboardMetrics = new Map();
+function gamesPlayedMarkup(entry) {
+  const m=leaderboardMetrics.get(String(entry.id));
+  return m ? `<span class="gr-games" aria-label="${m.played} of ${m.scheduled} games completed">${m.played}/${m.scheduled}</span>` : '';
+}
+function dailyMovementMarkup(entry) {
+  const change=leaderboardMetrics.get(String(entry.id))?.change;
+  const label=change==null?'Daily movement unavailable until earlier results are confirmed':change>0?`Up ${change} places today`:change<0?`Down ${Math.abs(change)} places today`:'No position change today';
+  return `<span class="gr-daily ${change>0?'gr-up':change<0?'gr-down':'gr-neutral'}" title="${label}" aria-label="${label}">${change==null?'—':change>0?'↑ +'+change:change<0?'↓ '+change:'—'} <span class="gr-day-label">today</span></span>`;
+}
+
 function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
   const managerName = desktopManagerNameParts(entry.entrant);
   return `
@@ -1655,6 +1666,7 @@ function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
       <td class="num"><span class="line-total ucl-total">${clubScore(entry.ucl)}</span></td>
       <td class="num combined-cell" rowspan="2">
         <strong class="combined-score">${totalScore(entry)}</strong>
+        <div class="gr-desktop-meta">${gamesPlayedMarkup(entry)}${dailyMovementMarkup(entry)}</div>
       </td>
     </tr>
     <tr class="uel-row">
@@ -1724,7 +1736,7 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
         </div>
         <div class="mobile-manager-wrap">
           <span class="mobile-entry-crests">${[entry.ucl, entry.uel].map(team => `<img class="mobile-entry-crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="${esc(team.club)}" onerror="this.src='${PLACEHOLDER_CREST}'">`).join('')}</span>
-          <span class="mobile-manager-name">${esc(entry.entrant)}</span>
+          <span class="mobile-entrant-info"><span class="mobile-manager-name">${esc(entry.entrant)}</span>${dailyMovementMarkup(entry)}</span>
           <div class="mobile-mini-teams">
             ${compactClub(entry.ucl, "UCL")}
             <span class="mobile-pair-plus" aria-hidden="true">+</span>
@@ -1733,6 +1745,7 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
         </div>
         <div class="mobile-combined">
           <strong>${totalScore(entry)}</strong>
+          ${gamesPlayedMarkup(entry)}
         </div>
         <span class="mobile-expand" aria-hidden="true">⌄</span>
       </summary>
@@ -2022,6 +2035,7 @@ function render() {
   const anchorY = anchor?.getBoundingClientRect().top;
   mobileEl.querySelectorAll(".mobile-card[open]").forEach(el => expandedEntrants.add(el.dataset.entrant));
   const ranking = rankingRows(entries);
+  leaderboardMetrics = new Map(GoalRushScores.dailyStandings(entries).map(row=>[row.id,row]));
   const q = searchEl.value.trim().toLowerCase();
 
   const filtered = ranking.filter(({ entry }) =>

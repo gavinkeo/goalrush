@@ -141,6 +141,24 @@ function coverage(entries) {
   each(entries,f=>{total++;if(isFinal(f)&&score(f.score))finished++;else if(f.status==='live')live++;else {const k=kickoff(f);if(k&&k.getTime()+3*3600000<Date.now())missing++;}});
   return {missing:missing/2,finished:finished/2,live:live/2,total:total/2};
 }
+// Daily movement uses Irish calendar dates and competition ranks (ties share a rank).
+function dailyStandings(entries, day=today()) {
+  let baselineComplete=true;
+  const rows=entries.map(e=>{
+    let before=0,total=0,played=0,scheduled=0;
+    ['ucl','uel'].forEach(c=>(e[c].fixtures||[]).forEach(f=>{
+      scheduled++;
+      const s=score(f.score),final=isFinal(f)&&!!s;
+      if(final)played++;
+      if(s&&(final||f.status==='live'))total+=s[0]+s[1];
+      if(f.date<day){if(final)before+=s[0]+s[1];else baselineComplete=false;}
+    }));
+    return {id:String(e.id),before,total,played,scheduled};
+  });
+  return rows.map(r=>({...r,change:baselineComplete
+    ? (1+rows.filter(x=>x.before>r.before).length)-(1+rows.filter(x=>x.total>r.total).length)
+    : null}));
+}
 function round(entries, md) {
   let complete=true, previousComplete=true, any=false;
   const rows=entries.map(e=>{
@@ -186,6 +204,6 @@ function engine(options) {
   const resume=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',resume);window.addEventListener('online',resume);
   return {refresh,status,stop(){stopped=true;clearInterval(interval);document.removeEventListener('visibilitychange',resume);window.removeEventListener('online',resume);}};
 }
-const api={score,isFinal,key,each,totals,recalc,capture,restore,today,kickoff,coverage,round,json,engine,liveSameClub,findLiveFixtureMatch};
+const api={score,isFinal,key,each,totals,recalc,capture,restore,today,kickoff,coverage,dailyStandings,round,json,engine,liveSameClub,findLiveFixtureMatch};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GoalRushScores=api;
 })(typeof window!=='undefined'?window:globalThis);

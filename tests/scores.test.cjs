@@ -37,3 +37,11 @@ test('bundled result pairs agree and reconstruct the saved live standings',()=>{
  const data=JSON.parse(fs.readFileSync('competition.json')),base=JSON.parse(fs.readFileSync('results.json'));S.restore(data.entries,base.records);let count=0;
  S.each(data.entries,(f,t,c)=>{if(!S.isFinal(f))return;count++;const other=data.entries.map(e=>e[c]).find(t2=>t2.club===f.opponent);const reverse=other.fixtures.find(x=>x.opponent===t.club&&x.date===f.date);assert.equal(reverse.score,S.score(f.score).reverse().join('-'));});assert.ok(count>=144);assert.equal(count,Object.keys(base.records).length);const progress=S.coverage(data.entries);assert.equal(progress.finished,count/2);assert.equal(progress.total,288);assert.equal(progress.finished,81);
 });
+test('daily movement compares tied competition ranks with start of Irish day',()=>{
+ const entries=[entry(1,['1-0','0-0'],['1-0','0-0']),entry(2,['0-0','4-0'],['1-0','0-0']),entry(3,['0-0','4-0'],['1-0','0-0'])];
+ const rows=S.dailyStandings(entries,'2026-10-21');
+ assert.deepEqual(rows.map(r=>[r.id,r.change,r.played,r.scheduled]),[['1',-2,4,4],['2',1,4,4],['3',1,4,4]]);
+ entries[1].ucl.fixtures[1].status='live';
+ const live=S.dailyStandings(entries,'2026-10-21')[1];assert.equal(live.played,3);assert.equal(live.total,5);assert.equal(live.change,1);
+ entries[0].ucl.fixtures[0].score='';assert.ok(S.dailyStandings(entries,'2026-10-21').every(r=>r.change===null));
+});
