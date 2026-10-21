@@ -129,15 +129,12 @@ function restore(entries, records) {
   if(!records || typeof records!=='object')return;
   each(entries,(f,t,c)=>{const s=score(records[key(c,t,f)]);if(s&&!score(f.score)){f.score=s.join('-');f.status='played';}}); recalc(entries);
 }
-// Fixture displays use an Irish football day running from 03:00 to 02:59.
-// Shift the civil date, rather than subtracting hours, to handle DST correctly.
+// Fixture displays switch to the new calendar day at midnight Irish time.
 function fixtureDay(now = new Date()) {
   const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
-    timeZone:'Europe/Dublin',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',hourCycle:'h23'
+    timeZone:'Europe/Dublin',year:'numeric',month:'2-digit',day:'2-digit'
   }).formatToParts(now).map(p=>[p.type,p.value]));
-  const civil = new Date(Date.UTC(Number(parts.year),Number(parts.month)-1,Number(parts.day)));
-  if(Number(parts.hour)<3)civil.setUTCDate(civil.getUTCDate()-1);
-  return civil.toISOString().slice(0,10);
+  return `${parts.year}-${parts.month}-${parts.day}`;
 }
 function today() { return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Dublin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()); }
 function kickoff(f) {

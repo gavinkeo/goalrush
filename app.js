@@ -2543,9 +2543,11 @@ function scorebarMatchMarkup(match) {
   const result = score ? `${score[0]} – ${score[1]}` : '–';
   const description = `${match.home} ${result} ${match.away}, ${status.text}`;
   const image = team => team ? crest(team) : PLACEHOLDER_CREST;
+  const teamColumn = (name, team, owner) => `<span class="gr-scorebar-team"><img src="${esc(image(team))}" alt="" onerror="this.onerror=null;this.src='${PLACEHOLDER_CREST}'"><span class="gr-scorebar-team-name" title="${esc(name)}">${esc(name)}</span><span class="gr-scorebar-owner" title="${esc(owner)}">${esc(owner || '—')}</span></span>`;
   return `<div role="listitem" class="gr-scorebar-item"><a href="#compact-today" class="gr-scorebar-match ${match.comp.toLowerCase()} ${status.className}" data-key="${esc(match.key)}" aria-label="${esc(description)}" title="${esc(description)}">
-    <span class="gr-scorebar-score"><img src="${esc(image(match.homeTeam))}" alt="${esc(match.home)}" onerror="this.onerror=null;this.src='${PLACEHOLDER_CREST}'"><strong>${esc(result)}</strong><img src="${esc(image(match.awayTeam))}" alt="${esc(match.away)}" onerror="this.onerror=null;this.src='${PLACEHOLDER_CREST}'"></span>
-    <span class="gr-scorebar-details"><span class="gr-scorebar-owner" title="${esc(match.homeOwner)}">${esc(match.homeOwner || '—')}</span><span class="gr-scorebar-clock">${esc(status.text)}</span><span class="gr-scorebar-owner" title="${esc(match.awayOwner)}">${esc(match.awayOwner || '—')}</span></span>
+    ${teamColumn(match.home,match.homeTeam,match.homeOwner)}
+    <span class="gr-scorebar-score"><strong>${esc(result)}</strong><span class="gr-scorebar-clock">${esc(status.text)}</span></span>
+    ${teamColumn(match.away,match.awayTeam,match.awayOwner)}
   </a></div>`;
 }
 

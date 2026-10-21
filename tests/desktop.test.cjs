@@ -10,12 +10,12 @@ for(const [name,next] of [['scorebarMatchMarkup','renderDesktopScorebar'],['desk
 }
 vm.runInContext(source.slice(source.indexOf('function esc('),source.indexOf('const TEAM_ABBR')),context);
 test('desktop highlights only the active football day, while retaining an ongoing match',()=>{
- const day=S.fixtureDay(new Date('2026-10-22T01:59:59Z'));
+ const day=S.fixtureDay(new Date('2026-10-21T22:59:59Z'));
  assert.equal(context.desktopFixtureActivity({date:'2026-10-21',status:'scheduled'},day),'today');
  assert.equal(context.desktopFixtureActivity({date:'2026-10-21',status:'played',score:'0-0'},day),'finished');
  assert.equal(context.desktopFixtureActivity({date:'2026-10-20',status:'played',score:'2-1'},day),'');
  assert.equal(context.desktopFixtureActivity({date:'2026-10-22',status:'scheduled'},day),'');
- const next=S.fixtureDay(new Date('2026-10-22T02:00:00Z'));
+ const next=S.fixtureDay(new Date('2026-10-21T23:00:00Z'));
  assert.equal(context.desktopFixtureActivity({date:'2026-10-21',status:'played',score:'0-0'},next),'');
  assert.equal(context.desktopFixtureActivity({date:'2026-10-22',status:'scheduled'},next),'today');
  assert.equal(context.desktopFixtureActivity({date:'2026-10-21',status:'live'},next),'live');
