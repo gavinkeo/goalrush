@@ -67,3 +67,17 @@
 @media(max-width:700px){.gr-progress{padding:11px 12px;margin-bottom:12px}.gr-progress-label{font-size:9px}.gr-progress-detail>span:last-child{font-size:8px;letter-spacing:.03em}.gr-progress-detail{gap:5px}}
 @media(max-width:350px){.mobile-entry-crests{flex-basis:39px;width:39px;gap:1px}.mobile-entry-crest{width:19px}.mobile-manager-wrap{gap:5px!important}.gr-progress-detail>span:last-child{display:none}#gr-progress-count{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){#gr-progress-fill{transition:none}}
+
+/* v153: a quieter, compact entry and history toolbar. */
+.gr-tools{margin:12px 0 16px}
+.gr-toolbar{gap:12px;flex-wrap:nowrap}
+.gr-pick{flex:1;min-width:0;margin:0}
+.gr-pick>span{display:none}
+.gr-pick select{width:100%;max-width:100%;min-height:38px;padding:7px 10px;background:rgba(16,31,54,.45);border-color:rgba(103,144,184,.22);border-radius:7px;font-size:12px}
+.gr-toolbar>#gr-history{min-height:38px;padding:7px 4px;border:0;border-radius:0;background:transparent;color:#a8c2d9;font-size:12px}
+.gr-toolbar>#gr-history:hover,.gr-toolbar>#gr-history[aria-expanded="true"]{color:#55dff7}
+.gr-tools .gr-my-entry{min-height:32px;margin:3px 0 0;padding:5px 2px;border:0;border-radius:0;background:transparent;font-size:11px;color:#8fb4ca}
+.gr-tools .gr-my-entry:hover{background:transparent;color:#55dff7}
+.gr-my-score{font-size:11px;color:#a9bfd4}.gr-my-score strong{color:#55dff7;font-size:13px}.gr-entry-separator{margin:0 4px;color:#55718d}
+.gr-sync{padding:0;gap:8px;font-size:10px}.gr-sync button{min-height:28px;padding:3px 2px;font-size:10px;font-weight:500;color:#91a8c6}
+#gr-message:empty{display:none}
