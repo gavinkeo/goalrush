@@ -19,7 +19,6 @@ const headerLiveCountEl = $("#header-live-count");
 const teaserLiveCountEl = $("#teaser-live-count");
 const compactTodayEl = $("#compact-today");
 const compactTodayListEl = $("#compact-today-list");
-const compactTodaySummaryEl = $("#compact-today-summary");
 const expandedCompactFixtures = new Set();
 
 const uclAnthemBtn = $("#ucl-anthem-btn");
@@ -2476,16 +2475,6 @@ function renderCompactToday() {
     compactTodayEl.hidden = true;
     compactTodayListEl.innerHTML = "";
     return;
-  }
-
-  const uclCount = todaysFixtures.filter(match => match.comp === "UCL").length;
-  const uelCount = todaysFixtures.filter(match => match.comp === "UEL").length;
-  if (compactTodaySummaryEl) {
-    const bits = [];
-    if (uclCount) bits.push(`<span class="ucl">UCL ${uclCount}</span>`);
-    if (uelCount) bits.push(`<span class="uel">UEL ${uelCount}</span>`);
-    bits.push(`<span>${todaysFixtures.length} ${todaysFixtures.length === 1 ? "FIXTURE" : "FIXTURES"}</span>`);
-    compactTodaySummaryEl.innerHTML = bits.join(" · ");
   }
 
   compactTodayListEl.innerHTML = todaysFixtures.map(match => {
