@@ -117,3 +117,5 @@
  .mobile-combined strong{line-height:21px!important}
  .mobile-summary{grid-template-columns:44px minmax(0,1fr) 38px 14px!important}
 }
+
+@media(max-width:700px){.mobile-combined .gr-games{font-size:9px!important;line-height:12px!important;letter-spacing:0!important;color:#a5bdd3!important}}
