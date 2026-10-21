@@ -28,10 +28,10 @@ function update(){
  const cov=S().coverage(model.entries),pct=cov.total?Math.min(100,cov.finished/cov.total*100):0;
  const percent=`${pct.toFixed(1)}%`;
  $('gr-progress-percent').textContent=percent;
- $('gr-progress-count').innerHTML=`<strong>${cov.finished}</strong> / ${cov.total} matches complete`;
+ $('gr-progress-count').innerHTML=`<strong>${cov.finished}</strong> / ${cov.total} matches`;
  $('gr-progress-fill').style.width=`${pct}%`;
  $('gr-progress-meter').setAttribute('aria-valuenow',pct.toFixed(1));
- $('gr-progress-meter').setAttribute('aria-valuetext',`${cov.finished} of ${cov.total} matches complete, ${percent}`);
+ $('gr-progress-meter').setAttribute('aria-valuetext',`${cov.finished} of ${cov.total} matches, ${percent}`);
  const stats=S().goalStats(model.entries);
  ['all','ucl','uel'].forEach(comp=>{
    $(`gr-goals-${comp}`).textContent=stats[comp].goals.toLocaleString('en-IE');
