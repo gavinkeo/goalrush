@@ -388,3 +388,10 @@
 .gr-today-fixture.uel{--gr-owner-colour:#f4b76f}
 .gr-today-fixture .gr-owned-team{color:var(--gr-owner-colour);font-weight:800}
 .gr-desktop-activity .gr-activity-fixture>.gr-owned-team{color:var(--gr-activity-colour);font-weight:850}
+
+/* v181: give Today's Games crests more presence and breathing room. */
+#compact-today .compact-team{gap:9px}
+#compact-today .compact-team img{width:23px;height:23px;flex-basis:23px}
+@media(max-width:700px){
+ #compact-today .compact-team img{width:21px;height:21px;flex-basis:21px}
+}
