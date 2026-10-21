@@ -1628,7 +1628,7 @@ function rankBlock(rank, rankLabel = String(rank), prizeLabel = "") {
 }
 
 function todaysFixtureMarkup(entry) {
-  const day=GoalRushScores.today();
+  const day=GoalRushScores.fixtureDay();
   return ['ucl','uel'].flatMap(comp=>(entry[comp].fixtures||[]).filter(f=>f.date===day).map(f=>{
     const team=entry[comp],opponent=fixtureOpponentTeam(f)||{club:f.opponent,abbr:f.code};
     const away=String(f.venue).toUpperCase()==='A';
@@ -2391,7 +2391,7 @@ function fixtureClusterMarkup(comp, fixtures, mode = "today") {
 
 function updateMatchCentreNavBadges(fixtures = allCompetitionFixtures()) {
   const today = new Date();
-  const todayIso = GoalRushScores.today();
+  const todayIso = GoalRushScores.fixtureDay();
   const todayCount = fixtures.filter(match => match.status === "live" || match.date === todayIso).length;
   const liveCount = fixtures.filter(match => match.status === "live").length;
 
@@ -2469,7 +2469,7 @@ function renderCompactToday() {
   if (!compactTodayEl || !compactTodayListEl) return;
 
   const today = new Date();
-  const todayIso = GoalRushScores.today();
+  const todayIso = GoalRushScores.fixtureDay();
   const todaysFixtures = fixtures.filter(match => match.status === "live" || match.date === todayIso);
 
   if (!todaysFixtures.length) {
@@ -2521,7 +2521,7 @@ function renderMatchCentreTeaser() {
   if (!matchCentreTeaserEl || !matchCentreBoardEl) return;
   const now = Date.now();
   const today = new Date();
-  const todayIso = GoalRushScores.today();
+  const todayIso = GoalRushScores.fixtureDay();
 
   const liveOrToday = fixtures.filter(match => match.status === "live" || match.date === todayIso);
   const teaserMode = liveOrToday.length ? "today" : "next";
@@ -2610,6 +2610,18 @@ async function init() {
     }, 60000);
 
     render();
+
+    let displayedFixtureDay = GoalRushScores.fixtureDay();
+    function checkFixtureDayRollover() {
+      const day = GoalRushScores.fixtureDay();
+      if(day !== displayedFixtureDay) {
+        displayedFixtureDay = day;
+        renderCompactToday();
+        render();
+      }
+      window.setTimeout(checkFixtureDayRollover, 60000 - Date.now() % 60000 + 20);
+    }
+    checkFixtureDayRollover();
 
     // Pull completed + live results on load, then refresh the current day's scores every 30 seconds.
     startLiveScorePolling();

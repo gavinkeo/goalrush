@@ -129,6 +129,16 @@ function restore(entries, records) {
   if(!records || typeof records!=='object')return;
   each(entries,(f,t,c)=>{const s=score(records[key(c,t,f)]);if(s&&!score(f.score)){f.score=s.join('-');f.status='played';}}); recalc(entries);
 }
+// Fixture displays use an Irish football day running from 03:00 to 02:59.
+// Shift the civil date, rather than subtracting hours, to handle DST correctly.
+function fixtureDay(now = new Date()) {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
+    timeZone:'Europe/Dublin',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',hourCycle:'h23'
+  }).formatToParts(now).map(p=>[p.type,p.value]));
+  const civil = new Date(Date.UTC(Number(parts.year),Number(parts.month)-1,Number(parts.day)));
+  if(Number(parts.hour)<3)civil.setUTCDate(civil.getUTCDate()-1);
+  return civil.toISOString().slice(0,10);
+}
 function today() { return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Dublin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()); }
 function kickoff(f) {
   const [y,m,d]=String(f.date||'').split('-').map(Number), [h,min]=String(f.kickoff||'00:00').split(':').map(Number);
@@ -216,6 +226,6 @@ function engine(options) {
   const resume=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',resume);window.addEventListener('online',resume);
   return {refresh,status,stop(){stopped=true;clearInterval(interval);document.removeEventListener('visibilitychange',resume);window.removeEventListener('online',resume);}};
 }
-const api={score,isFinal,key,each,totals,recalc,capture,restore,today,kickoff,coverage,goalStats,dailyStandings,round,json,engine,liveSameClub,findLiveFixtureMatch};
+const api={score,isFinal,key,each,totals,recalc,capture,restore,today,fixtureDay,kickoff,coverage,goalStats,dailyStandings,round,json,engine,liveSameClub,findLiveFixtureMatch};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GoalRushScores=api;
 })(typeof window!=='undefined'?window:globalThis);

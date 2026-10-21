@@ -51,3 +51,14 @@ test('goal stats count mirrored completed fixtures once and exclude live scores'
  assert.deepEqual(S.goalStats([a,b]),{all:{goals:3,matches:2,average:1.5},ucl:{goals:3,matches:1,average:3},uel:{goals:0,matches:1,average:0}});
  assert.equal(S.goalStats([]).all.average,null);
 });
+
+test('fixture day switches at 03:00 Irish time across summer, winter and DST changes',()=>{
+ const cases=[
+  ['2026-10-22T01:59:59Z','2026-10-21'],['2026-10-22T02:00:00Z','2026-10-22'],
+  ['2026-11-05T02:59:59Z','2026-11-04'],['2026-11-05T03:00:00Z','2026-11-05'],
+  ['2026-10-25T02:59:59Z','2026-10-24'],['2026-10-25T03:00:00Z','2026-10-25'],
+  ['2026-03-29T01:59:59Z','2026-03-28'],['2026-03-29T02:00:00Z','2026-03-29'],
+  ['2027-01-01T02:59:59Z','2026-12-31'],['2027-01-01T03:00:00Z','2027-01-01']
+ ];
+ for(const [time,day] of cases)assert.equal(S.fixtureDay(new Date(time)),day,time);
+});
