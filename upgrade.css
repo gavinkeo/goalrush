@@ -170,3 +170,12 @@
 .gr-overall-stats strong,.gr-overall-stats b{font-weight:800;color:#d4e9f5;font-variant-numeric:tabular-nums}
 .gr-progress-detail{align-items:center}
 @media(max-width:700px){.gr-comp-stats{font-size:9px;padding-top:6px}.gr-comp-stats strong{font-size:11px}.gr-overall-stats{font-size:9px}}
+
+/* v162: a single compact stats line inside each competition capsule. */
+.gr-competition{border:1px solid rgba(80,183,213,.24);border-radius:16px;overflow:hidden;background:linear-gradient(135deg,rgba(7,24,43,.96),rgba(8,19,41,.96));box-shadow:0 8px 20px rgba(0,0,0,.12)}
+.gr-competition-uel{border-color:rgba(226,167,96,.24)}
+.dashboard-header .gr-competition>.matchday-chip{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+.gr-competition .gr-comp-stats{flex-direction:row;justify-content:center;align-items:center;gap:6px;padding:4px 6px 8px;font-size:10px;line-height:14px;white-space:nowrap}
+.gr-competition .gr-comp-stats strong,.gr-competition .gr-comp-stats b{margin:0;font-size:11px}
+.gr-competition:has(.is-live){border-color:rgba(72,210,234,.65)}
+@media(max-width:350px){.gr-competition .gr-comp-stats{gap:4px;font-size:9px}.gr-competition .gr-comp-stats strong,.gr-competition .gr-comp-stats b{font-size:10px}}
