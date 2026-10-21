@@ -476,11 +476,7 @@ function desktopFixtureDisplayText(team, item, index) {
   if (!item?.date) return "–";
 
   const fixtureDate = parseDate(item.date);
-  const today = new Date();
-  const isToday =
-    fixtureDate.getFullYear() === today.getFullYear() &&
-    fixtureDate.getMonth() === today.getMonth() &&
-    fixtureDate.getDate() === today.getDate();
+  const isToday = item.date === GoalRushScores.fixtureDay();
 
   if (isToday) {
     const kickoff = fixtureKickoffText(item);
@@ -1502,7 +1498,8 @@ function fixtureValues(team) {
       score: item?.score || "",
       date: item?.date || "",
       kickoff: item?.kickoff || item?.time || "",
-      stadium: item?.stadium || item?.ground || ""
+      stadium: item?.stadium || item?.ground || "",
+      _liveMatch: item?._liveMatch
     };
   });
 
@@ -1520,19 +1517,48 @@ function fixtureTemporalClass(index, comp) {
   return "";
 }
 
+function desktopFixtureActivity(item, day = GoalRushScores.fixtureDay()) {
+  if(item?.status === 'live') return 'live';
+  if(item?.date !== day) return '';
+  return GoalRushScores.isFinal(item) ? 'finished' : 'today';
+}
+
+function desktopActivityStatus(item, activity) {
+  if(activity === 'live') return compactFixtureStatus({status:'live',liveMatch:item._liveMatch}).text;
+  return activity === 'finished' ? 'FT' : 'TODAY';
+}
+
+function desktopEntrantActivity(entry) {
+  return ['ucl','uel'].flatMap(comp => (entry[comp].fixtures || []).map(item => ({comp,item,activity:desktopFixtureActivity(item)})))
+    .filter(f => f.activity).sort((a,b) => (a.activity === 'live' ? -1 : b.activity === 'live' ? 1 : 0));
+}
+
+function desktopActivityMarkup(entry, activity) {
+  return activity.map(({comp,item,activity:state}) => {
+    const opponent = fixtureOpponentTeam(item)?.club || item.opponent || opponentFullName(item.code);
+    const home = String(item.venue).toUpperCase() !== 'A';
+    const team = entry[comp].club;
+    const pair = home ? `${team} v ${opponent}` : `${opponent} v ${team}`;
+    const label = state === 'today' ? `TODAY · ${fixtureKickoffText(item)}` : desktopActivityStatus(item,state);
+    return `<span class="gr-desktop-activity ${comp} ${state}" title="${esc(pair)}"><span class="gr-activity-badge">${esc(label)}</span><span class="gr-activity-fixture">${esc(pair)}</span></span>`;
+  }).join('');
+}
+
 function fixtureGrid(team, comp) {
   return `<div class="fixture-grid">${
     fixtureValues(team).map((item, index) => {
       const statusClass =
         item.status === "live" ? " live" :
         item.status === "played" ? " played" : "";
+      const activity = desktopFixtureActivity(item);
+      const signal = activity ? desktopActivityStatus(item,activity) : '';
       const displayText = desktopFixtureDisplayText(team, item, index);
       const tooltipText = fixtureTooltipText(team, item, index, comp);
       const opponent = fixtureOpponentTeam(item);
       const opponentKey = opponent?.club || item?.opponent || item?.code || "";
 
       return `
-        <span class="fixture desktop-fixture${statusClass}${fixtureTemporalClass(index, comp)}"
+        <span class="fixture desktop-fixture${statusClass}${fixtureTemporalClass(index, comp)}${activity ? ` gr-fixture-${activity}` : ""}"
               aria-label="${esc(tooltipText.replaceAll("\n", ". "))}">
           <span class="fixture-content desktop-fixture-content">
             ${opponent ? `
@@ -1556,6 +1582,7 @@ function fixtureGrid(team, comp) {
               </span>`}
             <span class="fixture-score">${esc(displayText)}</span>
           </span>
+          ${signal ? `<span class="gr-fixture-signal">${esc(signal)}</span>` : ''}
         </span>`;
     }).join("")
   }</div>`;
@@ -1642,9 +1669,15 @@ function todaysFixtureMarkup(entry) {
 
 function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
   const managerName = desktopManagerNameParts(entry.entrant);
+  const activity = desktopEntrantActivity(entry);
+  const rowActivity = comp => {
+    const match = activity.find(f => f.comp === comp);
+    return match ? ` gr-row-${match.activity}` : '';
+  };
+  const entrantClass = activity[0] ? ` gr-manager-active gr-manager-${activity[0].comp} gr-manager-${activity[0].activity}` : '';
   return `
-    <tr class="ucl-row">
-      <td class="manager-cell" rowspan="2">
+    <tr class="ucl-row${rowActivity('ucl')}">
+      <td class="manager-cell${entrantClass}" rowspan="2">
         <div class="manager-wrap">
           <div class="rank-spot">
             ${rankBlock(rank, rankLabel, prizeLabel)}
@@ -1660,7 +1693,7 @@ function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
                 <span class="manager-open-icon" aria-hidden="true">↗</span>
               </span>
             </button>
-            <span class="gr-entrant-meta">${todaysFixtureMarkup(entry)}</span>
+            <span class="gr-entrant-meta">${desktopActivityMarkup(entry,activity)}</span>
           </div>
         </div>
       </td>
@@ -1671,7 +1704,7 @@ function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
         <strong class="combined-score">${totalScore(entry)}</strong>
       </td>
     </tr>
-    <tr class="uel-row">
+    <tr class="uel-row${rowActivity('uel')}">
       <td>${teamCell(entry.uel, "UEL")}</td>
       <td>${fixtureGrid(entry.uel, "UEL")}</td>
       <td class="num"><span class="line-total uel-total">${clubScore(entry.uel)}</span></td>
