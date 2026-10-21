@@ -202,3 +202,12 @@
 @media(max-width:700px){.gr-progress{padding:10px 12px;gap:8px 10px}.gr-progress-label{font-size:8px;letter-spacing:.06em}.gr-progress .gr-overall-stats{font-size:9px}#gr-progress-count{font-size:10px}#gr-progress-percent{font-size:22px}}
 @media(max-width:350px){.dashboard-header .gr-competition>.matchday-chip{padding:9px 10px 0!important;grid-template-columns:minmax(0,1fr) 36px!important;column-gap:4px!important}.dashboard-header .gr-competition .anthem-btn{width:36px!important}.dashboard-header .gr-competition .chip-copy>strong{font-size:12px!important}.gr-competition .gr-comp-stats{padding:4px 10px 9px;gap:4px;font-size:9px}.gr-competition .gr-comp-stats strong,.gr-competition .gr-comp-stats b{font-size:10px}.gr-progress{gap:8px}.gr-progress-label{font-size:7px}#gr-progress-percent{font-size:20px}.gr-progress .gr-overall-stats{font-size:8px}}
 .dashboard-header .gr-competition .chip-topline>.comp,.dashboard-header .gr-competition .chip-topline>.state{align-self:flex-start!important;justify-self:start!important}
+
+/* v164: restore the full-size anthem Easter eggs within the redesigned cards. */
+.dashboard-header .gr-competition>.matchday-chip{grid-template-columns:minmax(0,1fr) 60px!important;grid-template-rows:58px auto!important}
+.dashboard-header .gr-competition .anthem-btn{display:flex!important;align-items:center!important;justify-content:center!important;width:58px!important;height:58px!important;border-radius:50%!important;border:1px solid rgba(83,216,255,.24)!important;background:rgba(42,154,255,.06)!important;box-shadow:0 0 14px rgba(65,207,255,.18)!important}
+.dashboard-header .gr-competition .anthem-uel{border-color:rgba(247,181,98,.24)!important;background:rgba(247,181,98,.05)!important;box-shadow:0 0 14px rgba(247,181,98,.16)!important}
+.dashboard-header .gr-competition .anthem-logo-ucl{width:40px!important;height:40px!important}
+.dashboard-header .gr-competition .anthem-logo-uel{width:38px!important;height:38px!important}
+.dashboard-header .gr-competition .anthem-btn:hover,.dashboard-header .gr-competition .anthem-btn.is-playing{filter:brightness(1.2);box-shadow:0 0 18px rgba(104,226,255,.3)!important}
+.dashboard-header .gr-competition .anthem-uel:hover,.dashboard-header .gr-competition .anthem-uel.is-playing{box-shadow:0 0 18px rgba(247,181,98,.3)!important}
