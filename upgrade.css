@@ -64,8 +64,8 @@
 #gr-progress-fill{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#43d9ef,#86e4d4 65%,#efbb76);transition:width .7s ease}
 .gr-progress-detail{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px;font-size:10px;color:#91a8c6}
 #gr-progress-count{font-size:12px;font-variant-numeric:tabular-nums}#gr-progress-count strong{color:#f4f8ff;font-weight:800}
-@media(max-width:700px){.gr-progress{padding:11px 12px;margin-bottom:12px}.gr-progress-label{font-size:9px}.gr-progress-detail>span:last-child{font-size:8px;letter-spacing:.03em}.gr-progress-detail{gap:5px}}
-@media(max-width:350px){.mobile-entry-crests{flex-basis:39px;width:39px;gap:1px}.mobile-entry-crest{width:19px}.mobile-manager-wrap{gap:5px!important}.gr-progress-detail>span:last-child{display:none}#gr-progress-count{white-space:nowrap}}
+@media(max-width:700px){.gr-progress{padding:11px 12px;margin-bottom:12px}.gr-progress-label{font-size:9px}.gr-progress-detail>.gr-phase-label{font-size:8px;letter-spacing:.03em}.gr-progress-detail{gap:5px}}
+@media(max-width:350px){.mobile-entry-crests{flex-basis:39px;width:39px;gap:1px}.mobile-entry-crest{width:19px}.mobile-manager-wrap{gap:5px!important}.gr-progress-detail>.gr-phase-label{display:none}#gr-progress-count{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){#gr-progress-fill{transition:none}}
 
 /* v153: a quieter, compact entry and history toolbar. */
@@ -159,3 +159,14 @@
  .mobile-entrant-info>.gr-today-fixture{margin:0;line-height:12px;font-size:9px!important;text-align:left}
 }
 @media(max-width:350px){.mobile-summary{min-height:68px!important}}
+
+/* v161: competition stats directly beneath their matching cards. */
+.gr-competition{min-width:0}
+.gr-competition>.matchday-chip{width:100%!important;box-sizing:border-box}
+.gr-comp-stats{display:flex;flex-direction:column;gap:2px;align-items:center;padding:7px 3px 0;font:400 10px/1.4 Inter,system-ui,sans-serif;color:#8fa8c1;font-variant-numeric:tabular-nums}
+.gr-comp-stats strong{font-size:12px;font-weight:800;color:#4bdaf0;margin-right:3px}.gr-competition-uel .gr-comp-stats strong{color:#f4b76f}
+.gr-comp-stats b{font-weight:700;color:#c7d9e9;margin-right:3px}
+.gr-overall-stats{display:flex;flex-direction:column;gap:3px;text-align:right;font-size:10px;color:#8fa8c1;white-space:nowrap}
+.gr-overall-stats strong,.gr-overall-stats b{font-weight:800;color:#d4e9f5;font-variant-numeric:tabular-nums}
+.gr-progress-detail{align-items:center}
+@media(max-width:700px){.gr-comp-stats{font-size:9px;padding-top:6px}.gr-comp-stats strong{font-size:11px}.gr-overall-stats{font-size:9px}}

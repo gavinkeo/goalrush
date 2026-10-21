@@ -141,6 +141,18 @@ function coverage(entries) {
   each(entries,f=>{total++;if(isFinal(f)&&score(f.score))finished++;else if(f.status==='live')live++;else {const k=kickoff(f);if(k&&k.getTime()+3*3600000<Date.now())missing++;}});
   return {missing:missing/2,finished:finished/2,live:live/2,total:total/2};
 }
+// Count actual completed matches once, rather than both entrants' fixture copies.
+function goalStats(entries) {
+  const groups={all:{goals:0,matches:0},ucl:{goals:0,matches:0},uel:{goals:0,matches:0}},seen=new Set();
+  each(entries,(f,t,c)=>{
+    const s=score(f.score);if(!isFinal(f)||!s)return;
+    const fixture=JSON.stringify([c,f.date,...[t.club,f.opponent||f.code].sort()]);
+    if(seen.has(fixture))return;seen.add(fixture);
+    [groups[c],groups.all].forEach(g=>{g.matches++;g.goals+=s[0]+s[1];});
+  });
+  Object.values(groups).forEach(g=>g.average=g.matches?g.goals/g.matches:null);
+  return groups;
+}
 // Daily movement uses Irish calendar dates and competition ranks (ties share a rank).
 function dailyStandings(entries, day=today()) {
   let baselineComplete=true;
@@ -204,6 +216,6 @@ function engine(options) {
   const resume=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',resume);window.addEventListener('online',resume);
   return {refresh,status,stop(){stopped=true;clearInterval(interval);document.removeEventListener('visibilitychange',resume);window.removeEventListener('online',resume);}};
 }
-const api={score,isFinal,key,each,totals,recalc,capture,restore,today,kickoff,coverage,dailyStandings,round,json,engine,liveSameClub,findLiveFixtureMatch};
+const api={score,isFinal,key,each,totals,recalc,capture,restore,today,kickoff,coverage,goalStats,dailyStandings,round,json,engine,liveSameClub,findLiveFixtureMatch};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.GoalRushScores=api;
 })(typeof window!=='undefined'?window:globalThis);

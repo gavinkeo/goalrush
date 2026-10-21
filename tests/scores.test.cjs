@@ -45,3 +45,9 @@ test('daily movement compares tied competition ranks with start of Irish day',()
  const live=S.dailyStandings(entries,'2026-10-21')[1];assert.equal(live.played,3);assert.equal(live.total,5);assert.equal(live.change,1);
  entries[0].ucl.fixtures[0].score='';assert.ok(S.dailyStandings(entries,'2026-10-21').every(r=>r.change===null));
 });
+test('goal stats count mirrored completed fixtures once and exclude live scores',()=>{
+ const a={id:1,ucl:{club:'A',fixtures:[{...fixture('2-1'),opponent:'B'},{...fixture('4-2','live'),opponent:'B',date:'2026-10-21'}]},uel:{club:'C',fixtures:[{...fixture('0-0'),opponent:'D'}]}};
+ const b={id:2,ucl:{club:'B',fixtures:[{...fixture('1-2'),opponent:'A'}]},uel:{club:'D',fixtures:[{...fixture('0-0'),opponent:'C'}]}};
+ assert.deepEqual(S.goalStats([a,b]),{all:{goals:3,matches:2,average:1.5},ucl:{goals:3,matches:1,average:3},uel:{goals:0,matches:1,average:0}});
+ assert.equal(S.goalStats([]).all.average,null);
+});

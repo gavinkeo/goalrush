@@ -32,6 +32,12 @@ function update(){
  $('gr-progress-fill').style.width=`${pct}%`;
  $('gr-progress-meter').setAttribute('aria-valuenow',pct.toFixed(1));
  $('gr-progress-meter').setAttribute('aria-valuetext',`${cov.finished} of ${cov.total} matches complete, ${percent}`);
+ const stats=S().goalStats(model.entries);
+ ['all','ucl','uel'].forEach(comp=>{
+   $(`gr-goals-${comp}`).textContent=stats[comp].goals.toLocaleString('en-IE');
+   $(`gr-average-${comp}`).textContent=stats[comp].average===null?'—':stats[comp].average.toFixed(2);
+   $(`gr-stat-${comp}`).setAttribute('aria-label',`${comp==='all'?'All competitions':comp.toUpperCase()}: ${stats[comp].goals} goals in ${stats[comp].matches} completed matches, ${stats[comp].average===null?'no average yet':stats[comp].average.toFixed(2)+' goals per game'}`);
+ });
  const available=[];for(let md=1;md<=8;md++){if(model.entries.some(e=>['ucl','uel'].some(c=>e[c].fixtures?.[md-1]?.date<=S().today())))available.push(md);}
  const picker=$('gr-round'),old=picker.value;
  const options=available.length?available:[1];

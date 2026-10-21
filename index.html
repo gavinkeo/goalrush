@@ -1034,6 +1034,7 @@
       </div>
 
       <div class="matchday-strip">
+        <div class="gr-competition gr-competition-ucl">
         <div class="matchday-chip ucl-chip" id="ucl-matchday">
           <div class="chip-copy">
             <div class="chip-topline">
@@ -1046,7 +1047,10 @@
             <img class="anthem-logo anthem-logo-ucl" src="assets/ucl-logo.png?v=78" alt="" aria-hidden="true">
           </button>
         </div>
+          <div class="gr-comp-stats" id="gr-stat-ucl"><span><strong id="gr-goals-ucl">—</strong> total goals</span><span><b id="gr-average-ucl">—</b> goals per game</span></div>
+        </div>
 
+        <div class="gr-competition gr-competition-uel">
         <div class="matchday-chip uel-chip" id="uel-matchday">
           <div class="chip-copy">
             <div class="chip-topline">
@@ -1059,6 +1063,8 @@
             <img class="anthem-logo anthem-logo-uel" src="assets/uel-logo.png?v=78" alt="" aria-hidden="true">
           </button>
         </div>
+          <div class="gr-comp-stats" id="gr-stat-uel"><span><strong id="gr-goals-uel">—</strong> total goals</span><span><b id="gr-average-uel">—</b> goals per game</span></div>
+        </div>
       </div>
     </div>
 
@@ -1070,7 +1076,7 @@
     <section class="gr-progress" aria-label="Competition progress">
       <div class="gr-progress-head"><span class="gr-progress-label">COMPETITION PROGRESS</span><strong id="gr-progress-percent">—</strong></div>
       <div class="gr-progress-track" id="gr-progress-meter" role="progressbar" aria-label="Matches completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="gr-progress-fill"></span></div>
-      <div class="gr-progress-detail"><span id="gr-progress-count">Loading completed matches…</span><span>UCL + UEL · LEAGUE PHASE</span></div>
+      <div class="gr-progress-detail"><span id="gr-progress-count">Loading completed matches…</span><div class="gr-overall-stats" id="gr-stat-all"><span><strong id="gr-goals-all">—</strong> total goals</span><span><b id="gr-average-all">—</b> per game</span></div></div>
     </section>
 
     <section class="compact-today" id="compact-today" hidden aria-label="Today's fixtures">
@@ -1186,9 +1192,9 @@
     <span>2026/27 European Goal Rush</span>
   </footer>
 
-  <link rel="stylesheet" href="upgrade.css?v=160">
-  <script src="scores.js?v=160" defer></script>
-  <script src="enhancements.js?v=160" defer></script>
-  <script src="app.js?v=160" defer></script>
+  <link rel="stylesheet" href="upgrade.css?v=161">
+  <script src="scores.js?v=161" defer></script>
+  <script src="enhancements.js?v=161" defer></script>
+  <script src="app.js?v=161" defer></script>
 </body>
 </html>
