@@ -395,3 +395,9 @@
 @media(max-width:700px){
  #compact-today .compact-team img{width:21px;height:21px;flex-basis:21px}
 }
+
+/* v182: bring crests and names closer to the centred kickoff/score. */
+#compact-today .compact-fixture-toggle>.compact-teams{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);gap:6px}
+@media(max-width:700px){
+ #compact-today .compact-fixture-toggle>.compact-teams{grid-template-columns:minmax(0,1fr) 52px minmax(0,1fr);gap:5px}
+}
