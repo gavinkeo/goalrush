@@ -2549,16 +2549,33 @@ function scorebarMatchMarkup(match) {
   </a></div>`;
 }
 
+let desktopScorebarFixtures = [];
+
+function scorebarRepetitions(count, width, reducedMotion = false) {
+  return !count || reducedMotion ? 1 : Math.max(1,Math.ceil(width/(count*246)));
+}
+
 function renderDesktopScorebar(fixtures) {
+  desktopScorebarFixtures = fixtures;
   const list = $('#gr-scorebar-list');
   if(!list)return;
-  const html = fixtures.map(scorebarMatchMarkup).join('');
-  if(list.innerHTML !== html) {
-    const left = list.scrollLeft;
+  const reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const repetitions = scorebarRepetitions(fixtures.length,window.innerWidth,reduced);
+  const sequence = fixtures.map(scorebarMatchMarkup).join('');
+  const inaccessible = sequence.replaceAll('role="listitem"','role="presentation" aria-hidden="true" inert');
+  const group = sequence + inaccessible.repeat(repetitions-1);
+  const duration = Math.max(1,fixtures.length*repetitions*246/32);
+  const html = fixtures.length ? `<div class="gr-scorebar-track" style="--gr-scorebar-duration:${duration}s"><div class="gr-scorebar-group" role="list" aria-label="Today's matches">${group}</div><div class="gr-scorebar-group gr-scorebar-copy" aria-hidden="true" inert>${group}</div></div>` : '';
+  if(list.dataset.content !== html) {
+    const previousAnimation = list.querySelector('.gr-scorebar-track')?.getAnimations()[0];
+    const elapsed = previousAnimation?.currentTime || 0;
+    const previousDuration = previousAnimation?.effect.getTiming().duration || duration*1000;
     const focused = document.activeElement?.closest?.('.gr-scorebar-match')?.dataset.key;
     list.innerHTML = html;
-    list.scrollLeft = left;
-    if(focused)[...list.querySelectorAll('.gr-scorebar-match')].find(el=>el.dataset.key===focused)?.focus({preventScroll:true});
+    list.dataset.content = html;
+    const animation = list.querySelector('.gr-scorebar-track')?.getAnimations()[0];
+    if(animation)animation.currentTime = elapsed / previousDuration * duration*1000;
+    if(focused)[...list.querySelectorAll('.gr-scorebar-group:first-child .gr-scorebar-match')].find(el=>el.dataset.key===focused)?.focus({preventScroll:true});
   }
   desktopScorebarController?.update(fixtures.length > 0);
 }
@@ -2566,19 +2583,13 @@ function renderDesktopScorebar(fixtures) {
 function wireDesktopScorebar() {
   const media = window.matchMedia('(min-width:701px)');
   const bar = $('#gr-scorebar'),list = $('#gr-scorebar-list');
-  const previous = $('#gr-scorebar-prev'),next = $('#gr-scorebar-next');
   const progress = $('.gr-progress');
   let hasFixtures = false;
-  const navigation = () => {
-    previous.disabled = list.scrollLeft <= 2;
-    next.disabled = list.scrollLeft + list.clientWidth >= list.scrollWidth - 2;
-  };
   const visibility = () => {
     const passed = compactTodayEl && !compactTodayEl.hidden && compactTodayEl.getBoundingClientRect().bottom <= 0;
     const visible = media.matches && hasFixtures && passed;
     bar.hidden = !visible;
     document.body.classList.toggle('gr-scorebar-visible',visible);
-    if(visible)requestAnimationFrame(navigation);
   };
   const layout = () => {
     (media.matches ? $('#gr-desktop-progress') : $('#gr-mobile-progress')).append(progress);
@@ -2587,11 +2598,8 @@ function wireDesktopScorebar() {
   desktopScorebarController = {update(present){hasFixtures=present;visibility();}};
   new IntersectionObserver(visibility,{threshold:0}).observe(compactTodayEl);
   media.addEventListener('change',layout);
-  window.addEventListener('resize',visibility);
-  list.addEventListener('scroll',navigation,{passive:true});
-  const move = direction => list.scrollBy({left:direction*list.clientWidth*.85,behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
-  previous.addEventListener('click',()=>move(-1));
-  next.addEventListener('click',()=>move(1));
+  window.addEventListener('resize',()=>renderDesktopScorebar(desktopScorebarFixtures));
+  window.matchMedia('(prefers-reduced-motion:reduce)').addEventListener('change',()=>renderDesktopScorebar(desktopScorebarFixtures));
   layout();
 }
 

@@ -331,3 +331,19 @@
  .gr-scorebar-return{display:none}
 }
 @media(max-width:700px){.gr-scorebar{display:none!important}}
+
+/* v176: a full-width, seamless score ticker. */
+@media(min-width:701px){
+ .gr-scorebar{display:block;grid-template-columns:none;gap:0;padding:10px 0;padding-bottom:max(10px,env(safe-area-inset-bottom))}
+ .gr-scorebar-list{display:block;overflow:hidden;padding:2px 0;scroll-snap-type:none;scrollbar-width:none}
+ .gr-scorebar-track{display:flex;width:max-content;animation:gr-scorebar-roll var(--gr-scorebar-duration) linear infinite;will-change:transform}
+ .gr-scorebar-group{display:flex;flex-shrink:0;gap:8px;padding-right:8px}
+ .gr-scorebar-item{width:238px;flex:0 0 238px;scroll-snap-align:none}
+ .gr-scorebar:hover .gr-scorebar-track,.gr-scorebar:focus-within .gr-scorebar-track{animation-play-state:paused}
+ @keyframes gr-scorebar-roll{to{transform:translateX(-50%)}}
+}
+@media(min-width:701px) and (prefers-reduced-motion:reduce){
+ .gr-scorebar-track{animation:none;will-change:auto}
+ .gr-scorebar-list{overflow-x:auto}
+ .gr-scorebar-copy{display:none}
+}

@@ -60,3 +60,11 @@ test('bottom scorebar renders supplied scores, manager names and clocks without 
  assert.match(final,/<strong>4 – 1<\/strong>/);
  assert.match(final,/>FT</);
 });
+test('score ticker fills wide screens even on quiet matchdays and honours reduced motion',()=>{
+ for(const count of [1,2,9])for(const width of [900,1366,2560]) {
+  const copies=context.scorebarRepetitions(count,width);
+  assert.ok(count*copies*246>=width);
+ }
+ assert.equal(context.scorebarRepetitions(1,2560,true),1);
+ assert.equal(context.scorebarRepetitions(0,2560),1);
+});
