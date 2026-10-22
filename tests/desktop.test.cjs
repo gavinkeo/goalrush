@@ -5,7 +5,7 @@ const vm = require('node:vm');
 const S = require('../scores.js');
 const source = fs.readFileSync(require.resolve('../app.js'),'utf8');
 const context = vm.createContext({GoalRushScores:S,teamAbbr:team=>team.abbr,crest:team=>team.crest,PLACEHOLDER_CREST:"placeholder.svg"});
-for(const [name,next] of [['scorebarMatchMarkup','renderDesktopScorebar'],['desktopActivityFixture','desktopActivityMarkup'],['fixtureValues','fixtureTemporalClass'],['desktopFixtureActivity','desktopActivityStatus'],['desktopActivityStatus','desktopEntrantActivity'],['compactFixtureStatus','compactTeamMarkup']]) {
+for(const [name,next] of [['espnClockValue','espnStatusPhase'],['scorebarMatchMarkup','renderDesktopScorebar'],['desktopActivityFixture','desktopActivityMarkup'],['fixtureValues','fixtureTemporalClass'],['desktopFixtureActivity','desktopActivityStatus'],['desktopActivityStatus','desktopEntrantActivity'],['compactFixtureStatus','compactTeamMarkup']]) {
  vm.runInContext(source.slice(source.indexOf(`function ${name}(`),source.indexOf(`function ${next}(`)),context);
 }
 vm.runInContext(source.slice(source.indexOf('function esc('),source.indexOf('const TEAM_ABBR')),context);
@@ -69,3 +69,15 @@ test('score ticker fills wide screens even on quiet matchdays and honours reduce
  assert.equal(context.scorebarRepetitions(1,2560,true),1);
  assert.equal(context.scorebarRepetitions(0,2560),1);
 });
+
+ test('ESPN added-time clocks retain both halves of the minute and HT takes precedence',()=>{
+  for(const [input,expected] of [["45'+2'","45+2'"],["90'+3'","90+3'"],["45′ + 4′","45+4'"],["90+10","90+10'"],["First Half 45'+2'","45+2'"]]) {
+   const clock=context.espnClockValue({displayClock:input});
+   assert.equal(clock,expected);
+   assert.equal(context.compactFixtureStatus({status:'live',liveMatch:{clock}}).text,expected);
+  }
+  assert.equal(context.compactFixtureStatus({status:'live',liveMatch:{clock:"45'+2'",phase:'ht'}}).text,'HT');
+  assert.equal(context.compactFixtureStatus({status:'ft',liveMatch:{clock:"90'+3'"}}).text,'FT');
+  assert.equal(context.espnClockValue({displayClock:'45:18'}),'45:18');
+  assert.equal(context.espnClockValue({type:{description:'Scheduled'}}),'');
+ });

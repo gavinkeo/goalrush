@@ -919,6 +919,8 @@ function espnClockValue(...statuses) {
     for (const candidate of candidates) {
       const text = String(candidate || "").trim();
       if (!text) continue;
+      const added = text.match(/(?:^|\s)(\d{1,3})\s*['’′]?\s*\+\s*(\d{1,2})\s*['’′]?(?=\s|$)/);
+      if (added) return `${Number(added[1])}+${Number(added[2])}'`;
       if (/^\d{1,3}:\d{2}$/.test(text)) return text;
       if (/^\d{1,3}['’′]?$/.test(text)) return text;
       const minute = text.match(/(?:^|\s)(\d{1,3})(?::\d{2})?\s*['’′](?:\s|$)/);
@@ -2423,7 +2425,9 @@ function compactFixtureStatus(match) {
     let clock = String(match?.liveMatch?.clock || "").trim();
     // ESPN can return either a football-style minute (e.g. 23') or a running
     // clock (e.g. 23:14). Keep the homepage label football-simple.
-    if (/^\d{1,3}:\d{2}$/.test(clock)) clock = `${Number.parseInt(clock, 10)}'`;
+    const added = clock.match(/^(\d{1,3})\s*['’′]?\s*\+\s*(\d{1,2})\s*['’′]?$/);
+    if (added) clock = `${Number(added[1])}+${Number(added[2])}'`;
+    else if (/^\d{1,3}:\d{2}$/.test(clock)) clock = `${Number.parseInt(clock, 10)}'`;
     else if (/^\d{1,3}$/.test(clock)) clock = `${clock}'`;
     // Never manufacture a minute from the scheduled kick-off. Two matches can
     // actually start a couple of minutes apart; the old wall-clock fallback made
