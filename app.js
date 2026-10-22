@@ -1676,7 +1676,7 @@ function todaysFixtureMarkup(entry) {
     const homeCode=(away?opponent:team).club,awayCode=(away?team:opponent).club;
     const score=GoalRushScores.score(f.score),done=GoalRushScores.isFinal(f),live=f.status==='live';
     const pair=score&&(done||live)?`${homeCode} ${away?score[1]:score[0]}–${away?score[0]:score[1]} ${awayCode}`:`${homeCode} v ${awayCode}`;
-    const time=live?'LIVE':done?'FT':f.kickoff||'TBC';
+    const time=live?compactFixtureStatus({status:'live',liveMatch:f._liveMatch}).text:done?'FT':f.kickoff||'TBC';
     const label=`Today: ${away?opponent.club:team.club} v ${away?team.club:opponent.club}, ${time}${score?' · '+pair:''}`;
     const separator=score&&(done||live)?`${away?score[1]:score[0]}–${away?score[0]:score[1]}`:'v';
     const homeMarkup=away?esc(homeCode):`<strong class="gr-owned-team">${esc(homeCode)}</strong>`;

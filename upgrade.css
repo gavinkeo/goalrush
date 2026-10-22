@@ -573,3 +573,9 @@
 .dashboard-header .gr-competition-ucl .chip-topline>.state{align-self:flex-end!important}
 .dashboard-header #ucl-matchday .chip-copy{align-items:flex-end!important}
 .dashboard-header #uel-matchday .chip-copy{align-items:flex-start!important}
+
+/* v194: only the owned club is coloured in leaderboard fixture summaries. */
+.gr-today-fixture,.gr-today-fixture.gr-fixture-live{color:#b6c9dc}
+@media(min-width:701px){
+ .team-meta .gr-team-activity.live .gr-activity-badge{color:#a9bfd5}
+}
