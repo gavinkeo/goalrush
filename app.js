@@ -1549,7 +1549,9 @@ function desktopActivityMarkup(entry, activity) {
     const opponent = fixtureOpponentTeam(item) || {club:item.opponent || opponentFullName(item.code),abbr:item.code};
     const fixture = desktopActivityFixture(entry[comp],item,opponent);
     const label = state === 'today' ? fixtureKickoffText(item) : desktopActivityStatus(item,state);
-    return `<span class="gr-desktop-activity ${comp} ${state}" title="${esc(fixture.description)}" aria-label="${esc(`${fixture.description}, ${label}`)}"><span class="gr-activity-badge">${esc(label)}</span><span class="gr-activity-fixture"><span${String(item.venue).toUpperCase() !== 'A' ? ' class="gr-owned-team"' : ''}>${esc(fixture.homeCode)}</span><strong>${esc(fixture.result || 'v')}</strong><span${String(item.venue).toUpperCase() === 'A' ? ' class="gr-owned-team"' : ''}>${esc(fixture.awayCode)}</span></span></span>`;
+    const away=String(item.venue).toUpperCase()==='A';
+    const homeName=away?opponent.club:entry[comp].club,awayName=away?entry[comp].club:opponent.club;
+    return `<span class="gr-desktop-activity gr-team-activity ${comp} ${state}" title="${esc(fixture.description)}" aria-label="${esc(`${fixture.description}, ${label}`)}"><span class="gr-activity-fixture"><span${!away?' class="gr-owned-team"':''}>${esc(homeName)}</span> <strong>${esc(fixture.result || 'v')}</strong> <span${away?' class="gr-owned-team"':''}>${esc(awayName)}</span></span> <span class="gr-activity-badge">${esc(label)}</span></span>`;
   }).join('');
 }
 
@@ -1597,7 +1599,7 @@ function fixtureGrid(team, comp) {
   }</div>`;
 }
 
-function teamCell(team, comp) {
+function teamCell(team, comp, activityMarkup = "") {
   return `
     <div class="team-cell">
       <button class="team-crest-button team-fixture-trigger"
@@ -1620,6 +1622,7 @@ function teamCell(team, comp) {
           <span>${esc(team.club)}</span>
           <span class="team-open-icon" aria-hidden="true">↗</span>
         </button>
+        ${activityMarkup}
       </div>
     </div>`;
 }
@@ -1705,11 +1708,10 @@ function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
                 <span class="manager-open-icon" aria-hidden="true">↗</span>
               </span>
             </button>
-            <span class="gr-entrant-meta">${desktopActivityMarkup(entry,activity)}</span>
           </div>
         </div>
       </td>
-      <td>${teamCell(entry.ucl, "UCL")}</td>
+      <td>${teamCell(entry.ucl, "UCL", desktopActivityMarkup(entry,activity.filter(f=>f.comp==='ucl')))}</td>
       <td>${fixtureGrid(entry.ucl, "UCL")}</td>
       <td class="num"><span class="line-total ucl-total">${clubScore(entry.ucl)}</span></td>
       <td class="num combined-cell" rowspan="2">
@@ -1717,7 +1719,7 @@ function desktopRows(entry, rank, rankLabel = String(rank), prizeLabel = "") {
       </td>
     </tr>
     <tr class="uel-row${rowActivity('uel')}">
-      <td>${teamCell(entry.uel, "UEL")}</td>
+      <td>${teamCell(entry.uel, "UEL", desktopActivityMarkup(entry,activity.filter(f=>f.comp==='uel')))}</td>
       <td>${fixtureGrid(entry.uel, "UEL")}</td>
       <td class="num"><span class="line-total uel-total">${clubScore(entry.uel)}</span></td>
     </tr>`;
