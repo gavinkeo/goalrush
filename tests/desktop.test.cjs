@@ -23,11 +23,11 @@ test('desktop highlights only the active football day, while retaining an ongoin
 test('desktop fixture tiles retain the supplied live clock and halftime, without inventing minutes',()=>{
  const f={date:'2026-10-21',status:'live',score:'0-0',_liveMatch:{clock:'63:21'}};
  const tile=context.fixtureValues({fixtures:[f]})[0];
- assert.equal(context.desktopActivityStatus(tile,'live'),"LIVE 63'");
+ assert.equal(context.desktopActivityStatus(tile,'live'),"63'");
  tile._liveMatch={phase:'ht'};
  assert.equal(context.desktopActivityStatus(tile,'live'),'HT');
  tile._liveMatch={};
- assert.equal(context.desktopActivityStatus(tile,'live'),'LIVE');
+ assert.equal(context.desktopActivityStatus(tile,'live'),'–');
  assert.equal(context.desktopActivityStatus({status:'played'},'finished'),'FT');
 });
 
@@ -48,7 +48,8 @@ test('bottom scorebar renders supplied scores, manager names and clocks without 
  const live=context.scorebarMatchMarkup(match);
  assert.match(live,/gr-scorebar-match uel live/);
  assert.match(live,/<strong>0 – 0<\/strong>/);
- assert.match(live,/LIVE 72/);
+ assert.match(live,/72&#039;/);
+ assert.doesNotMatch(live,/LIVE/);
  assert.match(live,/A &amp; B/);
  assert.match(live,/Other manager/);
  assert.match(live,/src="home.svg"/);

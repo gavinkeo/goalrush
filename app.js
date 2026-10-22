@@ -2428,8 +2428,8 @@ function compactFixtureStatus(match) {
     // Never manufacture a minute from the scheduled kick-off. Two matches can
     // actually start a couple of minutes apart; the old wall-clock fallback made
     // simultaneous fixtures look falsely synchronised. If ESPN supplies a match-
-    // specific clock, show it. Otherwise show LIVE rather than a made-up minute.
-    return { text: clock ? `LIVE ${clock}` : "LIVE", className: "live" };
+    // specific clock, show it. Otherwise leave a dash rather than invent a minute.
+    return { text: clock || "–", className: "live" };
   }
   if (match.status === "ft") return { text: "FT", className: "ft" };
   // Competition is already obvious from the Today's Games header/colour treatment.
