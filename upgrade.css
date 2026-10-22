@@ -540,3 +540,20 @@
  .compact-today-head>.compact-today-title{font-size:11px;gap:12px;letter-spacing:.14em}
  .compact-today-head>.compact-today-title::before,.compact-today-head>.compact-today-title::after{flex-basis:30px}
 }
+
+/* v189: mirror anthem capsules around the centre, with logos as competition labels. */
+.dashboard-header .gr-competition .chip-topline>.comp{display:none!important}
+.dashboard-header .gr-competition-uel>.matchday-chip{grid-template-columns:62px minmax(0,1fr)!important}
+.dashboard-header .gr-competition-uel .chip-copy{grid-column:2;text-align:right}
+.dashboard-header .gr-competition-uel .anthem-btn{grid-column:1;justify-self:start!important}
+.dashboard-header .gr-competition-uel .chip-topline{justify-content:flex-end!important}
+.dashboard-header .gr-competition-uel .gr-comp-stats{align-items:flex-end}
+@media(max-width:350px){
+ .dashboard-header .matchday-strip{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .dashboard-header .gr-competition>.matchday-chip{padding:12px 7px!important;gap:4px!important}
+ .dashboard-header .gr-competition .gr-comp-stats{font-size:8px;gap:5px}
+ .dashboard-header .gr-competition .gr-comp-stats strong,.dashboard-header .gr-competition .gr-comp-stats b{font-size:10px}
+ .dashboard-header .gr-competition .gr-comp-stats>span{gap:3px}
+}
+.dashboard-header #uel-matchday #uel-anthem-btn{grid-area:1 / 1 / 2 / 2!important;justify-self:start!important}
+.dashboard-header #uel-matchday .chip-copy{grid-area:1 / 2 / 2 / 3!important}
