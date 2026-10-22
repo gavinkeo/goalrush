@@ -413,3 +413,8 @@
  .standings-table .team-meta{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;gap:0}
  .standings-table .team-meta .team-name-button{max-width:100%;width:100%}
 }
+
+/* v185: neutral kickoff text in desktop club fixture summaries. */
+@media(min-width:701px){
+ .team-meta .gr-team-activity.today .gr-activity-badge{color:#a9bfd5}
+}
