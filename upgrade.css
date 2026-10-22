@@ -528,3 +528,15 @@
  .gr-mobile-profile .gr-profile-fixture{font-size:10px;min-height:36px}
  .gr-mobile-profile .gr-profile-next{grid-template-columns:1fr}
 }
+
+/* v188: centred section titles with restrained competition-colour accents. */
+.compact-today>.compact-today-head{justify-content:center;padding:13px 18px;background:linear-gradient(90deg,transparent,rgba(120,160,210,.035),transparent)}
+.compact-today-head>.compact-today-title{justify-content:center;width:100%;gap:14px;text-align:center;letter-spacing:.16em;font-size:11px}
+.compact-today-head>.compact-today-title::before,.compact-today-head>.compact-today-title::after{content:'';display:block;flex:0 1 44px;height:2px;border-radius:2px}
+.compact-today-head>.compact-today-title::before{background:linear-gradient(90deg,transparent,#4bdaf0)}
+.compact-today-head>.compact-today-title::after{background:linear-gradient(90deg,#f4b76f,transparent)}
+@media(max-width:700px){
+ .compact-today>.compact-today-head{padding:12px 14px}
+ .compact-today-head>.compact-today-title{font-size:11px;gap:12px;letter-spacing:.14em}
+ .compact-today-head>.compact-today-title::before,.compact-today-head>.compact-today-title::after{flex-basis:30px}
+}
