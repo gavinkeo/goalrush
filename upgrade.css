@@ -418,3 +418,92 @@
 @media(min-width:701px){
  .team-meta .gr-team-activity.today .gr-activity-badge{color:#a9bfd5}
 }
+
+/* v186: entrant dashboard. */
+.manager-modal-card{width:min(1080px,calc(100vw - 48px));max-height:calc(100dvh - 40px);border-radius:24px;background:radial-gradient(ellipse at 0 0,rgba(75,218,240,.09),transparent 50%),radial-gradient(ellipse at 100% 35%,rgba(244,183,111,.07),transparent 45%),#081425}
+#manager-modal-content{padding:30px}
+.manager-modal-close{z-index:3;top:14px;right:14px}
+.gr-profile-hero{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:30px;align-items:center;padding:3px 0 24px}
+.gr-profile-label{display:block;font:800 9px/1.3 Inter,system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#93abc4}
+.gr-profile-identity>.gr-profile-label{color:#4bdaf0}
+.gr-profile-identity h2{font:900 clamp(24px,3.2vw,42px)/1.04 Inter,system-ui,sans-serif;letter-spacing:-.045em;text-transform:uppercase;margin:12px 0;color:#f4f8ff}
+.gr-profile-identity p{font-size:13px;color:#a9bfd5;margin:0 0 18px}
+.gr-profile-identity-clubs{display:flex;align-items:center;flex-wrap:wrap;gap:8px;color:#cfdeed;font-size:11px;font-weight:650}
+.gr-profile-identity-clubs img{width:22px;height:22px;object-fit:contain}
+.gr-profile-identity-clubs>span{color:#55738e;margin:0 4px}
+.gr-profile-total{text-align:center;padding-right:20px}
+.gr-profile-total>strong{display:block;font:900 90px/.94 Inter,system-ui,sans-serif;letter-spacing:-.07em;color:#f4f8ff;font-variant-numeric:tabular-nums}
+.gr-profile-total>span{display:block;font-size:9px;font-weight:800;letter-spacing:.17em;color:#9bb2c9;margin:10px 0 12px}
+.gr-profile-total>div{height:5px;border-radius:5px;overflow:hidden;background:#f4b76f}
+.gr-profile-total i{display:block;height:100%;background:#4bdaf0}
+.gr-profile-total small{display:flex;justify-content:space-between;font-size:9px;margin-top:7px;color:#f4b76f}
+.gr-profile-total small b:first-child{color:#4bdaf0}
+.gr-profile-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid #263b51;border-radius:12px;background:rgba(19,38,59,.55);margin-bottom:22px}
+.gr-profile-metrics>div{padding:13px 18px;border-right:1px solid #263b51;min-width:0}
+.gr-profile-metrics>div:last-child{border:0}
+.gr-profile-metrics span{display:block;color:#829cb7;font-size:8px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.gr-profile-metrics strong{font-size:22px;line-height:1.2;font-weight:850;color:#f4f8ff}
+.gr-profile-metrics small{font-size:11px;color:#9bb2c9;font-weight:550}
+.gr-profile-clubs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.gr-profile-club{--club-colour:#4bdaf0;--club-rgb:75,218,240;min-width:0;border:1px solid rgba(var(--club-rgb),.24);border-radius:16px;overflow:hidden;background:linear-gradient(145deg,rgba(var(--club-rgb),.055),rgba(5,16,33,.65))}
+.gr-profile-club.uel{--club-colour:#f4b76f;--club-rgb:244,183,111}
+.gr-profile-club-head{display:flex;align-items:center;gap:13px;padding:20px 20px 16px}
+.gr-profile-crest{width:54px;height:54px;object-fit:contain;filter:drop-shadow(0 5px 12px rgba(0,0,0,.3))}
+.gr-profile-club-title{min-width:0;flex:1}
+.gr-profile-club-title .gr-profile-label{color:var(--club-colour);font-size:8px;letter-spacing:.07em}
+.gr-profile-club-title h3{font:850 18px/1.15 Inter,system-ui,sans-serif;letter-spacing:-.035em;color:#f4f8ff;margin:6px 0}
+.gr-profile-muted{color:#839db7;font-size:10px}
+.gr-profile-club-total{text-align:right;flex-shrink:0}
+.gr-profile-club-total strong{display:block;color:var(--club-colour);font-size:38px;font-weight:900;line-height:1;letter-spacing:-.05em}
+.gr-profile-club-total>span{font-size:8px;font-weight:750;letter-spacing:.12em;color:#8da7bf}
+.gr-profile-contribution{height:3px;background:rgba(var(--club-rgb),.09);margin:0 20px}
+.gr-profile-contribution>span{display:block;height:100%;background:var(--club-colour);border-radius:3px}
+.gr-profile-club-stats{display:flex;justify-content:space-between;gap:6px;padding:12px 20px;font-size:10px;color:#90a8bf}
+.gr-profile-club-stats strong{color:#e5edf7;font-size:13px;margin-right:3px}
+.gr-profile-next{margin:0 12px 10px;padding:12px;border:1px solid rgba(var(--club-rgb),.16);border-radius:10px;background:rgba(var(--club-rgb),.06);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 10px;align-items:center}
+.gr-profile-next>.gr-profile-label{grid-column:1/-1;color:var(--club-colour);font-size:8px}
+.gr-profile-next>strong{font-size:12px;color:#eaf2fc;line-height:1.3}
+.gr-profile-next>span:last-child{font-size:9px;color:#adc0d3;white-space:nowrap;font-weight:750}
+.gr-profile-next.is-live>.gr-profile-label{color:#ff6473}
+.gr-profile-fixtures{padding:0 20px}
+.gr-profile-fixture{display:grid;grid-template-columns:18px 43px 16px 20px minmax(0,1fr) auto;align-items:center;gap:7px;min-height:31px;border-bottom:1px solid rgba(124,153,184,.10);font-size:10px;color:#a9bed1}
+.gr-profile-fixture:last-child{border:0}
+.gr-profile-fixture img{height:18px;width:18px;object-fit:contain}
+.gr-profile-md{color:#58748e;font-size:9px;font-weight:700}
+.gr-profile-date{color:#819bb3;font-size:8px;font-weight:650}
+.gr-profile-venue{color:#6f8ca8;font-size:8px}
+.gr-profile-opponent{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#c0d1e2;font-weight:650}
+.gr-profile-result{font-size:9px;white-space:nowrap;text-align:right;display:flex;gap:5px;align-items:center;color:#819bb3}
+.gr-profile-result strong{font-size:12px;color:#f4f8ff;font-variant-numeric:tabular-nums}
+.gr-profile-result small{font-size:7px;color:#6f8ca8}
+.gr-profile-fixture.is-live .gr-profile-result small{color:#ff6473}
+.manager-modal-team.gr-profile-open{display:flex;align-items:center;justify-content:space-between;width:calc(100% - 24px);margin:8px 12px 12px;padding:9px 11px;border:1px solid rgba(var(--club-rgb),.17);border-radius:8px;background:rgba(var(--club-rgb),.035);font:750 10px/1.3 Inter,system-ui,sans-serif;color:var(--club-colour);text-align:left;cursor:pointer}
+.gr-profile-open:hover{background:rgba(var(--club-rgb),.1)}
+.gr-profile-footnote{margin:17px 0 0;text-align:center;font-size:9px;color:#68849f}
+@media(max-width:700px){
+ .manager-modal-card{width:calc(100vw - 20px);max-height:calc(100dvh - 20px);border-radius:18px}
+ #manager-modal-content{padding:24px 14px 16px}
+ .gr-profile-hero{grid-template-columns:minmax(0,1fr) 96px;gap:12px;padding-bottom:18px}
+ .gr-profile-identity h2{font-size:25px;margin:10px 0}
+ .gr-profile-identity>.gr-profile-label{font-size:7px;letter-spacing:.07em;padding-right:10px}
+ .gr-profile-identity p{font-size:11px;line-height:1.4;margin-bottom:12px}
+ .gr-profile-identity-clubs{font-size:9px;gap:5px}
+ .gr-profile-identity-clubs img{width:18px;height:18px}
+ .gr-profile-total{padding-right:0}
+ .gr-profile-total>strong{font-size:62px}
+ .gr-profile-total>span{font-size:7px;letter-spacing:.07em;line-height:1.4}
+ .gr-profile-total small{font-size:8px}
+ .gr-profile-metrics{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:16px}
+ .gr-profile-metrics>div{padding:11px 13px}
+ .gr-profile-metrics>div:nth-child(2){border-right:0}
+ .gr-profile-metrics>div:nth-child(-n+2){border-bottom:1px solid #263b51}
+ .gr-profile-metrics strong{font-size:20px}
+ .gr-profile-clubs{grid-template-columns:1fr;gap:14px}
+ .gr-profile-club-head{padding:16px;gap:11px}
+ .gr-profile-crest{width:46px;height:46px}
+ .gr-profile-club-title h3{font-size:17px}
+ .gr-profile-fixtures{padding:0 14px}
+ .gr-profile-fixture{gap:5px;grid-template-columns:14px 39px 13px 18px minmax(0,1fr) auto;min-height:34px}
+ .gr-profile-next{grid-template-columns:1fr}
+}
+.manager-modal-team.gr-profile-open{flex-direction:row}

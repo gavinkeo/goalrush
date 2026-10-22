@@ -1947,28 +1947,31 @@ function gapSummary(ranked, rank, total) {
   return `${aboveGap} goal${aboveGap === 1 ? "" : "s"} behind ${String(above.entrant).toUpperCase()}`;
 }
 
-function managerTeamCard(team, comp) {
-  const info = clubCountryInfo(team?.club);
-  return `
-    <button class="manager-modal-team ${String(comp).toLowerCase()}"
-            type="button"
-            data-team="${esc(team.club)}"
-            data-comp="${esc(comp)}"
-            aria-label="View ${esc(team.club)} fixtures">
-      <span class="manager-modal-team-top">
-        <span class="manager-modal-team-badge ${String(comp).toLowerCase()}">${esc(comp)}</span>
-        <span class="manager-modal-team-goals">${clubScore(team)}</span>
-      </span>
-      <span class="manager-modal-team-body">
-        <span class="manager-modal-team-crest-wrap">
-          <img class="manager-modal-team-crest" data-club-key="${esc(clubKey(team.club))}" src="${esc(crest(team))}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
-        </span>
-        <span class="manager-modal-team-copy">
-          <span class="manager-modal-team-name-row">${countryFlagMarkup(info, "manager-modal-flag")}<strong>${esc(team.club)}</strong></span>
-          <span class="manager-modal-team-sub">View 8 fixtures</span>
-        </span>
-      </span>
-    </button>`;
+function managerTeamCard(team, comp, combinedTotal = clubScore(team)) {
+  const fixtures = fixtureValues(team);
+  const completed = fixtures.filter(GoalRushScores.isFinal).length;
+  const day = GoalRushScores.fixtureDay();
+  const next = fixtures.find(f=>f.status==='live') || fixtures.filter(f=>!GoalRushScores.isFinal(f) && f.date>=day).sort((a,b)=>String(a.date).localeCompare(String(b.date)))[0];
+  const contribution = combinedTotal ? Math.round(clubScore(team)/combinedTotal*100) : 0;
+  const upcoming = next ? `${next.venue==='A'?'Away to':'Home to'} ${fixtureOpponentTeam(next)?.club || next.opponent || opponentFullName(next.code)}` : 'League phase complete';
+  const nextStatus = next ? (next.status==='live' ? desktopActivityStatus(next,'live') : `${formatFixtureListDate(comp,fixtures.indexOf(next),next)} · ${fixtureKickoffText(next)}`) : 'All results recorded';
+  return `<article class="gr-profile-club ${comp.toLowerCase()}">
+    <div class="gr-profile-club-head">
+      <img class="gr-profile-crest" src="${esc(crest(team))}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
+      <div class="gr-profile-club-title"><span class="gr-profile-label">${comp==='UCL'?'Champions League':'Europa League'}</span><h3>${esc(team.club)}</h3><span class="gr-profile-muted">${completed} of ${fixtures.length} matches complete</span></div>
+      <div class="gr-profile-club-total"><strong>${clubScore(team)}</strong><span>GOALS</span></div>
+    </div>
+    <div class="gr-profile-contribution"><span style="width:${contribution}%"></span></div>
+    <div class="gr-profile-club-stats"><span><strong>${Number(team.goalsFor||0)}</strong> scored</span><span><strong>${Number(team.goalsAgainst||0)}</strong> conceded</span><span><strong>${contribution}%</strong> of total</span></div>
+    <div class="gr-profile-next${next?.status==='live'?' is-live':''}"><span class="gr-profile-label">${next?.status==='live'?'On the pitch':'Next up'}</span><strong>${esc(upcoming)}</strong><span>${esc(nextStatus)}</span></div>
+    <div class="gr-profile-fixtures" aria-label="${esc(team.club)} league-phase fixtures">
+      ${fixtures.map((f,i)=>{
+        const score=GoalRushScores.score(f.score),final=GoalRushScores.isFinal(f),live=f.status==='live';
+        return `<div class="gr-profile-fixture${live?' is-live':final?' is-complete':''}"><span class="gr-profile-md">${i+1}</span><span class="gr-profile-date">${esc(formatFixtureListDate(comp,i,f))}</span><span class="gr-profile-venue">${esc(f.venue||'–')}</span><img src="${esc(fixtureOpponentCrest(f))}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'"><span class="gr-profile-opponent">${esc(fixtureOpponentTeam(f)?.club || f.opponent || opponentFullName(f.code))}</span><span class="gr-profile-result">${score&&(final||live)?`<strong>${score.join('–')}</strong><small>${live?esc(desktopActivityStatus(f,'live')):'FT'}</small>`:esc(fixtureKickoffText(f))}</span></div>`;
+      }).join('')}
+    </div>
+    <button class="manager-modal-team gr-profile-open ${comp.toLowerCase()}" type="button" data-team="${esc(team.club)}" data-comp="${comp}">Explore ${esc(team.club)} <span aria-hidden="true">↗</span></button>
+  </article>`;
 }
 
 function openManagerModal(entrantName) {
@@ -1988,39 +1991,17 @@ function openManagerModal(entrantName) {
   const prize = rankingRow.prizeLabel;
   const gapText = gapSummary(ranked, position, total);
 
+  const completed = ['ucl','uel'].reduce((n,c)=>n+(entry[c].fixtures||[]).filter(GoalRushScores.isFinal).length,0);
+  const fixtureCount = ['ucl','uel'].reduce((n,c)=>n+(entry[c].fixtures||[]).length,0);
+  const leadGap = Math.max(0,totalScore(ranked[0])-total);
   managerModalContentEl.innerHTML = `
-    <div class="manager-modal-hero">
-      <div>
-        <span class="manager-modal-eyebrow">Entrant summary</span>
-        <h2 id="manager-modal-title">${esc(String(entry.entrant).toUpperCase())}</h2>
-        <p class="manager-modal-subhead">${rankLabel.startsWith("T") ? `${esc(rankLabel)} · TIED` : (rank === 1 ? "1st place" : `${rank}${rank === 2 ? "nd" : rank === 3 ? "rd" : "th"} place`)} · ${esc(gapText)}</p>
-      </div>
-      <div class="manager-modal-rank-box">
-        <span>RANK</span>
-        <strong>${esc(rankLabel)}</strong>
-      </div>
+    <div class="gr-profile-hero">
+      <div class="gr-profile-identity"><span class="gr-profile-label">EURO GOAL RUSH · ENTRANT PROFILE</span><h2 id="manager-modal-title">${esc(entry.entrant)}</h2><p>${esc(gapText)}</p><div class="gr-profile-identity-clubs"><img src="${esc(crest(entry.ucl))}" alt="">${esc(entry.ucl.club)}<span>+</span><img src="${esc(crest(entry.uel))}" alt="">${esc(entry.uel.club)}</div></div>
+      <div class="gr-profile-total"><strong>${total}</strong><span>GOALS COLLECTED</span><div><i style="width:${total?clubScore(entry.ucl)/total*100:50}%"></i></div><small><b>${clubScore(entry.ucl)} UCL</b><b>${clubScore(entry.uel)} UEL</b></small></div>
     </div>
-
-    <div class="manager-modal-pair-grid">
-      ${managerTeamCard(entry.ucl, "UCL")}
-      ${managerTeamCard(entry.uel, "UEL")}
-    </div>
-
-    <div class="manager-modal-summary-row">
-      <div class="manager-modal-summary-card">
-        <span>TOTAL</span>
-        <strong>${total}</strong>
-      </div>
-      <div class="manager-modal-summary-card">
-        <span>GOALS SPLIT</span>
-        <strong>${clubScore(entry.ucl)} + ${clubScore(entry.uel)}</strong>
-      </div>
-      <div class="manager-modal-summary-card ${prize ? "is-prize" : ""}">
-        <span>${prize ? "PRIZE" : "STATUS"}</span>
-        <strong>${prize || esc(gapText)}</strong>
-      </div>
-    </div>
-  `;
+    <div class="gr-profile-metrics"><div><span>POSITION</span><strong>${esc(rankLabel)} <small>/ ${entries.length}</small></strong></div><div><span>MATCHES COMPLETE</span><strong>${completed}<small> / ${fixtureCount}</small></strong></div><div><span>${leadGap?'TO THE LEAD':'AT THE TOP'}</span><strong>${leadGap?`${leadGap} <small>goals</small>`:(rankLabel.startsWith('T')?'Joint leader':'Leader')}</strong></div><div><span>${prize?'CURRENT PRIZE':'STILL TO PLAY'}</span><strong>${prize || `${fixtureCount-completed}<small> matches</small>`}</strong></div></div>
+    <div class="gr-profile-clubs">${managerTeamCard(entry.ucl,'UCL',total)}${managerTeamCard(entry.uel,'UEL',total)}</div>
+    <p class="gr-profile-footnote">Every goal counts. Goals scored + goals conceded across both clubs.</p>`;
 
   managerModalEl.hidden = false;
   document.documentElement.classList.add("manager-modal-open");
