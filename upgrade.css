@@ -507,3 +507,24 @@
  .gr-profile-next{grid-template-columns:1fr}
 }
 .manager-modal-team.gr-profile-open{flex-direction:row}
+/* v187: compact entrant dashboards inside the mobile leaderboard. */
+.gr-profile-fixtures{padding-bottom:12px}
+@media(max-width:700px){
+ .mobile-details.gr-mobile-profile{padding:14px 10px 16px!important;background:radial-gradient(ellipse at 0 0,rgba(75,218,240,.05),transparent 65%),#081526}
+ .gr-mobile-profile-intro{padding:2px 5px 17px}
+ .gr-mobile-profile-intro>.gr-profile-label{font-size:8px;color:#6f91ad;letter-spacing:.13em;margin-bottom:7px}
+ .gr-mobile-profile-intro>strong{display:block;color:#f4f8ff;font-size:17px;line-height:1.25;font-weight:850;letter-spacing:-.025em;margin-bottom:4px}
+ .gr-mobile-profile-intro>span:last-of-type{font-size:10px;color:#91aac2}
+ .gr-mobile-split{margin-top:12px;height:4px;border-radius:4px;background:#f4b76f;overflow:hidden}
+ .gr-mobile-split i{display:block;height:100%;background:#4bdaf0}
+ .gr-mobile-split-labels{display:flex;justify-content:space-between;font-size:9px;margin-top:6px;color:#f4b76f}
+ .gr-mobile-split-labels>b:first-child{color:#4bdaf0}
+ .gr-mobile-profile .gr-profile-club-head{padding:15px 13px}
+ .gr-mobile-profile .gr-profile-club-title h3{font-size:16px}
+ .gr-mobile-profile .gr-profile-crest{width:43px;height:43px}
+ .gr-mobile-profile .gr-profile-club-total strong{font-size:34px}
+ .gr-mobile-profile .gr-profile-club-stats{padding:11px 14px;font-size:9px}
+ .gr-mobile-profile .gr-profile-contribution{margin:0 14px}
+ .gr-mobile-profile .gr-profile-fixture{font-size:10px;min-height:36px}
+ .gr-mobile-profile .gr-profile-next{grid-template-columns:1fr}
+}

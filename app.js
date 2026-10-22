@@ -1759,16 +1759,11 @@ function mobileFixtureGrid(team, comp) {
 }
 
 function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
-  const row = (team, comp) => `
-    <div class="mobile-comp ${comp.toLowerCase()}">
-      <div class="mobile-team">
-        <span class="mobile-badge ${comp.toLowerCase()}">${comp}</span>
-        <img class="crest" data-club-key="${esc(clubKey(team.club))}" src="${crest(team)}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'">
-        <strong>${esc(team.club)}</strong>
-        <span class="mobile-total">${clubScore(team)}</span>
-      </div>
-      ${mobileFixtureGrid(team, comp)}
-    </div>`;
+  const total=totalScore(entry);
+  const ranked=sortedEntries(entries);
+  const status=gapSummary(ranked,rank,total);
+  const completed=['ucl','uel'].reduce((n,c)=>n+(entry[c].fixtures||[]).filter(GoalRushScores.isFinal).length,0);
+  const fixtureCount=['ucl','uel'].reduce((n,c)=>n+(entry[c].fixtures||[]).length,0);
 
   const compactClub = (team, comp) => `
     <span class="mobile-mini-team ${comp.toLowerCase()}">
@@ -1797,9 +1792,9 @@ function mobileCard(entry, rank, rankLabel = String(rank), prizeLabel = "") {
         </div>
         <span class="mobile-expand" aria-hidden="true">⌄</span>
       </summary>
-      <div class="mobile-details">
-        ${row(entry.ucl, "UCL")}
-        ${row(entry.uel, "UEL")}
+      <div class="mobile-details gr-mobile-profile">
+        <div class="gr-mobile-profile-intro"><span class="gr-profile-label">THE GOAL BREAKDOWN</span><strong>${esc(status)}</strong><span>${completed} / ${fixtureCount} matches complete</span><div class="gr-mobile-split"><i style="width:${total?clubScore(entry.ucl)/total*100:50}%"></i></div><div class="gr-mobile-split-labels"><b>${clubScore(entry.ucl)} UCL</b><b>${clubScore(entry.uel)} UEL</b></div></div>
+        <div class="gr-profile-clubs">${managerTeamCard(entry.ucl,'UCL',total)}${managerTeamCard(entry.uel,'UEL',total)}</div>
       </div>
     </details>`;
 }
@@ -1932,19 +1927,10 @@ function wireTeamModal() {
 
 
 function gapSummary(ranked, rank, total) {
-  if (!Array.isArray(ranked) || !ranked.length) return "";
-  if (rank === 1) {
-    const next = ranked[1];
-    if (!next) return "Sole leader";
-    const gap = total - totalScore(next);
-    return gap > 0 ? `${gap} goal${gap === 1 ? "" : "s"} clear of 2nd` : "Level at the top";
-  }
-
-  const leaderGap = totalScore(ranked[0]) - total;
-  const above = ranked[rank - 2];
-  const aboveGap = above ? totalScore(above) - total : 0;
-  if (aboveGap <= 0) return leaderGap > 0 ? `${leaderGap} goal${leaderGap === 1 ? "" : "s"} off the lead` : "Level with the lead";
-  return `${aboveGap} goal${aboveGap === 1 ? "" : "s"} behind ${String(above.entrant).toUpperCase()}`;
+  if (!Array.isArray(ranked) || !ranked.length) return '';
+  const gap=Math.max(0,totalScore(ranked[0])-total);
+  if(gap>0)return `${gap} goal${gap===1?'':'s'} off the lead`;
+  return ranked.filter(entry=>totalScore(entry)===total).length>1?'TIED FOR THE LEAD':'LEADER';
 }
 
 function managerTeamCard(team, comp, combinedTotal = clubScore(team)) {
@@ -1970,7 +1956,7 @@ function managerTeamCard(team, comp, combinedTotal = clubScore(team)) {
         return `<div class="gr-profile-fixture${live?' is-live':final?' is-complete':''}"><span class="gr-profile-md">${i+1}</span><span class="gr-profile-date">${esc(formatFixtureListDate(comp,i,f))}</span><span class="gr-profile-venue">${esc(f.venue||'–')}</span><img src="${esc(fixtureOpponentCrest(f))}" alt="" onerror="this.src='${PLACEHOLDER_CREST}'"><span class="gr-profile-opponent">${esc(fixtureOpponentTeam(f)?.club || f.opponent || opponentFullName(f.code))}</span><span class="gr-profile-result">${score&&(final||live)?`<strong>${score.join('–')}</strong><small>${live?esc(desktopActivityStatus(f,'live')):'FT'}</small>`:esc(fixtureKickoffText(f))}</span></div>`;
       }).join('')}
     </div>
-    <button class="manager-modal-team gr-profile-open ${comp.toLowerCase()}" type="button" data-team="${esc(team.club)}" data-comp="${comp}">Explore ${esc(team.club)} <span aria-hidden="true">↗</span></button>
+
   </article>`;
 }
 
@@ -1999,7 +1985,7 @@ function openManagerModal(entrantName) {
       <div class="gr-profile-identity"><span class="gr-profile-label">EURO GOAL RUSH · ENTRANT PROFILE</span><h2 id="manager-modal-title">${esc(entry.entrant)}</h2><p>${esc(gapText)}</p><div class="gr-profile-identity-clubs"><img src="${esc(crest(entry.ucl))}" alt="">${esc(entry.ucl.club)}<span>+</span><img src="${esc(crest(entry.uel))}" alt="">${esc(entry.uel.club)}</div></div>
       <div class="gr-profile-total"><strong>${total}</strong><span>GOALS COLLECTED</span><div><i style="width:${total?clubScore(entry.ucl)/total*100:50}%"></i></div><small><b>${clubScore(entry.ucl)} UCL</b><b>${clubScore(entry.uel)} UEL</b></small></div>
     </div>
-    <div class="gr-profile-metrics"><div><span>POSITION</span><strong>${esc(rankLabel)} <small>/ ${entries.length}</small></strong></div><div><span>MATCHES COMPLETE</span><strong>${completed}<small> / ${fixtureCount}</small></strong></div><div><span>${leadGap?'TO THE LEAD':'AT THE TOP'}</span><strong>${leadGap?`${leadGap} <small>goals</small>`:(rankLabel.startsWith('T')?'Joint leader':'Leader')}</strong></div><div><span>${prize?'CURRENT PRIZE':'STILL TO PLAY'}</span><strong>${prize || `${fixtureCount-completed}<small> matches</small>`}</strong></div></div>
+    <div class="gr-profile-metrics"><div><span>POSITION</span><strong>${esc(rankLabel)} <small>/ ${entries.length}</small></strong></div><div><span>MATCHES COMPLETE</span><strong>${completed}<small> / ${fixtureCount}</small></strong></div><div><span>${leadGap?'TO THE LEAD':'AT THE TOP'}</span><strong>${leadGap?`${leadGap} <small>goals</small>`:(rankLabel.startsWith('T')?'TIED FOR THE LEAD':'LEADER')}</strong></div><div><span>${prize?'CURRENT PRIZE':'STILL TO PLAY'}</span><strong>${prize || `${fixtureCount-completed}<small> matches</small>`}</strong></div></div>
     <div class="gr-profile-clubs">${managerTeamCard(entry.ucl,'UCL',total)}${managerTeamCard(entry.uel,'UEL',total)}</div>
     <p class="gr-profile-footnote">Every goal counts. Goals scored + goals conceded across both clubs.</p>`;
 
