@@ -557,3 +557,12 @@
 }
 .dashboard-header #uel-matchday #uel-anthem-btn{grid-area:1 / 1 / 2 / 2!important;justify-self:start!important}
 .dashboard-header #uel-matchday .chip-copy{grid-area:1 / 2 / 2 / 3!important}
+
+/* v190: matching text columns and explicit countdown labels. */
+.dashboard-header .gr-competition .chip-copy{text-align:left!important}
+.dashboard-header .gr-competition .chip-topline{flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:3px!important}
+.dashboard-header .gr-competition .chip-topline>.state{align-self:flex-start!important}
+.dashboard-header .gr-competition .gr-comp-stats{align-items:flex-start!important}
+.dashboard-header .gr-competition .gr-countdown-caption{display:block;font:750 7px/1 Inter,system-ui,sans-serif;letter-spacing:.075em;color:#8da5bd;white-space:nowrap}
+.dashboard-header .gr-competition .gr-countdown-caption[hidden]{display:none!important}
+.dashboard-header .gr-competition .gr-comp-stats strong,.dashboard-header .gr-competition .gr-comp-stats b{font-variant-numeric:tabular-nums}

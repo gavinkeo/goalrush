@@ -2231,6 +2231,8 @@ function setMatchday(kind, schedule) {
 
   const nextKickoff = result.timing.fixtures.map(fixtureKickoffDate).filter(date => date && date.getTime() > Date.now()).sort((a, b) => a - b)[0];
   const countdown = result.state === "NEXT" ? result.timing.firstKickoff : result.state === "ROUND" ? nextKickoff : null;
+  const caption = $(`#${kind}-countdown-caption`);
+  if(caption)caption.hidden = !countdown;
   stateEl.textContent = countdown ? countdownToKickoff(countdown) : result.state === "ROUND" ? "UPDATING" : result.state;
   stateEl.setAttribute("aria-label", countdown
     ? `Countdown to next kickoff of ${kind.toUpperCase()} matchday ${result.md.md}`
