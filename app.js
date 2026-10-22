@@ -1550,8 +1550,9 @@ function desktopActivityMarkup(entry, activity) {
     const fixture = desktopActivityFixture(entry[comp],item,opponent);
     const label = state === 'today' ? fixtureKickoffText(item) : desktopActivityStatus(item,state);
     const away=String(item.venue).toUpperCase()==='A';
-    const homeName=away?opponent.club:entry[comp].club,awayName=away?entry[comp].club:opponent.club;
-    return `<span class="gr-desktop-activity gr-team-activity ${comp} ${state}" title="${esc(fixture.description)}" aria-label="${esc(`${fixture.description}, ${label}`)}"><span class="gr-activity-fixture"><span${!away?' class="gr-owned-team"':''}>${esc(homeName)}</span> <strong>${esc(fixture.result || 'v')}</strong> <span${away?' class="gr-owned-team"':''}>${esc(awayName)}</span></span> <span class="gr-activity-badge">${esc(label)}</span></span>`;
+    const venue=away?'A':'H';
+    const score=fixture.result?GoalRushScores.score(item.score):null;
+    return `<span class="gr-desktop-activity gr-team-activity ${comp} ${state}" title="${esc(fixture.description)}" aria-label="${esc(`${entry[comp].club} versus ${opponent.club}, ${away?'away':'home'}, ${score?score.join('–')+', ':''}${label}`)}"><span class="gr-activity-fixture">v <span>${esc(opponent.club)}</span> <span>(${venue})</span>${score?` <strong>${esc(score.join('–'))}</strong>`:''}</span> <span class="gr-activity-badge">${esc(label)}</span></span>`;
   }).join('');
 }
 
