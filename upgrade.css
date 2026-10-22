@@ -566,3 +566,10 @@
 .dashboard-header .gr-competition .gr-countdown-caption{display:block;font:750 7px/1 Inter,system-ui,sans-serif;letter-spacing:.075em;color:#8da5bd;white-space:nowrap}
 .dashboard-header .gr-competition .gr-countdown-caption[hidden]{display:none!important}
 .dashboard-header .gr-competition .gr-comp-stats strong,.dashboard-header .gr-competition .gr-comp-stats b{font-variant-numeric:tabular-nums}
+
+/* v191: text faces inward toward each competition logo. */
+.dashboard-header .gr-competition-ucl .chip-copy{text-align:right!important}
+.dashboard-header .gr-competition-ucl .chip-topline,.dashboard-header .gr-competition-ucl .gr-comp-stats{align-items:flex-end!important}
+.dashboard-header .gr-competition-ucl .chip-topline>.state{align-self:flex-end!important}
+.dashboard-header #ucl-matchday .chip-copy{align-items:flex-end!important}
+.dashboard-header #uel-matchday .chip-copy{align-items:flex-start!important}
